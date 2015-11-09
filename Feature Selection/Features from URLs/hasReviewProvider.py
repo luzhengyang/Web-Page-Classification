@@ -1,0 +1,82 @@
+'''
+Search for review providers in title and snippet
+'''
+
+def has_review_provider(domain):
+	review_providers = ['addyourpoint',
+	'apartmentratings',
+	'bing',
+	'bizvotes',
+	'business.intuit',
+	'canpages',
+	'cardealercheck',
+	'cars',
+	'citysearch',
+	'citysquares',
+	'cylex',
+	'demandforce',
+	'dinehere',
+	'ebusinesspages',
+	'edmunds',
+	'facebook',
+	'findhere',
+	'findthebest',
+	'foodmafia',
+	'foodpages',
+	'foursquare',
+	'fyood',
+	'fyple',
+	'generic_source',
+	'goldbook',
+	'grubhub.',
+	'homestars',
+	'insiderpages',
+	'judysbook',
+	'just-eat',
+	'kudzu',
+	'lacartes',
+	'linktown.wcnc',
+	'listings.findthecompany',
+	'local.botw',
+	'local',
+	'localguides',
+	'localstore',
+	'local.yahoo',
+	'makemeheal',
+	'manta',
+	'menuism',
+	'mojopages',
+	'mysheriff',
+	'n49',
+	'ourbis',
+	'pagesjaunes',
+	'patch',
+	'plus.google',
+	'profilecanada',
+	'restaurantica',
+	'restomontreal',
+	'superpages',
+	'townrenowned',
+	'tripadvisor',
+	'tupalo',
+	'ucomparehealthcare',
+	'weddingbee',
+	'wellness',
+	'dexknows',
+	'yellowbook',
+	'yellowbot',
+	'yellowee',
+	'yellowise',
+	'yellowpages',
+	'yelp',
+	'zvents',
+	]
+
+	ReviewProvider = {'hasReviewProvider':0}
+	for review_provider in review_providers:
+		if review_provider.upper() in domain.upper():
+			ReviewProvider['hasReviewProvider'] = 1
+		else:
+			pass
+
+	return ReviewProvider
