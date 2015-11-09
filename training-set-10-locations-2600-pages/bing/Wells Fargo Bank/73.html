@@ -1,0 +1,676 @@
+<html><head>
+<title>Wells Fargo Hours of Operation near Charlotte, North Carolina</title>
+<meta name="description" content="Find nearby Wells Fargo hours of operation for locations near Charlotte, North Carolina.">
+<link rel="canonical" href="http://www.hoursofoperation.biz/Wells%20Fargo/Hours%20of%20Operation/North%20Carolina/Charlotte">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.5f0XKKY4cHU.O/m=auth/exm=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCPjWK2K7EJ2pBvjMdYDk7aR1ZSh1Q/cb=gapi.loaded_1" async=""></script><script async="" type="text/javascript" src="http://www.gstatic.com/pub-config/ca-pub-8649773808320969.js"></script><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.5f0XKKY4cHU.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCPjWK2K7EJ2pBvjMdYDk7aR1ZSh1Q/cb=gapi.loaded_0" async=""></script><script type="text/javascript" src="/jslib/shadowbox/shadowbox.js"></script>
+<script type="text/javascript" src="/global.js"></script>
+<script type="text/javascript" src="/jslib/jquery-1.5.js"></script>
+<script type="text/javascript" src="/jslib/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="/jslib/jquery.NobleCount.min.js"></script>
+<script type="text/javascript" src="/jslib/jquery.cluetip.js"></script>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js" gapi_processed="true"></script>
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/jslib/shadowbox/shadowbox.css">
+<link rel="stylesheet" type="text/css" href="/css/autocomplete.css">
+<link rel="stylesheet" type="text/css" href="/css/cluetip.css">
+<script type="text/javascript">
+
+Shadowbox.init({players:['iframe']});
+
+$(document).ready(function() {
+    $('a.ct').cluetip({
+        splitTitle: '|',
+        cluetipClass: 'jtip',
+        arrows: true, 
+        dropShadow: true, 
+        hoverIntent: false
+    });
+    $('#companysearch').autocomplete(
+        '/lib/search_autocomplete.php?co=1',
+        {
+            minChars: 2,
+            delay: 100
+        }
+    );
+    $('#citysearch').autocomplete(
+        '/lib/search_autocomplete.php?city=1',
+        {
+            minChars: 2,
+            delay: 100
+        }
+    );
+
+    });
+
+</script><script type="text/javascript" src="http://www.hoursofoperation.biz/jslib/shadowbox/libraries/sizzle/sizzle.js"></script><script type="text/javascript" src="http://www.hoursofoperation.biz/jslib/shadowbox/languages/shadowbox-en.js"></script><script type="text/javascript" src="http://www.hoursofoperation.biz/jslib/shadowbox/players/shadowbox-iframe.js"></script><script type="text/javascript" src="http://www.hoursofoperation.biz/jslib/shadowbox/adapters/shadowbox-jquery.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOey_7Ul8wc-tdMD4xLox73ykZAvamR8I&amp;sensor=false"></script>
+<script type="text/javascript">
+
+var map;
+var infowindow;
+var marker = [];
+
+var locations = [{"code":"55340","name":"Wells Fargo Bank #1","distance":"0.21 miles","latitude":"35.227840","longitude":"-80.839478","address":"300 N College St.","city":"Charlotte","state":"NC","zip":"28202","phone":"(704) 444-2758"},{"code":"55318","name":"Wells Fargo Bank #2","distance":"0.24 miles","latitude":"35.224270","longitude":"-80.845535","address":"301 South Tryon Street","city":"Charlotte","state":"NC","zip":"28282","phone":"(704) 335-5878"},{"code":"55339","name":"Wells Fargo Bank #3","distance":"0.26 miles","latitude":"35.225060","longitude":"-80.839333","address":"333 E Trade Street","city":"Charlotte","state":"NC","zip":"28202","phone":"(800) 922-4684"},{"code":"428178","name":"Wells Fargo Bank #4","distance":"0.35 miles","latitude":"35.223896","longitude":"-80.847885","address":"534 S Tryon Street","city":"Charlotte","state":"NC","zip":"28202","phone":"(800) 869-3557"},{"code":"485611","name":"Wells Fargo ATM #5","distance":"0.37 miles","latitude":"35.222107","longitude":"-80.845329","address":"501 S College Street","city":"Charlotte","state":"NC","zip":"28202","phone":"(800) 869-3557"},{"code":"55338","name":"Wells Fargo Bank #6","distance":"0.41 miles","latitude":"35.231422","longitude":"-80.838181","address":"525 N Tryon Street","city":"Charlotte","state":"NC","zip":"28202","phone":"(704) 331-3946"},{"code":"428181","name":"Wells Fargo Bank #7","distance":"0.98 miles","latitude":"35.217373","longitude":"-80.830452","address":"1201 Elizabeth Avenue","city":"Charlotte","state":"NC","zip":"28204","phone":"(800) 869-3557"},{"code":"55319","name":"Wells Fargo Bank #8","distance":"1.25 miles","latitude":"35.212704","longitude":"-80.856422","address":"1625 South Blvd.","city":"Charlotte","state":"NC","zip":"28203","phone":"(704) 383-5803"},{"code":"55346","name":"Wells Fargo Bank #9","distance":"1.25 miles","latitude":"35.209435","longitude":"-80.837967","address":"801 Kenilworth Ave","city":"Charlotte","state":"NC","zip":"28204","phone":"(704) 333-8033"},{"code":"55347","name":"Wells Fargo Bank #10","distance":"1.30 miles","latitude":"35.229038","longitude":"-80.866089","address":"1527 W. Morehead Street","city":"Charlotte","state":"NC","zip":"28208","phone":"(704) 347-2747"}];
+
+function initialize() {    
+
+    mapOptions = {
+        center: new google.maps.LatLng(35.227840, -80.839478),
+        zoom: 9,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+    image = '/images/hours-of-operation-icon@@.png';
+
+    infowindow = new google.maps.InfoWindow();
+
+    $.each(
+        locations,
+        function(k, v) {
+
+            var iteration = k + 1;
+
+            var myLatLng = new google.maps.LatLng(v.latitude, v.longitude);
+            marker[iteration] = new google.maps.Marker({position: myLatLng, map: map, icon: image.replace("@@", iteration), animation: google.maps.Animation.DROP});
+        
+            //This will be used by the openMarker function to reference the output of the infoWindow
+            marker[iteration]['description'] = '<b>' + v.name + '</b>' + " <small>(" + v.distance + ")</small><br>" + v.address + "<br>" + v.city + ',' + v.state + ' ' + v.zip + "<br>" + v.phone;
+        
+            //Setup event to listen for when a location is clicked on the map
+            google.maps.event.addListener(marker[iteration], 'click', function() {
+                infowindow.setContent(marker[iteration]['description']);
+                infowindow.open(map, this);
+            });
+
+        }        
+
+    );    
+
+}
+
+function openMarker(id) {
+
+    infowindow.setContent(marker[id]['description']);
+    infowindow.open(map, marker[id]);
+
+}
+
+$(document).ready(function() {
+
+    $('.locationsBox').hover(        
+
+        function(){
+
+           var currentId = $(this).attr('id').replace('locationsBox', '');
+
+           openMarker(currentId);
+
+           var locationColors = [];
+
+           locationColors[1] = '1px solid #4a94ff';
+           locationColors[2] = '1px solid #ff9c0d';
+           locationColors[3] = '1px solid #4fc256';
+           locationColors[4] = '1px solid #ff161d';
+           locationColors[5] = '1px solid #d140ff';
+           locationColors[6] = '1px solid #06c8ff';
+           locationColors[7] = '1px solid #8996a8';
+           locationColors[8] = '1px solid #000000';
+           locationColors[9] = '1px solid #ff32d0';
+           locationColors[10] = '1px solid #6d34ff';
+
+           $(this).css('border', locationColors[currentId]);            
+             
+        },
+
+        function(){ 
+             $(this).css('border', '1px solid #CCC'); 
+        }
+
+    );    
+    
+});
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+</head>
+<body>
+<div id="topNav">
+<div class="wrapper">
+<div id="logo">
+<a href="/index.php"><img src="/images/cochise_logo.gif" alt="Return to HoursOfOperation.biz Home Page"></a>
+</div>
+<div id="topSearch">
+<form method="post" action="/search.php">
+<div id="field">
+Company Search
+<input type="text" class="textfield ac_input" name="company" id="companysearch" autocomplete="off">
+</div>
+<div id="field">
+City Search
+<input type="text" class="textfield ac_input" name="city" id="citysearch" autocomplete="off">
+</div>
+<div id="submitButton">
+<input type="image" src="/images/top_submit_button.gif" value="Submit" class="button">
+</div>
+<div class="clear"></div>
+</form>
+</div>
+<div id="nav">
+<a href="/index.php">Home</a> |
+<a href="/company_index.php">Company Index</a> |
+<a href="/contact_us.php">Contact Us</a>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<div id="contentContainer">
+<div class="wrapper">
+<div id="mainContentContainer">
+<div id="topBreadCrumb">
+<div class="left">
+<div>
+<div style="float:left;">
+<div style="padding-right:3px;"><div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 24px; height: 15px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 24px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 15px;" tabindex="0" vspace="0" width="100%" id="I0_1415072512554" name="I0_1415072512554" src="https://apis.google.com/se/0/_/+1/fastbutton?usegapi=1&amp;size=small&amp;count=false&amp;origin=http%3A%2F%2Fwww.hoursofoperation.biz&amp;url=http%3A%2F%2Fwww.hoursofoperation.biz%2FWells%2520Fargo%2FHours%2520of%2520Operation%2FNorth%2520Carolina%2FCharlotte&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.5f0XKKY4cHU.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Ft%3Dzcms%2Frs%3DAGLTcCPjWK2K7EJ2pBvjMdYDk7aR1ZSh1Q#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I0_1415072512554&amp;parent=http%3A%2F%2Fwww.hoursofoperation.biz&amp;pfname=&amp;rpctoken=25088923" data-gapiattached="true" title="+1"></iframe></div></div>
+</div>
+<div style="float:left;">
+<a href="/index.php">Home</a>
+&gt; <a href="/Wells%20Fargo/Hours%20of%20Operation">Wells Fargo Hours of Operation</a> &gt; <a href="/Wells%20Fargo/Locations%20Hours%20of%20Operation">By State</a> &gt; <a href="/Wells%20Fargo/Hours%20of%20Operation/North%20Carolina">North Carolina</a> &gt; Charlotte </div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<div id="innerContentLeft">
+<h1 class="questionH1">Wells Fargo Hours of Operation near Charlotte, North Carolina</h1>
+<h2>Charlotte, North Carolina Wells Fargo locations</h2>
+<p></p>
+Please find a list and map of Wells Fargo locations near Charlotte, North Carolina as well as the
+associated Wells Fargo location hours of operation, address and phone number.
+<div style="text-align:left;margin:20px 0;">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8649773808320969";
+/* HOP - 728x90 - image/text */
+google_ad_slot = "5031199129";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</div>
+<p></p>
+<div id="locationsContainer">
+<div id="locationsLeft">
+<div class="locationsBox" id="locationsBox1">
+<div class="icon">
+<img src="/images/hours-of-operation-icon1.png">
+</div>
+<div class="left">
+<b><a href="/Wells%20Fargo/Hours%20of%20Operation/Charlotte/55340">Wells Fargo Charlotte</a></b>
+<br>
+<small>0.21 miles</small>
+<p></p>
+<strong>Phone Number:</strong>
+<br>
+(704) 444-2758
+</div>
+<div class="right">
+<strong>Location:</strong>
+<br>
+300 N College St. <br>
+Charlotte, NC 28202
+</div>
+<div class="clear"></div>
+<p></p>
+Hours of operation not available for this location
+</div>
+<div class="locationsBox" id="locationsBox2">
+<div class="icon">
+<img src="/images/hours-of-operation-icon2.png">
+</div>
+<div class="left">
+<b><a href="/Wells%20Fargo/Hours%20of%20Operation/Charlotte/55318">Wells Fargo Charlotte</a></b>
+<br>
+<small>0.24 miles</small>
+<p></p>
+<strong>Phone Number:</strong>
+<br>
+(704) 335-5878
+</div>
+<div class="right">
+<strong>Location:</strong>
+<br>
+301 South Tryon Street <br>
+Charlotte, NC 28282
+</div>
+<div class="clear"></div>
+<p></p>
+<div style="padding:0 0 3px 3px;" class="highlight">Hours of operation for this location:</div><ul id="hoursList">
+<li>
+<b>mon: </b>
+9am-5pm
+</li>
+<li>
+<b>tue: </b>
+9am-5pm
+</li>
+<li>
+<b>wed: </b>
+9am-5pm
+</li>
+<li>
+<b>thu: </b>
+9am-5pm
+</li>
+<li>
+<b>fri: </b>
+9am-6pm
+</li>
+<li>
+<b>sat: </b>
+not available
+</li>
+<li>
+<b>sun: </b>
+not available
+</li>
+</ul><div class="clear"></div>
+</div>
+<div class="locationsBox" id="locationsBox3">
+<div class="icon">
+<img src="/images/hours-of-operation-icon3.png">
+</div>
+<div class="left">
+<b><a href="/Wells%20Fargo/Hours%20of%20Operation/Charlotte/55339">Wells Fargo Charlotte</a></b>
+<br>
+<small>0.26 miles</small>
+<p></p>
+<strong>Phone Number:</strong>
+<br>
+(800) 922-4684
+</div>
+<div class="right">
+<strong>Location:</strong>
+<br>
+333 E Trade Street <br>
+Charlotte, NC 28202
+</div>
+<div class="clear"></div>
+<p></p>
+<div style="padding:0 0 3px 3px;" class="highlight">Hours of operation for this location:</div><ul id="hoursList">
+<li>
+<b>mon: </b>
+12am-11:59pm
+</li>
+<li>
+<b>tue: </b>
+12am-11:59pm
+</li>
+<li>
+<b>wed: </b>
+12am-11:59pm
+</li>
+<li>
+<b>thu: </b>
+12am-11:59pm
+</li>
+<li>
+<b>fri: </b>
+12am-11:59pm
+</li>
+<li>
+<b>sat: </b>
+12am-11:59pm
+</li>
+<li>
+<b>sun: </b>
+12am-11:59pm
+</li>
+</ul><div class="clear"></div>
+</div>
+<div class="locationsBox" id="locationsBox4">
+<div class="icon">
+<img src="/images/hours-of-operation-icon4.png">
+</div>
+<div class="left">
+<b><a href="/Wells%20Fargo/Hours%20of%20Operation/Charlotte/428178">Wells Fargo Charlotte</a></b>
+<br>
+<small>0.35 miles</small>
+<p></p>
+<strong>Phone Number:</strong>
+<br>
+(800) 869-3557
+</div>
+<div class="right">
+<strong>Location:</strong>
+<br>
+534 S Tryon Street <br>
+Charlotte, NC 28202
+</div>
+<div class="clear"></div>
+<p></p>
+Hours of operation not available for this location
+</div>
+<div class="locationsBox" id="locationsBox5">
+<div class="icon">
+<img src="/images/hours-of-operation-icon5.png">
+</div>
+<div class="left">
+<b><a href="/Wells%20Fargo/Hours%20of%20Operation/Charlotte/485611">Wells Fargo Charlotte</a></b>
+<br>
+<small>0.37 miles</small>
+<p></p>
+<strong>Phone Number:</strong>
+<br>
+(800) 869-3557
+</div>
+<div class="right">
+<strong>Location:</strong>
+<br>
+501 S College Street <br>
+Charlotte, NC 28202
+</div>
+<div class="clear"></div>
+<p></p>
+Hours of operation not available for this location
+</div>
+<div class="locationsBox" id="locationsBox6">
+<div class="icon">
+<img src="/images/hours-of-operation-icon6.png">
+</div>
+<div class="left">
+<b><a href="/Wells%20Fargo/Hours%20of%20Operation/Charlotte/55338">Wells Fargo Charlotte</a></b>
+<br>
+<small>0.41 miles</small>
+<p></p>
+<strong>Phone Number:</strong>
+<br>
+(704) 331-3946
+</div>
+<div class="right">
+<strong>Location:</strong>
+<br>
+525 N Tryon Street <br>
+Charlotte, NC 28202
+</div>
+<div class="clear"></div>
+<p></p>
+Hours of operation not available for this location
+</div>
+<div class="locationsBox" id="locationsBox7">
+<div class="icon">
+<img src="/images/hours-of-operation-icon7.png">
+</div>
+<div class="left">
+<b><a href="/Wells%20Fargo/Hours%20of%20Operation/Charlotte/428181">Wells Fargo Charlotte</a></b>
+<br>
+<small>0.98 miles</small>
+<p></p>
+<strong>Phone Number:</strong>
+<br>
+(800) 869-3557
+</div>
+<div class="right">
+<strong>Location:</strong>
+<br>
+1201 Elizabeth Avenue <br>
+Charlotte, NC 28204
+</div>
+<div class="clear"></div>
+<p></p>
+Hours of operation not available for this location
+</div>
+<div class="locationsBox" id="locationsBox8">
+<div class="icon">
+<img src="/images/hours-of-operation-icon8.png">
+</div>
+<div class="left">
+<b><a href="/Wells%20Fargo/Hours%20of%20Operation/Charlotte/55319">Wells Fargo Charlotte</a></b>
+<br>
+<small>1.25 miles</small>
+<p></p>
+<strong>Phone Number:</strong>
+<br>
+(704) 383-5803
+</div>
+<div class="right">
+<strong>Location:</strong>
+<br>
+1625 South Blvd. <br>
+Charlotte, NC 28203
+</div>
+<div class="clear"></div>
+<p></p>
+Hours of operation not available for this location
+</div>
+<div class="locationsBox" id="locationsBox9">
+<div class="icon">
+<img src="/images/hours-of-operation-icon9.png">
+</div>
+<div class="left">
+<b><a href="/Wells%20Fargo/Hours%20of%20Operation/Charlotte/55346">Wells Fargo Charlotte</a></b>
+<br>
+<small>1.25 miles</small>
+<p></p>
+<strong>Phone Number:</strong>
+<br>
+(704) 333-8033
+</div>
+<div class="right">
+<strong>Location:</strong>
+<br>
+801 Kenilworth Ave <br>
+Charlotte, NC 28204
+</div>
+<div class="clear"></div>
+<p></p>
+<div style="padding:0 0 3px 3px;" class="highlight">Hours of operation for this location:</div><ul id="hoursList">
+<li>
+<b>mon: </b>
+9am-5pm
+</li>
+<li>
+<b>tue: </b>
+9am-5pm
+</li>
+<li>
+<b>wed: </b>
+9am-5pm
+</li>
+<li>
+<b>thu: </b>
+9am-5pm
+</li>
+<li>
+<b>fri: </b>
+9am-6pm
+</li>
+<li>
+<b>sat: </b>
+not available
+</li>
+<li>
+<b>sun: </b>
+not available
+</li>
+</ul><div class="clear"></div>
+</div>
+<div class="locationsBox" id="locationsBox10">
+<div class="icon">
+<img src="/images/hours-of-operation-icon10.png">
+</div>
+<div class="left">
+<b><a href="/Wells%20Fargo/Hours%20of%20Operation/Charlotte/55347">Wells Fargo Charlotte</a></b>
+<br>
+<small>1.30 miles</small>
+<p></p>
+<strong>Phone Number:</strong>
+<br>
+(704) 347-2747
+</div>
+<div class="right">
+<strong>Location:</strong>
+<br>
+1527 W. Morehead Street <br>
+Charlotte, NC 28208
+</div>
+<div class="clear"></div>
+<p></p>
+<div style="padding:0 0 3px 3px;" class="highlight">Hours of operation for this location:</div><ul id="hoursList">
+<li>
+<b>mon: </b>
+9am-5pm
+</li>
+<li>
+<b>tue: </b>
+9am-5pm
+</li>
+<li>
+<b>wed: </b>
+9am-5pm
+</li>
+<li>
+<b>thu: </b>
+9am-5pm
+</li>
+<li>
+<b>fri: </b>
+9am-6pm
+</li>
+<li>
+<b>sat: </b>
+9am-1pm
+</li>
+<li>
+<b>sun: </b>
+not available
+</li>
+</ul><div class="clear"></div>
+</div>
+</div>
+<div id="locationsRight">
+<div id="map_canvas" style="width: 300px; height: 250px; border:2px solid #CCC;"></div>
+<p></p>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8649773808320969";
+/* HOP - 300x250 - image/text */
+google_ad_slot = "2148118366";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><ins id="aswift_1_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</div>
+<div class="clear"></div>
+</div>
+<p></p>
+<div class="information_message">
+<b>Can't find the Wells Fargo location hours of operation you are looking for?</b>
+<br>
+<a href="/Wells%20Fargo/Locations%20Hours%20of%20Operation" title="All Wells Fargo hours of operation">Click here</a>
+to find the Wells Fargo location near you.
+</div>
+<p></p>
+Find other <strong>Wells Fargo locations</strong> in these cities:
+<ul id="otherCities">
+<li><a href="/Wells%20Fargo/Hours%20of%20Operation/Georgia/Lilburn" title="Lilburn Wells Fargo locations">Lilburn, Georgia Wells Fargo Locations</a></li>
+<li><a href="/Wells%20Fargo/Hours%20of%20Operation/California/Chino" title="Chino Wells Fargo locations">Chino, California Wells Fargo Locations</a></li>
+<li><a href="/Wells%20Fargo/Hours%20of%20Operation/Pennsylvania/Ridley%20Park" title="Ridley Park Wells Fargo locations">Ridley Park, Pennsylvania Wells Fargo Locations</a></li>
+<li><a href="/Wells%20Fargo/Hours%20of%20Operation/New%20York/West%20Nyack" title="West Nyack Wells Fargo locations">West Nyack, New York Wells Fargo Locations</a></li>
+<li><a href="/Wells%20Fargo/Hours%20of%20Operation/Delaware/Newark" title="Newark Wells Fargo locations">Newark, Delaware Wells Fargo Locations</a></li>
+<li><a href="/Wells%20Fargo/Hours%20of%20Operation/Arizona/Fort%20Mohave" title="Fort Mohave Wells Fargo locations">Fort Mohave, Arizona Wells Fargo Locations</a></li>
+<li><a href="/Wells%20Fargo/Hours%20of%20Operation/California/Loomis" title="Loomis Wells Fargo locations">Loomis, California Wells Fargo Locations</a></li>
+<li><a href="/Wells%20Fargo/Hours%20of%20Operation/California/Red%20Bluff" title="Red Bluff Wells Fargo locations">Red Bluff, California Wells Fargo Locations</a></li>
+<li><a href="/Wells%20Fargo/Hours%20of%20Operation/California/Danville" title="Danville Wells Fargo locations">Danville, California Wells Fargo Locations</a></li>
+<li><a href="/Wells%20Fargo/Hours%20of%20Operation/Idaho/Preston" title="Preston Wells Fargo locations">Preston, Idaho Wells Fargo Locations</a></li>
+</ul>
+</div>
+<div id="innerContentRight">
+<p></p>
+ 
+<div class="tabHeaders blueTabs">
+Contact Information
+</div>
+<div class="tabBox defaultTabBoxContent">
+<a href="http://www.contacthelp.com/Wells%20Fargo/customer-service" target="_blank"><b>Wells Fargo customer service phone number</b></a> including steps to reach representatives, hours of operation, customer support links and more from <a href="http://www.contacthelp.com/Wells%20Fargo/customer-service" target="_blank">ContactHelp.com</a>.
+<p style="text-align:center;margin:5px auto"><a href="http://www.contacthelp.com/Wells%20Fargo/customer-service" target="_blank"><img src="/images/contact_help_side_logo.gif" alt="Complete Wells Fargo customer service phone numbers and contact information at ContactHelp.com"></a></p>
+</div>
+<p>
+ 
+</p><div class="tabHeaders blueTabs">
+Corporate Office
+</div>
+<div class="tabBox defaultTabBoxContent">
+Locate the <a href="http://www.corporateofficeowl.com/Wells%20Fargo/Corporate%20Office" target="_blank"><b>Wells Fargo corporate office headquarters</b></a> phone number, address and more at <a href="http://www.corporateofficeowl.com" target="_blank">CorporateOfficeOwl.com</a>.
+<p style="text-align:center;margin:5px auto"><a href="http://www.corporateofficeowl.com/Wells%20Fargo/Corporate%20Office" target="_blank"><img src="/images/corporate_office_owl_logo.gif" alt="Wells Fargo corporate office headquarters information at CorproateOfficeOwl.com"></a></p>
+</div>
+<p>
+ 
+</p><div class="tabHeaders blueTabs">
+Scoreboard Ratings
+</div>
+<div class="tabBox defaultTabBoxContent">
+See detailed <b><a href="http://www.customerservicescoreboard.com/Wells+Fargo" target="_blank">Wells Fargo customer service rankings</a></b>,
+employee comments and much more from <a href="http://www.customerservicescoreboard.com/Wells+Fargo" target="_blank">our sister site</a>.
+<p style="text-align:center;margin:7px 0;"><a href="http://www.customerservicescoreboard.com/Wells+Fargo" target="_blank"><img src="/images/customer_service_scoreboard_logo.gif" alt="Find detailed Wells Fargo customer service ratings at CustomerServiceScoreboard.com"></a></p>
+</div>
+<p>
+ 
+</p><div class="tabHeaders blueTabs">
+Get Help Online
+</div>
+<div class="tabBox defaultTabBoxContent">
+Get immediate support for your <a href="http://www.helpowl.com/Wells%20Fargo" target="_blank"><b>Wells Fargo support questions</b></a> from <a href="http://www.helpowl.com" target="_blank">HelpOwl.com</a>.
+<p style="text-align:center;margin:5px auto"><a href="http://www.helpowl.com/Wells%20Fargo" target="_blank"><img src="/images/help_owl_logo.gif" alt="Receive immediate support for Wells Fargo at HelpOwl.com"></a></p>
+</div>
+<p>
+</p></div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div class="wrapper">
+<div id="footerLeft">
+All contents © copyright 2011 - 2014, HoursOfOperation.biz
+</div>
+<div id="footerRight">
+<a href="/index.php">Home</a> |
+<a href="/company_index.php">Company Index</a> |
+<a href="/contact_us.php">Contact Us</a> |
+<a href="/privacy_policy.php">Privacy</a>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+ 
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-35260517-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<script type="text/javascript">
+var __SOSiteID = 'ZmtmBD==q36q1op7121p0174nsn61os725255956';
+var __SOProtocol = (location.protocol == 'https:') ? 'https://' : 'http://';
+var __SOAutoTrack = true;
+document.write(unescape("%3Cscript defer='defer' src='" + __SOProtocol + "collector.statowl.com/tracker.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script defer="defer" src="http://collector.statowl.com/tracker.js" type="text/javascript"></script>
+<noscript>&lt;img src="https://collector.statowl.com/collector_noscript.php?siteid=ZmtmBD==q36q1op7121p0174nsn61os725255956"&gt;</noscript>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#oiq_container').append('<iframe id="owneriqframe" borderframe="0" scrolling="no" width="0" height="0" style="border:0px;" />');
+    $('#owneriqframe').attr('src', 'http://owneriq.terabytemedia.com/owneriq.php?s=hourop.js&b=Wells Fargo&c=&p='); 
+});
+</script>
+<div id="oiq_container"><iframe id="owneriqframe" borderframe="0" scrolling="no" width="0" height="0" style="border:0px;" src="http://owneriq.terabytemedia.com/owneriq.php?s=hourop.js&amp;b=Wells Fargo&amp;c=&amp;p="></iframe></div>
+ 
+
+
+<div id="sb-container"><div id="sb-overlay"></div><div id="sb-wrapper"><div id="sb-title"><div id="sb-title-inner"></div></div><div id="sb-body"><div id="sb-body-inner"></div><div id="sb-loading"><a onclick="Shadowbox.close()">Cancel</a></div></div><div id="sb-info"><div id="sb-info-inner"><div id="sb-counter"></div><div id="sb-nav"><a id="sb-nav-close" title="Close" onclick="Shadowbox.close()"></a><a id="sb-nav-next" title="Next" onclick="Shadowbox.next()"></a><a id="sb-nav-play" title="Play" onclick="Shadowbox.play()"></a><a id="sb-nav-pause" title="Pause" onclick="Shadowbox.pause()"></a><a id="sb-nav-previous" title="Previous" onclick="Shadowbox.previous()"></a></div><div style="clear:both"></div></div></div></div></div><iframe name="oauth2relay865970583" id="oauth2relay865970583" src="https://accounts.google.com/o/oauth2/postmessageRelay?parent=http%3A%2F%2Fwww.hoursofoperation.biz#rpctoken=790270094&amp;forcesecure=1" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>

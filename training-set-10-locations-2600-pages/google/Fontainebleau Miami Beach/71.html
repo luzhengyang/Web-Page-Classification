@@ -1,0 +1,3296 @@
+<html><head>
+<script type="text/javascript" async="" src="http://static.clicktripz.com/scripts/js/ct.js"></script><script id="facebook-jssdk" src="//connect.facebook.net/en_US/all.js"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-5WLGZ6"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script async="" type="text/javascript" src="http://www.googletagservices.com/tag/js/gpt.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-4.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"46c30d12ce","applicationID":"2660559","transactionName":"clwMRBdbXg9RShhcW0VWDkNKR1oMQw==","queueTime":5,"applicationTime":857,"ttGuid":"","agentToken":null,"agent":"js-agent.newrelic.com/nr-476.min.js","extra":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQMOUl9WGwEGUlFXAgg="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:18,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:18,2:19,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:19,2:18,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:19,2:18,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:19,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,u="addEventListener",f="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[u]?(c[u]("DOMContentLoaded",o,!1),s[u]("load",n,!1)):(c[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],18:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],19:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:18,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script>
+<script src="//cdn.optimizely.com/js/590680283.js"></script>
+<title>Fontainebleau Miami Beach Miami Beach Deals - Find Fontainebleau Miami Beach Discounts | Dealbase</title>
+<meta content="Miami Beach deals, discounts and special offers. Get big savings at this 5 star Miami Beach hotel. Chic hotel in South Beach features 1504 rooms on crystal beachfront. Enjoy 11 restaurants &amp; nightc..." name="description">
+<meta content="fontainebleau miami beach, fontainebleau miami beach deals, fontainebleau miami beach discounts, fontainebleau miami beach special offers" name="keywords">
+<link href="http://www.dealbase.com/hotels/4133-fontainebleau-miami-beach-miami-beach-fl" rel="canonical">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<meta content="authenticity_token" name="csrf-param">
+<meta content="0vIrpADRX8M+YwemeJ/+7c6Gkq0jCwtEHDsdFtWqtn4=" name="csrf-token">
+<link href="/assets/application-e585b3eb099bfa14267ce9fa213ef1e7.css" media="all" rel="stylesheet">
+<!--[if lt IE 9]>  <![endif]-->
+<script src="/assets/html5shiv-d83bca69b727be18b7ea2350e68b372e.js"></script>
+<script src="/assets/modernizr.custom.01984-c3c6f19af1508587469fdb1fa13bd292.js"></script>
+<script>
+  var device_type = "desktop";
+  var ie_browser = true;
+  var inbound = "16928412";
+  var utm_tracking_data = ",,DB2";
+  var Checks = {};
+  var passable_information = utm_tracking_data + ',' + device_type + ',' + inbound;
+</script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') + 
+    '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+</script>
+<script>
+  if( device_type != "mobile" ){
+    googletag.cmd.push(function() {
+      googletag.defineSlot('/5873135/v2_hotel-property-top-sidebar-160x600', [160, 600], 'gpt-ad-hotel-property-top-sidebar').addService(googletag.pubads());
+      googletag.defineSlot('/5873135/v2_hotel-property-sidebar-160x600', [160, 600], 'gpt-ad-hotel-property-sidebar').addService(googletag.pubads());
+      googletag.defineSlot('/5873135/v2_hotel-property-left-rectangle-300x250', [300, 250], 'gpt-ad-hotel-property-left-rectangle').addService(googletag.pubads());
+      googletag.defineSlot('/5873135/v2_hotel-property-rectangle-300x250', [300, 250], 'gpt-ad-hotel-property-rectangle').addService(googletag.pubads());
+      googletag.pubads().enableAsyncRendering();
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+    });
+  }else{
+    googletag.cmd.push(function() {
+      googletag.defineSlot('/5873135/v2_hotel-property-left-rectangle-300x250', [300, 250], 'gpt-ad-hotel-property-left-rectangle').addService(googletag.pubads());
+      googletag.defineSlot('/5873135/v2_hotel-property-rectangle-300x250', [300, 250], 'gpt-ad-hotel-property-rectangle').addService(googletag.pubads());
+      googletag.defineSlot('/5873135/v2_mobile_hotel_deal_index_top', [300, 100], 'div-gpt-ad-1397714805420-0').addService(googletag.pubads());
+      googletag.defineSlot('/5873135/v2_mobile_hotel_deals_index_bottom', [300, 100], 'div-gpt-ad-1397715038415-0').addService(googletag.pubads());
+      googletag.pubads().enableAsyncRendering();
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+    });
+  }
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47052922-1', 'dealbase.com');
+  
+  // Optimizely Universal Analytics Integration
+  window.optimizely = window.optimizely || [];
+  window.optimizely.push("activateUniversalAnalytics");
+  
+  ga('send', 'pageview');
+
+</script>
+
+
+<!-- Google Tag Manager -->
+<noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-5WLGZ6"
+height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5WLGZ6');</script>
+<!-- End Google Tag Manager -->
+<!-- 
+<script>
+  if( device_type == "mobile" ){
+    dataLayer.push({'device_type': 'mobile'});
+  }else{
+    dataLayer.push({'device_type': 'desktop'});
+  }
+</script> -->
+<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async="" type="text/javascript" src="http://partner.googleadservices.com/gpt/pubads_impl_53.js"></script><script async="true" type="text/javascript" src="http://a.adroll.com/j/roundtrip.js"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style><script async="true" type="text/javascript" src="//d.adroll.com/pixel/6G4D75RI25CPTJCIYHIWXX/ZCU5I5OCKRB6NCNLGL6LST?pv=10945924231.782555&amp;cookie=&amp;keyw="></script><div style="width: 1px; height: 1px; display: inline;"><img height="1" width="1" style="border-style:none;" alt="" src="http://d.adroll.com/cm/r/out">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://d.adroll.com/cm/f/out">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://d.adroll.com/cm/b/out">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://d.adroll.com/cm/w/out">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://d.adroll.com/cm/x/out">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://d.adroll.com/cm/l/out">
+<img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=433534393454604&amp;cd[segment_eid]=UBVYV4SIHBB3ZB5XJ3BCF3&amp;ev=NoScript"><img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/976682315/?label=-GGnCJLYmFYQy_rb0QM&amp;guid=ON&amp;script=0&amp;ord=210048316512256.88">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://d.adroll.com/cm/g/out?google_nid=adroll5">
+<img src="http://ib.adnxs.com/seg?add=2023225&amp;t=2" width="1" height="1">
+<img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=433534393454604&amp;cd[segment_eid]=FT3R25LKX5GK5M5IKSOO5U&amp;ev=NoScript"><img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/976682315/?label=_2zNCIjRn1YQy_rb0QM&amp;guid=ON&amp;script=0&amp;ord=210048316512256.88">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://d.adroll.com/cm/g/out?google_nid=adroll5">
+<img src="http://ib.adnxs.com/seg?add=2031618&amp;t=2" width="1" height="1">
+<img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=433534393454604&amp;cd[segment_eid]=J4ZM5MPRGZDUXCT3PX4UGB&amp;ev=NoScript"><img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/976682315/?label=VWNACIDLn1YQy_rb0QM&amp;guid=ON&amp;script=0&amp;ord=210048316512256.88">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://d.adroll.com/cm/g/out?google_nid=adroll5">
+<img src="http://ib.adnxs.com/seg?add=2031629&amp;t=2" width="1" height="1">
+</div></head>
+<body data-action="show" data-controller="hotels">
+
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="http://static.ak.facebook.com/connect/xd_arbiter/ehazDpFPEnK.js?version=41#channel=f385e81d9c&amp;origin=http%3A%2F%2Fwww.dealbase.com" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://s-static.ak.facebook.com/connect/xd_arbiter/ehazDpFPEnK.js?version=41#channel=f385e81d9c&amp;origin=http%3A%2F%2Fwww.dealbase.com" style="border: none;"></iframe></div></div></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : "{406935512777171}",
+      status     : true,
+      xfbml      : true
+    });
+  };
+  
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script>
+  (function() {
+    var ct = document.createElement('script');
+    ct.type = 'text/javascript';
+    ct.async = true;
+    ct.src = ('https:' == document.location.protocol ? 'https://' : 'http://')
+           + 'static.clicktripz.com/scripts/js/ct.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ct, s);
+  })();  
+  
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<header class="navbar navbar-static-top navbar-default" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<button class="navbar-toggle" data-target=".bs-navbar-collapse" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/">
+<img alt="Web logo trans" height="30" src="/assets/web_logo_trans-3d3d0d6d9191bae10f76e34e0b0317e0.png" width="155">
+</a>
+</div>
+<div class="collapse navbar-collapse bs-navbar-collapse">
+<ul class="nav navbar-nav">
+<li>
+<a class="activate-search" href="/#hotels-search">HOTELS</a>
+</li>
+<li>
+<a class="activate-search" href="/#flights-search">FLIGHTS</a>
+</li>
+<li>
+<a class="activate-search" href="/#car-rentals-search">CARS</a>
+</li>
+<li class="visible-xs" id="hearty">
+<a data-target="#signup_modal" data-toggle="modal" href="#">
+<i class="icon-heart-empty"></i>
+</a>
+</li>
+</ul>
+<ul class="nav navbar-nav pull-right hidden-xs">
+<li>
+<a data-target="#signup_modal" data-toggle="modal" href="#" style="float: right;">DEAL ALERTS</a>
+</li>
+</ul>
+</div>
+</div>
+</header>
+
+<hr class="section-hr">
+<section class="first">
+<div class="container hotel" clicktripz_id="38365" hotel_id="4133" hotel_name="Fontainebleau Miami Beach (Miami Beach, FL)" id="hotel_4133" location="Miami Beach, FL">
+<heading>
+<h1>Fontainebleau Miami Beach Deals &amp; Discounts</h1>
+<h4>Find Fontainebleau Miami Beach deals, discounts and special offers.</h4>
+</heading>
+<div class="show-box">
+<aside class="hidden-xs">
+<a class="call-to-action" data-target="#ctz-hotel-modal-show" data-toggle="modal" href="#">
+<span>CHECK RATES</span>
+</a>
+<img class="img-responsive img-thumbnail hotel-photo" src="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/4133/card_1190549_115_b.jpg">
+</aside>
+<div class="hotel-info-container">
+<div class="visible-xs">
+<img class="img-responsive img-thumbnail hotel-photo" src="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/4133/card_1190549_115_b.jpg" style="margin-bottom: 10px;">
+<a class="call-to-action" data-target="#ctz-hotel-show-modal" data-toggle="modal" href="#">
+<span>CHECK RATES</span>
+</a>
+</div>
+<div class="hotel-link">
+<h4><a href="http://www.fontainebleau.com/web/promotions" target="_blank">Fontainebleau Miami Beach</a></h4>
+</div>
+<div class="hotel-location"><a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=Fontainebleau Miami Beach, 4441 Collins Avenue, Miami Beach, FL 33140" target="_blank">4441 Collins Avenue, Miami Beach, FL 33140</a></div>
+<div class="hotel-rating">
+<ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+</ul>
+
+</div>
+<div class="hotel-description">
+<h6>Description</h6>
+<p>Chic hotel in South Beach features 1504 rooms on crystal beachfront. Enjoy 11 restaurants &amp; nightclubs plus on-site spa.</p>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="hotel_show" class="modal fade" id="ctz-hotel-modal-show" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" style="margin-top: -10px;" type="button">×</button>
+</div>
+<div class="modal-footer" style="border-top: none; padding-top: 0px; margin-top: 0px;">
+<div class="click_tripz_hotel_search">
+<div class="search-lead-in" style="color: black;">
+<h4>Check rates for this hotel</h4>
+<p>
+Rates and availability vary for this hotel. Search the web here for the best rates.
+</p>
+</div>
+<div class="show_clicktripz">
+<div class="hotel-search-form-container">
+<form action="/areas/search" class="form-inline" id="hotel_search_modal_show" method="GET" onsubmit="return false;">
+<input id="hotel_search_modal_show_pop_partner" name="pop_partner[name]" type="hidden">
+<input id="hotel_search_modal_show_mobile" name="mobile" type="hidden">
+<input id="hotel_search_modal_show_placement" name="placement" type="hidden" value="show-modal">
+<input id="hotel_search_modal_show_location" name="location[id]" type="hidden">
+<input id="hotel_search_modal_show_hotel_id" name="hotel[id]" type="hidden">
+<input id="hotel_search_modal_show_location_backup" name="location[name]" type="hidden">
+<div class="row">
+<div class="form-group location-input-container">
+<div class="row">
+<label>hotel</label>
+</div>
+<div class="row">
+<span class="twitter-typeahead" style="position: relative; display: inline-block;"><input class="typeahead tt-hint" required="" type="text" disabled="" autocomplete="off" spellcheck="false" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; background-attachment: scroll; background-clip: border-box; background-color: rgb(255, 255, 255); background-image: none; background-origin: padding-box; background-size: auto; background-position: 0% 0%; background-repeat: repeat repeat;"><input class="typeahead tt-input" id="hotel_search_modal_show_hotel" name="hotel[hotel]" required="" type="text" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: nowrap; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset-hotels"></div></span></span>
+</div>
+</div>
+<div class="form-group guests">
+<div class="row">
+<label>guests</label>
+</div>
+<div class="row">
+<select id="hotel_search_modal_show_guests" name="hotel[guests]">
+<option selected="" value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+</select>
+</div>
+</div>
+<div class="form-group rooms">
+<div class="row">
+<label>rooms</label>
+</div>
+<div class="row">
+<select id="hotel_search_modal_show_rooms" name="hotel[rooms]">
+<option selected="" value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5+</option>
+</select>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="form-group dates">
+<div class="row">
+<label>check in</label>
+</div>
+<div class="row">
+<div class="input-group input-append date" id="hotel_search_modal_show_check_in_container">
+<input id="hotel_search_modal_show_check_in" name="hotel[check_in]" placeholder="mm/dd/yyyy" readonly="" required="" size="16" type="text">
+<span class="add-on input-group-addon">
+<i class="icon-calendar"></i>
+</span>
+</div>
+</div>
+</div>
+<div class="form-group dates">
+<div class="row">
+<label>check out</label>
+</div>
+<div class="row">
+<div class="input-group input-append date" id="hotel_search_modal_show_check_out_container">
+<input id="hotel_search_modal_show_check_out" name="hotel[check_out]" placeholder="mm/dd/yyyy" readonly="" required="" size="16" type="text">
+<span class="add-on input-group-addon">
+<i class="icon-calendar"></i>
+</span>
+</div>
+</div>
+</div>
+<div class="submit-container">
+<input class="call-to-action" type="button" value="SEARCH RATES">
+</div>
+</div>
+<div class="affiliates hide">
+<div class="checkbox-description hidden-xs">compare rates from</div>
+<div class="checkbox-description visible-xs">search to compare</div>
+<div class="ctz-anchor" id="hotel_search_modal_show_ct_anchor"></div>
+</div>
+<div class="clicktripz_id"></div>
+</form>
+</div>
+<script>
+  var _ctq = _ctq || [];
+  _ctq.push(['newCompareToStrip', 'clicktripz_hotel_modal_show']);
+  if( getCookie("ctz_test") == "true" || false == true){
+    _ctq.push(['clicktripz_hotel_modal_show.setPublisherID', 385]);      
+  }else{
+    _ctq.push(['clicktripz_hotel_modal_show.setPublisherID', 57]);      
+  }
+  _ctq.push(['clicktripz_hotel_modal_show.setFormID', 'hotel_search_modal_show']);
+  
+  _ctq.push(['clicktripz_hotel_modal_show.setCheckInID', 'hotel_search_modal_show_check_in']);
+  _ctq.push(['clicktripz_hotel_modal_show.setCheckOutID', 'hotel_search_modal_show_check_out']);
+  _ctq.push(['clicktripz_hotel_modal_show.setGuestsID', 'hotel_search_modal_show_guests']);
+  _ctq.push(['clicktripz_hotel_modal_show.setRoomsID', 'hotel_search_modal_show_rooms']);
+  
+  _ctq.push(['clicktripz_hotel_modal_show.setAnchorID', 'hotel_search_modal_show_ct_anchor']);           
+  _ctq.push(['clicktripz_hotel_modal_show.setReferralURL', passable_information]);
+  
+  _ctq.push(['clicktripz_hotel_modal_show.onPopupBlock', 'myPopupBlockedEventHandler']);
+  _ctq.push(['clicktripz_hotel_modal_show.draw']);
+</script>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="newsletter-signup">
+<div class="container">
+<h5>
+Sign up for fare alerts
+&amp;
+last minute deals
+</h5>
+<form accept-charset="UTF-8" action="/newsletters" class="form-inline formtastic newsletter" data-remote="true" id="new_newsletter" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div><div class="form-group">
+<input id="newsletter_source" name="newsletter[source]" type="hidden" value="hotels">
+<div class="row">
+<i class="icon-envelope pull-left"></i>
+<input class="form-control input-sm" id="newsletter_email" name="newsletter[email]" placeholder="email address" required="" type="email" validate="">
+</div>
+</div>
+<div class="submit-container">
+<button class="btn btn-sm" name="button" type="submit">JOIN NOW</button>
+</div>
+</form>
+
+</div>
+</section>
+
+<section class="second">
+<div class="container visible-xs">
+<!-- v2_mobile_hotel_deal_index_top -->
+<div class="inline-top-ad">
+<div id="div-gpt-ad-1397714805420-0" style="width:300px; height:100px;">
+<script>
+  if( device_type == "mobile" ){
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1397714805420-0'); });
+  }
+</script>
+</div>
+</div>
+</div>
+<div class="container hotel-deals">
+<div class="results">
+<div class="main">
+<div class="row">
+<heading>
+<h1>Deals for Fontainebleau Miami Beach</h1>
+</heading>
+<div class="hotel-deal-cards">
+<div class="card" clicktripz_id="38365" hotel_id="4133" hotel_name="Fontainebleau Miami Beach (Miami Beach, FL)" id="hotel_deal_61304" location="Miami Beach, FL" outbound_url="/hotel-deals/61304/outbound?hotel%5Bcheck_in%5D=2014-11-07&amp;hotel%5Bcheck_out%5D=2014-11-09&amp;hotel%5Bguests%5D=1&amp;hotel%5Bid%5D=4133&amp;hotel%5Brooms%5D=1">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotel-deals/61304-signature-dining-package-breakfast-daily-dinner"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/4133/card_1190549_115_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/4133-fontainebleau-miami-beach-miami-beach-fl">Fontainebleau Miami Beach</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>from</span>
+<div class="rate"><a href="/hotel-deals/61304-signature-dining-package-breakfast-daily-dinner">$210</a></div>
+</div>
+<div class="savings">
+<span>Deal Analyzer™</span>
+<div class="nightly-rate-and-percent-savings">
+$645
+<p style="display:inline;">
+/night
+</p>
+67%
+<p style="display:inline;">off</p>
+</div>
+</div>
+</div>
+<div class="middle-info">
+<div class="deal-name"><a href="/hotel-deals/61304-signature-dining-package-breakfast-daily-dinner">"Signature Dining" Package + Breakfast Daily, Dinner</a></div>
+</div>
+<div class="bottom-info">
+<div class="details hidden-xs">
+<span>
+source:
+fontaineblea...
+</span>
+<span>
+book by:
+Dec 30, 2014
+</span>
+</div>
+<div class="get-this-deal">
+<a class="call-to-action pop-and-redirect" href="#">GET THIS DEAL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+<div class="row">
+<heading>
+<h3>Deals for nearby hotels</h3>
+</heading>
+<div class="hotel-deal-cards">
+<div class="card" clicktripz_id="5026" hotel_id="1" hotel_name="Catalina Hotel &amp; Beach Club (Miami Beach, FL)" id="hotel_deal_91652" location="Miami Beach, FL" outbound_url="/hotel-deals/91652/outbound?hotel%5Bcheck_in%5D=2014-11-07&amp;hotel%5Bcheck_out%5D=2014-11-09&amp;hotel%5Bguests%5D=1&amp;hotel%5Bid%5D=1&amp;hotel%5Brooms%5D=1">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotel-deals/91652-enjoy-great-low-rates-on-select-dates"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/1/card_8197_57_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/1-catalina-hotel-beach-club-miami-beach-fl">Catalina Hotel &amp; Beach Club</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>from</span>
+<div class="rate"><a href="/hotel-deals/91652-enjoy-great-low-rates-on-select-dates">$66</a></div>
+</div>
+<div class="savings">
+<span>Deal Analyzer™</span>
+<div class="nightly-rate-and-percent-savings">
+$240
+<p style="display:inline;">
+/night
+</p>
+73%
+<p style="display:inline;">off</p>
+</div>
+</div>
+</div>
+<div class="middle-info">
+<div class="deal-name"><a href="/hotel-deals/91652-enjoy-great-low-rates-on-select-dates">Enjoy Great Low Rates On Select Dates!</a></div>
+</div>
+<div class="bottom-info">
+<div class="details hidden-xs">
+<span>
+source:
+priceline.com
+</span>
+<span>
+book by:
+Dec 31, 2014
+</span>
+</div>
+<div class="get-this-deal">
+<a class="call-to-action pop-and-redirect" href="#">GET THIS DEAL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" hotel_id="176694" hotel_name="Hotel Croydon (Miami Beach, FL)" id="hotel_deal_110726" location="Miami Beach, FL" outbound_url="/hotel-deals/110726/outbound?hotel%5Bcheck_in%5D=2014-11-07&amp;hotel%5Bcheck_out%5D=2014-11-09&amp;hotel%5Bguests%5D=1&amp;hotel%5Bid%5D=176694&amp;hotel%5Brooms%5D=1">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotel-deals/110726-limited-time-offer-book-now-save"><img class="img-responsive lazy-effect" data-original="/assets/fallback/hotel/card_default.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/176694-hotel-croydon-miami-beach-fl">Hotel Croydon</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>from</span>
+<div class="rate"><a href="/hotel-deals/110726-limited-time-offer-book-now-save">$78</a></div>
+</div>
+<div class="savings">
+<span>Deal Analyzer™</span>
+<div class="nightly-rate-and-percent-savings">
+$217
+<p style="display:inline;">
+/night
+</p>
+64%
+<p style="display:inline;">off</p>
+</div>
+</div>
+</div>
+<div class="middle-info">
+<div class="deal-name"><a href="/hotel-deals/110726-limited-time-offer-book-now-save">Limited Time Offer! Book Now &amp; Save!</a></div>
+</div>
+<div class="bottom-info">
+<div class="details hidden-xs">
+<span>
+source:
+hotels.com
+</span>
+<span>
+book by:
+Nov 30, 2014
+</span>
+</div>
+<div class="get-this-deal">
+<a class="call-to-action" href="/hotel-deals/110726/outbound" target="_blank">GET THIS DEAL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="18831" hotel_id="3774" hotel_name="Hotel Nash (Miami Beach, FL)" id="hotel_deal_109256" location="Miami Beach, FL" outbound_url="/hotel-deals/109256/outbound?hotel%5Bcheck_in%5D=2014-11-07&amp;hotel%5Bcheck_out%5D=2014-11-09&amp;hotel%5Bguests%5D=1&amp;hotel%5Bid%5D=3774&amp;hotel%5Brooms%5D=1">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotel-deals/109256-enjoy-special-rates-on-select-dates"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/3774/card_425440_73_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/3774-hotel-nash-miami-beach-fl">Hotel Nash</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>from</span>
+<div class="rate"><a href="/hotel-deals/109256-enjoy-special-rates-on-select-dates">$99</a></div>
+</div>
+<div class="savings">
+<span>Deal Analyzer™</span>
+<div class="nightly-rate-and-percent-savings">
+$330
+<p style="display:inline;">
+/night
+</p>
+70%
+<p style="display:inline;">off</p>
+</div>
+</div>
+</div>
+<div class="middle-info">
+<div class="deal-name"><a href="/hotel-deals/109256-enjoy-special-rates-on-select-dates">Enjoy Special Rates On Select Dates!</a></div>
+</div>
+<div class="bottom-info">
+<div class="details hidden-xs">
+<span>
+source:
+priceline.com
+</span>
+<span>
+book by:
+Dec 31, 2014
+</span>
+</div>
+<div class="get-this-deal">
+<a class="call-to-action pop-and-redirect" href="#">GET THIS DEAL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="12559" hotel_id="6800" hotel_name="Impala Hotel (Miami Beach, FL)" id="hotel_deal_72073" location="Miami Beach, FL" outbound_url="/hotel-deals/72073/outbound?hotel%5Bcheck_in%5D=2014-11-07&amp;hotel%5Bcheck_out%5D=2014-11-09&amp;hotel%5Bguests%5D=1&amp;hotel%5Bid%5D=6800&amp;hotel%5Brooms%5D=1">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotel-deals/72073-enjoy-special-rates-on-select-dates"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/6800/card_67630_71_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/6800-impala-hotel-miami-beach-fl">Impala Hotel</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>from</span>
+<div class="rate"><a href="/hotel-deals/72073-enjoy-special-rates-on-select-dates">$118</a></div>
+</div>
+<div class="savings">
+<span>Deal Analyzer™</span>
+<div class="nightly-rate-and-percent-savings">
+$499
+<p style="display:inline;">
+/night
+</p>
+76%
+<p style="display:inline;">off</p>
+</div>
+</div>
+</div>
+<div class="middle-info">
+<div class="deal-name"><a href="/hotel-deals/72073-enjoy-special-rates-on-select-dates">Enjoy Special Rates On Select Dates!</a></div>
+</div>
+<div class="bottom-info">
+<div class="details hidden-xs">
+<span>
+source:
+priceline.com
+</span>
+<span>
+book by:
+Dec 31, 2014
+</span>
+</div>
+<div class="get-this-deal">
+<a class="call-to-action pop-and-redirect" href="#">GET THIS DEAL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="87102" hotel_id="12999" hotel_name="Soho Beach House (Miami Beach, FL)" id="hotel_deal_111112" location="Miami Beach, FL" outbound_url="/hotel-deals/111112/outbound?hotel%5Bcheck_in%5D=2014-11-07&amp;hotel%5Bcheck_out%5D=2014-11-09&amp;hotel%5Bguests%5D=1&amp;hotel%5Bid%5D=12999&amp;hotel%5Brooms%5D=1">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotel-deals/111112-extend-your-summer-deal-special-rates"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/12999/card_170979_77_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/12999-soho-beach-house-miami-beach-fl">Soho Beach House</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>from</span>
+<div class="rate"><a href="/hotel-deals/111112-extend-your-summer-deal-special-rates">$245</a></div>
+</div>
+<div class="savings">
+<span>Deal Analyzer™</span>
+<div class="nightly-rate-and-percent-savings">
+$625
+<p style="display:inline;">
+/night
+</p>
+61%
+<p style="display:inline;">off</p>
+</div>
+</div>
+</div>
+<div class="middle-info">
+<div class="deal-name"><a href="/hotel-deals/111112-extend-your-summer-deal-special-rates">"Extend Your Summer" Deal + Special Rates</a></div>
+</div>
+<div class="bottom-info">
+<div class="details hidden-xs">
+<span>
+source:
+sohobeachhou...
+</span>
+<span>
+book by:
+Dec 31, 2014
+</span>
+</div>
+<div class="get-this-deal">
+<a class="call-to-action pop-and-redirect" href="#">GET THIS DEAL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="6786" hotel_id="2460" hotel_name="South Seas Hotel (Miami Beach, FL)" id="hotel_deal_109254" location="Miami Beach, FL" outbound_url="/hotel-deals/109254/outbound?hotel%5Bcheck_in%5D=2014-11-07&amp;hotel%5Bcheck_out%5D=2014-11-09&amp;hotel%5Bguests%5D=1&amp;hotel%5Bid%5D=2460&amp;hotel%5Brooms%5D=1">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotel-deals/109254-enjoy-great-low-rates-on-select-dates"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/2460/card_41475_93_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/2460-south-seas-hotel-miami-beach-fl">South Seas Hotel</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>from</span>
+<div class="rate"><a href="/hotel-deals/109254-enjoy-great-low-rates-on-select-dates">$129</a></div>
+</div>
+<div class="savings">
+<span>Deal Analyzer™</span>
+<div class="nightly-rate-and-percent-savings">
+$420
+<p style="display:inline;">
+/night
+</p>
+69%
+<p style="display:inline;">off</p>
+</div>
+</div>
+</div>
+<div class="middle-info">
+<div class="deal-name"><a href="/hotel-deals/109254-enjoy-great-low-rates-on-select-dates">Enjoy Great Low Rates On Select Dates!</a></div>
+</div>
+<div class="bottom-info">
+<div class="details hidden-xs">
+<span>
+source:
+priceline.com
+</span>
+<span>
+book by:
+Dec 31, 2014
+</span>
+</div>
+<div class="get-this-deal">
+<a class="call-to-action pop-and-redirect" href="#">GET THIS DEAL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="43970" hotel_id="4075" hotel_name="Metropole Suites South Beach (Miami Beach, FL)" id="hotel_deal_110728" location="Miami Beach, FL" outbound_url="/hotel-deals/110728/outbound?hotel%5Bcheck_in%5D=2014-11-07&amp;hotel%5Bcheck_out%5D=2014-11-09&amp;hotel%5Bguests%5D=1&amp;hotel%5Bid%5D=4075&amp;hotel%5Brooms%5D=1">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotel-deals/110728-limited-time-offer-book-now-save"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/4075/card_1793948_15_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/4075-metropole-suites-south-beach-miami-beach-fl">Metropole Suites South Beach</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>from</span>
+<div class="rate"><a href="/hotel-deals/110728-limited-time-offer-book-now-save">$131</a></div>
+</div>
+<div class="savings">
+<span>Deal Analyzer™</span>
+<div class="nightly-rate-and-percent-savings">
+$433
+<p style="display:inline;">
+/night
+</p>
+70%
+<p style="display:inline;">off</p>
+</div>
+</div>
+</div>
+<div class="middle-info">
+<div class="deal-name"><a href="/hotel-deals/110728-limited-time-offer-book-now-save">Limited Time Offer - Book Now &amp; Save!</a></div>
+</div>
+<div class="bottom-info">
+<div class="details hidden-xs">
+<span>
+source:
+hotels.com
+</span>
+<span>
+book by:
+Nov 30, 2014
+</span>
+</div>
+<div class="get-this-deal">
+<a class="call-to-action" href="/hotel-deals/110728/outbound" target="_blank">GET THIS DEAL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="23643" hotel_id="2288" hotel_name="The Ritz-Carlton, South Beach (Miami Beach, FL)" id="hotel_deal_28184" location="Miami Beach, FL" outbound_url="/hotel-deals/28184/outbound?hotel%5Bcheck_in%5D=2014-11-07&amp;hotel%5Bcheck_out%5D=2014-11-09&amp;hotel%5Bguests%5D=1&amp;hotel%5Bid%5D=2288&amp;hotel%5Brooms%5D=1">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotel-deals/28184-reduced-rates-at-luxury-beachfront-hotel-in-miami-beach"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/2288/card_582845_103_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/2288-the-ritz-carlton-south-beach-miami-beach-fl">The Ritz-Carlton, South Beach</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>from</span>
+<div class="rate"><a href="/hotel-deals/28184-reduced-rates-at-luxury-beachfront-hotel-in-miami-beach">$259</a></div>
+</div>
+<div class="savings">
+<span>Deal Analyzer™</span>
+<div class="nightly-rate-and-percent-savings">
+$639
+<p style="display:inline;">
+/night
+</p>
+59%
+<p style="display:inline;">off</p>
+</div>
+</div>
+</div>
+<div class="middle-info">
+<div class="deal-name"><a href="/hotel-deals/28184-reduced-rates-at-luxury-beachfront-hotel-in-miami-beach">Reduced Rates at Luxury Beachfront Hotel in Miami Beach</a></div>
+</div>
+<div class="bottom-info">
+<div class="details hidden-xs">
+<span>
+source:
+Orbitz
+</span>
+<span>
+book by:
+Dec 31, 2014
+</span>
+</div>
+<div class="get-this-deal">
+<a class="call-to-action" href="/hotel-deals/28184/outbound" target="_blank">GET THIS DEAL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="15428" hotel_id="7302" hotel_name="The Beacon Hotel South Beach (Miami Beach, FL)" id="hotel_deal_110727" location="Miami Beach, FL" outbound_url="/hotel-deals/110727/outbound?hotel%5Bcheck_in%5D=2014-11-07&amp;hotel%5Bcheck_out%5D=2014-11-09&amp;hotel%5Bguests%5D=1&amp;hotel%5Bid%5D=7302&amp;hotel%5Brooms%5D=1">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotel-deals/110727-limited-time-offer-book-now-save"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/7302/card_17764_94_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/7302-the-beacon-hotel-south-beach-miami-beach-fl">The Beacon Hotel South Beach</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>from</span>
+<div class="rate"><a href="/hotel-deals/110727-limited-time-offer-book-now-save">$119</a></div>
+</div>
+<div class="savings">
+<span>Deal Analyzer™</span>
+<div class="nightly-rate-and-percent-savings">
+$319
+<p style="display:inline;">
+/night
+</p>
+63%
+<p style="display:inline;">off</p>
+</div>
+</div>
+</div>
+<div class="middle-info">
+<div class="deal-name"><a href="/hotel-deals/110727-limited-time-offer-book-now-save">Limited Time Offer - Book Now &amp; Save!</a></div>
+</div>
+<div class="bottom-info">
+<div class="details hidden-xs">
+<span>
+source:
+hotels.com
+</span>
+<span>
+book by:
+Nov 03, 2014
+</span>
+</div>
+<div class="get-this-deal">
+<a class="call-to-action" href="/hotel-deals/110727/outbound" target="_blank">GET THIS DEAL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="6786" hotel_id="2460" hotel_name="South Seas Hotel (Miami Beach, FL)" id="hotel_deal_74369" location="Miami Beach, FL" outbound_url="/hotel-deals/74369/outbound?hotel%5Bcheck_in%5D=2014-11-07&amp;hotel%5Bcheck_out%5D=2014-11-09&amp;hotel%5Bguests%5D=1&amp;hotel%5Bid%5D=2460&amp;hotel%5Brooms%5D=1">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotel-deals/74369-save-at-boutique-hotel-on-miami-beach-s-hippest-block"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/2460/card_41475_93_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/2460-south-seas-hotel-miami-beach-fl">South Seas Hotel</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>from</span>
+<div class="rate"><a href="/hotel-deals/74369-save-at-boutique-hotel-on-miami-beach-s-hippest-block">$139</a></div>
+</div>
+<div class="savings">
+<span>Deal Analyzer™</span>
+<div class="nightly-rate-and-percent-savings">
+$420
+<p style="display:inline;">
+/night
+</p>
+67%
+<p style="display:inline;">off</p>
+</div>
+</div>
+</div>
+<div class="middle-info">
+<div class="deal-name"><a href="/hotel-deals/74369-save-at-boutique-hotel-on-miami-beach-s-hippest-block">Save at Boutique Hotel on Miami Beach's Hippest Block</a></div>
+</div>
+<div class="bottom-info">
+<div class="details hidden-xs">
+<span>
+source:
+Orbitz
+</span>
+<span>
+book by:
+Dec 31, 2014
+</span>
+</div>
+<div class="get-this-deal">
+<a class="call-to-action" href="/hotel-deals/74369/outbound" target="_blank">GET THIS DEAL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="75582" hotel_id="7314" hotel_name="The Delores Hotel &amp; Suites (Miami Beach, FL)" id="hotel_deal_36338" location="Miami Beach, FL" outbound_url="/hotel-deals/36338/outbound?hotel%5Bcheck_in%5D=2014-11-07&amp;hotel%5Bcheck_out%5D=2014-11-09&amp;hotel%5Bguests%5D=1&amp;hotel%5Bid%5D=7314&amp;hotel%5Brooms%5D=1">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotel-deals/36338-enjoy-great-low-rates-on-select-dates"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/7314/card_889914_60_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/7314-the-delores-hotel-suites-miami-beach-fl">The Delores Hotel &amp; Suites</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>from</span>
+<div class="rate"><a href="/hotel-deals/36338-enjoy-great-low-rates-on-select-dates">$62</a></div>
+</div>
+<div class="savings">
+<span>Deal Analyzer™</span>
+<div class="nightly-rate-and-percent-savings">
+$259
+<p style="display:inline;">
+/night
+</p>
+76%
+<p style="display:inline;">off</p>
+</div>
+</div>
+</div>
+<div class="middle-info">
+<div class="deal-name"><a href="/hotel-deals/36338-enjoy-great-low-rates-on-select-dates">Enjoy Great Low Rates On Select Dates!</a></div>
+</div>
+<div class="bottom-info">
+<div class="details hidden-xs">
+<span>
+source:
+priceline.com
+</span>
+<span>
+book by:
+Dec 31, 2014
+</span>
+</div>
+<div class="get-this-deal">
+<a class="call-to-action pop-and-redirect" href="#">GET THIS DEAL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="53275" hotel_id="4881" hotel_name="Sense Beach House (Miami Beach, FL)" id="hotel_deal_62007" location="Miami Beach, FL" outbound_url="/hotel-deals/62007/outbound?hotel%5Bcheck_in%5D=2014-11-07&amp;hotel%5Bcheck_out%5D=2014-11-09&amp;hotel%5Bguests%5D=1&amp;hotel%5Bid%5D=4881&amp;hotel%5Brooms%5D=1">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotel-deals/62007-enjoy-special-rates-on-select-dates"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/4881/card_2630242_25_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/4881-sense-beach-house-miami-beach-fl">Sense Beach House</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>from</span>
+<div class="rate"><a href="/hotel-deals/62007-enjoy-special-rates-on-select-dates">$141</a></div>
+</div>
+<div class="savings">
+<span>Deal Analyzer™</span>
+<div class="nightly-rate-and-percent-savings">
+$379
+<p style="display:inline;">
+/night
+</p>
+63%
+<p style="display:inline;">off</p>
+</div>
+</div>
+</div>
+<div class="middle-info">
+<div class="deal-name"><a href="/hotel-deals/62007-enjoy-special-rates-on-select-dates">Enjoy Special Rates On Select Dates!</a></div>
+</div>
+<div class="bottom-info">
+<div class="details hidden-xs">
+<span>
+source:
+priceline.com
+</span>
+<span>
+book by:
+Dec 31, 2014
+</span>
+</div>
+<div class="get-this-deal">
+<a class="call-to-action pop-and-redirect" href="#">GET THIS DEAL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="11841" hotel_id="3965" hotel_name="The Tides South Beach (Miami Beach, FL)" id="hotel_deal_28183" location="Miami Beach, FL" outbound_url="/hotel-deals/28183/outbound?hotel%5Bcheck_in%5D=2014-11-07&amp;hotel%5Bcheck_out%5D=2014-11-09&amp;hotel%5Bguests%5D=1&amp;hotel%5Bid%5D=3965&amp;hotel%5Brooms%5D=1">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotel-deals/28183-save-at-sophisticated-art-deco-hotel-in-miami-beach"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/3965/card_62825_42_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/3965-the-tides-south-beach-miami-beach-fl">The Tides South Beach</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>from</span>
+<div class="rate"><a href="/hotel-deals/28183-save-at-sophisticated-art-deco-hotel-in-miami-beach">$246</a></div>
+</div>
+<div class="savings">
+<span>Deal Analyzer™</span>
+<div class="nightly-rate-and-percent-savings">
+$446
+<p style="display:inline;">
+/night
+</p>
+45%
+<p style="display:inline;">off</p>
+</div>
+</div>
+</div>
+<div class="middle-info">
+<div class="deal-name"><a href="/hotel-deals/28183-save-at-sophisticated-art-deco-hotel-in-miami-beach">Save at Sophisticated Art Deco Hotel in Miami Beach</a></div>
+</div>
+<div class="bottom-info">
+<div class="details hidden-xs">
+<span>
+source:
+Orbitz
+</span>
+<span>
+book by:
+Dec 31, 2014
+</span>
+</div>
+<div class="get-this-deal">
+<a class="call-to-action" href="/hotel-deals/28183/outbound" target="_blank">GET THIS DEAL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="18831" hotel_id="3774" hotel_name="Hotel Nash (Miami Beach, FL)" id="hotel_deal_69484" location="Miami Beach, FL" outbound_url="/hotel-deals/69484/outbound?hotel%5Bcheck_in%5D=2014-11-07&amp;hotel%5Bcheck_out%5D=2014-11-09&amp;hotel%5Bguests%5D=1&amp;hotel%5Bid%5D=3774&amp;hotel%5Brooms%5D=1">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotel-deals/69484-great-rates-at-elegant-4-star-hotel-in-miami-beach"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/3774/card_425440_73_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/3774-hotel-nash-miami-beach-fl">Hotel Nash</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>from</span>
+<div class="rate"><a href="/hotel-deals/69484-great-rates-at-elegant-4-star-hotel-in-miami-beach">$139</a></div>
+</div>
+<div class="savings">
+<span>Deal Analyzer™</span>
+<div class="nightly-rate-and-percent-savings">
+$330
+<p style="display:inline;">
+/night
+</p>
+58%
+<p style="display:inline;">off</p>
+</div>
+</div>
+</div>
+<div class="middle-info">
+<div class="deal-name"><a href="/hotel-deals/69484-great-rates-at-elegant-4-star-hotel-in-miami-beach">Great Rates at Elegant 4-Star Hotel in Miami Beach</a></div>
+</div>
+<div class="bottom-info">
+<div class="details hidden-xs">
+<span>
+source:
+Orbitz
+</span>
+<span>
+book by:
+Dec 31, 2014
+</span>
+</div>
+<div class="get-this-deal">
+<a class="call-to-action" href="/hotel-deals/69484/outbound" target="_blank">GET THIS DEAL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" hotel_id="14023" hotel_name="The Palms Hotel and Spa (Miami Beach, FL)" id="hotel_deal_109249" location="Miami Beach, FL" outbound_url="/hotel-deals/109249/outbound?hotel%5Bcheck_in%5D=2014-11-07&amp;hotel%5Bcheck_out%5D=2014-11-09&amp;hotel%5Bguests%5D=1&amp;hotel%5Bid%5D=14023&amp;hotel%5Brooms%5D=1">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotel-deals/109249-enjoy-special-rates-on-select-dates"><img class="img-responsive lazy-effect" data-original="/assets/fallback/hotel/card_default.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/14023-the-palms-hotel-and-spa-miami-beach-fl">The Palms Hotel and Spa</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>from</span>
+<div class="rate"><a href="/hotel-deals/109249-enjoy-special-rates-on-select-dates">$152</a></div>
+</div>
+<div class="savings">
+<span>Deal Analyzer™</span>
+<div class="nightly-rate-and-percent-savings">
+$369
+<p style="display:inline;">
+/night
+</p>
+59%
+<p style="display:inline;">off</p>
+</div>
+</div>
+</div>
+<div class="middle-info">
+<div class="deal-name"><a href="/hotel-deals/109249-enjoy-special-rates-on-select-dates">Enjoy Special Rates On Select Dates!</a></div>
+</div>
+<div class="bottom-info">
+<div class="details hidden-xs">
+<span>
+source:
+priceline.com
+</span>
+<span>
+book by:
+Nov 27, 2014
+</span>
+</div>
+<div class="get-this-deal">
+<a class="call-to-action pop-and-redirect" href="#">GET THIS DEAL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<ul class="pagination">
+  
+  
+      <li class="page active">
+  <a href="/hotels/4133-fontainebleau-miami-beach-miami-beach-fl">1</a>
+</li>
+
+      <li class="page">
+  <a href="/hotels/4133-fontainebleau-miami-beach-miami-beach-fl?page=2" rel="next">2</a>
+</li>
+
+      <li class="page">
+  <a href="/hotels/4133-fontainebleau-miami-beach-miami-beach-fl?page=3">3</a>
+</li>
+
+      <li class="page">
+  <a href="/hotels/4133-fontainebleau-miami-beach-miami-beach-fl?page=4">4</a>
+</li>
+
+      <li class="page">
+  <a href="/hotels/4133-fontainebleau-miami-beach-miami-beach-fl?page=5">5</a>
+</li>
+
+  <li class="next_page">
+  <a href="/hotels/4133-fontainebleau-miami-beach-miami-beach-fl?page=2" rel="next">Next ›</a>
+</li>
+
+  <li class="last next">
+  <a href="/hotels/4133-fontainebleau-miami-beach-miami-beach-fl?page=5">Last »</a>
+</li>
+
+</ul>
+
+</div>
+</div>
+</div>
+<div class="hotel-deal-search-form-container hide">
+<form class="form-inline" id="hotel_deal_search_hidden">
+<input id="hotel_deal_search_hidden_pop_partner" name="pop_partner[name]" type="hidden">
+<input id="hotel_deal_search_hidden_mobile" name="mobile" type="hidden">
+<input id="hotel_deal_search_hidden_location_id" name="location[id]">
+<input id="hotel_deal_search_hidden_hotel_id" name="hotel[id]">
+<input id="hotel_deal_search_hidden_location_backup" name="location[name]" type="hidden">
+<input id="hotel_deal_search_hidden_location">
+<input id="hotel_deal_search_hidden_param">
+<select id="hotel_deal_search_hidden_guests">
+<option selected="" value="1"></option>
+</select>
+<select id="hotel_deal_search_hidden_rooms">
+<option selected="" value="1"></option>
+</select>
+<input id="hotel_deal_search_hidden_check_in">
+<input id="hotel_deal_search_hidden_check_out">
+<div class="submit-container">
+<button class="call-to-action" type="submit"></button>
+</div>
+<div class="affiliates">
+<div class="checkbox-description">include rates from:</div>
+<div class="ctz-anchor" id="hotel_deal_search_hidden_ct_anchor"></div>
+</div>
+</form>
+</div>
+<script>
+  var _ctq = _ctq || [];
+  _ctq.push(['newCompareToStrip', 'clicktripz_hotel_deal_hidden']);
+  if( getCookie("ctz_test") == "true" || false == true){
+    _ctq.push(['clicktripz_hotel_deal_hidden.setPublisherID', 385]); 
+  }else{
+    _ctq.push(['clicktripz_hotel_deal_hidden.setPublisherID', 57]);      
+  }
+  _ctq.push(['clicktripz_hotel_deal_hidden.setFormID', 'hotel_deal_search_hidden']);
+  
+  _ctq.push(['clicktripz_hotel_deal_hidden.setCheckInID', 'hotel_deal_search_hidden_check_in']);
+  _ctq.push(['clicktripz_hotel_deal_hidden.setCheckOutID', 'hotel_deal_search_hidden_check_out']);
+  _ctq.push(['clicktripz_hotel_deal_hidden.setGuestsID', 'hotel_deal_search_hidden_guests']);
+  _ctq.push(['clicktripz_hotel_deal_hidden.setRoomsID', 'hotel_deal_search_hidden_rooms']);
+  
+  _ctq.push(['clicktripz_hotel_deal_hidden.optMaxChecked', '3']);
+  _ctq.push(['clicktripz_hotel_deal_hidden.setAnchorID', 'hotel_deal_search_hidden_ct_anchor']);           
+  _ctq.push(['clicktripz_hotel_deal_hidden.setReferralURL', passable_information]);
+  _ctq.push(['clicktripz_hotel_deal_hidden.optCascadeWindows', 'false']);
+  
+  _ctq.push(['clicktripz_hotel_deal_hidden.onPopupBlock', 'myPopupBlockedEventHandler']);
+  _ctq.push(['clicktripz_hotel_deal_hidden.onPopupComplete', 'myPopupCompleteHandler']);
+</script>
+
+<aside class="hidden-xs">
+<!-- /v2 skyscraper, hotel -->
+<!-- = render partial: 'shared/sidebar_ad', locals: {slot: '5536601143'} -->
+<!-- / DFP v2_hotel-property-top-sidebar-160x600 -->
+<div class="sidebar-ad">
+<div id="gpt-ad-hotel-property-top-sidebar" style="width:160px; height:600px;">
+<script>
+  if( device_type != "mobile" ){
+    googletag.cmd.push(function() { googletag.display('gpt-ad-hotel-property-top-sidebar'); });
+  }
+</script>
+<div id="google_ads_iframe_/5873135/v2_hotel-property-top-sidebar-160x600_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/5873135/v2_hotel-property-top-sidebar-160x600_0" name="google_ads_iframe_/5873135/v2_hotel-property-top-sidebar-160x600_0" width="160" height="600" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px; vertical-align: bottom;"></iframe></div><iframe id="google_ads_iframe_/5873135/v2_hotel-property-top-sidebar-160x600_0__hidden__" name="google_ads_iframe_/5873135/v2_hotel-property-top-sidebar-160x600_0__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none;"></iframe></div>
+</div>
+<!-- / DFP v2_hotel-property-sidebar-160x600 -->
+<div class="sidebar-ad">
+<div id="gpt-ad-hotel-property-sidebar" style="width:160px; height:600px;">
+<script>
+  if( device_type != "mobile" ){
+    googletag.cmd.push(function() { googletag.display('gpt-ad-hotel-property-sidebar'); });
+  }
+</script>
+<div id="google_ads_iframe_/5873135/v2_hotel-property-sidebar-160x600_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/5873135/v2_hotel-property-sidebar-160x600_0" name="google_ads_iframe_/5873135/v2_hotel-property-sidebar-160x600_0" width="160" height="600" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px; vertical-align: bottom;"></iframe></div></div>
+</div>
+</aside>
+</div>
+</div>
+<div class="container footer-ads">
+<!-- / DFP v2_hotel-property-left-rectangle-300x250 -->
+<div class="footer-ad">
+<div id="gpt-ad-hotel-property-left-rectangle" style="width:300px; height:250px;">
+<script>
+  googletag.cmd.push(function() { googletag.display('gpt-ad-hotel-property-left-rectangle'); });
+</script>
+<div id="google_ads_iframe_/5873135/v2_hotel-property-left-rectangle-300x250_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/5873135/v2_hotel-property-left-rectangle-300x250_0" name="google_ads_iframe_/5873135/v2_hotel-property-left-rectangle-300x250_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px; vertical-align: bottom;"></iframe></div></div>
+</div>
+<!-- / DFP v2_hotel-property-rectangle-300x250 -->
+<div class="footer-ad">
+<div id="gpt-ad-hotel-property-rectangle" style="width:300px; height:250px;">
+<script>
+  googletag.cmd.push(function() { googletag.display('gpt-ad-hotel-property-rectangle'); });
+</script>
+<div id="google_ads_iframe_/5873135/v2_hotel-property-rectangle-300x250_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/5873135/v2_hotel-property-rectangle-300x250_0" name="google_ads_iframe_/5873135/v2_hotel-property-rectangle-300x250_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px; vertical-align: bottom;"></iframe></div></div>
+</div>
+</div>
+<div class="container hotels">
+<heading>
+<h3>Nearby Hotels</h3>
+</heading>
+<div class="results hotel-cards">
+<div class="card" clicktripz_id="5026" hotel_id="1" hotel_name="Catalina Hotel &amp; Beach Club (Miami Beach, FL)" id="hotel_1" location="Miami Beach, FL">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotels/1-catalina-hotel-beach-club-miami-beach-fl"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/1/card_8197_57_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/1-catalina-hotel-beach-club-miami-beach-fl">Catalina Hotel &amp; Beach Club</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>average</span>
+<div class="rate"><a href="/hotels/1-catalina-hotel-beach-club-miami-beach-fl">$240</a></div>
+</div>
+<div class="get-directions">
+<a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=Catalina Hotel &amp; Beach Club, 1732 Collins Ave, Miami Beach, FL 33139" target="_blank">Get Directions</a>
+</div>
+</div>
+<div class="middle-info">
+<span class="description">Featuring a lower pool and a rooftop pool, this stylish and sophisticated hotel is located two blocks from Lincoln Road.</span>
+</div>
+<div class="bottom-info">
+<a class="call-to-action" data-target="#ctz-hotel-modal" data-toggle="modal" href="#">GET THE BEST RATES</a>
+</div>
+<div class="modal-title hide">
+<button class="close" data-dismiss="modal" type="button">×</button>
+<h4 class="modal-title" id="hotel-name"><a href="http://www.catalinahotel.com/">Catalina Hotel &amp; Beach Club</a></h4>
+</div>
+<div class="modal-details hide">
+<div class="hotel-info-container">
+<div class="hotel-location"><a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=Catalina Hotel &amp; Beach Club, 1732 Collins Ave, Miami Beach, FL 33139" target="_blank">1732 Collins Ave, Miami Beach, FL 33139</a></div>
+<div class="hotel-rating">
+<ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+</ul>
+
+</div>
+<div class="hotel-description">
+<h6>Description</h6>
+<p>Featuring a lower pool and a rooftop pool, this stylish and sophisticated hotel is located two blocks from Lincoln Road.</p>
+</div>
+</div>
+</div>
+<div class="modal-search hide">
+<h4>Check rates for this hotel</h4>
+<p>
+Rates and availability vary for this hotel. Search the web here for the best rates.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="16481" hotel_id="2287" hotel_name="Loews Miami Beach Hotel (Miami Beach, FL)" id="hotel_2287" location="Miami Beach, FL">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotels/2287-loews-miami-beach-hotel-miami-beach-fl"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/2287/card_81223_160_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/2287-loews-miami-beach-hotel-miami-beach-fl">Loews Miami Beach Hotel</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>average</span>
+<div class="rate"><a href="/hotels/2287-loews-miami-beach-hotel-miami-beach-fl">$454</a></div>
+</div>
+<div class="get-directions">
+<a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=Loews Miami Beach Hotel, 1601 Collins Ave, Miami Beach, FL 33139" target="_blank">Get Directions</a>
+</div>
+</div>
+<div class="middle-info">
+<span class="description">The grand Loews Hotel has 790 guest rooms, oceanfront property, 6 restaurants, spa, meeting space, and Ipod docks.</span>
+</div>
+<div class="bottom-info">
+<a class="call-to-action" data-target="#ctz-hotel-modal" data-toggle="modal" href="#">GET THE BEST RATES</a>
+</div>
+<div class="modal-title hide">
+<button class="close" data-dismiss="modal" type="button">×</button>
+<h4 class="modal-title" id="hotel-name"><a href="http://www.loewshotels.com/en/Hotels/Miami-Beach-Hotel/Overview.aspx">Loews Miami Beach Hotel</a></h4>
+</div>
+<div class="modal-details hide">
+<div class="hotel-info-container">
+<div class="hotel-location"><a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=Loews Miami Beach Hotel, 1601 Collins Ave, Miami Beach, FL 33139" target="_blank">1601 Collins Ave, Miami Beach, FL 33139</a></div>
+<div class="hotel-rating">
+<ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+</ul>
+
+</div>
+<div class="hotel-description">
+<h6>Description</h6>
+<p>The grand Loews Hotel has 790 guest rooms, oceanfront property, 6 restaurants, spa, meeting space, and Ipod docks.</p>
+</div>
+</div>
+</div>
+<div class="modal-search hide">
+<h4>Check rates for this hotel</h4>
+<p>
+Rates and availability vary for this hotel. Search the web here for the best rates.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="23643" hotel_id="2288" hotel_name="The Ritz-Carlton, South Beach (Miami Beach, FL)" id="hotel_2288" location="Miami Beach, FL">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotels/2288-the-ritz-carlton-south-beach-miami-beach-fl"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/2288/card_582845_103_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/2288-the-ritz-carlton-south-beach-miami-beach-fl">The Ritz-Carlton, South Beach</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>average</span>
+<div class="rate"><a href="/hotels/2288-the-ritz-carlton-south-beach-miami-beach-fl">$639</a></div>
+</div>
+<div class="get-directions">
+<a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=The Ritz-Carlton, South Beach, 1 Lincoln Rd, Miami Beach, FL 33139" target="_blank">Get Directions</a>
+</div>
+</div>
+<div class="middle-info">
+<span class="description">The Ritz-Carlton South Beach has 375 guest rooms, spa, meeting room, 2 restaurants, and ocean front dining.</span>
+</div>
+<div class="bottom-info">
+<a class="call-to-action" data-target="#ctz-hotel-modal" data-toggle="modal" href="#">GET THE BEST RATES</a>
+</div>
+<div class="modal-title hide">
+<button class="close" data-dismiss="modal" type="button">×</button>
+<h4 class="modal-title" id="hotel-name"><a href="http://www.ritzcarlton.com/en/Properties/SouthBeach/Reservations/Packages/Default.htm">The Ritz-Carlton, South Beach</a></h4>
+</div>
+<div class="modal-details hide">
+<div class="hotel-info-container">
+<div class="hotel-location"><a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=The Ritz-Carlton, South Beach, 1 Lincoln Rd, Miami Beach, FL 33139" target="_blank">1 Lincoln Rd, Miami Beach, FL 33139</a></div>
+<div class="hotel-rating">
+<ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+</ul>
+
+</div>
+<div class="hotel-description">
+<h6>Description</h6>
+<p>The Ritz-Carlton South Beach has 375 guest rooms, spa, meeting room, 2 restaurants, and ocean front dining.</p>
+</div>
+</div>
+</div>
+<div class="modal-search hide">
+<h4>Check rates for this hotel</h4>
+<p>
+Rates and availability vary for this hotel. Search the web here for the best rates.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" hotel_id="2289" hotel_name="1 Hotel &amp; Homes South Beach (Miami Beach, FL)" id="hotel_2289" location="Miami Beach, FL">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotels/2289-1-hotel-homes-south-beach-miami-beach-fl"><img class="img-responsive lazy-effect" data-original="/assets/fallback/hotel/card_default.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/2289-1-hotel-homes-south-beach-miami-beach-fl">1 Hotel &amp; Homes South Beach</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>average</span>
+<div class="rate"><a href="/hotels/2289-1-hotel-homes-south-beach-miami-beach-fl">$624</a></div>
+</div>
+<div class="get-directions">
+<a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=1 Hotel &amp; Homes South Beach, 2377 Collins Avenue, Miami Beach, FL 33139" target="_blank">Get Directions</a>
+</div>
+</div>
+<div class="middle-info">
+<span class="description">Formerly the Perry South Beach, the hotel features a rooftop bar and pool, sandy beach and David Barton Gym + Spa.</span>
+</div>
+<div class="bottom-info">
+<a class="call-to-action" data-target="#ctz-hotel-modal" data-toggle="modal" href="#">GET THE BEST RATES</a>
+</div>
+<div class="modal-title hide">
+<button class="close" data-dismiss="modal" type="button">×</button>
+<h4 class="modal-title" id="hotel-name"><a href="http://1hotels.com/southbeach/hotel/">1 Hotel &amp; Homes South Beach</a></h4>
+</div>
+<div class="modal-details hide">
+<div class="hotel-info-container">
+<div class="hotel-location"><a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=1 Hotel &amp; Homes South Beach, 2377 Collins Avenue, Miami Beach, FL 33139" target="_blank">2377 Collins Avenue, Miami Beach, FL 33139</a></div>
+<div class="hotel-rating">
+<ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+</ul>
+
+</div>
+<div class="hotel-description">
+<h6>Description</h6>
+<p>Formerly the Perry South Beach, the hotel features a rooftop bar and pool, sandy beach and David Barton Gym + Spa.</p>
+</div>
+</div>
+</div>
+<div class="modal-search hide">
+<h4>Check rates for this hotel</h4>
+<p>
+Rates and availability vary for this hotel. Search the web here for the best rates.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="51396" hotel_id="2290" hotel_name="Z Ocean Hotel South Beach (Miami Beach, FL)" id="hotel_2290" location="Miami Beach, FL">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotels/2290-z-ocean-hotel-south-beach-miami-beach-fl"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/2290/card_2478283_87_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/2290-z-ocean-hotel-south-beach-miami-beach-fl">Z Ocean Hotel South Beach</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>average</span>
+<div class="rate"><a href="/hotels/2290-z-ocean-hotel-south-beach-miami-beach-fl">$447</a></div>
+</div>
+<div class="get-directions">
+<a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=Z Ocean Hotel South Beach, 1437 Collins Ave, Miami Beach, FL 33139" target="_blank">Get Directions</a>
+</div>
+</div>
+<div class="middle-info">
+<span class="description">A sexy, all-suite hotel on Ocean Drive, this hotel has a roof-top hot tub, private balconies, and a beach restaurant. </span>
+</div>
+<div class="bottom-info">
+<a class="call-to-action" data-target="#ctz-hotel-modal" data-toggle="modal" href="#">GET THE BEST RATES</a>
+</div>
+<div class="modal-title hide">
+<button class="close" data-dismiss="modal" type="button">×</button>
+<h4 class="modal-title" id="hotel-name"><a href="http://www.zoceanhotelsouthbeach.com/packages.htm">Z Ocean Hotel South Beach</a></h4>
+</div>
+<div class="modal-details hide">
+<div class="hotel-info-container">
+<div class="hotel-location"><a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=Z Ocean Hotel South Beach, 1437 Collins Ave, Miami Beach, FL 33139" target="_blank">1437 Collins Ave, Miami Beach, FL 33139</a></div>
+<div class="hotel-rating">
+<ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+</ul>
+
+</div>
+<div class="hotel-description">
+<h6>Description</h6>
+<p>A sexy, all-suite hotel on Ocean Drive, this hotel has a roof-top hot tub, private balconies, and a beach restaurant.</p>
+</div>
+</div>
+</div>
+<div class="modal-search hide">
+<h4>Check rates for this hotel</h4>
+<p>
+Rates and availability vary for this hotel. Search the web here for the best rates.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="35779" hotel_id="2291" hotel_name="Hilton Bentley Miami/South Beach (Miami Beach, FL)" id="hotel_2291" location="Miami Beach, FL">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotels/2291-hilton-bentley-miamisouth-beach-miami-beach-fl"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/2291/card_985688_122_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/2291-hilton-bentley-miamisouth-beach-miami-beach-fl">Hilton Bentley Miami::South Beach</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>average</span>
+<div class="rate"><a href="/hotels/2291-hilton-bentley-miamisouth-beach-miami-beach-fl">$652</a></div>
+</div>
+<div class="get-directions">
+<a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=Hilton Bentley Miami/South Beach, 101 Ocean Dr, Miami Beach, FL 33139" target="_blank">Get Directions</a>
+</div>
+</div>
+<div class="middle-info">
+<span class="description">The Hilton Bentley is a non-smoking hotel in the Art Deco district, with beachfront, in-room spa, and free wireless.</span>
+</div>
+<div class="bottom-info">
+<a class="call-to-action" data-target="#ctz-hotel-modal" data-toggle="modal" href="#">GET THE BEST RATES</a>
+</div>
+<div class="modal-title hide">
+<button class="close" data-dismiss="modal" type="button">×</button>
+<h4 class="modal-title" id="hotel-name"><a href="http://www.hilton.com/en/hi/hotels/specials.jhtml?ctyhocn=MIABMHF">Hilton Bentley Miami::South Beach</a></h4>
+</div>
+<div class="modal-details hide">
+<div class="hotel-info-container">
+<div class="hotel-location"><a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=Hilton Bentley Miami/South Beach, 101 Ocean Dr, Miami Beach, FL 33139" target="_blank">101 Ocean Dr, Miami Beach, FL 33139</a></div>
+<div class="hotel-rating">
+<ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+</ul>
+
+</div>
+<div class="hotel-description">
+<h6>Description</h6>
+<p>The Hilton Bentley is a non-smoking hotel in the Art Deco district, with beachfront, in-room spa, and free wireless.</p>
+</div>
+</div>
+</div>
+<div class="modal-search hide">
+<h4>Check rates for this hotel</h4>
+<p>
+Rates and availability vary for this hotel. Search the web here for the best rates.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="6017" hotel_id="2293" hotel_name="Delano (Miami Beach, FL)" id="hotel_2293" location="Miami Beach, FL">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotels/2293-delano-miami-beach-fl"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/2293/card_4578_93_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/2293-delano-miami-beach-fl">Delano</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>average</span>
+<div class="rate"><a href="/hotels/2293-delano-miami-beach-fl">$584</a></div>
+</div>
+<div class="get-directions">
+<a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=Delano, 1685 Collins Ave, Miami Beach, FL 33139" target="_blank">Get Directions</a>
+</div>
+</div>
+<div class="middle-info">
+<span class="description">Located on the ocean in South Beach, this hotel has a private beach, an indoor/outdoor lobby, and the famous Agua Spa.</span>
+</div>
+<div class="bottom-info">
+<a class="call-to-action" data-target="#ctz-hotel-modal" data-toggle="modal" href="#">GET THE BEST RATES</a>
+</div>
+<div class="modal-title hide">
+<button class="close" data-dismiss="modal" type="button">×</button>
+<h4 class="modal-title" id="hotel-name"><a href="https://www.morganshotelgroup.com/delano/delano-south-beach/specials">Delano</a></h4>
+</div>
+<div class="modal-details hide">
+<div class="hotel-info-container">
+<div class="hotel-location"><a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=Delano, 1685 Collins Ave, Miami Beach, FL 33139" target="_blank">1685 Collins Ave, Miami Beach, FL 33139</a></div>
+<div class="hotel-rating">
+<ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+</ul>
+
+</div>
+<div class="hotel-description">
+<h6>Description</h6>
+<p>Located on the ocean in South Beach, this hotel has a private beach, an indoor/outdoor lobby, and the famous Agua Spa.</p>
+</div>
+</div>
+</div>
+<div class="modal-search hide">
+<h4>Check rates for this hotel</h4>
+<p>
+Rates and availability vary for this hotel. Search the web here for the best rates.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="69304" hotel_id="2294" hotel_name="The Alexander All Suite Oceanfront Resort (Miami Beach, FL)" id="hotel_2294" location="Miami Beach, FL">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotels/2294-the-alexander-all-suite-oceanfront-resort-miami-beach-fl"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/2294/card_9093_87_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/2294-the-alexander-all-suite-oceanfront-resort-miami-beach-fl">The Alexander All Suite Oceanfro...</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>average</span>
+<div class="rate"><a href="/hotels/2294-the-alexander-all-suite-oceanfront-resort-miami-beach-fl">$390</a></div>
+</div>
+<div class="get-directions">
+<a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=The Alexander All Suite Oceanfront Resort, 5225 Collins Avenue, Miami Beach, FL 33140" target="_blank">Get Directions</a>
+</div>
+</div>
+<div class="middle-info">
+<span class="description">This all-suite oceanfront hotel has a steakhouse, salon and spa, private marina, pool, grill, and West Indies décor.</span>
+</div>
+<div class="bottom-info">
+<a class="call-to-action" data-target="#ctz-hotel-modal" data-toggle="modal" href="#">GET THE BEST RATES</a>
+</div>
+<div class="modal-title hide">
+<button class="close" data-dismiss="modal" type="button">×</button>
+<h4 class="modal-title" id="hotel-name"><a href="http://www.alexanderhotel.com/specials-packages-en.html">The Alexander All Suite Oceanfront Resort</a></h4>
+</div>
+<div class="modal-details hide">
+<div class="hotel-info-container">
+<div class="hotel-location"><a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=The Alexander All Suite Oceanfront Resort, 5225 Collins Avenue, Miami Beach, FL 33140" target="_blank">5225 Collins Avenue, Miami Beach, FL 33140</a></div>
+<div class="hotel-rating">
+<ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+</ul>
+
+</div>
+<div class="hotel-description">
+<h6>Description</h6>
+<p>This all-suite oceanfront hotel has a steakhouse, salon and spa, private marina, pool, grill, and West Indies décor.</p>
+</div>
+</div>
+</div>
+<div class="modal-search hide">
+<h4>Check rates for this hotel</h4>
+<p>
+Rates and availability vary for this hotel. Search the web here for the best rates.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="19287" hotel_id="2295" hotel_name="The Hotel of South Beach (Miami Beach, FL)" id="hotel_2295" location="Miami Beach, FL">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotels/2295-the-hotel-of-south-beach-miami-beach-fl"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/2295/card_201213_49_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/2295-the-hotel-of-south-beach-miami-beach-fl">The Hotel of South Beach</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>average</span>
+<div class="rate"><a href="/hotels/2295-the-hotel-of-south-beach-miami-beach-fl">$372</a></div>
+</div>
+<div class="get-directions">
+<a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=The Hotel of South Beach, 801 Collins Ave, Miami Beach, FL 33139" target="_blank">Get Directions</a>
+</div>
+</div>
+<div class="middle-info">
+<span class="description">This art deco hotel offers 52 rooms and suites, an al fresco garden restaurant, and wireless Internet throughout.</span>
+</div>
+<div class="bottom-info">
+<a class="call-to-action" data-target="#ctz-hotel-modal" data-toggle="modal" href="#">GET THE BEST RATES</a>
+</div>
+<div class="modal-title hide">
+<button class="close" data-dismiss="modal" type="button">×</button>
+<h4 class="modal-title" id="hotel-name"><a href="http://www.thehotelofsouthbeach.com/default.aspx?pg=packagepage">The Hotel of South Beach</a></h4>
+</div>
+<div class="modal-details hide">
+<div class="hotel-info-container">
+<div class="hotel-location"><a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=The Hotel of South Beach, 801 Collins Ave, Miami Beach, FL 33139" target="_blank">801 Collins Ave, Miami Beach, FL 33139</a></div>
+<div class="hotel-rating">
+<ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+</ul>
+
+</div>
+<div class="hotel-description">
+<h6>Description</h6>
+<p>This art deco hotel offers 52 rooms and suites, an al fresco garden restaurant, and wireless Internet throughout.</p>
+</div>
+</div>
+</div>
+<div class="modal-search hide">
+<h4>Check rates for this hotel</h4>
+<p>
+Rates and availability vary for this hotel. Search the web here for the best rates.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="166" hotel_id="2296" hotel_name="Hotel Ocean (Miami Beach, FL)" id="hotel_2296" location="Miami Beach, FL">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotels/2296-hotel-ocean-miami-beach-fl"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/2296/card_433450_58_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/2296-hotel-ocean-miami-beach-fl">Hotel Ocean</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>average</span>
+<div class="rate"><a href="/hotels/2296-hotel-ocean-miami-beach-fl">$157</a></div>
+</div>
+<div class="get-directions">
+<a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=Hotel Ocean, 1230 Ocean Dr, Miami Beach, FL 33139" target="_blank">Get Directions</a>
+</div>
+</div>
+<div class="middle-info">
+<span class="description">The Hotel Ocean guest rooms have flatscreen TV, continental breakfast, passes to nightclubs, and is pet friendly.</span>
+</div>
+<div class="bottom-info">
+<a class="call-to-action" data-target="#ctz-hotel-modal" data-toggle="modal" href="#">GET THE BEST RATES</a>
+</div>
+<div class="modal-title hide">
+<button class="close" data-dismiss="modal" type="button">×</button>
+<h4 class="modal-title" id="hotel-name"><a href="http://www.dpbolvw.net/click-3080144-10537500?url=http%3A%2F%2Fwww.hotels.com%2FPPCHotelDetails%3Fhotelid%3D105609">Hotel Ocean</a></h4>
+</div>
+<div class="modal-details hide">
+<div class="hotel-info-container">
+<div class="hotel-location"><a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=Hotel Ocean, 1230 Ocean Dr, Miami Beach, FL 33139" target="_blank">1230 Ocean Dr, Miami Beach, FL 33139</a></div>
+<div class="hotel-rating">
+<ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+</ul>
+
+</div>
+<div class="hotel-description">
+<h6>Description</h6>
+<p>The Hotel Ocean guest rooms have flatscreen TV, continental breakfast, passes to nightclubs, and is pet friendly.</p>
+</div>
+</div>
+</div>
+<div class="modal-search hide">
+<h4>Check rates for this hotel</h4>
+<p>
+Rates and availability vary for this hotel. Search the web here for the best rates.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="25466" hotel_id="2297" hotel_name="Courtyard by Marriott Miami Beach-South Beach (Miami Beach, FL)" id="hotel_2297" location="Miami Beach, FL">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotels/2297-courtyard-by-marriott-miami-beach-south-beach-miami-beach-fl"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/2297/card_852400_38_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/2297-courtyard-by-marriott-miami-beach-south-beach-miami-beach-fl">Courtyard by Marriott Miami Beac...</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>average</span>
+<div class="rate"><a href="/hotels/2297-courtyard-by-marriott-miami-beach-south-beach-miami-beach-fl">$299</a></div>
+</div>
+<div class="get-directions">
+<a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=Courtyard by Marriott Miami Beach-South Beach, 1530 Washington Ave, Miami Beach, FL 33139" target="_blank">Get Directions</a>
+</div>
+</div>
+<div class="middle-info">
+<span class="description">This historic building has free Internet, breakfast buffet, a rooftop pool, an exercise room, and is smoke free.</span>
+</div>
+<div class="bottom-info">
+<a class="call-to-action" data-target="#ctz-hotel-modal" data-toggle="modal" href="#">GET THE BEST RATES</a>
+</div>
+<div class="modal-title hide">
+<button class="close" data-dismiss="modal" type="button">×</button>
+<h4 class="modal-title" id="hotel-name"><a href="http://www.marriott.com/hotels/hotel-deals/miacb-courtyard-miami-beach-south-beach/">Courtyard by Marriott Miami Beach-South Beach</a></h4>
+</div>
+<div class="modal-details hide">
+<div class="hotel-info-container">
+<div class="hotel-location"><a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=Courtyard by Marriott Miami Beach-South Beach, 1530 Washington Ave, Miami Beach, FL 33139" target="_blank">1530 Washington Ave, Miami Beach, FL 33139</a></div>
+<div class="hotel-rating">
+<ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+</ul>
+
+</div>
+<div class="hotel-description">
+<h6>Description</h6>
+<p>This historic building has free Internet, breakfast buffet, a rooftop pool, an exercise room, and is smoke free.</p>
+</div>
+</div>
+</div>
+<div class="modal-search hide">
+<h4>Check rates for this hotel</h4>
+<p>
+Rates and availability vary for this hotel. Search the web here for the best rates.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="604" hotel_id="2298" hotel_name="The Palms Hotel &amp; Spa (Miami Beach, FL)" id="hotel_2298" location="Miami Beach, FL">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotels/2298-the-palms-hotel-spa-miami-beach-fl"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/2298/card_4745_174_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/2298-the-palms-hotel-spa-miami-beach-fl">The Palms Hotel &amp; Spa</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>average</span>
+<div class="rate"><a href="/hotels/2298-the-palms-hotel-spa-miami-beach-fl">$369</a></div>
+</div>
+<div class="get-directions">
+<a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=The Palms Hotel &amp; Spa, 3025 Collins Ave, Miami Beach, FL 33140" target="_blank">Get Directions</a>
+</div>
+</div>
+<div class="middle-info">
+<span class="description">Located in the heart of South Beach, The Palms has 243 rooms and suites, a spa and outdoor dining.</span>
+</div>
+<div class="bottom-info">
+<a class="call-to-action" data-target="#ctz-hotel-modal" data-toggle="modal" href="#">GET THE BEST RATES</a>
+</div>
+<div class="modal-title hide">
+<button class="close" data-dismiss="modal" type="button">×</button>
+<h4 class="modal-title" id="hotel-name"><a href="http://www.thepalmshotel.com/specials-packages/">The Palms Hotel &amp; Spa</a></h4>
+</div>
+<div class="modal-details hide">
+<div class="hotel-info-container">
+<div class="hotel-location"><a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=The Palms Hotel &amp; Spa, 3025 Collins Ave, Miami Beach, FL 33140" target="_blank">3025 Collins Ave, Miami Beach, FL 33140</a></div>
+<div class="hotel-rating">
+<ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+</ul>
+
+</div>
+<div class="hotel-description">
+<h6>Description</h6>
+<p>Located in the heart of South Beach, The Palms has 243 rooms and suites, a spa and outdoor dining.</p>
+</div>
+</div>
+</div>
+<div class="modal-search hide">
+<h4>Check rates for this hotel</h4>
+<p>
+Rates and availability vary for this hotel. Search the web here for the best rates.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="13546" hotel_id="2299" hotel_name="Four Points by Sheraton Miami Beach (Miami Beach, FL)" id="hotel_2299" location="Miami Beach, FL">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotels/2299-four-points-by-sheraton-miami-beach-miami-beach-fl"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/2299/card_41444_83_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/2299-four-points-by-sheraton-miami-beach-miami-beach-fl">Four Points by Sheraton Miami Beach</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>average</span>
+<div class="rate"><a href="/hotels/2299-four-points-by-sheraton-miami-beach-miami-beach-fl">$250</a></div>
+</div>
+<div class="get-directions">
+<a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=Four Points by Sheraton Miami Beach, 4343 Collins Avenue, Miami Beach, FL 33140" target="_blank">Get Directions</a>
+</div>
+</div>
+<div class="middle-info">
+<span class="description">A modern hotel, the Four Points is smoke free in its 216 guest rooms and suites, some with ocean views.</span>
+</div>
+<div class="bottom-info">
+<a class="call-to-action" data-target="#ctz-hotel-modal" data-toggle="modal" href="#">GET THE BEST RATES</a>
+</div>
+<div class="modal-title hide">
+<button class="close" data-dismiss="modal" type="button">×</button>
+<h4 class="modal-title" id="hotel-name"><a href="http://specialoffers.starwoodhotels.com/Four_Points_Miami_Beach/so.htm?IM=PP_LHN_SOP_US_4P_862&amp;">Four Points by Sheraton Miami Beach</a></h4>
+</div>
+<div class="modal-details hide">
+<div class="hotel-info-container">
+<div class="hotel-location"><a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=Four Points by Sheraton Miami Beach, 4343 Collins Avenue, Miami Beach, FL 33140" target="_blank">4343 Collins Avenue, Miami Beach, FL 33140</a></div>
+<div class="hotel-rating">
+<ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+</ul>
+
+</div>
+<div class="hotel-description">
+<h6>Description</h6>
+<p>A modern hotel, the Four Points is smoke free in its 216 guest rooms and suites, some with ocean views.</p>
+</div>
+</div>
+</div>
+<div class="modal-search hide">
+<h4>Check rates for this hotel</h4>
+<p>
+Rates and availability vary for this hotel. Search the web here for the best rates.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="24349" hotel_id="2455" hotel_name="The Setai (Miami Beach, FL)" id="hotel_2455" location="Miami Beach, FL">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotels/2455-the-setai-miami-beach-fl"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/2455/card_1126560_207_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/2455-the-setai-miami-beach-fl">The Setai</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>average</span>
+<div class="rate"><a href="/hotels/2455-the-setai-miami-beach-fl">$1,075</a></div>
+</div>
+<div class="get-directions">
+<a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=The Setai, 2001 Collins Ave, Miami Beach, FL 33139" target="_blank">Get Directions</a>
+</div>
+</div>
+<div class="middle-info">
+<span class="description">This luxury hotel, with Asian design, has a 40-story glass tower, offering suites with Chinese antiques. </span>
+</div>
+<div class="bottom-info">
+<a class="call-to-action" data-target="#ctz-hotel-modal" data-toggle="modal" href="#">GET THE BEST RATES</a>
+</div>
+<div class="modal-title hide">
+<button class="close" data-dismiss="modal" type="button">×</button>
+<h4 class="modal-title" id="hotel-name"><a href="http://www.thesetaihotel.com/exclusive-offers.jsp">The Setai</a></h4>
+</div>
+<div class="modal-details hide">
+<div class="hotel-info-container">
+<div class="hotel-location"><a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=The Setai, 2001 Collins Ave, Miami Beach, FL 33139" target="_blank">2001 Collins Ave, Miami Beach, FL 33139</a></div>
+<div class="hotel-rating">
+<ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+</ul>
+
+</div>
+<div class="hotel-description">
+<h6>Description</h6>
+<p>This luxury hotel, with Asian design, has a 40-story glass tower, offering suites with Chinese antiques.</p>
+</div>
+</div>
+</div>
+<div class="modal-search hide">
+<h4>Check rates for this hotel</h4>
+<p>
+Rates and availability vary for this hotel. Search the web here for the best rates.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" clicktripz_id="66904" hotel_id="2456" hotel_name="Sagamore, The Art Hotel (Miami Beach, FL)" id="hotel_2456" location="Miami Beach, FL">
+<div class="thumbnail">
+<div class="img-container">
+<a href="/hotels/2456-sagamore-the-art-hotel-miami-beach-fl"><img class="img-responsive lazy-effect" data-original="http://dealbase-images.s3.amazonaws.com/uploads/hotel/photo/2456/card_868216_37_b.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+</a><div class="black-bg"></div>
+<div class="label">
+<p><a href="/hotels/2456-sagamore-the-art-hotel-miami-beach-fl">Sagamore, The Art Hotel</a></p>
+<p></p><ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+<li class="location">Miami Beach</li>
+</ul>
+<p></p>
+</div>
+</div>
+<div class="caption">
+<div class="top-info">
+<div class="price-start">
+<span>average</span>
+<div class="rate"><a href="/hotels/2456-sagamore-the-art-hotel-miami-beach-fl">$503</a></div>
+</div>
+<div class="get-directions">
+<a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=Sagamore, The Art Hotel, 1671 Collins Ave, Miami Beach, FL 33139" target="_blank">Get Directions</a>
+</div>
+</div>
+<div class="middle-info">
+<span class="description">Known as The Art Hotel, the Sagamore features breakout and world-famous artists throughout the 93 room property.  </span>
+</div>
+<div class="bottom-info">
+<a class="call-to-action" data-target="#ctz-hotel-modal" data-toggle="modal" href="#">GET THE BEST RATES</a>
+</div>
+<div class="modal-title hide">
+<button class="close" data-dismiss="modal" type="button">×</button>
+<h4 class="modal-title" id="hotel-name"><a href="http://www.sagamorehotel.com/Special-Offers/default.asp?sid=4">Sagamore, The Art Hotel</a></h4>
+</div>
+<div class="modal-details hide">
+<div class="hotel-info-container">
+<div class="hotel-location"><a href="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=current+position&amp;daddr=Sagamore, The Art Hotel, 1671 Collins Ave, Miami Beach, FL 33139" target="_blank">1671 Collins Ave, Miami Beach, FL 33139</a></div>
+<div class="hotel-rating">
+<ul class="list-unstyled list-inline stars">
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star"></i>
+</li>
+<li>
+<i class="icon-star-empty"></i>
+</li>
+</ul>
+
+</div>
+<div class="hotel-description">
+<h6>Description</h6>
+<p>Known as The Art Hotel, the Sagamore features breakout and world-famous artists throughout the 93 room property.</p>
+</div>
+</div>
+</div>
+<div class="modal-search hide">
+<h4>Check rates for this hotel</h4>
+<p>
+Rates and availability vary for this hotel. Search the web here for the best rates.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<ul class="pagination">
+  
+  
+      <li class="page active">
+  <a href="/hotels/4133-fontainebleau-miami-beach-miami-beach-fl">1</a>
+</li>
+
+      <li class="page">
+  <a href="/hotels/4133-fontainebleau-miami-beach-miami-beach-fl?hotels=2" rel="next">2</a>
+</li>
+
+      <li class="page">
+  <a href="/hotels/4133-fontainebleau-miami-beach-miami-beach-fl?hotels=3">3</a>
+</li>
+
+      <li class="page">
+  <a href="/hotels/4133-fontainebleau-miami-beach-miami-beach-fl?hotels=4">4</a>
+</li>
+
+      <li class="page">
+  <a href="/hotels/4133-fontainebleau-miami-beach-miami-beach-fl?hotels=5">5</a>
+</li>
+
+      <li class="page gap disabled"><a href="#" onclick="return false;">…</a></li>
+  <li class="next_page">
+  <a href="/hotels/4133-fontainebleau-miami-beach-miami-beach-fl?hotels=2" rel="next">Next ›</a>
+</li>
+
+  <li class="last next">
+  <a href="/hotels/4133-fontainebleau-miami-beach-miami-beach-fl?hotels=13">Last »</a>
+</li>
+
+</ul>
+
+</div>
+<div aria-hidden="true" aria-labelledby="hotel_details" class="modal fade" id="ctz-hotel-modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header"></div>
+<div class="modal-body">
+<div class="info"></div>
+</div>
+<div class="modal-footer">
+<div class="click_tripz_hotel_search">
+<div class="search-lead-in"></div>
+<div class="show_clicktripz">
+<div class="hotel-search-form-container">
+<form action="/areas/search" class="form-inline" id="hotel_search_modal" method="GET" onsubmit="return false;">
+<input id="hotel_search_modal_pop_partner" name="pop_partner[name]" type="hidden">
+<input id="hotel_search_modal_mobile" name="mobile" type="hidden">
+<input id="hotel_search_modal_placement" name="placement" type="hidden" value="show-modal">
+<input id="hotel_search_modal_location" name="location[id]" type="hidden">
+<input id="hotel_search_modal_hotel_id" name="hotel[id]" type="hidden">
+<input id="hotel_search_modal_location_backup" name="location[name]" type="hidden">
+<div class="row">
+<div class="form-group location-input-container">
+<div class="row">
+<label>hotel</label>
+</div>
+<div class="row">
+<span class="twitter-typeahead" style="position: relative; display: inline-block;"><input class="typeahead tt-hint" required="" type="text" disabled="" autocomplete="off" spellcheck="false" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; background-attachment: scroll; background-clip: border-box; background-color: rgb(255, 255, 255); background-image: none; background-origin: padding-box; background-size: auto; background-position: 0% 0%; background-repeat: repeat repeat;"><input class="typeahead tt-input" id="hotel_search_modal_hotel" name="hotel[hotel]" required="" type="text" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: nowrap; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset-hotels"></div></span></span>
+</div>
+</div>
+<div class="form-group guests">
+<div class="row">
+<label>guests</label>
+</div>
+<div class="row">
+<select id="hotel_search_modal_guests" name="hotel[guests]">
+<option selected="" value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+</select>
+</div>
+</div>
+<div class="form-group rooms">
+<div class="row">
+<label>rooms</label>
+</div>
+<div class="row">
+<select id="hotel_search_modal_rooms" name="hotel[rooms]">
+<option selected="" value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5+</option>
+</select>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="form-group dates">
+<div class="row">
+<label>check in</label>
+</div>
+<div class="row">
+<div class="input-group input-append date" id="hotel_search_modal_check_in_container">
+<input id="hotel_search_modal_check_in" name="hotel[check_in]" placeholder="mm/dd/yyyy" readonly="" required="" size="16" type="text">
+<span class="add-on input-group-addon">
+<i class="icon-calendar"></i>
+</span>
+</div>
+</div>
+</div>
+<div class="form-group dates">
+<div class="row">
+<label>check out</label>
+</div>
+<div class="row">
+<div class="input-group input-append date" id="hotel_search_modal_check_out_container">
+<input id="hotel_search_modal_check_out" name="hotel[check_out]" placeholder="mm/dd/yyyy" readonly="" required="" size="16" type="text">
+<span class="add-on input-group-addon">
+<i class="icon-calendar"></i>
+</span>
+</div>
+</div>
+</div>
+<div class="submit-container">
+<input class="call-to-action" type="button" value="SEARCH RATES">SEARCH RATES
+</div>
+</div>
+<div class="affiliates hide">
+<div class="checkbox-description hidden-xs">compare rates from</div>
+<div class="checkbox-description visible-xs">search to compare</div>
+<div class="ctz-anchor" id="hotel_search_modal_ct_anchor"></div>
+</div>
+<div class="clicktripz_id"></div>
+</form>
+</div>
+<script>
+  var _ctq = _ctq || [];
+  _ctq.push(['newCompareToStrip', 'clicktripz_hotel_modal']);
+  if( getCookie("ctz_test") == "true" || false == true){
+    _ctq.push(['clicktripz_hotel_modal.setPublisherID', 385]);      
+  }else{ 
+    _ctq.push(['clicktripz_hotel_modal.setPublisherID', 57]);      
+  }
+  _ctq.push(['clicktripz_hotel_modal.setFormID', 'hotel_search_modal']);
+  
+  _ctq.push(['clicktripz_hotel_modal.setCheckInID', 'hotel_search_modal_check_in']);
+  _ctq.push(['clicktripz_hotel_modal.setCheckOutID', 'hotel_search_modal_check_out']);
+  _ctq.push(['clicktripz_hotel_modal.setGuestsID', 'hotel_search_modal_guests']);
+  _ctq.push(['clicktripz_hotel_modal.setRoomsID', 'hotel_search_modal_rooms']);
+  _ctq.push(['clicktripz_hotel_modal.optThumbSize', 'small']);
+  
+  _ctq.push(['clicktripz_hotel_modal.setAnchorID', 'hotel_search_modal_ct_anchor']);           
+  _ctq.push(['clicktripz_hotel_modal.setReferralURL', passable_information]);
+  _ctq.push(['clicktripz_hotel_modal.onPopupBlock', 'myPopupBlockedEventHandler']);
+  _ctq.push(['clicktripz_hotel_modal.draw']);
+</script>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="modal fade" id="signup_modal" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-hidden="" class="close" data-dismiss="modal">×</button>
+<div class="modal-title">Sign up to get great travel deals</div>
+</div>
+<div class="modal-body">
+<h4>Get Exclusive Hotel Deal Offers First</h4>
+<p>Signup below to create personalized hotel deal alerts and get great hotel deals in the places that interest you. You can unsubscribe at any time. Promise.</p>
+<div class="form" id="user-signup">
+<!-- = render "devise/shared/flash" -->
+<form accept-charset="UTF-8" action="/users" class="form-inline" id="new_user" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="0vIrpADRX8M+YwemeJ/+7c6Gkq0jCwtEHDsdFtWqtn4="></div>
+<div class="form-group">
+<label for="user_email">Email</label>
+<input autofocus="autofocus" class="form-control" id="user_email" name="user[email]" type="email" value="">
+</div>
+<div class="form-group">
+<label for="user_password">Password</label>
+<input class="form-control" id="user_password" name="user[password]" type="password">
+</div>
+<div class="form-group">
+<label for="user_Confirm password">Confirm password</label>
+<input class="form-control" id="user_password_confirmation" name="user[password_confirmation]" type="password">
+</div>
+<div class="form-group">
+<div><input class="btn btn-warning" name="commit" type="submit" value="Sign Up &amp; Personalize"></div>
+</div>
+</form>
+
+</div>
+<hr>
+<ul class="devise-links footer-links">
+<li>
+<a href="/users/sign_in">Sign in</a>
+</li>
+<li>
+<a href="/users/sign_up">Sign up</a>
+</li>
+<li>
+<a href="/users/password/new">Forgot your password?</a>
+</li>
+<li>
+<a href="/users/confirmation/new">Didn't receive confirmation instructions?</a>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div aria-hidden="true" aria-labelledby="ctz_blocked_pops" class="modal fade" id="ctz_popup_block_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-hidden="" class="close" data-dismiss="modal">×</button>
+<h4 class="modal-title">Your pop-up block is on</h4>
+</div>
+<div class="modal-body">
+<p>No problem, just click the "Show Prices" button for each site to complete your search.</p>
+<div class="row">
+<ol id="ctz_blocked_popup_list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div aria-hidden="true" aria-labelledby="ctz_blocked_pops" class="modal fade" id="newsletter-signup-modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-hidden="true" class="close" close="close" data-dismiss="modal" type="button">×</button>
+<h4 class="modal-title">Save big on hotels, flights, and car rentals</h4>
+</div>
+<div class="modal-body">
+<form accept-charset="UTF-8" action="/newsletters" class="form-inline formtastic newsletter" data-remote="true" id="new_newsletter" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div><input id="newsletter_modal_source" name="newsletter[source]" type="hidden" value="hotel-deal-popup">
+<div class="form-group">
+<label>Email address</label>
+<div class="input-group">
+<span class="input-group-addon">
+<i class="icon-envelope"></i>
+</span>
+<input class="input-lg form-control" id="newsletter_modal_email" name="newsletter[email]" placeholder="email address" required="" type="email" validate="">
+</div>
+</div>
+<div class="form-group">
+<label>Home zipcode</label>
+<div class="input-group">
+<span class="input-group-addon">
+<i class="icon-home"></i>
+</span>
+<input allow_blank="" class="input-lg form-control" id="newsletter_modal_postal_code" name="newsletter[postal_code]" placeholder="zipcode" type="text">
+</div>
+</div>
+<div class="submit-container">
+<button class="btn btn-warning btn-lg pull-right" name="button" type="submit">JOIN NOW</button>
+</div>
+</form>
+
+</div>
+</div>
+</div>
+</div>
+
+<hr class="section-hr">
+<section>
+<footer class="container">
+<strong class="copyright">© 2014 DealBase Corporation</strong>
+<ol class="footer-links">
+<li>
+<a href="/about">About</a>
+</li>
+<li>
+<a href="/terms">Terms of Service</a>
+</li>
+<li>
+<a href="/privacy">Privacy Policy</a>
+</li>
+<li>
+<a href="/contact">Contact Us</a>
+</li>
+<li>
+<a href="https://plus.google.com/103630159298163134694" rel="publisher">Google+</a>
+</li>
+<li>
+<a href="/users/sign_up">Sign Up</a>
+</li>
+<li>
+<a href="/users/sign_in">Sign In</a>
+</li>
+</ol>
+</footer>
+</section>
+
+<script src="/assets/application-7a28e3f9a00bbf8d64d81155316ecd69.js"></script>
+<script>
+  var lr_signature = "";
+</script>
+<script>
+  $('body').append(
+    "<iframe name='_rlcdn' width=0 height=0 frameborder=0 src='http://ei.rlcdn.com/362096.html?s=" + lr_signature + "'></iframe>"
+  )
+</script><iframe name="_rlcdn" width="0" height="0" frameborder="0" src="http://ei.rlcdn.com/362096.html?s="></iframe>
+<script>
+  adroll_adv_id = "6G4D75RI25CPTJCIYHIWXX";
+  adroll_pix_id = "ZCU5I5OCKRB6NCNLGL6LST";
+  (function () {
+  var oldonload = window.onload;
+  window.onload = function(){
+     __adroll_loaded=true;
+     var scr = document.createElement("script");
+     var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+     scr.setAttribute('async', 'true');
+     scr.type = "text/javascript";
+     scr.src = host + "/j/roundtrip.js";
+     ((document.getElementsByTagName('head') || [null])[0] ||
+      document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+     if(oldonload){oldonload()}};
+  }());
+</script><iframe src="http://tpc.googlesyndication.com/safeframe/1-0-0/html/container.html" style="visibility: hidden; display: none;"></iframe>
+
+
+<script src="http://js-agent.newrelic.com/nr-476.min.js"></script><script type="text/javascript" src="http://beacon-4.newrelic.com/1/46c30d12ce?a=2660559&amp;pl=1415072285533&amp;v=476.c73f3a6&amp;to=clwMRBdbXg9RShhcW0VWDkNKR1oMQw%3D%3D&amp;qt=5&amp;ap=857&amp;be=1414&amp;fe=4091&amp;dc=1240&amp;f=%5B%22err%22,%22xhr%22%5D&amp;perf=%7B%22timing%22:%7B%22of%22:1415072285533,%22n%22:0,%22dl%22:1337,%22di%22:2654,%22ds%22:2654,%22de%22:3645,%22dc%22:5504,%22l%22:5504,%22le%22:5885,%22r%22:325,%22re%22:396,%22f%22:396,%22dn%22:396,%22dne%22:396,%22c%22:396,%22ce%22:396,%22rq%22:402,%22rp%22:1272,%22rpe%22:1284%7D,%22navigation%22:%7B%22rc%22:1%7D%7D&amp;jsonp=NREUM.setToken"></script></body></html>

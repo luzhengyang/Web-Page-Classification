@@ -1,0 +1,77 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+	
+
+    <script type="text/javascript">
+        
+        function setHref()
+        {
+            var previousURL = document.referrer;
+            var linkA = document.getElementById("mail_link");
+            var currentHref = linkA.getAttribute("href");
+            linkA.setAttribute("href", currentHref + previousURL);  
+        }
+    </script>
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>500 Internal Server Error</title>
+    <style type="text/css">
+    .logo {
+    	width: 224px;
+    	margin-top: 0px;
+    	margin-right: auto;
+    	margin-bottom: 0px;
+    	margin-left: auto;
+    	text-align: center;
+    	/*background-image: url(/ui/images/logo.png);
+    	background-repeat: no-repeat;*/
+    	height: 120px;
+    	text-indent: -5000px;
+    	background-position: center;
+    }
+    .wrapper .graphic {
+    	width: 340px;
+    	margin-top: 25px;
+    	margin-right: auto;
+    	margin-bottom: 25px;
+    	margin-left: auto;
+    	padding: 30px;
+    	background-color: #FFF;
+    	box-shadow: 0px 0px 5px #ccc;
+    }
+    .wrapper .text {
+    	width: 400px;
+    	margin-top: 35px;
+    	margin-right: auto;
+    	margin-bottom: 15px;
+    	margin-left: auto;
+    	font-size: larger;
+    	text-align: center;
+    }
+    
+    </style>
+    <link rel="stylesheet" href="http://fast.fonts.com/cssapi/9fd60763-f384-468e-af28-f3d8bd78339d.css">
+    <link href="/ui/basic/gmcvb.css" rel="stylesheet" type="text/css">
+    <link href="/ui/basic/hero.css" rel="stylesheet" type="text/css">
+</head>
+<body onload="setHref();">
+    <form method="post" action="/error/500.aspx?aspxerrorpath=/spa/lapis-the-spa-at-fontainebleau/37284&amp;sa=U&amp;ei=pTRYVOXMPMqYNtLbgdAH&amp;ved=0CPMBEBYwJA&amp;usg=AFQjCNG1KkHk0K7IWdFToOPhrnKXP8svBQ" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTEyNTYwMjE1MGRkU7vG35EWxvDfKjScyhseZQ2aubh01JGo5ylhpsyCqo0=">
+</div>
+
+    <div class="wrapper">
+      <div class="logo"><a href="http://www.miamiandbeaches.com"><img src="/ui/images/logo.png" alt="Greater Miami Cinvention and Visitors Bureau"></a></div>
+    	<div class="graphic"><img src="images/LifeGuard.jpg" width="340" height="383" alt="503"></div>
+        <div class="marque-text">
+          <h1 class="Univers49">Internal Server Error!</h1>
+        </div>
+        <div class="text">
+          <p>The page you are looking for has produced a server error.<br>
+            <a id="mail_link" href="mailto:webtech@gmcvb.com?subject=500 Server Error&amp;body=500 Error on page: /spa/lapis-the-spa-at-fontainebleau/37284&amp;sa=U&amp;ei=pTRYVOXMPMqYNtLbgdAH&amp;ved=0CPMBEBYwJA&amp;usg=AFQjCNG1KkHk0K7IWdFToOPhrnKXP8svBQ%0AReferrer page: " title="500 Server Error">Alert the Lifeguards</a>! </p>
+          <p>Sorry for the inconvenience, you can <a href="http://www.miamiandbeaches.com">continue surfing</a> the rest of our site while we take care of this issue.</p>
+        </div>
+	</div>
+    </form>
+
+
+
+</body></html>

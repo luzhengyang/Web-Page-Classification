@@ -1,0 +1,768 @@
+<html><head><script language="javascript1.2">
+<!--
+	var imgHomeNotSelected = new Image(53,33)
+	var imgHomeSelected = new Image(53,33)
+	
+	var imgHoldingCompaniesNotSelected = new Image(116,15)
+	var imgHoldingCompaniesSelected = new Image(116,15)
+	
+	var imgInstitutionsNotSelected = new Image(116,15)
+	var imgInstitutionsSelected = new Image(116,15)
+	
+	var imgOfficesNotSelected = new Image(113,15)
+	var imgOfficesSelected = new Image(113,15)
+	
+	var imgAdvancedFeaturesNotSelected = new Image(100,33)
+	var imgAdvancedFeaturesSelected = new Image(100,33)
+	
+	var imgMapAndDefinitionsNotSelected = new Image(100,33)
+	var imgMapAndDefinitionsSelected = new Image(100,33)
+	
+	var imgDisclaimerAndNotesNotSelected = new Image(100,33)
+	var imgDisclaimerAndNotesSelected = new Image(100,33)
+		
+	var imgHelpNotSelected = new Image(46,33)
+	var imgHelpSelected = new Image(46,33)
+	
+	var imgFindAllSelected = new Image(349,14)
+	var imgFindAllNotSelected = new Image(349,14)
+
+	imgHomeSelected.src = "images/ID_Home_Over.jpg"
+	imgHomeNotSelected.src = "images/ID_Home_Default.jpg"
+	
+	imgHoldingCompaniesSelected.src = "images/ID_HoldingCompanies_Over.jpg"
+	imgHoldingCompaniesNotSelected.src = "images/ID_HoldingCompanies_Default.jpg"
+	
+	imgInstitutionsSelected.src = "images/ID_Institutions_Over.jpg"
+	imgInstitutionsNotSelected.src = "images/ID_Institutions_Default.jpg"
+	
+	imgOfficesSelected.src = "images/ID_Offices_Over.jpg"
+	imgOfficesNotSelected.src = "images/ID_Offices_Default.jpg"
+	
+	imgAdvancedFeaturesSelected.src = "images/ID_AdvancedFeatures_Over.jpg"
+	imgAdvancedFeaturesNotSelected.src = "images/ID_AdvancedFeatures_Default.jpg"
+	
+	imgMapAndDefinitionsSelected.src = "images/ID_MapAndDefinitions_Over.jpg"
+	imgMapAndDefinitionsNotSelected.src = "images/ID_MapAndDefinitions_Default.jpg"
+	
+	imgDisclaimerAndNotesSelected.src = "images/ID_DisclaimerAndNotes_Over.jpg"
+	imgDisclaimerAndNotesNotSelected.src = "images/ID_DisclaimerAndNotes_Default.jpg"
+	
+	imgHelpSelected.src = "images/ID_Help_Over.jpg"
+	imgHelpNotSelected.src = "images/ID_Help_Default.jpg"
+	
+	imgFindAllSelected.src = "images/ID_FindAll_Over.jpg"
+	imgFindAllNotSelected.src = "images/ID_FindAll_Default.jpg"
+	
+	
+
+function pigeonGoHome(URL) {
+	parent.top.document.location.replace(URL);
+}
+
+function loadform(val) {
+	self.document.formSelection.formname.value = val;
+	self.document.formSelection.submit();
+}
+function ReplaceForm(val) {
+	parent.content.document.location.replace(val);	
+}
+
+function ChangeHeader() {
+  if (parent.header.document.title != "Initial Header")
+	parent.header.document.location.replace("header.asp")
+}
+function MatchContent()
+{
+	if (self.document.title == "FDIC: Institution Directory")
+		self.document.location.href=("homehelp.asp")
+	if (parent.content.document.title == "FDIC: Find All Form")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=0")
+	if (parent.content.document.title == "FDIC: Institution Search Form")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=1")
+	if (parent.content.document.title == "FDIC: BHC Search Form")	
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=3")
+	if (parent.content.document.title == "FDIC: Compare Form")
+		parent.content.document.location.href=("definitions.asp?SystemID=ID&HelpItem=compare")
+	if (parent.content.document.title == "FDIC: Financial Report 10")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=10")
+	if (parent.content.document.title == "FDIC: Financial Report 10b")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=10")
+	if (parent.content.document.title == "FDIC: Financial Report 11")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=11")
+	if (parent.content.document.title == "FDIC: Financial Report 11b")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=11")
+	if (parent.content.document.title == "FDIC: Financial Report 12")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=12")
+	if (parent.content.document.title == "FDIC: Financial Report 12b")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=12")
+	if (parent.content.document.title == "FDIC: Financial Report 13")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=13")
+	if (parent.content.document.title == "FDIC: Financial Report 13b")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=13")
+	if (parent.content.document.title == "FDIC: Financial Report 14")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=14")
+	if (parent.content.document.title == "FDIC: Financial Report 14b")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=14")
+	if (parent.content.document.title == "FDIC: Financial Report 15")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=15")
+	if (parent.content.document.title == "FDIC: Financial Report 15b")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=15")
+	if (parent.content.document.title == "FDIC: Financial Report 16")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=16")
+	if (parent.content.document.title == "FDIC: Financial Report 16b")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=16")
+	if (parent.content.document.title == "FDIC: Financial Report 20")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=20")
+	if (parent.content.document.title == "FDIC: Financial Report 20b")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=20")
+	if (parent.content.document.title == "FDIC: Financial Report 21")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=21")
+	if (parent.content.document.title == "FDIC: Financial Report 21b")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=21")
+	if (parent.content.document.title == "FDIC: Financial Report 22")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=22")
+	if (parent.content.document.title == "FDIC: Financial Report 22b")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=22")
+	if (parent.content.document.title == "FDIC: Financial Report 30")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=30")
+	if (parent.content.document.title == "FDIC: Financial Report 30b")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=30")
+	if (parent.content.document.title == "FDIC: Financial Report 31")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=31")
+	if (parent.content.document.title == "FDIC: Financial Report 31b")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=31")
+	if (parent.content.document.title == "FDIC: Financial Report 32")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=32")
+	if (parent.content.document.title == "FDIC: Financial Report 32b")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=32")
+	if (parent.content.document.title == "FDIC: Financial Report 33")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=33")
+	if (parent.content.document.title == "FDIC: Financial Report 33b")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=33")
+	if (parent.content.document.title == "FDIC: Financial Report 99")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=99")
+	if (parent.content.document.title == "FDIC: Financial Report")
+		parent.content.document.location.href=("sitemap_rpt.asp?SystemID=Help&DRSLineLevel=3")
+	if (parent.content.document.title == "FDIC: Confirmation & Report Selection")
+		parent.content.document.location.href=("definitions.asp?SystemForm=ID&HelpItem=ConfPg")
+	if (parent.content.document.title == "FDIC: Institutional Directory Disclaimer and notes")
+		parent.content.document.location.href=("definitions.asp?SystemForm=ID&HelpItem=Discl")
+	if (parent.content.document.title == "FDIC: ID System Site Map")
+		parent.content.document.location.href=("definitions.asp?SystemForm=ID&HelpItem=MapHlp")
+	if (parent.content.document.title == "FDIC: Institution List")
+		parent.content.document.location.href=("definitions.asp?SystemForm=ID&HelpItem=BankListPage2")
+	if (parent.content.document.title == "FDIC: Bank Holding Company Detail")
+		parent.content.document.location.href=("definitions.asp?SystemForm=ID&HelpItem=BankListPage2")
+	if (parent.content.document.title == "FDIC: ID Advanced Features Selection")
+		parent.content.document.location.href=("definitions.asp?SystemForm=ID&HelpItem=Advanced")
+	if (parent.content.document.title == "FDIC: Offices Search Form")
+		parent.content.document.location.href=("definitions.asp?SystemForm=ID&HelpItem=OfficesSearch")
+		
+		
+}
+
+//-->	
+</script>
+	
+			
+				<title>FDIC: Wells Fargo Bank, National Association</title>
+                <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+				<meta name="robots" content="nofollow">	
+			    <script language="javascript" type="text/javascript" src="Includes/confirmation.js"></script>    
+			    <script language="javascript" type="text/javascript">
+				    var imgHomeNotSelected = new Image(53,33);
+				    var imgHomeSelected = new Image(53,33);
+				
+				    var imgHoldingCompaniesNotSelected = new Image(116,15);
+				    var imgHoldingCompaniesSelected = new Image(116,15);
+				
+				    var imgInstitutionsNotSelected = new Image(116,15);
+				    var imgInstitutionsSelected = new Image(116,15);
+				
+				    var imgOfficesNotSelected = new Image(113,15);
+				    var imgOfficesSelected = new Image(113,15);
+				
+				    var imgAdvancedFeaturesNotSelected = new Image(100,33);
+				    var imgAdvancedFeaturesSelected = new Image(100,33);
+				
+				    var imgMapAndDefinitionsNotSelected = new Image(100,33);
+				    var imgMapAndDefinitionsSelected = new Image(100,33);
+				
+				    var imgDisclaimerAndNotesNotSelected = new Image(100,33);
+				    var imgDisclaimerAndNotesSelected = new Image(100,33);
+					
+				    var imgHelpNotSelected = new Image(46,33);
+				    var imgHelpSelected = new Image(46,33);
+				
+				    var imgFindAllSelected = new Image(349,14);
+				    var imgFindAllNotSelected = new Image(349,14);
+			
+				    imgHomeSelected.src = "images/ID_Home_Over.jpg";
+				    imgHomeNotSelected.src = "images/ID_Home_Default.jpg";
+				
+				    imgHoldingCompaniesSelected.src = "images/ID_HoldingCompanies_Over.jpg";
+				    imgHoldingCompaniesNotSelected.src = "images/ID_HoldingCompanies_Default.jpg";
+				
+				    imgInstitutionsSelected.src = "images/ID_Institutions_Over.jpg";
+				    imgInstitutionsNotSelected.src = "images/ID_Institutions_Default.jpg";
+				
+				    imgOfficesSelected.src = "images/ID_Offices_Over.jpg";
+				    imgOfficesNotSelected.src = "images/ID_Offices_Default.jpg";
+				
+				    imgAdvancedFeaturesSelected.src = "images/ID_AdvancedFeatures_Over.jpg";
+				    imgAdvancedFeaturesNotSelected.src = "images/ID_AdvancedFeatures_Default.jpg";
+				
+				    imgMapAndDefinitionsSelected.src = "images/ID_MapAndDefinitions_Over.jpg";
+				    imgMapAndDefinitionsNotSelected.src = "images/ID_MapAndDefinitions_Default.jpg";
+				
+				    imgDisclaimerAndNotesSelected.src = "images/ID_DisclaimerAndNotes_Over.jpg";
+				    imgDisclaimerAndNotesNotSelected.src = "images/ID_DisclaimerAndNotes_Default.jpg";
+				
+				    imgHelpSelected.src = "images/ID_Help_Over.jpg";
+				    imgHelpNotSelected.src = "images/ID_Help_Default.jpg";
+				
+				    imgFindAllSelected.src = "images/ID_FindAll_Over.jpg";
+				    imgFindAllNotSelected.src = "images/ID_FindAll_Default.jpg";
+				
+				    function GoHomePage()
+				    {
+					    window.location = "index.asp";
+				    }
+				
+				    function linkClick(val)
+				    {
+					    document.getElementsByName("linkType")[0].value = "link";
+					    document.getElementsByName("linkContent")[0].value = val;
+					    document.frmReportSelection.action = "main2.asp";
+					    document.frmReportSelection.submit();
+				    }
+
+				    function menuClick(val)
+				    {
+					    document.getElementsByName("linkType")[0].value = "menu";
+					    document.getElementByName("linkContent")[0].value = val;
+					    document.frmReportSelection.action = "main2.asp";
+					    document.frmReportSelection.submit();
+				    }
+
+				    function toGenerateReport()
+				    {
+					    document.getElementsByName("linkType")[0].value = "report";
+					    document.frmReportSelection.action = "main2.asp";
+					    document.frmReportSelection.submit();
+				    }
+				    function linkReportClick(val)
+				    {
+					    document.getElementsByName("linkType")[0].value = "linkReport";
+					    document.getElementsByName("linkContent")[0].value = val;
+					    document.frmReportSelection.action = "main2.asp";
+					    document.frmReportSelection.submit();
+				    }
+			    </script>
+			<link rel="stylesheet" type="text/css" href="includes/AppsMenu.css">
+			<script type="text/javascript" src="/foresee/foresee-surveydef.js"></script><link rel="stylesheet" media="screen" type="text/css" href="/foresee/foresee-dhtml.css"></head>
+			
+			<body style="margin-left:0;margin-top:0;" onload="">
+			<!--Top menu-->
+            
+<link rel="stylesheet" type="text/css" href="Includes/AppsMenu.css">
+<!--  Begin Content Header  -->
+<!-- Last Updated Date: 12-02-2011   Time: 1:57PM   Version: 1.8 -->
+<!--//Start ForeSee Code -->
+<script type="text/javascript" src="/foresee/foresee-trigger.js"></script>
+<!--//End ForeSee Code -->
+<link rel="stylesheet" type="text/css" href="/header/css/www2_header_style.css">
+
+	<div id="header-container"> <!-- start of header container -->
+	<!-- everything inside the header is held within this container -->
+		<div id="header-nav">
+			<div id="header-nav-left-container">
+			
+				<div id="header-nav-left">
+					<a target="_parent" href="http://www.fdic.gov/" alt="FDIC Logo" title="FDIC Home - Federal Deposit Insurance Corporation" onclick="s_objectID=&quot;http://www.fdic.gov/_1&quot;;return this.s_oc?this.s_oc(e):true">
+						<div id="fdic-logo"></div>
+					</a>		
+				</div> <!-- close header-nav-left -->
+				
+				<div id="header-nav-right">
+					<div id="header-nav-right-top">
+						<div id="fdic-title"></div>
+					</div>
+					<div id="header-nav-right-bottom">
+						<h1>Each depositor insured to at least $250,000 per insured bank</h1>
+					</div>
+				</div> <!-- close header-nav-right -->
+				
+			</div> <!-- close header-nav-left-container -->
+			
+			<div id="header-nav-right-container">	
+					<div id="right-container-top">
+						<div id="web2">
+							<ul>
+								<li><a target="_parent" href="http://www.fdic.gov/privacy.html?site=twitter" onclick="s_objectID=&quot;http://www.fdic.gov/privacy.html?site=twitter_1&quot;;return this.s_oc?this.s_oc(e):true"><img src="/header/images/web2/twitter.png" alt="Twitter" title="Twitter" height="24px"></a></li>
+								<li><a target="_parent" href="http://www.fdic.gov/privacy.html?site=facebook" onclick="s_objectID=&quot;http://www.fdic.gov/privacy.html?site=facebook_1&quot;;return this.s_oc?this.s_oc(e):true"><img src="/header/images/web2/facebook.png" alt="Facebook" title="Facebook" height="24px"></a></li>
+								<li><a target="_parent" href="http://www.fdic.gov/privacy.html?site=youtube" onclick="s_objectID=&quot;http://www.fdic.gov/privacy.html?site=youtube_1&quot;;return this.s_oc?this.s_oc(e):true"><img src="/header/images/web2/youtube.png" alt="YouTube" title="YouTube" height="24px"></a></li>
+								<li><a target="_parent" href="http://www.fdic.gov/rss.html" onclick="s_objectID=&quot;http://www.fdic.gov/rss.html_1&quot;;return this.s_oc?this.s_oc(e):true"><img src="/header/images/web2/rss.png" alt="RSS" title="RSS" height="24px"></a></li>
+								<li><a target="_parent" href="http://service.govdelivery.com/service/multi_subscribe.html?code=USFDIC" onclick="s_objectID=&quot;http://service.govdelivery.com/service/multi_subscribe.html?code=USFDIC_1&quot;;return this.s_oc?this.s_oc(e):true"><img src="/header/images/web2/subscribe.png" alt="Subscribe" title="Subscribe" height="24px"></a></li>
+							</ul>
+						</div>
+					</div> <!-- close right-container-right-top -->
+					
+					<div id="right-container-center">
+							<div id="advanced-search" title="Advanced Search"><a target="_parent" href="http://www.fdic.gov/search/advanced.html" onclick="s_objectID=&quot;http://www.fdic.gov/search/advanced.html_1&quot;;return this.s_oc?this.s_oc(e):true">Advanced Search</a></div>
+					</div> <!-- close right-container-right-center -->
+					
+					<div id="right-container-bottom">
+							<div id="search">
+								<form id="searchform" target="_parent" action="http://search.fdic.gov/search" method="get" name="Search box for FDIC.gov">
+									<fieldset>
+										<div class="form" alt="Search box for FDIC.gov" title="Search box for FDIC.gov">
+											<div class="search2">
+												<label for="fdic_search"></label>
+												<label for="searchsubmit"></label>
+											</div>
+											<input id="fdic_search" name="q" class="field" type="text" value="">
+											<input id="searchsubmit" class="submit" alt="Search Icon" title="Search Icon" type="submit" value="">		
+											<input value="date:D:L:d1" name="sort" type="hidden">
+											<input value="xml_no_dtd" name="output" type="hidden">
+											<input value="iso-8859-1" name="ie" type="hidden">
+											<input value="iso-8859-1" name="oe" type="hidden">
+											<input value="wwwGOV" name="client" type="hidden">
+											<input value="wwwGOV" name="proxystylesheet" type="hidden">
+											<input value="default" name="site" type="hidden">
+										</div>
+									</fieldset>
+								<input type="hidden" name="as_fid" value="IyF2GvbslcobVqmWf2kY"></form>
+							</div> <!-- close id="search" -->
+					</div> <!-- close right-container-right-bottom -->
+			</div> <!-- close header-nav-right-container -->
+			
+		</div> <!-- close header-nav **This is the top part of the header** -->
+			
+	
+	</div> <!-- end of the header-container -->
+<!--  End Content Header  -->
+
+<table border="0" cellspacing="0" cellpadding="0" width="990">
+	<tbody><tr>
+		<td colspan="20" height="27" style="background:url(http://www.fdic.gov/header/images/Full_Sub_Nav.png);padding-left:5;" class="ANavigation">
+			<a href="http://www.fdic.gov/index.html" class="ANavigation" target="_top" onclick="s_objectID=&quot;http://www.fdic.gov/index.html_1&quot;;return this.s_oc?this.s_oc(e):true">Home</a> &gt; 
+			<a href="http://www.fdic.gov/bank/" class="ANavigation" target="_top" onclick="s_objectID=&quot;http://www.fdic.gov/bank/_1&quot;;return this.s_oc?this.s_oc(e):true">Industry Analysis</a> &gt; 
+			<a href="http://www.fdic.gov/bank/statistical/" class="ANavigation" target="_top" onclick="s_objectID=&quot;http://www.fdic.gov/bank/statistical/_1&quot;;return this.s_oc?this.s_oc(e):true">Bank Data &amp; Statistics</a> &gt;<a href="index.asp" class="ANavigation" target="_top" onclick="s_objectID=&quot;https://www2.fdic.gov/idasp/index.asp_1&quot;;return this.s_oc?this.s_oc(e):true">Institution Directory Home</a> 		
+		</td>
+	</tr>
+</tbody></table>
+
+<table border="0" cellspacing="0" cellpadding="0" class="MenuTable" style="background-image:url(images/Menu_Bottom.png);background-repeat:no-repeat;background-position:center bottom;" width="990">
+	<tbody><tr>
+  		<td align="center" rowspan="2">
+			<a class="ASubMenu" href="http://research.fdic.gov/bankfind/" title="BankFind Home" onclick="s_objectID=&quot;http://research.fdic.gov/bankfind/_1&quot;;return this.s_oc?this.s_oc(e):true">BankFind</a>
+		</td>
+		<td style="color:white;" rowspan="2">|</td>
+        <td align="center" rowspan="2">
+			<a class="ASubMenu" href="JavaScript:pigeonGoHome('index.asp');" title="Institution Directory Home" onclick="s_objectID=&quot;javascript:pigeonGoHome('index.asp');_1&quot;;return this.s_oc?this.s_oc(e):true">Institution Directory</a>
+		</td>
+		<td style="color:white; text-align:right" rowspan="2">|</td>
+		<td align="center" colspan="7" style="border-bottom:1px solid #FFFFFF;">
+			<font class="ASubMenu">Search</font>
+		</td>
+		<td style="color:white;" rowspan="2">|</td>
+		
+		<td align="center" rowspan="2">
+			<a class="ASubMenu" href="warp_download_all.asp" title="Download" onclick="s_objectID=&quot;https://www2.fdic.gov/idasp/warp_download_all.asp_1&quot;;return this.s_oc?this.s_oc(e):true">Download Data</a>
+		</td>
+        <td style="color:white;" rowspan="2">|</td>	
+		<td align="center" rowspan="2">
+			<a class="ASubMenu" href="JavaScript:loadform('disclaimer');" title="Disclaimer &amp; Notes" onclick="s_objectID=&quot;javascript:loadform('disclaimer');_1&quot;;return this.s_oc?this.s_oc(e):true">Disclaimer <br>and Methodology</a>
+		</td>	
+		<td style="color:white;" rowspan="2">|</td>
+		<td align="center" rowspan="2">
+			<a class="ASubMenu" href="/IDASP/DIRSInfoRequest.asp" title="Questions, Suggestions &amp; Requests" onclick="s_objectID=&quot;https://www2.fdic.gov/IDASP/DIRSInfoRequest.asp_1&quot;;return this.s_oc?this.s_oc(e):true">Questions</a>
+		</td>	
+  	</tr>
+  	<tr>
+	    <td align="center">
+			<a class="ASubMenu" href="JavaScript:loadform('inst');" title="Find Banks" onclick="s_objectID=&quot;javascript:loadform('inst');_1&quot;;return this.s_oc?this.s_oc(e):true">Banks</a>
+		    
+	    </td>
+	    <td style="color:white;">|</td>
+	    <td align="center">
+			<a class="ASubMenu" href="JavaScript:loadform('office');" title="Find Offices" onclick="s_objectID=&quot;javascript:loadform('office');_1&quot;;return this.s_oc?this.s_oc(e):true">Locations</a>
+		    
+	    </td>
+	    <td style="color:white;">|</td>
+	    <td align="center">
+		    <a class="ASubMenu" href="JavaScript:loadform('bhc');" title="Find Bank Holding Companies" onclick="s_objectID=&quot;javascript:loadform('bhc');_1&quot;;return this.s_oc?this.s_oc(e):true">Bank Holding <br> Companies</a>
+	    </td>
+         <td style="color:white;" rowspan="2">|</td>
+		<td align="center">
+			<a class="ASubMenu" href="JavaScript:loadform('All');" title="Find All - Institutions, Bank Holding Companies and Offices" style="padding-left:7px;padding-right:7px" onclick="s_objectID=&quot;javascript:loadform('All');_1&quot;;return this.s_oc?this.s_oc(e):true">All</a>
+		</td>
+	</tr>
+	<tr style="height:3px;"><td></td></tr>
+</tbody></table>
+   			<form name="formSelection" action="main.asp" method="post">
+		        <input type="hidden" name="formname"> 
+	        <input type="hidden" name="as_fid" value="8UljKCuGcNoZ0kxcYf2c"></form>
+            <!--end Top menu-->
+
+            <table style="padding-top:10px;" width="990" border="0" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+                <td>
+                    <div id="noprint" style="text-align:right;">
+                        
+                            <input type="button" value="Print this page" onclick="javascript:OpenPrint();">
+                        
+                    </div>
+                </td>
+            </tr>
+            </tbody></table>
+			<form method="post" name="frmReportSelection" action="Header-report.asp">
+			    <input type="hidden" name="inInstStatus" value="">
+				<input type="hidden" name="ReportFunction" value="Inst">
+				<input type="hidden" name="demodte" value="MostCurrent">
+				<input type="hidden" name="linkType" value="">
+				<input type="hidden" name="linkContent" value="">
+				
+					<!--- Processing an FDIC Institution --->
+					<table width="990" border="1" cellpadding="0" cellspacing="0">
+						<tbody><tr>
+							<td align="center"><font face="Arial, Helvetica" size="2">Key demographic information as of October 30, 2014</font></td>
+						</tr>
+						<tr>
+							<td align="center">
+								<font face="Arial, Helvetica" color="#990033" size="4"><b>Wells Fargo Bank, National Association</b></font><br>
+								<font face="Arial, Helvetica" size="2">101 N. Phillips Avenue<br>Sioux Falls,SD&nbsp;57104<br>
+								
+							</font></td>
+						</tr>
+					</tbody></table>
+					<table width="990" bgcolor="#f6f6f6" border="0" cellpadding="0" cellspacing="0">
+				
+						<tbody><tr>
+							<td width="28%" valign="top" nowrap="" align="left" bgcolor="#f6f6f6" style="padding-left: 15px"><font face="Arial, Helvetica" size="2">FDIC Certificate #:</font></td>
+							<td width="38%" valign="top" bgcolor="#f6f6f6"><font face="Arial, Helvetica" size="2">3511</font></td>
+							<td width="24%" valign="top" nowrap="" bgcolor="#f6f6f6"><font face="Arial, Helvetica" size="2">Date Established:</font></td>
+							<td width="10%" valign="top" align="right" bgcolor="#f6f6f6"><font face="Arial, Helvetica" size="2">1/1/1870</font></td>
+						</tr>
+						<tr>
+							<td width="28%" valign="top" nowrap="" align="left" bgcolor="#f6f6f6" style="padding-left: 15px"><font face="Arial, Helvetica" size="2"><a href="javascript:linkClick('Definitions.asp?SystemForm=ID&HelpItem=bkclass');" title="Definition of Bank Charter Class" alt="Definition of Bank Charter Class" onclick="s_objectID=&quot;javascript:linkClick('Definitions.asp?SystemForm=ID&amp;HelpItem=bkclass');_1&quot;;return this.s_oc?this.s_oc(e):true">Bank Charter Class:</a></font></td>
+							<td width="38%" valign="top" bgcolor="#f6f6f6"><font face="Arial, Helvetica" size="2">National Bank</font></td>
+							<td width="24%" valign="top" nowrap="" bgcolor="#f6f6f6"><font face="Arial, Helvetica" size="2">Date of Deposit Insurance:</font></td>
+							<td width="10%" valign="top" align="right" bgcolor="#f6f6f6"><font face="Arial, Helvetica" size="2">1/1/1934</font></td>
+						</tr>
+						<tr>
+							<td width="28%" valign="top" nowrap="" align="left" bgcolor="#f6f6f6" style="padding-left: 15px"><font face="Arial, Helvetica" size="2"><a href="javascript:linkClick('Definitions.asp?SystemForm=ID&HelpItem=regagnt');" title="Definition of Primary Federal Regulator" alt="Definition of Primary Federal Regulator" onclick="s_objectID=&quot;javascript:linkClick('Definitions.asp?SystemForm=ID&amp;HelpItem=regagnt');_1&quot;;return this.s_oc?this.s_oc(e):true">Primary Federal Regulator:</a></font></td>
+							<td width="38%" valign="top" nowrap="" bgcolor="#f6f6f6"><font face="Arial, Helvetica" size="2"><a target="_blank;" href="http://www.occ.treas.gov" onclick="s_objectID=&quot;http://www.occ.treas.gov/_1&quot;;return this.s_oc?this.s_oc(e):true">Office of the Comptroller of the Currency</a></font></td>
+							<td colspan="2" align="right" valign="middle" bgcolor="#f6f6f6"><a style="cursor:pointer;" onclick="javascript:linkReportClick('Header-report.asp?ReportName=40&amp;demodte=MostCurrent&amp;ReportFunction=Inst');" target="header"><img src="images/MoreDemoInfo.gif" border="0" alt="Demographic Information Report" title="Demographic Information Report"></a></td>
+						</tr>
+						<tr>
+                            
+								<td width="28%" valign="top" nowrap="" align="left" bgcolor="#f6f6f6" style="padding-left: 15px"><font face="Arial, Helvetica" size="2"><a href="javascript:linkClick('Definitions.asp?SystemForm=ID&HelpItem=webaddr');" title="Definition of Primary Internet Web Address" alt="Definition of Primary Internet Web Address" onclick="s_objectID=&quot;javascript:linkClick('Definitions.asp?SystemForm=ID&amp;HelpItem=webaddr');_1&quot;;return this.s_oc?this.s_oc(e):true">
+                                Primary Internet Web Address:</a></font>
+								</td>
+								<td width="38%" valign="top" nowrap="" bgcolor="#f6f6f6"><font face="Arial, Helvetica" size="2"><a href="confirmation2.asp" onclick="s_objectID=&quot;https://www2.fdic.gov/idasp/confirmation2.asp_1&quot;;return this.s_oc?this.s_oc(e):true">http://www.wellsfargo.com</a></font>&nbsp;</td>
+								<td colspan="2" align="right" valign="middle" bgcolor="#f6f6f6"><a style="cursor:pointer;" target="_top" href="http://research.fdic.gov/bankfind/detail.html?bank=3511&amp;name=Wells+Fargo+Bank%2C+National+Association&amp;tabId=3&amp;searchName=Wells+Fargo+Bank%2C+National+Association" onclick="s_objectID=&quot;http://research.fdic.gov/bankfind/detail.html?bank=3511&amp;name=Wells+Fargo+Bank%2C+National+Associa_1&quot;;return this.s_oc?this.s_oc(e):true"><img src="images/Generatehistory.gif" border="0" alt="Generate History  Information " title="Generate History Report"></a></td>
+							
+						</tr>
+					</tbody></table>
+				
+					<table bgcolor="#BOE2FF" width="990" border="0" cellpadding="0" cellspacing="0">
+						<tbody><tr>
+							<td colspan="4" width="990" align="center" bgcolor="#0000CD"><font face="Arial, Helvetica" size="4" color="#FFFFFF">Information Gateway</font>&nbsp; </td>
+						</tr>
+						<tr>
+					<td valign="top" bgcolor="#BOE2FF">&nbsp;&nbsp;&nbsp;</td><td bgcolor="#BOE2FF" nowrap="">&nbsp;&nbsp;<font face="Arial, Helvetica" size="2"></font>&nbsp;&nbsp;</td><td valign="top" bgcolor="#BOE2FF">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+							<td width="85%">&nbsp;</td>
+						</tr>
+					</tbody></table>
+					<table bgcolor="#BOE2FF" width="990" border="0" cellpadding="0" cellspacing="0">
+						<tbody><tr>
+							<td><font face="Arial, Helvetica" size="2"><b>&nbsp;&nbsp;&nbsp;&nbsp;ID Report Selections:</b></font></td>
+							<td><font face="Arial, Helvetica" size="2"><b>Report Date:</b></font></td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>
+								&nbsp;&nbsp;&nbsp;&nbsp;
+								<select name="ReportName" size="1">
+									
+												<option value="40">Demographic Information</option>
+									
+												<option value="10" selected="">Assets and Liabilities</option>
+											
+												<option value="10b">Assets and Liabilities - % Assets</option>
+									
+												<option value="20">Income and Expense</option>
+									
+												<option value="20b">Income and Expense - % Average Assets</option>
+									
+												<option value="30">Performance and Condition Ratios</option>
+									
+												<option value="99">All Summary Information</option>
+									
+								</select>
+							</td>
+							<td>
+								<select name="ReportDate1" size="1" onchange="JavaScript:setSecondDate('False');">
+									<option value="6/30/2014">June 30, 2014</option><option value="3/31/2014">March 31, 2014</option><option value="12/31/2013">December 31, 2013</option><option value="9/30/2013">September 30, 2013</option><option value="6/30/2013">June 30, 2013</option><option value="3/31/2013">March 31, 2013</option><option value="12/31/2012">December 31, 2012</option><option value="9/30/2012">September 30, 2012</option><option value="6/30/2012">June 30, 2012</option><option value="3/31/2012">March 31, 2012</option><option value="12/31/2011">December 31, 2011</option><option value="9/30/2011">September 30, 2011</option><option value="6/30/2011">June 30, 2011</option><option value="3/31/2011">March 31, 2011</option><option value="12/31/2010">December 31, 2010</option><option value="9/30/2010">September 30, 2010</option><option value="6/30/2010">June 30, 2010</option><option value="3/31/2010">March 31, 2010</option><option value="12/31/2009">December 31, 2009</option><option value="9/30/2009">September 30, 2009</option><option value="6/30/2009">June 30, 2009</option><option value="3/31/2009">March 31, 2009</option><option value="12/31/2008">December 31, 2008</option><option value="9/30/2008">September 30, 2008</option><option value="6/30/2008">June 30, 2008</option><option value="3/31/2008">March 31, 2008</option><option value="12/31/2007">December 31, 2007</option><option value="9/30/2007">September 30, 2007</option><option value="6/30/2007">June 30, 2007</option><option value="3/31/2007">March 31, 2007</option><option value="12/31/2006">December 31, 2006</option><option value="9/30/2006">September 30, 2006</option><option value="6/30/2006">June 30, 2006</option><option value="3/31/2006">March 31, 2006</option><option value="12/31/2005">December 31, 2005</option><option value="9/30/2005">September 30, 2005</option><option value="6/30/2005">June 30, 2005</option><option value="3/31/2005">March 31, 2005</option><option value="12/31/2004">December 31, 2004</option><option value="9/30/2004">September 30, 2004</option><option value="6/30/2004">June 30, 2004</option><option value="3/31/2004">March 31, 2004</option><option value="12/31/2003">December 31, 2003</option><option value="9/30/2003">September 30, 2003</option><option value="6/30/2003">June 30, 2003</option><option value="3/31/2003">March 31, 2003</option><option value="12/31/2002">December 31, 2002</option><option value="9/30/2002">September 30, 2002</option><option value="6/30/2002">June 30, 2002</option><option value="3/31/2002">March 31, 2002</option><option value="12/31/2001">December 31, 2001</option><option value="12/31/2000">December 31, 2000</option><option value="12/31/1999">December 31, 1999</option><option value="12/31/1998">December 31, 1998</option><option value="12/31/1997">December 31, 1997</option><option value="12/31/1996">December 31, 1996</option><option value="12/31/1995">December 31, 1995</option><option value="12/31/1994">December 31, 1994</option><option value="12/31/1993">December 31, 1993</option><option value="12/31/1992">December 31, 1992</option>
+								</select>
+								<input name="ReportDate2" type="hidden">
+							</td>
+							<td bgcolor="#BOE2FF">
+								<input type="button" value="Generate Report" onclick="javascript:toGenerateReport();">
+							</td>
+						</tr><tr>
+						<td colspan="3" height="3" bgcolor="#BOE2FF">&nbsp;
+						</td>
+						
+					
+				</tr></tbody></table>
+			
+			<table border="0" cellpadding="0" cellspacing="0" width="990" bgcolor="#BOE2FF">
+				<tbody><tr>
+				 <td nowrap="" colspan="1" align="center" bgcolor="#BOE2FF"><font face="Arial" size="2">---------------------------------------------------------------------------<strong>More Information<strong>------------------------------------------------------------------------</strong></strong></font></td>
+				</tr>
+			</tbody></table>
+			
+			
+			
+			<table border="0" width="991">
+			  <tbody><tr>
+			   	<td width="5" bgcolor="#DDDDDD" align="left">
+			   	  <a href="javascript:linkClick('Definitions.asp?SystemForm=ID&HelpItem=MoreInfo_Offices');" onclick="s_objectID=&quot;javascript:linkClick('Definitions.asp?SystemForm=ID&amp;HelpItem=MoreInfo_Offices');_1&quot;;return this.s_oc?this.s_oc(e):true"><img src="images/infoicon.gif" alt="Definition for current list of offices " border="0" height="13" width="13"></a>
+			   	</td>
+			
+			  	
+				<td bgcolor="#E5E5E5" width="*" align="left">
+					
+						<a href="javascript:linkClick('ez_find_summary_office.asp?cert=3511&Refer=');" title="View Current List of Offices" alt="Current 		List of Offices" onclick="s_objectID=&quot;javascript:linkClick('ez_find_summary_office.asp?cert=3511&amp;Refer=');_1&quot;;return this.s_oc?this.s_oc(e):true"><font face="Arial, Helvetica" size="2">Current List of Offices</font></a> 
+				   
+					 
+				</td>
+				<td bgcolor="#DDDDDD" width="5" align="left">
+			   	  	<a href="javascript:linkClick('Definitions.asp?SystemForm=ID&HelpItem=MoreInfo_BHCOwnership');" onclick="s_objectID=&quot;javascript:linkClick('Definitions.asp?SystemForm=ID&amp;HelpItem=MoreInfo_BHCOwnership');_1&quot;;return this.s_oc?this.s_oc(e):true"><img src="images/infoicon.gif" alt="Definition for Bank Holding Company Ownership and Affiliates " border="0" height="13" width="13"></a>
+			   	</td>
+			
+				<td bgcolor="#E5E5E5" width="*">
+					 
+					 	  <a href="javascript:linkClick('BHClist_cert.asp?inCert1=1120754&inSortindex=0&Period1Index=0&Period1=6/30/14');" title="View the Bank Holding Company Ownership and Affiliates" onclick="s_objectID=&quot;javascript:linkClick('BHClist_cert.asp?inCert1=1120754&amp;inSortindex=0&amp;Period1Index=0&amp;Period1=6/30/_1&quot;;return this.s_oc?this.s_oc(e):true"><font face="Arial, Helvetica" size="2"> Bank Holding Company Ownership and Affiliates </font></a>
+					  
+				
+				</td>
+
+				</tr>
+			
+			  <tr>
+			   	<td width="5" bgcolor="#DDDDDD" align="left">
+			   	 <a href="javascript:linkClick('Definitions.asp?SystemForm=ID&HelpItem=MoreInfo_CompareToPeerGrp');" onclick="s_objectID=&quot;javascript:linkClick('Definitions.asp?SystemForm=ID&amp;HelpItem=MoreInfo_CompareToPeerGrp');_1&quot;;return this.s_oc?this.s_oc(e):true"><img src="images/infoicon.gif" alt="Definition for current list of offices " border="0" height="13" width="13"></a>
+			   	</td>
+			
+			  	
+				<td bgcolor="#F6F6F6" width="*">
+			   	 <font face="Arial, Helvetica" size="2"><a href="/sdi/main3.asp?cert=3511&amp;repdte=MostCurrent" target="_blank" title="View Peer Group(s)" onclick="s_objectID=&quot;https://www2.fdic.gov/sdi/main3.asp?cert=3511&amp;repdte=MostCurrent_1&quot;;return this.s_oc?this.s_oc(e):true">Compare to Peer Group(s)</a></font>
+			   	</td>
+				<td bgcolor="#DDDDDD" width="5" align="left">
+			 
+				<a href="javascript:linkClick('Definitions.asp?SystemForm=ID&HelpItem=MoreInfo_FDICRECON');" onclick="s_objectID=&quot;javascript:linkClick('Definitions.asp?SystemForm=ID&amp;HelpItem=MoreInfo_FDICRECON');_1&quot;;return this.s_oc?this.s_oc(e):true"><img src="images/infoicon.gif" alt="Definition for Regional Economic Conditions" border="0" height="13" width="13"></a>
+			   	</td>
+			
+				<td bgcolor="#E5E5E5" width="*">
+					   
+						 	 <a href="http://www2.fdic.gov/recon" target="_blank" title="View the Regional Economic Conditions  " onclick="s_objectID=&quot;http://www2.fdic.gov/recon_1&quot;;return this.s_oc?this.s_oc(e):true"><font face="Arial, Helvetica" size="2">Regional Economic Conditions (FDIC RECON)</font>  </a>
+						  	 
+					</td>
+                 
+				</tr>
+				
+				<tr>
+				<td bgcolor="#F6F6F6" width="5">
+			    <a href="javascript:linkClick('Definitions.asp?SystemForm=ID&HelpItem=MoreInfo_FFIECCALLTFR');" onclick="s_objectID=&quot;javascript:linkClick('Definitions.asp?SystemForm=ID&amp;HelpItem=MoreInfo_FFIECCALLTFR');_1&quot;;return this.s_oc?this.s_oc(e):true"><img src="images/infoicon.gif" alt="Definition for Peer Group " border="0" height="13" width="13"></a>
+			   	</td>
+			    <td bgcolor="#E5E5E5" width="*">
+		 		
+								<a href="https://cdr.ffiec.gov/Public/ViewFacsimileDirect.aspx?ds=call&amp;idType=fdiccert&amp;id=3511&amp;date=06302014" title="View Preliminary FFIEC Call TFR Report" alt="View Preliminary FFIEC Call TFR Report" target="_blank" onclick="s_objectID=&quot;https://cdr.ffiec.gov/Public/ViewFacsimileDirect.aspx?ds=call&amp;idType=fdiccert&amp;id=3511&amp;date=063020_1&quot;;return this.s_oc?this.s_oc(e):true"><font face="Arial, Helvetica" size="2">FFIEC Call/TFR Report</font></a> <font face="Arial, Helvetica" size="2" color="orangered"><i><strong>6/30/2014&nbsp;Latest Available</strong></i></font>
+							
+					</td>
+			   	
+				<td bgcolor="#F6F6F6" width="5">
+			   	<a href="javascript:linkClick('Definitions.asp?SystemForm=ID&HelpItem=MoreInfo_OHFRS');" onclick="s_objectID=&quot;javascript:linkClick('Definitions.asp?SystemForm=ID&amp;HelpItem=MoreInfo_OHFRS');_1&quot;;return this.s_oc?this.s_oc(e):true"><img src="images/infoicon.gif" alt="Definition for Oraganization Hierarchy from the Federal Reserve System " border="0" height="13" width="13"></a>
+			   	</td>
+			     <td bgcolor="#F6F6F6" width="*">
+					  
+						<a href="http://www.ffiec.gov/nicpubweb/nicweb/OrgHierarchySearchForm.aspx?parID_RSSD=1120754&amp;parDT_END=99991231" target="_blank" title="View the Organization Hierarchy from the Federal Reserve System " onclick="s_objectID=&quot;http://www.ffiec.gov/nicpubweb/nicweb/OrgHierarchySearchForm.aspx?parID_RSSD=1120754&amp;parDT_END=99_1&quot;;return this.s_oc?this.s_oc(e):true"><font face="Arial, Helvetica" size="2">Organization Hierarchy from the Federal Reserve System </font></a>
+					 	
+					
+					</td>
+				</tr>
+				<tr>
+					<td bgcolor="#DDDDDD" width="5">
+			   	 		<a href="javascript:linkClick('Definitions.asp?SystemForm=ID&HelpItem=MoreInfo_FFIECUBPR');" onclick="s_objectID=&quot;javascript:linkClick('Definitions.asp?SystemForm=ID&amp;HelpItem=MoreInfo_FFIECUBPR');_1&quot;;return this.s_oc?this.s_oc(e):true"><img src="images/infoicon.gif" alt="Definition for Call/TFR Report " border="0" height="13" width="13"></a>
+			   		</td>
+			   		<td bgcolor="#F6F6F6" width="*" align="left">
+						
+							<a href="https://cdr.ffiec.gov/public/ViewFacsimileDirect.aspx?ds=ubpr&amp;reptype=1&amp;idType=fdiccert&amp;id=3511" title="View FFIEC Uniform Bank Performance Report" alt="FFIEC Uniform Bank Performance Report" target="_top" onclick="s_objectID=&quot;https://cdr.ffiec.gov/public/ViewFacsimileDirect.aspx?ds=ubpr&amp;reptype=1&amp;idType=fdiccert&amp;id=3511_1&quot;;return this.s_oc?this.s_oc(e):true"><font face="Arial, Helvetica" size="2">FFIEC Uniform Bank Performance Report (UBPR) </font></a> 
+						
+					</td>
+			
+					
+					<td bgcolor="#E5E5E5" width="5">
+						 <a href="javascript:linkClick('Definitions.asp?SystemForm=ID&HelpItem=MoreInfo_AgencyCRA');" onclick="s_objectID=&quot;javascript:linkClick('Definitions.asp?SystemForm=ID&amp;HelpItem=MoreInfo_AgencyCRA');_1&quot;;return this.s_oc?this.s_oc(e):true"><img src="images/infoicon.gif" alt="Definition for CRA ratings " border="0" height="13" width="13"></a>
+					</td>
+					<td bgcolor="#E5E5E5" width="*">
+						
+						      	<a href="http://www.occ.treas.gov/cra/crasrch.htm" target="_blank" title="View the CRA ratings" onclick="s_objectID=&quot;http://www.occ.treas.gov/cra/crasrch.htm_1&quot;;return this.s_oc?this.s_oc(e):true"><font face="Arial, Helvetica" size="2"> <font face="Arial, Helvetica" size="2">OCC CRA ratings </font></font></a><font face="Arial, Helvetica" size="2">
+					    			
+					</font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#DDDDDD" width="5">
+					 	 <a href="javascript:linkClick('Definitions.asp?SystemForm=ID&HelpItem=MoreInfo_FDICOTSSOD');" onclick="s_objectID=&quot;javascript:linkClick('Definitions.asp?SystemForm=ID&amp;HelpItem=MoreInfo_FDICOTSSOD');_1&quot;;return this.s_oc?this.s_oc(e):true"><img src="images/infoicon.gif" alt="Definition for Summary of Deposits Report" border="0" height="13" width="13"></a>
+					</td>
+					<td bgcolor="#E5E5E5" width="*" align="left">
+						
+							<a href="/sod/sodInstBranchRpt.asp?rCert=3511&amp;baritem=1&amp;ryear=2014" title="View Summary of Deposits Report" alt="Summary of Deposits Report" target="_top" onclick="s_objectID=&quot;https://www2.fdic.gov/sod/sodInstBranchRpt.asp?rCert=3511&amp;baritem=1&amp;ryear=2014_1&quot;;return this.s_oc?this.s_oc(e):true"><font face="Arial, Helvetica" size="2">FDIC/OTS Summary of Deposits</font></a> 
+						
+					</td>
+					<td bgcolor="#DDDDDD" width="5">
+					 	 <a href="javascript:linkClick('Definitions.asp?SystemForm=ID&HelpItem=MoreInfo_Consumer');" onclick="s_objectID=&quot;javascript:linkClick('Definitions.asp?SystemForm=ID&amp;HelpItem=MoreInfo_Consumer');_1&quot;;return this.s_oc?this.s_oc(e):true"><img src="images/infoicon.gif" alt="Definition for Consumer assistance from primary federal regulator" border="0" height="13" width="13"></a>
+					</td>
+					<td bgcolor="#E5E5E5" width="*" align="left">
+						<a href="http://www.helpwithmybank.gov/" title="" target="_blank;" onclick="s_objectID=&quot;http://www.helpwithmybank.gov/_1&quot;;return this.s_oc?this.s_oc(e):true"><font face="Arial, Helvetica" size="2">Consumer Assistance from Primary Federal Regulator</font></a> 
+					</td>
+				</tr> 
+				<tr>
+					
+					<td bgcolor="#DDDDDD" width="5">
+					 	 
+					</td>
+					<td bgcolor="#E5E5E5" width="*">
+					  
+						
+					</td>
+				</tr> 
+			</tbody></table>
+			<table border="1" bgcolor="#E5E5E5" width="990">
+				<tbody><tr>
+					<td bgcolor="#E5E5E5">
+					<center><font face="Arial, Helvetica" size="2">Press <img src="images/infoicon.gif" alt="Information" border="0" height="13" width="13"> for description</font>
+					</center></td>
+				</tr>
+			</tbody></table> 
+	
+					
+			</form>
+			
+			<table width="990"><tbody><tr><td>
+			</td></tr></tbody></table>
+			<form name="CRA" action="http://www2.fdic.gov/crapes/index.asp?ProcessParms=Y&amp;ErrMessage=N&amp;PageNo=1&amp;PrevPage=0&amp;NextPage=0&amp;TotRecs=5&amp;TotPages=1&amp;PEInd=Y&amp;CRACert=" 3511"&crastatus="CurrentActive&quot;" method="post" target="http://www2.fdic.gov/crapes/index.asp?ProcessParms=Y&amp;ErrMessage=N&amp;PageNo=1&amp;PrevPage=0&amp;NextPage=0&amp;TotRecs=5&amp;TotPages=1&amp;PEInd=Y&amp;CRACert=">
+				<input type="hidden" name="WhichCERT" value="3511">
+				<input type="hidden" name="WhichRating" value="ALL">
+				<input type="hidden" name="WhichYear" value="ALL">
+				<input type="hidden" name="WhichName" value="Wells Fargo Bank, National Association">
+				<input type="hidden" name="WhichAssetRange" value="ALL">
+				
+						<input type="hidden" name="WhichStatus" value="CurrentActive">
+						    
+				<input type="hidden" name="WhichOrder" value="CRA1.SortName">
+				<input type="hidden" name="WhichSortOrder" value="Ascending">
+				<input type="hidden" name="WhichCols" value="CERT,Bank Name,city,state,MadePublic,CRA Rating,Investment Rating,Asset Size,PE">
+			</form>
+		        
+		   
+			<!--referpage=-->
+
+<table style="width:990px;border:0px;">
+    <tbody><tr>
+        <td style="padding-top:20px;text-align:right;width:80%;">
+	    
+		    &nbsp;<!--- LastUpdated: confirmation_outside.asp: 6/24/2014 --->
+	    
+	    </td>
+        <td>&nbsp;</td>
+    </tr>
+</tbody></table>
+<!-- Begin Footer-->
+<div id="divFDICFooter">
+    <!-- Last Updated Date: 5-20-2011   Time: 12:04AM   Version: 1.4 -->
+<link rel="stylesheet" type="text/css" href="/header/css/www2_header_style.css">
+<br>
+<!-- begin footer -->		
+	<div id="footer-container">
+		<div>
+			<ul id="footer-top">
+				<li><a target="_parent" href="http://www.fdic.gov/" title="Home" onclick="s_objectID=&quot;http://www.fdic.gov/_2&quot;;return this.s_oc?this.s_oc(e):true">Home</a></li>
+				<li>|</li>
+				<li><a target="_parent" href="http://www.fdic.gov/about/contact/ask/" title="Contact Us" onclick="s_objectID=&quot;http://www.fdic.gov/about/contact/ask/_1&quot;;return this.s_oc?this.s_oc(e):true">Contact Us</a></li>
+				<li>|</li>
+				<li><a target="_parent" href="http://www.fdic.gov/search/" title="Search" onclick="s_objectID=&quot;http://www.fdic.gov/search/_1&quot;;return this.s_oc?this.s_oc(e):true">Search</a></li>
+				<li>|</li>
+				<li><a target="_parent" href="http://www.fdic.gov/help/" title="Help" onclick="s_objectID=&quot;http://www.fdic.gov/help/_1&quot;;return this.s_oc?this.s_oc(e):true">Help</a></li>
+				<li>|</li>
+				<li><a target="_parent" href="http://www.fdic.gov/sitemap/" title="SiteMap" onclick="s_objectID=&quot;http://www.fdic.gov/sitemap/_1&quot;;return this.s_oc?this.s_oc(e):true">SiteMap</a></li>
+				<li>|</li>
+				<li><a target="_parent" href="http://www.fdic.gov/regulations/laws/forms/" title="Forms" onclick="s_objectID=&quot;http://www.fdic.gov/regulations/laws/forms/_1&quot;;return this.s_oc?this.s_oc(e):true">Forms</a></li>
+				<li>|</li>
+				<li><a target="_parent" href="http://www.fdic.gov/quicklinks/spanish.html" title="En Español" onclick="s_objectID=&quot;http://www.fdic.gov/quicklinks/spanish.html_1&quot;;return this.s_oc?this.s_oc(e):true">En Español</a></li>
+			</ul>
+		</div>
+
+		<div>
+			<ul id="footer-middle">
+				<li><a target="_parent" href="http://www.fdic.gov/about/policies/" title="Website Policies" onclick="s_objectID=&quot;http://www.fdic.gov/about/policies/_1&quot;;return this.s_oc?this.s_oc(e):true">Website Policies</a></li>
+				<li>|</li>
+				<li><a href="http://www.fdic.gov/about/privacy/policy/index.html" title="Privacy Policy" onclick="s_objectID=&quot;http://www.fdic.gov/about/privacy/policy/index.html_1&quot;;return this.s_oc?this.s_oc(e):true">Privacy Policy</a></li>
+				<li>|</li>
+				<li><a target="_parent" href="http://www.fdic.gov/plainlanguage/index.html" title="USA.gov" onclick="s_objectID=&quot;http://www.fdic.gov/plainlanguage/index.html_1&quot;;return this.s_oc?this.s_oc(e):true">Plain Writing Act of 2010 </a></li>
+                <li>|</li>
+				<li><a target="_parent" href="http://www.usa.gov/" title="USA.gov" onclick="s_objectID=&quot;http://www.usa.gov/_1&quot;;return this.s_oc?this.s_oc(e):true">USA.gov</a></li>
+				<li>|</li>
+				<li><a target="_parent" href="http://www.fdicoig.gov/" title="FDIC Office of Inspector General" onclick="s_objectID=&quot;http://www.fdicoig.gov/_1&quot;;return this.s_oc?this.s_oc(e):true">FDIC Office of Inspector General</a></li>
+			</ul>
+		</div>
+
+		<div>
+			<ul id="footer-bottom">
+				<li><a target="_parent" href="http://www.fdic.gov/about/freedom/" title="Freedom of Information Act (FOIA) Service Center" onclick="s_objectID=&quot;http://www.fdic.gov/about/freedom/_1&quot;;return this.s_oc?this.s_oc(e):true">Freedom of Information Act (FOIA) Service Center</a></li>
+				<li>|</li>
+				<li><a target="_parent" href="http://www.fdic.gov/open/" title="FDIC Open Government Webpage" onclick="s_objectID=&quot;http://www.fdic.gov/open/_1&quot;;return this.s_oc?this.s_oc(e):true">FDIC Open Government Webpage</a></li>
+				<li>|</li>
+				<li><a target="_parent" href="http://www.fdic.gov/about/diversity/nofear/" title="No FEAR Act Data" onclick="s_objectID=&quot;http://www.fdic.gov/about/diversity/nofear/_1&quot;;return this.s_oc?this.s_oc(e):true">No FEAR Act Data</a></li>
+			</ul>
+		</div>
+	</div><!-- end of footer container -->
+<!-- end footer -->
+<!--//Start Omniture Embed Code - This reference must be repeated due to use of frames in app design-->
+<script language="JavaScript" type="text/javascript" src="/s_code_v1.js"></script>
+<script language="JavaScript" type="text/javascript">
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<script language="JavaScript" type="text/javascript">
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+</script>
+<noscript>
+&lt;a href="http://www.omniture.com" title="Web Analytics"&gt;
+&lt;img src="http://fdic.122.2o7.net/b/ss/fdicgovprod/1/H.21--NS/0?[AQB]%26cl=Session%26AQE" height="1" width="1" border="0" alt="" /&gt;&lt;/a&gt;
+</noscript>
+<!--//End Omniture Embed Code-->
+</div>
+<script language="javascript" type="text/javascript">
+    function setFooterPosition() {
+        var element = document.getElementById("divFDICFooter");
+        if (element !== undefined && element !== null) {
+            var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            if (element.offsetTop + 88 < height) {
+                element.style.position = "absolute";
+                element.style.top = (height - 88) + "px";
+                element.style.left = "0px";
+            }
+        }
+    }
+    setFooterPosition();
+</script>
+
+<!--End Footer-->
+		<input type="hidden" name="as_fid" value="DWQlw12abs+OJM+c/RKA">
+	
+</body></html>

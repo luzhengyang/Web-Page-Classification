@@ -1,0 +1,1133 @@
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><style type="text/css">.gm-style{font-family:Roboto,Arial,sans-serif;font-size:11px;font-weight:400;text-decoration:none}</style>
+    <title>Pizza in Barrie - Ziplocal Page: 1</title>
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+    <meta content="pizza in Barrie pizzeria, resto, mets, italiens, restaurants, restaurent, parlour, family friendly dining, take, fastfood" name="keywords">
+    <meta content="Find pizza in Barrie fast with ZipLocal. Find detailed information on Pizza in Barrie, pizzeria in Barrie, resto in Barrie &amp; more. Page: 1" name="description">
+    <meta name="y_key" content="fb98bb707b5805e7">
+    <link href="/assets/stylesheets/site.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/assets/stylesheets/print.css" media="print" rel="stylesheet" type="text/css">
+    <script src="/assets/javascript/application.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/assets/javascript/wforms_core.js"></script>
+<script type="text/javascript" src="/assets/javascript/wforms_repeat_limited.js"></script>
+<script type="text/javascript">
+	wFORMS.arrMsg[0] = 'Add another friend';
+	wFORMS.arrMsg[1] = 'Refer to another friend';
+	wFORMS.arrMsg[2] = 'Remove this friend';
+	wFORMS.arrMsg[3] = 'Remove this friend';
+
+function refer_a_friend_callback()
+{
+    if( wFORMS ) {
+       wFORMS.onLoadHandler();
+    }
+}
+</script>
+
+<style type="text/CSS">
+
+.duplicateLinkHidden {
+display: none;
+}
+</style>    <script language="JavaScript" type="text/javascript">
+	jQuery(document).ready(function(){
+			var winHeight = 550;
+			var bodyHeight = document.body.clientHeight;
+			if(bodyHeight == 'undefined' || bodyHeight == 0)
+			{
+				winHeight = 550;
+			}
+			if(bodyHeight<=540)
+			{
+		      	winHeight = bodyHeight - 100;
+			}
+			jQuery('#listingLink').attr("href","http://www.ziplocal.ca/pages/listing?height="+ winHeight +"&width=500");
+	});
+	</script>
+
+		<script src="http://www.google.com/jsapi?key=ABQIAAAAP6LkWpKkhZYbE3Ai5ftyMBRZbPgh_rg45YgI2rQQlpR-Md03NxSG7WOWilPDUf-kQpVQFt25uACrPw" type="text/javascript"></script>
+
+<script src="/assets/javascript/jquery.history_remote.js" type="text/javascript"></script>
+<script src="/assets/javascript/jquery.jcache.js" type="text/javascript"></script>
+<script src="/assets/javascript/jquery.scrollTo-1.3.3-min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var throbber = '<div style="width: 100%; text-align: center;padding-top:100px; height: 100px">'
+			+  '<img src="/images/loader.gif" alt="loading..." width="220" height="19" style="margin: 0 auto;" />'
+			+  '</div>';
+
+function setupTabs(href)
+{
+	var f = document.getElementById('ad');
+	if( f )
+		f.contentWindow.location.reload(true);
+	pageTracker._trackPageview(href);
+	var match = href.match('companies/([0-9]+)-');
+	var match1 = href.match('(.*/companies/[^/]*)')
+	jQuery('#reviews_tab_link a').attr('id','review '+match[1]);
+	jQuery('#reviews_tab_link a').attr('href',match1[1]+'/reviews');
+	jQuery('#reviews_tab_link a').remote('#ajax_div',selectReview);
+	jQuery('#maps_tab_link a').attr('id','maps '+match[1]);
+	jQuery('#maps_tab_link a').attr('href',match1[1]+'/maps');
+	jQuery('#maps_tab_link a').remote('#ajax_div',selectMaps,initializeMap);
+	jQuery('#information_tab_link a').attr('id','profile '+match[1]);
+	jQuery('#information_tab_link a').attr('href',match1[1]);
+	jQuery('#information_tab_link a').remote('#ajax_div',selectProfile,initProfile);
+
+}
+function selectProfile(isCached,href)
+{
+	jQuery('#information_tab_link').show().addClass('selected');
+	jQuery('#reviews_tab_link').show().removeClass('selected');
+	jQuery('#search_results_tab_link').removeClass('selected');
+	jQuery('#maps_tab_link').show().removeClass('selected');
+	jQuery('#searches_div').hide();
+	jQuery('#ajax_div').show();
+	if(!isCached)
+		jQuery('#ajax_div').html(throbber);
+	setupTabs(href);
+}
+
+function initProfile()
+{
+	tb_init('#ajax_div a.thickbox');
+	jQuery('#ajax_div a.review_link').remote('#ajax_div',selectReview);
+	jQuery('a.header_larger_map').remote('#ajax_div',selectMaps,initializeMap);
+}
+
+function selectReview(isCached,href)
+{
+	jQuery('#information_tab_link').show().removeClass('selected');
+	jQuery('#reviews_tab_link').show().addClass('selected');
+	jQuery('#search_results_tab_link').removeClass('selected');
+	jQuery('#maps_tab_link').show().removeClass('selected');
+	jQuery('#searches_div').hide();
+	jQuery('#ajax_div').show();
+	if(!isCached)
+		jQuery('#ajax_div').html(throbber);
+	setupTabs(href);
+}
+
+function initializeMap()
+{
+     if (GBrowserIsCompatible()) {
+     	var hash =this.href;
+     	var id = hash.match('maps_([0-9]+)$')
+        var map = new GMap2(document.getElementById("map_directions"));
+        var point = gmarkers[id[1]].getLatLng();
+        map.setCenter( point, 15);
+		map.addOverlay(new GMarker(point));
+		map.addControl(new GSmallZoomControl());
+
+		gdir = new GDirections(map, document.getElementById("directions"));
+		//GEvent.addListener(gdir, "load", onGDirectionsLoad);
+        GEvent.addListener(gdir, "error", handleErrors);
+	}
+}
+function selectMaps(isCached,href)
+{
+	jQuery('#information_tab_link').show().removeClass('selected');
+	jQuery('#reviews_tab_link').show().removeClass('selected');
+	jQuery('#search_results_tab_link').removeClass('selected');
+	jQuery('#maps_tab_link').show().addClass('selected');
+	jQuery('#searches_div').hide();
+	jQuery('#ajax_div').show();
+	if(!isCached)
+		jQuery('#ajax_div').html(throbber);
+	setupTabs(href);
+}
+
+function selectResultsView()
+{
+	jQuery('#information_tab_link').show().removeClass('selected');
+	jQuery('#reviews_tab_link').show().removeClass('selected');
+	jQuery('#search_results_tab_link').addClass('selected');
+	jQuery('#maps_tab_link').show().removeClass('selected');
+	jQuery('#ajax_div').hide();
+	jQuery('#searches_div').show();
+}
+
+jQuery(document).ready(function(){
+	jQuery('a.company_link').remote('#ajax_div',selectProfile,initProfile);
+	jQuery('a.review_link').remote('#ajax_div',selectReview);
+    jQuery.ajaxHistory.initialize();
+    google.load("maps", "2", {"language": '', "callback" : mapsLoaded});
+
+});
+
+jQuery(window).unload(function() {
+	GUnload();
+});
+
+var gmarkers = [];
+var Icon;
+
+function createMarker(point,company_id,company_name, map)
+{
+    var marker=new GMarker(point,Icon);
+    marker.value = company_id;
+
+	GEvent.addListener(marker, "dblclick", function() {
+		jQuery('#company_'+company_id+' .company_link').click();
+	});
+
+	GEvent.addListener(marker, "click", function() {
+		jQuery('#companies').scrollTo('#company_'+company_id)
+	});
+
+	GEvent.addListener(marker, "mouseover", function() {
+		marker.setImage("/assets/images/pin_OverState.png");
+		jQuery('#company_'+company_id).addClass('results_list_highlight');
+		jQuery('#map_bubble').css('display','none');
+
+ 		pixelPosition = (map.fromLatLngToContainerPixel(point)).toString();
+		var x = (pixelPosition.substr(1, pixelPosition.indexOf(',')-1)-110)+'px';
+		var y = (pixelPosition.substring(pixelPosition.indexOf(',')+2,pixelPosition.length-1)-85)+'px';
+		document.getElementById('map_container').appendChild(document.getElementById('map_bubble'));
+
+		jQuery('#map_bubble').css('top',y );
+		jQuery('#map_bubble').css('left',x);
+
+		jQuery('#map_bubble').css('display','block');
+		jQuery('#map_bubble').text(company_name);
+
+	});
+
+	GEvent.addListener(marker, "mouseout", function() {
+		marker.setImage("/assets/images/pin_UnderState.png");
+		jQuery('#map_bubble').css('display','none');
+		jQuery('#map_bubble').css('top','0px' );
+		jQuery('#map_bubble').css('left','0px');
+		jQuery('#company_'+company_id).removeClass('results_list_highlight');
+	});
+
+	return marker;
+}
+
+function setupMapInteraction(map,point,company_id, company_name)
+{
+    gmarkers[company_id]=createMarker(point,company_id,company_name,map);
+    map.addOverlay(gmarkers[company_id]);
+    jQuery('#company_'+company_id).mouseover(function() {
+		jQuery(this).addClass('results_list_highlight');
+    });
+    jQuery('#company_'+company_id).mouseout(function() {
+		jQuery(this).removeClass('results_list_highlight');
+    });
+}
+
+function mapMoveEnd(map)
+{
+	var bnds = map.getBounds();
+	var center = bnds.getCenter();
+	var lat = center.lat();
+	var lon = center.lng();
+	try {
+		var zoomlevel = Lat49.Tile.convertGMap2Zoom(map.getZoom());
+		Lat49.updateAdByLatLon("adcontainer", lat, lon, zoomlevel);
+	} catch(e) {}
+}
+
+function mapsLoaded()
+{
+     if (GBrowserIsCompatible()) {
+
+		try {
+		Lat49.initAds(249);
+		} catch(e) {}
+
+		Icon = new GIcon();
+		Icon.image = "/assets/images/pin_UnderState.png";
+		Icon.iconSize = new GSize(30, 29);
+		Icon.shadow = "/assets/images/pin_shadow.png";
+		Icon.shadowSize = new GSize(30, 22);
+		Icon.iconAnchor = new GPoint(30, 29	);
+		Icon.transparent = "/assets/images/ie_shadow.png";
+
+        var map = new GMap2(document.getElementById("map_container"));
+        map.setCenter(new GLatLng(49.953429, -106.64257), 13); // Saskatoon 52.156242,-106.64257 wINNIPEG 49.953429,-97.106781
+		var bounds = new GLatLngBounds;
+		var point;
+		var point_count = 0;
+		point = new GLatLng(44.3479,-79.7037); setupMapInteraction(map,point,742777,"Pizza Pizza"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.4029,-79.7019); setupMapInteraction(map,point,742774,"Pizza Hut"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3913,-79.7222); setupMapInteraction(map,point,2625527,"Paezano's Pizza"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.4145,-79.7119); setupMapInteraction(map,point,742771,"Little Caesar's Pizza"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3349,-79.6878); setupMapInteraction(map,point,742779,"Star Pizza & Chicken W..."); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3708,-79.6732); setupMapInteraction(map,point,2580286,"Pizza Pizza"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.4049,-79.7038); setupMapInteraction(map,point,2580287,"Pizza Pizza"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.4073,-79.6742); setupMapInteraction(map,point,742776,"Pizza People"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3824,-79.7057); setupMapInteraction(map,point,969627,"Pizza Nova"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3622,-79.6833); setupMapInteraction(map,point,969630,"241 Pizza"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3888,-79.6913); setupMapInteraction(map,point,1462732,"241 Pizza"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3818,-79.7073); setupMapInteraction(map,point,1614211,"Topper's Pizza"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3256,-79.7287); setupMapInteraction(map,point,1782108,"Hollywood Pizza"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.4077,-79.6841); setupMapInteraction(map,point,2033396,"Domino's Pizza"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3375,-79.6878); setupMapInteraction(map,point,2166216,"Sicilian Gourmet Pizza..."); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3888,-79.6913); setupMapInteraction(map,point,2430156,"Downtown 2 For 1 Pizza"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3307,-79.7058); setupMapInteraction(map,point,2430157,"Little Ceasars Pizza"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3331,-79.6898); setupMapInteraction(map,point,2541007,"Boston Pizza"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3826,-79.7051); setupMapInteraction(map,point,1613756,"Papa Joe's Pizza & Chi..."); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3638,-79.696); setupMapInteraction(map,point,743182,"Pizza Hut"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.4073,-79.6742); setupMapInteraction(map,point,2430220,"Pizza People & Sub"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.394,-79.6941); setupMapInteraction(map,point,742761,"Dino's 2 For 1 Pizza"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.4126,-79.6864); setupMapInteraction(map,point,742766,"Ital Pizza"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3701,-79.6697); setupMapInteraction(map,point,742782,"Pizzaville"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3852,-79.7059); setupMapInteraction(map,point,1462734,"Grillers Pizza & Wings"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3526,-79.6649); setupMapInteraction(map,point,2033395,"Domino's Pizza"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3917,-79.7225); setupMapInteraction(map,point,2283331,"Julio's Palace Pizza &..."); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3894,-79.6866); setupMapInteraction(map,point,742769,"Piazza (La)"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.4181,-79.6962); setupMapInteraction(map,point,2033445,"Papa Joe's Pizza & Chi..."); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3863,-79.6939); setupMapInteraction(map,point,2429832,"10 Buck Pizza"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3365,-79.7104); setupMapInteraction(map,point,2580685,"Pizzaville"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.4045,-79.7032); setupMapInteraction(map,point,742780,"Pizzaville"); bounds.extend(point); point_count++;
+        point = new GLatLng(44.3375,-79.6878); setupMapInteraction(map,point,2282836,"Around The World Move ..."); bounds.extend(point); point_count++;
+        		//max zoom 14
+		//map.setZoom(map.getBoundsZoomLevel(bounds));
+		//map.setZoom(14);
+		if (point_count == 0)
+		{
+			map.setZoom(3);
+		}
+		else if (point_count == 1)
+		{
+			map.setCenter(bounds.getCenter());
+			map.setZoom(12);
+		}
+		else
+		{
+			map.setZoom(map.getBoundsZoomLevel(bounds));
+			map.setCenter(bounds.getCenter());
+		}
+		map.addControl(new GLargeMapControl());
+		map.addControl(new GMapTypeControl());
+		GEvent.addListener(map, "moveend", function () { mapMoveEnd(map); });
+		//force an add update
+		mapMoveEnd(map);
+	}
+}
+function companyClick(e, company_id, me)
+{
+	var target = e.srcElement || e.target;
+	var tid = target.id;
+	if (tid != null)
+	{
+		if (tid.indexOf("profile") == 0 || tid.indexOf("company_link_more_info") == 0 || tid.indexOf("review") == 0 || tid.indexOf("website") == 0)
+		{
+			return;
+		}
+	}
+	jQuery('#company_'+company_id+' .company_link').click();
+}
+</script>
+	  <script type="text/javascript" src="http://maps.google.com/maps?file=googleapi&amp;key=ABQIAAAAP6LkWpKkhZYbE3Ai5ftyMBRZbPgh_rg45YgI2rQQlpR-Md03NxSG7WOWilPDUf-kQpVQFt25uACrPw&amp;v=2&amp;hl=&amp;callback=google.loader.callbacks.maps&amp;async=2"></script><script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/cat_js/maps-api-v3/api/js/18/14/%7Bcommon,map,overlay,util,marker%7D.js"></script><script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/cat_js/maps-api-v3/api/js/18/14/%7Binfowindow,onion%7D.js"></script></head>
+  <body id="results">
+        <div class="clear"></div>
+     <div id="new_navigation">
+     	<div id="position">
+        <ul id="menu_items">
+          <li><a id="home_page_link" href="http://www.ziplocal.ca/">Home</a>|</li>
+	            <li><a href="http://www.ziplocal.ca/best_picks"><span class="highlight">Best</span>Picks</a>|</li>
+	            <!-- <li><a id="blog_link" href="http://blog.ziplocal.ca" target="_blank"><span class="highlight">Zip</span>Blog</a>|</li>-->
+                    <li><a href="http://dealoftheday.redflagdeals.com/?formtype=simple&amp;utm_campaign=dealoftheday&amp;utm_source=ziplocal&amp;utm_medium=homepage/" target="_blank"><span class="highlight">Red</span>Flag<span class="highlight">Deals</span></a>|</li>
+                    <!--li><a id="blog_link" href="http://www.canpages.ca/blog/" target="canpages"><span class="highlight">Canpages</span>Blog</a>|</li-->
+          <li><a id="blog_link" href="http://www.canpages.ca" target="canpages"><span class="highlight">Canpages</span>.CA</a></li>
+        </ul>
+        <ul id="control_items">
+                    <li><a href="http://www.ziplocal.ca/user/sign_in">Sign In </a>|</li>
+          <li><a href="http://www.ziplocal.ca/user/new_user">Register</a>|</li>
+                              <li><a href="/fr/trouvez/pizza-dans-Barrie">Français</a></li>
+                  </ul>
+        </div>
+      </div>
+        <div id="global_container">
+      <div id="main_container">
+        <div id="container">
+          <div class="wrapper">
+            <div id="header">
+              <div id="utility_bar">
+                <a style="float:left" href="http://www.ziplocal.ca/"><img src="/images/logo.jpg" alt="home page"></a>
+                <form action="http://www.ziplocal.ca/searches" id="search_form" method="get">
+                  <div class="ubar_button"></div>
+                  <input id="what" class="ac_input" name="what" title="What? e.g. &quot;Pizza&quot;" value="pizza" type="text" autocomplete="off">
+	              <div class="ubar_button"><img src="/assets/images/en/inText.gif" id="in_text"></div>
+                  <input id="where" class="ac_input" name="where" title="Where? e.g. &quot;City or Neighbourhood&quot;" type="text" value="Barrie" autocomplete="off">
+                  <input id="find_it" src="/images/dot_clear.gif" style="background-image: url(/images/en/find.gif)" type="image" value="">
+                </form>
+                <div id="bar_end"> </div>
+              </div>
+    		  <div class="clear"></div>
+            </div>
+
+			<div id="ypg_gpssp">
+				<div id="ypg_listings">
+            	<script type="text/javascript" language="javascript">
+	  var IE = (document.all) ? 1 : 0;
+	  var DOM = 0; 
+	  if (parseInt(navigator.appVersion) >= 5){
+		DOM = 1;
+	  }
+	  function txtShow(elementId, text) {
+		if (DOM) {
+		  document.getElementById(elementId).textContent = text;
+		} else if(IE) {
+		  document.getElementById(elementId).innerText = text;
+		}
+	  }
+	  function openYPG(urlYPG) {
+		//alert(urlYPG);  
+		window.open(urlYPG,'YPG','');
+	  }
+	  
+	</script>
+
+
+<div id="ypg_filler">
+  <div style="width: 730px;position: relative;float: left;margin-top: 5px;margin-left: 100px;">	
+	<a href="http://mobile.yp.ca/applications/" target="YPG">
+		<img src="/assets/images/ypg_en_728x90.jpg" width="728px" align="center" alt="YPG">
+	</a>
+  </div>	
+</div>
+
+				</div>
+			</div>            
+
+                        <div id="header_bottom"></div>
+
+			<div id="map_bubble">
+</div>
+           <ul id="viewport_nav">
+              <li class="selected" id="search_results_tab_link"><a href="#map_view" onclick="selectResultsView();"><span>Map View</span></a></li>
+              <li id="information_tab_link" style="display:none;"><a href="/"><span>Information</span></a></li>
+              <li id="reviews_tab_link" style="display:none;"><a href="/"><span>Reviews</span></a></li>
+              <li id="maps_tab_link" style="display:none;"><a href="/"><span>Driving Directions</span></a></li>
+            </ul>
+            <div id="right_column">
+              <div class="topright">
+              </div>
+              <div id="viewport">
+                <div id="viewport_content_divs">
+                  <div class="tab_content" id="searches_div">
+		      		                    <div id="keywords">
+                      <h2>More Keywords</h2>
+                      <h3>Add another keyword to filter your result</h3>
+                      <ul>
+                      	                      	<li class="even">
+                          + <a href="http://www.ziplocal.ca/find/pizza-pizzeria-in-Barrie">pizzeria</a>
+                        </li>
+                                              	<li class="odd">
+                          + <a href="http://www.ziplocal.ca/find/pizza-resto-in-Barrie">resto</a>
+                        </li>
+                                              	<li class="even">
+                          + <a href="http://www.ziplocal.ca/find/pizza-mets-in-Barrie">mets</a>
+                        </li>
+                                              	<li class="odd">
+                          + <a href="http://www.ziplocal.ca/find/pizza-italiens-in-Barrie">italiens</a>
+                        </li>
+                                              	<li class="even">
+                          + <a href="http://www.ziplocal.ca/find/pizza-restaurants-in-Barrie">restaurants</a>
+                        </li>
+                                              	<li class="odd">
+                          + <a href="http://www.ziplocal.ca/find/pizza-restaurent-in-Barrie">restaurent</a>
+                        </li>
+                                              	<li class="even">
+                          + <a href="http://www.ziplocal.ca/find/pizza-parlour-in-Barrie">parlour</a>
+                        </li>
+                                              	<li class="odd">
+                          + <a href="http://www.ziplocal.ca/find/pizza-family-friendly-dining-in-Barrie">family friendly dining</a>
+                        </li>
+                                              	<li class="even">
+                          + <a href="http://www.ziplocal.ca/find/pizza-take-in-Barrie">take</a>
+                        </li>
+                                              	<li class="odd">
+                          + <a href="http://www.ziplocal.ca/find/pizza-fastfood-in-Barrie">fastfood</a>
+                        </li>
+                                              </ul>
+                                          </div>
+                                        <div style="position:relative">
+	                    <div id="map_container" style="position: relative; background-color: rgb(229, 227, 223); overflow: hidden; -webkit-transform: translateZ(0px);"><div></div><div></div><div class="gm-style" style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0; cursor: url(http://maps.gstatic.com/mapfiles/openhand_8_8.cur) 8 8, default;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; -webkit-transform-origin: 0px 0px; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);"><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"></div><div style="position: absolute; z-index: 0;"><div style="overflow: hidden; width: 421px; height: 790px;"></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 2; width: 100%; height: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 3; width: 100%; -webkit-transform-origin: 0px 0px; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);"><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div></div></div>
+			 	        <!-- div id="adcontainer" lat49adposition="bottom-right" ></div-->
+			        </div>
+                  </div>
+                  <div class="tab_content remote-output" id="ajax_div" style="display:none;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="left_column">
+              <div class="top">
+              </div>
+              <div class="results" id="flasher">
+                <h2>36 pizza in Barrie</h2>
+                                <p style="margin:-5px 0px 0px 2px;" id="result_sort">
+                <select name="order" id="orderBy" onchange="window.location = this.value">
+                <option value="http://www.ziplocal.ca/find/pizza-in-Barrie" selected="selected">Sort Your Result By ...</option>
+                <option value="http://www.ziplocal.ca/find/pizza-in-Barrie">Default</option>
+                <option value="http://www.ziplocal.ca/find/pizza-in-Barrie/1/2">Alphabetically</option>
+                <option value="http://www.ziplocal.ca/find/pizza-in-Barrie/1/3">Most Reviewed</option>
+                <option value="http://www.ziplocal.ca/find/pizza-in-Barrie/1/4">Most Voted</option>
+                <option value="http://www.ziplocal.ca/find/pizza-in-Barrie/1/5">Online Reservation</option>
+                </select>
+                </p>
+                              </div>
+              <div id="companies">
+        			        
+                 <div class="clearfix company" id="company_742777" onclick="companyClick(event,742777,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 742777" href="#profile_742777" class="company_link">Pizza Pizza  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>410 Essa Rd, Barrie</address>
+                                                                  <div class="phone">(705) 737-1111</div>
+                                                                                        <div class="company_url">
+                        <a id="website742777" href="/stats_logs/742777?tool_type=url&amp;url=http%3A%2F%2Fwww.pizzapizza.ca" onclick="window.open(this.href);return false;" title="" rel="nofollow">www.pizzapizza.ca</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 742777" class="results_links review_link" href="#review_742777" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_742774" onclick="companyClick(event,742774,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 742774" href="#profile_742774" class="company_link">Pizza Hut  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>342 Bayfield St, Barrie</address>
+                                                                  <div class="phone">(705) 728-2121</div>
+                                                                                        <div class="company_url">
+                        <a id="website742774" href="/stats_logs/742774?tool_type=url&amp;url=http%3A%2F%2Fwww.pizzahut.ca" onclick="window.open(this.href);return false;" title="" rel="nofollow">www.pizzahut.ca</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                        <li id="results_links_buttons_item" class="best_picks_results_item"><a id="profile 742774" href="#profile_742774" class="results_links best_picks_link company_link" rel="nofollow">2 BestPicks</a></li>                        <li id="results_links_buttons_item" class="review_results_item"><a id="review 742774" class="results_links review_link" href="#review_742774" rel="nofollow">1 Reviews</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_739607" onclick="companyClick(event,739607,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 739607" href="#profile_739607" class="company_link">Double Double Pizza  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address></address>
+                                                                  <div class="phone">(705) 734-0000</div>
+                                                                                        <div class="company_url">
+                        <a id="website739607" href="/stats_logs/739607?tool_type=url&amp;url=http%3A%2F%2Fdoubledouble.ca%2F" onclick="window.open(this.href);return false;" title="" rel="nofollow">doubledouble.ca/</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                        <li id="results_links_buttons_item" class="best_picks_results_item"><a id="profile 739607" href="#profile_739607" class="results_links best_picks_link company_link" rel="nofollow">1 BestPicks</a></li>                        <li id="results_links_buttons_item" class="review_results_item"><a id="review 739607" class="results_links review_link" href="#review_739607" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_2625527" onclick="companyClick(event,2625527,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 2625527" href="#profile_2625527" class="company_link">Paezano's Pizza  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>420 Leacock Dr,, Barrie</address>
+                                                                  <div class="phone">(705) 722-1717</div>
+                                                                                                              <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 2625527" class="results_links review_link" href="#review_2625527" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_742771" onclick="companyClick(event,742771,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 742771" href="#profile_742771" class="company_link" rel="nofollow">Little Caesar's Pizza  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>531 Bayfield St , Barrie</address>
+                                                                  <div class="phone">(705) 728-5055</div>
+                                                                                        <div class="company_url">
+                        <a id="website742771" href="/stats_logs/742771?tool_type=url&amp;url=http%3A%2F%2Fwww.littlecaesars.com%2F" onclick="window.open(this.href);return false;" title="" rel="nofollow">www.littlecaes...com</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 742771" class="results_links review_link" href="#review_742771" rel="nofollow">1 Reviews</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_742779" onclick="companyClick(event,742779,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 742779" href="#profile_742779" class="company_link" rel="nofollow">Star Pizza &amp; Chicken Wings  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>85 Barrie View Dr , Barrie</address>
+                                                                  <div class="phone">(705) 733-8888</div>
+                                                                                                              <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 742779" class="results_links review_link" href="#review_742779" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_2580286" onclick="companyClick(event,2580286,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 2580286" href="#profile_2580286" class="company_link" rel="nofollow">Pizza Pizza  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>279 Yonge St , Barrie</address>
+                                                                  <div class="phone">(705) 737-1111</div>
+                                                                                        <div class="company_url">
+                        <a id="website2580286" href="/stats_logs/2580286?tool_type=url&amp;url=http%3A%2F%2Fwww.pizzapizza.ca" onclick="window.open(this.href);return false;" title="" rel="nofollow">www.pizzapizza.ca</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 2580286" class="results_links review_link" href="#review_2580286" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_2580287" onclick="companyClick(event,2580287,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 2580287" href="#profile_2580287" class="company_link" rel="nofollow">Pizza Pizza  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>5-360 Bayfield St , Barrie</address>
+                                                                  <div class="phone">(705) 737-1111</div>
+                                                                                        <div class="company_url">
+                        <a id="website2580287" href="/stats_logs/2580287?tool_type=url&amp;url=http%3A%2F%2Fwww.pizzapizza.ca" onclick="window.open(this.href);return false;" title="" rel="nofollow">www.pizzapizza.ca</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 2580287" class="results_links review_link" href="#review_2580287" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_2580288" onclick="companyClick(event,2580288,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 2580288" href="#profile_2580288" class="company_link" rel="nofollow">Pizza Pizza  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>410 Essa Rd , Barrie</address>
+                                                                  <div class="phone">(705) 737-1111</div>
+                                                                                        <div class="company_url">
+                        <a id="website2580288" href="/stats_logs/2580288?tool_type=url&amp;url=http%3A%2F%2Fwww.pizzapizza.ca" onclick="window.open(this.href);return false;" title="" rel="nofollow">www.pizzapizza.ca</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 2580288" class="results_links review_link" href="#review_2580288" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_742776" onclick="companyClick(event,742776,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 742776" href="#profile_742776" class="company_link" rel="nofollow">Pizza People  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>353 Duckworth St , Barrie</address>
+                                                                  <div class="phone">(705) 737-0004</div>
+                                                                                                              <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 742776" class="results_links review_link" href="#review_742776" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_969627" onclick="companyClick(event,969627,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 969627" href="#profile_969627" class="company_link" rel="nofollow">Pizza Nova  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>285 Dunlop St W, Barrie</address>
+                                                                  <div class="phone">(705) 728-8888</div>
+                                                                                                              <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 969627" class="results_links review_link" href="#review_969627" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_969630" onclick="companyClick(event,969630,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 969630" href="#profile_969630" class="company_link" rel="nofollow">241 Pizza  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>110 Little Ave , Barrie</address>
+                                                                  <div class="phone">(705) 721-0241</div>
+                                                                                        <div class="company_url">
+                        <a id="website969630" href="/stats_logs/969630?tool_type=url&amp;url=http%3A%2F%2Fwww.241pizza.com%2F" onclick="window.open(this.href);return false;" title="" rel="nofollow">www.241pizza.com/</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 969630" class="results_links review_link" href="#review_969630" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_1462732" onclick="companyClick(event,1462732,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 1462732" href="#profile_1462732" class="company_link" rel="nofollow">241 Pizza  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>40 Dunlop St W, Barrie</address>
+                                                                  <div class="phone">(705) 725-0241</div>
+                                                                                        <div class="company_url">
+                        <a id="website1462732" href="/stats_logs/1462732?tool_type=url&amp;url=http%3A%2F%2Fwww.241pizza.com%2F" onclick="window.open(this.href);return false;" title="" rel="nofollow">www.241pizza.com/</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 1462732" class="results_links review_link" href="#review_1462732" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_1614211" onclick="companyClick(event,1614211,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 1614211" href="#profile_1614211" class="company_link" rel="nofollow">Topper's Pizza  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>18-304 Dunlop St W, Barrie</address>
+                                                                  <div class="phone">(705) 739-1717</div>
+                                                                                        <div class="company_url">
+                        <a id="website1614211" href="/stats_logs/1614211?tool_type=url&amp;url=http%3A%2F%2Fwww.toppers.ca%2F" onclick="window.open(this.href);return false;" title="" rel="nofollow">www.toppers.ca/</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 1614211" class="results_links review_link" href="#review_1614211" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_1782108" onclick="companyClick(event,1782108,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 1782108" href="#profile_1782108" class="company_link" rel="nofollow">Hollywood Pizza  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>555 Mapleview Dr W, Barrie</address>
+                                                                  <div class="phone">(705) 730-1400</div>
+                                                                                        <div class="company_url">
+                        <a id="website1782108" href="/stats_logs/1782108?tool_type=url&amp;url=http%3A%2F%2Fwww.hollywood-pizza.com" onclick="window.open(this.href);return false;" title="" rel="nofollow">www.hollywood-...com</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 1782108" class="results_links review_link" href="#review_1782108" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_2033396" onclick="companyClick(event,2033396,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 2033396" href="#profile_2033396" class="company_link" rel="nofollow">Domino's Pizza  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>20 Bell Farm Rd , Barrie</address>
+                                                                  <div class="phone">(705) 722-5000</div>
+                                                                                        <div class="company_url">
+                        <a id="website2033396" href="/stats_logs/2033396?tool_type=url&amp;url=http%3A%2F%2Fwww.dominos.ca%2F" onclick="window.open(this.href);return false;" title="" rel="nofollow">www.dominos.ca/</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 2033396" class="results_links review_link" href="#review_2033396" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_2166216" onclick="companyClick(event,2166216,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 2166216" href="#profile_2166216" class="company_link" rel="nofollow">Sicilian Gourmet Pizza &amp; Pasta  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>3-56 Barrie View Dr , Barrie</address>
+                                                                  <div class="phone">(705) 734-9999</div>
+                                                                                        <div class="company_url">
+                        <a id="website2166216" href="/stats_logs/2166216?tool_type=url&amp;url=http%3A%2F%2Fwww.siciliangourmet.com" onclick="window.open(this.href);return false;" title="" rel="nofollow">www.siciliango...com</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Restaurants</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 2166216" class="results_links review_link" href="#review_2166216" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_2430156" onclick="companyClick(event,2430156,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 2430156" href="#profile_2430156" class="company_link" rel="nofollow">Downtown 2 For 1 Pizza  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>40 Dunlop St W, Barrie</address>
+                                                                  <div class="phone">(705) 727-0205</div>
+                                                                                                              <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 2430156" class="results_links review_link" href="#review_2430156" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_2430157" onclick="companyClick(event,2430157,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 2430157" href="#profile_2430157" class="company_link" rel="nofollow">Little Ceasars Pizza  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>237 Mapleview Dr E, Barrie</address>
+                                                                  <div class="phone">(705) 733-7770</div>
+                                                                                                              <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 2430157" class="results_links review_link" href="#review_2430157" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_2541007" onclick="companyClick(event,2541007,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 2541007" href="#profile_2541007" class="company_link" rel="nofollow">Boston Pizza  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>481 Bryne Dr , Barrie</address>
+                                                                  <div class="phone">(705) 719-2067</div>
+                                                                                        <div class="company_url">
+                        <a id="website2541007" href="/stats_logs/2541007?tool_type=url&amp;url=http%3A%2F%2Fwww.bostonpizza.com%2F" onclick="window.open(this.href);return false;" title="" rel="nofollow">www.bostonpizza.com/</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 2541007" class="results_links review_link" href="#review_2541007" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_1613756" onclick="companyClick(event,1613756,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 1613756" href="#profile_1613756" class="company_link" rel="nofollow">Papa Joe's Pizza &amp; Chicken  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>273 Dunlop St W, Barrie</address>
+                                                                  <div class="phone">(705) 735-2222</div>
+                                                                                                              <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 1613756" class="results_links review_link" href="#review_1613756" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_1786091" onclick="companyClick(event,1786091,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 1786091" href="#profile_1786091" class="company_link" rel="nofollow">Double Double Pizza Chicken  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>Servicing Barrie</address>
+                                                                  <div class="phone">(905) 778-0000</div>
+                                                                                        <div class="company_url">
+                        <a id="website1786091" href="/stats_logs/1786091?tool_type=url&amp;url=http%3A%2F%2Fdoubledouble.ca%2F" onclick="window.open(this.href);return false;" title="" rel="nofollow">doubledouble.ca/</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 1786091" class="results_links review_link" href="#review_1786091" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_743182" onclick="companyClick(event,743182,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 743182" href="#profile_743182" class="company_link" rel="nofollow">Pizza Hut  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>8 Fairview Rd , Barrie</address>
+                                                                  <div class="phone">(705) 739-1881</div>
+                                                                                        <div class="company_url">
+                        <a id="website743182" href="/stats_logs/743182?tool_type=url&amp;url=http%3A%2F%2Fwww.pizzahut.ca%2F" onclick="window.open(this.href);return false;" title="" rel="nofollow">www.pizzahut.ca/</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Restaurants</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 743182" class="results_links review_link" href="#review_743182" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_2430220" onclick="companyClick(event,2430220,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 2430220" href="#profile_2430220" class="company_link" rel="nofollow">Pizza People &amp; Sub  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>353 Duckworth St , Barrie</address>
+                                                                  <div class="phone">(705) 737-0003</div>
+                                                                                                              <div class="category">Category &gt; Restaurants</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 2430220" class="results_links review_link" href="#review_2430220" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_742761" onclick="companyClick(event,742761,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 742761" href="#profile_742761" class="company_link" rel="nofollow">Dino's 2 For 1 Pizza  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>157 Bayfield St , Barrie</address>
+                                                                  <div class="phone">(705) 737-2222</div>
+                                                                                                              <div class="category">Category &gt; Restaurants</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 742761" class="results_links review_link" href="#review_742761" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_742766" onclick="companyClick(event,742766,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 742766" href="#profile_742766" class="company_link" rel="nofollow">Ital Pizza  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>221 Cundles Rd E, Barrie</address>
+                                                                  <div class="phone">(705) 726-7777</div>
+                                                                                                              <div class="category">Category &gt; Restaurants</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 742766" class="results_links review_link" href="#review_742766" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_742782" onclick="companyClick(event,742782,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 742782" href="#profile_742782" class="company_link" rel="nofollow">Pizzaville  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>6-320 Yonge St , Barrie</address>
+                                                                  <div class="phone">(705) 734-3333</div>
+                                                                                        <div class="company_url">
+                        <a id="website742782" href="/stats_logs/742782?tool_type=url&amp;url=https%3A%2F%2Fwww.pizzaville.ca" onclick="window.open(this.href);return false;" title="" rel="nofollow">https://www.pizzaville...ca</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 742782" class="results_links review_link" href="#review_742782" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_1462734" onclick="companyClick(event,1462734,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 1462734" href="#profile_1462734" class="company_link" rel="nofollow">Grillers Pizza &amp; Wings  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>165 Wellington St W, Barrie</address>
+                                                                  <div class="phone">(705) 735-1888</div>
+                                                                                                              <div class="category">Category &gt; Restaurants</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 1462734" class="results_links review_link" href="#review_1462734" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_2033395" onclick="companyClick(event,2033395,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 2033395" href="#profile_2033395" class="company_link" rel="nofollow">Domino's Pizza  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>411 Huronia Rd , Barrie</address>
+                                                                  <div class="phone">(705) 726-0230</div>
+                                                                                        <div class="company_url">
+                        <a id="website2033395" href="/stats_logs/2033395?tool_type=url&amp;url=http%3A%2F%2Fwww.dominos.ca%2F" onclick="window.open(this.href);return false;" title="" rel="nofollow">www.dominos.ca/</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Restaurants</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 2033395" class="results_links review_link" href="#review_2033395" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_2283331" onclick="companyClick(event,2283331,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 2283331" href="#profile_2283331" class="company_link" rel="nofollow">Julio's Palace Pizza &amp; Pasta  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>420 Leacock Dr , Barrie</address>
+                                                                  <div class="phone">(705) 739-1600</div>
+                                                                                                              <div class="category">Category &gt; Restaurants</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 2283331" class="results_links review_link" href="#review_2283331" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_742769" onclick="companyClick(event,742769,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 742769" href="#profile_742769" class="company_link" rel="nofollow">Piazza (La)  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>94 Dunlop St E, Barrie</address>
+                                                                  <div class="phone">(705) 722-5477</div>
+                                                                                                              <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 742769" class="results_links review_link" href="#review_742769" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_2033445" onclick="companyClick(event,2033445,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 2033445" href="#profile_2033445" class="company_link" rel="nofollow">Papa Joe's Pizza &amp; Chicken Ltd  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>181 Livingstone St E, Barrie</address>
+                                                                  <div class="phone">(705) 735-9797</div>
+                                                                                                              <div class="category">Category &gt; Restaurants</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 2033445" class="results_links review_link" href="#review_2033445" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_2429832" onclick="companyClick(event,2429832,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 2429832" href="#profile_2429832" class="company_link" rel="nofollow">10 Buck Pizza  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>29 Bradford St , Barrie</address>
+                                                                  <div class="phone">(705) 719-1234</div>
+                                                                                                              <div class="category">Category &gt; Foods Take-Out</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 2429832" class="results_links review_link" href="#review_2429832" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_2580685" onclick="companyClick(event,2580685,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 2580685" href="#profile_2580685" class="company_link" rel="nofollow">Pizzaville  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>559 Essa Rd , Barrie</address>
+                                                                  <div class="phone">(705) 739-1600</div>
+                                                                                        <div class="company_url">
+                        <a id="website2580685" href="/stats_logs/2580685?tool_type=url&amp;url=http%3A%2F%2Fwww.pizzaville.ca" onclick="window.open(this.href);return false;" title="" rel="nofollow">www.pizzaville.ca</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 2580685" class="results_links review_link" href="#review_2580685" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_742780" onclick="companyClick(event,742780,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 742780" href="#profile_742780" class="company_link" rel="nofollow">Pizzaville  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>359 Bayfield St , Barrie</address>
+                                                                  <div class="phone">(705) 722-7776</div>
+                                                                                        <div class="company_url">
+                        <a id="website742780" href="/stats_logs/742780?tool_type=url&amp;url=https%3A%2F%2Fwww.pizzaville.ca" onclick="window.open(this.href);return false;" title="" rel="nofollow">https://www.pizzaville...ca</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Restaurants</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 742780" class="results_links review_link" href="#review_742780" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                    		        
+                 <div class="clearfix company" id="company_2282836" onclick="companyClick(event,2282836,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 2282836" href="#profile_2282836" class="company_link" rel="nofollow">Around The World Move &amp; Take Food Experience  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>3-56 Barrie View Dr , Barrie</address>
+                                                                  <div class="phone">(705) 726-2222</div>
+                                                                                        <div class="company_url">
+                        <a id="website2282836" href="/stats_logs/2282836?tool_type=url&amp;url=http%3A%2F%2Fwww.moventake.com" onclick="window.open(this.href);return false;" title="" rel="nofollow">www.moventake.com</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Pizza</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 2282836" class="results_links review_link" href="#review_2282836" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                                   													              </div>
+              <div id="left_column_bottom">
+              </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div id="right_column_bottom" style="display:none">
+            </div>
+            <div class="push"></div>
+         </div>
+
+  	 <div id="print_only"><img src="/images/homeLogo.gif" alt="Ziplocal Logo"></div>
+
+     <div id="footer">
+
+                   <!-- a href="http://www.ziplocal.ca/advertise?type=ads">Advertise with Us</a> |-->
+              <a href="http://www.ypg.com">Advertise with Us</a> |
+              <a href="http://www.ziplocal.ca/about">About us</a> |
+              <a href="http://www.ziplocal.ca/contact">Contact Us</a> |
+              <!-- <a href="http://www.ziplocal.ca/pages/feedback">Feedback</a> |-->
+              <!-- <a id="listingLink" title="Enter Business details" class="thickbox">Add a listing</a> |-->
+              <a href="http://www.ziplocal.ca/pages/green">Green Commitment</a> |
+              <a href="http://www.ziplocal.ca/tos">Terms of Use</a> |
+              <a href="http://www.ziplocal.ca/privacy">Privacy Policy</a>
+			                  <div style="margin:5px;"><a href="http://www.canpages.ca"><img src="/assets//images/zip-canpage.jpg"></a></div>
+			<div id="top_cities"><b>Top Cities:</b>
+		  			<a href="http://www.ziplocal.ca/sitemap/toronto_on">Toronto</a> |
+			<a href="http://www.ziplocal.ca/sitemap/montreal_qc">Montreal</a> |
+			<a href="http://www.ziplocal.ca/sitemap/calgary_ab">Calgary</a> |
+			<a href="http://www.ziplocal.ca/sitemap/vancouver_bc">Vancouver</a> |
+			<a href="http://www.ziplocal.ca/sitemap/halifax_ns">Halifax</a> |
+			<a href="http://www.ziplocal.ca/sitemap/ottawa_on">Ottawa</a>|
+			<a href="http://www.ziplocal.ca/sitemap/edmonton_ab">Edmonton</a> |
+			<a href="http://www.ziplocal.ca/sitemap/quebec_qc">Quebec City</a> |
+					<a href="http://www.ziplocal.ca/sitemap">More</a></div>
+                </div>
+        </div>
+      </div>
+      
+      	<div class="clear"></div>
+	<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+	<script type="text/javascript">
+	var pageTracker;
+	function trackpage() {
+              pageTracker = _gat._getTracker("UA-1445080-1");pageTracker._initData();pageTracker._trackPageview();
+      	}
+	if( typeof _gat == "undefind"  ) {
+		setTimeout( 'trackpage()', 500)
+	} else {
+		trackpage();
+	}
+    </script>
+        
+
+</div><div class="ac_results" style="position: absolute; width: 221px; display: none;"></div><div class="ac_results" style="position: absolute; width: 221px; display: none;"></div><script src="http://maps.gstatic.com/cat_js/maps-api-v3/api/js/18/14/%7Bmain,adsense,geometry,zombie%7D.js"></script><span style="position: absolute; left: -999px; top: -999px; visibility: hidden; font-size: 300px; width: auto; height: auto; margin: 0px; padding: 0px; font-family: Roboto, Arial, sans-serif;">BESbewy</span></body></html>

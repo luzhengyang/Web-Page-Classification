@@ -1,0 +1,2973 @@
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml" style="display: block;"><head>
+
+
+<title>Wells Fargo Foreign Currency - Today's Rates</title>
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="/css/fx.css">
+<script src="/js/prototype-1.7.js" type="text/javascript"></script>
+<script src="/js/WFToolTip.js" type="text/javascript"></script>
+<script src="/js/fx_fcs.js" type="text/javascript"></script>
+<script type="text/javascript">
+var focusId='';
+if( self == top ) {
+    document.documentElement.style.display = 'block' ; 
+} else {
+    top.location = self.location ; 
+} 
+</script>
+<style> html{display : none ; } </style>
+</head>
+<body>
+
+<div id="main">
+
+
+<div id="FCSmasthead">
+<img src="/img/FES/logo_wf.gif" alt="Wells Fargo Home Page" title="Wells Fargo Home Page" id="wfVendorLogo">
+<div class="clearAll">
+&nbsp;
+</div></div>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+ 
+var currencyCode= [
+ 
+"AUD"
+  
+,"CAD"
+  
+,"CNY"
+  
+,"DKK"
+  
+,"EUR"
+  
+,"GBP"
+  
+,"HKD"
+  
+,"JPY"
+  
+,"MXN"
+  
+,"NZD"
+  
+,"NOK"
+  
+,"SGD"
+  
+,"SEK"
+  
+,"CHF"
+  
+,"THB"
+  
+,"ARS"
+  
+,"BSD"
+  
+,"BHD"
+  
+,"BBD"
+  
+,"BZD"
+  
+,"BMD"
+  
+,"BRL"
+  
+,"BND"
+  
+,"KYD"
+  
+,"CLP"
+  
+,"COP"
+  
+,"CRC"
+  
+,"HRK"
+  
+,"CZK"
+  
+,"DOP"
+  
+,"XCD"
+  
+,"EGP"
+  
+,"FJD"
+  
+,"GIP"
+  
+,"GTQ"
+  
+,"HUF"
+  
+,"ISK"
+  
+,"INR"
+  
+,"IDR"
+  
+,"ILS"
+  
+,"JMD"
+  
+,"JOD"
+  
+,"KES"
+  
+,"KWD"
+  
+,"LBP"
+  
+,"LTL"
+  
+,"MYR"
+  
+,"MAD"
+  
+,"NPR"
+  
+,"ANG"
+  
+,"NIO"
+  
+,"INP"
+  
+,"OMR"
+  
+,"PKR"
+  
+,"PGK"
+  
+,"PYG"
+  
+,"PEN"
+  
+,"PHP"
+  
+,"PLN"
+  
+,"QAR"
+  
+,"RON"
+  
+,"RUB"
+  
+,"SAR"
+  
+,"SCP"
+  
+,"ZAR"
+  
+,"KRW"
+  
+,"LKR"
+  
+,"XPF"
+  
+,"TWD"
+  
+,"TTD"
+  
+,"TND"
+  
+,"TRY"
+  
+,"AED"
+ 
+]
+var displayCurrency= [
+ 
+"dollar"
+  
+,"dollar"
+  
+,"yuan"
+  
+,"krone"
+  
+,"euro"
+  
+,"pound"
+  
+,"dollar"
+  
+,"yen"
+  
+,"peso"
+  
+,"dollar"
+  
+,"krone"
+  
+,"dollar"
+  
+,"krona"
+  
+,"franc"
+  
+,"baht"
+  
+,"peso"
+  
+,"dollar"
+  
+,"dinar"
+  
+,"dollar"
+  
+,"dollar"
+  
+,"dollar"
+  
+,"real"
+  
+,"ringgit"
+  
+,"dollar"
+  
+,"peso"
+  
+,"peso"
+  
+,"colon"
+  
+,"kuna"
+  
+,"koruna"
+  
+,"peso"
+  
+,"dollar"
+  
+,"pound"
+  
+,"dollar"
+  
+,"pound"
+  
+,"quetzal"
+  
+,"forint"
+  
+,"krona"
+  
+,"rupee"
+  
+,"rupiah"
+  
+,"sheqel"
+  
+,"dollar"
+  
+,"dinar"
+  
+,"shilling"
+  
+,"dinar"
+  
+,"livre"
+  
+,"litas"
+  
+,"ringgit"
+  
+,"dirham"
+  
+,"rupee"
+  
+,"guilder"
+  
+,"cordoba"
+  
+,"pound"
+  
+,"rial"
+  
+,"rupee"
+  
+,"kina"
+  
+,"guarani"
+  
+,"nuevo sol"
+  
+,"piso"
+  
+,"zloty"
+  
+,"riyal"
+  
+,"new leu"
+  
+,"ruble"
+  
+,"riyal"
+  
+,"pound"
+  
+,"rand"
+  
+,"won"
+  
+,"rupee"
+  
+,"franc"
+  
+,"dollar"
+  
+,"dollar"
+  
+,"dinar"
+  
+,"new lira"
+  
+,"dirham"
+ 
+]
+var currencyValue= [
+ 
+0.9177
+  
+,0.9254
+  
+,0.1767
+  
+,0.1771
+  
+,1.3149
+  
+,1.6754
+  
+,0.1361
+  
+,0.00932
+  
+,0.07909
+  
+,0.8170
+  
+,0.1560
+  
+,0.8267
+  
+,0.1427
+  
+,1.0890
+  
+,0.03297
+  
+,0.1321
+  
+,1.0638
+  
+,2.9806
+  
+,0.5595
+  
+,0.5333
+  
+,1.0638
+  
+,0.4534
+  
+,0.8635
+  
+,1.3620
+  
+,0.0020
+  
+,0.0005718
+  
+,0.002126
+  
+,0.1939
+  
+,0.05102
+  
+,0.02613
+  
+,0.4154
+  
+,0.1626
+  
+,0.5740
+  
+,1.7737
+  
+,0.1528
+  
+,0.004499
+  
+,0.009706
+  
+,0.01810
+  
+,0.0000995
+  
+,0.3009
+  
+,0.01010
+  
+,1.6213
+  
+,0.01363
+  
+,3.9154
+  
+,0.0007776
+  
+,0.4159
+  
+,0.3317
+  
+,0.1361
+  
+,0.01212
+  
+,0.6384
+  
+,0.04815
+  
+,1.6754
+  
+,2.9189
+  
+,0.011444
+  
+,0.4355
+  
+,0.0002432
+  
+,0.3844
+  
+,0.02528
+  
+,0.3479
+  
+,0.3086
+  
+,0.3331
+  
+,0.02608
+  
+,0.2995
+  
+,1.6754
+  
+,0.1039
+  
+,0.0010132
+  
+,0.009093
+  
+,0.01116
+  
+,0.03648
+  
+,0.1774
+  
+,0.6605
+  
+,0.4988
+  
+,0.3059
+ 
+]
+</script>
+<noscript></noscript>
+
+
+
+
+
+<div id="tabNav">
+<ul>
+<li>
+<a href="/FES/ordercurrency/order.html" title="Order Currency - Tab">Order Currency</a>
+</li>
+<li class="tabOn">
+<a href="#" title="Current Ordering Rates - Tab - Selected">Current Ordering Rates</a>
+</li>
+<li>
+<a href="/FES/help/help.html" title="Help - Tab">Help</a>
+</li>
+</ul>
+<div class="clearer">&nbsp;</div>
+</div>
+
+
+<div id="order">
+	<div id="title">
+		  <h1>Current Rates for Ordering Foreign Currency Online</h1>
+		<a href="#" id="print">Print this page</a>
+		<div class="clearer">
+			&nbsp;
+		</div>
+	</div>
+	<div class="area1">
+		<p>The current foreign exchange rates for ordering foreign currency banknotes (cash) online are shown below.  Before placing your online order, you may use the convenient Currency Calculator tool to determine how much foreign currency banknotes will cost at the rate shown below.</p><p>The rates for ordering foreign currency banknotes in the store or on the phone are similar to the rates below but may not be the same.</p><p>All rates for ordering foreign currency banknotes online are quoted in U.S. dollar terms, meaning that one unit of foreign currency multiplied by the rate equals the U.S. dollar cost per unit of foreign currency.  In addition to the cost of the currency, shipping and handling fees may apply to online orders.</p><p>For inquiries on any other rates, such as the rates to exchange foreign currency banknotes back into U.S. dollars, please contact us at 1-800-626-9430.</p><p>Find out more about <a href="https://www.wellsfargo.com/foreignexchange/products">foreign exchange products and services</a>.</p>
+		
+		<form id="currencyOrder" name="currencyOrder" action="/FES/rate/rate.html" method="post">
+
+
+			
+
+			<div id="currencySelect" class="todaysRateForm">
+				<table cellspacing="0" class="selectorLayout">
+					<tbody><tr>
+						<td class="header" scope="row">
+							<label for="currencyList">
+								Currency
+
+							</label>
+						</td>
+						<td class="dataButton" colspan="2">
+							<select name="currencySelected" id="currencyList" style="margin-right: 10px;">
+								<option value="">
+										Select One
+								</option>
+								<optgroup label="Popular Currencies">
+										
+											
+												<option value="AUD">
+													Australia
+													(dollar)
+												</option>
+											
+										
+											
+												<option value="CAD">
+													Canada
+													(dollar)
+												</option>
+											
+										
+											
+												<option value="CNY">
+													China
+													(yuan)
+												</option>
+											
+										
+											
+												<option value="DKK">
+													Denmark
+													(krone)
+												</option>
+											
+										
+											
+												<option value="EUR">
+													Eurozone
+													(euro)
+												</option>
+											
+										
+											
+												<option value="GBP">
+													Great Britain
+													(pound)
+												</option>
+											
+										
+											
+												<option value="HKD">
+													Hong Kong
+													(dollar)
+												</option>
+											
+										
+											
+												<option value="JPY">
+													Japan
+													(yen)
+												</option>
+											
+										
+											
+												<option value="MXN">
+													Mexico
+													(peso)
+												</option>
+											
+										
+											
+												<option value="NZD">
+													New Zealand
+													(dollar)
+												</option>
+											
+										
+											
+												<option value="NOK">
+													Norway
+													(krone)
+												</option>
+											
+										
+											
+												<option value="SGD">
+													Singapore
+													(dollar)
+												</option>
+											
+										
+											
+												<option value="SEK">
+													Sweden
+													(krona)
+												</option>
+											
+										
+											
+												<option value="CHF">
+													Switzerland
+													(franc)
+												</option>
+											
+										
+											
+												<option value="THB">
+													Thailand
+													(baht)
+												</option>
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+									</optgroup>
+									<optgroup label="Other Currencies">
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+												<option value="ARS">
+													Argentina
+													(peso)
+												</option>
+											
+										
+											
+												<option value="BSD">
+													Bahamas
+													(dollar)
+												</option>
+											
+										
+											
+												<option value="BHD">
+													Bahrain
+													(dinar)
+												</option>
+											
+										
+											
+												<option value="BBD">
+													Barbados
+													(dollar)
+												</option>
+											
+										
+											
+												<option value="BZD">
+													Belize
+													(dollar)
+												</option>
+											
+										
+											
+												<option value="BMD">
+													Bermuda
+													(dollar)
+												</option>
+											
+										
+											
+												<option value="BRL">
+													Brazil
+													(real)
+												</option>
+											
+										
+											
+												<option value="BND">
+													Brunei
+													(ringgit)
+												</option>
+											
+										
+											
+												<option value="KYD">
+													Cayman Islands
+													(dollar)
+												</option>
+											
+										
+											
+												<option value="CLP">
+													Chile
+													(peso)
+												</option>
+											
+										
+											
+												<option value="COP">
+													Colombia
+													(peso)
+												</option>
+											
+										
+											
+												<option value="CRC">
+													Costa Rica
+													(colon)
+												</option>
+											
+										
+											
+												<option value="HRK">
+													Croatia
+													(kuna)
+												</option>
+											
+										
+											
+												<option value="CZK">
+													Czech Republic
+													(koruna)
+												</option>
+											
+										
+											
+												<option value="DOP">
+													Dominican Republic
+													(peso)
+												</option>
+											
+										
+											
+												<option value="XCD">
+													East Caribbean
+													(dollar)
+												</option>
+											
+										
+											
+												<option value="EGP">
+													Egypt
+													(pound)
+												</option>
+											
+										
+											
+												<option value="FJD">
+													Fiji
+													(dollar)
+												</option>
+											
+										
+											
+												<option value="GIP">
+													Gibraltar
+													(pound)
+												</option>
+											
+										
+											
+												<option value="GTQ">
+													Guatemala
+													(quetzal)
+												</option>
+											
+										
+											
+												<option value="HUF">
+													Hungary
+													(forint)
+												</option>
+											
+										
+											
+												<option value="ISK">
+													Iceland
+													(krona)
+												</option>
+											
+										
+											
+												<option value="INR">
+													India
+													(rupee)
+												</option>
+											
+										
+											
+												<option value="IDR">
+													Indonesia
+													(rupiah)
+												</option>
+											
+										
+											
+												<option value="ILS">
+													Israel
+													(sheqel)
+												</option>
+											
+										
+											
+												<option value="JMD">
+													Jamaica
+													(dollar)
+												</option>
+											
+										
+											
+												<option value="JOD">
+													Jordan
+													(dinar)
+												</option>
+											
+										
+											
+												<option value="KES">
+													Kenya
+													(shilling)
+												</option>
+											
+										
+											
+												<option value="KWD">
+													Kuwait
+													(dinar)
+												</option>
+											
+										
+											
+												<option value="LBP">
+													Lebanon
+													(livre)
+												</option>
+											
+										
+											
+												<option value="LTL">
+													Lithuania
+													(litas)
+												</option>
+											
+										
+											
+												<option value="MYR">
+													Malaysia
+													(ringgit)
+												</option>
+											
+										
+											
+												<option value="MAD">
+													Morocco
+													(dirham)
+												</option>
+											
+										
+											
+												<option value="NPR">
+													Nepal
+													(rupee)
+												</option>
+											
+										
+											
+												<option value="ANG">
+													Netherlands Antilles
+													(guilder)
+												</option>
+											
+										
+											
+												<option value="NIO">
+													Nicaragua
+													(cordoba)
+												</option>
+											
+										
+											
+												<option value="INP">
+													North Ireland
+													(pound)
+												</option>
+											
+										
+											
+												<option value="OMR">
+													Oman
+													(rial)
+												</option>
+											
+										
+											
+												<option value="PKR">
+													Pakistan
+													(rupee)
+												</option>
+											
+										
+											
+												<option value="PGK">
+													Papua New Guinea
+													(kina)
+												</option>
+											
+										
+											
+												<option value="PYG">
+													Paraguay
+													(guarani)
+												</option>
+											
+										
+											
+												<option value="PEN">
+													Peru
+													(nuevo sol)
+												</option>
+											
+										
+											
+												<option value="PHP">
+													Philippines
+													(piso)
+												</option>
+											
+										
+											
+												<option value="PLN">
+													Poland
+													(zloty)
+												</option>
+											
+										
+											
+												<option value="QAR">
+													Qatar
+													(riyal)
+												</option>
+											
+										
+											
+												<option value="RON">
+													Romania
+													(new leu)
+												</option>
+											
+										
+											
+												<option value="RUB">
+													Russia
+													(ruble)
+												</option>
+											
+										
+											
+												<option value="SAR">
+													Saudi Arabia
+													(riyal)
+												</option>
+											
+										
+											
+												<option value="SCP">
+													Scotland
+													(pound)
+												</option>
+											
+										
+											
+												<option value="ZAR">
+													South Africa
+													(rand)
+												</option>
+											
+										
+											
+												<option value="KRW">
+													South Korea
+													(won)
+												</option>
+											
+										
+											
+												<option value="LKR">
+													Sri Lanka
+													(rupee)
+												</option>
+											
+										
+											
+												<option value="XPF">
+													Tahiti
+													(franc)
+												</option>
+											
+										
+											
+												<option value="TWD">
+													Taiwan
+													(dollar)
+												</option>
+											
+										
+											
+												<option value="TTD">
+													Trinidad and Tobago
+													(dollar)
+												</option>
+											
+										
+											
+												<option value="TND">
+													Tunisia
+													(dinar)
+												</option>
+											
+										
+											
+												<option value="TRY">
+													Turkey
+													(new lira)
+												</option>
+											
+										
+											
+												<option value="AED">
+													United Arab Emirates
+													(dirham)
+												</option>
+											
+										
+									</optgroup>
+							</select>
+							<span class="hide" id="currencyListShow" style="display: none;"><a href="#" id="euroShow1" class="special light" title="New Window. See all countries that use the Euro">See all countries that
+									use the Euro</a> </span>
+						</td>
+					</tr>
+					<tr>
+							<td class="header" scope="row"><label for="todayrate">Current Online Order Rate</label></td>
+						<td colspan="2" class="dataButton" id="todaysrate" aria-live="polite"></td>
+					</tr>
+					<tr>
+						<td class="header" scope="row">
+							<label for="convAmt">
+								Amount
+							</label>
+						</td>
+						<td class="data">
+							
+								<input type="text" size="10" maxlength="19" name="convAmt" id="convAmt" value="">
+							
+							<fieldset style="display: inline">
+								<legend class="hide">
+									Currency type
+								</legend>
+								
+									<input type="radio" name="currency" id="usDollar" value="true">
+								<label for="usDollar" style="padding-right: 4px">
+									U.S. dollar (USD)
+								</label>
+								<input type="radio" name="currency" id="selectedCur" value="false">
+								<label for="selectedCur" id="currencyLabel">Selected currency</label>
+								
+							</fieldset>
+						</td>
+						<td class="convertCurrency">
+						<input type="submit" id="convert" value="Convert Currency" disabled="" style="background-image: url(https://www.foreignexchangeservices.com/img/fx_convert_fade_btn.gif); background-color: transparent; cursor: default; background-position: 0% 0%; background-repeat: no-repeat no-repeat;">
+						</td>
+					</tr>
+					<tr>
+						<td class="header" scope="row" style="padding: 5px; border-top: 1px solid #ccc" id="CalculatedCostLabel">
+							<label for="calculatedCost">Conversion Amount</label>
+						</td>
+						<td colspan="2" class="dataButton" style="padding: 5px 0; border-top: 1px solid #ccc" id="conversionTotal" aria-live="polite">&nbsp;
+							<strong></strong>
+						</td>
+					</tr>
+				</tbody></table>
+			</div>
+		</form>
+
+
+
+		<div class="subTabs">
+		<p id="ratesDesc">Rates below are for ordering foreign currency banknotes (cash) online only</p>
+			<ul>
+				<li class="tabOn">
+					<a href="#" id="One" title="Popular Currencies - Tab - Selected">Popular Currencies</a>
+				</li>
+				<li>
+					<a href="#" id="Two" title="All Currencies - Tab">All Currencies</a>
+				</li>
+			</ul>
+			<div class="clearer">
+				&nbsp;
+			</div>
+		</div>
+		<div class="subTabsContainer">
+			<div id="subContentOne" class="subContent selected">
+				<table cellspacing="0" summary="Popular Currencies">
+					<tbody><tr id="headerRow" class="odd">
+						<th scope="col">
+							Country
+						</th>
+						<th scope="col">
+							Currency
+						</th>
+						<th scope="col">
+							Sell to You (USD)
+						</th>
+					</tr>
+					
+                                          
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Australia
+                                                        
+							</th>
+							<td>
+								dollar (AUD)
+							</td>
+							<td>
+								0.9177
+							</td>
+						</tr>
+                                          
+					
+                                          
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Canada
+                                                        
+							</th>
+							<td>
+								dollar (CAD)
+							</td>
+							<td>
+								0.9254
+							</td>
+						</tr>
+                                          
+					
+                                          
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								China
+                                                        
+							</th>
+							<td>
+								yuan (CNY)
+							</td>
+							<td>
+								0.1767
+							</td>
+						</tr>
+                                          
+					
+                                          
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Denmark
+                                                        
+							</th>
+							<td>
+								krone (DKK)
+							</td>
+							<td>
+								0.1771
+							</td>
+						</tr>
+                                          
+					
+                                          
+						<tr>
+							<th scope="row">
+                                                        
+                                                                <a href="#" class="special light" id="euroShow2" title="New Window. Where is the Euro used?">Eurozone</a>
+                                                        
+                                                        
+							</th>
+							<td>
+								euro (EUR)
+							</td>
+							<td>
+								1.3149
+							</td>
+						</tr>
+                                          
+					
+                                          
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Great Britain
+                                                        
+							</th>
+							<td>
+								pound (GBP)
+							</td>
+							<td>
+								1.6754
+							</td>
+						</tr>
+                                          
+					
+                                          
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Hong Kong
+                                                        
+							</th>
+							<td>
+								dollar (HKD)
+							</td>
+							<td>
+								0.1361
+							</td>
+						</tr>
+                                          
+					
+                                          
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Japan
+                                                        
+							</th>
+							<td>
+								yen (JPY)
+							</td>
+							<td>
+								0.00932
+							</td>
+						</tr>
+                                          
+					
+                                          
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Mexico
+                                                        
+							</th>
+							<td>
+								peso (MXN)
+							</td>
+							<td>
+								0.07909
+							</td>
+						</tr>
+                                          
+					
+                                          
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								New Zealand
+                                                        
+							</th>
+							<td>
+								dollar (NZD)
+							</td>
+							<td>
+								0.8170
+							</td>
+						</tr>
+                                          
+					
+                                          
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Norway
+                                                        
+							</th>
+							<td>
+								krone (NOK)
+							</td>
+							<td>
+								0.1560
+							</td>
+						</tr>
+                                          
+					
+                                          
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Singapore
+                                                        
+							</th>
+							<td>
+								dollar (SGD)
+							</td>
+							<td>
+								0.8267
+							</td>
+						</tr>
+                                          
+					
+                                          
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Sweden
+                                                        
+							</th>
+							<td>
+								krona (SEK)
+							</td>
+							<td>
+								0.1427
+							</td>
+						</tr>
+                                          
+					
+                                          
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Switzerland
+                                                        
+							</th>
+							<td>
+								franc (CHF)
+							</td>
+							<td>
+								1.0890
+							</td>
+						</tr>
+                                          
+					
+                                          
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Thailand
+                                                        
+							</th>
+							<td>
+								baht (THB)
+							</td>
+							<td>
+								0.03297
+							</td>
+						</tr>
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+                                          
+					
+				</tbody></table>
+			</div>
+			<div id="subContentTwo" class="subContent">
+				<table cellspacing="0" summary="All Currencies">
+					<tbody><tr id="headerRow" class="odd">
+						<th scope="col">
+							Country
+						</th>
+						<th scope="col">
+							Currency
+						</th>
+						<th scope="col">
+							Sell to You (USD)
+						</th>
+					</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Argentina
+                                                        
+							</th>
+							<td>
+								peso (ARS)
+							</td>
+							<td>
+								0.1321
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Australia
+                                                        
+							</th>
+							<td>
+								dollar (AUD)
+							</td>
+							<td>
+								0.9177
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Bahamas
+                                                        
+							</th>
+							<td>
+								dollar (BSD)
+							</td>
+							<td>
+								1.0638
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Bahrain
+                                                        
+							</th>
+							<td>
+								dinar (BHD)
+							</td>
+							<td>
+								2.9806
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Barbados
+                                                        
+							</th>
+							<td>
+								dollar (BBD)
+							</td>
+							<td>
+								0.5595
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Belize
+                                                        
+							</th>
+							<td>
+								dollar (BZD)
+							</td>
+							<td>
+								0.5333
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Bermuda
+                                                        
+							</th>
+							<td>
+								dollar (BMD)
+							</td>
+							<td>
+								1.0638
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Brazil
+                                                        
+							</th>
+							<td>
+								real (BRL)
+							</td>
+							<td>
+								0.4534
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Brunei
+                                                        
+							</th>
+							<td>
+								ringgit (BND)
+							</td>
+							<td>
+								0.8635
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Canada
+                                                        
+							</th>
+							<td>
+								dollar (CAD)
+							</td>
+							<td>
+								0.9254
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Cayman Islands
+                                                        
+							</th>
+							<td>
+								dollar (KYD)
+							</td>
+							<td>
+								1.3620
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Chile
+                                                        
+							</th>
+							<td>
+								peso (CLP)
+							</td>
+							<td>
+								0.0020
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								China
+                                                        
+							</th>
+							<td>
+								yuan (CNY)
+							</td>
+							<td>
+								0.1767
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Colombia
+                                                        
+							</th>
+							<td>
+								peso (COP)
+							</td>
+							<td>
+								0.0005718
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Costa Rica
+                                                        
+							</th>
+							<td>
+								colon (CRC)
+							</td>
+							<td>
+								0.002126
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Croatia
+                                                        
+							</th>
+							<td>
+								kuna (HRK)
+							</td>
+							<td>
+								0.1939
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Czech Republic
+                                                        
+							</th>
+							<td>
+								koruna (CZK)
+							</td>
+							<td>
+								0.05102
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Denmark
+                                                        
+							</th>
+							<td>
+								krone (DKK)
+							</td>
+							<td>
+								0.1771
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Dominican Republic
+                                                        
+							</th>
+							<td>
+								peso (DOP)
+							</td>
+							<td>
+								0.02613
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								East Caribbean
+                                                        
+							</th>
+							<td>
+								dollar (XCD)
+							</td>
+							<td>
+								0.4154
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Egypt
+                                                        
+							</th>
+							<td>
+								pound (EGP)
+							</td>
+							<td>
+								0.1626
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                                <a href="#" class="special light" id="euroShow3" title="New Window. Where is the Euro used?">Eurozone</a>
+                                                        
+                                                        
+							</th>
+							<td>
+								euro (EUR)
+							</td>
+							<td>
+								1.3149
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Fiji
+                                                        
+							</th>
+							<td>
+								dollar (FJD)
+							</td>
+							<td>
+								0.5740
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Gibraltar
+                                                        
+							</th>
+							<td>
+								pound (GIP)
+							</td>
+							<td>
+								1.7737
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Great Britain
+                                                        
+							</th>
+							<td>
+								pound (GBP)
+							</td>
+							<td>
+								1.6754
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Guatemala
+                                                        
+							</th>
+							<td>
+								quetzal (GTQ)
+							</td>
+							<td>
+								0.1528
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Hong Kong
+                                                        
+							</th>
+							<td>
+								dollar (HKD)
+							</td>
+							<td>
+								0.1361
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Hungary
+                                                        
+							</th>
+							<td>
+								forint (HUF)
+							</td>
+							<td>
+								0.004499
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Iceland
+                                                        
+							</th>
+							<td>
+								krona (ISK)
+							</td>
+							<td>
+								0.009706
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								India
+                                                        
+							</th>
+							<td>
+								rupee (INR)
+							</td>
+							<td>
+								0.01810
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Indonesia
+                                                        
+							</th>
+							<td>
+								rupiah (IDR)
+							</td>
+							<td>
+								0.0000995
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Israel
+                                                        
+							</th>
+							<td>
+								sheqel (ILS)
+							</td>
+							<td>
+								0.3009
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Jamaica
+                                                        
+							</th>
+							<td>
+								dollar (JMD)
+							</td>
+							<td>
+								0.01010
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Japan
+                                                        
+							</th>
+							<td>
+								yen (JPY)
+							</td>
+							<td>
+								0.00932
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Jordan
+                                                        
+							</th>
+							<td>
+								dinar (JOD)
+							</td>
+							<td>
+								1.6213
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Kenya
+                                                        
+							</th>
+							<td>
+								shilling (KES)
+							</td>
+							<td>
+								0.01363
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Kuwait
+                                                        
+							</th>
+							<td>
+								dinar (KWD)
+							</td>
+							<td>
+								3.9154
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Lebanon
+                                                        
+							</th>
+							<td>
+								livre (LBP)
+							</td>
+							<td>
+								0.0007776
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Lithuania
+                                                        
+							</th>
+							<td>
+								litas (LTL)
+							</td>
+							<td>
+								0.4159
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Malaysia
+                                                        
+							</th>
+							<td>
+								ringgit (MYR)
+							</td>
+							<td>
+								0.3317
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Mexico
+                                                        
+							</th>
+							<td>
+								peso (MXN)
+							</td>
+							<td>
+								0.07909
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Morocco
+                                                        
+							</th>
+							<td>
+								dirham (MAD)
+							</td>
+							<td>
+								0.1361
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Nepal
+                                                        
+							</th>
+							<td>
+								rupee (NPR)
+							</td>
+							<td>
+								0.01212
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Netherlands Antilles
+                                                        
+							</th>
+							<td>
+								guilder (ANG)
+							</td>
+							<td>
+								0.6384
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								New Zealand
+                                                        
+							</th>
+							<td>
+								dollar (NZD)
+							</td>
+							<td>
+								0.8170
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Nicaragua
+                                                        
+							</th>
+							<td>
+								cordoba (NIO)
+							</td>
+							<td>
+								0.04815
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								North Ireland
+                                                        
+							</th>
+							<td>
+								pound (INP)
+							</td>
+							<td>
+								1.6754
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Norway
+                                                        
+							</th>
+							<td>
+								krone (NOK)
+							</td>
+							<td>
+								0.1560
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Oman
+                                                        
+							</th>
+							<td>
+								rial (OMR)
+							</td>
+							<td>
+								2.9189
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Pakistan
+                                                        
+							</th>
+							<td>
+								rupee (PKR)
+							</td>
+							<td>
+								0.011444
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Papua New Guinea
+                                                        
+							</th>
+							<td>
+								kina (PGK)
+							</td>
+							<td>
+								0.4355
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Paraguay
+                                                        
+							</th>
+							<td>
+								guarani (PYG)
+							</td>
+							<td>
+								0.0002432
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Peru
+                                                        
+							</th>
+							<td>
+								nuevo sol (PEN)
+							</td>
+							<td>
+								0.3844
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Philippines
+                                                        
+							</th>
+							<td>
+								piso (PHP)
+							</td>
+							<td>
+								0.02528
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Poland
+                                                        
+							</th>
+							<td>
+								zloty (PLN)
+							</td>
+							<td>
+								0.3479
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Qatar
+                                                        
+							</th>
+							<td>
+								riyal (QAR)
+							</td>
+							<td>
+								0.3086
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Romania
+                                                        
+							</th>
+							<td>
+								new leu (RON)
+							</td>
+							<td>
+								0.3331
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Russia
+                                                        
+							</th>
+							<td>
+								ruble (RUB)
+							</td>
+							<td>
+								0.02608
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Saudi Arabia
+                                                        
+							</th>
+							<td>
+								riyal (SAR)
+							</td>
+							<td>
+								0.2995
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Scotland
+                                                        
+							</th>
+							<td>
+								pound (SCP)
+							</td>
+							<td>
+								1.6754
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Singapore
+                                                        
+							</th>
+							<td>
+								dollar (SGD)
+							</td>
+							<td>
+								0.8267
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								South Africa
+                                                        
+							</th>
+							<td>
+								rand (ZAR)
+							</td>
+							<td>
+								0.1039
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								South Korea
+                                                        
+							</th>
+							<td>
+								won (KRW)
+							</td>
+							<td>
+								0.0010132
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Sri Lanka
+                                                        
+							</th>
+							<td>
+								rupee (LKR)
+							</td>
+							<td>
+								0.009093
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Sweden
+                                                        
+							</th>
+							<td>
+								krona (SEK)
+							</td>
+							<td>
+								0.1427
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Switzerland
+                                                        
+							</th>
+							<td>
+								franc (CHF)
+							</td>
+							<td>
+								1.0890
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Tahiti
+                                                        
+							</th>
+							<td>
+								franc (XPF)
+							</td>
+							<td>
+								0.01116
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Taiwan
+                                                        
+							</th>
+							<td>
+								dollar (TWD)
+							</td>
+							<td>
+								0.03648
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Thailand
+                                                        
+							</th>
+							<td>
+								baht (THB)
+							</td>
+							<td>
+								0.03297
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Trinidad and Tobago
+                                                        
+							</th>
+							<td>
+								dollar (TTD)
+							</td>
+							<td>
+								0.1774
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Tunisia
+                                                        
+							</th>
+							<td>
+								dinar (TND)
+							</td>
+							<td>
+								0.6605
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								Turkey
+                                                        
+							</th>
+							<td>
+								new lira (TRY)
+							</td>
+							<td>
+								0.4988
+							</td>
+						</tr>
+					
+
+						<tr>
+							<th scope="row">
+                                                        
+                                                        
+								United Arab Emirates
+                                                        
+							</th>
+							<td>
+								dirham (AED)
+							</td>
+							<td>
+								0.3059
+							</td>
+						</tr>
+					
+				</tbody></table>
+			</div>
+			   		<p>&nbsp;</p>
+			
+			<div class="clearAll">
+				&nbsp;
+			</div>
+		</div>
+		
+
+
+
+
+
+
+
+
+		<div id="euroLightBox" tabindex="-1" class="lightBox">
+		<span class="hiddenAccessibilityText">Begin Window</span>
+			<a href="#" class="closeBox" title="Close"><img width="20" alt="Close" height="17" src="/img/close_20x17.gif">
+
+
+			</a>
+			<h2>
+				Where is the Euro used?
+			</h2>
+			<div id="countries">
+				<p>
+					<strong>Currently the euro is used in these 16 European
+						countries.</strong>
+				</p>
+				<ul>
+					<li>
+						Austria
+					</li>
+					<li>
+						Belgium
+					</li>
+					<li>
+						Cyprus
+					</li>
+					<li>
+						Finland
+					</li>
+					<li>
+						France
+					</li>
+					<li>
+						Germany
+					</li>
+				</ul>
+				<ul>
+					<li>
+						Greece
+					</li>
+					<li>
+						Ireland
+					</li>
+					<li>
+						Italy
+					</li>
+					<li>
+						Luxembourg
+					</li>
+					<li>
+						Malta
+					</li>
+					<li>
+						Netherlands
+					</li>
+				</ul>
+				<ul>
+					<li>
+						Portugal
+					</li>
+					<li>
+						Slovakia*
+					</li>
+					<li>
+						Slovenia
+					</li>
+					<li>
+						Spain
+					</li>
+					<li>
+						&nbsp;
+					</li>
+					<li>
+						&nbsp;
+					</li>
+				</ul>
+				<div class="clearAll">
+					&nbsp;
+				</div>
+			</div>
+			<div id="countriesFootnote">
+               	<p>*Effective <strong>January 1<sup>st</sup> 2009,</strong> Slovakia is replacing their national currency with the Euro. Customers traveling to Slovakia will be able to use either Euro or Slovakian Koruna banknotes until <strong>January 16<sup>th</sup> 2009</strong>. If you have questions about this currency, please call 1-800-626-9430.</p>
+               				</div>
+               				<span class="hiddenAccessibilityText">End Window</span>
+		</div>
+		
+		
+		
+
+		
+		<p class="discl">
+			Wells Fargo's retail foreign exchange rates differ from rates in the interbank market (i.e., the exchange rates that banks and other large financial institutions charge each other for very large foreign exchange transactions) and may also vary from foreign exchange rates available from other banks and foreign currency providers.
+		</p>
+	</div>
+</div>
+
+
+<div class="area2">
+<div class="info"><h3>Questions?</h3><img src="/img/FES/fx_questions.jpg" alt="" title=""><p><br>We're here to help.<br><br>Call us at <strong>1-800-626-9430</strong><br>Mon - Fri, 5 am - 6 pm<br>Saturday, 7 am - 2 pm<br>Pacific Time</p><div class="clearAll">&nbsp;</div></div>
+<div class="info"><h3>Welcome</h3><p><strong>Would you like to purchase foreign currency in person?</strong><br>Please use the <a href="/FES/stores/locator.html">Foreign Currency Site Locator</a> to find a Wells Fargo store location in your area that carries foreign currency on hand. Please contact the location in advance for specific currency availability and store hours.</p><div class="clearAll">&nbsp;</div></div>
+</div>
+<div class="clearAll">&nbsp;</div>
+
+
+
+<div id="footer">
+<a href="https://www.wellsfargo.com/privacy_security/">PRIVACY, Security &amp; Legal</a>&nbsp;|
+<a href="https://www.wellsfargo.com/privacy_security/fraud/report/fraud">Report Email Fraud</a>
+<br>
+<div>© 2014 Wells Fargo Bank, N.A. All rights reserved.</div>
+</div>
+
+
+
+
+</div>
+
+
+</body></html>

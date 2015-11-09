@@ -1,0 +1,1892 @@
+<html class="no-js" lang="en"><!--<![endif]--><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript" async="" src="https://stats.g.doubleclick.net/dc.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UAQEWV9RGwEJXVdRAwg="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(5),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(f){"stack"in f&&(t(1),t(4),"addEventListener"in window&&t(2),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(3),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:8,2:5,3:9,4:7,5:20,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(2);t("loader").features.stn=!0,t(1),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:6,2:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:20,2:21,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:21,2:20,ee:"QJf3ax"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:21,2:20,ee:"QJf3ax"}],8:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:21,2:20,ee:"QJf3ax"}],9:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:5,2:21,ee:"QJf3ax"}],10:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:11,3:9,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],11:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,f="addEventListener",u="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),s[f]("load",n,!1)):(c[u]("onreadystatechange",r),s[u]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],20:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],21:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:20,ee:"QJf3ax"}]},{},["G9z0Bl",3,10,4]);</script>
+<meta name="description" content="Wells Fargo Bank - Read unbiased reviews of Wells Fargo Bank, rated 1.4 out of 5 stars by 223 users">
+<meta name="keywords" content="Wells Fargo Bank, Wells Fargo Bank Reviews">
+<meta name="verify-v1" content="LM4VHzduL0w9RuTtJJ3I9DMyHscEa4Ucoa49DWFFo40=">
+<meta name="og:title" content="Wells Fargo Bank on Credit Karma">
+<meta name="og:type" content="product">
+<meta name="og:url" content="https://www.creditkarma.com/reviews/banking/single/id/wells-fargo-bank">
+<meta name="og:image" content="https://www.creditkarma.com/res/content/reviews/wells-fargo-bank/small.jpg">
+<meta name="og:site_name" content="Credit Karma">
+<meta name="fb:admins" content="1525418, 84000136">
+<meta name="fb:app_id" content="170840887919">
+<title>Wells Fargo Bank | Credit Karma</title>
+<link href="https://creditkarmacdn-a.akamaihd.net/res/stylesheets/css/partials/fonts.css" media="screen" rel="stylesheet" type="text/css">
+<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" media="screen" rel="stylesheet" type="text/css">
+<link href="https://creditkarmacdn-a.akamaihd.net/res/out/default.145063018415.css" media="all" rel="stylesheet" type="text/css">
+<link href="https://creditkarmacdn-a.akamaihd.net/res/out/reviews.145063018415.css" media="all" rel="stylesheet" type="text/css">
+<!--[if lte IE 8]> <link href="https://creditkarmacdn-a.akamaihd.net/res/stylesheets/css/partials/ie.145063018415.css" media="screen" rel="stylesheet" type="text/css" ><![endif]-->
+<link href="https://creditkarmacdn-a.akamaihd.net/res/stylesheets/css/modules/default/comments_v2.145063018415.css" media="screen" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<!--[if lte IE 6]> <script type="text/javascript">
+    //<!--
+var _gIsIE6 = true;    //-->
+<!--[endif]---->
+<script type="text/javascript">
+    //<!--
+var PROTOCOL = window.document.location.protocol + '//',
+    HOSTBASE = 'www.creditkarma.com',
+    BASE_URL = PROTOCOL + HOSTBASE,
+    MEDIA_URL = 'https://creditkarmacdn-a.akamaihd.net',
+    TRKCK = 'CKTRKID',
+    CSRF_TOKEN = 'e16629021cad94ace6d6ec5df5a825b1cb5695db5c1602402e6f87adc8919a4c',
+    CSRF_HEADER_STRING = 'X_CSRF_TOKEN',
+    TC = 0,
+    SRS = 0,
+    CKEDITOR_BASEPATH = 'https://creditkarmacdn-a.akamaihd.net/res/js/lib/ckeditor/',
+    _gIsIE6 = false,
+    SOCKET_SERVER = false,
+    SOCKET_ROOM = false,
+    CK = parent.CK || {};
+    TRACE_ID =     USER_CAN_VIEW_REPORT  = false;
+
+    USER_YI_COUNT = 0;
+    BCBDATA = false;
+
+CK.sessionIdleTime = 900000;
+
+    USER_REQUIRES_SCREENNAME = false;
+
+// used for tracking Karma Offers on pages that pull data via ajax (CK-16792)
+OVKWID = null;    //-->
+</script>
+<script type="text/javascript" src="https://creditkarmacdn-a.akamaihd.net/res/out/default.145063018415.js"></script>
+<script type="text/javascript" src="https://creditkarmacdn-a.akamaihd.net/res/out/reviews.145063018415.js"></script>
+
+</head>
+<body class="layout-nosidebar reviews reviews-banking reviews-banking-single notAuthed " data-onready-hook="reviews/banking/single">
+<div id="fb-root"></div>
+<!--[if lte IE 8]>
+<div id="ie6Warning">
+    <div>
+        <p>
+            <img src="https://creditkarmacdn-a.akamaihd.net/res/images/layout_images/ieInfo.gif" alt="info" class="info" />
+            <span>
+                Internet Explorer 8 and earlier versions are not supported. <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" class="bold" target="_blank">Upgrade your browser</a> for the best experience.
+            </span>
+            <a href="#" onclick="this.parentNode.parentNode.parentNode.style.display = 'none'">
+                <img src="https://creditkarmacdn-a.akamaihd.net/res/images/layout_images/ieWarningClose.gif" alt="close" class="fr closeInfo" />
+            </a>
+        </p>
+        
+    </div>
+    
+</div>
+<![endif]-->
+<header id="top-bar" class="default">
+    <div id="top-bar-inner">
+
+        
+        <a href="/" id="top-bar-logo" alt="Credit Karma" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;CkLogo&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}">Credit Karma</a>
+
+        
+
+        <nav id="top-bar-nav" class="top-navigation" role="navigation">
+            <ul id="top-main-nav" class="navigation-ul nav ">
+
+            
+                <li id="nav-home" class="dropdown">
+                    <a href="/shop/creditcards" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;CCTop&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}">Credit Cards</a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a href="/shop/creditcards" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;CCBest&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-credit_cards"></i>Best Credit Cards</a></li>
+                        <li><a href="/shop/creditcards/searchcc" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;CCSearchAll&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-credit_cards"></i>Search All Credit Cards</a></li>
+                        <li><a href="/shop/creditcards/balance_transfer" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;CCBalanceTransfer&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-balance_transfer"></i>Balance Transfer Credit Cards</a></li>
+                        <li><a href="/shop/creditcards/low_interest" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;CCLowInterest&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-low_interest"></i>Low Interest Credit Cards</a></li>
+                        <li><a href="/shop/creditcards/cash_back" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;CCCashBack&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-cash_back"></i>Cash Back Credit Cards</a></li>
+                    </ul>
+                </li>
+                                <li id="nav-shop" class="dropdown">
+                                    <a href="/shop/autos" role="button" class="dropdown-toggle ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;shopTop&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}" data-toggle="dropdown-hover" data-target="#">Loans</a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a href="/shop/autos" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;shopAutos&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-auto_loans"></i>Auto Loans</a></li>
+                        <li><a href="/shop/mortgages" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;shopMortgages&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-home_loans"></i>Home Loans</a></li>
+                        <li><a href="/shop/personal-loans" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;shopPersonalLoans&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-personal_loans"></i>Personal Loans</a></li>
+                        <li><a href="/shop/student-loans" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;shopStudentLoans&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-student_loans"></i>Student Loans</a></li>
+                        <li><a href="/shop/business-loans" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;shopBusinessLoans&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-business_loans"></i>Business Loans</a></li>
+                                                <li><a href="/shop/auto-insurance" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;shopAutoInsurance&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-auto_insurance"></i>Auto Insurance</a></li>
+                        <li><a href="/shop/life-insurance" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;shopLifeInsurance&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-life_insurance"></i>Life Insurance</a></li>
+                                                <li><a href="/shop/banking" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;shopBanking&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-bank"></i>Banking</a></li>
+                    </ul>
+                </li>
+                                <li id="nav-reviews" class="dropdown open">
+                    <a href="/reviews" role="button" class="dropdown-toggle ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;reviewsTop&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}" data-toggle="dropdown-hover" data-target="#">Reviews</a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a href="/reviews/credit-card" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;reviewsCC&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-credit_cards"></i>Credit Cards</a></li>
+                        <li><a href="/reviews/auto-loan" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;reviewsAutoLoan&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-auto_loans"></i>Auto Loans</a></li>
+                        <li><a href="/reviews/mortgage" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;reviewsMortgage&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-home_loans"></i>Home Loans</a></li>
+                        <li><a href="/reviews/personal-loan" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;reviewsPersonal&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-personal_loans"></i>Personal Loans</a></li>
+                        <li><a href="/reviews/auto-insurance" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;reviewsAutoInsurance&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-auto_insurance"></i>Auto Insurance</a></li>
+                        <li><a href="/reviews/life-insurance" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;reviewsLifeInsurance&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-life_insurance"></i>Life Insurance</a></li>
+                        <li><a href="/reviews/banking" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;reviewsBanking&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-bank"></i>Banking</a></li>
+                        <li><a href="/reviews/home-equity" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;reviewsHomeEquity&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-home_equity"></i>Home Equity</a></li>
+                        <li><a href="/reviews/credit-union" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;reviewsCreditUnion&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-credit_unions"></i>Credit Unions</a></li>
+                    </ul>
+                </li>
+                <li id="nav-tools-advice" class="dropdown">
+                    <a href="/all/advice" role="button" class="dropdown-toggle ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;TA-Top&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}" data-toggle="dropdown-hover" data-target="#">Tools &amp; Advice</a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a href="/tools" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;TA-tools&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-financial_tools"></i>Financial Tools</a></li>
+                        <li><a href="/all/advice" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;TA-advice&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-credit_advice"></i>Credit Advice</a></li>
+                        <li><a href="/resources" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;TA-resources&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-resources"></i>Financial Resources</a></li>
+                        <li><a href="/news" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;TA-articles&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-articles"></i>Articles</a></li>
+                        <li><a href="http://blog.creditkarma.com/" class="ckAnchorEvent" data-ckevent="{&quot;eventcode&quot;:&quot;L1NavClicks&quot;,&quot;eventinformation&quot;:&quot;TA-CKBlog&quot;,&quot;ovmtc&quot;:&quot;L1&quot;,&quot;s&quot;:&quot;__ck_bs&quot;}"><i class="linking-icon-blog"></i>Credit Karma Blog</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <nav id="top-bar-account" class="top-navigation">
+        
+    <ul id="loginLink">
+         <li>
+             <a href="https://www.creditkarma.com/faq/howitworks">How it Works</a>
+             <span class="separator">|</span>
+             <a href="https://help.creditkarma.com">Help Center</a>
+         </li>
+        <li id="hlogon">
+            <span id="loggedOut">
+                <span class="separator">|</span>
+                <!-- todo: if mobile then class = "" -->
+                    <a rel="nofollow" href="https://www.creditkarma.com/auth/logon" class="account-link">
+                        <i class="icon-lock"></i>
+                        <span class="screen-name subModalLink">Log In</span>&nbsp;
+                    </a>
+            </span>
+         </li>
+
+        <li>
+            <span class="separator">|</span>
+            <a href="https://www.creditkarma.com/signup" rel="nofollow"><strong>Sign up<span class="narrowHide"> now for free</span>!</strong></a>
+        </li>
+    </ul>
+    </nav>
+    </div>
+</header>
+
+
+<div id="main" role="main">
+    <div id="main-inner">
+        <div id="app" class="main-center">
+            <div class="content no-sidebar">
+                
+
+    <section id="single-review-title-section" class="no-sidebar">
+        <header>
+            <h5>
+                <a href="/reviews/banking">
+                    Banking Reviews
+                </a>
+                            </h5>
+        </header>
+
+        <div id="reviewArea" itemscope="" itemtype="http://data-vocabulary.org/Review-aggregate">
+            <div class="image-box-border offerImgBigBlock">
+                <div class="image-box-border-inner">
+                    <img src="https://creditkarmacdn-a.akamaihd.net/res/content/reviews/wells-fargo-bank/title.jpg" width="110" height="70" alt="">
+                </div>
+            </div>
+            <div class="offerDetailBlock">
+                <h3 class="prodTitle" itemprop="itemreviewed">Wells Fargo Bank</h3>
+                <span class="medium-stars medium-voted1_5" alt="1.4" title="1.4"></span>
+
+                <span itemprop="rating" itemscope="" itemtype="http://data-vocabulary.org/Rating" style="display:none">
+                    <span itemprop="average">1.4</span><span itemprop="best">5</span>
+                </span>
+                <span class="reviewLinks">
+                    <a href="#commentlist" class="view-reviews">
+                        <span itemprop="count">209</span>
+                        Reviews                    </a>
+                    <a href="#commentHeader" id="writeReview" class="write-review">
+                        <span>Write a Review</span>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </section>
+
+<div id="leftColumnWide" class="leftColumnWide">
+    <section id="single-review-listing">
+        
+        
+        <div class="narrow-comments">
+            
+    <div class="comments-header">
+                                <h2 id="allCommentsHeader">All Reviews</h2>
+                
+<div class="commentSorting">
+    <label>Sort By <select id="commentSorting" class="7">                <option value="6" selected="">Most Helpful</option>
+        <option value="1">Newest First</option>
+        <option value="2">Oldest First</option>
+                <option value="4">Most Stars First</option>
+            </select></label>
+</div>
+        <div class="clearfix"></div>
+    </div>
+
+
+<!--<div class="clear"></div>-->
+
+<div class="reviews-pagination"><table id="pagination"><tbody><tr><td class="pagination-left">Results <b>1-10</b> of <b>209</b></td><td class="pagination-center">Results per page: <a data-page-num="1" data-page-size="5" class=" pagination-link " href="/reviews/banking/single/id/wells-fargo-bank?term=&amp;pg=1&amp;pgsz=5&amp;prdhlder=0">5</a> <span class="separator">|</span> <a data-page-num="1" data-page-size="10" class="pagination-off pagination-link " href="/reviews/banking/single/id/wells-fargo-bank?term=&amp;pg=1&amp;pgsz=10&amp;prdhlder=0">10</a> <span class="separator">|</span> <a data-page-num="1" data-page-size="25" class=" pagination-link " href="/reviews/banking/single/id/wells-fargo-bank?term=&amp;pg=1&amp;pgsz=25&amp;prdhlder=0">25</a></td><td class="pagination-right">Page <b>1</b> of <b>21</b> &nbsp; <span class="pagination-off">Previous</span> <span class="separator">|</span> <a data-page-num="2" data-page-size="10" class="pagination-link" href="/reviews/banking/single/id/wells-fargo-bank?term=&amp;pg=2&amp;pgsz=10&amp;prdhlder=0">Next</a></td></tr></tbody></table></div>
+<div id="commentlist">
+
+<div class="comment-bubble" id="comment-74422-3">
+    <div class="comment-bubble-box bubble-box">
+        <div class="bubble-inner">
+            <div class="bubble-header row">
+                                                <span class="commentStars rated1"></span>
+                                <span class="comment-title">Ugh.</span>
+                <span class="helpful-desc helpfulcounts-74422" style="display: block">Helpful to <b class="helpfulCount-74422">12</b> out of <b class="totalResponseCount-74422">13</b> people</span>            </div>
+            <div class="bubble-comment row">
+                <p>I am in a constant state of confusion with their online services. One day I will have money and the next day it will say I was charged X amount of dollars for something I was charged for 2 weeks ago. Then the next day the charge will magically fall off or disappear leading me to beleive I have more money than I really have. So naturally, going on a quick glance of the funds I have in my acct and beleiving they already took the money for charge X- I spend the money. Then I get a lovely $35 overdraft charge! Screw these people. It is the WORST bank ever.</p>            </div>
+            <div class="bubble-research-bar row">
+                <p class="research-question"><b class="user-id">mimsyla's</b> review was:&nbsp;&nbsp;&nbsp;&nbsp;</p><label><input class="commentHelpfulAction helpful-74422" commentid="74422" type="checkbox" onclick="voteHelpful(this)"> Helpful</label> &nbsp; <label><input class="commentNotHelpfulAction notHelpful-74422" commentid="74422" type="checkbox" onclick="voteNotHelpful(this)"> Not Helpful</label>                <span class="action-right">
+                    <span class="commentDate">Nov 17, 2013</span>
+                                        <span class="action-links">
+                        <a href="#" onclick="return showCommentReplyBlock('74422-3');" id="commentResponseLink74422-3" class="replyToComment"><i class="icon-reply-left"></i>Reply</a>
+                        <a href="#" onclick="return hideCommentReplyBlock('74422-3');" id="commentCancelLink74422-3" style="display: none;" class="cancelReply"><i class="icon-reply-left"></i>Cancel Reply</a>
+                    </span>
+                                        <span class="comment-flag commentFlag">
+                        <img id="commentFlag-74422-3" commentid="74422-3" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/comments/actionFlag.png" title="Flag this review" alt="">
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="comment-bubble-bottom bubble-bottom">
+        <div class="comment-user row">
+            <div class="comment-user-box ie-fix-opacity">
+                                    <a href="https://www.creditkarma.com/profile/user/info/name/mimsyla"><img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20"></a>
+                            </div>
+
+                <p class="comment-user-id"><a href="https://www.creditkarma.com/profile/user/info/name/mimsyla" class="user-id">mimsyla</a><span class="comment-research">(<span><i class="icon-pencil"></i>1</span>, <span class="commentAuthorHelped-11213002"><i class="icon-person"></i>12</span>)</span></p><div class="reviewsTT" id="commentTTId-74422-3" onmouseover="showAuthorTooltip('74422-3')" onmouseout="hideAuthorTooltip('74422-3')">
+    <div class="reviewsTT-content">
+        <div class="comment-user row">
+            <div class="row">
+                <div class="comment-user-box ie-fix-opacity">
+                    <img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-large.jpg" width="53">
+                </div>
+
+                <div class="comment-user-right">
+                                                                            </div>
+            </div>
+
+            <p class="comment-user-id">
+                <span>Review by</span>
+
+
+                <a href="https://www.creditkarma.com/profile/user/info/name/mimsyla" class="user-id">mimsyla</a>
+
+            </p>
+
+            <span class="comment-research">
+                <span><i class="icon-pencil"></i>1 Contributions</span>
+                <span class="commentAuthorHelped-11213002"><i class="icon-person"></i>12 People Helped</span>
+            </span>
+        </div>
+
+    </div>
+    <div class="reviewsTT-bottom"></div>
+</div><p onmouseover="showAuthorTooltip('74422-3')" onmouseout="hideAuthorTooltip('74422-3')"></p>
+
+
+                                </div>
+    </div>
+
+        
+    <div class="reply-bubble replyCopy" id="commentResponse74422-3" style="display: none;">
+        <i class="icon-reply-right"></i>
+        <div class="reply-bubble-box bubble-box">
+            <div class="bubble-inner">
+                <form id="commentForm74422-3" action="" class="replyForm">
+    <label class="enter-reply-label">Enter Your Reply</label>
+    <div class="commentsTextarea">
+        <textarea id="cBody74422-3" name="cBody74422-3" class="reg-input required" rows="" cols=""></textarea><div style="" class="validation-advice validation-failed" id="advice-cBody74422-3"></div>    </div>
+    <div class="comment-form-bottom row">
+
+        
+            
+        <div class="reply-submit-box">
+            <a class="button-blue" href="#" onclick="submitComment('wells-fargo-bank', 7,false,74422,'74422-3'); return false;"><span class="button-text">Submit</span></a>
+
+            <div id="infoloaderdiv74422-3" class="replyInfoloaderdiv">
+                <img id="infoloader74422-3" alt="Submit Your Reply" src="https://creditkarmacdn-a.akamaihd.net/res/img/loading.gif" height="20" width="20">
+            </div>
+
+            <div class="checkbox-wrap">
+                <input type="checkbox" id="commentAlert3" onclick="toggleAlertCheckbox('wells-fargo-bank', 7, 'infoloaderdiv74422-3');return false;"> <a onclick="toggleAlertCheckbox('wells-fargo-bank', 7, 'infoloaderdiv74422-3');return false;">Receive email alerts when new reviews are added</a>
+            </div>
+        </div>
+
+    </div>
+</form>            </div>
+        </div>
+        <div class="reply-bubble-bottom bubble-bottom">
+            <div class="comment-user row">
+                <div id="imgpostuser" class="comment-user-box ie-fix-opacity">
+                    <a href="https://www.creditkarma.com/profile/user/info/name/" id="" class="user-id "><img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20"></a>                </div>
+                <div id="imgpostanon" class="comment-user-box ie-fix-opacity" style="display: none;">
+                    <img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20">
+                </div>
+
+                <p class="comment-user-id">
+                                Anonymous                </p>
+                            </div>
+        </div>
+    </div>
+        </div>
+
+
+        
+        
+
+<div class="comment-bubble" id="comment-68287-4">
+    <div class="comment-bubble-box bubble-box">
+        <div class="bubble-inner">
+            <div class="bubble-header row">
+                                                <span class="commentStars ratedOwn1"></span>
+                                <span class="comment-title">Wells Fargo - Greedy Bank</span>
+                <span class="helpful-desc helpfulcounts-68287" style="display: block">Helpful to <b class="helpfulCount-68287">11</b> out of <b class="totalResponseCount-68287">11</b> people</span>            </div>
+            <div class="bubble-comment row">
+                <p>I have been a Wells Fargo customer for around 10 years now. They are horrible when it comes to customer service. I can't stand the fact that they are SO unwilling to help. They find a way to make money off of every account. I don't have overdraft problems which is what most people complain about (because they spend more than they have and get mad.) I have a problem with too little activity fee, or too much of an activity fee. When I call to dispute any of these fees they take it as an opportunity to try to sell me something new and charge me MORE FEES! I am about to be bankrupt for my own personal reasons, and I asked if they could lower my interest rates on my Wells Fargo Credit card in order to help me avoid bankruptcy. They said "no." They wouldn't help me, they offered me a loan to help, but the loan I was promised was 8% simple interest (pretty good!)... when I looked at the paperwork I was about to sign, it clearly showed an 18% compound interest. I asked why this was different than what they said, and if they had a calculator that they knew how to work. Needless to say they didn't and I walked away from their "opportunity." In summary, Wells Fargo is not a bank here to help you for the future (or whatever their gimmick is.) They are here to drain every penny from you like wringing out water from a wet cloth. Please avoid Wells Fargo. The child in me just wants to say "they suck!"</p>            </div>
+            <div class="bubble-research-bar row">
+                                <span class="action-right">
+                    <span class="commentDate">Sep 09, 2013</span>
+                                        <span class="action-links">
+                        <a href="#" onclick="return showCommentReplyBlock('68287-4');" id="commentResponseLink68287-4" class="replyToComment"><i class="icon-reply-left"></i>Reply</a>
+                        <a href="#" onclick="return hideCommentReplyBlock('68287-4');" id="commentCancelLink68287-4" style="display: none;" class="cancelReply"><i class="icon-reply-left"></i>Cancel Reply</a>
+                    </span>
+                                        <span class="comment-flag commentFlag">
+                        <img id="commentFlag-68287-4" commentid="68287-4" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/comments/actionFlag.png" title="Flag this review" alt="">
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="comment-bubble-bottom bubble-bottom">
+        <div class="comment-user row">
+            <div class="comment-user-box ie-fix-opacity">
+                                    <img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20">
+                            </div>
+
+                
+
+
+                                </div>
+    </div>
+
+        
+    <div class="reply-bubble replyCopy" id="commentResponse68287-4" style="display: none;">
+        <i class="icon-reply-right"></i>
+        <div class="reply-bubble-box bubble-box">
+            <div class="bubble-inner">
+                <form id="commentForm68287-4" action="" class="replyForm">
+    <label class="enter-reply-label">Enter Your Reply</label>
+    <div class="commentsTextarea">
+        <textarea id="cBody68287-4" name="cBody68287-4" class="reg-input required" rows="" cols=""></textarea><div style="" class="validation-advice validation-failed" id="advice-cBody68287-4"></div>    </div>
+    <div class="comment-form-bottom row">
+
+        
+            
+        <div class="reply-submit-box">
+            <a class="button-blue" href="#" onclick="submitComment('wells-fargo-bank', 7,false,68287,'68287-4'); return false;"><span class="button-text">Submit</span></a>
+
+            <div id="infoloaderdiv68287-4" class="replyInfoloaderdiv">
+                <img id="infoloader68287-4" alt="Submit Your Reply" src="https://creditkarmacdn-a.akamaihd.net/res/img/loading.gif" height="20" width="20">
+            </div>
+
+            <div class="checkbox-wrap">
+                <input type="checkbox" id="commentAlert4" onclick="toggleAlertCheckbox('wells-fargo-bank', 7, 'infoloaderdiv68287-4');return false;"> <a onclick="toggleAlertCheckbox('wells-fargo-bank', 7, 'infoloaderdiv68287-4');return false;">Receive email alerts when new reviews are added</a>
+            </div>
+        </div>
+
+    </div>
+</form>            </div>
+        </div>
+        <div class="reply-bubble-bottom bubble-bottom">
+            <div class="comment-user row">
+                <div id="imgpostuser" class="comment-user-box ie-fix-opacity">
+                    <a href="https://www.creditkarma.com/profile/user/info/name/" id="" class="user-id "><img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20"></a>                </div>
+                <div id="imgpostanon" class="comment-user-box ie-fix-opacity" style="display: none;">
+                    <img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20">
+                </div>
+
+                <p class="comment-user-id">
+                                Anonymous                </p>
+                            </div>
+        </div>
+    </div>
+        </div>
+
+
+        
+                                <div class="reply-bubble" id="comment-112406-4">
+                <i class="icon-reply-right"></i>
+                <div class="reply-bubble-box bubble-box">
+                    <div class="bubble-inner">
+                        <div class="bubble-header row">
+                            <span class="helpful-desc helpfulcounts-112406" style="display: block">Helpful to <b class="helpfulCount-112406">2</b> out of <b class="totalResponseCount-112406">2</b> people</span>                        </div>
+                        <div class="bubble-comment row">
+                            <p>Absolutely agree.&nbsp; This bank is bailout failure that is just waiting for another government bailout.&nbsp; Bank of America has tightened up their practices but did not stop helping customers.&nbsp;&nbsp; Wells Fargo uses any excuse to not help.&nbsp; A one year old LLC that has had an account at Wells Fargo and personal since 2011, and only an LLC account at Bank of America. for 6 months.&nbsp; Can you guess which one gave the LLC an unsecured card and which crappy bailout bank denied a secured business card for $10k while $18k was sitting in the accounts???&nbsp; Yep Wells fargo.&nbsp;&nbsp; I GUARANTEE YOU WILL HURT YOUR CREDIT IF YOU OPEN AN ACCOUNT WITH WELLS FAKO BANK</p>                        </div>
+                        <div class="bubble-research-bar row">
+                            <p class="research-question"><b class="user-id">oasisstarranch's</b> reply was:&nbsp;&nbsp;&nbsp;&nbsp;</p><label><input class="commentHelpfulAction helpful-112406" commentid="112406" type="checkbox" onclick="voteHelpful(this)"> Helpful</label> &nbsp; <label><input class="commentNotHelpfulAction notHelpful-112406" commentid="112406" type="checkbox" onclick="voteNotHelpful(this)"> Not Helpful</label>                            <span class="action-right">
+                                <span class="commentDate">Sep 12, 2014</span>
+                                <span class="comment-flag commentFlag">
+                                    <img id="commentFlag-112406-4" commentid="112406-4" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/comments/actionFlag.png" title="Flag this review" alt="">
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reply-bubble-bottom bubble-bottom">
+                    <div class="comment-user row">
+                        <div class="comment-user-box ie-fix-opacity">
+                                                           <a href="https://www.creditkarma.com/profile/user/info/name/oasisstarranch"><img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20"></a>
+                                                    </div>
+                        <p class="comment-user-id"><a href="https://www.creditkarma.com/profile/user/info/name/oasisstarranch" class="user-id">oasisstarranch</a><span class="comment-research">(<span><i class="icon-pencil"></i>9</span>, <span class="commentAuthorHelped-1690452"><i class="icon-person"></i>17</span>)</span></p><div class="reviewsTT" id="commentTTId-112406-4" onmouseover="showAuthorTooltip('112406-4')" onmouseout="hideAuthorTooltip('112406-4')">
+    <div class="reviewsTT-content">
+        <div class="comment-user row">
+            <div class="row">
+                <div class="comment-user-box ie-fix-opacity">
+                    <img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-large.jpg" width="53">
+                </div>
+
+                <div class="comment-user-right">
+                                                                            </div>
+            </div>
+
+            <p class="comment-user-id">
+                <span>Review by</span>
+
+
+                <a href="https://www.creditkarma.com/profile/user/info/name/oasisstarranch" class="user-id">oasisstarranch</a>
+
+            </p>
+
+            <span class="comment-research">
+                <span><i class="icon-pencil"></i>9 Contributions</span>
+                <span class="commentAuthorHelped-1690452"><i class="icon-person"></i>17 People Helped</span>
+            </span>
+        </div>
+
+    </div>
+    <div class="reviewsTT-bottom"></div>
+</div><p onmouseover="showAuthorTooltip('112406-4')" onmouseout="hideAuthorTooltip('112406-4')"></p>                    </div>
+                                    </div>
+
+                        </div>
+                                <div class="reply-bubble" id="comment-103024-4">
+                <i class="icon-reply-right"></i>
+                <div class="reply-bubble-box bubble-box">
+                    <div class="bubble-inner">
+                        <div class="bubble-header row">
+                            <span class="helpful-desc helpfulcounts-103024" style="display: block">Helpful to <b class="helpfulCount-103024">2</b> out of <b class="totalResponseCount-103024">2</b> people</span>                        </div>
+                        <div class="bubble-comment row">
+                            <p>I totally agree. I wish more people knew how awfuk they are. We have had multiple Wells Fargo accounts for over 15 years and they have no loyalty. My wife opened a credit card account with them just under a year ago and our credit score dropped over 100 points in that time. I have had an 800+ credit score from the time that I was 18 years old. They are tricky and dishonest in their policies and will not help you over the phone anymore. Very disappointing. We have closed ALL of our accounts with them.&nbsp;</p>                        </div>
+                        <div class="bubble-research-bar row">
+                            <p class="research-question"><b class="user-id">oldschoolgnu's</b> reply was:&nbsp;&nbsp;&nbsp;&nbsp;</p><label><input class="commentHelpfulAction helpful-103024" commentid="103024" type="checkbox" onclick="voteHelpful(this)"> Helpful</label> &nbsp; <label><input class="commentNotHelpfulAction notHelpful-103024" commentid="103024" type="checkbox" onclick="voteNotHelpful(this)"> Not Helpful</label>                            <span class="action-right">
+                                <span class="commentDate">Jun 28, 2014</span>
+                                <span class="comment-flag commentFlag">
+                                    <img id="commentFlag-103024-4" commentid="103024-4" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/comments/actionFlag.png" title="Flag this review" alt="">
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reply-bubble-bottom bubble-bottom">
+                    <div class="comment-user row">
+                        <div class="comment-user-box ie-fix-opacity">
+                                                           <a href="https://www.creditkarma.com/profile/user/info/name/oldschoolgnu"><img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20"></a>
+                                                    </div>
+                        <p class="comment-user-id"><a href="https://www.creditkarma.com/profile/user/info/name/oldschoolgnu" class="user-id">oldschoolgnu</a><span class="comment-research">(<span><i class="icon-pencil"></i>1</span>, <span class="commentAuthorHelped-37126095"><i class="icon-person"></i>2</span>)</span></p><div class="reviewsTT" id="commentTTId-103024-4" onmouseover="showAuthorTooltip('103024-4')" onmouseout="hideAuthorTooltip('103024-4')">
+    <div class="reviewsTT-content">
+        <div class="comment-user row">
+            <div class="row">
+                <div class="comment-user-box ie-fix-opacity">
+                    <img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-large.jpg" width="53">
+                </div>
+
+                <div class="comment-user-right">
+                                                                            </div>
+            </div>
+
+            <p class="comment-user-id">
+                <span>Review by</span>
+
+
+                <a href="https://www.creditkarma.com/profile/user/info/name/oldschoolgnu" class="user-id">oldschoolgnu</a>
+
+            </p>
+
+            <span class="comment-research">
+                <span><i class="icon-pencil"></i>1 Contributions</span>
+                <span class="commentAuthorHelped-37126095"><i class="icon-person"></i>2 People Helped</span>
+            </span>
+        </div>
+
+    </div>
+    <div class="reviewsTT-bottom"></div>
+</div><p onmouseover="showAuthorTooltip('103024-4')" onmouseout="hideAuthorTooltip('103024-4')"></p>                    </div>
+                                    </div>
+
+                        </div>
+                                <div class="reply-bubble" id="comment-69189-4">
+                <i class="icon-reply-right"></i>
+                <div class="reply-bubble-box bubble-box">
+                    <div class="bubble-inner">
+                        <div class="bubble-header row">
+                            <span class="helpful-desc helpfulcounts-69189" style="display: block">Helpful to <b class="helpfulCount-69189">1</b> out of <b class="totalResponseCount-69189">1</b> people</span>                        </div>
+                        <div class="bubble-comment row">
+                            <p>Change banks</p>                        </div>
+                        <div class="bubble-research-bar row">
+                            <p class="research-question"><b class="user-id">hankus1954's</b> reply was:&nbsp;&nbsp;&nbsp;&nbsp;</p><label><input class="commentHelpfulAction helpful-69189" commentid="69189" type="checkbox" onclick="voteHelpful(this)"> Helpful</label> &nbsp; <label><input class="commentNotHelpfulAction notHelpful-69189" commentid="69189" type="checkbox" onclick="voteNotHelpful(this)"> Not Helpful</label>                            <span class="action-right">
+                                <span class="commentDate">Sep 18, 2013</span>
+                                <span class="comment-flag commentFlag">
+                                    <img id="commentFlag-69189-4" commentid="69189-4" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/comments/actionFlag.png" title="Flag this review" alt="">
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reply-bubble-bottom bubble-bottom">
+                    <div class="comment-user row">
+                        <div class="comment-user-box ie-fix-opacity">
+                                                           <a href="https://www.creditkarma.com/profile/user/info/name/hankus1954"><img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20"></a>
+                                                    </div>
+                        <p class="comment-user-id"><a href="https://www.creditkarma.com/profile/user/info/name/hankus1954" class="user-id">hankus1954</a><span class="comment-research">(<span><i class="icon-pencil"></i>1</span>, <span class="commentAuthorHelped-3662494"><i class="icon-person"></i>1</span>)</span></p><div class="reviewsTT" id="commentTTId-69189-4" onmouseover="showAuthorTooltip('69189-4')" onmouseout="hideAuthorTooltip('69189-4')">
+    <div class="reviewsTT-content">
+        <div class="comment-user row">
+            <div class="row">
+                <div class="comment-user-box ie-fix-opacity">
+                    <img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-large.jpg" width="53">
+                </div>
+
+                <div class="comment-user-right">
+                                                                            </div>
+            </div>
+
+            <p class="comment-user-id">
+                <span>Review by</span>
+
+
+                <a href="https://www.creditkarma.com/profile/user/info/name/hankus1954" class="user-id">hankus1954</a>
+
+            </p>
+
+            <span class="comment-research">
+                <span><i class="icon-pencil"></i>1 Contributions</span>
+                <span class="commentAuthorHelped-3662494"><i class="icon-person"></i>1 People Helped</span>
+            </span>
+        </div>
+
+    </div>
+    <div class="reviewsTT-bottom"></div>
+</div><p onmouseover="showAuthorTooltip('69189-4')" onmouseout="hideAuthorTooltip('69189-4')"></p>                    </div>
+                                    </div>
+
+                        </div>
+        
+
+<div class="comment-bubble" id="comment-70726-5">
+    <div class="comment-bubble-box bubble-box">
+        <div class="bubble-inner">
+            <div class="bubble-header row">
+                                                <span class="commentStars ratedOwn1"></span>
+                                <span class="comment-title">Complicated fee schedule...RUN!!!</span>
+                <span class="helpful-desc helpfulcounts-70726" style="display: block">Helpful to <b class="helpfulCount-70726">10</b> out of <b class="totalResponseCount-70726">10</b> people</span>            </div>
+            <div class="bubble-comment row">
+                <p>Wells Fargo's customer service representative lead me down a path of a free checking acoount. I transferred money into the account. A few days later, &nbsp;I called Wells Fargo's customer service to inquire regarding their bill pay fees and how to avoid those fees. Through conversation, I learned that the checking account I opened a few days earlier was NOT free of fees. I had to open a savings account if I wanted free checking.</p><p>	I feel mis guided and will close my newly opened Wells Fargo account tomorrow. The fee schedule has so many "IF"'s involved, you will not avoid being Fee'd to death.</p><p>	Would recommend Bank of America for straight forward accounts and less deception.</p>            </div>
+            <div class="bubble-research-bar row">
+                                <span class="action-right">
+                    <span class="commentDate">Oct 06, 2013</span>
+                                        <span class="action-links">
+                        <a href="#" onclick="return showCommentReplyBlock('70726-5');" id="commentResponseLink70726-5" class="replyToComment"><i class="icon-reply-left"></i>Reply</a>
+                        <a href="#" onclick="return hideCommentReplyBlock('70726-5');" id="commentCancelLink70726-5" style="display: none;" class="cancelReply"><i class="icon-reply-left"></i>Cancel Reply</a>
+                    </span>
+                                        <span class="comment-flag commentFlag">
+                        <img id="commentFlag-70726-5" commentid="70726-5" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/comments/actionFlag.png" title="Flag this review" alt="">
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="comment-bubble-bottom bubble-bottom">
+        <div class="comment-user row">
+            <div class="comment-user-box ie-fix-opacity">
+                                    <img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20">
+                            </div>
+
+                
+
+
+                                </div>
+    </div>
+
+        
+    <div class="reply-bubble replyCopy" id="commentResponse70726-5" style="display: none;">
+        <i class="icon-reply-right"></i>
+        <div class="reply-bubble-box bubble-box">
+            <div class="bubble-inner">
+                <form id="commentForm70726-5" action="" class="replyForm">
+    <label class="enter-reply-label">Enter Your Reply</label>
+    <div class="commentsTextarea">
+        <textarea id="cBody70726-5" name="cBody70726-5" class="reg-input required" rows="" cols=""></textarea><div style="" class="validation-advice validation-failed" id="advice-cBody70726-5"></div>    </div>
+    <div class="comment-form-bottom row">
+
+        
+            
+        <div class="reply-submit-box">
+            <a class="button-blue" href="#" onclick="submitComment('wells-fargo-bank', 7,false,70726,'70726-5'); return false;"><span class="button-text">Submit</span></a>
+
+            <div id="infoloaderdiv70726-5" class="replyInfoloaderdiv">
+                <img id="infoloader70726-5" alt="Submit Your Reply" src="https://creditkarmacdn-a.akamaihd.net/res/img/loading.gif" height="20" width="20">
+            </div>
+
+            <div class="checkbox-wrap">
+                <input type="checkbox" id="commentAlert5" onclick="toggleAlertCheckbox('wells-fargo-bank', 7, 'infoloaderdiv70726-5');return false;"> <a onclick="toggleAlertCheckbox('wells-fargo-bank', 7, 'infoloaderdiv70726-5');return false;">Receive email alerts when new reviews are added</a>
+            </div>
+        </div>
+
+    </div>
+</form>            </div>
+        </div>
+        <div class="reply-bubble-bottom bubble-bottom">
+            <div class="comment-user row">
+                <div id="imgpostuser" class="comment-user-box ie-fix-opacity">
+                    <a href="https://www.creditkarma.com/profile/user/info/name/" id="" class="user-id "><img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20"></a>                </div>
+                <div id="imgpostanon" class="comment-user-box ie-fix-opacity" style="display: none;">
+                    <img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20">
+                </div>
+
+                <p class="comment-user-id">
+                                Anonymous                </p>
+                            </div>
+        </div>
+    </div>
+        </div>
+
+
+        
+        
+
+<div class="comment-bubble" id="comment-112409-6">
+    <div class="comment-bubble-box bubble-box">
+        <div class="bubble-inner">
+            <div class="bubble-header row">
+                                                <span class="commentStars rated1"></span>
+                                <span class="comment-title">This bank will waste your time and money</span>
+                <span class="helpful-desc helpfulcounts-112409" style="display: block">Helpful to <b class="helpfulCount-112409">3</b> out of <b class="totalResponseCount-112409">3</b> people</span>            </div>
+            <div class="bubble-comment row">
+                <p>This bank is failure personified.&nbsp; Bailout money waiting to fail again.&nbsp; I guarantee opening an account with Wells Fargo will hurt your credit, will slow your financial goals.&nbsp; They got bailout money so who cares about customers or customer service.</p><p>	I have never bounced a check...DO NOT HAVE CHECKS.&nbsp; I have never missed a car payment ever wth Wells Fargo Dealer services and paying it off twice as fast as terms.&nbsp; Had 18k in Wells fargo and applied for a secured card for an 8 month old LLC to help it build credit.</p><p>	I am sure they noticed the car was paid from a business account and figured if they could keep the credit down by not helping.&nbsp; A new car financing would stay high interest rates.&nbsp;&nbsp; Nope as I will never finance anything with a crappy bank that harms financial futures.&nbsp;&nbsp; This is why bailout should never happen.&nbsp; If wells fargo would of died like it should of...then a real bank that needed it's customers would of emerged.&nbsp; Like a loser on welfare...Wells Fargo is what is bad in America.</p><p>	Even the people I talk to that do not dislike Wells, do admit they were held back in their financial goals by having an account with this bad bank.</p>            </div>
+            <div class="bubble-research-bar row">
+                <p class="research-question"><b class="user-id">oasisstarranch's</b> review was:&nbsp;&nbsp;&nbsp;&nbsp;</p><label><input class="commentHelpfulAction helpful-112409" commentid="112409" type="checkbox" onclick="voteHelpful(this)"> Helpful</label> &nbsp; <label><input class="commentNotHelpfulAction notHelpful-112409" commentid="112409" type="checkbox" onclick="voteNotHelpful(this)"> Not Helpful</label>                <span class="action-right">
+                    <span class="commentDate">Sep 12, 2014</span>
+                                        <span class="action-links">
+                        <a href="#" onclick="return showCommentReplyBlock('112409-6');" id="commentResponseLink112409-6" class="replyToComment"><i class="icon-reply-left"></i>Reply</a>
+                        <a href="#" onclick="return hideCommentReplyBlock('112409-6');" id="commentCancelLink112409-6" style="display: none;" class="cancelReply"><i class="icon-reply-left"></i>Cancel Reply</a>
+                    </span>
+                                        <span class="comment-flag commentFlag">
+                        <img id="commentFlag-112409-6" commentid="112409-6" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/comments/actionFlag.png" title="Flag this review" alt="">
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="comment-bubble-bottom bubble-bottom">
+        <div class="comment-user row">
+            <div class="comment-user-box ie-fix-opacity">
+                                    <a href="https://www.creditkarma.com/profile/user/info/name/oasisstarranch"><img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20"></a>
+                            </div>
+
+                <p class="comment-user-id"><a href="https://www.creditkarma.com/profile/user/info/name/oasisstarranch" class="user-id">oasisstarranch</a><span class="comment-research">(<span><i class="icon-pencil"></i>9</span>, <span class="commentAuthorHelped-1690452"><i class="icon-person"></i>17</span>)</span></p><div class="reviewsTT" id="commentTTId-112409-6" onmouseover="showAuthorTooltip('112409-6')" onmouseout="hideAuthorTooltip('112409-6')">
+    <div class="reviewsTT-content">
+        <div class="comment-user row">
+            <div class="row">
+                <div class="comment-user-box ie-fix-opacity">
+                    <img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-large.jpg" width="53">
+                </div>
+
+                <div class="comment-user-right">
+                                                                            </div>
+            </div>
+
+            <p class="comment-user-id">
+                <span>Review by</span>
+
+
+                <a href="https://www.creditkarma.com/profile/user/info/name/oasisstarranch" class="user-id">oasisstarranch</a>
+
+            </p>
+
+            <span class="comment-research">
+                <span><i class="icon-pencil"></i>9 Contributions</span>
+                <span class="commentAuthorHelped-1690452"><i class="icon-person"></i>17 People Helped</span>
+            </span>
+        </div>
+
+    </div>
+    <div class="reviewsTT-bottom"></div>
+</div><p onmouseover="showAuthorTooltip('112409-6')" onmouseout="hideAuthorTooltip('112409-6')"></p>
+
+
+                                </div>
+    </div>
+
+        
+    <div class="reply-bubble replyCopy" id="commentResponse112409-6" style="display: none;">
+        <i class="icon-reply-right"></i>
+        <div class="reply-bubble-box bubble-box">
+            <div class="bubble-inner">
+                <form id="commentForm112409-6" action="" class="replyForm">
+    <label class="enter-reply-label">Enter Your Reply</label>
+    <div class="commentsTextarea">
+        <textarea id="cBody112409-6" name="cBody112409-6" class="reg-input required" rows="" cols=""></textarea><div style="" class="validation-advice validation-failed" id="advice-cBody112409-6"></div>    </div>
+    <div class="comment-form-bottom row">
+
+        
+            
+        <div class="reply-submit-box">
+            <a class="button-blue" href="#" onclick="submitComment('wells-fargo-bank', 7,false,112409,'112409-6'); return false;"><span class="button-text">Submit</span></a>
+
+            <div id="infoloaderdiv112409-6" class="replyInfoloaderdiv">
+                <img id="infoloader112409-6" alt="Submit Your Reply" src="https://creditkarmacdn-a.akamaihd.net/res/img/loading.gif" height="20" width="20">
+            </div>
+
+            <div class="checkbox-wrap">
+                <input type="checkbox" id="commentAlert6" onclick="toggleAlertCheckbox('wells-fargo-bank', 7, 'infoloaderdiv112409-6');return false;"> <a onclick="toggleAlertCheckbox('wells-fargo-bank', 7, 'infoloaderdiv112409-6');return false;">Receive email alerts when new reviews are added</a>
+            </div>
+        </div>
+
+    </div>
+</form>            </div>
+        </div>
+        <div class="reply-bubble-bottom bubble-bottom">
+            <div class="comment-user row">
+                <div id="imgpostuser" class="comment-user-box ie-fix-opacity">
+                    <a href="https://www.creditkarma.com/profile/user/info/name/" id="" class="user-id "><img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20"></a>                </div>
+                <div id="imgpostanon" class="comment-user-box ie-fix-opacity" style="display: none;">
+                    <img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20">
+                </div>
+
+                <p class="comment-user-id">
+                                Anonymous                </p>
+                            </div>
+        </div>
+    </div>
+        </div>
+
+
+        
+        
+
+<div class="comment-bubble" id="comment-82767-7">
+    <div class="comment-bubble-box bubble-box">
+        <div class="bubble-inner">
+            <div class="bubble-header row">
+                                                <span class="commentStars rated1"></span>
+                                <span class="comment-title">BAD CUSTOMER SERVICE- JUST HORRIBLE</span>
+                <span class="helpful-desc helpfulcounts-82767" style="display: block">Helpful to <b class="helpfulCount-82767">6</b> out of <b class="totalResponseCount-82767">7</b> people</span>            </div>
+            <div class="bubble-comment row">
+                <p>Both call center and branches have horrible customer service. Here is why:</p><p>		Every time I go to a branch located in Bel Air, MD or even back when I used to live in Arizona I would go in without being greeted and welcomed. While I don't look white or from the state there shouldn't be any reason why people should be treated the way I have been treated as a customer. Never heard the word "Thank you for your business". I honestly never experienced bad customer service when I banked somewhere else until I became Wells Fargo customer.</p><p>		It is sad to say that the word "customer service" doesn't really mean anything to anyone these days and Wells Fargo is a clear example of why this nation is corrupted. Yes, I said corrupted.</p><p>		I have been getting overdraft charges because customer service failed to explain to me what Bill Pay service does and how it could have prevented me from getting all of these charges that cost me about $500 and more.</p><p>		I have been treated rudely and been told that it wasn't the banks' fault but it was me that failed to read. I could go on and on with stories but at the end who is going to listen. Clearly the CEO doesn't believe in putting customers first. He doesn't believe that customers shouldn't be treated by his own employees the way I was treated. If CEO cared enough then his employees would have had common sense, common courtesy, great customer service and not people who are uneducated, lazy and rude.</p><p>		I have never never written a bad review on any bank before and that is the truth.</p>            </div>
+            <div class="bubble-research-bar row">
+                <p class="research-question"><b class="user-id">marcm256's</b> review was:&nbsp;&nbsp;&nbsp;&nbsp;</p><label><input class="commentHelpfulAction helpful-82767" commentid="82767" type="checkbox" onclick="voteHelpful(this)"> Helpful</label> &nbsp; <label><input class="commentNotHelpfulAction notHelpful-82767" commentid="82767" type="checkbox" onclick="voteNotHelpful(this)"> Not Helpful</label>                <span class="action-right">
+                    <span class="commentDate">Jan 29, 2014</span>
+                                        <span class="action-links">
+                        <a href="#" onclick="return showCommentReplyBlock('82767-7');" id="commentResponseLink82767-7" class="replyToComment"><i class="icon-reply-left"></i>Reply</a>
+                        <a href="#" onclick="return hideCommentReplyBlock('82767-7');" id="commentCancelLink82767-7" style="display: none;" class="cancelReply"><i class="icon-reply-left"></i>Cancel Reply</a>
+                    </span>
+                                        <span class="comment-flag commentFlag">
+                        <img id="commentFlag-82767-7" commentid="82767-7" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/comments/actionFlag.png" title="Flag this review" alt="">
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="comment-bubble-bottom bubble-bottom">
+        <div class="comment-user row">
+            <div class="comment-user-box ie-fix-opacity">
+                                    <a href="https://www.creditkarma.com/profile/user/info/name/marcm256"><img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20"></a>
+                            </div>
+
+                <p class="comment-user-id"><a href="https://www.creditkarma.com/profile/user/info/name/marcm256" class="user-id">marcm256</a><span class="comment-research">(<span><i class="icon-pencil"></i>2</span>, <span class="commentAuthorHelped-26639832"><i class="icon-person"></i>6</span>)</span></p><div class="reviewsTT" id="commentTTId-82767-7" onmouseover="showAuthorTooltip('82767-7')" onmouseout="hideAuthorTooltip('82767-7')">
+    <div class="reviewsTT-content">
+        <div class="comment-user row">
+            <div class="row">
+                <div class="comment-user-box ie-fix-opacity">
+                    <img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-large.jpg" width="53">
+                </div>
+
+                <div class="comment-user-right">
+                                                                            </div>
+            </div>
+
+            <p class="comment-user-id">
+                <span>Review by</span>
+
+
+                <a href="https://www.creditkarma.com/profile/user/info/name/marcm256" class="user-id">marcm256</a>
+
+            </p>
+
+            <span class="comment-research">
+                <span><i class="icon-pencil"></i>2 Contributions</span>
+                <span class="commentAuthorHelped-26639832"><i class="icon-person"></i>6 People Helped</span>
+            </span>
+        </div>
+
+    </div>
+    <div class="reviewsTT-bottom"></div>
+</div><p onmouseover="showAuthorTooltip('82767-7')" onmouseout="hideAuthorTooltip('82767-7')"></p>
+
+
+                                </div>
+    </div>
+
+        
+    <div class="reply-bubble replyCopy" id="commentResponse82767-7" style="display: none;">
+        <i class="icon-reply-right"></i>
+        <div class="reply-bubble-box bubble-box">
+            <div class="bubble-inner">
+                <form id="commentForm82767-7" action="" class="replyForm">
+    <label class="enter-reply-label">Enter Your Reply</label>
+    <div class="commentsTextarea">
+        <textarea id="cBody82767-7" name="cBody82767-7" class="reg-input required" rows="" cols=""></textarea><div style="" class="validation-advice validation-failed" id="advice-cBody82767-7"></div>    </div>
+    <div class="comment-form-bottom row">
+
+        
+            
+        <div class="reply-submit-box">
+            <a class="button-blue" href="#" onclick="submitComment('wells-fargo-bank', 7,false,82767,'82767-7'); return false;"><span class="button-text">Submit</span></a>
+
+            <div id="infoloaderdiv82767-7" class="replyInfoloaderdiv">
+                <img id="infoloader82767-7" alt="Submit Your Reply" src="https://creditkarmacdn-a.akamaihd.net/res/img/loading.gif" height="20" width="20">
+            </div>
+
+            <div class="checkbox-wrap">
+                <input type="checkbox" id="commentAlert7" onclick="toggleAlertCheckbox('wells-fargo-bank', 7, 'infoloaderdiv82767-7');return false;"> <a onclick="toggleAlertCheckbox('wells-fargo-bank', 7, 'infoloaderdiv82767-7');return false;">Receive email alerts when new reviews are added</a>
+            </div>
+        </div>
+
+    </div>
+</form>            </div>
+        </div>
+        <div class="reply-bubble-bottom bubble-bottom">
+            <div class="comment-user row">
+                <div id="imgpostuser" class="comment-user-box ie-fix-opacity">
+                    <a href="https://www.creditkarma.com/profile/user/info/name/" id="" class="user-id "><img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20"></a>                </div>
+                <div id="imgpostanon" class="comment-user-box ie-fix-opacity" style="display: none;">
+                    <img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20">
+                </div>
+
+                <p class="comment-user-id">
+                                Anonymous                </p>
+                            </div>
+        </div>
+    </div>
+        </div>
+
+
+        
+                                <div class="reply-bubble" id="comment-82796-7">
+                <i class="icon-reply-right"></i>
+                <div class="reply-bubble-box bubble-box">
+                    <div class="bubble-inner">
+                        <div class="bubble-header row">
+                            <span class="helpful-desc helpfulcounts-82796" style="display: block">Helpful to <b class="helpfulCount-82796">2</b> out of <b class="totalResponseCount-82796">2</b> people</span>                        </div>
+                        <div class="bubble-comment row">
+                            <p>I've had to deal with them for a long time. &nbsp;It doesn't matter, whether you look "white" or what your background may be, they seem to treat everyone with the same attitude. &nbsp;Work ethics have seem to hit the toilet these days when it comes to customer service. &nbsp;With that said, you still have to take responsibility in "reading" the fine print. &nbsp;For the most part, the majority that deal with customer service, have no clue in customer service because they would rather hire young people who have that attitude of entitlement. &nbsp;Which trickles down to the lack of customer service. &nbsp;We all have to take the initiative to read all the crap they give you, and read the fine print. &nbsp;Ask questions, never take no for an answer, and when then act like its an imposition, make it one by taking it one step higher to the next level to get the answers you deserve. &nbsp;Don't let the traditional cop outs cloud what you have to embrace yourself. &nbsp;Stop expecting them to make the first move toward what you must demand in customer service. &nbsp;We all regardless of physical, spiritual, sexual, etc. attibutes deserve to be treated with respect. &nbsp;Report them to BBB, that's what they are there for.&nbsp;</p>                        </div>
+                        <div class="bubble-research-bar row">
+                            <p class="research-question"><b class="user-id">Stormyrn40's</b> reply was:&nbsp;&nbsp;&nbsp;&nbsp;</p><label><input class="commentHelpfulAction helpful-82796" commentid="82796" type="checkbox" onclick="voteHelpful(this)"> Helpful</label> &nbsp; <label><input class="commentNotHelpfulAction notHelpful-82796" commentid="82796" type="checkbox" onclick="voteNotHelpful(this)"> Not Helpful</label>                            <span class="action-right">
+                                <span class="commentDate">Jan 29, 2014</span>
+                                <span class="comment-flag commentFlag">
+                                    <img id="commentFlag-82796-7" commentid="82796-7" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/comments/actionFlag.png" title="Flag this review" alt="">
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reply-bubble-bottom bubble-bottom">
+                    <div class="comment-user row">
+                        <div class="comment-user-box ie-fix-opacity">
+                                                           <a href="https://www.creditkarma.com/profile/user/info/name/Stormyrn40"><img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20"></a>
+                                                    </div>
+                        <p class="comment-user-id"><a href="https://www.creditkarma.com/profile/user/info/name/Stormyrn40" class="user-id">Stormyrn40</a><span class="comment-research">(<span><i class="icon-pencil"></i>1</span>, <span class="commentAuthorHelped-26652345"><i class="icon-person"></i>2</span>)</span></p><div class="reviewsTT" id="commentTTId-82796-7" onmouseover="showAuthorTooltip('82796-7')" onmouseout="hideAuthorTooltip('82796-7')">
+    <div class="reviewsTT-content">
+        <div class="comment-user row">
+            <div class="row">
+                <div class="comment-user-box ie-fix-opacity">
+                    <img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-large.jpg" width="53">
+                </div>
+
+                <div class="comment-user-right">
+                                                                            </div>
+            </div>
+
+            <p class="comment-user-id">
+                <span>Review by</span>
+
+
+                <a href="https://www.creditkarma.com/profile/user/info/name/Stormyrn40" class="user-id">Stormyrn40</a>
+
+            </p>
+
+            <span class="comment-research">
+                <span><i class="icon-pencil"></i>1 Contributions</span>
+                <span class="commentAuthorHelped-26652345"><i class="icon-person"></i>2 People Helped</span>
+            </span>
+        </div>
+
+    </div>
+    <div class="reviewsTT-bottom"></div>
+</div><p onmouseover="showAuthorTooltip('82796-7')" onmouseout="hideAuthorTooltip('82796-7')"></p>                    </div>
+                                    </div>
+
+                        </div>
+        
+
+<div class="comment-bubble" id="comment-67916-8">
+    <div class="comment-bubble-box bubble-box">
+        <div class="bubble-inner">
+            <div class="bubble-header row">
+                                                <span class="commentStars ratedOwn1"></span>
+                                <span class="comment-title">Credit through Wells Fargo</span>
+                <span class="helpful-desc helpfulcounts-67916" style="display: block">Helpful to <b class="helpfulCount-67916">8</b> out of <b class="totalResponseCount-67916">9</b> people</span>            </div>
+            <div class="bubble-comment row">
+                <p>Worst company I have ever had to deal with.&nbsp; Will not allow you to pay your credit card with your debit card.&nbsp; When you call customer service 90% of the time it says "no one answered you are now being disconnected"&nbsp; Wants you to link your checking account from whatever your main bank is to theirs. And in the fine print underneath states that the only way to unlink it is to send in a written statement to their main office for them to review before removing it.&nbsp; If I could give this company zero stars for everything I would. I'm amazed they manage to keep any customers I paid my card off and got away from them as fast as possible!</p>            </div>
+            <div class="bubble-research-bar row">
+                                <span class="action-right">
+                    <span class="commentDate">Sep 05, 2013</span>
+                                        <span class="action-links">
+                        <a href="#" onclick="return showCommentReplyBlock('67916-8');" id="commentResponseLink67916-8" class="replyToComment"><i class="icon-reply-left"></i>Reply</a>
+                        <a href="#" onclick="return hideCommentReplyBlock('67916-8');" id="commentCancelLink67916-8" style="display: none;" class="cancelReply"><i class="icon-reply-left"></i>Cancel Reply</a>
+                    </span>
+                                        <span class="comment-flag commentFlag">
+                        <img id="commentFlag-67916-8" commentid="67916-8" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/comments/actionFlag.png" title="Flag this review" alt="">
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="comment-bubble-bottom bubble-bottom">
+        <div class="comment-user row">
+            <div class="comment-user-box ie-fix-opacity">
+                                    <img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20">
+                            </div>
+
+                
+
+
+                                </div>
+    </div>
+
+        
+    <div class="reply-bubble replyCopy" id="commentResponse67916-8" style="display: none;">
+        <i class="icon-reply-right"></i>
+        <div class="reply-bubble-box bubble-box">
+            <div class="bubble-inner">
+                <form id="commentForm67916-8" action="" class="replyForm">
+    <label class="enter-reply-label">Enter Your Reply</label>
+    <div class="commentsTextarea">
+        <textarea id="cBody67916-8" name="cBody67916-8" class="reg-input required" rows="" cols=""></textarea><div style="" class="validation-advice validation-failed" id="advice-cBody67916-8"></div>    </div>
+    <div class="comment-form-bottom row">
+
+        
+            
+        <div class="reply-submit-box">
+            <a class="button-blue" href="#" onclick="submitComment('wells-fargo-bank', 7,false,67916,'67916-8'); return false;"><span class="button-text">Submit</span></a>
+
+            <div id="infoloaderdiv67916-8" class="replyInfoloaderdiv">
+                <img id="infoloader67916-8" alt="Submit Your Reply" src="https://creditkarmacdn-a.akamaihd.net/res/img/loading.gif" height="20" width="20">
+            </div>
+
+            <div class="checkbox-wrap">
+                <input type="checkbox" id="commentAlert8" onclick="toggleAlertCheckbox('wells-fargo-bank', 7, 'infoloaderdiv67916-8');return false;"> <a onclick="toggleAlertCheckbox('wells-fargo-bank', 7, 'infoloaderdiv67916-8');return false;">Receive email alerts when new reviews are added</a>
+            </div>
+        </div>
+
+    </div>
+</form>            </div>
+        </div>
+        <div class="reply-bubble-bottom bubble-bottom">
+            <div class="comment-user row">
+                <div id="imgpostuser" class="comment-user-box ie-fix-opacity">
+                    <a href="https://www.creditkarma.com/profile/user/info/name/" id="" class="user-id "><img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20"></a>                </div>
+                <div id="imgpostanon" class="comment-user-box ie-fix-opacity" style="display: none;">
+                    <img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20">
+                </div>
+
+                <p class="comment-user-id">
+                                Anonymous                </p>
+                            </div>
+        </div>
+    </div>
+        </div>
+
+
+        
+        
+
+<div class="comment-bubble" id="comment-63902-9">
+    <div class="comment-bubble-box bubble-box">
+        <div class="bubble-inner">
+            <div class="bubble-header row">
+                                                <span class="commentStars rated2"></span>
+                                <span class="comment-title">BS Fees on College Checking</span>
+                <span class="helpful-desc helpfulcounts-63902" style="display: block">Helpful to <b class="helpfulCount-63902">6</b> out of <b class="totalResponseCount-63902">6</b> people</span>            </div>
+            <div class="bubble-comment row">
+                <p>When I went to college I decided to establish a Wells Fargo account since they had an ATM in the student center. During orientation there was a representative in the student center that was signing people up. She was a fast talker and never really explained the terms to me, instead just giving me a free iPod speaker (which was cheaply made and way too heavy on the treble, I might add) and placing it in my Wells Fargo bag, which just so happened to contain a thick booklet full of terms. All she did was explain how to set up 2 monthly direct deposits to avoid a monthly account maintenance fee.</p><p>	At the time I applied, I had no credit history. I was just beginning my freshman year so loans were not yet factoring in, and I did not have any credit cards. I was still sore from my rejection from the Capital One Journey card (which has horrible customer service - I strongly recommend the Discover IT or Citi Forward if you're looking for a student card. I have reviews on here for both of them), so when the representative told me I could apply for a student credit card I was skeptical. I asked if I'd get approved with no credit history. She assured me that I would and I had nothing to worry about. All I did was sign a paper, and I never had to say anything about my income or anything which seemed kind of shady in retrospect. Eventually I received mail from Wells Fargo regarding my application. It was a denial letter. The two reasons for my denial? Insufficent credit history and not enough money in my bank account. I guess Wells Fargo uses all of their stupid fees to pay for detectives, because I sure couldn'tve told them that one!I I don't know what they were expecting, considering I had just joined and was a student who was trying to establish credit.</p><p>	The next thing that went awry was when I went to the ATM at 7-11 to check my balance. In my experiences with my local credit union I've never been charged a fee to simply check my balance so I thought nothing of it. After seeing my balance, I decided to take out $20. I thought nothing of this until I checked my statement and saw $5 in fees (for using an out of network ATM) ON TOP OF the surcharge that the ATM charges you. &nbsp;$27.50 to take out $20?!? No thank you.</p><p>	I recognize that this fee was my fault (gotta read terms and conditions like a hawk), but I still think it's ridiculous. Sometimes stuff comes up and you need cash, so it's unreasonable to pay an extra fee.</p><p>	Denying me for credit, ridiculous ATM fees,and the fact that I had to jump through more hoops than a dolphin at Sea World to keep my college checking account free of maintenance fees have led me to once choice: cancelling on principal. I'm signing up for the local credit union the moment I get to school this year!</p><p>	Only stick with Wells Fargo if you have either: large balances, or an affinity for getting nickled and dimed to death. (I fully recognize that if you have lots of assets with them Wells can be great, but if you're a broke college kid like me, LOOK ELSEWHERE!)</p>            </div>
+            <div class="bubble-research-bar row">
+                <p class="research-question"><b class="user-id">sergi0wned's</b> review was:&nbsp;&nbsp;&nbsp;&nbsp;</p><label><input class="commentHelpfulAction helpful-63902" commentid="63902" type="checkbox" onclick="voteHelpful(this)"> Helpful</label> &nbsp; <label><input class="commentNotHelpfulAction notHelpful-63902" commentid="63902" type="checkbox" onclick="voteNotHelpful(this)"> Not Helpful</label>                <span class="action-right">
+                    <span class="commentDate">Jul 18, 2013</span>
+                                        <span class="action-links">
+                        <a href="#" onclick="return showCommentReplyBlock('63902-9');" id="commentResponseLink63902-9" class="replyToComment"><i class="icon-reply-left"></i>Reply</a>
+                        <a href="#" onclick="return hideCommentReplyBlock('63902-9');" id="commentCancelLink63902-9" style="display: none;" class="cancelReply"><i class="icon-reply-left"></i>Cancel Reply</a>
+                    </span>
+                                        <span class="comment-flag commentFlag">
+                        <img id="commentFlag-63902-9" commentid="63902-9" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/comments/actionFlag.png" title="Flag this review" alt="">
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="comment-bubble-bottom bubble-bottom">
+        <div class="comment-user row">
+            <div class="comment-user-box ie-fix-opacity">
+                                    <a href="https://www.creditkarma.com/profile/user/info/name/sergi0wned"><img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20"></a>
+                            </div>
+
+                <p class="comment-user-id"><a href="https://www.creditkarma.com/profile/user/info/name/sergi0wned" class="user-id">sergi0wned</a><span class="comment-research">(<span><i class="icon-pencil"></i>4</span>, <span class="commentAuthorHelped-6209293"><i class="icon-person"></i>41</span>)</span></p><div class="reviewsTT" id="commentTTId-63902-9" onmouseover="showAuthorTooltip('63902-9')" onmouseout="hideAuthorTooltip('63902-9')">
+    <div class="reviewsTT-content">
+        <div class="comment-user row">
+            <div class="row">
+                <div class="comment-user-box ie-fix-opacity">
+                    <img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-large.jpg" width="53">
+                </div>
+
+                <div class="comment-user-right">
+                                                                            </div>
+            </div>
+
+            <p class="comment-user-id">
+                <span>Review by</span>
+
+
+                <a href="https://www.creditkarma.com/profile/user/info/name/sergi0wned" class="user-id">sergi0wned</a>
+
+            </p>
+
+            <span class="comment-research">
+                <span><i class="icon-pencil"></i>4 Contributions</span>
+                <span class="commentAuthorHelped-6209293"><i class="icon-person"></i>41 People Helped</span>
+            </span>
+        </div>
+
+    </div>
+    <div class="reviewsTT-bottom"></div>
+</div><p onmouseover="showAuthorTooltip('63902-9')" onmouseout="hideAuthorTooltip('63902-9')"></p>
+
+
+                                </div>
+    </div>
+
+        
+    <div class="reply-bubble replyCopy" id="commentResponse63902-9" style="display: none;">
+        <i class="icon-reply-right"></i>
+        <div class="reply-bubble-box bubble-box">
+            <div class="bubble-inner">
+                <form id="commentForm63902-9" action="" class="replyForm">
+    <label class="enter-reply-label">Enter Your Reply</label>
+    <div class="commentsTextarea">
+        <textarea id="cBody63902-9" name="cBody63902-9" class="reg-input required" rows="" cols=""></textarea><div style="" class="validation-advice validation-failed" id="advice-cBody63902-9"></div>    </div>
+    <div class="comment-form-bottom row">
+
+        
+            
+        <div class="reply-submit-box">
+            <a class="button-blue" href="#" onclick="submitComment('wells-fargo-bank', 7,false,63902,'63902-9'); return false;"><span class="button-text">Submit</span></a>
+
+            <div id="infoloaderdiv63902-9" class="replyInfoloaderdiv">
+                <img id="infoloader63902-9" alt="Submit Your Reply" src="https://creditkarmacdn-a.akamaihd.net/res/img/loading.gif" height="20" width="20">
+            </div>
+
+            <div class="checkbox-wrap">
+                <input type="checkbox" id="commentAlert9" onclick="toggleAlertCheckbox('wells-fargo-bank', 7, 'infoloaderdiv63902-9');return false;"> <a onclick="toggleAlertCheckbox('wells-fargo-bank', 7, 'infoloaderdiv63902-9');return false;">Receive email alerts when new reviews are added</a>
+            </div>
+        </div>
+
+    </div>
+</form>            </div>
+        </div>
+        <div class="reply-bubble-bottom bubble-bottom">
+            <div class="comment-user row">
+                <div id="imgpostuser" class="comment-user-box ie-fix-opacity">
+                    <a href="https://www.creditkarma.com/profile/user/info/name/" id="" class="user-id "><img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20"></a>                </div>
+                <div id="imgpostanon" class="comment-user-box ie-fix-opacity" style="display: none;">
+                    <img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20">
+                </div>
+
+                <p class="comment-user-id">
+                                Anonymous                </p>
+                            </div>
+        </div>
+    </div>
+        </div>
+
+
+        
+        
+    <input type="hidden" id="commentsFull" name="commentsFull" value="1">
+    <input type="hidden" id="lastPage" name="lastPage" value="1">
+
+<div class="comment-bubble" id="comment-69182-10">
+    <div class="comment-bubble-box bubble-box">
+        <div class="bubble-inner">
+            <div class="bubble-header row">
+                                                <span class="commentStars ratedOwn1"></span>
+                                <span class="comment-title">Worst Bank Ever</span>
+                <span class="helpful-desc helpfulcounts-69182" style="display: block">Helpful to <b class="helpfulCount-69182">5</b> out of <b class="totalResponseCount-69182">5</b> people</span>            </div>
+            <div class="bubble-comment row">
+                <p>I have Wells Fargo currently and I am extremely dissatisfied.&nbsp; I switched from BB&amp;T to Wachovia when I moved to Richmond, VA and then they got bought out by Wells Fargo.&nbsp; During the time I used BB&amp;T and Wachovia, I almost never had a problem with overdrafts, weird fees, or managaing my money.&nbsp; As soon as I graduated from college, Wells Fargo started charging me a huge fee without telling me because I was no longer a student and technically I had a student account.&nbsp; When I went in to complain they gave me a new account with a bunch of restrictions and additions I didn't want.&nbsp;</p><p>	Whenever I use my debit card, I write down all my transactions because the online banking is terrible. (And I have to swipe my card ten times a month or I'll be charged a huge fee).&nbsp; Still, I will be sitting pretty with $20 in my account and along will come a a $30 purchase I made two weeks ago that was taken out of my account and then put back in.&nbsp; The only reason I can think of for doing this is to make money in a dishonest and screwed up way.</p><p>	Worst of all, when I went in to tell the banker how much I hated everything, they tried to sell me a credit card.&nbsp; Apparently, I can cover my overdrafts with more money I don't have!&nbsp; And they said all this knowing I have a negative balance in my account, a lot of student loans to pay off, and I just moved to a new city and got a new job.&nbsp; They were specifically targeting me because of my low financial status, they figure I'll miss credit card payments and make them all kinds of money.&nbsp; This is a predatory institution and I plan on making the switch to a credit union as soon as I get my first paycheck!&nbsp; If you have no money, stay away, they will try and really bleed you dry.&nbsp; And if you have money, even worse! There is no reason anyone should go with this bank.&nbsp;</p>            </div>
+            <div class="bubble-research-bar row">
+                                <span class="action-right">
+                    <span class="commentDate">Sep 18, 2013</span>
+                                        <span class="action-links">
+                        <a href="#" onclick="return showCommentReplyBlock('69182-10');" id="commentResponseLink69182-10" class="replyToComment"><i class="icon-reply-left"></i>Reply</a>
+                        <a href="#" onclick="return hideCommentReplyBlock('69182-10');" id="commentCancelLink69182-10" style="display: none;" class="cancelReply"><i class="icon-reply-left"></i>Cancel Reply</a>
+                    </span>
+                                        <span class="comment-flag commentFlag">
+                        <img id="commentFlag-69182-10" commentid="69182-10" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/comments/actionFlag.png" title="Flag this review" alt="">
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="comment-bubble-bottom bubble-bottom">
+        <div class="comment-user row">
+            <div class="comment-user-box ie-fix-opacity">
+                                    <img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20">
+                            </div>
+
+                
+
+
+                                </div>
+    </div>
+
+        
+    <div class="reply-bubble replyCopy" id="commentResponse69182-10" style="display: none;">
+        <i class="icon-reply-right"></i>
+        <div class="reply-bubble-box bubble-box">
+            <div class="bubble-inner">
+                <form id="commentForm69182-10" action="" class="replyForm">
+    <label class="enter-reply-label">Enter Your Reply</label>
+    <div class="commentsTextarea">
+        <textarea id="cBody69182-10" name="cBody69182-10" class="reg-input required" rows="" cols=""></textarea><div style="" class="validation-advice validation-failed" id="advice-cBody69182-10"></div>    </div>
+    <div class="comment-form-bottom row">
+
+        
+            
+        <div class="reply-submit-box">
+            <a class="button-blue" href="#" onclick="submitComment('wells-fargo-bank', 7,false,69182,'69182-10'); return false;"><span class="button-text">Submit</span></a>
+
+            <div id="infoloaderdiv69182-10" class="replyInfoloaderdiv">
+                <img id="infoloader69182-10" alt="Submit Your Reply" src="https://creditkarmacdn-a.akamaihd.net/res/img/loading.gif" height="20" width="20">
+            </div>
+
+            <div class="checkbox-wrap">
+                <input type="checkbox" id="commentAlert10" onclick="toggleAlertCheckbox('wells-fargo-bank', 7, 'infoloaderdiv69182-10');return false;"> <a onclick="toggleAlertCheckbox('wells-fargo-bank', 7, 'infoloaderdiv69182-10');return false;">Receive email alerts when new reviews are added</a>
+            </div>
+        </div>
+
+    </div>
+</form>            </div>
+        </div>
+        <div class="reply-bubble-bottom bubble-bottom">
+            <div class="comment-user row">
+                <div id="imgpostuser" class="comment-user-box ie-fix-opacity">
+                    <a href="https://www.creditkarma.com/profile/user/info/name/" id="" class="user-id "><img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20"></a>                </div>
+                <div id="imgpostanon" class="comment-user-box ie-fix-opacity" style="display: none;">
+                    <img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20">
+                </div>
+
+                <p class="comment-user-id">
+                                Anonymous                </p>
+                            </div>
+        </div>
+    </div>
+        </div>
+
+
+        
+        
+
+<div class="comment-bubble" id="comment-109280-11">
+    <div class="comment-bubble-box bubble-box">
+        <div class="bubble-inner">
+            <div class="bubble-header row">
+                                                <span class="commentStars rated1"></span>
+                                <span class="comment-title">SCAMS THEIR CUSTOMER'S....BEWARE</span>
+                <span class="helpful-desc helpfulcounts-109280" style="display: block">Helpful to <b class="helpfulCount-109280">2</b> out of <b class="totalResponseCount-109280">2</b> people</span>            </div>
+            <div class="bubble-comment row">
+                <p>I've had my acct with Wells Fargo for a little over a year and have nothing but endless complaints to show for it. No matter how well you try to educate yourself on their practices they mangage to find some loophole in their terms and charge YOU for using your own money, most importantly when your not overdrawn. After paying Wells Fargo Endless fees I am very pleased to say I've closed my account with them, and will be scammed no more.</p>            </div>
+            <div class="bubble-research-bar row">
+                <p class="research-question"><b class="user-id">honesthoney's</b> review was:&nbsp;&nbsp;&nbsp;&nbsp;</p><label><input class="commentHelpfulAction helpful-109280" commentid="109280" type="checkbox" onclick="voteHelpful(this)"> Helpful</label> &nbsp; <label><input class="commentNotHelpfulAction notHelpful-109280" commentid="109280" type="checkbox" onclick="voteNotHelpful(this)"> Not Helpful</label>                <span class="action-right">
+                    <span class="commentDate">Aug 19, 2014</span>
+                                        <span class="action-links">
+                        <a href="#" onclick="return showCommentReplyBlock('109280-11');" id="commentResponseLink109280-11" class="replyToComment"><i class="icon-reply-left"></i>Reply</a>
+                        <a href="#" onclick="return hideCommentReplyBlock('109280-11');" id="commentCancelLink109280-11" style="display: none;" class="cancelReply"><i class="icon-reply-left"></i>Cancel Reply</a>
+                    </span>
+                                        <span class="comment-flag commentFlag">
+                        <img id="commentFlag-109280-11" commentid="109280-11" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/comments/actionFlag.png" title="Flag this review" alt="">
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="comment-bubble-bottom bubble-bottom">
+        <div class="comment-user row">
+            <div class="comment-user-box ie-fix-opacity">
+                                    <a href="https://www.creditkarma.com/profile/user/info/name/honesthoney"><img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20"></a>
+                            </div>
+
+                <p class="comment-user-id"><a href="https://www.creditkarma.com/profile/user/info/name/honesthoney" class="user-id">honesthoney</a><span class="comment-research">(<span><i class="icon-pencil"></i>1</span>, <span class="commentAuthorHelped-18113964"><i class="icon-person"></i>2</span>)</span></p><div class="reviewsTT" id="commentTTId-109280-11" onmouseover="showAuthorTooltip('109280-11')" onmouseout="hideAuthorTooltip('109280-11')">
+    <div class="reviewsTT-content">
+        <div class="comment-user row">
+            <div class="row">
+                <div class="comment-user-box ie-fix-opacity">
+                    <img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-large.jpg" width="53">
+                </div>
+
+                <div class="comment-user-right">
+                                                                            </div>
+            </div>
+
+            <p class="comment-user-id">
+                <span>Review by</span>
+
+
+                <a href="https://www.creditkarma.com/profile/user/info/name/honesthoney" class="user-id">honesthoney</a>
+
+            </p>
+
+            <span class="comment-research">
+                <span><i class="icon-pencil"></i>1 Contributions</span>
+                <span class="commentAuthorHelped-18113964"><i class="icon-person"></i>2 People Helped</span>
+            </span>
+        </div>
+
+    </div>
+    <div class="reviewsTT-bottom"></div>
+</div><p onmouseover="showAuthorTooltip('109280-11')" onmouseout="hideAuthorTooltip('109280-11')"></p>
+
+
+                                </div>
+    </div>
+
+        
+    <div class="reply-bubble replyCopy" id="commentResponse109280-11" style="display: none;">
+        <i class="icon-reply-right"></i>
+        <div class="reply-bubble-box bubble-box">
+            <div class="bubble-inner">
+                <form id="commentForm109280-11" action="" class="replyForm">
+    <label class="enter-reply-label">Enter Your Reply</label>
+    <div class="commentsTextarea">
+        <textarea id="cBody109280-11" name="cBody109280-11" class="reg-input required" rows="" cols=""></textarea><div style="" class="validation-advice validation-failed" id="advice-cBody109280-11"></div>    </div>
+    <div class="comment-form-bottom row">
+
+        
+            
+        <div class="reply-submit-box">
+            <a class="button-blue" href="#" onclick="submitComment('wells-fargo-bank', 7,false,109280,'109280-11'); return false;"><span class="button-text">Submit</span></a>
+
+            <div id="infoloaderdiv109280-11" class="replyInfoloaderdiv">
+                <img id="infoloader109280-11" alt="Submit Your Reply" src="https://creditkarmacdn-a.akamaihd.net/res/img/loading.gif" height="20" width="20">
+            </div>
+
+            <div class="checkbox-wrap">
+                <input type="checkbox" id="commentAlert11" onclick="toggleAlertCheckbox('wells-fargo-bank', 7, 'infoloaderdiv109280-11');return false;"> <a onclick="toggleAlertCheckbox('wells-fargo-bank', 7, 'infoloaderdiv109280-11');return false;">Receive email alerts when new reviews are added</a>
+            </div>
+        </div>
+
+    </div>
+</form>            </div>
+        </div>
+        <div class="reply-bubble-bottom bubble-bottom">
+            <div class="comment-user row">
+                <div id="imgpostuser" class="comment-user-box ie-fix-opacity">
+                    <a href="https://www.creditkarma.com/profile/user/info/name/" id="" class="user-id "><img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20"></a>                </div>
+                <div id="imgpostanon" class="comment-user-box ie-fix-opacity" style="display: none;">
+                    <img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20">
+                </div>
+
+                <p class="comment-user-id">
+                                Anonymous                </p>
+                            </div>
+        </div>
+    </div>
+        </div>
+
+
+        
+        
+        <span id="lastComment"></span>
+
+<div class="comment-bubble" id="comment-74801-12">
+    <div class="comment-bubble-box bubble-box">
+        <div class="bubble-inner">
+            <div class="bubble-header row">
+                                                <span class="commentStars ratedOwn1"></span>
+                                <span class="comment-title">Worst bank ever!!</span>
+                <span class="helpful-desc helpfulcounts-74801" style="display: block">Helpful to <b class="helpfulCount-74801">3</b> out of <b class="totalResponseCount-74801">3</b> people</span>            </div>
+            <div class="bubble-comment row">
+                <p>I hate this bank, I tell all of my friends that I know never to use them, they have the worst customer service, they charge fees just to charge fee. the products that they offer r no were near where keeping up with other banks.. They tell you one thing and don't actually do it. Don’t ever use this bank or their products.. Horrible bank&nbsp; Horrible</p>            </div>
+            <div class="bubble-research-bar row">
+                                <span class="action-right">
+                    <span class="commentDate">Nov 21, 2013</span>
+                                        <span class="action-links">
+                        <a href="#" onclick="return showCommentReplyBlock('74801-12');" id="commentResponseLink74801-12" class="replyToComment"><i class="icon-reply-left"></i>Reply</a>
+                        <a href="#" onclick="return hideCommentReplyBlock('74801-12');" id="commentCancelLink74801-12" style="display: none;" class="cancelReply"><i class="icon-reply-left"></i>Cancel Reply</a>
+                    </span>
+                                        <span class="comment-flag commentFlag">
+                        <img id="commentFlag-74801-12" commentid="74801-12" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/comments/actionFlag.png" title="Flag this review" alt="">
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="comment-bubble-bottom bubble-bottom">
+        <div class="comment-user row">
+            <div class="comment-user-box ie-fix-opacity">
+                                    <img class="profilePic" alt="" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20">
+                            </div>
+
+                
+
+
+                                </div>
+    </div>
+
+        
+    <div class="reply-bubble replyCopy" id="commentResponse74801-12" style="display: none;">
+        <i class="icon-reply-right"></i>
+        <div class="reply-bubble-box bubble-box">
+            <div class="bubble-inner">
+                <form id="commentForm74801-12" action="" class="replyForm">
+    <label class="enter-reply-label">Enter Your Reply</label>
+    <div class="commentsTextarea">
+        <textarea id="cBody74801-12" name="cBody74801-12" class="reg-input required" rows="" cols=""></textarea><div style="" class="validation-advice validation-failed" id="advice-cBody74801-12"></div>    </div>
+    <div class="comment-form-bottom row">
+
+        
+            
+        <div class="reply-submit-box">
+            <a class="button-blue" href="#" onclick="submitComment('wells-fargo-bank', 7,false,74801,'74801-12'); return false;"><span class="button-text">Submit</span></a>
+
+            <div id="infoloaderdiv74801-12" class="replyInfoloaderdiv">
+                <img id="infoloader74801-12" alt="Submit Your Reply" src="https://creditkarmacdn-a.akamaihd.net/res/img/loading.gif" height="20" width="20">
+            </div>
+
+            <div class="checkbox-wrap">
+                <input type="checkbox" id="commentAlert12" onclick="toggleAlertCheckbox('wells-fargo-bank', 7, 'infoloaderdiv74801-12');return false;"> <a onclick="toggleAlertCheckbox('wells-fargo-bank', 7, 'infoloaderdiv74801-12');return false;">Receive email alerts when new reviews are added</a>
+            </div>
+        </div>
+
+    </div>
+</form>            </div>
+        </div>
+        <div class="reply-bubble-bottom bubble-bottom">
+            <div class="comment-user row">
+                <div id="imgpostuser" class="comment-user-box ie-fix-opacity">
+                    <a href="https://www.creditkarma.com/profile/user/info/name/" id="" class="user-id "><img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20"></a>                </div>
+                <div id="imgpostanon" class="comment-user-box ie-fix-opacity" style="display: none;">
+                    <img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20">
+                </div>
+
+                <p class="comment-user-id">
+                                Anonymous                </p>
+                            </div>
+        </div>
+    </div>
+        </div>
+
+
+        
+        
+</div>
+
+<div class="reviews-pagination"><table id="pagination"><tbody><tr><td class="pagination-left">Results <b>1-10</b> of <b>209</b></td><td class="pagination-center">Results per page: <a data-page-num="1" data-page-size="5" class=" pagination-link " href="/reviews/banking/single/id/wells-fargo-bank?term=&amp;pg=1&amp;pgsz=5&amp;prdhlder=0">5</a> <span class="separator">|</span> <a data-page-num="1" data-page-size="10" class="pagination-off pagination-link " href="/reviews/banking/single/id/wells-fargo-bank?term=&amp;pg=1&amp;pgsz=10&amp;prdhlder=0">10</a> <span class="separator">|</span> <a data-page-num="1" data-page-size="25" class=" pagination-link " href="/reviews/banking/single/id/wells-fargo-bank?term=&amp;pg=1&amp;pgsz=25&amp;prdhlder=0">25</a></td><td class="pagination-right">Page <b>1</b> of <b>21</b> &nbsp; <span class="pagination-off">Previous</span> <span class="separator">|</span> <a data-page-num="2" data-page-size="10" class="pagination-link" href="/reviews/banking/single/id/wells-fargo-bank?term=&amp;pg=2&amp;pgsz=10&amp;prdhlder=0">Next</a></td></tr></tbody></table></div>
+<input type="hidden" id="currentPg" name="currentPg" value="1">
+<div class="clear"></div>
+
+<div class="commentsTop addReviewHeader">
+    <h2 id="commentHeader">Add Your Review Of Wells Fargo Bank</h2>
+</div>
+
+<div class="comment-bubble" id="add-review-block">
+    <div class="bubble-left">
+        <div class="commentNowBubbleBox comment-bubble-box bubble-box">
+            <div class="bubble-inner">
+
+                                <div id="enterComment" style="margin:0"></div>
+
+                                <div id="prodRating">
+                    <div class="row submit-review-question">
+                        <p><b><span class="grayBoxNum">1</span> State your experience with this product:</b></p>
+                        <form>
+                            <select id="userProductRelationshipSelector">
+                                <option value="Select">Please select one...</option>
+                                <option value="1">I have applied for this product.</option>
+                                <option value="2">I currently have this product.</option>
+                                <option value="3">I used to have this product.</option>
+                            </select>
+                            <p id="selectionError" style="color: #F20D12; clear: both; display:none;">Please select an option</p>
+                        </form>
+                    </div>
+                    <div class="row submit-review-question">
+                        <p><b><span class="grayBoxNum">2</span> Rate this product from 1 to 5 stars:</b></p>
+                        <p>Hover over your selected number of stars and click your mouse. <span class="lightgrayF px11">(1 Star = Lowest, 5 Stars = Highest)</span></p>
+
+                        <div class="rating-container container">
+                            <div class="rating-left">
+                                <p class="tc">Overall Rating:</p>
+                                <div class="offerRatingWidget overallRating">
+                                                                        <span id="star1" class="ratingStars" title="1 Star"></span>
+                                    <span id="star2" class="ratingStars" title="2 Stars"></span>
+                                    <span id="star3" class="ratingStars" title="3 Stars"></span>
+                                    <span id="star4" class="ratingStars" title="4 Stars"></span>
+                                    <span id="star5" class="ratingStars" title="5 Stars"></span>
+                                </div>
+                                <p class="required tc">Required</p>
+                                <p id="ratingError" style="color: #F20D12; clear: both; display:none;">Please select a rating</p>
+                            </div>
+
+                            <div class="rating-right">
+                                <div class="titleContainer container">
+                                    <p class="px11 blackF">Optional Ratings:</p>
+                                </div>
+                                <div class="container">
+                                    <span class="ratingDesc px11">Application Process:</span>
+                                    <div class="ratingStarSmall offerRatingWidget">
+                                        <span id="applicationstar1" class="ratingStars" title="1 Star"></span>
+                                        <span id="applicationstar2" class="ratingStars" title="2 Stars"></span>
+                                        <span id="applicationstar3" class="ratingStars" title="3 Stars"></span>
+                                        <span id="applicationstar4" class="ratingStars" title="4 Stars"></span>
+                                        <span id="applicationstar5" class="ratingStars" title="5 Stars"></span>
+                                    </div>
+                                    <a class="noOption applicationstar" onclick="resetApplicationStars()" onmouseover="this.style.cursor = 'pointer'">No Opinion</a>
+                                </div>
+                                <div class="container">
+                                    <span class="ratingDesc px11">Customer Service:</span>
+                                    <div class="ratingStarSmall offerRatingWidget">
+                                        <span id="csstar1" class="ratingStars" title="1 Star"></span>
+                                        <span id="csstar2" class="ratingStars" title="2 Stars"></span>
+                                        <span id="csstar3" class="ratingStars" title="3 Stars"></span>
+                                        <span id="csstar4" class="ratingStars" title="4 Stars"></span>
+                                        <span id="csstar5" class="ratingStars" title="5 Stars"></span>
+                                    </div>
+                                    <a class="noOption csstar" onclick="resetCsStars()" onmouseover="this.style.cursor = 'pointer'">No Opinion</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script type="text/javascript">
+
+                        setSelectedStars(ratingSelection, 'star');
+                        setSelectedStars(applicationProcessRatingSelection, 'applicationstar');
+                        setSelectedStars(customerServiceRatingSelection, 'csstar');
+
+                    </script>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="clear"></div>
+                                <div class="row submit-review-question">
+
+                    <p><b>
+                                                    <span class="grayBoxNum">3</span>
+                                                Write your review:</b></p>
+
+                    <form id="commentForm" action="" style="">
+                                                <div class="comment-title">
+                            <label id="lbl-cTitle" for="cTitle" class="">Title:</label><br><input type="text" id="cTitle" name="cTitle" class="short-input  pre-populated" value="" maxlength="40"><div style="" class="validation-advice validation-failed short-input" id="advice-cTitle"></div>                        </div>
+                                                <div class="commentsTextarea">
+                            <textarea id="cBody" name="cBody" class="reg-input required len-cbody pre-populated" rows="" cols="">&lt;p&gt;&lt;/p&gt;</textarea><div style="" class="validation-advice validation-failed" id="advice-cBody"></div>                        </div>
+                        <p id="cBodyError" style="color: #F20D12; clear: both; display:none;">Please enter a review</p>
+                        <div class="clear"></div>
+                        
+<div class="identity-wrap">
+    <p><b>Choose Your Posting Identity</b></p>
+    <div class="posting-identity-labels">
+                    <label><input id="postuser" name="postas" type="radio" onclick="switchCommenType(false)" checked=""> Credit Karma User<b></b> </label>
+                    <label><input id="postanon" name="postas" type="radio" onclick="switchCommenType(true)"><strong>Anonymous</strong> (requires moderator approval)</label>
+
+                    </div>
+</div>                        
+                        <div class="clear"></div>
+                                                <script type="text/javascript">$(document).ready(function(){ $('#postuser').click(); });</script>
+                        
+                        <div class="submitQActions">
+                            <a href="#" id="commentSubmitButton" class="button-blue fl" onclick="submitComment('wells-fargo-bank', 7); return false;"><span class="button-text">Submit</span></a>
+                            <div id="infoloaderdiv">
+                                <img id="infoloader" class="fl" alt="Enter Your Comments" src="https://creditkarmacdn-a.akamaihd.net/res/img/loading.gif" height="20" width="20">
+                            </div>
+                            <div class="alertingBlock fl">
+                                                                <input type="checkbox" id="commentAlert0" class="actionClear2" onclick="toggleAlertCheckbox('wells-fargo-bank', 7, false); return false;"> &nbsp; <a onclick="toggleAlertCheckbox('wells-fargo-bank', 7, false); return false;">Receive Email Alerts</a>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+
+                        <div class="errorMessages">
+                            <ul>
+                                <li id="cTitleErr"></li>
+                                <li id="cBodyErr"></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <div class="commentNowBubbleBottom comment-bubble-bottom bubble-bottom">
+            <div class="comment-user row">
+
+                <div id="imgpostuser" class="comment-user-box ie-fix-opacity">
+                    <a href="https://www.creditkarma.com/profile/user/info/name/" id="" class="user-id "><img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20"></a>                </div>
+                <div id="imgpostanon" class="comment-user-box ie-fix-opacity" style="display: none;">
+                    <img class="profilePic" alt="Profile Image" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/profile/default-medium.jpg" width="20">
+                </div>
+
+                <p class="comment-user-id">
+                                Anonymous                </p>
+                            </div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    if(!$('html').hasClass('lt-ie9')){
+        CKEDITOR.replace('cBody', _gCKEditorConfig);
+    }
+    CKEDITOR.on('dialogDefinition', function(ev){
+        // Take the dialog name and its definition from the event data.
+        var dialogName = ev.data.name;
+        var dialogDefinition = ev.data.definition;
+
+        // Check if the definition is from the dialog we're interested on (the "Link" dialog).
+        if (dialogName == 'link') {
+            // Get a reference to the "Link Info" tab.
+            var infoTab = dialogDefinition.getContents('info');
+            infoTab.remove('linkType');
+
+            // Remove the some un-needed tabs
+            dialogDefinition.removeContents('target');
+            dialogDefinition.removeContents('advanced');
+
+            // Rewrite the 'onFocus' handler to always focus 'url' field.
+            dialogDefinition.onFocus = function() {
+                var urlField = this.getContentElement('info', 'url');
+                urlField.select();
+            };
+        }
+    });
+
+</script>
+<style type="text/css">
+    span.cke_skin_kama {padding: 0; border: none;}
+    #lbl-cBody {padding-bottom: 0px; display: block; font-weight: normal!important;}
+    .cke_skin_kama .cke_path {display: none}
+    .cke_skin_kama .cke_wrapper {background: none; border: none;}
+    .cke_skin_kama .cke_top {background: #fff; border:1px solid #d7d7d7!important; height: 18px;}
+    .cke_skin_kama .cke_dialog_ui_vbox {height: 80px!important;}
+    .cke_skin_kama .cke_dialog_contents {height: 80px!important;}
+</style>        </div>
+    </section>
+</div>
+
+<div id="rightColumnNarrow" class="rightColumnNarrow">
+        <div class="compare-loan-rates-box">
+        <div class="inner">
+            <h2 class="title">
+                Compare Banking Offers            </h2>
+            <p>View your <strong>top Banking recommendations</strong> and compare rates on Credit Karma.</p>
+            <a href="/shop/banking" class="find-recommendations-button button-orange">
+                <span class="button-text">
+                    FIND RECOMMENDATIONS
+                    <span class="arrow-box"></span>
+                    <span class="arrow"></span>
+                </span>
+            </a>
+        </div>
+    </div>
+    
+
+    
+    <div id="single-review-summary-section">
+        <h2>Company Overview</h2>
+        <p>Headquartered in San Francisco, <strong>Wells Fargo Bank</strong> delivers banking, insurance, investments, mortgage, consumer finance, and commercial finance. Wells Fargo reaches consumers through over 9,000 branches, 12,000 ATMs, plus convenient online and mobile banking services. Wells Fargo Bank is a nationwide, diversified financial services company that has provided consumers with banking products for over 150 years. With $1.2 trillion in assets, Wells Fargo is known as one of the four biggest banks in the United States. </p>
+<p>Founded in 1852, Wells Fargo is widely recognized by its logo of a six-horse Concord Coach that was widely used to “rush important business” for their customers. This dedication is a continued standard for current customers.</p>    </div>
+
+        <div id="rwDescription">
+        <h2>Company Details</h2>
+        <p><strong>Wells Fargo</strong></p>
+<ul>
+<li><strong>Established: </strong>1852</li>
+<li><strong>Headquarters: </strong>San Francisco, California</li>
+<li><strong>Website: </strong><a href="https://www.wellsfargo.com" target="_blank">www.wellsfargo.com</a></li>
+<li><strong>Products: </strong>Auto Loans, Banking, Credit Cards, Home Equity, Mortgages, Personal Loans</li>
+<li><strong>Assets: </strong>$1.33 trillion</li>
+<li><strong>Available: </strong>Online and over the phone; select states </li>
+</ul>    </div>
+    
+    <div class="sharelinks">
+        
+<span class="twitter-share">
+    <a class="tweetthis" href="http://twitter.com/share?url=https%3A%2F%2Fwww.creditkarma.com%2Freviews%2Fbanking%2Fsingle%2Fid%2Fwells-fargo-bank&amp;text=Checkout+this+review+of+%22Wells+Fargo+Bank%22&amp;via=creditkarma" onclick="window.open(this.href,
+        'twitter14150721902462', 'width=570,height=410'); return false;">
+        <img alt="Twitter" src="https://creditkarmacdn-a.akamaihd.net/res/img/layout/article/social_links/twitter.png">
+    </a>
+</span>        <!--[if gt IE 8]><!-->
+    <span class="ccFblike"><fb:like href="https://www.creditkarma.com/reviews/banking/single/id/wells-fargo-bank" ref="article_main" show_faces="false" action="recommend" layout="button_count" width="300" height=""></fb:like></span>
+<!--<![endif]-->        <div class="g-plusone" data-size="medium" data-href="https://www.creditkarma.com/reviews/banking/single/id/wells-fargo-bank"></div>    </div>
+
+    
+<div class="communityStats">
+
+            <h2>Rating Distribution (209)</h2>
+
+        <ul id="givenStarsStats">
+            
+                <li id="star5" alt="5%" title="5%"><span><span style="width: 5%"></span></span><span class="percentageNum">5%</span></li>
+
+            
+                <li id="star4" alt="4%" title="4%"><span><span style="width: 4%"></span></span><span class="percentageNum">4%</span></li>
+
+            
+                <li id="star3" alt="4%" title="4%"><span><span style="width: 4%"></span></span><span class="percentageNum">4%</span></li>
+
+            
+                <li id="star2" alt="5%" title="5%"><span><span style="width: 5%"></span></span><span class="percentageNum">5%</span></li>
+
+            
+                <li id="star1" alt="82%" title="82%"><span><span style="width: 82%"></span></span><span class="percentageNum">82%</span></li>
+
+                    </ul>
+    
+
+</div>
+
+    <section id="search-reviews-container">
+    <header><h5>Search Reviews</h5></header>
+    <p>Know a specific product you’d like to review?</p>
+    <div id="search-reviews">
+   <form id="searchReviewsForm" action="https://www.creditkarma.com/reviews/search/" method="GET">
+       <input type="text" id="term" name="term" class="reg-input required len-search-title pre-populated" placeholder="Search for Reviews" value=""><div style="" class="validation-advice validation-failed" id="advice-term"></div>   </form>
+</div>
+
+</section>
+        <div class="clear" style="height: 20px"></div>
+    </div>
+<div class="clear"></div>
+<div class="reviews-disclaimer">
+    <p class="disclaimer-gray">
+                    </p>
+    <p class="disclaimer-gray">
+                    </p>
+</div>
+<section>
+    <div id="tracking pixel">
+        <img style="display:none" src="https://api.nanigans.com/event.php?app_id=69499&amp;type=visit&amp;name=_reviews_banking_single_id_wells-fargo-bank4lt">
+    </div>
+</section>
+
+                            </div>
+        </div>
+    </div>
+</div>
+<footer id="main-footer" role="contentinfo">
+    <div id="main-footer-inner">
+        <aside id="main-footer-side">
+            <h5>Connect &amp; Share</h5>
+            <a href="http://www.facebook.com/CreditKarma" target="_blank" rel="nofollow"><p><i class="icon-facebook"></i>Become a fan on <span class="footer-blue">Facebook</span></p></a>
+            <a href="http://www.twitter.com/CreditKarma" target="_blank" rel="nofollow"><p><i class="icon-twitter"></i>Follow us on Twitter <span class="footer-blue">@CreditKarma</span></p></a>
+            <a href="http://blog.creditkarma.com/feed" target="_blank" rel="nofollow"><p><i class="icon-blog"></i>Subscribe to our <span class="footer-blue">Blog</span></p></a>
+                        <a href="http://itunes.apple.com/us/app/credit-karma-mobile-free-credit/id519817714?ls=1&amp;mt=8" target="_blank" rel="nofollow"><p><i class="icon-ck-app"></i>Get the <span class="footer-blue">Free App for iPhone®</span></p></a>
+                                        <a href="https://play.google.com/store/apps/details?id=com.creditkarma.mobile" target="_blank" rel="nofollow"><p><i class="icon-android-app"></i>Get the <span class="footer-blue">Free App for Android™</span></p></a>
+                    </aside>
+        <div id="main-footer-content">
+            <div class="footer-section">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Company Info</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="/about" rel="nofollow">About Credit Karma</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://help.creditkarma.com">Help Center</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/about/press" rel="nofollow">In The News</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/about/security" rel="nofollow">Our Security Practices</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/careers" rel="nofollow">Careers</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/about/terms" rel="nofollow">Terms of Use</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/about/privacy" rel="nofollow">Privacy Policy</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://affiliate.creditkarma.com">Affiliate Network</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="footer-section">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Best Offers</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="/shop/creditcards">Best Credit Cards</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/shop/creditcards/capital_one">Capital One Credit Cards</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/shop/creditcards/chase">Chase Credit Card Offers</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/shop/creditcards/barclays">Barclaycard Credit Card Offers</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/creditcard/chaseFRE">Chase Freedom</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/shop/personal-loans">Personal Loans</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="footer-section">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Credit Resources</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="http://blog.creditkarma.com">Credit Karma Blog</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/resources">Financial Resources</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/myfinances/simulator/index/ref/tools">Credit Score Simulator</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/calculators/amortization">Mortgage Calculator</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/calculators/debtrepayment">Debt Repayment Calculator</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/reviews/credit-card">Credit Card Reviews</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/all/advice">Credit Advice</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="footer-section">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>More Info</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="/faq/what-is-a-good-credit-score">What is a Good Credit Score?</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/faq/how-to-improve-your-credit-health">How to Improve Your Credit Health</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/credit-monitoring">Free Credit Monitoring</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/credit-report-card">Free Credit Report Card</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/auto-insurance-score">Auto Insurance Score</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+                <div id="footer-certified" class="certified-float-left">
+
+    <div id="d33c9a59-5cf9-4c4c-892c-18930ef0defa" class="certified-block">
+        <script type="text/javascript" src="//privacy-policy.truste.com/privacy-seal/Credit-Karma/asc?rid=d33c9a59-5cf9-4c4c-892c-18930ef0defa"></script>
+        <a href="//privacy.truste.com/privacy-seal/Credit-Karma/validation?rid=397b697b-5c32-4826-828c-0b36aee9fb6c" title="TRUSTe online privacy certification" target="_blank">
+            <img src="//privacy-policy.truste.com/privacy-seal/Credit-Karma/seal?rid=397b697b-5c32-4826-828c-0b36aee9fb6c" alt="TRUSTe online privacy certification">
+        </a>
+    </div>
+
+    <!-- Begin DigiCert site seal HTML and JavaScript -->
+    <div id="DigiCertClickID_0EscSmSQ" class="digicert certified-block" data-language="en_US"><div id="DigiCertClickID_0EscSmSQSeal" style="text-decoration: none; text-align: center; display: block; vertical-align: baseline; font-size: 100%; font-style: normal; text-indent: 0px; line-height: 1; width: auto; margin: 0px auto; padding: 0px; border: 0px; background-color: transparent; position: relative; top: 0px; right: 0px; bottom: 0px; left: 0px; clear: both; float: none; cursor: default; background-position: initial initial; background-repeat: initial initial;"><img src="//seal.digicert.com/seals/cascade/?s=0EscSmSQ,10,s,www.creditkarma.com" alt="DigiCert Seal" style="text-decoration: none; text-align: center; display: block; vertical-align: baseline; font-size: 100%; font-style: normal; text-indent: 0px; line-height: 1; width: auto; margin: 0px auto; padding: 0px; border: 0px; background-color: transparent; position: relative; top: 0px; right: 0px; bottom: 0px; left: 0px; clear: both; float: none; cursor: pointer; background-position: initial initial; background-repeat: initial initial;"></div></div>
+    <script type="text/javascript">
+        var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_0EscSmSQ", "10", "s", "black", "0EscSmSQ"]);(function(){var cid=document.createElement("script");cid.async=true;cid.src="//seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
+    </script><script async="" src="//seal.digicert.com/seals/cascade/seal.min.js"></script>
+    <!-- End DigiCert site seal HTML and JavaScript -->
+
+</div>
+
+            <div id="footer-copyright">
+                <small>Copyright© 2007–2014 Credit Karma™, Inc. Credit Karma is a registered trademark of Credit Karma, Inc. All Rights Reserved. Product name, logo, brands, and other trademarks featured or referred to within Credit Karma are the property of their respective trademark holders. This site may be compensated through third party advertisers.</small>
+                <small>iPhone is a trademark of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</small>
+                <small>Android is a trademark of Google Inc.</small>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3256920-1']);
+    _gaq.push(['_setCustomVar', 4, 'Desktop Yodlee User', 'false', 1]);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_trackPageLoadTime']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-2.newrelic.com","licenseKey":"248e088a40","applicationID":"2996349","transactionName":"NVFVYhFSWUsDAUEKDgwbdEMQR1hVTRBQFQgHQ0QZAVJZUwsMUkxL","queueTime":0,"applicationTime":571,"ttGuid":"","agentToken":"","atts":"GRZWFFlISkU=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-476.min.js"}</script>
+
+<script src="https://js-agent.newrelic.com/nr-476.min.js"></script><script type="text/javascript" src="https://beacon-2.newrelic.com/1/248e088a40?a=2996349&amp;pl=1415072189095&amp;v=476.c73f3a6&amp;to=NVFVYhFSWUsDAUEKDgwbdEMQR1hVTRBQFQgHQ0QZAVJZUwsMUkxL&amp;ap=571&amp;be=1387&amp;fe=984&amp;dc=716&amp;f=%5B%22err%22,%22xhr%22,%22stn%22%5D&amp;perf=%7B%22timing%22:%7B%22of%22:1415072189095,%22n%22:0,%22dl%22:1307,%22di%22:2102,%22ds%22:2103,%22de%22:2326,%22dc%22:2371,%22l%22:2371,%22le%22:2390,%22f%22:284,%22dn%22:287,%22dne%22:287,%22c%22:287,%22ce%22:610,%22s%22:287,%22rq%22:610,%22rp%22:1229,%22rpe%22:1304%7D,%22navigation%22:%7B%7D%7D&amp;at=GRZWFFlISkU%3D&amp;jsonp=NREUM.setToken"></script></body></html>

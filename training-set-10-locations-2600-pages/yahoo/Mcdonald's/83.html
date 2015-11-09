@@ -1,0 +1,527 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>McDonald's</title>
+        <meta name="description" content="McDonals Pakistan"><meta name="generator" content="McDonald's - Content Management System"><meta name="keywords" content="mcdonald's pakistan,abc,raza, naveed, zille abaas,"><meta name="robots" content="index"><link href="/nodes/promoted.rss" type="application/rss+xml" rel="alternate" title="RSS 2.0"><link href="/favicon.ico" type="image/x-icon" rel="icon"><link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">        
+	<link rel="stylesheet" type="text/css" href="/css/global.css">
+	<link rel="stylesheet" type="text/css" href="/css/queryLoader.css">
+
+	<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/bramerz.js"></script>
+	<script type="text/javascript" src="/js/queryLoader.js"></script>
+<script type="text/javascript" src="/js/croogo.js"></script><script type="text/javascript">
+//<![CDATA[
+$.extend(Croogo, {"basePath":"\/","params":{"controller":"pages","action":"display","named":[]}});
+//]]>
+</script>       
+ <script type="text/javascript">
+ /*
+ * Author: Rob Reid
+ * CreateDate: 20-Mar-09
+ * Description: Little helper function to return details about IE 8 and its various compatibility settings either use as it is
+ * or incorporate into a browser object. Remember browser sniffing is not the best way to detect user-settings as spoofing is
+ * very common so use with caution.
+*/
+function IEVersion(){
+	var _n=navigator,_w=window,_d=document;
+	var version="NA";
+	var na=_n.userAgent;
+	var ieDocMode="NA";
+	var ie8BrowserMode="NA";
+	// Look for msie and make sure its not opera in disguise
+	if(/msie/i.test(na) && (!_w.opera)){
+		// also check for spoofers by checking known IE objects
+		if(_w.attachEvent && _w.ActiveXObject){		
+			// Get version displayed in UA although if its IE 8 running in 7 or compat mode it will appear as 7
+			version = (na.match( /.+ie\s([\d.]+)/i ) || [])[1];
+			// Its IE 8 pretending to be IE 7 or in compat mode		
+			if(parseInt(version)==7){				
+				// documentMode is only supported in IE 8 so we know if its here its really IE 8
+				if(_d.documentMode){
+					version = 8; //reset? change if you need to
+					// IE in Compat mode will mention Trident in the useragent
+					if(/trident\/\d/i.test(na)){
+						ie8BrowserMode = "Compat Mode";
+					// if it doesn't then its running in IE 7 mode
+					}else{
+						ie8BrowserMode = "IE 7 Mode";
+					}
+				}
+			}else if(parseInt(version)==8){
+				// IE 8 will always have documentMode available
+				if(_d.documentMode){ ie8BrowserMode = "IE 8 Mode";}
+			}
+			// If we are in IE 8 (any mode) or previous versions of IE we check for the documentMode or compatMode for pre 8 versions			
+			ieDocMode = (_d.documentMode) ? _d.documentMode : (_d.compatMode && _d.compatMode=="CSS1Compat") ? 7 : 5;//default to quirks mode IE5				   			
+		}
+	}
+				 
+	return {
+		"UserAgent" : na,
+		"Version" : version,
+		"BrowserMode" : ie8BrowserMode,
+		"DocMode": ieDocMode
+	}			
+}
+ </script>	  <script>
+	  $(document).ready(function() {
+		  // Handler for .ready() called.
+		  /*$('a[href="http://mcdonalds.com.pk/view_popup.html"]').click(function(e) {
+  e.preventDefault();
+  window.open("http://mcdonalds.com.pk/award_pop.html", "Golden Arch Award",'width=600,height=300');*/
+//});
+
+		});
+	  </script>
+		<link rel="stylesheet" type="text/css" href="/css/popup.css">
+		<script type="text/javascript" src="/js/bpopup-0.6.0-modified.js"></script>
+		<script type="text/javascript">
+			function showPopup()
+			{
+				$('#popup_banner').show();
+				$('#popup_video').hide();
+				$('#modalpopup').bPopup({
+					fadeSpeed:1, 
+					follow:[true,true,true], 
+					opacity:0.6, 
+					modalClose:false, 
+					modalColor : '#EFEFEF', 
+					position:['auto','auto'],
+					amsl:0,
+					escClose:false,
+					scrollBar:false				
+				});		
+			}
+			
+			function showpressrelease()
+			{
+				window.location = "http://mcdonalds.com.pk/products/view/press-release";				
+			}
+			
+			function showvideo()
+			{
+				//$('#popup_banner').hide();
+				$('#popup_video').attr('src','http://youtube.googleapis.com/v/8sJvN1KSpNQ&autoplay=1');
+				$('#popup_video').show();
+				return false;
+			}
+			
+			function hidevideo()
+			{
+				//$('#popup_banner').hide();
+				$('#popup_video').remove();
+				return false;
+			}
+		
+			$(document).ready(function(){
+ 			});		
+		</script>
+      </head> 
+      <body>
+          <div class="preloader" id="bss">
+              <div id="bda" style="position:absolute; left:0px; top:250px; width:100%; height:156px; vertical-align:middle; overflow:hidden" align="center">
+                  <img alt="" class="loadpic" src="/img/n2.png">
+              </div>
+              <div id="bda2" style="position: absolute; left: 0px; top: 250px; width: 100%; height: 49.1151560284592px; vertical-align: middle; overflow: hidden; display: block;" align="center">
+                  <img alt="" src="/img/mc-n.png">
+              </div>
+          </div>
+ 
+          <div id="bbb" style="display: none;">
+              <div class="topHeaderMain">
+                  <div class="logo"><a href="/"><img alt="" src="/img/logo.png"></a></div>
+                <div class="navBox" id="mainnave" style="margin-left: 1px; left: 216px; background-color: rgb(147, 3, 3); top: 0px; position: absolute; z-index: 9999; overflow: hidden; visibility: visible; width: 100%;">
+    <div onmouseover="chngbgover('#home');" onmouseout="chngbgout('#home');" id="home" onclick="window.location='/'" style="float: left; width: 94px; vertical-align: bottom; height: 128px;" class="menuTabActive"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">home</span></div>
+    <div id="1" style="display: block; float: left; width: 94px; vertical-align: bottom; height: 128px;">
+        <div onmouseover="chngbgover('#1-title');" onmouseout="chngbgout('#1-title');" id="1-title" style="float: left; width: 94px; vertical-align: bottom; height: 128px;" class="menuTabNormal" onclick="window.location='/page/our-food'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">our food</span></div>
+        <div onmouseover="chngbgover('#sub-1');" onmouseout="chngbgout('#sub-1');" id="sub-1" style="float: left; width: 94px; vertical-align: bottom; height: 128px;" class="menuTabNormal" onclick="window.location='/products/view/breakfast'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">menu</span></div>
+        <ul style="position: absolute; width: 0px; left: 282px; overflow: hidden; height: 130px;" id="joomla" class="joomla">
+            <li>
+                <ul style="position: absolute; width: 1020px;" id="moveablemunu">
+                    <li>
+                        <div onmouseover="chngbgover('#sub-1a');" onmouseout="chngbgout('#sub-1a');" id="sub-1a" style="width: 98px; float: left; visibility: hidden; vertical-align: bottom; height: 128px; display: block;" class="menuTabNormal" onclick="window.location='/products/view/breakfast'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">breakfast</span></div>
+                        <div onmouseover="chngbgover('#sub-2a');" onmouseout="chngbgout('#sub-2a');" id="sub-2a" style="width: 98px; float: left; visibility: hidden; vertical-align: bottom; height: 128px; display: block;" class="menuTabNormal" onclick="window.location='/products/view/favourites'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">favourites</span></div>
+                         <div onmouseover="chngbgover('#sub-3a');" onmouseout="chngbgout('#sub-3a');" id="sub-3a" style="width: 98px; float: left; visibility: hidden; vertical-align: bottom; height: 128px; display: block;" class="menuTabNormal" onclick="window.location='/products/view/extra-value-meals'"> <span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">extra <br> value <br> meals</span></div>
+
+                        <div onmouseover="chngbgover('#sub-4a');" onmouseout="chngbgout('#sub-4a');" id="sub-4a" style="width: 98px; float: left; visibility: hidden; vertical-align: bottom; height: 128px; display: block;" class="menuTabNormal" onclick="window.location='/products/view/happy-menu'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">happy<br>menu</span></div>
+                         <div onmouseover="chngbgover('#sub-5a');" onmouseout="chngbgout('#sub-5a');" id="sub-5a" style="width: 98px; float: left; visibility: hidden; vertical-align: bottom; height: 128px; display: block;" class="menuTabNormal" onclick="window.location='/products/view/happy-meals'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">happy<br>meals</span></div>
+                        <div onmouseover="chngbgover('#sub-6a');" onmouseout="chngbgout('#sub-6a');" id="sub-6a" style="width: 98px; float: left; visibility: hidden; vertical-align: bottom; height: 128px; display: block;" class="menuTabNormal" onclick="window.location='/products/view/desserts'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">desserts</span></div>
+                        <div onmouseover="chngbgover('#sub-7a');" onmouseout="chngbgout('#sub-7a');" id="sub-7a" style="width: 110px; float: left; visibility: hidden; vertical-align: bottom; height: 128px; display: block;" class="menuTabNormal" onclick="window.location='/products/view/beverages'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">drinks</span></div>
+                        <div onmouseover="chngbgover('#sub-8a');" onmouseout="chngbgout('#sub-8a');" id="sub-8a" style="width: 116px; float: left; visibility: hidden; vertical-align: bottom; height: 128px; display: block;" class="menuTabNormal" onclick="window.location='/products/view/promotions'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 6px; padding-top: 28px; float: left; text-align: left;">promotions</span></div>
+						<div onmouseover="chngbgover('#sub-9a');" onmouseout="chngbgout('#sub-9a');" id="sub-9a" style="width: 98px; float: left; visibility: hidden; vertical-align: bottom; height: 128px; display: block;" class="menuTabNormal" onclick="window.location='/products/view/menu-pricelist'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">menu<br>price list</span></div>
+                    </li></ul> 
+            </li><li style="position: absolute; height: 130px; left: -2px; top: 0px; visibility: hidden;" id="moveablemunuleft">
+                &nbsp; &nbsp;&nbsp;
+            </li>
+            <li style="position: absolute; height: 130px; left: 498px; top: 1px;" id="moveablemunuright">
+                &nbsp; &nbsp;&nbsp;
+            </li>
+            </ul>
+        <div onmouseover="chngbgover('#sub-2');" onmouseout="chngbgout('#sub-2');" id="sub-2" style="float: left; width: 114px; vertical-align: bottom; height: 128px; display: block;" class="menuTabNormal" onclick="window.location='/page/quality-assurance'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">quality <br>assurance</span></div>
+        <div onmouseover="chngbgover('#sub-3');" onmouseout="chngbgout('#sub-3');" id="sub-3" style="float: left; width: 94px; vertical-align: bottom; height: 128px;" class="menuTabNormal" onclick="window.location='/page/nutrition'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">nutrition</span></div>
+       <!-- <div onmouseover="chngbgover('#sub-4');" onmouseout="chngbgout('#sub-4');" id="sub-4" style="float:left;" class="menuTabNormal" onclick="window.location=''"><span>halal <br/>certification</span></div>-->
+    </div>
+    <div id="2" style="display: block; float: left; height: 128px; width: 94px; vertical-align: bottom;">
+        <div onmouseover="chngbgover('#2-title');" onmouseout="chngbgout('#2-title');" id="2-title" style="float: left; width: 94px; vertical-align: bottom; height: 128px;" class="menuTabNormal" onclick="window.location='/page/kids-families'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">kids &amp; <br>families</span></div>
+        <div onmouseover="chngbgover('#bp');" onmouseout="chngbgout('#bp');" id="bp" style="float: left; width: 94px; vertical-align: bottom; height: 128px;" class="menuTabNormal" onclick="window.location='/page/birthday-parties'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">birthday<br>parties</span></div>
+        <div onmouseover="chngbgover('#pkg');" onmouseout="chngbgout('#pkg');" id="pkg" style="float: left; width: 94px; vertical-align: bottom; height: 128px;" class="menuTabNormal" onclick="window.location='/page/package'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">packages</span></div>
+    </div>
+
+    <div id="3" style="display: block; float: left; height: 128px; width: 94px; vertical-align: bottom;">
+        <div onmouseover="chngbgover('#3-title');" onmouseout="chngbgout('#3-title');" id="3-title" style="float: left; width: 94px; vertical-align: bottom; height: 128px;" class="menuTabNormal" onclick="window.location='/page/fun-zone'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">fun zone</span></div>
+        <div onmouseover="chngbgover('#tvcs');" onmouseout="chngbgout('#tvcs');" id="tvcs" style="float: left; width: 94px; vertical-align: bottom; height: 128px;" class="menuTabNormal" onclick="window.location='/media/tvcs/'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">TVCs</span></div>
+        <div onmouseover="chngbgover('#jingles');" onmouseout="chngbgout('#jingles');" id="jingles" style="float: left; width: 94px; vertical-align: bottom; height: 128px;" class="menuTabNormal" onclick="window.location='/media/jingles/'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">radio <br>jingles</span></div>
+        <div onmouseover="chngbgover('#wallpaper');" onmouseout="chngbgout('#wallpaper');" id="wallpaper" style="float: left; width: 124px; vertical-align: bottom; height: 128px; display: block;" class="menuTabNormal" onclick="window.location='/media/wallpapers/'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">wallpapers</span></div>
+        
+        <!--<div onmouseover="chngbgover('#ringtones');" onmouseout="chngbgout('#ringtones');" id="ringtones" style="float:left; " class="menuTabNormal" onclick="window.location=''"><span>ring tones</span></div>-->
+    </div>
+    <div id="4" style="display: block; float: left; height: 128px; width: 114px; vertical-align: bottom;">
+        <div onmouseover="chngbgover('#4-title');" onmouseout="chngbgout('#4-title');" id="4-title" style="float: left; width: 114px; vertical-align: bottom; height: 128px; display: block;" class="menuTabNormal" onclick="window.location='/page/mc-delivery'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">McDelivery</span></div>
+
+
+        
+    </div>
+
+    <div id="5" style="display: block; float: left; height: 128px; width: 94px; vertical-align: bottom;">
+        <div onmouseover="chngbgover('#5-title');" onmouseout="chngbgout('#5-title');" id="5-title" style="float: left; width: 94px; vertical-align: bottom; height: 128px;" class="menuTabNormal" onclick="window.location='/page/about'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">about us</span></div>
+        <div onmouseover="chngbgover('#sub-5aa');" onmouseout="chngbgout('#sub-5aa');" id="sub-5aa" style="float: left; width: 124px; vertical-align: bottom; height: 128px; display: block;" class="menuTabNormal" onclick="window.location='/page/corporate-information'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">corporate<br>information</span></div>
+        <div onmouseover="chngbgover('#sub-5bb');" onmouseout="chngbgout('#sub-5bb');" id="sub-5bb" style="float: left; width: 124px; vertical-align: bottom; height: 128px; display: block;" class="menuTabNormal" onclick="window.location='/page/mcdonalds-pakistan-history'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">McDonald's<br>Pakistan</span></div>
+        <div onmouseover="chngbgover('#sub-5cc');" onmouseout="chngbgout('#sub-5cc');" id="sub-5cc" style="float: left; width: 139px; vertical-align: bottom; height: 128px; display: block;" class="menuTabNormal" onclick="window.location='/page/corporate-social-responsibility'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">social<br>responsibility</span></div>
+        <div onmouseover="chngbgover('#sub-5dd');" onmouseout="chngbgout('#sub-5dd');" id="sub-5dd" style="float: left; width: 94px; vertical-align: bottom; height: 128px;" class="menuTabNormal" onclick="window.location='/products/view/press-release'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">press<br>releases</span></div>
+    </div>
+    <div id="6" style="display: block; float: left; height: 128px; width: 94px; vertical-align: bottom;">
+        <div onmouseover="chngbgover('#6-title');" onmouseout="chngbgout('#6-title');" id="6-title" style="float: left; width: 94px; vertical-align: bottom; height: 128px;" class="menuTabNormal" onclick="window.location='/page/careers'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">careers</span></div>
+               <div onmouseover="chngbgover('#sub-6b');" onmouseout="chngbgout('#sub-6b');" id="sub-6b" style="float: left; width: 124px; vertical-align: bottom; height: 128px; display: block;" class="menuTabNormal" onclick="window.location='/page/our-values'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">our values</span></div>
+                        <div onmouseover="chngbgover('#sub-6e');" onmouseout="chngbgout('#sub-6e');" id="sub-6e" style="float: left; width: 94px; vertical-align: bottom; height: 128px;" class="menuTabNormal" onclick="window.location='/page/join-us'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">join us</span></div>
+    </div>
+     <div id="7" style="display: block; float: left; height: 128px; width: 114px; vertical-align: bottom;">
+        <div onmouseover="chngbgover('#7-title');" onmouseout="chngbgout('#7-title');" id="7-title" style="float: left; width: 114px; vertical-align: bottom; height: 128px; display: block;" class="menuTabNormal" onclick="window.location='/page/ronald-mcdonald'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">Ronald<br>McDonald</span></div>
+        <div onmouseover="chngbgover('#mcd-world');" onmouseout="chngbgout('#mcd-world');" id="mcd-world" style="float: left; width: 124px; vertical-align: bottom; height: 128px; display: block;" class="menuTabNormal" onclick="window.location='/page/ronald-mcdonald-world'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">Ronald McDonald world</span></div>
+        <div onmouseover="chngbgover('#ronaldsgallery');" onmouseout="chngbgout('#ronaldsgallery');" id="ronaldsgallery" style="float: left; width: 134px; vertical-align: bottom; height: 128px; display: block;" class="menuTabNormal" onclick="window.location='/media/ronaldsgallery'"><span style="font-size: 14px; font-family: 'Arial black', Helvetica, sans-serif; line-height: 1.2em; margin-left: 10px; padding-top: 28px; float: left; text-align: left;">Ronald's <br>image <br> gallery</span></div>
+     </div>
+</div>
+              </div>
+              <div class="clr"></div>
+              <div align="center" style="position:absolute; top:120px; left:15px">
+
+                  <script type="text/javascript">
+                      var wWidth=parseInt($(window).width());
+                      var wHeight=parseInt($(window).height());
+					 // alert($(window).width()/$(window).height());
+                      var wWidth2=parseInt($(window).width())+'px';
+                      var wHeight2=parseInt($(window).height()-150)+'px';
+                      var panels=4;
+                      var mainLeft=0;
+                      var width=wWidth*panels;
+                      var imageauto='-'+(width-wWidth)+'px';
+                      var imageauto2='0px';
+                      var left=width-wWidth;
+                      var btnPosition=mainLeft-15;
+                      var btnTop=wHeight/7;
+                      var btnRight=wWidth-33.5;
+                      var autoSlidePanels=panels*2;
+                      var setloaderval=0;
+                      //alert('Height '+wHeight+ '' +'width '+wWidth);
+                      var main_width_banner='1390px';
+
+                      var oneloader=window.setInterval('myloader()',100);
+                      function myloader(){
+                          if($('#bda2').css('height')=='50px'){
+
+                              window.clearInterval(oneloader);
+                          }
+                          if(setloaderval==0){
+                              $('#bda2').animate({"height":"-=1px"},50,function(){
+                              });
+                          }else{
+
+                          }
+                      }
+                      $('#bbb').hide();
+                      $(window).bind("load", function() {
+                          setloaderval=2;
+                          $('#bda2').animate({"height":"-=200px"},1000,function(){
+                              $('#bss').hide("slow");
+                              $('#bbb').show();
+                          });
+
+                      });
+                      $(function(){
+                          $("#bannerMain").css("left",mainLeft-10+'px');
+                          $("#bannerMain").css("top",'128px');
+                          $("#bannerMain").css("width",wWidth2);
+                          $("#bannerMain").css("height",wHeight2);
+                          $("#left").css("left",btnPosition+'px');
+                          $("#left").css("top",btnTop+'px');
+                          $("#left").css("opacity",'0.8');
+                          $("#right").css("left",btnRight+'px');
+                          $("#right").css("top",btnTop+'px');
+                          $("#right").css("opacity",'0.8');
+                          $("td").css("width",wWidth2);
+                          $("td").css("height",wHeight2);
+						  var heightvswits=($(window).width()/$(window).height())-0.1;
+                          var imgwidth=parseInt(wWidth/heightvswits);
+                          var imgmainwidth=imgwidth+'px';
+                          $("td img").css("width",imgmainwidth);
+						 // alert(imgmainwidth);
+                          $("#block").css({"left": +-+left+'px',"width": width+'px',"height":wHeight});
+                      });
+                      var myslider = 0;
+                      myslider=window.setInterval('swapImages()', 6000);
+                      function swapImages(){
+                          var gg=$("#block").css('left');
+                          var bda=parseInt(gg.replace('px',''));
+                          if(bda>=0){
+                              $("#block").css('left',imageauto);
+                              $("#block").animate({"left": "+="+wWidth},2000,'swing', function(ds){
+
+                              });
+
+                          }else{
+
+                              $("#block").animate({"left": "+="+wWidth},2000, 'swing', function(ds){
+                              });
+                          }
+                      }
+                  </script>
+                  <style type="text/css">
+                      .block {
+                          position:absolute;
+                          color:red;
+                      }
+                  </style>
+                  <div style="width:100%; position:fixed; overflow:hidden">
+                      <div id="bannerMain" style="position: fixed; overflow: hidden; left: -10px; top: 128px; width: 1004px; height: 488px;">
+                          <div class="block" id="block" style="left: -3012px; width: 4016px; height: 638px;">
+                              <table>
+                                  <tbody><tr>
+                                                                              <td valign="middle" align="center" style="width: 1004px; height: 488px;">
+                                            <a href="http://www.mcdonalds.com.pk/products/view/breakfast">  <img alt="" src="/banners/52d633a4-b03c-4a0a-8197-4b4c4812823f-HomePage3.jpg" style="width: 681px;"></a>
+                                                                              </td>
+                                                                              <td valign="middle" align="center" style="width: 1004px; height: 488px;">
+                                            <a href="http://www.mcdonalds.com.pk/products/view/promotions">  <img alt="" src="/banners/5440ed9a-3f98-423c-b2a8-48044812823f-M HomePage.jpg" style="width: 681px;"></a>
+                                                                              </td>
+                                                                              <td valign="middle" align="center" style="width: 1004px; height: 488px;">
+                                            <a href="http://www.mcdonalds.com.pk/products/view/promotions">  <img alt="" src="/banners/ M HomePage.jpg" style="width: 681px;"></a>
+                                                                              </td>
+                                                                              <td valign="middle" align="center" style="width: 1004px; height: 488px;">
+                                            <a href="http://www.mcdonalds.com.pk/products/view/breakfast">  <img alt="" src="/banners/HomePage3.jpg" style="width: 681px;"></a>
+                                                                              </td>
+                                    
+                                  </tr>
+                              </tbody></table>
+                          </div>
+                      </div>
+                  </div>
+                  <span id="testme"></span>
+                  <input style="position: absolute; z-index: 9999; outline: none; left: -15px; top: 91.14285714285714px; opacity: 0.8;" type="image" src="/img/left_button.png" id="left" name="left" value="left">
+                  <input style="position: absolute; z-index: 9999; outline: none; left: 970.5px; top: 91.14285714285714px; opacity: 0.8;" type="image" src="/img/right_button.png" id="right" name="right" value="right">
+                  <script type="text/javascript">
+                      $("#right").click(function(){
+                          window.clearInterval(myslider);
+                          $("#right").attr("disabled", true);
+                          var gg=$("#block").css('left');
+                          var bda=parseInt(gg.replace('px',''));
+                          if(bda>=0){
+                              if(bda>0){
+                                  $("#block").css('left',imageauto);
+                              }
+                              $("#block").css('left',imageauto);
+                              $("#block").animate({"left": "+="+wWidth},2000, 'swing', function(ds){
+                                  $("#right").attr("disabled", false);
+                              });
+                          }else{
+                              $("#block").animate({"left": "+="+wWidth},2000, 'swing', function(ds){
+                                  $("#right").attr("disabled", false);
+                              });
+                          }
+                          myslider=window.setInterval('swapImages()', 5000);
+                      });
+                      $("#left").click(function(){
+                          window.clearInterval(myslider);
+                          $("#left").attr("disabled", true);
+                          var gg=$("#block").css('left');
+                          var bda=gg.replace('px','');
+                          if(bda=='-'+left){
+                              $("#block").css('left',imageauto2);
+
+                              $("#block").animate({"left": "-="+wWidth},2000, 'swing', function(ds){
+                                  $("#left").attr("disabled", false);
+                              });
+                          }else{
+                              $("#block").animate({"left": "-="+wWidth},2000, 'swing', function(ds){
+                                  $("#left").attr("disabled", false);
+                              });
+                          }
+                          myslider=window.setInterval('swapImages()', 5000);
+                      });
+                  </script>
+                  <script>
+				  var myclesr='';
+function submitforms(){
+
+	if($('#input_name').val()==''){
+		$('#input_name').css('background','yellow');
+	}else if($('#input_email').val()==''){
+		$('#input_name').css('background','white');
+		$('#input_email').css('background','yellow');		
+	}else if($('#input_email').val()!='' && ($('#input_email').val().indexOf(".") != 13) && ($('#input_email').val().indexOf("@") <= 0)){
+		$('#input_name').css('background','white');
+		$('#input_email').css('background','yellow');
+	}else if($('#input_phone').val()==''){
+		$('#input_name').css('background','white');
+		$('#input_email').css('background','white');
+		$('#input_phone').css('background','yellow');
+	}else {
+		$('#input_name').css('background','white');
+		$('#input_email').css('background','white');
+		$('#input_phone').css('background','white');
+		  $('#kickme').hide();
+		 $('#yesitis').html('<h3 style="font-size: 17px;line-height: 20px;padding-right: 22px;padding-top: 87px;text-align: justify;">Congratulations! you have entered into our lucky draw.<br> You will be contacted if you win. Thank you for your participation.</h3><div style="padding-left:100px;"><input type="button" onclick="bbgsjah();" class="sumitlukcy" value="Ok" /></div>');
+		 $.ajax({
+                  type: "POST",
+                  url: "http://www.mcdonalds.com.pk/",
+                  data: "submitform=yes&user_name="+$('#input_name').val()+"&user_email="+$('#input_email').val()+"&user_phone="+$('#input_phone').val()+"",
+                  success: function(msg){
+					  //alert(msg);
+                
+                  }
+                  });	
+	}
+	}
+	function bbgsjah(){
+		$('#mskinf').hide();
+		$('#mskinf2').hide();
+		window.clearInterval(myclesr);
+	};
+$(function(){/*
+$("#input_phone").keydown(function(event) {
+        // Allow only backspace and delete
+        if ( event.keyCode == 46 || event.keyCode == 8 ) {
+            // let it happen, don't do anything
+        }
+        else {
+            // Ensure that it is a number and stop the keypress
+            if (event.keyCode < 48 || event.keyCode > 57 ) {
+                event.preventDefault(); 
+            }   
+        }
+    });
+
+*/})
+</script>
+              </div>
+                 
+              <!-- Footer Start -->
+              <div class="fottor">
+                   <div class="searchBox"> 
+	  <form style="margin:0px; margin-top:4px;" action="http://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_blank" id="cse-search-box">
+		<input type="hidden" name="si" value="88200514">
+		<input type="hidden" name="pid" value="r">
+		<input type="hidden" name="n" value="0">
+		<input type="hidden" name="_charset_" value="">
+		<input type="hidden" name="bcd" value="÷">
+		<input type="text" name="query" size="15" class="searchInput"> 
+		<input type="submit" value="search" class="searchbtn">
+		</form>
+   
+    </div>
+    
+                    <div class="footerNav">
+    <a href="/faqs">FAQs</a> | <a href="/contact">CONTACT US</a> | <a href="/page/site-map" rel="controller:nodes/action:view/type:page/slug:site-map">SITEMAP</a> | <a href="/page/privacy-policy" rel="controller:nodes/action:view/type:page/slug:privacy-policy">PRIVACY POLICY</a> | <a href="/page/terms-conditions" rel="controller:nodes/action:view/type:page/slug:terms-conditions">TERMS &amp; CONDITIONS</a> | <a href="/contacts/gmap">LOCATE US</a></div>
+      <script type="text/javascript">
+          $(function (){
+              $('.callUs img:eq(0)').click(function(){
+                  window.location="/page/mc-delivery";
+        });
+        $('.callUs').css('cursor','pointer');
+		$('.callUs').append('<a href="https://www.facebook.com/McDonaldsPK?fref=ts" target="_blank" ><img src="/img/facebook.png" style="width: 30px; display: inline;"></a>');
+    });
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15340717-17']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>                                      <div class="callUs" style="cursor: pointer;">
+                                          <img alt="" src="/img/phon.png"><a href="https://www.facebook.com/McDonaldsPK?fref=ts" target="_blank"><img src="/img/facebook.png" style="width: 30px; display: inline;"></a></div>
+                <div class="soundBox"><a href="#"></a></div>
+            </div>
+            <!-- Footer End -->
+        </div>
+<style>
+		.myinouts{
+			background-color: #fff;
+			border: medium none;
+			color: #000;
+			float: left;
+			font-family:Arial, Helvetica, sans-serif;
+			font-size: 14px;
+			height: 28px;
+			line-height: 28px;
+			margin: 4px 0;
+			padding: 0 10px;
+			width: 192px;
+			
+		}
+		.bfs {
+			padding:3px;
+			}
+		.bfs div{
+			padding:3px 0px 0px 0;
+			text-align:right;
+		}
+		.sumitlukcy{background:#E8B51B;
+    border: medium none;
+    color: #9C0305;
+	font-family:Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    float: left;
+    font-size: 11px;
+    height: 26px;
+    line-height: 28px;
+	font-weight:bold;
+	font-size:17px;
+	margin-left:11px;
+	margin-top:40px;
+   
+    padding: 0;
+    width: 99px;
+		}
+		.bfs div{
+			font-family:Arial, Helvetica, sans-serif;
+			padding:0px;
+		}
+		.bfs h3{
+			padding:0px;
+			height:17px;
+		}
+		</style>
+
+		<!--         <div style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:9998; background:#000; opacity:0.5;" id="mskinf"></div>
+          <div style="position:fixed; top:150px; left:35%; width:370px;height:350px; background:#000;  z-index:9999; color:#fff;" id="mskinf2">
+          	<div style="padding:16px 0 62px 29px;font-family:Arial, Helvetica, sans-serif;  color: #E8B51B;" id="yesitis"><h1>Enter Into Our Lucky Draw</h1></div>
+            <div id="kickme">
+            <div style="float:left; width:25%; padding:5px; text-align:right;"><h3>Name *</h3></div>
+            <div  style="float:left; width:65%; padding:5px; padding-top:0px;"><input class="myinouts" id="input_name"  type="text"  /></div>
+            <div style="clear:both"></div>
+            <div  style="float:left;width:25%; padding:5px;text-align:right;"><h3>eMail *</h3></div>
+            <div  style="float:left;width:65%; padding:5px;padding-top:0px;"><input class="myinouts" id="input_email" type="text" /></div>
+            <div style="clear:both"></div>
+            <div  style="float:left;width:25%; padding:5px;text-align:right;"><h3>Cell # *</h3></div>
+            <div  style="float:left;width:65%; padding:5px;padding-top:0px;"><input class="myinouts" id="input_phone"  type="text"    ></div>
+            <div style="padding-left:60px;"><input type="button" onclick="$('#mskinf').hide();$('#mskinf2').hide();" class="sumitlukcy" value="Skip" /></div>
+             <div style="padding-left:20px;"><input type="button" onclick="submitforms();" class="sumitlukcy"  value="Submit" /></div>
+             </div>
+          </div>-->
+                          
+    
+    
+
+</body></html>

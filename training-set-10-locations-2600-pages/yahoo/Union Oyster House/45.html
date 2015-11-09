@@ -1,0 +1,1136 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:fb="http://ogp.me/ns/fb#" lang="en"><head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		
+		<meta name="msvalidate.01" content="4D2B8C9BB7938C711BBB29550803EA0C">
+		<meta name="y_key" content="48e0c2982f4e85c8">
+		<meta property="fb:app_id" content="196654250458879">
+		
+		
+		
+		
+		<meta name="keywords" content="Boston, Boston travel tips, Boston food, Boston cuisine, Boston culture">
+		<meta name="description" content="Tips on what to do, where to stay and what to eat in Boston.">
+		
+		
+		<meta name="title" content="Boston Travel Tips | U.S. News Travel">
+		<meta name="usn-stitial-fact" content="90% of the world's population lives in the northern hemisphere.">
+		<title>Boston Travel Tips | U.S. News Travel</title>
+		
+		
+		<link type="text/css" rel="stylesheet" media="all" href="http://static.travel.usnews.com/css/yahoo_global_reset.css">
+		<link type="text/css" rel="stylesheet" media="all" href="http://static.travel.usnews.com/css/travel_template.rr64.css">
+		<link type="text/css" rel="stylesheet" media="all" href="http://static.travel.usnews.com/css/tag_dest_deals.rr18.css">
+		<link type="text/css" href="http://static.travel.usnews.com/css/jQuery/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" media="all" href="http://static.travel.usnews.com/css/ads.rr22.css">
+		<link type="image/ico" rel="shortcut icon" href="http://static.travel.usnews.com/images/favicon.ico">
+		<link href="http://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet" type="text/css">
+		<script type="text/javascript" async="" src="//s3.amazonaws.com/ki.js/13866/2wY.js"></script><script id="facebook-jssdk" src="//connect.facebook.net/en_US/all.js#xfbml=1"></script><script type="text/javascript" async="" src="http://www.google-analytics.com/plugins/ga/inpage_linkid.js" id="undefined"></script><script src="http://edge.quantserve.com/quant.js" async="" type="text/javascript"></script><script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" src="http://static.travel.usnews.com/js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="http://static.travel.usnews.com/js/jquery-ui-1.10.4.custom.min.js"></script>
+		<script type="text/javascript" src="http://static.travel.usnews.com/js/jquery.leanModal.min.js"></script>
+		<script type="text/javascript" src="http://static.travel.usnews.com/js/jquery-extras.js"></script>
+		<script type="text/javascript" src="http://static.travel.usnews.com/js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="http://static.travel.usnews.com/js/jquery.textbox-hinter.min.js"></script>
+		<script type="text/javascript" src="http://static.travel.usnews.com/js/jquery.cluetip.min.js"></script>
+		<script type="text/javascript" src="http://static.travel.usnews.com/js/gmaps.rr11.js"></script>
+		<script type="text/javascript" src="http://static.travel.usnews.com/js/trvlutl.rr5.js"></script>
+		<script type="text/javascript" src="http://static.travel.usnews.com/js/hotelcr.rr1.js"></script>
+		<script type="text/javascript" src="http://static.travel.usnews.com/js/tdoubleClick.rr15.js"></script>
+		
+		
+		<script src="http://www.tripadvisor.com/partners/js/ewapi.js" type="text/javascript"></script>
+	
+		<!--Quantacast segements for ads -->
+		<script type="text/javascript"> 
+			var g_quantSegs="";
+			function qc_results(result) {
+				for (var i = 0; i < result.segments.length; i++) {
+					g_quantSegs += "qcseg=" + result.segments[i].id + ";";
+				}
+			}  
+		</script>
+		<script type="text/javascript" src="http://pixel.quantserve.com/api/segments.json?a=p-efoP1AkkGV9EU&amp;callback=qc_results"></script>
+		<!--END Quantacast segements for ads -->
+						
+		<script type="text/javascript">
+			// TA check rates popup
+			function checkRates_popup(hotel_id){
+				if (hotel_id == undefined) { return;}
+				var hotel_popup_id = '#hotel_popup_' + hotel_id;
+				var hotel_name = $(hotel_popup_id).children('a.hotel-name').html();
+				cr_popup(hotel_id, hotel_name, '.cr-map-btn', 42, -153, 'bottom');
+			};
+
+			//TA Popup under
+			var ta_pop_w;
+			function ta_flightwiget(f_dest) {
+				ta_popund_call('FLIGHTWIDGET',null,f_dest);	
+			}
+			
+			function ta_popund_call(f_pt,f_q,f_dest) {
+				var f_mcid;
+				var l_referrer = '';
+				if ( f_pt != 'FLIGHTWIDGET') {
+					if  ( l_referrer.indexOf('usnews.com') > -1 || l_referrer == '') {
+						if (f_pt == 'DESTINATION_PROFILE') {
+							f_mcid = 19176;
+						}
+						else if (f_pt == 'HOTEL_PROFILE') {
+							f_mcid = 19180;
+						}
+						else if (f_pt == 'HOTEL_LIST') {
+							f_mcid = 19178;
+						}
+					}	
+					else {
+						if (f_pt == 'DESTINATION_PROFILE') {
+							f_mcid = 19175;
+						}
+						else if (f_pt == 'HOTEL_PROFILE') {
+							f_mcid = 19179;
+						}
+						else if (f_pt == 'HOTEL_LIST') {
+							f_mcid = 19177;
+						}
+					}
+				}
+				else if (f_pt == 'FLIGHTWIDGET') {
+					f_mcid = 19174;
+				}
+				else {
+					return;
+				}
+				
+				if (f_q != undefined) {
+					ta_pop_w = TA_create_exit_window(f_mcid,{q:f_q});
+				}
+				else if (f_dest != undefined) {
+					ta_pop_w = TA_create_exit_window(f_mcid,{dest:f_dest});
+				}	
+			}
+			
+		</script>
+		<script>
+		//global map variables
+		//Google variables
+		var gl_g_markers;
+		var gl_g_map;
+		var gl_g_infoWindow;
+		
+		//OpenstreetMap variables
+		var gl_o_map;
+		var gl_o_markers;
+		
+		</script>
+		 
+	
+	<link type="text/css" rel="stylesheet" media="all" href="http://static.travel.usnews.com/css/destination.rr29.css">
+
+	<script type="text/javascript">
+		var map;
+		var markers;
+		$(document).ready(function(){
+			showHidePhotoInfo();
+		});
+
+		function showHidePhotoInfo(){
+			$('#main-image div').hide();
+			$('#main-image #info-icon').hover( 
+				function(){ $('#main-image div').fadeIn("fast");},
+				function(){ $('#main-image div').fadeOut("fast");}
+			);
+		}
+	</script>
+	
+	<script type="text/javascript">
+		//TA Popup under
+		ta_popund_call('DESTINATION_PROFILE',"Boston, USA",null);
+	</script>
+
+		<!-- Begin Google Analytics Tag -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+_gaq.push(['_setAccount', 'UA-11338984-1']);
+if ('Destination page') {
+	_gaq.push(['_setCustomVar',1,'Section','Destination page',3]);
+}
+_gaq.push(['_trackPageview']);
+
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+function wt_track_pageview(f_tracking_url) {
+	  if (f_tracking_url != "") {
+		_gaq.push(['_trackPageview' , f_tracking_url ]);
+	  }
+	  else {
+		_gaq.push(['_trackPageview']);
+	  }
+}
+
+
+function wt_track_event(event) {
+	if('label' in event) {
+		_gaq.push(['_trackEvent', event.category, event.action, event.label]);
+	} 
+	else {
+		_gaq.push(['_trackEvent', event.category, event.action]);
+	}
+   	setTimeout(null,100);
+}
+</script>
+<!-- End Google Analytics Tag -->
+
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-efoP1AkkGV9EU"
+});
+</script>
+
+<noscript>
+&lt;div style="display:none;"&gt;
+&lt;img src="//pixel.quantserve.com/pixel/p-efoP1AkkGV9EU.gif" border="0" height="1" width="1" alt="Quantcast"/&gt;
+&lt;/div&gt;
+</noscript>
+<!-- End Quantcast tag -->
+
+
+<!-- Begin comScore Tag -->
+<script type="text/javascript">document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));</script><script src="http://b.scorecardresearch.com/beacon.js"></script>
+<script type="text/javascript">COMSCORE.beacon({    c1:2,    c2:"11307981",    c3:"",    c4:escape(window.location),    c5:"",    c6:"travel",    c15:""  });</script><noscript>  &lt;div&gt;&lt;img src="http://b.scorecardresearch.com/p?c1=2&amp;amp;c2=11307981&amp;amp;c3=&amp;amp;c4=&amp;amp;c5=&amp;amp;c6=travel&amp;amp;c15=&amp;amp;cj=1" alt="comScore"/&gt;&lt;/div&gt;</noscript>
+<!-- End comScore Tag -->
+
+
+
+		
+		<!-- Start Visual Website Optimizer Code -->
+		<script type="text/javascript">
+		var _vis_opt_account_id = 25361;
+		var _vis_opt_url = typeof(_vis_opt_url)=="undefined" ? document.URL : _vis_opt_url;
+		var _vis_opt_protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://');
+		document.write('<s' + 'cript src="' + _vis_opt_protocol + 
+		'dev.visualwebsiteoptimizer.com/deploy/js_visitor_settings.php?v=1&a='+_vis_opt_account_id+'&url='
+		+encodeURIComponent(_vis_opt_url)+'&random='+Math.random()+'" type="text/javascript">' + '<\/s' + 'cript>');
+		</script><script src="http://dev.visualwebsiteoptimizer.com/deploy/js_visitor_settings.php?v=1&amp;a=25361&amp;url=http%3A%2F%2Ftravel.usnews.com%2FBoston_MA%2FTravel_Tips%2F&amp;random=0.5105599178932607" type="text/javascript"></script>
+		
+		<script type="text/javascript">
+		if(typeof(_vis_opt_settings_loaded) == "boolean") { document.write('<s' + 'cript src="' + _vis_opt_protocol + 
+		'd5phz18u4wuww.cloudfront.net/vis_opt.js" type="text/javascript">' + '<\/s' + 'cript>'); }
+		// if your site already has jQuery 1.4.2, replace vis_opt.js with vis_opt_no_jquery.js above
+		</script>
+		
+		<script type="text/javascript">
+		if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initialize) == "function") {
+		        _vis_opt_top_initialize(); vwo_$(document).ready(function() { _vis_opt_bottom_initialize(); });
+		}
+		</script>
+		<!-- End Visual Website Optimizer Code -->
+	<style type="text/css" id="ki-xzw-x0"></style><style type="text/css" id="ki-xzw-xg"></style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style><style type="text/css" id="ki-xzw-x0"></style><style type="text/css" id="ki-xzw-xg"></style></head>
+
+	<body>
+	
+	<div class="global-wrapper">
+	
+		<script>
+			$(document).ready(function() {
+				try { 
+					$.cookie('d-maptype',null,{path:'/'});
+				}
+				catch (ex){}
+			});
+		</script>
+		
+	
+	<!-- SURVEY CODE -->
+	<script type="text/javascript">var _kiq = _kiq || [];</script>
+	<script type="text/javascript" src="//s3.amazonaws.com/ki.js/13866/2wY.js" async="true"></script>
+	
+	<!--[if lte IE 6]><div class="ie ie6"><![endif]-->
+		<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="http://static.ak.facebook.com/connect/xd_arbiter/ehazDpFPEnK.js?version=41#channel=f2ce358f04&amp;origin=http%3A%2F%2Ftravel.usnews.com" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://s-static.ak.facebook.com/connect/xd_arbiter/ehazDpFPEnK.js?version=41#channel=f2ce358f04&amp;origin=http%3A%2F%2Ftravel.usnews.com" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+		<script>
+		    ord = Math.random() * 10000000000000000;
+		    
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+		  		if (d.getElementById(id)) return;
+		  		js = d.createElement(s); js.id = id;
+		  		js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  		fjs.parentNode.insertBefore(js, fjs);
+			}
+			(document, 'script', 'facebook-jssdk'));
+		</script>
+		
+		<div class="header">
+			<div class="header-global-wrap">
+				<div class="header-global">
+					<ul>
+						<li class="usn-home"><a href="http://www.usnews.com">U.S. News Home</a></li>
+	        			<li><a href="http://www.usnews.com/news">News</a></li>
+	        			<li class="dropdown-label">
+	        				<a href="http://www.usnews.com/rankings"><span>Rankings &amp; Advice</span></a>
+							<ul class="dropdown">
+								<li><a href="http://www.usnews.com/education"><span>Education</span></a></li>
+	    						<li><a class="health" href="http://health.usnews.com"><span>Health</span></a></li>
+	    						<li><a class="money" href="http://www.usnews.com/money"><span>Money</span></a></li>
+	    						<li><a class="travel" href="http://www.usnews.com/travel"><span>Travel</span></a></li>
+	    						<li><a class="cars" href="http://www.usnews.com/cars"><span>Cars</span></a></li>
+	    						<li><a class="law" href="http://bestlawfirms.usnews.com/"><span>Law</span></a></li>
+							</ul>
+	        			</li>
+	        		</ul>
+				</div>
+			</div>
+			<div class="header-logo-wrap">
+				<div class="header-logo">
+					<div class="header-title">
+						<a href="http://www.usnews.com"><img width="170" height="40" src="http://static.travel.usnews.com/images/header/usn_logo.png"></a>
+						<a href="/" data-text="Travel">Travel</a>
+					</div>
+					<div class="header-tagline">
+						<ul>
+							<li><a href="https://www.facebook.com/pages/US-News-Travel/108383375906117" target="_blank">Facebook</a></li>
+			 				<li><a href="https://twitter.com/USNewsTravel" target="_blank" class="tw">Twitter</a></li>
+						</ul>
+						<span class="tagline">Travel Rankings &amp; Advice</span>		
+					</div>
+				</div>
+			</div>
+			<div class="header-nav-wrap">
+				<div class="header-nav">
+					<ul class="main-nav">
+						<li><a href="/">Home</a></li>
+						<li>
+							<a href="/Rankings/">Best Vacations</a>
+							<ul class="dropdown">
+								<li><a href="/Rankings/USA/">USA</a></li>
+								<li><a href="/Rankings/Canada/">Canada</a></li>
+								<li><a href="/Rankings/Mexico/">Mexico</a></li>
+								<li><a href="/Rankings/Caribbean/">Caribbean</a></li>
+								<li><a href="/Rankings/Central_South_America/">Central &amp; South America</a></li>
+								<li><a href="/Rankings/Europe/">Europe</a></li>
+								<li><a href="/Rankings/Africa_The_Middle_East/">Africa &amp; Middle East</a></li>
+								<li><a href="/Rankings/Asia/">Asia</a></li>
+								<li><a href="/Rankings/Australia_The_Pacific/">Australia &amp; The Pacific</a></li>
+							</ul>
+						</li>
+						<li><a href="/Hotels/">Best Hotels</a></li>
+						<li><a href="/cruises/">Best Cruises</a></li>
+						<li class="last">
+							<a href="/Rankings/Travel-Rewards/">Rewards Programs</a>
+							<ul class="dropdown">
+								<li><a href="/Rankings/Travel-Rewards/hotel-rewards/">Hotel Rewards Programs</a></li>
+								<li><a href="/Rankings/Travel-Rewards/airline-rewards/">Airline Rewards Programs</a></li>
+							</ul>
+						</li>
+					</ul>
+					
+						
+
+<link type="text/css" rel="stylesheet" media="all" href="http://static.travel.usnews.com/css/destination_finder.rr9.css">
+<script type="text/javascript" src="http://static.travel.usnews.com/js/destination_finder.rr5.js"></script>
+
+<div id="dest-finder">
+	<input id="finder-search" type="text" onkeyup="matchWords(event);" class="grey-text">
+
+<!-- AUTOCOMPLETE RESULTS -->	
+	<ul class="destination">
+	</ul>
+	
+	<div id="finder-submit" class="btn">Search</div>
+</div>
+					 
+				</div>
+			</div>
+		</div>		
+		
+		
+	
+		<div class="ad-Out-of-page" id="adv-7" style="display:none">
+			
+				
+			
+			
+			
+			<script type="text/javascript">
+				// Double Click variables - TODO - These need to be set properly
+				var adParameters = 'kw=travel;kw=travelguides';
+				var sitename = 'usn.travelguides';
+				renderDoubleClickDynamic(7, adParameters, sitename,g_quantSegs);
+			</script><script language="JavaScript" src="http://ad.doubleclick.net/adj/usn.travelguides;kw=travel;kw=travelguides;dcopt=ist;sz=640x480;pos=stitial;dcove=d;tile=7;qcseg=D;ord=5009373666252941?" type="text/javascript"></script>
+			<script type="text/javascript">
+				adValidator("adv-7");
+			</script>
+			
+		</div>
+	
+
+		
+		
+			<div id="breadcrumbs-sm">
+				<div class="breadcrumbs"><a href="/Destinations/">Travel Guides</a> <span>&gt;</span> <a href="/Destinations/USA/">USA</a> <span>&gt;</span> <a href="/Destinations/USA/Massachusetts/">Massachusetts</a> <span>&gt;</span> Boston</div>
+			</div>
+		
+		
+		<div id="cr" class="new">
+	<div class="cr-close" onclick="close_popup();">X</div>
+	<div class="cr-dates">
+		<div class="cr-header">Show Prices</div>
+		<input type="text" class="checkin-date calendar hasDatepicker" name="checkin-date-popup" value="Check In" id="dp1415072852601">
+		<input type="text" class="checkout-date calendar hasDatepicker" name="checkout-date-popup" value="Check Out" id="dp1415072852602">
+		<a id="update-dates" class="show-prices btn">Find the Best Price</a>
+		<a class="change-dates btn">Change Dates</a>
+	</div>
+	<div class="cr-iframe">
+		<iframe src="" width="405" height="400" scrolling="no" frameborder="0"></iframe>
+	</div>
+	<div class="cr-arrow"></div>
+</div>
+
+<script type="text/javascript">
+function cr_popup(ta_id, ta_name, btn, top, left, position){
+	var checkin_date;
+	var checkout_date;
+
+	if($.cookie("checkin_date") != null){
+		checkin_date = new Date(parseInt($.cookie("checkin_date")));
+		$(".checkin-date").datepicker("setDate", checkin_date);
+	}
+	if($.cookie("checkout_date") != null){
+		checkout_date = new Date(parseInt($.cookie("checkout_date")));
+		$(".checkout-date").datepicker("setDate", checkout_date);
+	}
+	
+	$('.cr-dates').attr('id', 'taid_' + ta_id);
+	$('.cr-iframe').html('');
+	$('#cr').removeClass();
+	$('#cr').addClass('new');
+	if (checkin_date != null && checkout_date != null){
+		var checkin = checkin_date.getFullYear() + "-" + (checkin_date.getMonth()+1) + "-" + checkin_date.getDate();
+		var checkout = checkout_date.getFullYear() + "-" + (checkout_date.getMonth()+1) + "-" + checkout_date.getDate();
+		var iframe_src = "http://www.tripadvisor.com/WidgetEmbed-cdshotelmeta?partnerId=1BC939997ADF43248096C8FF7D34EA0B&display=true&locationId=" + ta_id + "&checkin=" + checkin + "&checkout=" + checkout;
+		var the_iframe = '<iframe src="" width="360" height="350" scrolling="no" frameborder="0" src=""></iframe>'
+		$('#cr .cr-iframe').html(the_iframe);
+		$('#cr .cr-iframe iframe').attr('src', iframe_src);
+		
+	}
+	else {
+		$('#cr .change-dates').hide();
+		$('#cr #update-dates').css('display','block');
+		$('.cr-header').show();
+		$('#cr').addClass('no-dates');
+	}
+	var cr_btn_top = $(btn).offset().top + top;
+	var cr_btn_left = $(btn).offset().left + left;
+	$('#cr').addClass(position);
+	$('#cr').css('top',cr_btn_top);
+	$('#cr').css('left',cr_btn_left);
+	$('#cr').fadeIn('fast');
+	if ($('#cr').hasClass('no-dates')){
+		$('#cr .cr-dates .checkin-date').datepicker('show');
+	}
+}
+
+function close_popup(){
+	$('#cr').hide();
+	$('.cr-iframe').html('');
+}
+
+$(document).ready(function(){	
+	$('#cr #update-dates').click(function (){
+		if ($.cookie("checkin_date") != null && $.cookie("checkout_date") != null){
+			if( $('#cr').hasClass('no-dates') ){
+				$('#cr').removeClass('no-dates');
+				$('#cr .change-dates').css('display','block');
+				$('#cr #update-dates').hide();
+				$('.cr-header').hide();
+			}
+			var in_date = $(this).parent().children(".checkin-date").datepicker("getDate");
+			var out_date = $(this).parent().children(".checkout-date").datepicker("getDate");
+			var checkin = in_date.getFullYear() + "-" + (in_date.getMonth()+1) + "-" + in_date.getDate();
+			var checkout = out_date.getFullYear() + "-" + (out_date.getMonth()+1) + "-" + out_date.getDate();
+			var ta_id = $('.cr-dates').attr('id').split('_')[1];
+			
+			var iframe_src = "http://www.tripadvisor.com/WidgetEmbed-cdshotelmeta?partnerId=1BC939997ADF43248096C8FF7D34EA0B&display=true&locationId=" + ta_id + "&checkin=" + checkin + "&checkout=" + checkout;
+			var the_iframe = '<iframe src="" width="360" height="350" scrolling="no" frameborder="0" src=""></iframe>'
+			$('#cr .cr-iframe').html(the_iframe);
+			$('#cr .cr-iframe iframe').attr('src', iframe_src);	
+		}
+	});
+});
+</script>
+		
+		<div id="content">
+			
+	
+	
+	
+	
+	
+		<div class="ad-728x90" id="adv-1" style="display:none">
+			
+				
+			
+			
+			
+			<script type="text/javascript">
+				// Double Click variables - TODO - These need to be set properly
+				var adParameters = 'kw=USA;kw=boston;kw=travel;kw=travelguides;kw=familyvacations;kw=massachusetts';
+				var sitename = 'usn.travelguides';
+				renderDoubleClickDynamic(1, adParameters, sitename,g_quantSegs);
+			</script><script language="JavaScript" src="http://ad.doubleclick.net/adj/usn.travelguides;kw=USA;kw=boston;kw=travel;kw=travelguides;kw=familyvacations;kw=massachusetts;dcopt=ist;sz=728x90,970x250;pos=top;dcove=d;tile=1;qcseg=D;ord=5009373666252941?" type="text/javascript"></script>
+			<script type="text/javascript">
+				adValidator("adv-1");
+			</script>
+			
+		</div>
+	
+
+	
+	
+	
+	<div class="share">
+	<span>Share:</span>
+	<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//travel.usnews.com/Boston_MA/Travel_Tips/%2F%3Fsrc%3Dusns_fb" target="_blank">Facebook</a>
+	<a class="tw" href="http://twitter.com/share?text=Boston%20Travel%20Tips%20%7C%20U.S.%20News%20Travel&amp;via=USNewsTravel&amp;url=http%3A//travel.usnews.com/Boston_MA/Travel_Tips/%2F%3Fsrc%3Dusns_tw" target="_blank">Tweet</a>
+	<a class="gp" href="https://plus.google.com/share?url=http%3A//travel.usnews.com/Boston_MA/Travel_Tips/%2F%3Fsrc%3Dusns_gp" target="_blank">Google+</a>
+</div>
+	
+	<h1 id="page-title">Boston Travel Tips</h1>
+
+
+	<div class="left-rail">
+		
+		<div id="side-nav">
+			<ul>
+				<li class="first  selected "><a href="/Boston_MA/">Overview</a></li>
+					
+					<ul id="sub-nav">
+						<li><a href="/Boston_MA/">Travel Guide</a></li>
+						<li class="sub-selected"><a href="/Boston_MA/Travel_Tips/">Travel Tips</a></li>
+					</ul>
+					
+				
+				
+				<li><a class="sub-page" href="/Boston_MA/Things_To_Do/">Things to Do</a></li>
+					
+				
+				
+				<li><a class="sub-page" href="/Hotels/Boston_MA/">Hotels</a></li>
+				
+				<li><a href="/Boston_MA/When_To_Visit/">When to Visit</a></li>
+				<li><a href="/Boston_MA/Getting_Around/">Getting Around</a></li>
+				<li><a href="/Boston_MA/Neighborhoods/">Neighborhoods</a></li>
+				<li><a href="/Boston_MA/Area_Map/">Map</a></li>
+				<li><a href="/Boston_MA/Pictures/">Photos</a></li>
+			</ul> 
+			
+				
+	
+		<div class="ad-120x60" id="adv-3" style="display:none">
+			
+				
+			
+			
+			
+			<script type="text/javascript">
+				// Double Click variables - TODO - These need to be set properly
+				var adParameters = 'kw=USA;kw=boston;kw=travel;kw=travelguides;kw=familyvacations;kw=massachusetts';
+				var sitename = 'usn.travelguides';
+				renderDoubleClickDynamic(3, adParameters, sitename,g_quantSegs);
+			</script><script language="JavaScript" src="http://ad.doubleclick.net/adj/usn.travelguides;kw=USA;kw=boston;kw=travel;kw=travelguides;kw=familyvacations;kw=massachusetts;sz=120x60;pos=top;dcove=d;tile=3;qcseg=D;ord=5009373666252941?" type="text/javascript"></script>
+			<script type="text/javascript">
+				adValidator("adv-3");
+			</script>
+			
+		</div>
+	
+
+			
+			
+		</div>
+		
+	</div>
+	
+	<div id="content-area">
+		
+		
+		<div id="main">
+			
+	
+	<div id="thumbs">	
+	
+		<a href="/Boston_MA/Pictures/Boston_Tea_Party_Ships_Museum_6764/"><img class="thumb first" src="http://static.travel.usnews.com/images/destinations/23/boston_tea_party_ships_museum_88x56.jpg" alt="Boston"></a>
+	
+		<a href="/Boston_MA/Pictures/George_Washington_on_Horseback_6762/"><img class="thumb " src="http://static.travel.usnews.com/images/destinations/23/george_washington_on_horseback_88x56.jpg" alt="Boston"></a>
+	
+		<a href="/Boston_MA/Pictures/Bask_in_Bostons_Scenery_by_Boat_6770/"><img class="thumb " src="http://static.travel.usnews.com/images/destinations/23/bask_in_bostons_scenery_by_boat_88x56.jpg" alt="Boston"></a>
+	
+		<a href="/Boston_MA/Pictures/Boston_Public_Library_6765/"><img class="thumb " src="http://static.travel.usnews.com/images/destinations/23/boston_public_library_88x56.jpg" alt="Boston"></a>
+	
+		<a href="/Boston_MA/Pictures/" id="view-gallery">View Gallery</a>
+	</div>
+	
+	<div id="main-image">
+		<img id="main_img" src="http://static.travel.usnews.com/images/destinations/23/boston_main_cropped_445x280.jpg" alt="Boston">
+		
+			
+			<a href="javascript:void(oel('http://image.shutterstock.com/display_pic_with_logo/89795/136706963/stock-photo-boston-usa-oct-trinity-church-in-copley-square-boston-on-october-the-church-was-136706963.jpg'))"><img id="info-icon" style="cursor: pointer;" src="/images/photo_info_smaller.png" alt="Photo info"></a>
+			
+			<div id="photo-author-source" style="display: none;">Jorge Salcedo/Shutterstock</div>
+		
+	</div>
+	
+	
+	<div id="keep-in-mind">
+		<h3>Keep in Mind...</h3>
+		<ul>
+<li><strong>No cars allowed </strong>Sure, tourists are allowed to drive cars around Boston, but why would you want to? Traffic and narrow roads, along with pricey parking, makes driving nightmarish. Take the "T" or rely on your own two feet.</li>
+<li><strong>Begin at Boston Common</strong> The <span>2½-</span>mile-long <a href="/Boston_MA/Things_To_Do/Freedom_Trail_53054/">Freedom Trail</a> is a must-do for first-time travelers. To make the most of your tour, start at&nbsp;<a href="/Boston_MA/Things_To_Do/Boston_Common_38349/">Boston Common</a>, the country's oldest public park and a convenient starting point for exploring the city's notable historical attractions.</li>
+<li><strong>You're in Red Sox territory </strong>If you're a die-hard Yankees fan, we’d keep it quiet … just saying. </li>
+</ul>
+	</div>
+	
+	<p>Boston — or "Bahston," as the locals say — is not only a hub for baseball, brownstones and bookish collegiate types. It's also home to America's first large free municipal public library, the first subway system, the first public school and the first public park. To say the city is historic would be an understatement, but this wicked-smart college town doesn't linger in the past, either. A well-rounded trip to Boston integrates the classic with the contemporary: Split your time between cherished sites like the <a href="/Boston_MA/Things_To_Do/Paul_Revere_House_52618/">Paul Revere House</a> and <a href="/Boston_MA/Things_To_Do/Faneuil_Hall_38501/">Faneuil Hall</a> and cutting-edge attractions like the <a href="/Boston_MA/Things_To_Do/Museum_of_Fine_Arts_52619/">Museum of Fine Arts</a>. Venture to Beacon Hill and you'll stumble upon the graceful mansions of yore juxtaposed with chic boutiques and innovative hotels. So, yes, come<em> </em>first for the history, but don't miss out on the opportunity to sample the unmistakable Beantown flavor.</p>
+<p>The city's darker side has garnered a rough-and-tumble reputation thanks to Hollywood appearances in gritty films like "American Hustle" and "The Town," but Boston's cool, cosmopolitan personality pervades its trendy restaurants, urban parks and modern museums. Passionate residents are still rooting for their beloved Red Sox, but they're also venturing to the <a href="/Boston_MA/Things_To_Do/Rose_Fitzgerald_Kennedy_Greenway_63031/">Rose Fitzgerald Kennedy Greenway</a> for a free yoga class or meandering to the edgy SoWa Open Market for some antique shopping. So, grab a stool and join them at their favorite pub to chow down on oyster shooters and New England clam chowder, or venture to the Back End to try imaginative sushi creations at restaurants cropping up around town. You'll need more than a few days to experience the city's wealth of cultural and historical offerings, but meandering along Boston's cobblestone streets is a great way to start your exploration.&nbsp;</p>
+	
+	
+	<div class="page-section" id="save-money">
+		<h2>How To Save Money in Boston</h2>
+		<div id="save-money">
+		<ul>
+<li><strong>Arrive in winter </strong>Pack the parka and visit in the cooler months. Hotel rates offer the steepest discounts between January and March. </li>
+<li><strong>Glide on a Swan Boat </strong>Taking&nbsp;a&nbsp;swan-shaped boat ride along the picturesque Public Garden lagoon is as pleasing to the eyes as it is to the wallet. (Rides cost $3 for adults and $1.50 for kids).</li>
+<li><strong>Invest in a CityPASS </strong>Purchasing a <a href="javascript:void(oel('http://www.citypass.com/boston'))">Boston CityPASS</a> will save you big bucks on some of the city's top <a href="/Boston_MA/Things_To_Do/">attractions</a>. CityPASS costs $54 for adults and $39 for kids.</li>
+</ul>
+		</div>
+	</div>
+	
+	
+	
+	<div class="page-section">
+		<h2>Boston Culture &amp; Customs</h2>
+		<p>One of the most distinct parts of Boston is what is sometimes referred to as "Boston English," a dialect heard in countless movies and TV shows. The "r" sound is often dropped from words, so "car" becomes "cah" and "Harvard" becomes "Hah-vahd."</p>
+<p>Boston is also a well-known sports city, as the home of the Boston Red Sox (it would be best to avoid wearing any Yankees paraphernalia here), the New England Patriots, the Boston Bruins and the Boston Celtics. While you're in the city, be sure to indulge in this culture by catching a game or at least taking a tour of <a href="/Boston_MA/Things_To_Do/Fenway_Park_52620/">Fenway Park</a>.</p>
+<p>Beantown also takes pride in its intellectual and academic roots with around 100 colleges and universities, including some of the most prestigious, situated here. After the American Revolution, the city's leaders were determined to make Boston the world's new Cradle of Civilization. They invested money and brought in scholars to create a city of educated citizens that studied at Harvard University, Boston University, Boston College, Emerson College, Tufts University and the Massachusetts Institute of Technology, to name a few. Today, this impressive collection of schools also keeps the area young and forward-thinking, as Boston has one of the largest student populations in the country.</p>
+	</div>
+	
+	
+	
+	<div class="page-section">
+		<h2>Boston Dining</h2>
+		<p>Bostonian cuisine has undergone a gastronomical revolution, with a steady stream of new chefs putting their own spin on tried-and-true city classics like baked beans, fresh seafood and clam "chowdah."</p>
+<p>The city's growing immigrant population has ushered in another component to the burgeoning culinary scene. Cobblestone streets are now increasingly lined with Thai and Ethiopian restaurants; check out the North End for delicious Italian dishes and Cambridge for everything from French dishes to Moroccan fare. For a sampling of the zesty tapas, make your way to the artsy South End neighborhood, where spots like <a href="javascript:void(oel('http://toro-restaurant.com/boston/'))">Toro</a> are debuting Spanish-inspired dishes like mussels with chorizo. Another popular stop in South End is <a href="javascript:void(oel('http://thebutchershopboston.com/'))">The Butcher Shop</a> where meat-centric entrees, like steak tartare, steal the spotlight. Or, for a taste of the inventive sushi entrees being rolled across the city, venture to <a href="javascript:void(oel('http://www.oyarestaurantboston.com/'))">O Ya</a>, where scarlet sea scallops and fried Kumamoto oysters are just the beginning of the menu offerings.</p>
+<p>Should you crave more traditional New England fare, make your way to <a href="javascript:void(oel('http://www.arkrestaurants.com/durgin_park.html'))">Durgin-Park</a> in <a href="/Boston_MA/Things_To_Do/Faneuil_Hall_38501/">Faneuil Hall Marketplace.</a> Here you'll find local favorites like corned beef sandwiches, shepherd's pie and clam chowder. &nbsp;Another beloved establishment is <a href="javascript:void(oel('http://www.unionoysterhouse.com/Pages/lunch.html'))">Union Oyster House</a> near Haymarket, where — you guessed it — freshly-shucked oysters have hooked patrons since the restaurant opened its doors in 1826.&nbsp;</p>
+	</div>
+	
+	
+	
+<div class="page-section ">
+	
+	<h2>Next Steps: Boston</h2>
+	
+	<ul class="next-steps">
+		
+			<li class="ns-hotels"><a href="/Hotels/Boston_MA/"><div></div>Best Hotels</a></li>
+		
+			
+			<li class="ns-ttd"><a href="/Boston_MA/Things_To_Do/"><div></div>Things to Do</a></li>
+		
+		
+			
+				<li class="ns-visit"><a href="/Boston_MA/When_To_Visit/"><div></div>When to Visit</a></li>
+			
+			
+				<li class="ns-around"><a href="/Boston_MA/Getting_Around/"><div></div>Getting Around</a></li>
+			
+		
+		
+	</ul>
+</div>
+
+
+		</div>
+		
+		<div id="rail">
+		
+	
+
+	
+	
+	
+	
+	
+	
+	<div class="widget widget-top">
+		<h4 class="widget-title">You might also like...</h4>
+		<ul id="compare-list" class="widget-bottom">
+		
+		
+			<li class="dest_compare">
+				
+					<a class="dest_name" href="/Philadelphia_PA/"><img src="http://static.travel.usnews.com/images/destinations/45/new_main_image_cropped_116x130.jpg" alt="Philadelphia"></a>
+					<a class="dest_name" href="/Philadelphia_PA/">Philadelphia</a>
+					<ul><li>A historic city that loves its baseball </li><li>Pretty expensive to visit</li></ul>
+				
+			</li>
+		
+		
+			<li class="dest_compare">
+				
+					<a class="dest_name" href="/Washington_DC/"><img src="http://static.travel.usnews.com/images/destinations/48/main_image_031414_cropped_116x130.jpg" alt="Washington D.C."></a>
+					<a class="dest_name" href="/Washington_DC/">Washington D.C.</a>
+					<ul><li>Not quite as quaint </li><li>Monuments galore</li></ul>
+				
+			</li>
+		
+		
+			<li class="dest_compare">
+				
+					<a class="dest_name" href="/Charleston_SC/"><img src="http://static.travel.usnews.com/images/destinations/22/pineapple_fountain_mainedited_116x130.jpg" alt="Charleston"></a>
+					<a class="dest_name" href="/Charleston_SC/">Charleston</a>
+					<ul><li>Showcases a different kind of history</li><li>Has a charming downtown with good eats</li></ul>
+				
+			</li>
+		
+		</ul>
+	</div>
+	
+	
+
+
+
+
+	
+
+
+
+
+
+
+	
+	
+		<div class="ad-300x250" id="adv-2" style="display:none">
+			
+				<p class="advertisement">advertisement</p>
+			
+			
+			
+			<script type="text/javascript">
+				// Double Click variables - TODO - These need to be set properly
+				var adParameters = 'kw=USA;kw=boston;kw=travel;kw=travelguides;kw=familyvacations;kw=massachusetts';
+				var sitename = 'usn.travelguides';
+				renderDoubleClickDynamic(2, adParameters, sitename,g_quantSegs);
+			</script><script language="JavaScript" src="http://ad.doubleclick.net/adj/usn.travelguides;kw=USA;kw=boston;kw=travel;kw=travelguides;kw=familyvacations;kw=massachusetts;sz=300x250,300x600,300x1050;pos=top;dcove=d;tile=2;qcseg=D;ord=5009373666252941?" type="text/javascript"></script>
+			<script type="text/javascript">
+				adValidator("adv-2");
+			</script>
+			
+		</div>
+	
+
+	
+<div class="widget-top widget-flight simple">
+	<img src="/images/bestFareFinder_icon.png" alt="U.S. News Airfare Finder">
+	<h4 class="widget-title">Find Best Airfares to<br> Boston</h4>
+	<div class="comment">See best fares from Orbitz, Expedia, Kayak &amp; more!</div> 
+	<span style="display:none" id="hdn-afw-label">destination_simple</span>
+	<form class="flight-form" name="flight-booking" target="_blank" method="POST" action="http://rd.bookingbuddy.com/src/?s=31570">
+		<div class="search-type">
+			<span><input type="radio" name="search_type" value="roundtrip" checked="checked"> Round Trip</span>
+			<span><input type="radio" name="search_type" value="oneway"> One-Way</span>
+			<span><input type="checkbox" name="non_stop" value="1"> Non-stop Only</span>
+		</div>
+			
+		<div class="left">
+			<label>From:</label>
+			<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" id="depart" name="departure_city_lbl" class="ui-autocomplete-input" autocomplete="off">
+			<input type="hidden" id="depart-hdn" name="departure_city">
+		</div>
+		<div>
+			<label>To:</label>
+			<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" id="arrive" name="arrival_city_lbl" class="ui-autocomplete-input" autocomplete="off">
+			<input type="hidden" id="arrive-hdn" name="arrival_city" value="BOS">
+		</div>
+		
+		<div class="left">
+			<label>Departing:</label>
+			<input type="text" id="departure_date" name="departure_date" class="hasDatepicker">
+		</div>
+		<div class="hide">
+			<label>&nbsp;</label>
+			<select class="time" name="departure_time">
+			<option value="anytime">Anytime</option>
+			</select>
+		</div>
+		
+		<div>
+			<label>Returning:</label>
+			<input type="text" id="return_date" name="return_date" class="hasDatepicker">
+		</div>
+		<div class="hide">
+			<label>&nbsp;</label>
+			<select class="time" name="return_time">
+			<option value="anytime">Anytime</option>
+			</select> 
+		</div>
+		
+		<div class="left hide">
+			<label>Class:</label>
+			<select name="service_class">
+			<option value="no_preference">No Preference</option>
+			<option value="economy_coach">Economy</option>
+			<option value="business">Business</option>
+			<option value="first_class">First Class</option>
+			</select> 
+		</div>
+		<div class="left travelers-section">
+			<label>Travelers:</label>
+			<select class="travelers" name="num_travelers"> 
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			</select>
+		</div>
+		
+		<input id="price-button" class="btn" type="submit" value="Find Best Price" onclick="ta_flightwiget($('#arrive-hdn').val());">
+		<span id="error-msg">Please enter missing information</span>
+		
+	</form>
+	
+</div>
+	
+
+	
+	
+	
+	
+		<div class="widget widget-top">
+			<h4 class="widget-title">Boston is Ranked...</h4>
+			<ul class="ranking-list widget-bottom">
+			
+				<li><span class=""><sup>#</sup>5</span> in <a href="/Rankings/Best_US_Historic_Destinations/">Best Historic Destinations in the USA</a></li>
+			
+				<li><span class=""><sup>#</sup>6</span> in <a href="/Rankings/Best_Shopping_in_the_USA/">Best Shopping Destinations in the USA</a></li>
+			
+				<li><span class=""><sup>#</sup>8</span> in <a href="/Rankings/Best_Fall_Getaways/">Best Fall Getaways</a></li>
+			 
+			</ul>
+		</div>
+		
+	
+	
+	
+
+
+
+
+	
+
+
+
+
+
+		
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$.ajax({
+			url: '/ajax/deals/3/Boston_MA//',
+			success: function(data) {
+				$('.dest-deals').html(data);
+				$('.dest-deals').css('min-height','');
+			}
+		});
+	});
+
+</script>
+<div class="widget-top dest-deals"><h4 class="widget-title">Boston Travel Deals</h4>
+<table>
+	<tbody><tr>
+		<td class="footnote" colspan="2"><span class="taxes-fees">*taxes and fees not included</span><span class="deals-by">Deals by BookingBuddy</span></td>
+	</tr>
+	
+	<tr>
+		<td class="price first"><a href="http://deals.bookingbuddy.com/delivery/click?ruuid=Uu6ZsGPVEeSVl-6an4ywSQ&amp;cid=991354&amp;pid=70&amp;d=60745&amp;p=3900&amp;m=0&amp;t=0&amp;s=1001&amp;aid=16771763&amp;agid=4709&amp;c=4725&amp;l=1&amp;e=3&amp;f=60745&amp;av=9&amp;g=1ea1eaae14&amp;j=6&amp;w=595373&amp;sig=0112db82e461a004328006e9781aa3f4" target="_blank">$148</a></td>
+		<td class="deal first"><a href="http://deals.bookingbuddy.com/delivery/click?ruuid=Uu6ZsGPVEeSVl-6an4ywSQ&amp;cid=991354&amp;pid=70&amp;d=60745&amp;p=3900&amp;m=0&amp;t=0&amp;s=1001&amp;aid=16771763&amp;agid=4709&amp;c=4725&amp;l=1&amp;e=3&amp;f=60745&amp;av=9&amp;g=1ea1eaae14&amp;j=6&amp;w=595373&amp;sig=0112db82e461a004328006e9781aa3f4" target="_blank"><span class="title">Boston Savings! Book at The Westin Boston Waterfront Fr $148+/Nt</span> | Expedia</a></td>
+	</tr>
+	
+	<tr>
+		<td class="price "><a href="http://deals.bookingbuddy.com/delivery/click?ruuid=Uu6ZsGPVEeSVl-6an4ywSQ&amp;cid=991354&amp;pid=70&amp;d=60745&amp;p=3900&amp;m=0&amp;t=0&amp;s=1001&amp;aid=16152786&amp;agid=4871&amp;c=4887&amp;l=2&amp;e=3&amp;f=60745&amp;av=241&amp;g=10cb4ca41e&amp;j=6&amp;w=94337&amp;sig=46086c0c21f7072d678639db79874834" target="_blank">$899</a></td>
+		<td class="deal "><a href="http://deals.bookingbuddy.com/delivery/click?ruuid=Uu6ZsGPVEeSVl-6an4ywSQ&amp;cid=991354&amp;pid=70&amp;d=60745&amp;p=3900&amp;m=0&amp;t=0&amp;s=1001&amp;aid=16152786&amp;agid=4871&amp;c=4887&amp;l=2&amp;e=3&amp;f=60745&amp;av=241&amp;g=10cb4ca41e&amp;j=6&amp;w=94337&amp;sig=46086c0c21f7072d678639db79874834" target="_blank"><span class="title">Suite Package in Boston + Great Low Rates!</span> | DealBase.com</a></td>
+	</tr>
+	
+	<tr>
+		<td class="price "><a href="http://deals.bookingbuddy.com/delivery/click?ruuid=Uu6ZsGPVEeSVl-6an4ywSQ&amp;cid=991354&amp;pid=70&amp;d=60745&amp;p=3900&amp;m=0&amp;t=0&amp;s=1001&amp;aid=12199566&amp;agid=4709&amp;c=4725&amp;l=3&amp;e=3&amp;f=60745&amp;av=9&amp;g=a5c1ffa2bf&amp;j=6&amp;w=258705&amp;sig=5e6eeed32a57fba986368f1ec435885e" target="_blank">$229</a></td>
+		<td class="deal "><a href="http://deals.bookingbuddy.com/delivery/click?ruuid=Uu6ZsGPVEeSVl-6an4ywSQ&amp;cid=991354&amp;pid=70&amp;d=60745&amp;p=3900&amp;m=0&amp;t=0&amp;s=1001&amp;aid=12199566&amp;agid=4709&amp;c=4725&amp;l=3&amp;e=3&amp;f=60745&amp;av=9&amp;g=a5c1ffa2bf&amp;j=6&amp;w=258705&amp;sig=5e6eeed32a57fba986368f1ec435885e" target="_blank"><span class="title">Boston Savings! Book at Commonwealth Fr $229+/Nt</span> | Expedia</a></td>
+	</tr>
+	
+</tbody></table>
+<a class="see-more" href="/Boston_MA/Deals/">
+	See More Boston Deals<span>»</span>
+</a>
+	
+</div> 
+	
+	
+		<div class="ad-300x250" id="adv-4" style="display:none">
+			
+				<p class="advertisement">advertisement</p>
+			
+			
+			
+			<script type="text/javascript">
+				// Double Click variables - TODO - These need to be set properly
+				var adParameters = 'kw=USA;kw=boston;kw=travel;kw=travelguides;kw=familyvacations;kw=massachusetts';
+				var sitename = 'usn.travelguides';
+				renderDoubleClickDynamic(4, adParameters, sitename,g_quantSegs);
+			</script><script language="JavaScript" src="http://ad.doubleclick.net/adj/usn.travelguides;kw=USA;kw=boston;kw=travel;kw=travelguides;kw=familyvacations;kw=massachusetts;sz=300x250;pos=bot;dcove=d;tile=4;qcseg=D;ord=5009373666252941?" type="text/javascript"></script>
+			<script type="text/javascript">
+				adValidator("adv-4");
+			</script>
+			
+		</div>
+	
+
+	
+
+	
+	
+		<div class="widget widget-top">
+			<h4 class="widget-title">Best Vacations in USA</h4>
+			<ul class="widget-list">
+			
+				<li><a href="/Rankings/Best_Bar_Club_Scenes_in_the_USA/">Best Nightlife Scenes in the USA</a></li>
+			
+				<li><a href="/Rankings/Best_Relaxing_Getaways_in_the_USA/">Best Relaxing Getaways in the USA</a></li>
+			
+				<li><a href="/Rankings/Best_USA_Luxury_Destinations/">Best US Luxury Destinations</a></li>
+			
+			</ul>
+		</div>
+	
+	
+	
+	
+
+
+
+
+	
+
+
+
+
+
+
+
+		</div>
+		
+	</div>
+	
+	
+	
+		
+		
+	
+		<div class="ad-728x90" id="adv-5" style="display:none">
+			
+				
+			
+			
+			
+			<script type="text/javascript">
+				// Double Click variables - TODO - These need to be set properly
+				var adParameters = 'kw=USA;kw=boston;kw=travel;kw=travelguides;kw=familyvacations;kw=massachusetts';
+				var sitename = 'usn.travelguides';
+				renderDoubleClickDynamic(5, adParameters, sitename,g_quantSegs);
+			</script><script language="JavaScript" src="http://ad.doubleclick.net/adj/usn.travelguides;kw=USA;kw=boston;kw=travel;kw=travelguides;kw=familyvacations;kw=massachusetts;sz=728x90;pos=bot;dcove=d;tile=5;qcseg=D;ord=5009373666252941?" type="text/javascript"></script>
+			<script type="text/javascript">
+				adValidator("adv-5");
+			</script>
+			
+		</div>
+	
+
+		
+	
+
+		</div>
+		
+		
+		<div id="footer" class="footer footer-education">
+		    <div class="span12 travel-links">	
+	    		<ul class="travel-links">
+	    			<li><h3 class="h h-fancy h-slack sep-strong">U.S. News Travel</h3></li>
+	    			<li><a href="/aboutUs/">About U.S. News Travel</a></li>
+	    			<li><a href="/methodology/">How We Do Our Rankings</a></li>
+	    			<li><a href="/contactUs/">Contact Us</a></li>
+	    			<li>
+	    			<span class="t-close t-dim">Connect with us:
+						<a class="link-subdued" href="//www.facebook.com/pages/US-News-Travel/108383375906117" target="_blank">
+							<span class="icon-header-facebook-dark">Facebook</span>
+	                    </a> 
+	                    <a class="link-subdued" href="//twitter.com/USNewsTravel" target="_blank"> 
+							<span class="icon-header-twitter-dark">Twitter</span>
+	                    </a>
+	                    <a class="link-subdued" href="http://travel.usnews.com/rss/" target="_blank">
+							<span class="icon-header-rss-dark">RSS</span>
+	                    </a>
+					</span>
+	    			</li>
+	    		</ul>
+	    	</div>
+		    <div class="grid-976">
+		        <div class="span12 sep-strong t-slackest">
+		            <div class="span span2">
+		                <h3 class="h h-fancy h-slack sep-strong">News</h3>
+		                <ul class="sep-strong">
+		                    <li class="t-taut"><a href="//www.usnews.com/news" class="link-subdued">News Home</a></li>
+							<li class="t-taut"><a href="//www.usnews.com/opinion" class="link-subdued">Opinion</a></li>
+							<li class="t-taut"><a href="//www.usnews.com/science" class="link-subdued">Science &amp; Tech</a></li>
+							<li class="t-taut"><a href="//www.usnews.com/cartoons" class="link-subdued">Cartoons</a></li>
+							<li class="t-taut"><a href="//www.usnews.com/photos" class="link-subdued">Photos</a></li>
+							<li class="t-taut"><a href="http://video.usnews.com" class="link-subdued">Videos</a></li>
+							<li class="t-taut"><a href="//www.usnews.com/news/special-reports" class="link-subdued">Special Reports</a></li>
+							<li class="t-taut"><a href="http://www.usnews.com/usnews/store/usnews_weekly_order.htm" class="link-subdued">U.S. News Weekly</a></li> 
+		                </ul>
+		            </div>
+		            <div class="span span10">
+		                <h3 class="h h-fancy h-slack sep-strong">Rankings &amp; Consumer Advice</h3>
+		                <ul class="sep-strong">
+		                    <li class="item span span2">
+								<h4 class="link-dim h-mini">
+									<a href="//www.usnews.com/education">Education</a>
+		                        </h4>
+								<ul>
+									<li class="t-taut"><a href="//www.usnews.com/best-colleges" class="link-subdued">Colleges</a></li>
+									<li class="t-taut"><a href="//www.usnews.com/best-graduate-schools" class="link-subdued">Graduate Schools</a></li>
+									<li class="t-taut"><a href="//www.usnews.com/education/best-high-schools" class="link-subdued">High Schools</a></li>
+									<li class="t-taut"><a href="//www.usnews.com/education/online-education" class="link-subdued">Online Programs</a></li>
+									<li class="t-taut"><a href="//www.usnews.com/education/community-colleges" class="link-subdued">Community Colleges</a></li>
+									<li class="t-taut"><a href="//www.usnews.com/education/top-world-universities" class="link-subdued">World Universities</a></li>
+		                        </ul>
+		                    </li>
+							<li class="item span span2">
+								<h4 class="link-dim h-mini">
+									<a href="http://health.usnews.com/">Health</a>
+								</h4>
+		                        <ul>
+									<li class="t-taut"><a href="http://health.usnews.com/health-news/best-hospitals" class="link-subdued">Hospitals</a></li>
+									<li class="t-taut"><a href="http://health.usnews.com/doctors" class="link-subdued">Doctor Finder</a></li>
+									<li class="t-taut"><a href="http://health.usnews.com/best-diet" class="link-subdued">Diets</a></li>
+									<li class="t-taut"><a href="http://health.usnews.com/best-nursing-homes" class="link-subdued">Nursing Homes</a></li>
+									<li class="t-taut"><a href="http://health.usnews.com/health-products" class="link-subdued">Health Products</a></li>
+									<li class="t-taut"><a href="http://health.usnews.com/health-insurance" class="link-subdued">Health Insurance</a></li>
+									<li class="t-taut"><a href="http://health.usnews.com/medicare" class="link-subdued">Medicare</a></li>
+								</ul>
+		                    </li>
+							<li class="item span span2">
+								<h4 class="link-dim h-mini">
+									<a href="http://money.usnews.com/">Money</a>
+		                        </h4>
+		                        <ul>
+									<li class="t-taut"><a href="http://money.usnews.com/money/careers" class="link-subdued">Jobs</a></li>
+									<li class="t-taut"><a href="http://money.usnews.com/financial-advisors" class="link-subdued">Financial Advisors</a></li>
+									<li class="t-taut"><a href="http://money.usnews.com/funds/etfs" class="link-subdued">ETFs</a></li>
+									<li class="t-taut"><a href="http://money.usnews.com/funds/mutual-funds" class="link-subdued">Mutual Funds</a></li>
+									<li class="t-taut"><a href="http://money.usnews.com/money/retirement" class="link-subdued">Retirement</a></li>
+		                        </ul>
+		                    </li>
+							<li class="item span span2">
+		                        <h4 class="link-dim h-mini">
+									<a href="http://travel.usnews.com/">Travel</a>
+								</h4>
+		                        <ul>
+									<li class="t-taut"><a href="http://travel.usnews.com/Rankings/" class="link-subdued">Vacations</a></li>
+									<li class="t-taut"><a href="http://travel.usnews.com/cruises/" class="link-subdued">Cruises</a></li>
+									<li class="t-taut"><a href="http://travel.usnews.com/Hotels/" class="link-subdued">Hotels</a></li>
+									<li class="t-taut"><a href="http://travel.usnews.com/Rankings/Travel-Rewards/hotel-rewards/" class="link-subdued">Hotel Rewards</a></li>
+									<li class="t-taut"><a href="http://travel.usnews.com/Rankings/Travel-Rewards/airline-rewards/" class="link-subdued">Airline Rewards</a></li>
+								</ul>
+		                    </li>
+							<li class="item span span2">
+								<h4 class="link-dim h-mini">
+									<a href="http://usnews.rankingsandreviews.com/cars-trucks">Cars</a>
+								</h4>
+								<ul class="block">
+									<li class="t-taut"><a href="http://usnews.rankingsandreviews.com/cars-trucks/rankings/" class="link-subdued">New Cars</a></li>
+									<li class="t-taut"><a href="http://usnews.rankingsandreviews.com/cars-trucks/used-cars/" class="link-subdued">Used Cars</a></li>
+								</ul>
+								<h4 class="link-dim h-mini">
+									<a href="http://bestlawfirms.usnews.com/">Law</a>
+								</h4>
+								<ul class="block">
+									<li class="t-taut"><a href="http://bestlawfirms.usnews.com/rankings.aspx" class="link-subdued">Law Firms</a></li>
+								</ul>
+		                    </li>
+		                </ul>
+		            </div>
+		        </div>
+		        <div class="span12 sep-strong block">
+		            <img class="img span span4" src="/images/footer/homepage-logo.png" style="border: 1px solid #ddd;">
+		            <ul class="span span2">
+						<li class="item"><a href="//www.usnews.com/info/features/about-usnews" class="link-subdued">About U.S. News</a></li>
+						<li class="item"><a href="//www.usnews.com/info/features/sitemap" class="link-subdued">Site Map</a></li>
+					</ul>
+		            <ul class="span span2">
+						<li class="item"><a href="//www.usnews.com/info/blogs/press-room" class="link-subdued">Press Room</a></li>
+						<li class="item"><a href="http://mediakit.usnews.com/index.php" class="link-subdued">Advertising Info</a></li>
+						<li class="item"><a href="http://www.usnews.com/products/features/home" class="link-subdued">Store</a></li>
+					</ul>
+		            <div class="span span4">
+		                <p class="footer_disclaimer t-dim t-small t-flush">
+							Copyright 2014 © U.S. News &amp; World Report LP.
+							<br>
+							<a href="http://www.usnews.com/info/features/terms" class="link-subdued">Terms and Conditions</a>
+							/
+							<a href="http://www.usnews.com/info/features/terms#privacy" class="link-subdued">Privacy Policy</a>.
+		                </p>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		
+	
+	<!--[if lte IE 6]></div><![endif]-->	
+	<script type="text/javascript">document.write(unescape('%3Cscript type="text/javascript" src="'+document.location.protocol+'//dnn506yrbagrg.cloudfront.net/pages/scripts/0010/9297.js"%3E%3C%2Fscript%3E'))</script><script type="text/javascript" src="http://dnn506yrbagrg.cloudfront.net/pages/scripts/0010/9297.js"></script>
+	
+	
+	
+	
+	<!-- Qualaroo for usnews.com -->
+	<!-- Paste this code right after the <body> tag on every page of your site. -->
+	<script type="text/javascript">
+	  var _kiq = _kiq || [];
+	  (function(){
+	    setTimeout(function(){
+	    var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript';
+	    s.async = true; s.src = '//s3.amazonaws.com/ki.js/13866/2wY.js'; f.parentNode.insertBefore(s, f);
+	    }, 1);
+	  })();
+	</script>
+	</div>
+	
+
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">November</span>&nbsp;<span class="ui-datepicker-year">2014</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th class="ui-datepicker-week-end"><span title="Sunday">Su</span></th><th><span title="Monday">Mo</span></th><th><span title="Tuesday">Tu</span></th><th><span title="Wednesday">We</span></th><th><span title="Thursday">Th</span></th><th><span title="Friday">Fr</span></th><th class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">1</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">2</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">3</a></td><td class="  ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default ui-state-highlight" href="#">4</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">5</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">6</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">7</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">8</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">9</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">10</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">11</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">12</a></td><td class="  ui-datepicker-current-day" data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default ui-state-active" href="#">13</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">14</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">15</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">16</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">17</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">18</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">19</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">20</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">21</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">22</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">23</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">24</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">25</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">26</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">27</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">28</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">29</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2014"><a class="ui-state-default" href="#">30</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-2" tabindex="0" style="display: none;"></ul></body></html>

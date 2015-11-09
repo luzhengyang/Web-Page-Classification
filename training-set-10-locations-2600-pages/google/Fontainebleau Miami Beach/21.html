@@ -1,0 +1,526 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+        <!-- Load in common CSS and javascript -->
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Page Not Found - Family Vacation Critic</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link rel="alternate" type="application/rss+xml" title="Family Vacation Critic RSS" href="/rss.php">
+
+
+<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.3/themes/base/jquery-ui.css" rel="stylesheet">  
+<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.3/jquery-ui.min.js"></script>
+
+<!--Fancy Box-->
+<script type="text/javascript" src="/include/jquery/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" href="/include/jquery/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen">
+
+<!--jAlert-->
+<link rel="stylesheet" type="text/css" href="/include/jquery/jAlert/jquery.alerts.css" media="screen">
+<script type="text/javascript" src="/include/jquery/jAlert/jquery.alerts.js"></script>
+
+<script type="text/javascript">
+/*
+$(function() {
+    if($("a.writeAReview").length >= 1) {
+		$("a.writeAReview").fancybox({
+            'transitionIn'  :   'elastic',
+            'transitionOut' :   'elastic',
+            'speedIn'       :   600, 
+            'speedOut'      :   200, 
+            'overlayShow'   :   true,
+            'overlayOpacity':   '0.2',
+            'width'         :   620,
+            'height'        :   500
+        });
+	}
+});
+*/
+</script>
+
+<script type="text/javascript">
+  	  var mouseOutputBox = false;
+	  var hotelFriendlyURL = '';
+	  var outputBoxItemHeight = 20;
+	  var outputBoxMaxItemsInWindow = 12; //how many items before box starts scrolling
+	  
+  $(document).ready(function(){
+		// Get Search Results on Keyup
+		$("input#hotels").keyup(function(e) {
+			$('#bbacHotelOutput').removeClass('hide');
+			
+			if(e.keyCode==13) { //enter button
+				bbacIsHotel($("input#hotels").val());
+			} else {
+				bbacLoadingIndicator();
+				if($(this).val() != '') {
+					bbacGetMatchingResults($("input#hotels").val());										
+				} else {
+					$('#bbacHotelOutput').html('');
+				}
+			}
+		});
+		
+
+		// Hotel Selected
+		$("div.bbacItemSelect").live("click", function() {
+			$("input#hotels").val($(this).text());
+			bbacLoadingIndicator();
+			
+			hotelSelected = $("input#hotels").val();
+			friendlyURL = bbacGetFriendlyURL(hotelSelected, $(this).attr('fUrl'));			
+			window.location = "http://www.familyvacationcritic.com/"+ friendlyURL +"/htl/";
+		});
+		
+		
+		//Hide Search Results When Clicked Outside Output Box
+		$('#bbacHotelOutput').hover(function(){ 
+			mouseOutputBox=true;
+		}, function(){ 
+			mouseOutputBox=false;
+		});		
+		$('body').mouseup(function(){ 
+			if(! mouseOutputBox) $('#bbacHotelOutput').addClass('hide');
+		});
+		
+		
+		
+  	});
+	
+	
+	
+	
+	
+	////////////////////////////////////////////
+	// FUNCTIONS
+	////////////////////////////////////////////
+	function bbacIsHotel(queryVal) {
+		$.getJSON("/ajax/ajx_typeahead.php", 
+					{ query: queryVal, action:"isHotel" }, 
+					function(json){
+						if(json.status == 1) {
+							//hotel was found
+							window.location = "/"+ json.fUrl +"/htl/";
+						} else {		
+							//hote NOT found, push to search results page
+							window.location = "/search/results.php?searchTerm=" + queryVal.replace(' ', '+');
+						}
+    				});
+	}
+	
+	function bbacSetOutputBoxHeight(foundCount) {
+		if(foundCount > outputBoxMaxItemsInWindow) {
+			$('#bbacHotelOutput').css('height',(outputBoxMaxItemsInWindow * outputBoxItemHeight) + 'px');
+			$('#bbacHotelOutput').css('position','relative');
+			$('#bbacHotelOutput').css('z-index','1000');
+		} else {
+			$('#bbacHotelOutput').css('height','');
+		}
+	}
+	
+	function bbacGetMatchingResults(queryVal) {
+		$.getJSON("/ajax/ajx_typeahead.php", 
+					{ query: queryVal, action:"getHotelList" }, 
+					function(json){
+						bbacSetOutputBoxHeight(json.foundCount);	
+						$('#bbacHotelOutput').html(json.html);
+    				});
+	}
+	
+	function bbacGetFriendlyURL(hotel, fUrl) {					
+		hotelName = hotel;
+		if(fUrl.length <= 0) {
+			hotelName = hotelName.toLowerCase();
+			hotelName = hotelName.replace(/&/g, 'and');
+			hotelName = hotelName.replace(/the/g, '');
+			hotelName = hotelName.replace(/ \/ /g, '-');
+			hotelName = hotelName.replace(/\./g, '');
+			hotelName = hotelName.replace(/ -/g, '');
+			hotelName = hotelName.replace(/ /g, '-');
+			//hotelName = hotelName.replace(/'/g, '');
+			//hotelName = hotelName.replace(/,/g, '');			
+			return hotelName;
+		} else {
+			return fUrl;
+		}
+				
+	}
+	function bbacLoadingIndicator() {
+		$('#bbacHotelOutput').html('<img src="http://images.familyvacationcritic.com/loading_small_spinner.gif" border="0" />');
+		return false;
+	}
+	
+  </script>
+<script type="text/javascript" src="/js/global.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/global.css?ver=1" media="screen">
+                                        
+<script type="text/javascript" src="/js/ajax.js"></script>
+<script type="text/javascript" src="/js/login.js"></script>
+
+<script type="text/javascript" src="/js/vbulletin_md5.js"></script>
+<script tyle="text/javascript">MM_preloadImages('http://images.familyvacationcritic.com/SS_towel_plain_popup.gif', 'http://images.familyvacationcritic.com/CC-popunder_3_Blank.gif')</script>
+<link rel="stylesheet" type="text/css" href="/css/vacation_planner.css" media="screen">
+
+
+<!-- AJAX library for Exact Target -->
+<script language="JavaScript" src="/js/exactTarget_ajax_soap.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/exactTarget.css">
+
+
+
+        <link rel="stylesheet" type="text/css" href="/css/fr.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="//ct1.addthis.com/static/r07/widget/css/widget007.old.css" media="all"><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style></head>
+    <body>
+        <div id="wrapper">
+            <div id="ad"><div class="floatLeft"><iframe src="http://ad.doubleclick.net/adi/ta.cc.fvc.com.s/;pos=topleft;sz=728x90;dcopt=ist;tile=1;ord=1415072271;?" width="728" height="90" marginwidth="0" marginheight="0" frameborder="0" scrolling="no">&lt;script language="JavaScript" src="http://ad.doubleclick.net/adj/ta.cc.fvc.com.s/;pos=topleft;sz=728x90;dcopt=ist;abr=!ie;tile=1;ord=1415072271;?" type="text/javascript"&gt;&lt;/script&gt;</iframe><noscript>&lt;a href="http://ad.doubleclick.net/jump/ta.cc.fvc.com.s/;pos=topleft;sz=728x90;dcopt=ist;abr=!ie4;abr=!ie5;abr=!ie6;tile=1;ord=1415072271;?" target="_blank"&gt;&lt;img src="http://ad.doubleclick.net/ad/ta.cc.fvc.com.s/;pos=topleft;sz=728x90;dcopt=ist;abr=!ie4;abr=!ie5;abr=!ie6;tile=1;ord=1415072271;?" width="728" height="90" border="0" alt=""&gt;&lt;/a&gt;</noscript></div><div class="floatRight" style="width:221px; overflow:hidden;"><!-- START E-NEWSLETTER SIGN-UP FORM -->
+                    <form class="newsletterSubscribeFrm">
+                        <fieldset>
+                            <label class="subscriberEmailLbl">Sign Up for Our Newsletter</label>
+                            <input type="text" name="subscriberEmail" class="subscriberEmail newsletterField emailExample" value="Enter your e-mail" onfocus="this.value='';" maxlength="100">
+                            <input type="submit" value="Go" class="newsletterSubmitBtn" name="newsletterSubmitBtn">
+                            <input type="hidden" id="siteOrigin" name="siteOrigin" value="fvc"><input type="hidden" id="pageReferer" name="pageReferer" value="top_right"><input type="hidden" id="adClickPage" name="adClickPage" value="http://" www.familyvacationcritic.com="" fontainebleau-miami-beach="" htl="" &sa="U&amp;ei=pTRYVOXMPMqYNtLbgdAH&amp;ved=0COcBEBYwIg&amp;usg=AFQjCNEWKW0OTsqda0eBkr_Wl44S3IOK3A/&quot;">
+                        </fieldset>
+                    </form>
+                    <!-- END E-NEWSLETTER SIGN-UP FORM --></div><br clear="all"></div>            <div id="main">
+
+                            	                
+                <script type="text/javascript">
+				var userIP = '54.173.105.118';
+				var hotelVersion = 'none';
+				</script>
+                
+                <div id="header">
+               		<div id="logo"><a href="/" title="Home"><img src="http://images.familyvacationcritic.com/fvclogo_2011.jpg" alt="Family Vacation Critic" title="Family Vacation Critic"></a></div>
+                    <div id="headerSearch">
+                    	
+                        <div style="float:left;">
+                        	<div style="overflow: hidden; height: 29px; width: 173px;">
+                                <div style="margin-top:-30px; margin-left:-60px;">
+                                <iframe src="http://www.facebook.com/plugins/likebox.php?id=71672328561&amp;width=292&amp;connections=0&amp;stream=false&amp;header=true&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:60px;" allowtransparency="true"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div style="float:left; padding-top:3px;">
+                        <form name="searchForm" id="searchForm" method="get" action="/search/results.php">
+							<input type="text" name="q" id="searchTerm">
+                        	<input type="image" src="http://images.familyvacationcritic.com/searchBtn_w93.gif">
+						</form>
+                        </div>
+                        <br clear="all">   
+                    </div>
+                    <!--div id="tagline"></div-->
+                    <div id="tagline">The best family vacations start here</div>
+                    
+                    <!-- SOCIAL AND USER LOGIN LINKS -->
+                    <div id="loginNsocial">
+                    	<ul>
+                        
+                        <!-- FACEBOOK -->
+                    	<li>Follow us on </li>
+                        <li><a href="http://www.facebook.com/FamilyVacationCritic" target="_blank"><img src="http://images.familyvacationcritic.com/facebookhp.gif" title="Follow Family Vacation Critic on Facebook"></a></li>
+                    	
+                        <!-- TWITTER -->
+                        <li><a href="http://www.twitter.com/FamilyVacation" target="_blank"><img src="http://images.familyvacationcritic.com/twitter_icon_16.gif" alt="Follow Family Vacation Critic on Twitter" title="Follow FamilyVacation on Twitter"></a></li>
+                        
+                        <!-- RSS -->
+                        <li><a href="/rss.php" target="_blank"><img src="http://images.familyvacationcritic.com/rssICON.jpg" alt="Family Vacation Critic RSS" title="Family Vacation Critic RSS"></a></li>
+                        
+                        <!-- FVC BLOG -->
+                        <li><a href="/blog/" title="Follow the Family Vacation Critic blog">Blog</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    
+                    
+                    	<!-- USER LOGGED IN -->
+                    	                        <li>
+                        	<a class="fvc_login" style="cursor: pointer;" onmouseover="this.style.textDecoration='underline';" onmouseout="updateMousePtr('default'); this.style.textDecoration='none';" title="Sign In">Sign In</a> 
+                            <span>|</span> 
+                            <a class="redText fvc_sign_up" title="Register for Free" style="cursor: pointer;">Join!</a>
+                        </li>
+                                                
+                        </ul>
+                    </div>    
+
+
+                    <!-- COLOR BAR AND NAV LINKS -->
+                    <div id="headerBar">
+                    	<div id="headerBarImg">&nbsp;</div>
+						<div id="mainNav">
+
+	<a href="/" title="Home" class="unselectedSection">Home</a><a href="/family-vacations/" class="unselectedSection" title="Destinations">Destinations</a><a href="/family-resorts/" title="Family Resorts" class="unselectedSection">Resorts</a><a href="/vacation-rentals/" title="Vacation Rentals" class="unselectedSection">Rentals</a><a href="/deals/" title="Family Vacation Deals" class="unselectedSection">Deals</a><a href="/planning/" title="Planning" class="unselectedSection">Planning</a><a href="/ideas/" title="Ideas" class="unselectedSection">Ideas</a><a href="/forums/" title="Family Vacation Forums" class="unselectedSection">Forums</a><a href="/news/" class="unselectedSection" title="News">News</a><a href="/all-inclusive-vacations/ideas/" title="All-Inclusives" class="unselectedSection" style="color: #BD081E;">All-Inclusives</a></div>
+                    </div>
+                    
+                    
+                 </div> <!-- header close -->
+                <br><br><br><br>
+
+                <div style="text-align: center;">
+                    We're sorry, the page you've requested has not been found. 
+                    <br>It's possible the page has moved or you've entered the address incorrectly. 
+
+                    <br><br>
+                    Visit the Family Vacation Critic home page or use the "back" button on your browser. 
+                </div>
+
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+                <div id="footerBar"><img id="colorBar" src="http://images.familyvacationcritic.com/color-bar_FVC.gif"></div>
+<div id="copyright">
+	© Copyright 2014.  The Independent Traveler, Inc.<br>
+	All rights reserved.  This file may be downloaded for personal<br>
+	use only.  Other copying or reproduction is expressly prohibited.
+</div>
+<div id="footernav">
+	<a href="/about-us/abt/" title="About us">About Us</a> • 
+	<a href="/blog/" title="Blog">Blog</a> • 
+	<a href="/overview/abt/" title="Advertising">Advertising</a> • 
+	<a href="/editorial-disclaimer/abt/" title="Editorial Disclaimer">Editorial Disclaimer</a> • 
+	<a href="/privacy/abt/" title="Privacy">Privacy</a><br>
+  <a href="/sitemap/" title="Sitemap">Site Map</a>
+</div>
+<br clear="all">
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/toolbar/toolbar.css" media="screen">
+<script type="text/javascript" src="/toolbar/toolbar.js"></script>
+
+<center>
+<div id="footpanel">
+<div id="footpanel_bevel">
+	
+	
+	
+	
+	
+	<div id="toolbar_rightpanel">
+    <ul>    	
+        <!-- li><a href="javascript:void(0);" class="toolbar_close">X <small>close</small></a></li -->
+        
+        <li>
+        	<a href="http://www.independenttraveler.com" class="independenttraveler_home">Independent Traveler</a>
+        	<small>independenttraveler.com</small>	
+        </li>
+        <li>
+        	<a href="http://www.cruisecritic.com" class="cruisecritc_home">Cruise Critic</a>
+        	<small>cruisecritic.com</small>
+        </li>
+        
+    </ul>
+   	</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="toolbar_leftpanel">
+    <ul>
+    	
+        <li>
+        	<div id="toolbar_advertisement" data-targetlink="/newsletter/manage.php?referral=footerbar">
+                <div id="toolbar_ad_meter">&nbsp;</div>
+                <div id="toolbar_ad_image"><img src="http://images.familyvacationcritic.com/newsletter-logo-toolbar.png"></div>
+                <div id="toolbar_ad_text">
+                    <div id="toolbar_ad_text_title">FREE Family Travel Newsletter</div>
+                    <!--div id="toolbar_ad_text_sub">Get family travel deals and tips!</div-->
+                </div>
+            </div>
+        </li>
+        
+        
+        
+        				
+				
+        <li id="toolbar_articlepanel">
+        	<a href="javascript:void(0);" class="toolbar_articles toolbar_articles_big">Family Travel Tips &nbsp;&nbsp;<span class="fvc_newarticle_count">(<b>4</b> New)</span></a>
+            <div class="subpanel" style="height: 585px;">
+            <h3><span> – </span>Family Planning and Tips</h3>
+
+            <ul id="fvcarticles_panel_popup" style="height: 560px;">
+				<!--li><span>Family Members</span></li-->
+            	<li data-id-article="450"><div class="footpanel_article_title"><a href="/10-best-orlando-resorts-for-families/art/"><b>10 Best Orlando Resorts for Families</b></a></div><div class="footpanel_article_wrapper"><img width="90" style="float:left; padding:5px 7px 0 0;" src="http://images.familyvacationcritic.com/planningideas/thumb_08a0bb0d02e49cc52695b8697243df69.jpg">So many hotels and resorts to choose from! Which ones really are the best for families in terms of theme-park access, amenities, and accommodations? Here are our favorites in the Orlando area!
+
+1. Hilton Orlando Bonnet Creak
+Maybe it is the Hilton's water park with two zero-entry pools, a 3-acre ...</div></li><li data-id-article="331"><div class="footpanel_article_title"><a href="/skip-this-do-that/art/"><b>Skip This: Do That!</b></a></div><div class="footpanel_article_wrapper">Deciding where to go for your next family vacation? Often it's the most popular destinations -- from mega theme parks to world-famous beach towns -- that come to mind first. It's tempting to pick a familiar place and just go with what you know, but do this and you could be missing out on some fantas...</div></li><li data-id-article="294"><div class="footpanel_article_title"><a href="/disney-wonder-alaskan-cruise/art/"><b>Disney Wonder Alaskan Cruise</b></a></div><div class="footpanel_article_wrapper">Join us onboard Disney Wonder's first exploration into Alaskan waters and ports as Family Vacation Critic Editor Lissa Poirot and her two tots take you on a tour. Be the first to see a sample of Disney's Alaskan Port Adventures, as well as glimpse the Disney Wonder's onboard fun, in our first-ever d...</div></li><li data-id-article="135"><div class="footpanel_article_title"><a href="/family-volunteer-vacations/art/"><b>Family Volunteer Vacations</b></a></div><div class="footpanel_article_wrapper">Away from the hectic pace of our everyday lives, any vacation is a chance for families to reconnect. There's no soccer game, no piano recital, no working late, so finally you have that precious day together. Yet, if you really want a meaningful break from your usual schedule, one that might change t...</div></li>            </ul>
+            </div>
+        </li>
+        
+        
+        <li><a href="http://www.twitter.com/FamilyVacation" target="_blank" class="toolbar_twitter">Twitter</a></li>
+        <li><a href="http://www.facebook.com/FamilyVacationCritic" target="_blank" class="toolbar_facebook">Facebook</a></li>
+        	
+            
+        
+        
+	</ul>
+    </div>
+</div>
+</div>
+</center>
+
+
+
+
+
+
+
+<!-- Adobe Marketing Cloud Tag Loader Code
+Copyright 1996-2013 Adobe, Inc. All Rights Reserved
+More info available at http://www.adobe.com/solutions/digital-marketing.html -->
+<script type="text/javascript">//<![CDATA[
+var amc=amc||{};if(!amc.on){amc.on=amc.call=function(){}};
+document.write("<scr"+"ipt type=\"text/javascript\" src=\"//www.adobetag.com/d1/v2/ZDEtY3J1aXNlY3JpdGljLTExOTM2LTMwNjQt/amc.js\"></sc"+"ript>");
+//]]></script><script type="text/javascript" src="//www.adobetag.com/d1/v2/ZDEtY3J1aXNlY3JpdGljLTExOTM2LTMwNjQt/amc.js"></script>
+<!-- End Adobe Marketing Cloud Tag Loader Code -->
+
+<script><!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+s.pageName="";
+s.channel="";
+s.hier1="";
+s.events="";
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<!-- End SiteCatalyst code version: H.24.2. -->
+<!-- Begin tracking for GA -->
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4231968-4']);
+  _gaq.push(['_setDomainName', 'familyvacationcritic.com']);
+  _gaq.push(function() {
+    var pageTracker = _gat._getTrackerByName();
+		_gat.readSubCookie = function(name) {	
+		var nameRegex = RegExp("(?:\\||\\.)" + name + "=([^|;]+)");
+		var nameValue;
+		
+		nameValue = nameRegex.exec(document.cookie);
+		
+		if (nameValue) {
+			return nameValue[1];
+		} else {
+			return " ";
+		}
+	};
+
+		if (!pageTracker._getVisitorCustomVar(1)) {
+			pageTracker._setCustomVar(1, "source", _gat.readSubCookie("utmcsr"), 1);
+			pageTracker._setCustomVar(2, "medium", _gat.readSubCookie("utmcmd"), 1);
+		} 
+	});
+ 
+  _gaq.push(['_trackPageview']);
+  
+  _gaq.push(['t2._setAccount', 'UA-17339527-1']);
+  _gaq.push(['t2._setDomainName', 'familyvacationcritic.com']);
+  _gaq.push(['t2._trackPageview']);
+  
+  _gaq.push(['t3._setAccount', 'UA-17339527-2']);
+  _gaq.push(['t3._setDomainName', 'familyvacationcritic.com']);
+  _gaq.push(['t3._trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- Setup AddThis events for GA -->
+<script type="text/javascript">
+   var addthis_config = {
+      data_ga_tracker: _gaq,
+	  data_track_clickback: true
+   };
+</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=familyvacationcritic"></script>
+
+<script type="text/javascript">
+try {
+	_gat.fixTimeouts();
+} catch(e) {}
+</script>
+
+
+<!-- Google Code for Broad Remarketing List -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1031262449;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "666666";
+var google_conversion_label = "bU7LCMf1sgIQ8aHf6wM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+</script><img height="1" width="1" border="0" alt="" src="http://www.googleadservices.com/pagead/conversion/1031262449/?random=1415072272996&amp;cv=7&amp;fst=1415072272996&amp;num=1&amp;fmt=3&amp;value=0&amp;label=bU7LCMf1sgIQ8aHf6wM&amp;bg=666666&amp;hl=en&amp;guid=ON&amp;u_h=768&amp;u_w=1024&amp;u_ah=768&amp;u_aw=1024&amp;u_cd=24&amp;u_his=40&amp;u_tz=0&amp;u_java=false&amp;u_nplug=1&amp;u_nmime=1&amp;frm=0&amp;url=http%3A//www.familyvacationcritic.com/fontainebleau-miami-beach/htl/%26sa%3DU%26ei%3DpTRYVOXMPMqYNtLbgdAH%26ved%3D0COcBEBYwIg%26usg%3DAFQjCNEWKW0OTsqda0eBkr_Wl44S3IOK3A/&amp;vis=1">
+<noscript>
+&lt;div style="display:inline;"&gt;
+&lt;img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1031262449/?label=bU7LCMf1sgIQ8aHf6wM&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+&lt;/div&gt;
+</noscript>
+<script type="text/javascript">
+	var gae_ua = _gaq;
+</script>
+
+<script type="text/javascript" src="https://s3.amazonaws.com/gavision/uitrack.jquery.js"></script>                
+<link rel="stylesheet" type="text/css" href="/css/login.css" media="screen">
+
+<!-- Required for Facebook init -->
+<div id="fb-root" class=" fb_reset"><script async="" src="http://connect.facebook.net/en_US/all.js"></script><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="http://static.ak.facebook.com/connect/xd_arbiter/ehazDpFPEnK.js?version=41#channel=f1c224f5f&amp;origin=http%3A%2F%2Fwww.familyvacationcritic.com" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://s-static.ak.facebook.com/connect/xd_arbiter/ehazDpFPEnK.js?version=41#channel=f1c224f5f&amp;origin=http%3A%2F%2Fwww.familyvacationcritic.com" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+
+<div id="login_popup_container"></div>
+
+<div id="login_signing_in_popup"></div>
+
+<div id="login_signing_up_popup"></div>
+
+<script type="text/javascript" src="/js/login.js"></script>
+
+<script>
+    // create and intialize Login JS object
+    var login_object = Object.create(Login);
+    login_object.init('175999065896227');
+</script>
+
+<!-- These hidden divs are here because when we include this on the forums, we send a 'click' trigger to the login div, so the div must exist somewhere for that to work -->
+<div class="fvc_login" style="display: none;"></div>
+<div class="fvc_sign_up" style="display: none;"></div>
+            </div>   
+
+    
+
+</div><script type="text/javascript" id="sitecatalyst_stub">var s=new SC_Stub();
+s.tagContainerName="FamilyCritic_s";
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+function SC_Stub(){var t=this,w=t.w=window;t.d=w.document;t._c='s_l';if(!w.s_c_il){w.s_c_il=[];w.s_c_in=0}t._il=w.s_c_il;t._in=w.s_c_in;t._il[t._in]=t;w.s_c_in++;t.fs=function(x,y){if(x&&y){var a=
+x.split(','),b=y.split(','),i,j;for(i=0;i<a.length;i++){for(j=0;j<b.length;j++)if(a[i]==b[j])return 1}}return 0};t.aa=function(a){var b=0,i;if(a){b=[];for(i=0;i<a.length;i++)b[i]=a[i]}return b};t.wl=[
+];t.wq=[];t.createAsynchronousCustomTagHandler=function(o,f){var t=this,x,i;if(!f){f=o;o=0;x=t.w}else{if(!t.w[o])t.w[o]={};x=t.wl[o]=t.w[o]}if(typeof(f)!='object')f=[f];for(i=0;i<f.length;i++)if(!x[f[
+i]])x[f[i]]=new Function('var t=s_c_il['+t._in+'];t.wq[t.wq.length]={'+(o?'o:"'+o+'",':'')+'f:"'+f[i]+'",a:t.aa(arguments)}')};t.as=function(x){var y=[],i;for(i=1;i<x.length;i++)y[y.length]=x[i]
+return y};t.s=0;t.contextData={};t.retrieveLightData={};if(!w.s_giq)w.s_giq=[];t._gi=w.s_gi;w.s_gi=new Function('u','var t=s_c_il['+t._in+
+'],w=t.w,l=t._il,i,j,x,s;u=u.toLowerCase();if(l)for(j=0;j<2;j++)for(i=0;i<l.length;i++){s=l[i];x=s._c;if((!x||x=="s_c"||(j>0&&x=="s_l"))&&s.oun&&(s.oun==u||(s.fs&&s.sa&&s.fs(s.oun,u)))){'+
+'if(s.sa)s.sa(u);return s}}if(!t.oun){t.sa(u);return t}if(t._gi)return t._gi(u);s=new SC_Stub();s.tagContainerName="s_tca_"+w.s_giq.length;s.sa(u);w.s_giq[w.s_giq.length]=s;return s');t.sa=function(u)
+{var t=this;if(t.s)t.s.sa(u);t.un=u;if(!t.oun)t.oun=u;else if(!t.fs(t.oun,u))t.oun+=','+u};t.tq=[];t.track=t.t=function(vo){var t=this,m;if(t.s)return t.s.t(vo);if(!vo)vo={};for(m in t){if(m!='un'
+||t.u!=t.un)vo[m]=t[m]}t.tq[t.tq.length]=vo;t.lnk=t.linkName=t.linkType='';return '';};t.trackLink=t.tl=function(o,u,n,vo){var t=this;if(t.s)return t.s.tl(o,u,v,vo);t.lnk=o;t.linkType=u;t.linkName=n
+return t.t(vo)};t.trackLight=function(p,ss,i,vo){var t=this;if(t.s)return t.s.trackLight(p,ss,i,vo);t.lightProfileID=p;t.lightStoreForSeconds=ss;t.lightIncrementBy=i;return t.t(vo)};t.lmq=[]
+t.loadModule=function(n,u,d){var t=this;if(t.s)return t.s.loadModule(n,u,d);t.lmq[t.lmq.length]={n:n,u:u,d:d};return 0};t.ml=[];t.mmq=[];t.mo=function(m,f){var t=this,i;t.ml[m]=t[m]={};if(f)
+for(i=0;i<f.length;i++)t[m][f[i]]=new Function('var t=s_c_il['+t._in+'];t.mmq[t.mmq.length]={m:"'+m+'",f:"'+f[i]+'",a:t.aa(arguments)}')};t.mo('Media',['open','play','stop','close','track']);t.mo(
+'Survey',['launch']);}; amc.call('getLoaderById', 0).publish('ontagload.sitecatalyst_stub', {id: 'sitecatalyst_stub',tag: amc.call('getById', 'sitecatalyst_stub')})</script><script type="text/javascript" id="sitecatalyst" async="" defer="" src="//www.adobetag.com/d1/v2/ZDEtY3J1aXNlY3JpdGljLTExOTM2LTMwNjQt/live/sitecatalyst.js"></script><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;"><iframe id="_atssh691" title="AddThis utility frame" src="//ct1.addthis.com/static/r07/sh178.html#iit=1415072274832&amp;tmr=load%3D1415072272934%26core%3D1415072273963%26main%3D1415072274789%26ifr%3D1415072274853&amp;cb=0&amp;cdn=1&amp;chr=UTF-8&amp;kw=&amp;ab=-&amp;dh=www.familyvacationcritic.com&amp;dr=&amp;du=http%3A%2F%2Fwww.familyvacationcritic.com%2Ffontainebleau-miami-beach%2Fhtl%2F%26sa%3DU%26ei%3DpTRYVOXMPMqYNtLbgdAH%26ved%3D0COcBEBYwIg%26usg%3DAFQjCNEWKW0OTsqda0eBkr_Wl44S3IOK3A%2F&amp;dt=Page%20Not%20Found%20-%20Family%20Vacation%20Critic&amp;dbg=0&amp;md=0&amp;cap=tc%3D0%26ab%3D0&amp;inst=1&amp;vcl=0&amp;jsl=161&amp;prod=undefined&amp;lng=en-US&amp;ogt=&amp;pc=men&amp;pub=familyvacationcritic&amp;ssl=0&amp;sid=54584a119db90cdd&amp;srpl=1&amp;srcs=1&amp;srd=1&amp;srf=1&amp;srx=1&amp;ver=300&amp;xck=0&amp;xtr=0&amp;og=&amp;aa=0&amp;csi=undefined&amp;toLoJson=uvs%3D54584a1128626b47000&amp;rev=9.3&amp;ct=1&amp;xld=1&amp;xd=1" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px; left: 0px; top: 0px;"></iframe></div><script type="text/javascript" src="http://ct1.addthis.com/static/r07/core162.js"></script><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

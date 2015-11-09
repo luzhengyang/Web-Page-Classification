@@ -1,0 +1,667 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Language" content="">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="copyright" content="">
+	<meta name="publisher" content="">
+
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+	<script id="facebook-jssdk" src="//connect.facebook.net/en_US/all.js#xfbml=1"></script><script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript">if(window.top.location!=document.location)window.top.location.href=document.location.href;</script>
+
+	<!-- BEGIN: ADDED HEADER CONTENT -->
+	<script type="text/javascript" src="http://www.jetluxuryresorts.com/condor/js/essentials.js"></script>
+			<script type="text/javascript">
+			//<![CDATA[
+				condor.siteBaseHREF     = 'http://www.jetluxuryresorts.com/';
+				condor.templateBaseHREF = 'http://www.jetluxuryresorts.com/templates/main/';
+				condor.condorBaseHREF   = 'http://www.jetluxuryresorts.com/condor/';
+				condor.currentLanguage  = 'en';
+				condor.dataSection      = 'jetluxury';
+			//]]>
+			</script>
+<link type="text/css" rel="stylesheet" href="http://www.jetluxuryresorts.com/d/jetluxury/merged/global_f6_2014-09-10-00-14_1188267189.css">
+<link type="text/css" rel="stylesheet" href="http://www.jetluxuryresorts.com/d/jetluxury/merged/none_f1_2012-11-22-17-28_4100389592.css">
+<link type="text/css" rel="stylesheet" href="http://www.jetluxuryresorts.com/d/jetluxury/merged/404_f2_2012-10-31-15-52_570759137.css">
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="http://www.jetluxuryresorts.com/templates/main/css/template.subpage.css?mergeFile=_none">
+<script type="text/javascript" src="http://www.jetluxuryresorts.com/d/jetluxury/merged/global_f8_2012-11-20-16-24_3918992841.js"></script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="http://www.jetluxuryresorts.com/condor/modules/imageSwitch/javascript.imageSwitch.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.jetluxuryresorts.com/condor/modules/imageSwitch/style.imageSwitch.css">
+<script type="text/javascript" src="http://www.jetluxuryresorts.com/condor/modules/googleAnalytics/javascript.googleAnalytics.js"></script>
+
+
+
+
+	<!-- END: ADDED HEADER CONTENT -->
+	
+	<script type="text/javascript">
+//<![CDATA[
+	jQuery(document).ready(function(){
+		// BEGIN: onLoadScript
+		/* 
+		Check if datepicker is available and then remove the date-format-helper element. 
+		As of writing (04.05.2011), we cannot use the "create" event that is bundled with jQuery UI as the datepicker does not use the widget factory, 
+		being so the event is never triggered. 
+		*/
+		
+		if(jQuery().datepicker){
+			jQuery("#date-format-helper").remove();
+		}
+		
+		jQuery('#booking-form #date-in').datepicker({
+			dateFormat: "mm/dd/yy",
+			minDate:new Date()
+		});
+		jQuery('#hotel-list').change(function(){
+		    var indexid = jQuery(this).val();
+		    loadFields(jQuery(this).val());
+		});
+
+			gaTracking.tagHyperlinks('default', 'iqrez.com');
+			gaTracking.tagForms('default', 'iqrez.com');			gaTracking.tagDownloads('default', 'http://www.jetluxuryresorts.com');
+		// END: onLoadScript
+		
+		// fancybox PNG file location fix - Please Do NOT remove the below line.
+		fancyboxIEPngLocationFix.fix("http://www.jetluxuryresorts.com/templates/main/libs/jquery/fancybox/");
+
+		if(jQuery().fancybox){ //namespace check
+			
+			var fancyBoxConf = {
+				'transitionIn'	: 'elastic',
+				'transitionOut'	: 'elastic',
+			/*	'easingIn'      : 'easeOutQuint',
+				'easingOut'     : 'easeInQuint',	*/
+				'speedIn':500,
+				'speedOut':500
+			};
+			
+			jQuery("#mod_pukkaGalleries .picture a, #mod_pukkaPictures .picture a").fancybox(fancyBoxConf);
+			
+			jQuery(
+				"#mod_pukkaGalleries li a," +
+				"#mod_pukkaRooms a[rel^='lightbox']," +
+				"#mod_pukkaPackages a[rel^='lightbox']"
+			).fancybox({
+				'zoomSpeedIn': 500,
+				'zoomSpeedOut': 500,
+				'zoomOpacity': true
+			});
+			
+			jQuery("a.view-images").click(function(){
+				jQuery(jQuery(this).parent().parent().find(".mediaImagesRooms")[0]).trigger('click');
+				return false;
+			});
+			
+		}
+		
+		jQuery("#why-dialog").jqm({
+		trigger:'.explore',
+		overlay:0,
+		toTop:true,
+		modal:true,
+		onShow: function(h) {
+		 h.w.show().animate({width:466,height:375},500);
+		},
+		onHide: function(h) {
+		h.w.animate({width:0,height:0},500,function(){if(h.o) h.o.remove(); h.w.hide()});
+		}
+		});
+		if(jQuery().cycle){ //check if cycle plugin is available
+			//init any custom cycle implementations here
+		}
+		
+		
+		jQuery('.widget-content .carousel ').cycle({
+			fx:     'fade', 
+			speed:  '2000'
+		});
+		jQuery('.widget-content .marquee').cycle({
+			fx:     'fade', 
+			speed:  '2000'
+		});
+		
+		/* auto clear "Join mailing our list" type messages. requires the autoClear plugin. include the jquery.autoClear-min.js found in the libs/jquery directory in the inc.template.header-open.php file before using this code.
+		if(jQuery().autoClear){				
+			jQuery('#email-address').autoClear();
+		}
+		*/
+		
+		//add target="_blank" to any pdf file on the site
+		jQuery("a[href$='pdf']").attr('target','_blank');
+		jQuery('form.flexibleForm .type_date input').datepicker({minDate:0});
+		$("#mod_pukkaVenues .itemContent").hide();
+			$("#mod_pukkaVenues .selected .itemContent").show();
+			$("#mod_pukkaVenues .itemPreviewTitle").click(function(){
+			if($(this).parent().hasClass("selected")){
+			$(this).nextAll("#mod_pukkaVenues .itemContent").slideUp().parent().removeClass("selected");
+			}else{
+			$("#mod_pukkaVenues .itemContent").slideUp().parent().removeClass("selected");
+			$(this).nextAll("#mod_pukkaVenues .itemContent").slideDown().parent().addClass("selected");	
+			}
+		});
+		
+		//force GA tracking on iHotelier on the page reservations-en.html and properties-en.html
+
+				// with jquery, we are attaching a function to links that contain particular hotelid's
+				// all of the other hotels use iqrez and default tracking...
+
+				//Sanctuary Hotel NYC (75454)
+				$("a[href*='75454']").click(function(){				
+					// if we want to re-use the same window, use the next line...
+					// _gaq.push(['default._link','https://booking.ihotelier.com/istay/istay.jsp?hotelid=75454']);
+
+					// we want to open a new window, so we'll do it this way instead...
+					var tracker = _gat._getTrackerByName();
+					var target = tracker._getLinkerUrl('https://booking.ihotelier.com/istay/istay.jsp?hotelid=75454');
+					window.open(target);
+
+					// in either case, return false so that the default action [link] is suppressed
+					return false;
+				});
+				
+				//Shore Hotel Santa Monica (52507)
+				$("a[href*='52507']").click(function(){				
+					// if we want to re-use the same window, use the next line...
+					// _gaq.push(['default._link','https://gc.synxis.com/rez.aspx?Hotel=52507&amp;Chain=7692&amp;promo=JETLUX'']);
+
+					// we want to open a new window, so we'll do it this way instead...
+					var tracker = _gat._getTrackerByName();
+					var target = tracker._getLinkerUrl('https://gc.synxis.com/rez.aspx?Hotel=52507&amp;Chain=7692&amp;promo=JETLUX');
+					window.open(target);
+
+					// in either case, return false so that the default action [link] is suppressed
+					return false;
+				});
+
+	});
+//]]>
+</script>
+
+	<script type="text/javascript">
+	//<![CDATA[
+	var _gaq = _gaq || [];
+	_gaq.push(['default._setAccount', 'UA-19798634-2']
+	, ['default._setDomainName', 'jetluxuryresorts.com']
+	, ['default._setAllowLinker', true]
+	, ['default._setCustomVar', 5, 'tc', 'ih_______-Toolbox 143-cty_XXXXX-ctr_XXXXX-typ_XXXXX-cat_default', 3]
+	, ['default._trackPageview', '/404-en.html']
+	);
+	
+	if(!window._masterAnalytics){
+			_gaq.push(
+			['master._setAccount', 'UA-32962968-1'],
+			['master._setDomainName', 'jetluxuryresorts.com'],
+			['master._setAllowLinker', true],
+						['master._setCustomVar', 5, 'tc', 'ih_______-Toolbox 143-cty_XXXXX-ctr_XXXXX-typ_XXXXX-cat_default', 3],
+			['master._trackPageview']
+		);
+			window._masterAnalytics = true;
+	}
+	
+	(function() {
+		if (!window._gaScriptLoaded) {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			window._gaScriptLoaded = true;
+		}
+	})();
+	//]]>
+</script>
+	
+	<!-- ANTI-MSIE FEATURES -->
+	<meta name="MSSmartTagsPreventParsing" content="true">
+	<meta http-equiv="imagetoolbar" content="no"><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style></head>
+
+<body id="page_404">
+<!---->
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="http://static.ak.facebook.com/connect/xd_arbiter/ehazDpFPEnK.js?version=41#channel=f36d6421ec&amp;origin=http%3A%2F%2Fwww.jetluxuryresorts.com" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://s-static.ak.facebook.com/connect/xd_arbiter/ehazDpFPEnK.js?version=41#channel=f36d6421ec&amp;origin=http%3A%2F%2Fwww.jetluxuryresorts.com" style="border: none;"></iframe></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!---->
+
+<div class="page-bkg">
+<div id="holder">
+	<h1>PAGE NOT FOUND</h1>
+	
+<div id="USA">
+	<img src="http://www.jetluxuryresorts.com/templates/main/images/usa-flag.png" alt="You are viewing the English version of our site" title="You are viewing the English version of our site">
+</div>
+<div id="japan">
+	<a href="http://www.jetluxuryresorts-japan.com/" target="_blank"><img src="http://www.jetluxuryresorts.com/templates/main/images/japan-flag.png" height="24" width="35" alt="View the Japanese version of our site" title="View the Japanese version of our site"></a>
+</div>
+	
+<div id="top" class="clearfloat">	
+	<div class="left">
+		<div id="branding">
+			<h2>Jet Luxury Resorts, Luxury Hotels</h2>
+			<a href="http://www.jetluxuryresorts.com/" title="Jet Luxury Resorts | Hotel | Resort | Management"><img id="logo" src="http://www.jetluxuryresorts.com/templates/main/images/logo.png?54584a20d8cc5" title="Jet Luxury Resorts | Hotel | Resort | Management" alt="Jet Luxury Resorts | Hotel | Resort | Management" lang="en">
+		</a>
+		</div>
+				<div id="main-visual">
+				<div id="slideshow54584a20a0d9d" class="slideshow" style="overflow: hidden;"><img class="slide" src="http://www.jetluxuryresorts.com/d/jetluxury/media/Malibu/Accommodations/__thumbs_650_329_crop/bottle.jpg?1352282104" width="650" height="329" lang="en" alt="Jet Bottle of Water" style="position: absolute; top: 0px; left: 0px; display: block; z-index: 2; opacity: 1;"></div>
+		<div class="properties-flash">
+		<object width="650" height="381" type="application/x-shockwave-flash" data="http://www.jetluxuryresorts.com/templates/main/flash/sliderOverlay.swf">
+				<param name="quality" value="high">
+				<param name="movie" value="http://www.jetluxuryresorts.com/templates/main/flash/sliderOverlay.swf">
+				<param name="wmode" value="transparent">
+				<param name="FlashVars" value="sitebase=http://www.jetluxuryresorts.com/templates/main">
+				<param name="AllowScriptAccess" value="always">
+			
+
+			</object>
+
+		</div>
+		</div>
+				
+<form id="booking-form" class="clearfloat" action="https://booking.ihotelier.com/istay/istay.jsp" method="get" onsubmit="return bookingOnSubmit(this);" target="_blank">
+<h2>Check Rates<br>&amp; Availability</h2>
+<div class="fieldsContainer">
+<input type="hidden" id="date-out" value="">
+			<div class="hotel">
+				<label for="hotel-list">Select a Hotel or Resort</label>
+			<div class="my-skinnable-select">	
+				<div class="jqTransformSelectWrapper" style="z-index: 10; width: 40px;"><div><span style="width: 20px;">Select a Property</span></div><ul class="jqoptions" style="width: 38px; display: none;"><li><a href="#" index="0" class="selected">Select a Property</a></li><li><a href="#" index="1">Trump Soho</a></li><li><a href="#" index="2">Sanctuary Hotel NYC</a></li><li><a href="#" index="3">Trump Waikiki</a></li><li><a href="#" index="4">Fountainbleau Miami Beach</a></li><li><a href="#" index="5">The Grand Lucayan</a></li><li><a href="#" index="6">Signature Condo Hotel</a></li><li><a href="#" index="7">Vdara Condo Hotel</a></li><li><a href="#" index="8">Palms Place</a></li><li><a href="#" index="9">Shore Hotel Santa Monica</a></li><li><a href="#" index="10">Tamarindo Villas</a></li></ul><select id="hotel-list" class="jqTransformHidden">
+					<option value="ALL">Select a Property</option>
+												<option value="0">Trump Soho</option>
+												<option value="1">Sanctuary Hotel NYC</option>
+												<option value="2">Trump Waikiki</option>
+												<option value="3">Fountainbleau Miami Beach</option>
+												<option value="4">The Grand Lucayan</option>
+												<option value="5">Signature Condo Hotel</option>
+												<option value="6">Vdara Condo Hotel</option>
+												<option value="7">Palms Place</option>
+												<option value="8">Shore Hotel Santa Monica</option>
+												<option value="9">Tamarindo Villas</option>
+									</select></div>
+			</div>		
+			</div>
+			<div class="date">
+				<label for="date-in">Check-in:</label>
+				<input type="text" id="date-in" value="11/04/2014" class="hasDatepicker">
+			</div>
+
+			<div class="nights choose">
+				<label for="nights">Nights:</label>
+				<div class="my-skinnable-select">
+				<div class="jqTransformSelectWrapper" style="z-index: 10; width: 40px;"><div><span style="width: 20px;">1</span></div><ul class="jqoptions" style="width: 38px; display: none;"><li><a href="#" index="0" class="selected">1</a></li><li><a href="#" index="1">2</a></li><li><a href="#" index="2">3</a></li><li><a href="#" index="3">4</a></li><li><a href="#" index="4">5</a></li><li><a href="#" index="5">6</a></li><li><a href="#" index="6">7</a></li><li><a href="#" index="7">8</a></li><li><a href="#" index="8">9</a></li><li><a href="#" index="9">10</a></li><li><a href="#" index="10">11</a></li><li><a href="#" index="11">12</a></li><li><a href="#" index="12">13</a></li><li><a href="#" index="13">14</a></li><li><a href="#" index="14">15</a></li><li><a href="#" index="15">16</a></li><li><a href="#" index="16">17</a></li><li><a href="#" index="17">18</a></li><li><a href="#" index="18">19</a></li><li><a href="#" index="19">20</a></li></ul><select id="nights" name="Length" class="jqTransformHidden"><!-- "length" conflicts with calendar and lightbox -->
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+				</select></div>
+				</div>
+			</div>
+
+			<div class="adults choose">
+				<label for="adults">Adults:</label>
+				<div class="my-skinnable-select">
+				<div class="jqTransformSelectWrapper" style="z-index: 10; width: 40px;"><div><span style="width: 20px;">1</span></div><ul class="jqoptions" style="width: 38px; display: none;"><li><a href="#" index="0" class="selected">1</a></li><li><a href="#" index="1">2</a></li><li><a href="#" index="2">3</a></li><li><a href="#" index="3">4</a></li><li><a href="#" index="4">5</a></li><li><a href="#" index="5">6</a></li><li><a href="#" index="6">7</a></li><li><a href="#" index="7">8</a></li><li><a href="#" index="8">9</a></li><li><a href="#" index="9">10</a></li></ul><select id="adults" name="adults" class="jqTransformHidden">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select></div>
+				</div>
+			</div>
+
+			<div class="children choose">
+				<label for="children">Children:</label>
+				<div class="my-skinnable-select">
+				<div class="jqTransformSelectWrapper" style="z-index: 10; width: 40px;"><div><span style="width: 20px;">0</span></div><ul class="jqoptions" style="width: 38px; display: none;"><li><a href="#" index="0" class="selected">0</a></li><li><a href="#" index="1">1</a></li><li><a href="#" index="2">2</a></li><li><a href="#" index="3">3</a></li><li><a href="#" index="4">4</a></li><li><a href="#" index="5">5</a></li><li><a href="#" index="6">6</a></li><li><a href="#" index="7">7</a></li><li><a href="#" index="8">8</a></li><li><a href="#" index="9">9</a></li><li><a href="#" index="10">10</a></li></ul><select id="children" name="children" class="jqTransformHidden">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select></div>
+				</div>
+			</div>
+
+			<button type="submit" class="go booking-link tracking-link" value="" title="Book Now"><span>Book Now</span></button>
+		<script type="text/javascript">
+		//<![CDATA[
+				var myHotels ={'hotel':[							{"url":"http://search.iqrez.com/reservations/JetLuxuryResorts/search/14296","type":"1","hotelid":"596","datei":"checkin","dateo":"checkout","adults":"adults","children":"children"},							{"url":"https://booking.ihotelier.com/istay/istay.jsp","type":"2","hotelid":"75454","datei":"datein","dateo":"dateout","adults":"adult","children":"children"},							{"url":"http://search.iqrez.com/reservations/JetLuxuryResorts/search/14297","type":"1","hotelid":"307","datei":"checkin","dateo":"checkout","adults":"adults","children":"children"},							{"url":"http://search.iqrez.com/reservations/JetLuxuryResorts/search/14295","type":"1","hotelid":"991","datei":"checkin","dateo":"checkout","adults":"adults","children":"children"},							{"url":"http://search.iqrez.com/reservations/JetLuxuryResorts/search/14259","type":"2","hotelid":"14259","datei":"datein","dateo":"dateout","adults":"adult","children":"children"},							{"url":"http://search.iqrez.com/reservations/JetLuxuryResorts/search/14290","type":"1","hotelid":"894","datei":"checkin","dateo":"checkout","adults":"adults","children":"children"},							{"url":"http://search.iqrez.com/reservations/JetLuxuryResorts/search/14291","type":"1","hotelid":"663","datei":"checkin","dateo":"checkout","adults":"adults","children":"children"},							{"url":"http://search.iqrez.com/reservations/JetLuxuryResorts/search/14293","type":"1","hotelid":"258","datei":"checkin","dateo":"checkout","adults":"adults","children":"children"},							{"url":"https://gc.synxis.com/rez.aspx","type":"3","hotelid":"52507","chain":"7692","promo":"JETLUX","datei":"arrive","dateo":"depart","adults":"adult","children":"child"},							{"url":"http://search.iqrez.com/reservations/JetLuxuryResorts/search/14302","type":"1","hotelid":"1115","datei":"checkin","dateo":"checkout","adults":"adults","children":"children"}]};				
+					function setDepature(){
+						dateOut= new Date(jQuery("#date-in").datepicker('getDate').getTime()+(jQuery("#nights").val()*24*60*60*1000))
+						jQuery("#date-out").datepicker({dateFormat: "mm/dd/yy"});
+						jQuery("#date-out").datepicker('setDate',dateOut);
+					}
+
+					function bookingOnSubmit(formEl) {
+						if (jQuery('#hotel-list').val()=="ALL") {
+							alert("Please Select A Property");				
+							return false;
+						}
+						if (myHotels.hotel[jQuery('#hotel-list').val()]==4) {
+							window.open(myHotels.hotel[jQuery('#hotel-list').val()].url);
+							return false;
+						}
+						else {
+							setDepature()
+
+							// Convert Google Analytics data into hidden form fields prior to form submission
+							// condor.trackLink(formEl); //optional, ensures tracking even before page-wide tracking has loaded
+							// ^ above is not working for whatever reason, we'll do it here below...
+
+							var tracker = _gat._getTrackerByName();  // create a reference to the google function
+							var target = tracker._getLinkerUrl('');  // normally we'd feed it a url, but we are only interested in utm vars this time
+							target = target.substr(1,target.length); // remove the ? that starts the variable list
+							var trackvars = new Array();             // create an array
+							trackvars = target.split('&');           // fill the array from the list that was returned
+						    jQuery('.trackingvars').remove();        // start fresh, just in case they switch from one property to another or re-submit
+							for (var i = 0; i < trackvars.length; i++) {
+								var thisvar = trackvars[i];
+								var thisvarname = thisvar.substr(0,thisvar.indexOf('=')); // extract the variable name from the value pair
+								var thisvarvalue = thisvar.substr(thisvar.indexOf('=')+1,thisvar.length); // extract the variable value from the value pair
+								// add the tracking var to the form...
+								jQuery('#booking-form').append('<input class="trackingvars" name="' + thisvarname + '" type="hidden" value="' + thisvarvalue + '" />')
+							}
+
+							return true;
+						}
+					}
+					
+					function loadFields(id){
+					    jQuery('.extrafield').remove();
+					    jQuery('#date-in').attr({name:myHotels.hotel[id].datei});
+						jQuery('#date-out').attr({name:myHotels.hotel[id].dateo});
+						jQuery('#adults').attr({name:myHotels.hotel[id].adults});
+						jQuery('#children').attr({name:myHotels.hotel[id].children})
+						jQuery('#booking-form').attr({action:myHotels.hotel[id].url})
+						switch(myHotels.hotel[id].type) {
+							case "1":
+								jQuery('#booking-form').append('<input class="extrafield" name="slBuildings" type="hidden" value="'+myHotels.hotel[id].hotelid+'" />')
+								break;
+							case "2":
+								jQuery('#booking-form').append('<input class="extrafield" name="hotelid" type="hidden" value="'+myHotels.hotel[id].hotelid+'" />')
+								if(myHotels.hotel[id].hotelid==75454) {
+									//jQuery('#booking-form').append('<input class="extrafield" name="rateplanid" type="hidden" value="1201958" />');
+								}
+								else {
+									jQuery('#booking-form').append('<input class="extrafield" name="identifier" type="hidden" value="JETLUX" />');
+								}
+								break;
+							case "3":
+								jQuery('#booking-form').append('<input class="extrafield" name="hotel" type="hidden" value="'+myHotels.hotel[id].hotelid+'" />')
+								jQuery('#booking-form').append('<input class="extrafield" name="chain" type="hidden" value="'+myHotels.hotel[id].chain+'" />')
+								jQuery('#booking-form').append('<input class="extrafield" name="promo" type="hidden" value="'+myHotels.hotel[id].promo+'"  />')
+								break;
+							case "4":
+								// nothing to do...
+								break;
+						}
+					}
+				//]]>
+				</script>
+</div>    				
+		</form>
+	</div>
+	<div class="right">
+		<div id="main-nav">
+		<ul class="nav"><li class="shortcut1 item1 itemr10 level1 home"><a href="http://www.jetluxuryresorts.com/">Home</a></li><li class="shortcut2 item2 itemr9 level1 reservations"><a href="http://www.jetluxuryresorts.com/reservations-en.html">Reservations</a></li><li class="shortcut3 item3 itemr8 level1 specials"><a href="http://www.jetluxuryresorts.com/specials-packages-en.html">Specials &amp; Packages</a></li><li class="shortcut4 item4 itemr7 level1 properties"><a href="http://www.jetluxuryresorts.com/properties-en.html">Hotels &amp; Resorts</a></li><li class="shortcut5 item5 itemr6 level1 ourTeam"><a href="http://www.jetluxuryresorts.com/executive-team-en.html">Our Executive Team</a></li><li class="shortcut6 item6 itemr5 level1 about"><a href="http://www.jetluxuryresorts.com/about-en.html">About Jet Luxury</a></li><li class="shortcut7 item7 itemr4 level1 becomeVIP"><a href="http://www.jetluxuryresorts.com/mailing-list-en.html">Become A Jet VIP</a></li><li class="shortcut8 item8 itemr3 level1 owner-connect"><a href="http://www.jetluxuryresorts.com/owner-connect-en.html">Owner Connect</a></li><li class="shortcut9 item9 itemr2 level1 press"><a href="http://www.jetluxuryresorts.com/jet-press-en.html">Jet In The Press</a></li><li class="shortcut10 item10 itemr1 level1 contact last"><a href="http://www.jetluxuryresorts.com/contact-en.html">Contact Us</a></li></ul>
+		<script type="text/javascript">
+		//<![CDATA[
+			condor.updatePageMenus = condor.updatePageMenus || function() {
+				var pageMenus = getElementsByClass('nav', null, 'ul');
+				for (var j=0; j<pageMenus.length; ++j) {
+					var nojsList = getElementsByClass('active-nojs', pageMenus[j]);
+					for (var i=0; i<nojsList.length; ++i) {
+						removeClass(nojsList[i], 'active-nojs');
+					}
+				}
+			}
+			condor.updatePageMenus();
+		//]]>
+		</script>		</div>
+		<div class="phone">877.JET.SET9</div>
+		<div class="guides-heading"><h2></h2></div>
+	</div>	
+</div><!-- END top -->
+<div id="middle" class="clearfloat">
+	<div class="left">
+<div id="main-content" class="clearfloat">
+	<div class="H1placeholder"></div>
+		<div class="blockCollection content">
+	<div class="contentBlock type_richText group_basicBlock">
+	<p><strong>The page you are looking for cannot be found.</strong></p>
+<p>Use the navigation to find the page you are looking for or <a href="http://www.jetluxuryresorts.com/default-en.html">click here</a> to go to the home page.</p>
+</div>
+</div>
+		<ul class="sitetop"><li class="shortcut1 item1 itemr4 level1 home"><a href="http://www.jetluxuryresorts.com/">Home</a></li><li class="shortcut2 item2 itemr3 level1 reservations"><a href="http://www.jetluxuryresorts.com/reservations-en.html">Reservations</a></li><li class="shortcut3 item3 itemr2 level1 specials"><a href="http://www.jetluxuryresorts.com/specials-packages-en.html">Specials &amp; Packages</a></li><li class="shortcut4 item4 itemr1 level1 luxhotels last"><a href="http://www.jetluxuryresorts.com/properties-en.html">Luxury hotels luxury Resorts - Jet Luxury Resorts</a></li></ul>
+		<script type="text/javascript">
+		//<![CDATA[
+			condor.updatePageMenus = condor.updatePageMenus || function() {
+				var pageMenus = getElementsByClass('sitetop', null, 'ul');
+				for (var j=0; j<pageMenus.length; ++j) {
+					var nojsList = getElementsByClass('active-nojs', pageMenus[j]);
+					for (var i=0; i<nojsList.length; ++i) {
+						removeClass(nojsList[i], 'active-nojs');
+					}
+				}
+			}
+			condor.updatePageMenus();
+		//]]>
+		</script><ul class="propsitenav">
+			<li class="shortcut1 item1 itemr9 level1 nyproperties has-submenu"><a href="http://www.jetluxuryresorts.com/properties-en.html#newyork">New York Properties</a><ul class="menuLevel2"><li class="shortcut1-1 item1 itemr3 level2 trumpsoho"><a href="http://www.jetluxuryresorts.com/Trump-Soho-luxury-hotels-new-york/">Trump SoHo</a></li>
+				<li class="shortcut1-2 item2 itemr2 level2 sanctuarynyc"><a href="http://www.jetluxuryresorts.com/sanctuarynyc/">Sanctuary Hotel NYC</a></li>
+				<li class="shortcut1-3 item3 itemr1 level2 stregisny last"><a href="http://www.jetluxuryresorts.com/hotel-deals-st-regis-new-york/">St Regis New York</a></li>
+				</ul></li>
+			<li class="shortcut2 item2 itemr8 level1 hawaiiproperties has-submenu"><a href="http://www.jetluxuryresorts.com/properties-en.html#oahu">Hawaii Properties</a><ul class="menuLevel2"><li class="shortcut2-1 item1 itemr1 level2 trumpwaikiki last"><a href="http://www.jetluxuryresorts.com/trump-waikiki-beach-hotel/">Trump Waikiki Hotel</a></li>
+				</ul></li>
+			<li class="shortcut3 item3 itemr7 level1 miamiproperties has-submenu"><a href="http://www.jetluxuryresorts.com/properties-en.html#miami">Miami Properties</a><ul class="menuLevel2"><li class="shortcut3-1 item1 itemr4 level2 mondrian"><a href="http://www.jetluxuryresorts.com/mondrian-south-beach-hotel/"></a></li>
+				<li class="shortcut3-2 item2 itemr3 level2 fontainebleau"><a href="http://www.jetluxuryresorts.com/fontainebleau-miami-beach-hotel/">Fontainebleau Miami Beach</a></li>
+				<li class="shortcut3-3 item3 itemr2 level2 atlantic"><a href="http://www.jetluxuryresorts.com/atlantic-hotel-resort-ftlauderdale/">The Atlantic Condo Hotel</a></li>
+				<li class="shortcut3-4 item4 itemr1 level2 perry last"><a href="http://www.jetluxuryresorts.com/perry-south-beach/">The Perry South Beach</a></li>
+				</ul></li>
+			<li class="shortcut4 item4 itemr6 level1 vegasproperties has-submenu"><a href="http://www.jetluxuryresorts.com/properties-en.html#lasvegas">Las Vegas Properties</a><ul class="menuLevel2"><li class="shortcut4-1 item1 itemr4 level2 signature"><a href="http://www.jetluxuryresorts.com/signature-mgm-grand/">Signature Condo Hotel</a></li>
+				<li class="shortcut4-2 item2 itemr3 level2 vdara"><a href="http://www.jetluxuryresorts.com/vdara-hotel-city-center-las-vegas/">Vdara Condo Hotel</a></li>
+				<li class="shortcut4-3 item3 itemr2 level2 platinum"><a href="http://www.jetluxuryresorts.com/platinum-hotel-spa/">The Platinum Hotel &amp; Spa</a></li>
+				<li class="shortcut4-4 item4 itemr1 level2 palmplace last"><a href="http://www.jetluxuryresorts.com/palms-place/">Palms Place</a></li>
+				</ul></li>
+			<li class="shortcut5 item5 itemr5 level1 angelesproperties has-submenu"><a href="http://www.jetluxuryresorts.com/properties-en.html#losAngeles">Los Angeles Properties</a><ul class="menuLevel2"><li class="shortcut5-1 item1 itemr1 level2 shore last"><a href="http://www.jetluxuryresorts.com/shorehotel/">Shore Hotel Santa Monica</a></li>
+				</ul></li>
+			<li class="shortcut6 item6 itemr4 level1 coloradoproperties has-submenu"><a href="http://www.jetluxuryresorts.com/properties-en.html#aspen">Colorado Properties</a><ul class="menuLevel2"><li class="shortcut6-1 item1 itemr3 level2 stregisaspen"><a href="http://www.jetluxuryresorts.com/hotel-deals-st-regis-aspen/">St Regis Aspen</a></li>
+				<li class="shortcut6-2 item2 itemr2 level2 mountainlodge"><a href="http://www.jetluxuryresorts.com/mountainlodge/">Telluride Mountain Lodge</a></li>
+				<li class="shortcut6-3 item3 itemr1 level2 lodgecabin last"><a href="http://www.jetluxuryresorts.com/telluride-mountain-lodge-cabin/">Telluride Mountain Lodge Cabin</a></li>
+				</ul></li>
+			<li class="shortcut7 item7 itemr3 level1 costaproperties has-submenu"><a href="http://www.jetluxuryresorts.com/properties-en.html#costarica">Costa Rica Properties</a><ul class="menuLevel2"><li class="shortcut7-1 item1 itemr2 level2 kalia"><a href="http://www.jetluxuryresorts.com/Kalia-eco-costa-rica-luxury-vacation-rental-homes/">Kalia Modern Eco Living</a></li>
+				<li class="shortcut7-2 item2 itemr1 level2 tamarindo last"><a href="http://www.jetluxuryresorts.com/tamarindo-costarica-vacationrental/">Tamarindo Costa Rica Villas</a></li>
+				</ul></li>
+			<li class="shortcut8 item8 itemr2 level1 italyproperties has-submenu"><a href="http://www.jetluxuryresorts.com/properties-en.html#italy">Italy Properties</a><ul class="menuLevel2"><li class="shortcut8-1 item1 itemr1 level2 jkplace last"><a href="http://www.jetluxuryresorts.com/JK-Place-florence-capri_luxury-italy-hotel/">JK Place</a></li>
+				</ul></li>
+			<li class="shortcut9 item9 itemr1 level1 stateproperties last has-submenu"><a href="http://www.jetluxuryresorts.com/properties-en.html#california">Estate Properties</a><ul class="menuLevel2"><li class="shortcut9-1 item1 itemr2 level2 malibu"><a href="http://www.jetluxuryresorts.com/malibu-california-luxury-beachfront-rental/">Malibu Estate</a></li>
+				<li class="shortcut9-2 item2 itemr1 level2 costa last"><a href="http://www.jetluxuryresorts.com/costa-careyes-vallarta-vacation-estate/">Casa Dos Estrellas</a></li>
+				</ul></li>
+		</ul>
+		<script type="text/javascript">
+		//<![CDATA[
+			condor.updatePageMenus = condor.updatePageMenus || function() {
+				var pageMenus = getElementsByClass('propsitenav', null, 'ul');
+				for (var j=0; j<pageMenus.length; ++j) {
+					var nojsList = getElementsByClass('active-nojs', pageMenus[j]);
+					for (var i=0; i<nojsList.length; ++i) {
+						removeClass(nojsList[i], 'active-nojs');
+					}
+				}
+			}
+			condor.updatePageMenus();
+		//]]>
+		</script><ul class="sitebottom"><li class="shortcut1 item1 itemr7 level1 ourTeam"><a href="http://www.jetluxuryresorts.com/executive-team-en.html">Our Executive Team</a></li><li class="shortcut2 item2 itemr6 level1 about"><a href="http://www.jetluxuryresorts.com/about-en.html">About Jet Luxury</a></li><li class="shortcut3 item3 itemr5 level1 becomeVIP"><a href="http://www.jetluxuryresorts.com/mailing-list-en.html">Become A Jet VIP</a></li><li class="shortcut4 item4 itemr4 level1 owner-connect"><a href="http://www.jetluxuryresorts.com/owner-connect-en.html">Owner Connect</a></li><li class="shortcut5 item5 itemr3 level1 press"><a href="http://www.jetluxuryresorts.com/jet-press-en.html">Jet In The Press</a></li><li class="shortcut6 item6 itemr2 level1 contact"><a href="http://www.jetluxuryresorts.com/contact-en.html">Contact Us</a></li><li class="shortcut7 item7 itemr1 level1 privacy last"><a href="http://www.jetluxuryresorts.com/privacy-policy-en.html">Privacy Policy</a></li></ul>
+		<script type="text/javascript">
+		//<![CDATA[
+			condor.updatePageMenus = condor.updatePageMenus || function() {
+				var pageMenus = getElementsByClass('sitebottom', null, 'ul');
+				for (var j=0; j<pageMenus.length; ++j) {
+					var nojsList = getElementsByClass('active-nojs', pageMenus[j]);
+					for (var i=0; i<nojsList.length; ++i) {
+						removeClass(nojsList[i], 'active-nojs');
+					}
+				}
+			}
+			condor.updatePageMenus();
+		//]]>
+		</script></div>
+		</div><!-- END Left -->
+		<div class="right">
+			<div id="whyCallout">
+	<h2>Why Jet Luxury?</h2>
+	<span class="reasons reason1">Low <br>Rates</span>
+	<span class="reasons reason2">Good <br>Commision</span>
+	<span class="reasons reason3">Great <br>Amenities</span>
+	<a href="#" class="explore btn">Explore Now</a>
+<div id="why-dialog" class="jqmWindow jqmID1">
+	<a href="#" class="jqmClose">Close</a>
+	<h2>Why Jet Luxury?</h2>
+	<div class="popup-content"><ul>
+<li>Jet Luxury Resorts provides hotel rates that are 20-50% below that of the hotel direct.</li>
+<li>Jet Luxury Resorts is listed in the Global Distribution System (GDS) as Jet Luxury @ [brand hotel] and can be found on the GDS under the travel code WV.</li>
+<li>Jet Luxury Resorts offers 10% commission to all travel agents for all of its hotels and resorts.</li>
+<li>All hotel amenities are available to our guests such as the use of pools/ spas/ gyms, room service, concierge, 24-hour butler and 24-hour personal assistant service (where available).</li>
+<li>The check-in and check-out process is exactly the same when going through Jet Luxury Resorts as the guest will need identification to check-in and must leave a valid credit card for incidentals.</li>
+</ul></div>
+</div>	
+</div>
+			<div class="mod_core widget_listModuleItems widget">
+
+	<div class="widget-content">
+
+<ul class="marquee">		<li class="item item1" style="position: absolute; top: 0px; left: 0px; display: list-item; z-index: 4; opacity: 1;">
+			<h3>JET STEAL OF THE WEEK</h3>
+			<img class="itemPreviewImage" src="http://www.jetluxuryresorts.com/d/jetluxury/mod_pukkaBanners/itemImage_1.jpg?1352748770" width="90" height="77" lang="en" alt="Jet Steal of the week">
+			<p>Each week you'll have a chance to swipe our best deals on amazing 5 Star properties.</p>
+			 <a href="http://www.jetluxuryresorts.com/specials-packages-en.html" class="more btn">Explore Now</a>
+		</li>		<li class="item item2" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0;">
+			<h3>BECOME A JET VIP!</h3>
+			<img class="itemPreviewImage" src="http://www.jetluxuryresorts.com/d/jetluxury/mod_pukkaBanners/itemImage_11.jpg?1360961847" width="90" height="77" lang="en" alt="VIP">
+			<p>Enjoy Automated Access, the chance to Win FREE NIGHTS &amp; Receive EXCLUSIVE OFFERS.</p>
+			 <a href="/mailing-list.html" class="more btn">Explore Now</a>
+		</li>		<li class="item item3" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 1; opacity: 0;">
+			<h3>HOTELIERS</h3>
+			<img class="itemPreviewImage" src="http://www.jetluxuryresorts.com/d/jetluxury/mod_pukkaBanners/itemImage_21.jpg?1352749828" width="90" height="77" lang="en" alt="Logo">
+			<p>If you are a 4 or 5 Star Hotel and wish to join our exclusive collection, Call 877.538.7370 ext 121</p>
+			 <a href="http://www.jetluxuryresorts.com/about-en.html" class="more btn">Explore Now</a>
+		</li></ul><div class="image-frame"></div>
+		</div>
+
+	</div>
+            
+            <div id="callout">
+            	<div class="title">SMALL BUSINESS UNITE!</div>
+                <div class="subtitle">book now</div>
+                <div class="content"></div>
+                <div id="callout-image">
+                	<img src="http://www.jetluxuryresorts.com/d/jetluxury/images/calloutImage.jpg?1378411724" width="90" height="77" lang="en" alt="Jet Luxury Resorts">
+                </div>
+            	<div id="bgk_callout-image"></div>
+            </div>
+			
+			
+						
+		</div>	
+	</div><!-- END middle -->
+</div><!-- END holder-->
+<div id="footer">
+	<div id="footer-nav">
+	<ul class="nav"><li class="shortcut1 item1 itemr4 level1 owner-connect"><a href="http://www.jetluxuryresorts.com/owner-connect-en.html">Owner Connect</a></li><li class="shortcut2 item2 itemr3 level1 contact"><a href="http://www.jetluxuryresorts.com/contact-en.html">Contact Us</a></li><li class="shortcut3 item3 itemr2 level1 privacy"><a href="http://www.jetluxuryresorts.com/privacy-policy-en.html">Privacy Policy</a></li><li class="shortcut4 item4 itemr1 level1 sitemap last"><a href="http://www.jetluxuryresorts.com/sitemap-en.html">Site Map</a></li></ul>
+		<script type="text/javascript">
+		//<![CDATA[
+			condor.updatePageMenus = condor.updatePageMenus || function() {
+				var pageMenus = getElementsByClass('nav', null, 'ul');
+				for (var j=0; j<pageMenus.length; ++j) {
+					var nojsList = getElementsByClass('active-nojs', pageMenus[j]);
+					for (var i=0; i<nojsList.length; ++i) {
+						removeClass(nojsList[i], 'active-nojs');
+					}
+				}
+			}
+			condor.updatePageMenus();
+		//]]>
+		</script>	</div>
+	<div class="quote">
+		<span class="quote-text">Jet Luxury Resorts<br><em>Affordable</em><br>Luxury</span>
+	</div>
+	<img src="http://www.jetluxuryresorts.com/templates/main/images/logo_footer.png?54584a20df247" width="132" height="89" alt="Jet Luxury Resorts l Your Access To Luxury" title="Jet Luxury Resorts l Your Access To Luxury" class="footerLogo" lang="en">
+	<div class="tc">Design by <a href="http://www.travelclick.com" title="TravelClick" target="_blank">TravelClick</a></div>
+	<div class="reservation-info">{ Book online or by calling us toll free: 877.JET.SET9 (877.538.7389) }</div>
+	<div id="copyrightnav">
+	©&nbsp;2014&nbsp;Jet Luxury Resorts, LLC&nbsp;|&nbsp;
+	<ul class="nav"><li class="shortcut1 item1 itemr23 level1 jetLuxury"><a href="http://www.jetluxuryresorts.com/about-en.html">Jet Luxury Resorts</a></li><li class="shortcut2 item2 itemr22 level1 hotelsResorts"><a href="http://www.jetluxuryresorts.com/properties-en.html">Hotels &amp; Resorts</a></li><li class="shortcut3 item3 itemr21 level1 hotelDeals"><a href="http://www.jetluxuryresorts.com/specials-packages-en.html">Hotel Deals</a></li><li class="shortcut4 item4 itemr20 level1 vegasHD"><a href="http://www.jetluxuryresorts.com/las-vegas-vacation-deals-en.html">Best Las Vegas Hotel Deals</a></li><li class="shortcut5 item5 itemr19 level1 trumpSoHo"><a href="http://www.jetluxuryresorts.com/Trump-Soho-luxury-hotels-new-york/default-en.html">Trump SoHo</a></li><li class="shortcut6 item6 itemr18 level1 santuary"><a href="http://www.jetluxuryresorts.com/sanctuarynyc/default-en.html">Sanctuary Hotel NYC</a></li><li class="shortcut7 item7 itemr17 level1 stResgis"><a href="http://www.jetluxuryresorts.com/hotel-deals-st-regis-new-york/default-en.html">St Regis NY</a></li><li class="shortcut8 item8 itemr16 level1 tumpWaikiki"><a href="http://www.jetluxuryresorts.com/trump-waikiki-beach-hotel/default-en.html">Jet Luxury@The Trump Waikiki</a></li><li class="shortcut9 item9 itemr15 level1 fontainebleau"><a href="http://www.jetluxuryresorts.com/fontainebleau-miami-beach-hotel/default-en.html">Fontainebleau Miami Beach</a></li><li class="shortcut10 item10 itemr14 level1 grandLucayan"><a href="http://www.jetluxuryresorts.com/grand-lucayan-bahamas/default-en.html">The Grand Lucayan</a></li><li class="shortcut11 item11 itemr13 level1 signature"><a href="http://www.jetluxuryresorts.com/signature-mgm-grand/default-en.html">Signature Condo Hotel</a></li><li class="shortcut12 item12 itemr12 level1 vdara"><a href="http://www.jetluxuryresorts.com/vdara-hotel-city-center-las-vegas/default-en.html">Vdara Condo Hotel</a></li><li class="shortcut13 item13 itemr11 level1 palms"><a href="http://www.jetluxuryresorts.com/palms-place/default-en.html">Palms Place</a></li><li class="shortcut14 item14 itemr10 level1 shore"><a href="http://www.jetluxuryresorts.com/shorehotel/default-en.html">Shore Hotel Santa Monica</a></li><li class="shortcut15 item15 itemr9 level1 malibu"><a href="http://www.jetluxuryresorts.com/malibu-california-luxury-beachfront-rental/default-en.html">Malibu Estate</a></li><li class="shortcut16 item16 itemr8 level1 kalia"><a href="http://www.jetluxuryresorts.com/Kalia-eco-costa-rica-luxury-vacation-rental-homes/default-en.html">Kalia Modern Eco Living</a></li><li class="shortcut17 item17 itemr7 level1 tamarindo"><a href="http://www.jetluxuryresorts.com/tamarindo-costarica-vacationrental/default-en.html">Tamarindo Costa Rica Villas</a></li><li class="shortcut18 item18 itemr6 level1 stRegisAspen"><a href="http://www.jetluxuryresorts.com/hotel-deals-st-regis-aspen/default-en.html">St Regis Aspen</a></li><li class="shortcut19 item19 itemr5 level1 telluride"><a href="http://www.jetluxuryresorts.com/mountainlodge/default-en.html">Telluride Mountain Lodge</a></li><li class="shortcut20 item20 itemr4 level1 tellurideCabin"><a href="http://www.jetluxuryresorts.com/telluride-mountain-lodge-cabin/default-en.html">Telluride Mountain Lodge Cabin</a></li><li class="shortcut21 item21 itemr3 level1 casaEstrellas"><a href="http://www.jetluxuryresorts.com/costa-careyes-vallarta-vacation-estate/default-en.html">Casa Dos Estrellas</a></li><li class="shortcut22 item22 itemr2 level1 CaboSol"><a href="http://www.jetluxuryresorts.com/cabodelsol-resort/default-en.html">Cabo Del Sol</a></li><li class="shortcut23 item23 itemr1 level1 jkPlace last"><a href="http://www.jetluxuryresorts.com/JK-Place-florence-capri_luxury-italy-hotel/default-en.html">JK Place</a></li></ul>
+		<script type="text/javascript">
+		//<![CDATA[
+			condor.updatePageMenus = condor.updatePageMenus || function() {
+				var pageMenus = getElementsByClass('nav', null, 'ul');
+				for (var j=0; j<pageMenus.length; ++j) {
+					var nojsList = getElementsByClass('active-nojs', pageMenus[j]);
+					for (var i=0; i<nojsList.length; ++i) {
+						removeClass(nojsList[i], 'active-nojs');
+					}
+				}
+			}
+			condor.updatePageMenus();
+		//]]>
+		</script>	</div>
+	<div id="socialMedia">
+		<ul class="nav">
+				<li class="socialIcon facebook"><a href="http://www.facebook.com/pages/Jet-Luxury-Resorts/34606098602?ref=mf" target="_blank"><img src="http://www.jetluxuryresorts.com/templates/main/images/facebook.png?54584a20e010e" title="Facebook" alt="Facebook" lang="en"></a></li>		<li class="socialIcon twitter"><a href="http://twitter.com/JetSet9" target="_blank"><img src="http://www.jetluxuryresorts.com/templates/main/images/twitter.png?54584a20e1100" title="Twitter" alt="Twitter" lang="en"></a></li>		<li class="socialIcon youtube"><a href="http://www.youtube.com/user/jetlux9" target="_blank"><img src="http://www.jetluxuryresorts.com/templates/main/images/youtube.png?54584a20e2962" title="Youtube" alt="Youtube" lang="en"></a></li>	
+		</ul>
+	</div>
+		<div class="comodo_logo"><img src="http://www.jetluxuryresorts.com/templates/main/images/cm_logo.jpg" width="30" height="25" alt="Comodo Authentic &amp; Secure" title="Comodo Authentic &amp; Secure"></div>
+
+</div></div><!-- END page-bkg-->
+
+
+<!--179 Queries - 0.68858313560486 seconds --><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></body></html>

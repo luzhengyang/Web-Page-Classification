@@ -1,0 +1,1352 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class=" js cssanimations"><head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.5f0XKKY4cHU.O/m=auth/exm=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCPjWK2K7EJ2pBvjMdYDk7aR1ZSh1Q/cb=gapi.loaded_1" async=""></script><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.5f0XKKY4cHU.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCPjWK2K7EJ2pBvjMdYDk7aR1ZSh1Q/cb=gapi.loaded_0" async=""></script><script async="" type="text/javascript" src="http://www.gstatic.com/pub-config/ca-pub-6292701132361268.js"></script><script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Ug4BWFVUGwcAXVNbAQg="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(5),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(f){"stack"in f&&(t(1),t(4),"addEventListener"in window&&t(2),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(3),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:8,2:5,3:9,4:7,5:20,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(2);t("loader").features.stn=!0,t(1),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:6,2:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:20,2:21,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:21,2:20,ee:"QJf3ax"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:21,2:20,ee:"QJf3ax"}],8:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:21,2:20,ee:"QJf3ax"}],9:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:5,2:21,ee:"QJf3ax"}],10:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:11,3:9,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],11:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,f="addEventListener",u="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),s[f]("load",n,!1)):(c[u]("onreadystatechange",r),s[u]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],20:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],21:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:20,ee:"QJf3ax"}]},{},["G9z0Bl",3,10,4]);</script>
+		
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+		
+		<!--<script type="text/javascript" src="/js/maxrating.js"></script> 
+		<script type="text/javascript" src="/js/showhide.js"></script> -->
+		<script type="text/javascript" src="/js/jquery.min.js"></script> 
+		
+	
+		<title>Buy pizza in Barrie, help feed Haitians - Simcoe.com - Barrie - NewsLocker</title>		
+		<meta name="description" content="Buy pizza in Barrie, help feed Haitians
+		Simcoe.com
+		BARRIE- A pizza dinner to feed your family Sept. 17 will also help feed young people in Haiti. Barrie's Domino's Pizza locations and local Rotarians are pitching in with a Raise the Dough Night to support Rea Dol's Lunch Program at Institution Mixte De&nbsp;...">
+		<link rel="shortcut icon" type="image/png" href="/images/newslocker-cube-favicon.png">
+	
+		<meta property="og:title" content="Buy pizza in Barrie, help feed Haitians - Simcoe.com - Barrie - NewsLocker">
+		<meta property="og:description" content="Buy pizza in Barrie, help feed Haitians
+		Simcoe.com
+		BARRIE- A pizza dinner to feed your family Sept. 17 will also help feed young people in Haiti. Barrie's Domino's Pizza locations and local Rotarians are pitching in with a Raise the Dough Night to support Rea Dol's Lunch Program at Institution Mixte De&nbsp;...">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="http://www.newslocker.com/en-ca/region/barrie/buy-pizza-in-barrie-help-feed-haitians-simcoecom/">
+		<meta property="og:image" content="http://www.simcoe.com/Portals/65/Images/logo.png">
+		<meta property="og:site_name" content="Newslocker">
+		<meta property="fb:admins" content="1335791813,560345808">
+	
+    			
+		
+	<meta name="google-site-verification" content="wAInSoPxz3OEgOXCHtETx-x7ukmlX40FRoiPZpO7ww4">
+	<script type="text/javascript">
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-17754699-1']);
+	  _gaq.push(['_setDomainName', 'none']);
+	  _gaq.push(['_setAllowLinker', true]);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>    
+	<style type="text/css">.a2a_menu, .a2a_menu * { -moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;float:none;margin:0;padding:0;height:auto;width:auto;}.a2a_menu { border-radius: 6px;display:none;direction:ltr;background:#FFF;font: 14px Arial,Helvetica,sans-serif;color:#000;line-height:12px;border: 1px solid #CCC;vertical-align:baseline;overflow:hidden;}.a2a_mini {min-width:200px;position:absolute;width: 300px;z-index:9999997;}.a2a_overlay {display: none;background: #CCC; _height: expression( ((e=document.documentElement.clientHeight)?e:document.body.clientHeight)+"px" ); _width: expression( ((e=document.documentElement.clientWidth)?e:document.body.clientWidth)+"px" ); filter: alpha(opacity=50); opacity: .7;position: fixed;_position: absolute; top: 0;right: 0;left: 0;bottom: 0;z-index: 9999998;-webkit-animation: a2aFadeInOverlay .14s ease-out;animation: a2aFadeInOverlay .14s ease-out;}.a2a_full {background: #FFF;height: auto;height: calc(320px);top: 15%;_top: expression(40+((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+"px"); left: 50%;margin-left: -320px; position: fixed;_position: absolute; text-align: center;width: 640px;z-index: 9999999; -webkit-animation: a2aFadeIn .14s ease-in;    animation: a2aFadeIn .14s ease-in;}.a2a_full_header,.a2a_full_services,.a2a_full_footer {border: 0;margin: 0;padding: 12px;box-sizing: border-box;}.a2a_full_header {padding-bottom: 8px;}.a2a_full_services {height: 280px; overflow-y: scroll;padding: 0 12px;-webkit-overflow-scrolling: touch;}.a2a_full_services .a2a_i {display: inline-block;float: none;width: 181px;width: calc(33.334% - 18px);}div.a2a_full_footer {font-size: 9px;text-align: center;padding: 6px 12px;}div.a2a_full_footer a,div.a2a_full_footer a:visited {display: inline;font-size: 9px;padding: 6px 12px; }div.a2a_full_footer a:hover {background: none;border: 0;color: #0166FF;}div.a2a_full_footer a span.a2a_i_a2a_sm {display: inline-block;padding-left: 14px;vertical-align: bottom;}@-webkit-keyframes a2aFadeIn {from { opacity: 0; }  to { opacity: 1; }}@keyframes a2aFadeIn {from { opacity: 0; }  to { opacity: 1; }}@-webkit-keyframes a2aFadeInOverlay {from { opacity: 0; }  to { opacity: .7; }}@keyframes a2aFadeInOverlay {from { opacity: 0; }  to { opacity: .7; }}@media (max-width: 639px) {.a2a_full {top: 15%;left: 0;margin-left: auto;width: 100%;}}@media (min-width: 318px) and (max-width: 437px) {.a2a_full .a2a_full_services .a2a_i {width: calc(50% - 18px);}}@media (max-width: 317px) {.a2a_full .a2a_full_services .a2a_i {width: calc(100% - 18px);}}@media (max-height: 436px) {.a2a_full {bottom: 40px;height: auto;top: 40px;}}.a2a_menu a{color:#0166FF;text-decoration:none;font:14px Arial,Helvetica,sans-serif;line-height:14px;height:auto;width:auto;outline:none;-moz-outline:none;}.a2a_menu a:visited{color:#0166FF}.a2a_menu a:hover,.a2a_menu a:active,.a2a_menu a.a2a_i:focus,.a2a_tabs div:hover{color:#2A2A2A;border:1px solid #EEE;background-color:#EEE;text-decoration:none}.a2a_menu span,.a2a_img{background:url(http://static.addtoany.com/menu/icons.28.png) no-repeat;border:0;display:block;line-height:16px}.a2a_menu span.a2a_i_find { height:16px;left: 8px;position:absolute;top: 7px;width:16px;}.a2a_menu span.a2a_i_find svg {background-color: #FFF;}.a2a_menu span.a2a_i_find svg path {fill: #CCC;}#a2a_menu_container{display:inline-block} #a2a_menu_container{_display:inline} .a2a_menu_title_container {padding: 6px 8px;}.a2a_menu_find_container {border: 1px solid #CCC;border-radius: 6px;padding: 2px 24px 2px 0;position: relative;text-align: left;}.a2a_cols_container{border-bottom-right-radius:8px;border-top-right-radius:8px}.a2a_cols_container .a2a_col1{overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch}.a2a_menu input, .a2a_menu input[type="text"]{display:block;background-image:none;box-shadow:none;line-height:100%;margin:0;overflow:hidden;padding:0;-moz-box-shadow:none;-webkit-box-shadow:none;-webkit-appearance:none} .a2a_menu_title_container input.a2a_menu_title {background-color: #FFF;border: 0;color: #2A2A2A;font: inherit;margin: 0;padding: 0;width: 99%;}.a2a_menu_find_container input.a2a_menu_find {background-color: transparent;_background-color: #FFF;border: 0;color: #2A2A2A;font-size: 16px;height: 20px;line-height: 20px;left: 28px;outline: 0;padding: 2px 0;position: relative;width: 99%;}.a2a_clear{clear:both} .a2a_img, .a2a_svg { display:block; overflow:hidden; }.a2a_img{height:16px;line-height:16px;width:16px;}.a2a_svg{height:32px;line-height:32px;width:32px;}.a2a_default_style a{float:left;line-height:16px;padding:0 2px}.a2a_default_style a:hover .a2a_img,.a2a_default_style a:hover .a2a_svg,.a2a_floating_style a:hover .a2a_img,.a2a_floating_style a:hover .a2a_svg { opacity: .7;}.a2a_default_style .a2a_count,.a2a_default_style .a2a_svg, .a2a_floating_style .a2a_svg { border-radius:4px ;} .a2a_default_style .a2a_img, .a2a_default_style .a2a_dd, .a2a_default_style .a2a_svg{float:left}.a2a_default_style .a2a_img_text{margin-right:4px}.a2a_default_style .a2a_divider{border-left:1px solid #000;display:inline;float:left;height:16px;line-height:16px;margin:0 5px}.a2a_kit a{cursor:pointer}.a2a_floating_style { background-color: #fff; border-radius: 6px; padding: 4px; position: fixed; z-index: 9999995; }.a2a_vertical_style a { display: block; padding: 4px; }.a2a_floating_style.a2a_default_style { bottom: 0; }.a2a_floating_style.a2a_default_style a { padding: 4px; }.a2a_count {background-color: #fff;border: 1px solid #ccc;box-sizing: border-box;color: #2a2a2a;display: block;float: left;font: 12px Arial,Helvetica,sans-serif;height: 16px;margin-left: 4px;position: relative;text-align: center;width: 50px;}.a2a_count:before,.a2a_count:after {border: solid transparent;border-width: 4px 4px 4px 0;content: "";height: 0;left: 0;line-height: 0;margin: -4px 0 0 -4px;position: absolute;top: 50%;width: 0;}.a2a_count:before {border-right-color: #ccc;}.a2a_count:after {border-right-color: #fff;margin-left: -3px;}.a2a_count span {-webkit-animation: a2aFadeIn .14s ease-in;    animation: a2aFadeIn .14s ease-in;}.a2a_nowrap{white-space:nowrap}.a2a_note{margin:0 auto;padding:9px;font-size:12px;text-align:center}.a2a_note .a2a_note_note{margin:0;color:#2A2A2A}.a2a_wide a{display:block;margin-top:3px;border:1px solid #EEE;padding:3px;text-align:center}.a2a_tabs{float:left;margin:0 0 3px} .a2a_tabs a,.a2a_tabs div{margin:1px;background-color:#EEE; border:1px solid #EEE; font-size:11px; padding:6px 12px ; white-space:nowrap} .a2a_tabs a span, .a2a_tabs div span{display:inline-block;padding-left:20px;height:auto;width:auto} .a2a_tabs_default a span, .a2a_tabs_default div span{height:auto;max-width:99px;overflow:hidden;padding-left:20px;width:auto;_width:expression(this.clientWidth > 99? "97px" : "auto");}.a2a_tabs a, .a2a_tabs a:visited, .a2a_tabs a:hover, .a2a_tabs div, .a2a_tabs div:hover{cursor:pointer;border-bottom:1px solid #EEE;color:#2A2A2A;border-bottom-left-radius:0;-webkit-border-bottom-left-radius:0;-moz-border-radius-bottomleft:0;border-bottom-right-radius:0;-webkit-border-bottom-right-radius:0;-moz-border-radius-bottomright:0}a.a2a_tab_selected, a.a2a_tab_selected:visited,a.a2a_tab_selected:hover,a.a2a_tab_selected:active,a.a2a_tab_selected:focus, div.a2a_tab_selected,div.a2a_tab_selected:hover{color:#0166FF;background-color:#FFF;border:1px solid #CCC;border-bottom:1px solid #FFF}a.a2a_i,i.a2a_i{display:block;float:left;border:1px solid #FFF;padding:6px 8px;text-align:left;white-space:nowrap;width:132px;}a.a2a_i span, a.a2a_more span {overflow: hidden;padding: 0 0 0 21px;text-overflow: ellipsis;}a.a2a_sss:hover {border-left: 1px solid #CCC;}a.a2a_menu_show_more_less{border-bottom:1px solid #FFF;border-left:0;border-right:0;margin:6px 0 0;padding:6px}a.a2a_menu_show_more_less span{display:inline-block;height:16px;margin:0 auto;vertical-align:bottom;} iframe.a2a_shim {background-color: transparent;border: 0;bottom: 0;filter: alpha(opacity=0); height: 100%;left: 0;right: 0;top: 0;position: absolute;width: 100%;z-index: 9999996;_height: expression( ((e=document.documentElement.clientHeight)?e:document.body.clientHeight)+"px" ); _width: expression( ((e=document.documentElement.clientWidth)?e:document.body.clientWidth)+"px" ); }.a2a_dd img {border:0;-ms-touch-action:manipulation;}iframe[id^="PIN_"][id$="_nag"] {display: none !important;}.a2a_i_a2a{background-position:0 0!important}.a2a_i_a2a_sm{background-position:0 -17px!important}.a2a_i_agregator{background-position:0 -34px!important}.a2a_i_aim{background-position:0 -51px!important}.a2a_i_allvoices{background-position:0 -68px!important}.a2a_i_amazon{background-position:0 -85px!important}.a2a_i_aol{background-position:0 -102px!important}.a2a_i_app_net{background-position:0 -119px!important}.a2a_i_arto{background-position:0 -136px!important}.a2a_i_baidu{background-position:0 -153px!important}.a2a_i_bebo{background-position:0 -170px!important}.a2a_i_bibsonomy{background-position:0 -187px!important}.a2a_i_bitty{background-position:0 -204px!important}.a2a_i_blinklist{background-position:0 -221px!important}.a2a_i_blogger{background-position:0 -238px!important}.a2a_i_bloglines{background-position:0 -255px!important}.a2a_i_blogmarks{background-position:0 -272px!important}.a2a_i_bloomberg_current{background-position:0 -289px!important}.a2a_i_bookmark{background-position:0 -306px!important}.a2a_i_bookmarks_fr{background-position:0 -323px!important}.a2a_i_box{background-position:0 -340px!important}.a2a_i_buddymarks{background-position:0 -357px!important}.a2a_i_buffer{background-position:0 -374px!important}.a2a_i_care2{background-position:0 -391px!important}.a2a_i_chrome{background-position:0 -408px!important}.a2a_i_citeulike{background-position:0 -425px!important}.a2a_i_dailyrotation{background-position:0 -442px!important}.a2a_i_default{background-position:0 -459px!important}.a2a_i_delicious{background-position:0 -476px!important}.a2a_i_designfloat{background-position:0 -493px!important}.a2a_i_diaspora{background-position:0 -510px!important}.a2a_i_digg{background-position:0 -527px!important}.a2a_i_diigo{background-position:0 -544px!important}.a2a_i_dzone{background-position:0 -561px!important}.a2a_i_email{background-position:0 -578px!important}.a2a_i_evernote{background-position:0 -595px!important}.a2a_i_facebook{background-position:0 -612px!important}.a2a_i_fark{background-position:0 -629px!important}.a2a_i_feed{background-position:0 -646px!important}.a2a_i_feedblitz{background-position:0 -663px!important}.a2a_i_feedbucket{background-position:0 -680px!important}.a2a_i_feedly{background-position:0 -697px!important}.a2a_i_feedmailer{background-position:0 -714px!important}.a2a_i_find{background-position:0 -731px!important}.a2a_i_fireant{background-position:0 -748px!important}.a2a_i_firefox{background-position:0 -765px!important}.a2a_i_flipboard{background-position:0 -782px!important}.a2a_i_folkd{background-position:0 -799px!important}.a2a_i_friendfeed{background-position:0 -816px!important}.a2a_i_funp{background-position:0 -833px!important}.a2a_i_gmail{background-position:0 -850px!important}.a2a_i_google{background-position:0 -867px!important}.a2a_i_google_plus{background-position:0 -884px!important}.a2a_i_hatena{background-position:0 -901px!important}.a2a_i_instapaper{background-position:0 -918px!important}.a2a_i_itunes{background-position:0 -935px!important}.a2a_i_jamespot{background-position:0 -952px!important}.a2a_i_jumptags{background-position:0 -969px!important}.a2a_i_khabbr{background-position:0 -986px!important}.a2a_i_kindle{background-position:0 -1003px!important}.a2a_i_klipfolio{background-position:0 -1020px!important}.a2a_i_line{background-position:0 -1037px!important}.a2a_i_linkagogo{background-position:0 -1054px!important}.a2a_i_linkatopia{background-position:0 -1071px!important}.a2a_i_linkedin{background-position:0 -1088px!important}.a2a_i_livejournal{background-position:0 -1105px!important}.a2a_i_mail_ru{background-position:0 -1122px!important}.a2a_i_mendeley{background-position:0 -1139px!important}.a2a_i_meneame{background-position:0 -1156px!important}.a2a_i_miro{background-position:0 -1173px!important}.a2a_i_mixi{background-position:0 -1190px!important}.a2a_i_my_msn{background-position:0 -1207px!important}.a2a_i_myspace{background-position:0 -1224px!important}.a2a_i_netlog{background-position:0 -1241px!important}.a2a_i_netvibes{background-position:0 -1258px!important}.a2a_i_netvouz{background-position:0 -1275px!important}.a2a_i_newsalloy{background-position:0 -1292px!important}.a2a_i_newsisfree{background-position:0 -1309px!important}.a2a_i_newstrust{background-position:0 -1326px!important}.a2a_i_newsvine{background-position:0 -1343px!important}.a2a_i_nowpublic{background-position:0 -1360px!important}.a2a_i_odnoklassniki{background-position:0 -1377px!important}.a2a_i_oknotizie{background-position:0 -1394px!important}.a2a_i_oldreader{background-position:0 -1411px!important}.a2a_i_orkut{background-position:0 -1428px!important}.a2a_i_outlook{background-position:0 -1445px!important}.a2a_i_outlook_com{background-position:0 -1462px!important}.a2a_i_pdf{background-position:0 -1479px!important}.a2a_i_phonefavs{background-position:0 -1496px!important}.a2a_i_pinboard{background-position:0 -1513px!important}.a2a_i_pinterest{background-position:0 -1530px!important}.a2a_i_plurk{background-position:0 -1547px!important}.a2a_i_pocket{background-position:0 -1564px!important}.a2a_i_podnova{background-position:0 -1581px!important}.a2a_i_print{background-position:0 -1598px!important}.a2a_i_printfriendly{background-position:0 -1615px!important}.a2a_i_protopage{background-position:0 -1632px!important}.a2a_i_pusha{background-position:0 -1649px!important}.a2a_i_rapidfeeds{background-position:0 -1666px!important}.a2a_i_reddit{background-position:0 -1683px!important}.a2a_i_rediff{background-position:0 -1700px!important}.a2a_i_segnalo{background-position:0 -1717px!important}.a2a_i_share{background-position:0 -1734px!important}.a2a_i_sina_weibo{background-position:0 -1751px!important}.a2a_i_sitejot{background-position:0 -1768px!important}.a2a_i_slashdot{background-position:0 -1785px!important}.a2a_i_springpad{background-position:0 -1802px!important}.a2a_i_startaid{background-position:0 -1819px!important}.a2a_i_stumbleupon{background-position:0 -1836px!important}.a2a_i_stumpedia{background-position:0 -1853px!important}.a2a_i_symbaloo{background-position:0 -1870px!important}.a2a_i_technotizie{background-position:0 -1887px!important}.a2a_i_thefreedictionary{background-position:0 -1904px!important}.a2a_i_thefreelibrary{background-position:0 -1921px!important}.a2a_i_tuenti{background-position:0 -1938px!important}.a2a_i_tumblr{background-position:0 -1955px!important}.a2a_i_twiddla{background-position:0 -1972px!important}.a2a_i_twitter{background-position:0 -1989px!important}.a2a_i_typepad{background-position:0 -2006px!important}.a2a_i_viadeo{background-position:0 -2023px!important}.a2a_i_vk{background-position:0 -2040px!important}.a2a_i_wanelo{background-position:0 -2057px!important}.a2a_i_webnews{background-position:0 -2074px!important}.a2a_i_whatsapp{background-position:0 -2091px!important}.a2a_i_winksite{background-position:0 -2108px!important}.a2a_i_wists{background-position:0 -2125px!important}.a2a_i_wordpress{background-position:0 -2142px!important}.a2a_i_xerpi{background-position:0 -2159px!important}.a2a_i_xing{background-position:0 -2176px!important}.a2a_i_y18{background-position:0 -2193px!important}.a2a_i_yahoo{background-position:0 -2210px!important}.a2a_i_yim{background-position:0 -2227px!important}.a2a_i_yoolink{background-position:0 -2244px!important}.a2a_i_youmob{background-position:0 -2261px!important}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style></head>
+	<!--<body onload="Dropdown_Select.init();">-->
+    <body>
+	
+	<div id="container">
+	
+		
+		<div id="header">
+			
+		
+			<div class="headerblock">
+				<div id="logo">
+					<h1><a href="http://www.newslocker.com"><img src="/images/logo.jpg" alt="News Locker"></a></h1>
+				</div>
+			</div>
+			
+			<div class="headerblock">
+				<div id="categories">
+					<form method="get" action="/search/" name="search" enctype="text/plain"><!--<img src="/images/searchbutton-small.png" class="searchbutton-small" height="20" alt="search" />--><input type="text" id="category" name="q" class="text-input valid" autocomplete="off" placeholder="Search category..." style="height:40px; width:95%;font-size:18pt;margin-top:14px;padding:0 5px"><input type="hidden" name="lang" value="en-ca"></form>					
+					
+				</div>
+			</div>
+			
+			<div class="headerblock">
+				<div id="tagline">
+					<img src="/images/tagline.png" alt="Stuff that Matters!">
+				</div>
+			</div>
+		
+		</div>
+		
+		
+		<div id="menu">
+			
+				<div id="addtoany">
+	<!-- AddToAny BEGIN -->
+	<a class="a2a_dd" href="https://www.addtoany.com/share_save#url=http%3A%2F%2Fwww.newslocker.com%2Fen-ca%2Fregion%2Fbarrie%2Fbuy-pizza-in-barrie-help-feed-haitians-simcoecom%2F&amp;title=Buy%20pizza%20in%20Barrie%2C%20help%20feed%20Haitians%20-%20Simcoe.com%20-%20Barrie%20-%20NewsLocker&amp;description=Buy%20pizza%20in%20Barrie%2C%20help%20feed%20Haitians%0A%09%09Simcoe.com%0A%09%09BARRIE-%20A%20pizza%20dinner%20to%20feed%20your%20family%20Sept.%2017%20will%20also%20help%20feed%20young%20people%20in%20Haiti.%20Barrie%27s%20Domino%27s%20Pizza%20locations%20and%20local%20Rotarians%20are%20pitching%20in%20with%20a%20Raise%20the%20Dough%20Night%20to%20support%20Rea%20Dol%27s%20Lunch%20Program%20at%20Institution%20Mixte%20De%C2%A0..."><img src="http://static.addtoany.com/buttons/share_save_120_16.gif" width="120" height="16" style="border:0;" alt="Share/Bookmark"></a>
+	<!-- AddToAny END -->
+	</div>
+	
+		</div>
+		
+		
+		<div id="content">
+		
+				
+		<style type="text/css">
+			#newscontainer{
+				-webkit-transition: all 0.8s ease-out;
+				transition: all 0.8s ease-out;
+			}
+			.blur{
+				-webkit-filter: blur(5px);
+				-moz-filter: blur(3px);
+				-o-filter: blur(3px);
+				-ms-filter: blur(3px);
+				filter: blur(3px);
+				opacity: 0.95;	
+				z-index:314748368;
+			}
+			div#newsletter-popup-container{
+				width:600px;
+				position:fixed;
+				/*z-index:3;*/
+				z-index:314748369;
+				display:none;
+				margin-top:60px;
+				margin-left:-300px;
+				left:50%;
+				right:50%;
+			}
+			div#newsletter-popup{
+				width:100%;
+				/*height:400px;*/
+				padding:20px;
+				
+				/* Fallback for web browsers that doesn't support RGBa */
+				background: rgb(255, 255, 255);
+				/* RGBa with 0.6 opacity */
+				background: rgba(255, 255, 255, 0.95);
+				
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+				
+				-webkit-box-shadow: 2px 2px 5px 0px rgba(150, 150, 150, 0.75);
+				-moz-box-shadow:    2px 2px 5px 0px rgba(150, 150, 150, 0.75);
+				box-shadow:         2px 2px 5px 0px rgba(150, 150, 150, 0.75);
+			}
+			
+			i.close-popup{
+				cursor:pointer;
+				cursor:hand;
+				float:right;
+				color:#CCC;	
+			}
+			a.close-popup{
+				text-align:right;
+				color:#bbb;	
+			}
+			
+			div#big-text{
+				font-size: 19pt;
+			}
+			div#big-text span.category-name{
+				color:#FFBC2F;
+				font-weight:bold;
+			}
+			
+			.icon-email{
+				height:32px;
+				width:32px;
+				border: none;
+				cursor: pointer;
+				color:white;
+				background-color:black;
+				position:relative;
+			}
+			
+			div#email-input{
+				width:600px;
+				background-color:#ccc;
+				line-height:46px;
+				height:40px;
+				margin-top:20px;
+				display:inline-block;
+			}
+			
+			div#email-input i{
+				color:#fff;	
+				margin:-2px 4px 0 3px;
+				font-size:32pt;
+				float:left;
+			}
+			div#email-input input{
+				height:32px;
+				border:0;
+				width:401px;
+				font-size:14pt;
+				padding-left:5px;
+			}
+			button#subscribe-button{
+				height:40px;
+				width:140px;
+				background-color:#FFBC2F;
+				color:#fff;
+				font-size:14pt;	
+				border:0;
+				float:right;
+				cursor:pointer;
+				cursor:hand;
+			}
+			#popup-content2, #popup-content3{
+				display:none;
+			}
+			
+			#email-error{
+				color:#f00;
+				display:none;	
+			}
+				
+		</style>
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+				//track event for showing popup
+				_gaq.push(['_trackEvent', 'Popup', 'Subscribe', 'Show']);
+				$('#newsletter-popup-container').delay(1000).fadeIn(800);
+				$('#newscontainer').addClass('blur');
+				
+				$('.close-popup').click(function(e){
+					e.preventDefault();
+					//track event for closing popup
+					_gaq.push(['_trackEvent', 'Popup', 'Subscribe', 'Close']);
+					$('#newsletter-popup-container').fadeOut(800);
+					$('#newscontainer').removeClass('blur');
+				});
+				
+				$('#subscribe-form').submit(function(e){
+					e.preventDefault();
+					$('#newsletter-popup-container').slideUp(800, function(){
+						$('#popup-content1').hide();
+						$('#popup-content2').show();
+						$('#newsletter-popup-container').slideDown(800);
+						$.post("/ajax/subscribe_newsletter.php", { email: $("#email").val(), category: $("#subscribe_category").val(), slug: $("#subscribe_slug").val() }).done(function(data){
+							$('#newsletter-popup-container').slideUp(800, function(){
+								
+								$('#popup-content2').hide();
+								if(data == 'SUCCESS_EXISTING_USER' || data == 'SUCCESS_NEW_USER'){
+									$('#popup-content3').show();								
+									$('#newsletter-popup-container').slideDown(800).delay(1500).slideUp(800);
+									$('#newscontainer').removeClass('blur');
+									
+									if(data == 'SUCCESS_EXISTING_USER'){
+										//track event for subscribing by existing user
+										_gaq.push(['_trackEvent', 'Popup', 'Subscribe', 'Added subscription (existing user)']);
+									}else{
+										//track event for subscribing by new user
+										_gaq.push(['_trackEvent', 'Popup', 'Subscribe', 'Added subscription (new user)']);
+									}
+								}else{
+									$('#email-error').show();
+									$('#popup-content1').show();
+									$('#newsletter-popup-container').slideDown(800);
+								}
+								
+							});
+						});
+						
+					});
+				});
+			});
+		</script>
+		
+		<div id="newsletter-popup-container" style="display: block;">
+			<div id="newsletter-popup">
+				<i class="close-popup fa fa-times fa-lg"></i>
+				
+				<div id="popup-content1">
+				
+					<div id="big-text">
+						Do you want to stay up to date of all the news about <span class="category-name">Barrie</span>? Subscribe to the mailing list and get a daily update with the most important news about <span class="category-name">Barrie</span>!					</div>
+					
+					<div id="email-input"> <i class="fa fa-envelope fa-2x"></i> <form method="post" id="subscribe-form"><input type="hidden" name="category" id="subscribe_category" value="1721"><input type="hidden" name="slug" id="subscribe_slug" value="/en-ca/region/barrie/"><input id="email" type="email" placeholder="Email address"><button id="subscribe-button" type="submit">Subscribe</button></form></div>
+					<div id="email-error">The email address seems invalid, please check the address..</div>
+                    <div style="text-align:right;margin-top:20px;"><a href="#" class="close-popup">No thanks, just show me the news</a></div>
+					
+				</div>
+				
+				<div id="popup-content2">
+					<div id="big-text">
+						<i class="fa fa-spinner fa-spin"></i> Please wait..					</div>
+				</div>
+				
+				<div id="popup-content3">
+					<div id="big-text">
+						Registration successful!					</div>
+				</div>
+				
+				
+				
+			</div>
+		</div>
+		<link rel="stylesheet" type="text/css" href="/css/component.css">
+
+<script src="/js/modernizr.custom.js"></script>
+<style type="text/css">
+	body, #newscontainer{
+		background-color:#f4f4f4;
+	}
+	#newscontainer{
+		margin-top:15px;
+		display:block;	
+	}
+	
+	.item { width: 350px; }
+	.item.double-width { width: 725px; }
+	.item.triple-width { width: 1100px; }
+	.item.ad { 
+		width:336px;
+		margin:0px 7px;
+		height:333px!important;
+		margin-bottom:20px;
+	}
+	.item.adlong{
+		width:300px;
+		margin:0px 7px;
+		height:656px!important;
+		margin-bottom:20px;
+	}
+	.item.adstorystack{
+		width:336px;
+		margin:0px 7px;
+		margin-bottom:20px;	
+		height:656px!important;
+	}
+	
+	.item.ad iframe{
+		width:338px!important;
+		height:280px!important;
+	}
+	
+	.item {
+		overflow:hidden;
+		word-break:break-word;
+		font-size:12pt;
+		line-height:normal;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;	
+		background-color:#fff;
+		margin-bottom:20px;
+		
+		-moz-box-shadow: 1px 1px 4px #888;
+		-webkit-box-shadow: 1px 1px 4px #888;
+		box-shadow: 1px 1px 4px #888;
+		
+		border:0px!important;
+		padding:0px!important;
+		
+		display:block;	
+	}
+	.item h2{
+		display:block;	
+	}
+	/*
+	.item.blur{	
+	  -webkit-filter: blur(3px);
+	  -moz-filter: blur(3px);
+	  -ms-filter: blur(3px);
+	  -o-filter: blur(3px);
+	  filter: blur(3px);	
+	}
+	.item.blur:hover{	
+	  -webkit-filter: none;
+	  -moz-filter: none;
+	  -ms-filter: none;
+	  -o-filter: none;
+	  filter: none;	
+	}
+	*/
+	.item h2 a{
+		display:block;
+		padding:15px;
+		background-color:#FFBC2F;
+		color:#fff !important;
+		font-size:14pt;
+		-webkit-border-radius: 3px 3px 0 0;
+		-moz-border-radius: 3px 3px 0 0;
+		border-radius: 3px 3px 0 0;	
+	}
+	.item a:visited, .item-read-more a:visited{
+		background-color:#CCC;	
+	}
+	.item.w2 { width: 50%; }
+	.content{
+		padding:15px;	
+	}
+	.item-date{
+		margin-bottom:1px;
+		font-size:9pt;
+		background-color:#EEE;	
+		padding: 3px 15px;
+		-moz-box-shadow: 0px 1px 1px #CCC;
+		-webkit-box-shadow: 0px 1px 1px #CCC;
+		box-shadow: 0px 1px 1px #CCC;
+	}
+	.item-date a{
+		color:#000;
+		text-decoration:none;
+		display:inline !important;
+	}
+	.item-date a:hover{
+		text-decoration:underline!important;	
+	}
+	.social-share{
+		height:29px;
+		margin-left:15px;
+		float:left;	
+		position:relative;
+		bottom:-29px;
+		-webkit-transition: bottom 0.5s ease 1s;
+   		-moz-transition: bottom 0.5s ease 1s;
+     	-o-transition: bottom 0.5s ease 1s;
+    	-ms-transition: bottom 0.5s ease 1s;
+        transition: bottom 0.5s ease 1s;
+		
+	}
+	.item:hover > .social-share{
+		bottom:0px;	
+		-webkit-transition: bottom 0.5s ease 0s;
+   		-moz-transition: bottom 0.5s ease 0s;
+     	-o-transition: bottom 0.5s ease 0s;
+    	-ms-transition: bottom 0.5s ease 0s;
+        transition: bottom 0.5s ease 0s;
+	}
+	.social-share a{
+		display:inline-block !important;	
+	}
+	.item-read-more a{
+		background-color:#FFBC2F;
+		color:#fff !important;
+		padding:5px 10px;
+		float:right;
+		font-size:12pt;
+		text-decoration:none;
+		
+		-webkit-border-radius: 3px 0 3px 0;
+		-moz-border-radius: 3px 0 3px 0;
+		border-radius: 3px 0 3px 0;	
+	}
+	.item-img{
+		/*max-height:250px;*/
+		max-width:100%;
+		float:left;
+		margin:0 10px 10px 0;	
+	}
+	
+	
+	/* Effect 4: fall perspective */
+	.grid.effect-4 {
+		perspective: 1300px;
+	}
+	 
+	.grid.effect-4 li {
+		transform-style: preserve-3d;
+	}
+	 
+	.grid.effect-4 li.animate {
+		transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+		animation: fallPerspective .8s ease-in-out forwards;
+	}
+	 
+	@keyframes fallPerspective {
+		100% { transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }
+	}
+	
+	embed, iframe, object {
+		max-width: 100%!important;
+			max-height: 100%!important;
+	}
+</style>
+
+<script src="/js/masonry.pkgd.min.js"></script>
+
+<div id="topbar"><h1><a href="http://www.newslocker.com/en-ca/region/barrie/" title="Barrie">Barrie</a></h1><div id="socialbar"><div id="rss"><a href="http://www.newslocker.com/en-ca/region/barrie/rss/" title="Barrie rss feed"><img src="/images/rss.png" title="Barrie rss feed"></a></div><div id="plusone"><div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1415072665282" name="I0_1415072665282" src="https://apis.google.com/se/0/_/+1/fastbutton?usegapi=1&amp;size=medium&amp;origin=http%3A%2F%2Fwww.newslocker.com&amp;url=http%3A%2F%2Fwww.newslocker.com%2Fen-ca%2Fregion%2Fbarrie%2Fbuy-pizza-in-barrie-help-feed-haitians-simcoecom%2F&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.5f0XKKY4cHU.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Ft%3Dzcms%2Frs%3DAGLTcCPjWK2K7EJ2pBvjMdYDk7aR1ZSh1Q#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I0_1415072665282&amp;parent=http%3A%2F%2Fwww.newslocker.com&amp;pfname=&amp;rpctoken=50945252" data-gapiattached="true" title="+1"></iframe></div></div><div id="follow"><a href="http://twitter.com/News_Barrie" class="twitter-follow-button" data-show-count="true">Follow @News_Barrie</a></div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="f16431e9ec" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.facebook.com/connect/ping?client_id=222801617752544&amp;domain=www.newslocker.com&amp;origin=1&amp;redirect_uri=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FehazDpFPEnK.js%3Fversion%3D41%23cb%3Df16259948%26domain%3Dwww.newslocker.com%26origin%3Dhttp%253A%252F%252Fwww.newslocker.com%252Ff2d0ed0aa4%26relation%3Dparent&amp;response_type=token%2Csigned_request%2Ccode&amp;sdk=joey" style="display: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="http://static.ak.facebook.com/connect/xd_arbiter/ehazDpFPEnK.js?version=41#channel=f2d0ed0aa4&amp;origin=http%3A%2F%2Fwww.newslocker.com" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://s-static.ak.facebook.com/connect/xd_arbiter/ehazDpFPEnK.js?version=41#channel=f2d0ed0aa4&amp;origin=http%3A%2F%2Fwww.newslocker.com" style="border: none;"></iframe></div></div></div><fb:like href="http://www.newslocker.com/en-ca/region/barrie/buy-pizza-in-barrie-help-feed-haitians-simcoecom/" send="true" width="450" show_faces="false" font="" class=" fb_iframe_widget" fb-xfbml-state="parsed" fb-iframe-plugin-query="app_id=222801617752544&amp;href=http%3A%2F%2Fwww.newslocker.com%2Fen-ca%2Fregion%2Fbarrie%2Fbuy-pizza-in-barrie-help-feed-haitians-simcoecom%2F&amp;locale=en_US&amp;sdk=joey&amp;send=true&amp;show_faces=false&amp;width=450"><span style="vertical-align: top; width: 0px; height: 0px; overflow: hidden;"><iframe name="f23f063e64" width="450px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="http://www.facebook.com/plugins/like.php?app_id=222801617752544&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FehazDpFPEnK.js%3Fversion%3D41%23cb%3Df2cc52673c%26domain%3Dwww.newslocker.com%26origin%3Dhttp%253A%252F%252Fwww.newslocker.com%252Ff2d0ed0aa4%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fwww.newslocker.com%2Fen-ca%2Fregion%2Fbarrie%2Fbuy-pizza-in-barrie-help-feed-haitians-simcoecom%2F&amp;locale=en_US&amp;sdk=joey&amp;send=true&amp;show_faces=false&amp;width=450" style="border: none; visibility: hidden;"></iframe></span></fb:like></div></div><center></center><ul id="newscontainer" class="grid effect-8 blur" style="position: relative; height: 8578px;">
+			<script type="text/javascript">
+				$.post( "/viewcounter.php", { language: "33", profession: "1721", newsitem: "73229082", mobile: "n", ctime:"1415072657"} );
+			</script>
+			<li class="item shown" itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 0px;">
+					<h2 itemprop="headline"><a href="http://www.simcoe.com/news-story/4843066-buy-pizza-in-barrie-help-feed-haitians/" title="Buy pizza in Barrie, help feed Haitians - Simcoe.com" rel="nofollow" target="_blank">Buy pizza in Barrie, help feed Haitians - Simcoe.com</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/buy-pizza-in-barrie-help-feed-haitians-simcoecom/" title="Permalink naar Buy pizza in Barrie, help feed Haitians - Simcoe.com" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-09-10T21:54:11+0200">10-09-2014 21:54</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://www.simcoe.com/Portals/65/Images/logo.png" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							Buy pizza in Barrie, help feed Haitians<br>
+		Simcoe.com<br>
+		BARRIE- A pizza dinner to feed your family Sept. 17 will also help feed young people in Haiti. Barrie's Domino's Pizza locations and local Rotarians are pitching in with a Raise the Dough Night to support Rea Dol's Lunch Program at Institution Mixte De&nbsp;...
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/buy-pizza-in-barrie-help-feed-haitians-simcoecom/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Buy+pizza+in+Barrie%2C+help+feed+Haitians+-+Simcoe.com+http://www.newslocker.com/en-ca/region/barrie/buy-pizza-in-barrie-help-feed-haitians-simcoecom/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/buy-pizza-in-barrie-help-feed-haitians-simcoecom/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/buy-pizza-in-barrie-help-feed-haitians-simcoecom/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://www.simcoe.com/news-story/4843066-buy-pizza-in-barrie-help-feed-haitians/" title="Buy pizza in Barrie, help feed Haitians - Simcoe.com" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li><!--googleoff: index-->                <li class="item ad shown" style="position: absolute; left: 373px; top: 0px;">
+                    <h2><a>Advertisement</a></h2>
+                    <center>
+                    
+                    
+<!-- AdSpeed.com Serving Code 7.9.6 for [Zone] NewsLocker zone 1 Canada [Any Dimension] -->
+<script type="text/javascript" src="http://g.adspeed.net/ad.php?do=js&amp;zid=69080&amp;wd=-1&amp;ht=-1&amp;target=_blank"></script><script type="text/javascript">
+<!--//<![CDATA[
+   document.MAX_ct0 ='';
+   var m3_u = (location.protocol=='https:'?'https://cas.criteo.com/delivery/ajs.php?':'http://cas.criteo.com/delivery/ajs.php?');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("zoneid=166317");document.write("&amp;nodis=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+       document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+   }
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'></scr"+"ipt>");
+//]]>--></script><script type="text/javascript" src="http://cas.criteo.com/delivery/ajs.php?zoneid=166317&amp;nodis=1&amp;cb=41403266950&amp;exclude=undefined&amp;charset=UTF-8&amp;loc=http%3A//www.newslocker.com/en-ca/region/barrie/buy-pizza-in-barrie-help-feed-haitians-simcoecom/"></script><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+</script> <!-- Newslocker 336x280 pos #1 --> <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-6292701132361268" data-ad-slot="2146063858" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+
+<div id="beacon_bf212b7bef" style="position: absolute; left: 0px; top: 0px; visibility: hidden;">
+<img width="0" height="0" src="http://sync.mathtag.com/sync/img?type=sync&amp;mt_exid=20&amp;redir=http%3a%2f%2fdis.ny.us.criteo.com%2frex%2fmatch.aspx%3fc%3d2%26uid%3d%5bMM_UUID%5d">
+<img width="0" height="0" src="http://cat.sv.us.criteo.com/delivery/lg.php?ckmode=9&amp;cb=bf212b7bef&amp;loc=http%3a%2f%2fwww.newslocker.com%2fen-ca%2fregion%2fbarrie%2fbuy-pizza-in-barrie-help-feed-haitians-simcoecom%2f&amp;c1=oUSZAktCdY3o2H5gWcom69jaYy6x2XMR9fGQL-aA2dm20tF--XnevjoVy6dc5_2NPdeE75fsGBmJMsBAgA6YplODTCorp_-rv903IP6VN-Ytigqk7xGngYTCVekhGsbtmaEpECBRwAa7EPMUkGpMAg&amp;c2=VtXMEwGkGXCyvpDOxEpDyv7C1b-0lHsN">
+</div>
+
+<div style="position:absolute;left:0px;top:0px;visibility:hidden;"><img src="http://g.adspeed.net/ad.php?do=imp&amp;aid=208332&amp;zid=69080&amp;t=1415072656&amp;auth=3957156a4b159c61a4af7f3eb6e38a55&amp;wd=-1&amp;ht=-1" alt="i" width="1" height="1"></div>
+<!-- AdSpeed.com End -->
+                    
+					                    </center>
+                </li>
+                
+                                
+				<li class="item shown" itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 345px;">
+					<h2 itemprop="headline"><a href="http://www.simcoe.com/news-story/4957543-barrie-court-staff-use-defibrillator-to-revive-senior/" title="Barrie court staff use defibrillator to revive senior - Simcoe.com" rel="nofollow" target="_blank">Barrie court staff use defibrillator to revive senior - Simcoe.com</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/barrie-court-staff-use-defibrillator-to-revive-senior-simcoecom/" title="Permalink naar Barrie court staff use defibrillator to revive senior - Simcoe.com" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-11-03T16:44:29+0100">03-11-2014 16:44</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://www.simcoe.com/Portals/65/Images/logo.png" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							Barrie court staff use defibrillator to revive senior<br>
+		Simcoe.com<br>
+		A 72-year-old man is recovering after passing out at the Barrie Courthouse Friday afternoon. The man fell to the ground in the family court processing area. Court clerks and officers used a defibrillator to revive the man. “It was truly amazing to see ...
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/barrie-court-staff-use-defibrillator-to-revive-senior-simcoecom/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Barrie+court+staff+use+defibrillator+to+revive+senior+-+Simcoe.com+http://www.newslocker.com/en-ca/region/barrie/barrie-court-staff-use-defibrillator-to-revive-senior-simcoecom/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/barrie-court-staff-use-defibrillator-to-revive-senior-simcoecom/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/barrie-court-staff-use-defibrillator-to-revive-senior-simcoecom/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://www.simcoe.com/news-story/4957543-barrie-court-staff-use-defibrillator-to-revive-senior/" title="Barrie court staff use defibrillator to revive senior - Simcoe.com" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item double-width" itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 731px;">
+					<h2 itemprop="headline"><a href="http://www.thebarrieexaminer.com/2014/11/02/inspired-petes-double-colts" title="Inspired Petes double Colts - The Barrie Examiner" rel="nofollow" target="_blank">Inspired Petes double Colts - The Barrie Examiner</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/inspired-petes-double-colts-the-barrie-examiner/" title="Permalink naar Inspired Petes double Colts - The Barrie Examiner" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-11-03T16:42:58+0100">03-11-2014 16:42</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://storage.thebarrieexaminer.com/v1/dynamic_resize/sws_path/suns-prod-images/1297625839465_ORIGINAL.jpg?quality=80&amp;size=320x&amp;stmp=1414979233259" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							The Barrie Examiner<br>
+		Inspired Petes double Colts<br>
+		The Barrie Examiner<br>
+		Peterborough Petes' Dominik Masin fights for the puck along the boards against Barrie Colts' Nick Pastorious during first period OHL action on Sunday, November 2, 2014 at the Memorial Centre in Peterborough. Clifford Skarstedt/Peterborough Examiner/QMI&nbsp;...<br>
+		Petes handle Barrie 6-3 on home iceKawartha Media Group<br>
+		Tiny Township's Badenhorst gets surprise call-up, two starts for Colts this ...Collingwoo
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/inspired-petes-double-colts-the-barrie-examiner/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Inspired+Petes+double+Colts+-+The+Barrie+Examiner+http://www.newslocker.com/en-ca/region/barrie/inspired-petes-double-colts-the-barrie-examiner/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/inspired-petes-double-colts-the-barrie-examiner/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/inspired-petes-double-colts-the-barrie-examiner/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://www.thebarrieexaminer.com/2014/11/02/inspired-petes-double-colts" title="Inspired Petes double Colts - The Barrie Examiner" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item double-width" itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 1054px;">
+					<h2 itemprop="headline"><a href="http://www.cbc.ca/news/canada/toronto/alleged-drunk-driver-stopped-en-route-to-barrie-gym-1.2821382" title="Alleged drunk driver stopped en route to Barrie gym - CBC.ca" rel="nofollow" target="_blank">Alleged drunk driver stopped en route to Barrie gym - CBC.ca</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/alleged-drunk-driver-stopped-en-route-to-barrie-gym-cbcca/" title="Permalink naar Alleged drunk driver stopped en route to Barrie gym - CBC.ca" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-11-02T22:49:35+0100">02-11-2014 22:49</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://i.cbc.ca/1.2034632.1381642869!/httpImage/image.jpg_gen/derivatives/16x9_460/hi-852-barrie-police.jpg" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							CTV News<br>
+		Alleged drunk driver stopped en route to Barrie gym<br>
+		CBC.ca<br>
+		Barrie police say a male driver had a blood-alcohol level of nearly three times the legal limit when he was on his way to the gym. According to a news release, police spotted a vehicle driving "erratically" on Lakeshore Drive at 8:30 a.m. Sunday ...<br>
+		Alleged impaired driver breaks mailboxesCTV News<br>
+		Mischief Investigation Ends with Impaired Driving ChargesBayshore Broadcasting News Centre<br>
+		<br>
+		all 5 news art
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/alleged-drunk-driver-stopped-en-route-to-barrie-gym-cbcca/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Alleged+drunk+driver+stopped+en+route+to+Barrie+gym+-+CBC.ca+http://www.newslocker.com/en-ca/region/barrie/alleged-drunk-driver-stopped-en-route-to-barrie-gym-cbcca/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/alleged-drunk-driver-stopped-en-route-to-barrie-gym-cbcca/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/alleged-drunk-driver-stopped-en-route-to-barrie-gym-cbcca/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://www.cbc.ca/news/canada/toronto/alleged-drunk-driver-stopped-en-route-to-barrie-gym-1.2821382" title="Alleged drunk driver stopped en route to Barrie gym - CBC.ca" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>                <li class="item ad" style="position: absolute; left: 0px; top: 1415px;">
+                    <h2><a>Advertisement</a></h2>
+                    <center>
+                    
+                    
+<!-- AdSpeed.com Serving Code 7.9.6 for [Zone] NewsLocker zone 2 Canada [Any Dimension] -->
+<script type="text/javascript" src="http://g.adspeed.net/ad.php?do=js&amp;zid=69081&amp;wd=-1&amp;ht=-1&amp;target=_blank"></script><script type="text/javascript">
+<!--//<![CDATA[
+   document.MAX_ct0 ='';
+   var m3_u = (location.protocol=='https:'?'https://cas.criteo.com/delivery/ajs.php?':'http://cas.criteo.com/delivery/ajs.php?');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("zoneid=166321");document.write("&amp;nodis=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+       document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+   }
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'></scr"+"ipt>");
+//]]>--></script><script type="text/javascript" src="http://cas.criteo.com/delivery/ajs.php?zoneid=166321&amp;nodis=1&amp;cb=90358398481&amp;exclude=undefined&amp;charset=UTF-8&amp;loc=http%3A//www.newslocker.com/en-ca/region/barrie/buy-pizza-in-barrie-help-feed-haitians-simcoecom/"></script><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+</script> <!-- Newslocker 336x280 pos #2 --> <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-6292701132361268" data-ad-slot="3622797051" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+
+<div id="beacon_f7fca1ce20" style="position: absolute; left: 0px; top: 0px; visibility: hidden;">
+<img width="0" height="0" src="http://sync.mathtag.com/sync/img?type=sync&amp;mt_exid=20&amp;redir=http%3a%2f%2fdis.ny.us.criteo.com%2frex%2fmatch.aspx%3fc%3d2%26uid%3d%5bMM_UUID%5d">
+<img width="0" height="0" src="http://cat.sv.us.criteo.com/delivery/lg.php?ckmode=9&amp;cb=f7fca1ce20&amp;loc=http%3a%2f%2fwww.newslocker.com%2fen-ca%2fregion%2fbarrie%2fbuy-pizza-in-barrie-help-feed-haitians-simcoecom%2f&amp;c1=oUSZAktCdY3o2H5gWcom69jaYy6x2XMROoUvQzyZ5CLzpzGHtVjLFPF6HKZ0iPZnPM2K_icd_PMkCA6_cBSAr3Zstr2C8lzBnzDw5SSZ5uXpH3Xq59xfGvy7THBIRO_9E9hPiu2f-xSnajRQnILu5Q&amp;c2=VtXMEwGkGXCyvpDOxEpDyv7C1b-0lHsN">
+</div>
+
+<div style="position:absolute;left:0px;top:0px;visibility:hidden;"><img src="http://g.adspeed.net/ad.php?do=imp&amp;aid=208333&amp;zid=69081&amp;t=1415072656&amp;auth=48182ef735a6c3092167a1d04bef546b&amp;wd=-1&amp;ht=-1" alt="i" width="1" height="1"></div>
+<!-- AdSpeed.com End -->
+                    
+					                    </center>
+                </li>
+                
+                                
+				<li class="item double-width" itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 1768px;">
+					<h2 itemprop="headline"><a href="http://www.thebarrieexaminer.com/2014/11/02/barrie-fire-officials-raising-the-alarm-on-co-safety" title="raising the alarm on CO safety - The Barrie Examiner" rel="nofollow" target="_blank">raising the alarm on CO safety - The Barrie Examiner</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/raising-the-alarm-on-co-safety-the-barrie-examiner/" title="Permalink naar raising the alarm on CO safety - The Barrie Examiner" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-11-02T21:44:41+0100">02-11-2014 21:44</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://storage.thebarrieexaminer.com/v1/dynamic_resize/sws_path/suns-prod-images/1297625729687_ORIGINAL.jpg?quality=80&amp;size=320x&amp;stmp=1414960752473" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							The Barrie Examiner<br>
+		raising the alarm on CO safety<br>
+		The Barrie Examiner<br>
+		“The whole family perished,” said Barrie's new Deputy Fire Chief of Fire Prevention Jeff Weber, who recently arrived from the Burlington area. “The signs were there, they were all not feeling well over the weekend but didn't know what was causing it.<br>
+		Carbon monoxide awareness week kicks offCTV News<br>
+		<br>
+		all 8 news articles&nbsp;»
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/raising-the-alarm-on-co-safety-the-barrie-examiner/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=raising+the+alarm+on+CO+safety+-+The+Barrie+Examiner+http://www.newslocker.com/en-ca/region/barrie/raising-the-alarm-on-co-safety-the-barrie-examiner/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/raising-the-alarm-on-co-safety-the-barrie-examiner/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/raising-the-alarm-on-co-safety-the-barrie-examiner/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://www.thebarrieexaminer.com/2014/11/02/barrie-fire-officials-raising-the-alarm-on-co-safety" title="raising the alarm on CO safety - The Barrie Examiner" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item " itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 2091px;">
+					<h2 itemprop="headline"><a href="http://barrie.ctvnews.ca/intoxicated-man-arrested-in-barrie-1.2083284" title="Intoxicated man arrested in Barrie - CTV News" rel="nofollow" target="_blank">Intoxicated man arrested in Barrie - CTV News</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/intoxicated-man-arrested-in-barrie-ctv-news/" title="Permalink naar Intoxicated man arrested in Barrie - CTV News" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-11-02T17:54:28+0100">02-11-2014 17:54</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://barrie.ctvnews.ca/polopoly_fs/1.1703855!/httpImage/image.jpg_gen/derivatives/landscape_620/image.jpg" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							CTV News<br>
+		Intoxicated man arrested in Barrie<br>
+		CTV News<br>
+		A man was arrested after trying to force his way into a house while intoxicated on Saturday night. Police say the 26-year-old man from Barrie tried to get into a house on Chaucer Street around 10 p.m.. When the man was confronted by the homeowner, he ...<br>
+		Change text size for the storyThe Barrie Examiner<br>
+		<br>
+		all 5 news articles&nbsp;»
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/intoxicated-man-arrested-in-barrie-ctv-news/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Intoxicated+man+arrested+in+Barrie+-+CTV+News+http://www.newslocker.com/en-ca/region/barrie/intoxicated-man-arrested-in-barrie-ctv-news/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/intoxicated-man-arrested-in-barrie-ctv-news/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/intoxicated-man-arrested-in-barrie-ctv-news/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://barrie.ctvnews.ca/intoxicated-man-arrested-in-barrie-1.2083284" title="Intoxicated man arrested in Barrie - CTV News" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item " itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 373px; top: 2091px;">
+					<h2 itemprop="headline"><a href="http://www.simcoe.com/news-story/4953655-project-gives-barrie-developer-new-appreciation-of-math/" title="Project gives Barrie developer new appreciation of math - Simcoe.com" rel="nofollow" target="_blank">Project gives Barrie developer new appreciation of math - Simcoe.com</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/project-gives-barrie-developer-new-appreciation-of-math-simcoecom/" title="Permalink naar Project gives Barrie developer new appreciation of math - Simcoe.com" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-11-02T13:09:40+0100">02-11-2014 13:09</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://media.zuza.com/f/e/fe50d590-5ca6-451a-91c6-3bd6e991abe3/w-Stardalegamers-SUB___Content.jpg" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							Project gives Barrie developer new appreciation of math<br>
+		Simcoe.com<br>
+		He has teamed up with friend and fellow Barrie North grad Kane Hart to build the video game Stardale, a test version of which is to be released in the next few months. Hammond and Hart spent more than six months creating the sci-fi video game in the ...
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/project-gives-barrie-developer-new-appreciation-of-math-simcoecom/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Project+gives+Barrie+developer+new+appreciation+of+math+-+Simcoe.com+http://www.newslocker.com/en-ca/region/barrie/project-gives-barrie-developer-new-appreciation-of-math-simcoecom/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/project-gives-barrie-developer-new-appreciation-of-math-simcoecom/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/project-gives-barrie-developer-new-appreciation-of-math-simcoecom/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://www.simcoe.com/news-story/4953655-project-gives-barrie-developer-new-appreciation-of-math/" title="Project gives Barrie developer new appreciation of math - Simcoe.com" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item " itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 373px; top: 2477px;">
+					<h2 itemprop="headline"><a href="http://barrie.ctvnews.ca/volunteers-remove-log-jam-1.2082787" title="Volunteers remove log jam - CTV News" rel="nofollow" target="_blank">Volunteers remove log jam - CTV News</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/volunteers-remove-log-jam-ctv-news/" title="Permalink naar Volunteers remove log jam - CTV News" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-11-01T23:31:28+0100">01-11-2014 23:31</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://barrie.ctvnews.ca/polopoly_fs/1.2082802!/httpImage/image.jpg_gen/derivatives/landscape_620/image.jpg" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							Volunteers remove log jam<br>
+		CTV News<br>
+		A group of property owners and volunteers rolled up their sleeves to remove a pile of logs that was blocking a river. The group of around 20 people are hoping that by removing the logs, it will help prevent rising water levels and spring flooding of ...
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/volunteers-remove-log-jam-ctv-news/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Volunteers+remove+log+jam+-+CTV+News+http://www.newslocker.com/en-ca/region/barrie/volunteers-remove-log-jam-ctv-news/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/volunteers-remove-log-jam-ctv-news/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/volunteers-remove-log-jam-ctv-news/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://barrie.ctvnews.ca/volunteers-remove-log-jam-1.2082787" title="Volunteers remove log jam - CTV News" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>                <li class="item ad" style="position: absolute; left: 0px; top: 2550px;">
+                    <h2><a>Advertisement</a></h2>
+                    <center>
+                    
+                    
+<!-- AdSpeed.com Serving Code 7.9.6 for [Zone] NewsLocker zone 3 Canada [Any Dimension] -->
+<script type="text/javascript" src="http://g.adspeed.net/ad.php?do=js&amp;zid=69082&amp;wd=-1&amp;ht=-1&amp;target=_blank"></script><script type="text/javascript">
+<!--//<![CDATA[
+   document.MAX_ct0 ='';
+   var m3_u = (location.protocol=='https:'?'https://cas.criteo.com/delivery/ajs.php?':'http://cas.criteo.com/delivery/ajs.php?');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("zoneid=166322");document.write("&amp;nodis=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+       document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+   }
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'></scr"+"ipt>");
+//]]>--></script><script type="text/javascript" src="http://cas.criteo.com/delivery/ajs.php?zoneid=166322&amp;nodis=1&amp;cb=53703713276&amp;exclude=undefined&amp;charset=UTF-8&amp;loc=http%3A//www.newslocker.com/en-ca/region/barrie/buy-pizza-in-barrie-help-feed-haitians-simcoecom/"></script><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+</script> <!-- Newslocker 336x280 pos #3 --> <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-6292701132361268" data-ad-slot="5099530258" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><ins id="aswift_2_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+
+<div id="beacon_e4c325ee58" style="position: absolute; left: 0px; top: 0px; visibility: hidden;">
+<img width="0" height="0" src="http://sync.mathtag.com/sync/img?type=sync&amp;mt_exid=20&amp;redir=http%3a%2f%2fdis.ny.us.criteo.com%2frex%2fmatch.aspx%3fc%3d2%26uid%3d%5bMM_UUID%5d">
+<img width="0" height="0" src="http://cat.sv.us.criteo.com/delivery/lg.php?ckmode=9&amp;cb=e4c325ee58&amp;loc=http%3a%2f%2fwww.newslocker.com%2fen-ca%2fregion%2fbarrie%2fbuy-pizza-in-barrie-help-feed-haitians-simcoecom%2f&amp;c1=oUSZAktCdY3o2H5gWcom69jaYy6x2XMRb5e6U3sG02-qUyFE2_7Bw2DOTWn2TqZRiZs6JJ_vzoNePxI31S3H_JIBZj5Nphv58W5SztOUGpvWJg4f1uCRByqg6091D3Es310Y1NMRe_wc2DbimcH2ug&amp;c2=VtXMEwGkGXCyvpDOxEpDyv7C1b-0lHsN">
+</div>
+
+<div style="position:absolute;left:0px;top:0px;visibility:hidden;"><img src="http://g.adspeed.net/ad.php?do=imp&amp;aid=208334&amp;zid=69082&amp;t=1415072656&amp;auth=8ab64a47610527ad3dc223eaee7864af&amp;wd=-1&amp;ht=-1" alt="i" width="1" height="1"></div>
+<!-- AdSpeed.com End -->
+                    
+					                    </center>
+                </li>
+                
+                                
+				<li class="item " itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 373px; top: 2822px;">
+					<h2 itemprop="headline"><a href="http://barrie.ctvnews.ca/emergency-shelter-prepares-for-winter-1.2082790" title="Emergency shelter prepares for winter - CTV News" rel="nofollow" target="_blank">Emergency shelter prepares for winter - CTV News</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/emergency-shelter-prepares-for-winter-ctv-news/" title="Permalink naar Emergency shelter prepares for winter - CTV News" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-11-01T23:31:28+0100">01-11-2014 23:31</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://barrie.ctvnews.ca/polopoly_fs/1.2082811!/httpImage/image.jpg_gen/derivatives/landscape_620/image.jpg" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							Emergency shelter prepares for winter<br>
+		CTV News<br>
+		Barrie's 'Out of the Cold' shelter is preparing for what could be a long and harsh winter. The emergency shelter is open from November through to April, and has on average 4,000 visits a season. "In a way it's unfortunate that we exist,” said President ...
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/emergency-shelter-prepares-for-winter-ctv-news/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Emergency+shelter+prepares+for+winter+-+CTV+News+http://www.newslocker.com/en-ca/region/barrie/emergency-shelter-prepares-for-winter-ctv-news/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/emergency-shelter-prepares-for-winter-ctv-news/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/emergency-shelter-prepares-for-winter-ctv-news/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://barrie.ctvnews.ca/emergency-shelter-prepares-for-winter-1.2082790" title="Emergency shelter prepares for winter - CTV News" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item " itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 2903px;">
+					<h2 itemprop="headline"><a href="http://barrie.ctvnews.ca/halloween-fight-in-barrie-1.2082603" title="Halloween fight in Barrie - CTV News" rel="nofollow" target="_blank">Halloween fight in Barrie - CTV News</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/halloween-fight-in-barrie-ctv-news/" title="Permalink naar Halloween fight in Barrie - CTV News" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-11-01T19:17:13+0100">01-11-2014 19:17</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://barrie.ctvnews.ca/polopoly_fs/1.1703855!/httpImage/image.jpg_gen/derivatives/landscape_620/image.jpg" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							CTV News<br>
+		Halloween fight in Barrie<br>
+		CTV News<br>
+		Police were called to a fight between four people in Barrie early Saturday morning. Police tell CTV News two were dressed as Batman and Robin and they were fighting with two others dressed as a skeleton and a shark on Dunlop Street. When police arrived&nbsp;...
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/halloween-fight-in-barrie-ctv-news/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Halloween+fight+in+Barrie+-+CTV+News+http://www.newslocker.com/en-ca/region/barrie/halloween-fight-in-barrie-ctv-news/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/halloween-fight-in-barrie-ctv-news/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/halloween-fight-in-barrie-ctv-news/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://barrie.ctvnews.ca/halloween-fight-in-barrie-1.2082603" title="Halloween fight in Barrie - CTV News" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item double-width" itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 3267px;">
+					<h2 itemprop="headline"><a href="http://barrie.ctvnews.ca/alleged-impaired-driver-breaks-mailboxes-1.2082600" title="Alleged impaired driver breaks mailboxes - CTV News" rel="nofollow" target="_blank">Alleged impaired driver breaks mailboxes - CTV News</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/alleged-impaired-driver-breaks-mailboxes-ctv-news/" title="Permalink naar Alleged impaired driver breaks mailboxes - CTV News" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-11-01T19:11:34+0100">01-11-2014 19:11</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://barrie.ctvnews.ca/polopoly_fs/1.1703855!/httpImage/image.jpg_gen/derivatives/landscape_620/image.jpg" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							CTV News<br>
+		Alleged impaired driver breaks mailboxes<br>
+		CTV News<br>
+		A woman was charged with impaired driving a number of mailboxes were damaged on Friday night in Barrie. Police say they were called around 7:30 p.m. to respond to someone driving and knocking out mailboxes on Miller Drive. When they got to the scene,&nbsp;...<br>
+		Mischief Investigation Ends with Impaired Driving ChargesBayshore Broadcasting News Centre<br>
+		<br>
+		all 3 news articles&nbsp;»
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/alleged-impaired-driver-breaks-mailboxes-ctv-news/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Alleged+impaired+driver+breaks+mailboxes+-+CTV+News+http://www.newslocker.com/en-ca/region/barrie/alleged-impaired-driver-breaks-mailboxes-ctv-news/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/alleged-impaired-driver-breaks-mailboxes-ctv-news/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/alleged-impaired-driver-breaks-mailboxes-ctv-news/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://barrie.ctvnews.ca/alleged-impaired-driver-breaks-mailboxes-1.2082600" title="Alleged impaired driver breaks mailboxes - CTV News" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item " itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 3628px;">
+					<h2 itemprop="headline"><a href="http://www.thebarrieexaminer.com/2014/10/31/search-engine-marketing-can-be-a-driving-force" title="Search-engine marketing can be a driving force - The Barrie Examiner" rel="nofollow" target="_blank">Search-engine marketing can be a driving force - The Barrie Examiner</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/search-engine-marketing-can-be-a-driving-force-the-barrie-examiner/" title="Permalink naar Search-engine marketing can be a driving force - The Barrie Examiner" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-10-31T20:20:24+0100">31-10-2014 20:20</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://storage.thebarrieexaminer.com/v1/dynamic_resize/sws_path/suns-prod-images/1346007692589_ORIGINAL.jpg?quality=80&amp;size=320x&amp;stmp=1370048837665" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							The Barrie Examiner<br>
+		Search-engine marketing can be a driving force<br>
+		The Barrie Examiner<br>
+		For example, if you are a butcher shop in Barrie, whenever someone types in “Barrie butcher shop” onto their search engine (i.e. Google), they will be given a list of relevant results which is often many pages long. If you choose to optimize your ...<br>
+		<br>
+		and more&nbsp;»
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/search-engine-marketing-can-be-a-driving-force-the-barrie-examiner/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Search-engine+marketing+can+be+a+driving+force+-+The+Barrie+Examiner+http://www.newslocker.com/en-ca/region/barrie/search-engine-marketing-can-be-a-driving-force-the-barrie-examiner/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/search-engine-marketing-can-be-a-driving-force-the-barrie-examiner/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/search-engine-marketing-can-be-a-driving-force-the-barrie-examiner/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://www.thebarrieexaminer.com/2014/10/31/search-engine-marketing-can-be-a-driving-force" title="Search-engine marketing can be a driving force - The Barrie Examiner" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item " itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 373px; top: 3628px;">
+					<h2 itemprop="headline"><a href="http://barrie.ctvnews.ca/napoleon-hiring-100-new-jobs-at-its-barrie-location-1.2081029" title="Napoleon hiring 100 new jobs at its Barrie location - CTV News" rel="nofollow" target="_blank">Napoleon hiring 100 new jobs at its Barrie location - CTV News</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/napoleon-hiring-100-new-jobs-at-its-barrie-location-ctv-news/" title="Permalink naar Napoleon hiring 100 new jobs at its Barrie location - CTV News" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-10-31T17:33:53+0100">31-10-2014 17:33</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://barrie.ctvnews.ca/polopoly_fs/1.2047561!/httpImage/image.jpg_gen/derivatives/landscape_620/image.jpg" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							Napoleon hiring 100 new jobs at its Barrie location<br>
+		CTV News<br>
+		Napoleon Group of Companies announced on Friday it is looking to fill 100 jobs at its Barrie location. In a release, Napoleon says they are hiring administrative positions, lab technicians, production planners, call centre reps, research and ...<br>
+		Barrie's Napoleon Group hiring 100 workersSimcoe.com<br>
+		<br>
+		all 3 news articles&nbsp;»
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/napoleon-hiring-100-new-jobs-at-its-barrie-location-ctv-news/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Napoleon+hiring+100+new+jobs+at+its+Barrie+location+-+CTV+News+http://www.newslocker.com/en-ca/region/barrie/napoleon-hiring-100-new-jobs-at-its-barrie-location-ctv-news/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/napoleon-hiring-100-new-jobs-at-its-barrie-location-ctv-news/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/napoleon-hiring-100-new-jobs-at-its-barrie-location-ctv-news/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://barrie.ctvnews.ca/napoleon-hiring-100-new-jobs-at-its-barrie-location-1.2081029" title="Napoleon hiring 100 new jobs at its Barrie location - CTV News" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item double-width" itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 4090px;">
+					<h2 itemprop="headline"><a href="http://barrie.ctvnews.ca/special-weather-statement-expanded-to-barrie-and-collingwood-1.2079125" title="Special weather statement expanded to Barrie and Collingwood - CTV News" rel="nofollow" target="_blank">Special weather statement expanded to Barrie and Collingwood - CTV News</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/special-weather-statement-expanded-to-barrie-and-collingwood-ctv-news/" title="Permalink naar Special weather statement expanded to Barrie and Collingwood - CTV News" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-10-31T17:11:54+0100">31-10-2014 17:11</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://barrie.ctvnews.ca/polopoly_fs/1.1539401!/httpImage/image.jpg_gen/derivatives/landscape_620/image.jpg" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							CTV News<br>
+		Special weather statement expanded to Barrie and Collingwood<br>
+		CTV News<br>
+		Environment Canada has expanded to its special weather statement for potential snow coming to our region. A special weather statement was issued Thursday morning for Orangeville, Grand Valley, Dufferin County, Shelburne, Dundalk, Owen Sound, Blue&nbsp;...<br>
+		Snow in the forecast for Barrie, Collingwood and HillsdaleSimcoe.com<br>
+		<br>
+		all 3 news articles&nbsp;»
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/special-weather-statement-expanded-to-barrie-and-collingwood-ctv-news/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Special+weather+statement+expanded+to+Barrie+and+Collingwood+-+CTV+News+http://www.newslocker.com/en-ca/region/barrie/special-weather-statement-expanded-to-barrie-and-collingwood-ctv-news/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/special-weather-statement-expanded-to-barrie-and-collingwood-ctv-news/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/special-weather-statement-expanded-to-barrie-and-collingwood-ctv-news/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://barrie.ctvnews.ca/special-weather-statement-expanded-to-barrie-and-collingwood-1.2079125" title="Special weather statement expanded to Barrie and Collingwood - CTV News" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item double-width" itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 4454px;">
+					<h2 itemprop="headline"><a href="http://barrie.ctvnews.ca/man-arrested-after-fighting-bar-staff-resisting-arrest-in-barrie-1.2080924" title="Man arrested after fighting bar staff, resisting arrest in Barrie - CTV News" rel="nofollow" target="_blank">Man arrested after fighting bar staff, resisting arrest in Barrie - CTV News</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/man-arrested-after-fighting-bar-staff-resisting-arrest-in-barrie-ctv-news/" title="Permalink naar Man arrested after fighting bar staff, resisting arrest in Barrie - CTV News" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-10-31T16:41:00+0100">31-10-2014 16:41</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://barrie.ctvnews.ca/polopoly_fs/1.1301938!/httpImage/image.jpg_gen/derivatives/landscape_620/image.jpg" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							CTV News<br>
+		Man arrested after fighting bar staff, resisting arrest in Barrie<br>
+		CTV News<br>
+		A man is facing three charges after fighting with bar staff and resisting arrest from Barrie Police early Friday morning. Police got a call just after 1:45 a.m. after reports of a man fighting with bar staff in downtown Barrie. Officers arrived on ...<br>
+		Man charged after Barrie bar battleSimcoe.com<br>
+		<br>
+		all 3 news articles&nbsp;»
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/man-arrested-after-fighting-bar-staff-resisting-arrest-in-barrie-ctv-news/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Man+arrested+after+fighting+bar+staff%2C+resisting+arrest+in+Barrie+-+CTV+News+http://www.newslocker.com/en-ca/region/barrie/man-arrested-after-fighting-bar-staff-resisting-arrest-in-barrie-ctv-news/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/man-arrested-after-fighting-bar-staff-resisting-arrest-in-barrie-ctv-news/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/man-arrested-after-fighting-bar-staff-resisting-arrest-in-barrie-ctv-news/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://barrie.ctvnews.ca/man-arrested-after-fighting-bar-staff-resisting-arrest-in-barrie-1.2080924" title="Man arrested after fighting bar staff, resisting arrest in Barrie - CTV News" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item " itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 4799px;">
+					<h2 itemprop="headline"><a href="http://barrie.ctvnews.ca/fatal-crash-on-hwy-9-near-schomberg-1.2079725" title="Fatal crash on Hwy. 9 near Schomberg - CTV News" rel="nofollow" target="_blank">Fatal crash on Hwy. 9 near Schomberg - CTV News</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/fatal-crash-on-hwy-9-near-schomberg-ctv-news/" title="Permalink naar Fatal crash on Hwy. 9 near Schomberg - CTV News" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-10-30T22:14:45+0100">30-10-2014 22:14</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://barrie.ctvnews.ca/polopoly_fs/1.2079923!/httpImage/image.jpg_gen/derivatives/landscape_620/image.jpg" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							Fatal crash on Hwy. 9 near Schomberg<br>
+		CTV News<br>
+		A woman has died in a crash involving an SUV and a transport truck near Schomberg Thursday afternoon. It happened just after 3:00 p.m. on Highway 9, east of Tottenham Road. Police say the woman driving the SUV died when her vehicle drifted into the&nbsp;...<br>
+		<br>
+		and more&nbsp;»
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/fatal-crash-on-hwy-9-near-schomberg-ctv-news/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Fatal+crash+on+Hwy.+9+near+Schomberg+-+CTV+News+http://www.newslocker.com/en-ca/region/barrie/fatal-crash-on-hwy-9-near-schomberg-ctv-news/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/fatal-crash-on-hwy-9-near-schomberg-ctv-news/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/fatal-crash-on-hwy-9-near-schomberg-ctv-news/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://barrie.ctvnews.ca/fatal-crash-on-hwy-9-near-schomberg-1.2079725" title="Fatal crash on Hwy. 9 near Schomberg - CTV News" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item double-width" itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 5201px;">
+					<h2 itemprop="headline"><a href="http://www.thebarrieexaminer.com/2014/10/30/barrie-police-board-head-resigns" title="Barrie police board head resigns 0 - The Barrie Examiner" rel="nofollow" target="_blank">Barrie police board head resigns 0 - The Barrie Examiner</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/barrie-police-board-head-resigns-0-the-barrie-examiner/" title="Permalink naar Barrie police board head resigns 0 - The Barrie Examiner" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-10-30T19:04:08+0100">30-10-2014 19:04</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://storage.thebarrieexaminer.com/v1/dynamic_resize/sws_path/suns-prod-images/1297555089799_ORIGINAL.jpg?quality=80&amp;size=320x&amp;stmp=1414692312336" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							The Barrie Examiner<br>
+		Barrie police board head resigns 0<br>
+		The Barrie Examiner<br>
+		“I just got it done now, so we can get that process going to get my successor, and as early in the new year as possible,” said Jure, the police board chairman. Jure said he can't serve longer than to next June anyway; the province limits public ...<br>
+		Jure resigns from Police Services BoardCTV News<br>
+		Barrie Police board chairperson Doug Jure steps downSimcoe.com<br>
+		<br>
+		all 4 news articles&nbsp;»
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/barrie-police-board-head-resigns-0-the-barrie-examiner/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Barrie+police+board+head+resigns+0+-+The+Barrie+Examiner+http://www.newslocker.com/en-ca/region/barrie/barrie-police-board-head-resigns-0-the-barrie-examiner/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/barrie-police-board-head-resigns-0-the-barrie-examiner/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/barrie-police-board-head-resigns-0-the-barrie-examiner/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://www.thebarrieexaminer.com/2014/10/30/barrie-police-board-head-resigns" title="Barrie police board head resigns 0 - The Barrie Examiner" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item double-width" itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 5543px;">
+					<h2 itemprop="headline"><a href="http://barrie.ctvnews.ca/barrie-mom-charged-with-being-intoxicated-while-with-her-kids-1.2079232" title="Barrie mom charged with being intoxicated while with her kids - CTV News" rel="nofollow" target="_blank">Barrie mom charged with being intoxicated while with her kids - CTV News</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/barrie-mom-charged-with-being-intoxicated-while-with-her-kids-ctv-news/" title="Permalink naar Barrie mom charged with being intoxicated while with her kids - CTV News" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-10-30T18:11:51+0100">30-10-2014 18:11</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://barrie.ctvnews.ca/polopoly_fs/1.1301937!/httpImage/image.jpg_gen/derivatives/landscape_620/image.jpg" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							CTV News<br>
+		Barrie mom charged with being intoxicated while with her kids<br>
+		CTV News<br>
+		A 29-year-old mother of three has been charged by Barrie Police for being intoxicated in a public place on Wednesday afternoon. Police say they received numerous calls that two drunk women were in the area of Big Bay Point Road and Leggot Avenue&nbsp;...<br>
+		Change text size for the storyThe Barrie Examiner<br>
+		Bystanders Stop Drunk MotherBayshore Broadcasting News Centre<br>
+		Bystanders stop mom and grandma from p
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/barrie-mom-charged-with-being-intoxicated-while-with-her-kids-ctv-news/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Barrie+mom+charged+with+being+intoxicated+while+with+her+kids+-+CTV+News+http://www.newslocker.com/en-ca/region/barrie/barrie-mom-charged-with-being-intoxicated-while-with-her-kids-ctv-news/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/barrie-mom-charged-with-being-intoxicated-while-with-her-kids-ctv-news/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/barrie-mom-charged-with-being-intoxicated-while-with-her-kids-ctv-news/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://barrie.ctvnews.ca/barrie-mom-charged-with-being-intoxicated-while-with-her-kids-1.2079232" title="Barrie mom charged with being intoxicated while with her kids - CTV News" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item " itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 5888px;">
+					<h2 itemprop="headline"><a href="http://barrie.ctvnews.ca/former-barrie-city-councilor-resigns-from-police-services-board-1.2079201" title="Former Barrie City Councilor resigns from Police Services Board - CTV News" rel="nofollow" target="_blank">Former Barrie City Councilor resigns from Police Services Board - CTV News</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/former-barrie-city-councilor-resigns-from-police-services-board-ctv-news/" title="Permalink naar Former Barrie City Councilor resigns from Police Services Board - CTV News" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-10-30T17:41:16+0100">30-10-2014 17:41</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://barrie.ctvnews.ca/polopoly_fs/1.2079208!/httpImage/image.jpg_gen/derivatives/landscape_620/image.jpg" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							CTV News<br>
+		Former Barrie City Councilor resigns from Police Services Board<br>
+		CTV News<br>
+		Doug Jure resigned from the Barrie Police Services Board on Wednesday, just two days after losing his bid for re-election for Barrie City Council. Jure, who lost to Mike McCann for Ward 10 Councillor on Monday, had been a member of the Police Services&nbsp;...
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/former-barrie-city-councilor-resigns-from-police-services-board-ctv-news/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Former+Barrie+City+Councilor+resigns+from+Police+Services+Board+-+CTV+News+http://www.newslocker.com/en-ca/region/barrie/former-barrie-city-councilor-resigns-from-police-services-board-ctv-news/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/former-barrie-city-councilor-resigns-from-police-services-board-ctv-news/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/former-barrie-city-councilor-resigns-from-police-services-board-ctv-news/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://barrie.ctvnews.ca/former-barrie-city-councilor-resigns-from-police-services-board-1.2079201" title="Former Barrie City Councilor resigns from Police Services Board - CTV News" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item " itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 373px; top: 5888px;">
+					<h2 itemprop="headline"><a href="http://www.thebarrieexaminer.com/2014/10/30/tribute-concert-in-barrie-in-memory-of-george-hamilton-iv" title="All southbound lanes of Hwy. 400 have re-opened at King Rd., say OPP - The Barrie Examiner" rel="nofollow" target="_blank">All southbound lanes of Hwy. 400 have re-opened at King Rd., say OPP - The Barrie Examiner</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/all-southbound-lanes-of-hwy-400-have-re-opened-at-king-rd-say-opp-the-barrie-examiner/" title="Permalink naar All southbound lanes of Hwy. 400 have re-opened at King Rd., say OPP - The Barrie Examiner" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-10-30T17:15:25+0100">30-10-2014 17:15</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://storage.thebarrieexaminer.com/v1/dynamic_resize/sws_path/suns-prod-images/1297624399201_ORIGINAL.jpg?quality=80&amp;size=320x&amp;stmp=1414685111316" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							The Barrie Examiner<br>
+		All southbound lanes of Hwy. 400 have re-opened at King Rd., say OPP<br>
+		The Barrie Examiner<br>
+		A memorial tribute to Hamilton will be held at Grace United Church in Barrie this Sunday. Appearing on this program will be Hamilton's good friend and fellow Canadian country music Hall Of Fame legend, Johnny Burke, and longtime sideman Glen Reid.
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/all-southbound-lanes-of-hwy-400-have-re-opened-at-king-rd-say-opp-the-barrie-examiner/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=All+southbound+lanes+of+Hwy.+400+have+re-opened+at+King+Rd.%2C+say+OPP+-+The+Barrie+Examiner+http://www.newslocker.com/en-ca/region/barrie/all-southbound-lanes-of-hwy-400-have-re-opened-at-king-rd-say-opp-the-barrie-examiner/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/all-southbound-lanes-of-hwy-400-have-re-opened-at-king-rd-say-opp-the-barrie-examiner/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/all-southbound-lanes-of-hwy-400-have-re-opened-at-king-rd-say-opp-the-barrie-examiner/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://www.thebarrieexaminer.com/2014/10/30/tribute-concert-in-barrie-in-memory-of-george-hamilton-iv" title="All southbound lanes of Hwy. 400 have re-opened at King Rd., say OPP - The Barrie Examiner" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item " itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 6293px;">
+					<h2 itemprop="headline"><a href="http://www.simcoe.com/news-story/4952143-hey-dude-where-s-my-car-/" title="Hey dude, where's my car? - Simcoe.com" rel="nofollow" target="_blank">Hey dude, where's my car? - Simcoe.com</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/hey-dude-wheres-my-car-simcoecom/" title="Permalink naar Hey dude, where's my car? - Simcoe.com" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-10-30T15:55:40+0100">30-10-2014 15:55</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://www.simcoe.com/Portals/65/Images/logo.png" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							Hey dude, where's my car?<br>
+		Simcoe.com<br>
+		A few mintues later, the driver showed up demanding to know where his car went. Despite being warned about his foul language the teen continued to make a scene, police say. An 18-year-old Barrie man ticketed for being intoxicated in a public place and&nbsp;...<br>
+		<br>
+		and more&nbsp;»
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/hey-dude-wheres-my-car-simcoecom/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Hey+dude%2C+where%27s+my+car%3F+-+Simcoe.com+http://www.newslocker.com/en-ca/region/barrie/hey-dude-wheres-my-car-simcoecom/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/hey-dude-wheres-my-car-simcoecom/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/hey-dude-wheres-my-car-simcoecom/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://www.simcoe.com/news-story/4952143-hey-dude-where-s-my-car-/" title="Hey dude, where's my car? - Simcoe.com" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item " itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 373px; top: 6315px;">
+					<h2 itemprop="headline"><a href="http://www.thebarrieexaminer.com/2014/10/29/prophet-happy-with-fresh-start" title="Prophet happy with fresh start - The Barrie Examiner" rel="nofollow" target="_blank">Prophet happy with fresh start - The Barrie Examiner</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/prophet-happy-with-fresh-start-the-barrie-examiner/" title="Permalink naar Prophet happy with fresh start - The Barrie Examiner" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-10-30T00:57:37+0100">30-10-2014 00:57</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://storage.thebarrieexaminer.com/v1/dynamic_resize/sws_path/suns-prod-images/1297624208514_ORIGINAL.jpg?quality=80&amp;size=320x&amp;stmp=1414626509373" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							Prophet happy with fresh start<br>
+		The Barrie Examiner<br>
+		Prophet's phone rang at 1 p.m. on Saturday and it was Paliafito notifying him the deal was done and the Colts were looking to have the Brockville native on the ice at the Barrie Molson Centre just six-and-a-half hours later for game against the North ...
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/prophet-happy-with-fresh-start-the-barrie-examiner/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Prophet+happy+with+fresh+start+-+The+Barrie+Examiner+http://www.newslocker.com/en-ca/region/barrie/prophet-happy-with-fresh-start-the-barrie-examiner/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/prophet-happy-with-fresh-start-the-barrie-examiner/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/prophet-happy-with-fresh-start-the-barrie-examiner/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://www.thebarrieexaminer.com/2014/10/29/prophet-happy-with-fresh-start" title="Prophet happy with fresh start - The Barrie Examiner" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item double-width" itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 6676px;">
+					<h2 itemprop="headline"><a href="http://barrie.ctvnews.ca/lehman-re-elected-in-barrie-election-results-1.2074383" title="Lehman re-elected in Barrie; election results - CTV News" rel="nofollow" target="_blank">Lehman re-elected in Barrie; election results - CTV News</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/lehman-re-elected-in-barrie-election-results-ctv-news/" title="Permalink naar Lehman re-elected in Barrie; election results - CTV News" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-10-28T04:43:48+0100">28-10-2014 04:43</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://barrie.ctvnews.ca/polopoly_fs/1.2074410!/httpImage/image.jpg_gen/derivatives/landscape_620/image.jpg" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							Simcoe.com<br>
+		Lehman re-elected in Barrie; election results<br>
+		CTV News<br>
+		Jeff Lehman was re-elected as Mayor of the City of Barrie for a second-term on Monday night. Lehman won the race in a landslide by getting more than 92% of the vote. Ram Faerber came in second place. Here's a look at councillors elected in Barrie: Ward ...<br>
+		Lehman re-elected mayor of BarrieSimcoe.com<br>
+		BARRIE: Lehman re-elected as mayorSun News Network<br>
+		<br>
+		all 5 news articles&nbsp;»
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/lehman-re-elected-in-barrie-election-results-ctv-news/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Lehman+re-elected+in+Barrie%3B+election+results+-+CTV+News+http://www.newslocker.com/en-ca/region/barrie/lehman-re-elected-in-barrie-election-results-ctv-news/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/lehman-re-elected-in-barrie-election-results-ctv-news/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/lehman-re-elected-in-barrie-election-results-ctv-news/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://barrie.ctvnews.ca/lehman-re-elected-in-barrie-election-results-1.2074383" title="Lehman re-elected in Barrie; election results - CTV News" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item " itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 7037px;">
+					<h2 itemprop="headline"><a href="http://www.sunnewsnetwork.ca/sunnews/politics/archives/2014/10/20141027-121922.html" title="BARRIE: Students make their picks in municipal election - Sun News Network" rel="nofollow" target="_blank">BARRIE: Students make their picks in municipal election - Sun News Network</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/barrie-students-make-their-picks-in-municipal-election-sun-news-network/" title="Permalink naar BARRIE: Students make their picks in municipal election - Sun News Network" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-10-27T17:25:53+0100">27-10-2014 17:25</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://www.sunnewsnetwork.ca/archives/sunnews/politics/media/2014/10/20141027-121922-g.jpg" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							Sun News Network<br>
+		BARRIE: Students make their picks in municipal election<br>
+		Sun News Network<br>
+		Hundreds of Barrie students will be taking part in Monday's municipal election through the Student Vote Day of CIVIX. It is a national registered charity dedicated to encouraging young Canadians to participate in their democracy. In all, 14 Barrie ...
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/barrie-students-make-their-picks-in-municipal-election-sun-news-network/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=BARRIE%3A+Students+make+their+picks+in+municipal+election+-+Sun+News+Network+http://www.newslocker.com/en-ca/region/barrie/barrie-students-make-their-picks-in-municipal-election-sun-news-network/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/barrie-students-make-their-picks-in-municipal-election-sun-news-network/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/barrie-students-make-their-picks-in-municipal-election-sun-news-network/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://www.sunnewsnetwork.ca/sunnews/politics/archives/2014/10/20141027-121922.html" title="BARRIE: Students make their picks in municipal election - Sun News Network" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item " itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 373px; top: 7037px;">
+					<h2 itemprop="headline"><a href="http://www.thebarrieexaminer.com/2014/10/27/excavator-driver-in-barrie-shouldnt-have-been-driving" title="Excavator driver in Barrie shouldn't have been driving 0 - The Barrie Examiner" rel="nofollow" target="_blank">Excavator driver in Barrie shouldn't have been driving 0 - The Barrie Examiner</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/excavator-driver-in-barrie-shouldnt-have-been-driving-0-the-barrie-examiner/" title="Permalink naar Excavator driver in Barrie shouldn't have been driving 0 - The Barrie Examiner" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-10-27T17:13:56+0100">27-10-2014 17:13</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://storage.thebarrieexaminer.com/v1/dynamic_resize/sws_path/suns-prod-images/1297282072390_ORIGINAL.jpg?quality=80&amp;size=320x&amp;stmp=1354332116210" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							The Barrie Examiner<br>
+		Excavator driver in Barrie shouldn't have been driving 0<br>
+		The Barrie Examiner<br>
+		A 25-year-old Essa Township man is in trouble after he was spotted driving an excavator along a Barrie sidewalk Sunday night. City police received a complaint shortly before 9 p.m. about some heavy equipment being driven on the sidewalk on Tiffin Street.
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/excavator-driver-in-barrie-shouldnt-have-been-driving-0-the-barrie-examiner/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Excavator+driver+in+Barrie+shouldn%27t+have+been+driving+0+-+The+Barrie+Examiner+http://www.newslocker.com/en-ca/region/barrie/excavator-driver-in-barrie-shouldnt-have-been-driving-0-the-barrie-examiner/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/excavator-driver-in-barrie-shouldnt-have-been-driving-0-the-barrie-examiner/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/excavator-driver-in-barrie-shouldnt-have-been-driving-0-the-barrie-examiner/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://www.thebarrieexaminer.com/2014/10/27/excavator-driver-in-barrie-shouldnt-have-been-driving" title="Excavator driver in Barrie shouldn't have been driving 0 - The Barrie Examiner" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item " itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 7442px;">
+					<h2 itemprop="headline"><a href="http://www.thebarrieexaminer.com/2014/10/27/barrie-opp-charge-man-for-taking-drills-from-waste-bin" title="Barrie OPP charge man for taking drills from waste bin 0 - The Barrie Examiner" rel="nofollow" target="_blank">Barrie OPP charge man for taking drills from waste bin 0 - The Barrie Examiner</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/barrie-opp-charge-man-for-taking-drills-from-waste-bin-0-the-barrie-examiner/" title="Permalink naar Barrie OPP charge man for taking drills from waste bin 0 - The Barrie Examiner" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-10-27T17:03:48+0100">27-10-2014 17:03</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://storage.thebarrieexaminer.com/v1/dynamic_resize/sws_path/suns-prod-images/1297314910422_ORIGINAL.jpg?quality=80&amp;size=320x&amp;stmp=1348170131382" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							The Barrie Examiner<br>
+		Barrie OPP charge man for taking drills from waste bin 0<br>
+		The Barrie Examiner<br>
+		ORO-MEDONTE TWP. - A 74-year-old man is facing a theft charge after Barrie OPP say he took two drills out of an electronic waste bin. According to OPP, the driver for an electronic waste company pulled into the Petro Canada station on Highway 11, at ...
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/barrie-opp-charge-man-for-taking-drills-from-waste-bin-0-the-barrie-examiner/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Barrie+OPP+charge+man+for+taking+drills+from+waste+bin+0+-+The+Barrie+Examiner+http://www.newslocker.com/en-ca/region/barrie/barrie-opp-charge-man-for-taking-drills-from-waste-bin-0-the-barrie-examiner/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/barrie-opp-charge-man-for-taking-drills-from-waste-bin-0-the-barrie-examiner/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/barrie-opp-charge-man-for-taking-drills-from-waste-bin-0-the-barrie-examiner/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://www.thebarrieexaminer.com/2014/10/27/barrie-opp-charge-man-for-taking-drills-from-waste-bin" title="Barrie OPP charge man for taking drills from waste bin 0 - The Barrie Examiner" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item " itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 373px; top: 7442px;">
+					<h2 itemprop="headline"><a href="http://www.simcoe.com/news-story/4946011-barrie-on-track-for-lower-voter-turnout-this-year/" title="Barrie on track for lower voter turnout this year - Simcoe.com" rel="nofollow" target="_blank">Barrie on track for lower voter turnout this year - Simcoe.com</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/barrie-on-track-for-lower-voter-turnout-this-year-simcoecom/" title="Permalink naar Barrie on track for lower voter turnout this year - Simcoe.com" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-10-27T16:56:11+0100">27-10-2014 16:56</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://media.zuza.com/3/6/36b9f24d-a551-418a-b59d-1e24ce5d3b16/w_-_voting_West_Bayfield_-_oct_27_-_sh___Content.jpg" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							Barrie on track for lower voter turnout this year<br>
+		Simcoe.com<br>
+		Just 16.5 per cent of voters took advantage of an array of early voting opportunities Barrie offered — which means there could be lineups today. City clerk Dawn McAlpine said it's tough to tell what voter turnout will be, but it's on track to come in ...
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/barrie-on-track-for-lower-voter-turnout-this-year-simcoecom/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Barrie+on+track+for+lower+voter+turnout+this+year+-+Simcoe.com+http://www.newslocker.com/en-ca/region/barrie/barrie-on-track-for-lower-voter-turnout-this-year-simcoecom/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/barrie-on-track-for-lower-voter-turnout-this-year-simcoecom/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/barrie-on-track-for-lower-voter-turnout-this-year-simcoecom/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://www.simcoe.com/news-story/4946011-barrie-on-track-for-lower-voter-turnout-this-year/" title="Barrie on track for lower voter turnout this year - Simcoe.com" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item " itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 373px; top: 7828px;">
+					<h2 itemprop="headline"><a href="http://globalnews.ca/news/1627317/live-barrie-election-results-2014/" title="Live Barrie election results in the 2014 mayoral race - Globalnews.ca" rel="nofollow" target="_blank">Live Barrie election results in the 2014 mayoral race - Globalnews.ca</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/live-barrie-election-results-in-the-2014-mayoral-race-globalnewsca/" title="Permalink naar Live Barrie election results in the 2014 mayoral race - Globalnews.ca" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-10-27T16:01:11+0100">27-10-2014 16:01</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://vipmedia.globalnews.ca/2014/10/barrie-jeff-lehman.jpg?w=720&amp;h=480&amp;crop=1" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							Globalnews.ca<br>
+		Live Barrie election results in the 2014 mayoral race<br>
+		Globalnews.ca<br>
+		On Monday Oct. 27 voters in Barrie head to the polls to elect their mayor and city councillors. Global News will have live election results for the mayoral race. Check back here after the polls close for election results in Barrie's mayoral race. Polls ...
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/live-barrie-election-results-in-the-2014-mayoral-race-globalnewsca/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Live+Barrie+election+results+in+the+2014+mayoral+race+-+Globalnews.ca+http://www.newslocker.com/en-ca/region/barrie/live-barrie-election-results-in-the-2014-mayoral-race-globalnewsca/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/live-barrie-election-results-in-the-2014-mayoral-race-globalnewsca/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/live-barrie-election-results-in-the-2014-mayoral-race-globalnewsca/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://globalnews.ca/news/1627317/live-barrie-election-results-2014/" title="Live Barrie election results in the 2014 mayoral race - Globalnews.ca" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item " itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 7847px;">
+					<h2 itemprop="headline"><a href="http://www.simcoe.com/news-story/4927189-barrie-county-chordsmen-host-guest-night/" title="Barrie County Chordsmen host guest night - Simcoe.com" rel="nofollow" target="_blank">Barrie County Chordsmen host guest night - Simcoe.com</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/barrie-county-chordsmen-host-guest-night-simcoecom/" title="Permalink naar Barrie County Chordsmen host guest night - Simcoe.com" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-10-27T14:05:53+0100">27-10-2014 14:05</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://www.simcoe.com/Portals/65/Images/logo.png" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							Barrie County Chordsmen host guest night<br>
+		Simcoe.com<br>
+		If you know a man who has conquered karaoke and is ready for a new challenge, the Barrie County Chordsmen want to hear from you. The barbershop harmony group is hosting its annual guest night at Barrie's Dorian Parker Centre in Nov. 12. The County&nbsp;...
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/barrie-county-chordsmen-host-guest-night-simcoecom/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Barrie+County+Chordsmen+host+guest+night+-+Simcoe.com+http://www.newslocker.com/en-ca/region/barrie/barrie-county-chordsmen-host-guest-night-simcoecom/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/barrie-county-chordsmen-host-guest-night-simcoecom/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/barrie-county-chordsmen-host-guest-night-simcoecom/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://www.simcoe.com/news-story/4927189-barrie-county-chordsmen-host-guest-night/" title="Barrie County Chordsmen host guest night - Simcoe.com" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li>	<li class="item " itemscope="" itemtype="http://schema.org/Article" style="position: absolute; left: 0px; top: 8233px;">
+					<h2 itemprop="headline"><a href="http://barrie.ctvnews.ca/ski-swaps-held-in-the-region-1.2072012" title="Ski swaps held in the region - CTV News" rel="nofollow" target="_blank">Ski swaps held in the region - CTV News</a></h2>
+					<div class="item-date">
+						<a href="http://www.newslocker.com/en-ca/region/barrie/ski-swaps-held-in-the-region-ctv-news/" title="Permalink naar Ski swaps held in the region - CTV News" itemprop="url"><time class="entry-time" itemprop="datePublished" datetime="2014-10-26T23:33:33+0100">26-10-2014 23:33</time></a> via <a href="http://news.google.ca/news?gl=ca&amp;pz=1&amp;ned=ca&amp;hl=en&amp;q=Barrie" title="Barrie - Google News" rel="nofollow" target="_blank">Barrie - Google News</a>
+					</div>
+					<img src="http://barrie.ctvnews.ca/polopoly_fs/1.2072009!/httpImage/image.jpg_gen/derivatives/landscape_620/image.jpg" class="item-img og-image" itemprop="image">
+						<div class="content" itemprop="articleBody">
+							Ski swaps held in the region<br>
+		CTV News<br>
+		Nearly 2,000 people were getting ready for the upcoming ski season by looking for used equipment this weekend. The Barrie Ski Swap donates money raised to the Canadian Ski Patrol so that they can keep skiers and snowboarders safe. Ski swaps are a&nbsp;...
+						</div>
+					<div class="social-share">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.newslocker.com/en-ca/region/barrie/ski-swaps-held-in-the-region-ctv-news/" target="_blank"><img src="/images/share-facebook.png" alt="Share on Facebook" height="29" width="29"></a>
+						<a href="https://twitter.com/intent/tweet?text=Ski+swaps+held+in+the+region+-+CTV+News+http://www.newslocker.com/en-ca/region/barrie/ski-swaps-held-in-the-region-ctv-news/" target="_blank"><img src="/images/share-twitter.png" alt="Share on Twitter" height="29" width="29"></a>
+						<a href="https://plus.google.com/share?url=http://www.newslocker.com/en-ca/region/barrie/ski-swaps-held-in-the-region-ctv-news/" target="_blank"><img src="/images/share-google-plus.png" alt="Share on Google Plus" height="29" width="29"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.newslocker.com/en-ca/region/barrie/ski-swaps-held-in-the-region-ctv-news/" target="_blank"><img src="/images/share-linkedin.png" alt="Share on LinkedIn" height="29" width="29"></a>
+					</div>
+					<div class="item-read-more">
+						<a href="http://barrie.ctvnews.ca/ski-swaps-held-in-the-region-1.2072012" title="Ski swaps held in the region - CTV News" rel="nofollow" target="_blank">Read more</a>
+					</div>
+				</li></ul>    
+    
+    
+		<script src="/js/classie.js"></script>
+		<script src="/js/AnimOnScroll.js"></script>
+	<script type="text/javascript">
+      	$(window).load(function(){
+			
+			
+			new AnimOnScroll( document.getElementById( 'newscontainer' ), {
+				minDuration : 0.4,
+				maxDuration : 0.6,
+				viewportFactor : 0.2
+			} );
+			
+			var $container = $('#newscontainer');
+			// initialize
+			$container.masonry({
+			  columnWidth: 373,
+			  itemSelector: '.item'
+			});
+			
+			var msnry = $container.data('masonry');
+			
+			$("iframe.embed").each(function() { 
+				var src= $(this).attr('name');
+				$(this).attr('src',src);  
+			});
+		});
+    </script>
+    
+    <p align="center">Follow <a href="http://twitter.com/#!/News_Barrie" target="_blank">@News_Barrie</a> on Twitter!</p>
+<script type="text/javascript">
+	document.getElementById('follow').innerHTML = "<a href=\"http://twitter.com/News_Barrie\" class=\"twitter-follow-button\" data-show-count=\"true\">Follow @News_Barrie</a>";
+</script>
+
+<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js" gapi_processed="true"></script>
+
+<script src="http://connect.facebook.net/en_US/all.js#appId=222801617752544&amp;xfbml=1"></script>
+			
+			
+			
+		</div>
+		
+		
+		<div id="footer">
+        
+            <div style="text-align:center;width:100%;">
+                        </div>
+		<div style="width:100%;padding-top:50px;text-align:center;"><a href="http://www.privacy-policy.nl/www.newslocker.com/" title="Privacy Policy">Privacy Policy</a></div>
+		</div>
+		
+	</div>
+	<!-- test: 1 - 1721 - 0 -->    
+    <!--
+    	<script type="text/javascript"> 
+        var adfly_id = 1593216; 
+        var adfly_advert = 'int'; 
+        var exclude_domains = ['newslocker.com']; 
+		var popunder = false;
+    </script> 
+    <script src="https://cdn.adf.ly/js/link-converter.js"></script> 
+    
+        
+   -->
+   
+   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+   <script src="/js/jquery.autocomplete.js" type="text/javascript" defer=""></script>
+		<script type="text/javascript" defer="">
+		var a;
+
+		jQuery(function () {
+
+			var a = $('#category').autocomplete({
+			serviceUrl:'/ajax/autocomplete.php',
+			minChars:2,
+			delimiter: /(,|;)\s*/, // regex or character
+			maxHeight:400,
+			width:$('#category').width(),
+			zIndex: 9999,
+			deferRequestBy: 0, //miliseconds
+			params: { tld_name:'en-ca' }, //aditional parameters
+			noCache: false, //default is false, set to true to disable caching
+			// callback function:
+			//onSelect: function(value, data){ alert('You selected: ' + value + ', ' + data); },
+			onSelect: function(value, data){ location.href = data; },
+			
+			// local autosugest options:
+			//lookup: ['January', 'February', 'March', 'April', 'May'] //local lookup values
+			});
+			
+		});
+		</script>
+		<script type="text/javascript" src="http://static.addtoany.com/menu/page.js" defer=""></script>
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-5.newrelic.com","licenseKey":"64dca2f2cd","applicationID":"4092969","transactionName":"MwRWZUtZVhBXAEcNWApOYUNQF1ENUgZLVhkUCUQ=","queueTime":0,"applicationTime":32,"ttGuid":"","agentToken":"","atts":"H0NVEwNDRR4=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-476.min.js"}</script>
+	
+	
+	<div style="position: static;"><div class="a2a_overlay" id="a2apage_overlay"></div><div class="a2a_menu a2a_full" id="a2apage_full"><div class="a2a_full_header"><div id="a2apage_find_container" class="a2a_menu_find_container"><input id="a2apage_find" class="a2a_menu_find" type="text" onclick="a2a.focus_find()" onkeyup="a2a.do_find()" autocomplete="off" title="Find any service"><span id="a2apage_find_icon" class="a2a_i_find" onclick="a2a.focus_find()"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="8 8 16 16"><path fill="#0166FF" d="M21.636,20.553l-3.291-3.291c0.536-0.753,0.858-1.667,0.858-2.661c0-2.542-2.061-4.602-4.602-4.602C12.06,9.999,10,12.059,10,14.601c0,2.541,2.06,4.602,4.602,4.602c0.994,0,1.907-0.32,2.659-0.856l3.291,3.29c0.401,0.402,0.968,0.486,1.268,0.184C22.119,21.521,22.036,20.953,21.636,20.553z M14.602,17.9c-1.823,0-3.3-1.477-3.3-3.3s1.477-3.3,3.3-3.3s3.3,1.477,3.3,3.3S16.424,17.9,14.602,17.9z"></path></svg></span></div></div><div class="a2a_full_services" id="a2apage_full_services"><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_facebook">Facebook</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_twitter">Twitter</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_google_plus">Google+</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_pinterest">Pinterest</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_linkedin">LinkedIn</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_email">Email</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_reddit">Reddit</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_tumblr">Tumblr</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_wordpress">WordPress</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_stumbleupon">StumbleUpon</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_delicious">Delicious</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_digg">Digg</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_google">Google Bookmarks</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_yahoo">Yahoo Bookmarks</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_whatsapp">WhatsApp</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_evernote">Evernote</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_line">Line</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_wanelo">Wanelo</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_app_net">App.net</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_buffer">Buffer</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_xing">XING</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_bebo">Bebo</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_orkut">Orkut</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_mixi">Mixi</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_vk">VK</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_pocket">Pocket</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_gmail">Google Gmail</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_mendeley">Mendeley</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_yahoo">Yahoo Mail</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_pinboard">Pinboard</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_outlook_com">Outlook.com</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_box">Box.net</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_aol">AOL Mail</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_instapaper">Instapaper</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_y18">Hacker News</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_springpad">Springpad</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_myspace">MySpace</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_flipboard">Flipboard</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_arto">Arto</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_aim">AIM</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_yim">Yahoo Messenger</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_mail_ru">Mail.Ru</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_plurk">Plurk</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_diaspora">Diaspora</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_fark">Fark</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_blogger">Blogger Post</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_typepad">TypePad Post</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_kindle">Kindle It</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_sina_weibo">Sina Weibo</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_baidu">Baidu</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_netlog">Netlog</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_citeulike">CiteULike</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_jumptags">Jumptags</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_funp">FunP</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_phonefavs">PhoneFavs</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_xerpi">Xerpi</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_netvouz">Netvouz</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_diigo">Diigo</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_bibsonomy">BibSonomy</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_blogmarks">BlogMarks</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_startaid">StartAid</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_khabbr">Khabbr</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_meneame">Meneame</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_yoolink">Yoolink</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_bookmarks_fr">Bookmarks.fr</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_technotizie">Technotizie</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_newsvine">NewsVine</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_friendfeed">FriendFeed</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_protopage">Protopage Bookmarks</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_blinklist">Blinklist</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_webnews">Webnews</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_segnalo">Segnalo</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_pusha">Pusha</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_youmob">YouMob</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_slashdot">Slashdot</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_allvoices">Allvoices</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_jamespot">Jamespot</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_twiddla">Twiddla</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_linkagogo">LinkaGoGo</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_nowpublic">NowPublic</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_livejournal">LiveJournal</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_linkatopia">Linkatopia</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_buddymarks">BuddyMarks</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_viadeo">Viadeo</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_wists">Wists</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_sitejot">SiteJot</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_dzone">DZone</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_care2">Care2 News</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_bitty">Bitty Browser</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_odnoklassniki">Odnoklassniki</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_symbaloo">Symbaloo Feeds</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_folkd">Folkd</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_newstrust">NewsTrust</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_amazon">Amazon Wish List</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_printfriendly">PrintFriendly</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_default">Wykop</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_tuenti">Tuenti</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_rediff">Rediff MyPage</span></a><i class="a2a_i"></i><i class="a2a_i"></i></div><div class="a2a_full_footer"><a href="https://www.addtoany.com" title="Share Buttons" target="_blank"><span class="a2a_i_a2a_sm">AddToAny</span></a></div></div><div id="a2apage_dropdown" class="a2a_menu a2a_mini" onmouseover="a2a.onMouseOver_stay()" onmouseout="a2a.onMouseOut_delay()" style="display:none"><div id="a2apage_title_container" class="a2a_menu_title_container" style="display:none"><input id="a2apage_title" class="a2a_menu_title"></div><div class="a2a_mini_services" id="a2apage_mini_services"><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_facebook">Facebook</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_twitter">Twitter</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_google_plus">Google+</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_pinterest">Pinterest</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_linkedin">LinkedIn</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_email">Email</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_reddit">Reddit</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_tumblr">Tumblr</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_wordpress">WordPress</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_stumbleupon">StumbleUpon</span></a></div><div id="a2apage_cols_container" class="a2a_cols_container"><div class="a2a_col1" id="a2apage_col1"></div><div id="a2apage_2_col1" style="display:none"><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_gmail">Google Gmail</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_yahoo">Yahoo Mail</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_outlook_com">Outlook.com</span></a><a rel="nofollow" class="a2a_i" href="/" target="_blank"><span class="a2a_i_aol">AOL Mail</span></a><a rel="nofollow" class="a2a_i a2a_emailer" href="/" target="_blank" id="a2apage_any_email"><span class="a2a_i_email">Any email</span></a><a rel="nofollow" class="a2a_i a2a_emailer a2a_email_client" href="/" target="" id="a2apage_email_client"><span class="a2a_i_email">Email app</span></a></div><div class="a2a_clear"></div></div><div class="a2apage_wide a2a_wide"><a href="" id="a2apage_show_more_less" class="a2a_menu_show_more_less a2a_more" onmouseover="img=this.firstChild;if(a2a.c.color_arrow_hover=='fff'){if(img.className.indexOf('_wt')==-1)img.className+='_wt'}else img.className=img.className.replace(/_wt/,'')" onmouseout="img=this.firstChild;if(a2a.c.color_arrow=='fff'){if(img.className.indexOf('_wt')==-1)img.className+='_wt'}else img.className=img.className.replace(/_wt/,'')" title="Show all"><span class="a2a_i_a2a">More…</span></a></div></div><div style="height: 1px; width: 1px; position: absolute; z-index: 100000; top: 0px; visibility: hidden;"><iframe id="a2apage_sm_ifr" height="1" width="1" title="AddToAny Utility Frame" transparency="true" allowtransparency="true" frameborder="0" src="http://static.addtoany.com/menu/sm11.html#type=page&amp;event=load&amp;url=http%3A%2F%2Fwww.newslocker.com%2Fen-ca%2Fregion%2Fbarrie%2Fbuy-pizza-in-barrie-help-feed-haitians-simcoecom%2F&amp;referrer=" style="height: 1px; width: 1px; border: 0px; left: 0px; top: 0px; position: absolute; z-index: 100000; display: none;"></iframe></div></div><div id="AutocompleteContainter_76430" style="position: absolute; z-index: 9999; top: 59px; left: 331.34375px;"><div class="autocomplete-w1"><div class="autocomplete" id="Autocomplete_76430" style="display: none; width: 310px; max-height: 400px;"></div></div></div><iframe name="oauth2relay520685573" id="oauth2relay520685573" src="https://accounts.google.com/o/oauth2/postmessageRelay?parent=http%3A%2F%2Fwww.newslocker.com#rpctoken=744579983&amp;forcesecure=1" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><script src="http://js-agent.newrelic.com/nr-476.min.js"></script><script type="text/javascript" src="http://beacon-5.newrelic.com/1/64dca2f2cd?a=4092969&amp;pl=1415072656594&amp;v=476.c73f3a6&amp;to=MwRWZUtZVhBXAEcNWApOYUNQF1ENUgZLVhkUCUQ%3D&amp;ap=32&amp;be=1378&amp;fe=21952&amp;dc=9559&amp;f=%5B%22err%22,%22xhr%22,%22stn%22%5D&amp;perf=%7B%22timing%22:%7B%22of%22:1415072656594,%22n%22:0,%22dl%22:1214,%22di%22:9932,%22ds%22:10936,%22de%22:12033,%22dc%22:23330,%22l%22:23330,%22le%22:23763,%22f%22:755,%22dn%22:755,%22dne%22:755,%22c%22:755,%22ce%22:755,%22rq%22:804,%22rp%22:941,%22rpe%22:1170%7D,%22navigation%22:%7B%7D%7D&amp;at=H0NVEwNDRR4%3D&amp;jsonp=NREUM.setToken"></script></body></html>

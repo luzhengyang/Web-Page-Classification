@@ -1,0 +1,175 @@
+<html><!--<![endif]--><head>
+    <meta charset="utf-8">
+
+        <title>Yelp - Page not found (Error 404)</title>
+
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="stylesheet" href="https://s3-media1.ak.yelpcdn.com/assets/2/www/css/fcb8c3845e57/error-pkg.css">
+</head>
+<body class="ytype error-page">
+    <span class="offscreen error-code">    404
+</span>
+    <div class="wrap">
+                    
+
+
+        <div class="app-header simple-header">
+            <div class="header-container clearfix">
+                
+    <h1 class="logo" id="logo">
+        <a href="/">Yelp</a>
+    </h1>
+
+
+
+
+            </div>
+        </div>
+
+        <div class="error-wrap">
+            <div class="error-content clearfix">
+                <div class="media-body">
+                    <h2 class="headline">
+                            <span class="page-status">404 error.</span>
+
+                            Doggone it! The page you’re looking for cannot be found.
+
+                    </h2>
+
+                    <p class="message">
+                            Detective Darwin is hot on the case of the missing webpage!
+
+    While he's sniffing out the problem, you should either <a href="http://www.yelp.com/">go home</a> or search for what you need below. Elementary, my dear Yelper.
+                    </p>
+
+                        <form action="/search" class="yform flex-container">
+                            <label class="flex-box">
+                                <span class="label-text">Search for</span>
+                                <input type="text" name="find_desc" autofocus="">
+                            </label>
+                            <label class="flex-box">
+                                <span class="label-text">Near</span>
+                                <input type="text" name="find_loc" id="find-loc">
+                            </label>
+                            <div class="button-container">
+                                <button title="Search" type="submit" value="submit" class="ybtn ybtn-primary ybtn-small search-submit ytype"><span><i class="i ig-common i-search-common"></i></span></button>
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-wrap">
+    <div class="nav-links">
+            <ul>
+        <li><b>Navigate</b></li>
+        <li>
+            <a href="http://www.yelp.com/">Welcome</a>
+        </li>
+        <li>
+            <a href="http://www.yelp.com/user_details">About Me</a>
+        </li>
+        <li>
+            <a href="https://www.yelp.com/writeareview">Write a Review</a>
+        </li>
+        <li>
+            <a href="http://www.yelp.com/find_friends/">Invite Friends</a>
+        </li>
+        <li>
+            <a href="http://www.yelp.com/mail">Messaging</a>
+        </li>
+        <li>
+            <a href="http://www.yelp.com/talk">Talk</a>
+        </li>
+        <li>
+            <a href="http://www.yelp.com/profile">My Account</a>
+        </li>
+    </ul>
+
+    </div>
+
+        <ul>
+        <li><b>Get to Know Us</b></li>
+        <li>
+            <a href="http://www.yelp.com/about">
+                    About Yelp
+            </a>
+        </li>
+        <li>
+            <a href="http://www.yelp.com/advertise">Advertise</a>
+        </li>
+                <li>
+            <a href="http://www.yelp.com/faq">FAQ</a>
+        </li>
+
+        <li>
+            <a href="http://www.yelp.com/tos/privacy_en_us_20130910">Privacy Policy</a>
+        </li>
+        <li>
+            <a href="http://www.yelp.com/static?p=tos">Terms of Service</a>
+        </li>
+        <li>
+            <a href="http://www.yelp.com/contact">Feedback</a>
+        </li>
+        <li>
+            <a href="http://www.yelp.com/weekly_yelp">The Weekly Yelp</a>
+        </li>
+        <li>
+            <a href="http://officialblog.yelp.com/" rel="nofollow">Yelp Blog</a>
+        </li>
+    </ul>
+
+
+                    <div class="footer-copyright">
+        <small>
+            Copyright © 2004–2014 Yelp Inc. Yelp, <img src="https://s3-media4.ak.yelpcdn.com/assets/2/www/img/9d213bfb766e/logo/logo_tiny.png" alt="Yelp logo" class="footer-copyright-logo">, <img src="https://s3-media3.ak.yelpcdn.com/assets/2/www/img/86ec59fef415/logo/burst_tiny.png" alt="Yelp burst" class="footer-burst-logo"> and related marks are registered trademarks of Yelp.
+        </small>
+    </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+            var readCookie = function(name) {
+                var nameEQ = name + "=";
+                var ca = document.cookie.split(';');
+                for(var i=0;i < ca.length;i++) {
+                    var c = ca[i];
+                    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+                }
+                return null;
+            };
+
+            var unquotePlus = function(s) {
+                return decodeURIComponent(s.replace(/\+/g, ' '));
+            };
+
+            var setFormLoc = function() {
+                var locationCookie = readCookie("location");
+                if (locationCookie) {
+                    var userCookieLocMaybeJson = unquotePlus(locationCookie);
+                    var displayLocation = "San Francisco, CA";
+                    if (userCookieLocMaybeJson && (userCookieLocMaybeJson != 'null')){
+                        try {
+                            var jsonLocation = jQuery.parseJSON(userCookieLocMaybeJson);
+                            displayLocation = jsonLocation.unformatted;
+                        } catch(e) {
+                            displayLocation = userCookieLocMaybeJson;
+                        }
+                    }
+                    jQuery('#find-loc').val(displayLocation);
+                }
+            };
+
+            jQuery(function() {
+                setFormLoc();
+            });
+
+</script>
+
+</body></html>

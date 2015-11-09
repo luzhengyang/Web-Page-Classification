@@ -1,0 +1,488 @@
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><style type="text/css">.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}</style><link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700"><style type="text/css">@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style type="text/css">.gm-style{font-family:Roboto,Arial,sans-serif;font-size:11px;font-weight:400;text-decoration:none}</style>
+    <script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<title>Fedex ground in Montreal - Ziplocal Page: 1</title>
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+    <meta content="fedex ground in montreal " name="keywords">
+    <meta content="Find fedex ground in montreal fast with ZipLocal. Find detailed information on fedex ground in montreal, Courier Service in montreal . Page: 1" name="description">
+    <meta name="y_key" content="fb98bb707b5805e7">
+    <link href="/assets/stylesheets/site.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/assets/stylesheets/print.css" media="print" rel="stylesheet" type="text/css">
+    <script src="/assets/javascript/application.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/assets/javascript/wforms_core.js"></script>
+<script type="text/javascript" src="/assets/javascript/wforms_repeat_limited.js"></script>
+<script type="text/javascript">
+	wFORMS.arrMsg[0] = 'Add another friend';
+	wFORMS.arrMsg[1] = 'Refer to another friend';
+	wFORMS.arrMsg[2] = 'Remove this friend';
+	wFORMS.arrMsg[3] = 'Remove this friend';
+
+function refer_a_friend_callback()
+{
+    if( wFORMS ) {
+       wFORMS.onLoadHandler();
+    }
+}
+</script>
+
+<style type="text/CSS">
+
+.duplicateLinkHidden {
+display: none;
+}
+</style>    <script language="JavaScript" type="text/javascript">
+	jQuery(document).ready(function(){
+			var winHeight = 550;
+			var bodyHeight = document.body.clientHeight;
+			if(bodyHeight == 'undefined' || bodyHeight == 0)
+			{
+				winHeight = 550;
+			}
+			if(bodyHeight<=540)
+			{
+		      	winHeight = bodyHeight - 100;
+			}
+			jQuery('#listingLink').attr("href","http://www.ziplocal.ca/pages/listing?height="+ winHeight +"&width=500");
+	});
+	</script>
+
+		<script src="http://www.google.com/jsapi?key=ABQIAAAAP6LkWpKkhZYbE3Ai5ftyMBRZbPgh_rg45YgI2rQQlpR-Md03NxSG7WOWilPDUf-kQpVQFt25uACrPw" type="text/javascript"></script>
+
+<script src="/assets/javascript/jquery.history_remote.js" type="text/javascript"></script>
+<script src="/assets/javascript/jquery.jcache.js" type="text/javascript"></script>
+<script src="/assets/javascript/jquery.scrollTo-1.3.3-min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var throbber = '<div style="width: 100%; text-align: center;padding-top:100px; height: 100px">'
+			+  '<img src="/images/loader.gif" alt="loading..." width="220" height="19" style="margin: 0 auto;" />'
+			+  '</div>';
+
+function setupTabs(href)
+{
+	var f = document.getElementById('ad');
+	if( f )
+		f.contentWindow.location.reload(true);
+	pageTracker._trackPageview(href);
+	var match = href.match('companies/([0-9]+)-');
+	var match1 = href.match('(.*/companies/[^/]*)')
+	jQuery('#reviews_tab_link a').attr('id','review '+match[1]);
+	jQuery('#reviews_tab_link a').attr('href',match1[1]+'/reviews');
+	jQuery('#reviews_tab_link a').remote('#ajax_div',selectReview);
+	jQuery('#maps_tab_link a').attr('id','maps '+match[1]);
+	jQuery('#maps_tab_link a').attr('href',match1[1]+'/maps');
+	jQuery('#maps_tab_link a').remote('#ajax_div',selectMaps,initializeMap);
+	jQuery('#information_tab_link a').attr('id','profile '+match[1]);
+	jQuery('#information_tab_link a').attr('href',match1[1]);
+	jQuery('#information_tab_link a').remote('#ajax_div',selectProfile,initProfile);
+
+}
+function selectProfile(isCached,href)
+{
+	jQuery('#information_tab_link').show().addClass('selected');
+	jQuery('#reviews_tab_link').show().removeClass('selected');
+	jQuery('#search_results_tab_link').removeClass('selected');
+	jQuery('#maps_tab_link').show().removeClass('selected');
+	jQuery('#searches_div').hide();
+	jQuery('#ajax_div').show();
+	if(!isCached)
+		jQuery('#ajax_div').html(throbber);
+	setupTabs(href);
+}
+
+function initProfile()
+{
+	tb_init('#ajax_div a.thickbox');
+	jQuery('#ajax_div a.review_link').remote('#ajax_div',selectReview);
+	jQuery('a.header_larger_map').remote('#ajax_div',selectMaps,initializeMap);
+}
+
+function selectReview(isCached,href)
+{
+	jQuery('#information_tab_link').show().removeClass('selected');
+	jQuery('#reviews_tab_link').show().addClass('selected');
+	jQuery('#search_results_tab_link').removeClass('selected');
+	jQuery('#maps_tab_link').show().removeClass('selected');
+	jQuery('#searches_div').hide();
+	jQuery('#ajax_div').show();
+	if(!isCached)
+		jQuery('#ajax_div').html(throbber);
+	setupTabs(href);
+}
+
+function initializeMap()
+{
+     if (GBrowserIsCompatible()) {
+     	var hash =this.href;
+     	var id = hash.match('maps_([0-9]+)$')
+        var map = new GMap2(document.getElementById("map_directions"));
+        var point = gmarkers[id[1]].getLatLng();
+        map.setCenter( point, 15);
+		map.addOverlay(new GMarker(point));
+		map.addControl(new GSmallZoomControl());
+
+		gdir = new GDirections(map, document.getElementById("directions"));
+		//GEvent.addListener(gdir, "load", onGDirectionsLoad);
+        GEvent.addListener(gdir, "error", handleErrors);
+	}
+}
+function selectMaps(isCached,href)
+{
+	jQuery('#information_tab_link').show().removeClass('selected');
+	jQuery('#reviews_tab_link').show().removeClass('selected');
+	jQuery('#search_results_tab_link').removeClass('selected');
+	jQuery('#maps_tab_link').show().addClass('selected');
+	jQuery('#searches_div').hide();
+	jQuery('#ajax_div').show();
+	if(!isCached)
+		jQuery('#ajax_div').html(throbber);
+	setupTabs(href);
+}
+
+function selectResultsView()
+{
+	jQuery('#information_tab_link').show().removeClass('selected');
+	jQuery('#reviews_tab_link').show().removeClass('selected');
+	jQuery('#search_results_tab_link').addClass('selected');
+	jQuery('#maps_tab_link').show().removeClass('selected');
+	jQuery('#ajax_div').hide();
+	jQuery('#searches_div').show();
+}
+
+jQuery(document).ready(function(){
+	jQuery('a.company_link').remote('#ajax_div',selectProfile,initProfile);
+	jQuery('a.review_link').remote('#ajax_div',selectReview);
+    jQuery.ajaxHistory.initialize();
+    google.load("maps", "2", {"language": '', "callback" : mapsLoaded});
+
+});
+
+jQuery(window).unload(function() {
+	GUnload();
+});
+
+var gmarkers = [];
+var Icon;
+
+function createMarker(point,company_id,company_name, map)
+{
+    var marker=new GMarker(point,Icon);
+    marker.value = company_id;
+
+	GEvent.addListener(marker, "dblclick", function() {
+		jQuery('#company_'+company_id+' .company_link').click();
+	});
+
+	GEvent.addListener(marker, "click", function() {
+		jQuery('#companies').scrollTo('#company_'+company_id)
+	});
+
+	GEvent.addListener(marker, "mouseover", function() {
+		marker.setImage("/assets/images/pin_OverState.png");
+		jQuery('#company_'+company_id).addClass('results_list_highlight');
+		jQuery('#map_bubble').css('display','none');
+
+ 		pixelPosition = (map.fromLatLngToContainerPixel(point)).toString();
+		var x = (pixelPosition.substr(1, pixelPosition.indexOf(',')-1)-110)+'px';
+		var y = (pixelPosition.substring(pixelPosition.indexOf(',')+2,pixelPosition.length-1)-85)+'px';
+		document.getElementById('map_container').appendChild(document.getElementById('map_bubble'));
+
+		jQuery('#map_bubble').css('top',y );
+		jQuery('#map_bubble').css('left',x);
+
+		jQuery('#map_bubble').css('display','block');
+		jQuery('#map_bubble').text(company_name);
+
+	});
+
+	GEvent.addListener(marker, "mouseout", function() {
+		marker.setImage("/assets/images/pin_UnderState.png");
+		jQuery('#map_bubble').css('display','none');
+		jQuery('#map_bubble').css('top','0px' );
+		jQuery('#map_bubble').css('left','0px');
+		jQuery('#company_'+company_id).removeClass('results_list_highlight');
+	});
+
+	return marker;
+}
+
+function setupMapInteraction(map,point,company_id, company_name)
+{
+    gmarkers[company_id]=createMarker(point,company_id,company_name,map);
+    map.addOverlay(gmarkers[company_id]);
+    jQuery('#company_'+company_id).mouseover(function() {
+		jQuery(this).addClass('results_list_highlight');
+    });
+    jQuery('#company_'+company_id).mouseout(function() {
+		jQuery(this).removeClass('results_list_highlight');
+    });
+}
+
+function mapMoveEnd(map)
+{
+	var bnds = map.getBounds();
+	var center = bnds.getCenter();
+	var lat = center.lat();
+	var lon = center.lng();
+	try {
+		var zoomlevel = Lat49.Tile.convertGMap2Zoom(map.getZoom());
+		Lat49.updateAdByLatLon("adcontainer", lat, lon, zoomlevel);
+	} catch(e) {}
+}
+
+function mapsLoaded()
+{
+     if (GBrowserIsCompatible()) {
+
+		try {
+		Lat49.initAds(249);
+		} catch(e) {}
+
+		Icon = new GIcon();
+		Icon.image = "/assets/images/pin_UnderState.png";
+		Icon.iconSize = new GSize(30, 29);
+		Icon.shadow = "/assets/images/pin_shadow.png";
+		Icon.shadowSize = new GSize(30, 22);
+		Icon.iconAnchor = new GPoint(30, 29	);
+		Icon.transparent = "/assets/images/ie_shadow.png";
+
+        var map = new GMap2(document.getElementById("map_container"));
+        map.setCenter(new GLatLng(49.953429, -106.64257), 13); // Saskatoon 52.156242,-106.64257 wINNIPEG 49.953429,-97.106781
+		var bounds = new GLatLngBounds;
+		var point;
+		var point_count = 0;
+		point = new GLatLng(45.4776,-73.7785); setupMapInteraction(map,point,2612933,"FedEx Ground"); bounds.extend(point); point_count++;
+        		//max zoom 14
+		//map.setZoom(map.getBoundsZoomLevel(bounds));
+		//map.setZoom(14);
+		if (point_count == 0)
+		{
+			map.setZoom(3);
+		}
+		else if (point_count == 1)
+		{
+			map.setCenter(bounds.getCenter());
+			map.setZoom(12);
+		}
+		else
+		{
+			map.setZoom(map.getBoundsZoomLevel(bounds));
+			map.setCenter(bounds.getCenter());
+		}
+		map.addControl(new GLargeMapControl());
+		map.addControl(new GMapTypeControl());
+		GEvent.addListener(map, "moveend", function () { mapMoveEnd(map); });
+		//force an add update
+		mapMoveEnd(map);
+	}
+}
+function companyClick(e, company_id, me)
+{
+	var target = e.srcElement || e.target;
+	var tid = target.id;
+	if (tid != null)
+	{
+		if (tid.indexOf("profile") == 0 || tid.indexOf("company_link_more_info") == 0 || tid.indexOf("review") == 0 || tid.indexOf("website") == 0)
+		{
+			return;
+		}
+	}
+	jQuery('#company_'+company_id+' .company_link').click();
+}
+</script>
+	  <script type="text/javascript" src="http://maps.google.com/maps?file=googleapi&amp;key=ABQIAAAAP6LkWpKkhZYbE3Ai5ftyMBRZbPgh_rg45YgI2rQQlpR-Md03NxSG7WOWilPDUf-kQpVQFt25uACrPw&amp;v=2&amp;hl=&amp;callback=google.loader.callbacks.maps&amp;async=2"></script><script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/cat_js/maps-api-v3/api/js/18/14/%7Bcommon,map,overlay,util,marker%7D.js"></script><script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/cat_js/maps-api-v3/api/js/18/14/%7Binfowindow,onion%7D.js"></script><script type="text/javascript" charset="UTF-8" src="http://maps.googleapis.com/maps/api/js/ViewportInfoService.GetViewportInfo?1m6&amp;1m2&amp;1d45.18285369873047&amp;2d-74.00390625&amp;2m2&amp;1d45.77546310424805&amp;2d-73.55583572387695&amp;2u12&amp;4sen-US&amp;5e0&amp;6sm%40279000000&amp;7b0&amp;8e0&amp;9b0&amp;10b1&amp;callback=_xdc_._8uno1v&amp;token=76119"></script><script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/cat_js/maps-api-v3/api/js/18/14/%7Bstats,controls%7D.js"></script></head>
+  <body id="results">
+        <div class="clear"></div>
+     <div id="new_navigation">
+     	<div id="position">
+        <ul id="menu_items">
+          <li><a id="home_page_link" href="http://www.ziplocal.ca/">Home</a>|</li>
+	            <li><a href="http://www.ziplocal.ca/best_picks"><span class="highlight">Best</span>Picks</a>|</li>
+	            <!-- <li><a id="blog_link" href="http://blog.ziplocal.ca" target="_blank"><span class="highlight">Zip</span>Blog</a>|</li>-->
+                    <li><a href="http://dealoftheday.redflagdeals.com/?formtype=simple&amp;utm_campaign=dealoftheday&amp;utm_source=ziplocal&amp;utm_medium=homepage/" target="_blank"><span class="highlight">Red</span>Flag<span class="highlight">Deals</span></a>|</li>
+                    <!--li><a id="blog_link" href="http://www.canpages.ca/blog/" target="canpages"><span class="highlight">Canpages</span>Blog</a>|</li-->
+          <li><a id="blog_link" href="http://www.canpages.ca" target="canpages"><span class="highlight">Canpages</span>.CA</a></li>
+        </ul>
+        <ul id="control_items">
+                    <li><a href="http://www.ziplocal.ca/user/sign_in">Sign In </a>|</li>
+          <li><a href="http://www.ziplocal.ca/user/new_user">Register</a>|</li>
+                              <li><a href="/fr/trouvez/fedex-ground-dans-montreal">Français</a></li>
+                  </ul>
+        </div>
+      </div>
+        <div id="global_container">
+      <div id="main_container">
+        <div id="container">
+          <div class="wrapper">
+            <div id="header">
+              <div id="utility_bar">
+                <a style="float:left" href="http://www.ziplocal.ca/"><img src="/images/logo.jpg" alt="home page"></a>
+                <form action="http://www.ziplocal.ca/searches" id="search_form" method="get">
+                  <div class="ubar_button"></div>
+                  <input id="what" class="ac_input" name="what" title="What? e.g. &quot;Pizza&quot;" value="fedex ground" type="text" autocomplete="off">
+	              <div class="ubar_button"><img src="/assets/images/en/inText.gif" id="in_text"></div>
+                  <input id="where" class="ac_input" name="where" title="Where? e.g. &quot;City or Neighbourhood&quot;" type="text" value="montreal" autocomplete="off">
+                  <input id="find_it" src="/images/dot_clear.gif" style="background-image: url(/images/en/find.gif)" type="image" value="">
+                </form>
+                <div id="bar_end"> </div>
+              </div>
+    		  <div class="clear"></div>
+            </div>
+
+			<div id="ypg_gpssp">
+				<div id="ypg_listings">
+            	<script type="text/javascript" language="javascript">
+	  var IE = (document.all) ? 1 : 0;
+	  var DOM = 0; 
+	  if (parseInt(navigator.appVersion) >= 5){
+		DOM = 1;
+	  }
+	  function txtShow(elementId, text) {
+		if (DOM) {
+		  document.getElementById(elementId).textContent = text;
+		} else if(IE) {
+		  document.getElementById(elementId).innerText = text;
+		}
+	  }
+	  function openYPG(urlYPG) {
+		//alert(urlYPG);  
+		window.open(urlYPG,'YPG','');
+	  }
+	  
+	</script>
+
+
+<div id="ypg_filler">
+  <div style="width: 730px;position: relative;float: left;margin-top: 5px;margin-left: 100px;">	
+	<a href="http://mobile.yp.ca/applications/" target="YPG">
+		<img src="/assets/images/ypg_en_728x90.jpg" width="728px" align="center" alt="YPG">
+	</a>
+  </div>	
+</div>
+
+				</div>
+			</div>            
+
+                        <div id="header_bottom"></div>
+
+			<div id="map_bubble">
+</div>
+           <ul id="viewport_nav">
+              <li class="selected" id="search_results_tab_link"><a href="#map_view" onclick="selectResultsView();"><span>Map View</span></a></li>
+              <li id="information_tab_link" style="display:none;"><a href="/"><span>Information</span></a></li>
+              <li id="reviews_tab_link" style="display:none;"><a href="/"><span>Reviews</span></a></li>
+              <li id="maps_tab_link" style="display:none;"><a href="/"><span>Driving Directions</span></a></li>
+            </ul>
+            <div id="right_column">
+              <div class="topright">
+              </div>
+              <div id="viewport">
+                <div id="viewport_content_divs">
+                  <div class="tab_content" id="searches_div">
+		      		                    <div id="keywords">
+                      <h2>More Keywords</h2>
+                      <h3>Add another keyword to filter your result</h3>
+                      <ul>
+                      	                      </ul>
+                                          </div>
+                                        <div style="position:relative">
+	                    <div id="map_container" style="position: relative; background-color: rgb(229, 227, 223); overflow: hidden; -webkit-transform: translateZ(0px);"><div></div><div></div><div class="gm-style" style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0; cursor: url(http://maps.gstatic.com/mapfiles/openhand_8_8.cur) 8 8, default;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; -webkit-transform-origin: 0px 0px; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);"><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; top: 0px; left: 0px;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: 66px; top: 212px;"></div><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: 322px; top: 212px;"></div><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: 66px; top: -44px;"></div><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: -190px; top: 212px;"></div><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: 66px; top: 468px;"></div><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: 322px; top: 468px;"></div><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: -190px; top: 468px;"></div><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: 322px; top: -44px;"></div><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: -190px; top: -44px;"></div><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: 66px; top: 724px;"></div><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: 66px; top: -300px;"></div><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: -190px; top: 724px;"></div><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: -190px; top: -300px;"></div><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: 322px; top: -300px;"></div><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: 322px; top: 724px;"></div></div></div></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"><div style="position: absolute; top: 0px; left: 0px;"></div></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"><div style="position: absolute; top: 0px; left: 0px;"></div></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; overflow: hidden; -webkit-transform: translateZ(0px); position: absolute; left: 66px; top: 212px;"></div><div style="width: 256px; height: 256px; overflow: hidden; -webkit-transform: translateZ(0px); position: absolute; left: 322px; top: 212px;"></div><div style="width: 256px; height: 256px; overflow: hidden; -webkit-transform: translateZ(0px); position: absolute; left: 66px; top: -44px;"></div><div style="width: 256px; height: 256px; overflow: hidden; -webkit-transform: translateZ(0px); position: absolute; left: -190px; top: 212px;"></div><div style="width: 256px; height: 256px; overflow: hidden; -webkit-transform: translateZ(0px); position: absolute; left: 66px; top: 468px;"></div><div style="width: 256px; height: 256px; overflow: hidden; -webkit-transform: translateZ(0px); position: absolute; left: 322px; top: 468px;"></div><div style="width: 256px; height: 256px; overflow: hidden; -webkit-transform: translateZ(0px); position: absolute; left: -190px; top: 468px;"></div><div style="width: 256px; height: 256px; overflow: hidden; -webkit-transform: translateZ(0px); position: absolute; left: 322px; top: -44px;"></div><div style="width: 256px; height: 256px; overflow: hidden; -webkit-transform: translateZ(0px); position: absolute; left: -190px; top: -44px;"></div><div style="width: 256px; height: 256px; overflow: hidden; -webkit-transform: translateZ(0px); position: absolute; left: 66px; top: 724px;"></div><div style="width: 256px; height: 256px; overflow: hidden; -webkit-transform: translateZ(0px); position: absolute; left: 66px; top: -300px;"></div><div style="width: 256px; height: 256px; overflow: hidden; -webkit-transform: translateZ(0px); position: absolute; left: -190px; top: 724px;"></div><div style="width: 256px; height: 256px; overflow: hidden; -webkit-transform: translateZ(0px); position: absolute; left: -190px; top: -300px;"></div><div style="width: 256px; height: 256px; overflow: hidden; -webkit-transform: translateZ(0px); position: absolute; left: 322px; top: -300px;"></div><div style="width: 256px; height: 256px; overflow: hidden; -webkit-transform: translateZ(0px); position: absolute; left: 322px; top: 724px;"></div></div></div><div style="width: 30px; height: 29px; overflow: hidden; position: absolute; left: 181px; top: 366px; z-index: 395;"><img src="http://maps.gstatic.com/mapfiles/transparent.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 30px; height: 29px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></div><div style="position: absolute; z-index: 0; left: 0px; top: 0px;"><div style="overflow: hidden; width: 421px; height: 790px;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 2; width: 100%; height: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 3; width: 100%; -webkit-transform-origin: 0px 0px; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);"><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"><div style="position: absolute; top: 0px; left: 0px;"></div></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"><div style="position: absolute; top: 0px; left: 0px;"></div></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"><div style="position: absolute; top: 0px; left: 0px;"></div><div class="gmnoprint" title="" style="width: 30px; height: 29px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; left: 181px; top: 366px; z-index: 395;"><img src="http://maps.gstatic.com/mapfiles/transparent.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 30px; height: 29px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"><div style="position: absolute; top: 0px; left: 0px;"></div></div></div></div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; visibility: hidden;"><a target="_blank" href="http://maps.google.com/maps?ll=45.4776,-73.7785&amp;z=12&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3" title="Click to see this area on Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 62px; height: 26px; visibility: hidden; cursor: pointer;"><img src="http://maps.gstatic.com/mapfiles/transparent.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 62px; height: 26px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; visibility: hidden;"><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer;">Map Data</a><span></span></div></div></div><div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 61px; top: 305px;"><div style="padding: 0px 0px 10px; font-size: 16px;">Map Data</div><div style="font-size: 13px;"></div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; -webkit-transform: translateZ(0px); right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="http://maps.gstatic.com/mapfiles/transparent.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></div><div class="gmnoscreen" style="position: absolute; visibility: hidden;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);"></div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; position: absolute; visibility: hidden; -webkit-user-select: none;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a href="http://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a></div></div><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; display: none; position: absolute; visibility: hidden;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a target="_new" title="Report errors in the road map or imagery to Google" href="http://maps.google.com/maps?ll=45.4776,-73.7785&amp;z=12&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3&amp;skstate=action:mps_dialog$apiref:1&amp;output=classic" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Report a map error</a></div></div></div></div>
+			 	        <!-- div id="adcontainer" lat49adposition="bottom-right" ></div-->
+			        </div>
+                  </div>
+                  <div class="tab_content remote-output" id="ajax_div" style="display:none;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="left_column">
+              <div class="top">
+              </div>
+              <div class="results" id="flasher">
+                <h2>1 fedex ground in montreal</h2>
+                                <p style="margin:-5px 0px 0px 2px;" id="result_sort">
+                <select name="order" id="orderBy" onchange="window.location = this.value">
+                <option value="http://www.ziplocal.ca/find/fedex-ground-in-montreal" selected="selected">Sort Your Result By ...</option>
+                <option value="http://www.ziplocal.ca/find/fedex-ground-in-montreal">Default</option>
+                <option value="http://www.ziplocal.ca/find/fedex-ground-in-montreal/1/2">Alphabetically</option>
+                <option value="http://www.ziplocal.ca/find/fedex-ground-in-montreal/1/3">Most Reviewed</option>
+                <option value="http://www.ziplocal.ca/find/fedex-ground-in-montreal/1/4">Most Voted</option>
+                <option value="http://www.ziplocal.ca/find/fedex-ground-in-montreal/1/5">Online Reservation</option>
+                </select>
+                </p>
+                              </div>
+              <div id="companies">
+        			        
+                 <div class="clearfix company" id="company_2612933" onclick="companyClick(event,2612933,this);" style="cursor:pointer;">
+                    <div class="company_detail">
+                                            <h2 class="name"><a id="profile 2612933" href="#profile_2612933" class="company_link" rel="nofollow">FedEx Ground  <span id="company_link_more_info">[More info]</span></a></h2>
+                                                                                        <address>2000 Ch Saint-Francois , Dorval</address>
+                                                                  <div class="phone"></div>
+                                                                                        <div class="company_url">
+                        <a id="website2612933" href="/stats_logs/2612933?tool_type=url&amp;url=http%3A%2F%2Fwww.fedex.com" onclick="window.open(this.href);return false;" title="" rel="nofollow">www.fedex.com</a>
+                      </div>
+                                                                  <div class="category">Category &gt; Courier Service</div>
+                                            <br>
+            		                        </div>
+                                        <div class="clear">
+                   </div>
+                      <ol id="results_links_buttons">
+                                                <li id="results_links_buttons_item" class="review_results_item"><a id="review 2612933" class="results_links review_link" href="#review_2612933" rel="nofollow">Write a Review</a></li>
+                                         </ol>
+                  </div>
+                                   													              </div>
+              <div id="left_column_bottom">
+              </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div id="right_column_bottom" style="display:none">
+            </div>
+            <div class="push"></div>
+         </div>
+
+  	 <div id="print_only"><img src="/images/homeLogo.gif" alt="Ziplocal Logo"></div>
+
+     <div id="footer">
+
+                   <!-- a href="http://www.ziplocal.ca/advertise?type=ads">Advertise with Us</a> |-->
+              <a href="http://www.ypg.com">Advertise with Us</a> |
+              <a href="http://www.ziplocal.ca/about">About us</a> |
+              <a href="http://www.ziplocal.ca/contact">Contact Us</a> |
+              <!-- <a href="http://www.ziplocal.ca/pages/feedback">Feedback</a> |-->
+              <!-- <a id="listingLink" title="Enter Business details" class="thickbox">Add a listing</a> |-->
+              <a href="http://www.ziplocal.ca/pages/green">Green Commitment</a> |
+              <a href="http://www.ziplocal.ca/tos">Terms of Use</a> |
+              <a href="http://www.ziplocal.ca/privacy">Privacy Policy</a>
+			                  <div style="margin:5px;"><a href="http://www.canpages.ca"><img src="/assets//images/zip-canpage.jpg"></a></div>
+			<div id="top_cities"><b>Top Cities:</b>
+		  			<a href="http://www.ziplocal.ca/sitemap/toronto_on">Toronto</a> |
+			<a href="http://www.ziplocal.ca/sitemap/montreal_qc">Montreal</a> |
+			<a href="http://www.ziplocal.ca/sitemap/calgary_ab">Calgary</a> |
+			<a href="http://www.ziplocal.ca/sitemap/vancouver_bc">Vancouver</a> |
+			<a href="http://www.ziplocal.ca/sitemap/halifax_ns">Halifax</a> |
+			<a href="http://www.ziplocal.ca/sitemap/ottawa_on">Ottawa</a>|
+			<a href="http://www.ziplocal.ca/sitemap/edmonton_ab">Edmonton</a> |
+			<a href="http://www.ziplocal.ca/sitemap/quebec_qc">Quebec City</a> |
+					<a href="http://www.ziplocal.ca/sitemap">More</a></div>
+                </div>
+        </div>
+      </div>
+      
+      	<div class="clear"></div>
+	<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+	<script type="text/javascript">
+	var pageTracker;
+	function trackpage() {
+              pageTracker = _gat._getTracker("UA-1445080-1");pageTracker._initData();pageTracker._trackPageview();
+      	}
+	if( typeof _gat == "undefind"  ) {
+		setTimeout( 'trackpage()', 500)
+	} else {
+		trackpage();
+	}
+    </script>
+        <script type="text/javascript">if(!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://js-agent.newrelic.com/nr-100.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrf2","beacon-1.newrelic.com","b3bca1bca0",1019534,"ZFYHZ0FUXkdSUBZaCV0cJFBHXF9aHHULXQJsUARdUlFRG11WFWwVVlIXUFs=",0,204,new Date().getTime()]);</script>
+
+
+</div><div class="ac_results" style="position: absolute; width: 221px; display: none;"></div><div class="ac_results" style="position: absolute; width: 221px; display: none;"></div><script src="http://maps.gstatic.com/cat_js/maps-api-v3/api/js/18/14/%7Bmain,adsense,geometry,zombie%7D.js"></script><script type="text/javascript" async="" src="https://js-agent.newrelic.com/nr-100.js"></script><span style="position: absolute; left: -999px; top: -999px; visibility: hidden; font-size: 300px; width: auto; height: auto; margin: 0px; padding: 0px; font-family: Roboto, Arial, sans-serif;">BESbewy</span><div style="position: absolute; left: -1024px; top: -768px; width: 1024px; height: 768px; visibility: hidden;"><div style="position: absolute; left: 0px; top: 0px;"><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"></div></div></div></body></html>

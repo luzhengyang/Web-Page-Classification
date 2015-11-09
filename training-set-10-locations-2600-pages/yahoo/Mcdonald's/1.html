@@ -1,0 +1,1409 @@
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms no-csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><style></style> 
+
+
+              
+<script type="text/javascript" async="" src="http://www.google-analytics.com/analytics.js"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-PBZ2PB"></script><script type="text/javascript">
+  
+    function desktopRedirect(){
+        var redirectPath = "";  
+        var useragent = navigator.userAgent;
+        var domain = "www.mcdonalds.ca";
+  
+        if ( useragent.indexOf('BlackBerry') != -1 || useragent.indexOf('iPhone OS 4') != -1 || useragent.indexOf('iPhone OS 5') != -1 || useragent.indexOf('iPhone OS 6') != -1 || useragent.indexOf('Android 2') != -1 || useragent.indexOf('Android 4') != -1 || useragent.indexOf('Opera') != -1 || useragent.indexOf('Windows Phone') != -1 ) {    
+          var alertURL = "";            
+          var getAlertPage = "false";
+          var fullSite = "no";
+          if(getCookie("fullsite") != null){
+            fullSite = getCookie("fullsite");
+          }
+   
+      if(fullSite == "yes"){
+                //cookie set for full site
+                var pagePath = '/ca/en';
+                alertURL = "http://"+domain+pagePath+".html";
+      }else{
+            if(redirectPath != ""){
+                    //redirecting to path specified in page properties
+            var pagePath = '/ca/en';
+            var url= "http://"+domain+pagePath+".html";
+                    var redPath = "";
+                    
+                    if((redirectPath.indexOf("/content/")>-1)){
+                        redPath = "http://"+domain+redirectPath+".html";
+                    }else{
+                        redPath = redirectPath;
+                    }  
+            alertURL = redPath;
+         }else{                
+            //check if intermediate page is required or not               
+            if(getAlertPage == "true"){
+                var pagePath = '/ca/en';
+                var url= "http://"+domain+pagePath+".html";
+                                          
+                        if(("".indexOf("/content/")>-1)){
+                             alertURL = "http://"+domain+".html?desktopurl="+url;
+                        }else{
+                             alertURL = "?desktopurl="+url;
+                        }
+                    }else{
+                        //do nothing
+                    }
+                }      
+            }          
+            
+            var mobileAlert = "no"
+            if(getCookie("mobilealert") != null){
+                mobileAlert = getCookie("mobilealert");
+            }
+            var desktopVal = "no";
+            var fullSiteRedirect = ""; 
+            if(getCookie("fullsiteredirect") != null){
+                fullSiteRedirect = getCookie("fullsiteredirect");
+            } 
+            
+            if(fullSiteRedirect == "yes" && mobileAlert == "no" && desktopVal == "no"){
+                setCookie("fullsiteredirect","no");
+                window.location.href = alertURL;
+            }
+            
+            if(mobileAlert == "no" && desktopVal == "no"){
+                if(fullSiteRedirect == "yes" || fullSiteRedirect == "no"){
+                    //do nothing
+                }
+                else{
+                    if(alertURL != ""){
+                        window.location.href = alertURL;
+                    }
+                }    
+            } 
+                                      
+        }
+        else{
+            // For desktop do nothing 
+        }
+    }         
+    function getCookie(name){ 
+        var re = new RegExp(name + "=([^;]+)"); 
+        var value = re.exec(document.cookie); 
+        return (value != null) ? unescape(value[1]) : null; 
+    }  
+    function setCookie(cookieName,cookieValue) {
+        var today = new Date();
+        var expire = new Date();
+        expire.setTime(today.getTime() + 15 * 60 * 1000);
+        document.cookie = cookieName+"="+escape(cookieValue)+ ";expires="+expire.toGMTString();
+    }
+    
+   var allowIntRed= "true";
+   if("yes" == "yes"){  
+   if(allowIntRed == "true"){
+       desktopRedirect();  
+       } 
+   }    
+</script> 
+
+
+
+
+    
+      
+
+
+  
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> 
+<meta name="title" content="English | McDonalds.ca">
+<meta name="description" content="English | McDonalds.ca">
+<meta name="keywords" content="">
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+<meta name="_market" content="">
+<meta name="_language" content="">
+
+ 
+
+ 
+ 
+
+<link rel="stylesheet" type="text/css" media="all" href="/themes/Canada/css/mcdonalds.css?p=0"> 
+<link rel="stylesheet" type="text/css" media="print" href="/themes/Canada/css/print.css?">
+<link rel="stylesheet" type="text/css" media="all" href="/themes/Canada/css/food.css">    
+<link rel="stylesheet" type="text/css" media="all" href="/themes/Canada/css/news.css">  
+<link rel="stylesheet" type="text/css" media="all" href="/themes/Canada/css/contactus.css">
+<link rel="stylesheet" type="text/css" media="all" href="/themes/Canada/css/jquery.ui.theme.css">   
+<!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" media="all" href="/themes/Canada/css/ie7.css" />
+<![endif]-->
+<!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" media="all" href="/themes/Canada/css/ie6.css" />
+<![endif]-->
+
+<script type="text/javascript" src="/themes/Canada/scripts/jquery-1.3.2.min.js"></script> 
+<script type="text/javascript" src="/themes/Canada/scripts/jquery.activetextinput.js"></script>
+<script type="text/javascript" src="/themes/Canada/scripts/global_utils.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="/themes/Canada/css/jquery.mcdcolorbox.css">
+<script type="text/javascript" src="/themes/Canada/scripts/jquery.colorbox-mod.js?p=0"></script>
+<script type="text/javascript" src="/themes/Canada/scripts/jquery.mcdcolorbox.js?p=0"></script>
+<script type="text/javascript" src="/themes/Canada/scripts/jquery.callouts.js"></script>
+<script type="text/javascript" src="/themes/Canada/scripts/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="/themes/Canada/scripts/jquery.ifixpng.js"></script>    
+<script type="text/javascript" src="/themes/Canada/scripts/commons.js"></script> 
+<script type="text/javascript" src="/themes/Canada/scripts/datepicker.js"></script>
+<script type="text/javascript" src="/themes/Canada/scripts/custom-form-elements.js"></script><style type="text/css">input.styled { display: none; } select.styled { position: relative; width: 190px; opacity: 0; filter: alpha(opacity=0); z-index: 5; }</style>  
+<script type="text/javascript" src="/themes/Canada/scripts/textArea.js"></script>
+<script type="text/javascript" src="/themes/Canada/scripts/formValidation.js"></script>
+<script type="text/javascript" src="/themes/Canada/scripts/page-grayed-out.js"></script>
+<script type="text/javascript" src="/themes/Canada/scripts/textresize.js"></script></head><body class="page genericpage " style="background:#000; background-image: url('/content/ca/en/jcr:content/bgimage.img.jpg/1414507015150.jpg'); background-repeat: no-repeat; background-position:center top;"><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" style="padding-bottom: 0px; padding-right: 0px; display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxLoadedContent" class="" style="width: 0px; height: 0px;"></div><div id="cboxLoadingOverlay" class=""></div><div id="cboxLoadingGraphic" class=""></div><div id="cboxTitle" class=""></div><div id="cboxCurrent" class=""></div><div id="cboxSlideshow" class=""></div><div id="cboxNext" class=""></div><div id="cboxPrevious" class=""></div><div id="cboxClose" class=""></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position:absolute; top:0; left:0; width:9999px; height:0;"></div></div><div id="viewTextSize" style="font-size: medium; visibility: hidden; position: absolute; left: -50px; top: -50px;">M</div>
+<script type="text/javascript" src="/themes/Canada/scripts/news.js?p=0"></script>  
+<script type="text/javascript" src="/themes/Canada/scripts/jquery_newsarticles.js"></script>  
+<script type="text/javascript" src="/themes/Canada/scripts/DD_roundies_0.0.2a-min.js"></script>   
+
+<script type="text/javascript" src="/themes/Canada/scripts/swfobject.js"></script>
+
+<script type="text/javascript">
+var webtrends = ''; 
+        $(document).ready(function(){ 
+            var hideMealBuilder = 'true';
+            if(hideMealBuilder!='true')
+                changevalue('itemsAdded_ca_en');         
+            
+            /*** Bumper ***/
+            try {
+                $('a.external').mcdColorboxDeleteConfirm({question:"<strong>Leaving McDonald's Web Site.</strong>You are leaving the McDonald's Canada web site for a site that is controlled by a third party, not affiliated with McDonald's. The content and policies, including the privacy policy, on the site you are entering may vary from McDonald's viewpoints and policies. Please be sure to review the policies of every site you visit. McDonald's is not responsible for the opinions, policies, statements or practices of any other companies, such as those that may be expressed in the web site you are entering.",yescontrol:"Continue",nocontrol:"Cancel"});
+            } catch ( exeption ) { /* silence */ }   
+         
+         }); 
+     
+        
+    /* function to check cookies are enabled or not */
+        
+       function isCookiesEnabled() 
+       {
+   
+                //alert("========isCookiesEnabled()====calling==="); 
+                var cookieEnabled=(navigator.cookieEnabled)? true : false
+               //if not IE4+ nor NS6+
+               if (typeof navigator.cookieEnabled=="undefined" && !cookieEnabled)
+               { 
+                   document.cookie="testcookie" ; 
+                   cookieEnabled=(document.cookie.indexOf("testcookie")!=-1)? true : false
+               }
+                
+               if(cookieEnabled == false)
+               {
+                 alert('Browser cookies must be enabled in order to use the Meal Builder ') ; 
+               }
+               
+               return cookieEnabled;
+   
+   
+        } 
+  
+        /* function to add items to meal builder */
+    
+     function addtoMyMealBuilder(id)
+        { 
+
+                if(isCookiesEnabled()== true) 
+               {                 
+                 
+                     if(checkLimit(id)==true)
+                     {                      
+                         // Tracker3('DCS.dcsuri','/food/ProductInformationFlyOut','WT.ti','Product Information Fly Out :: McDonaldsArabia.com','DCSext.item', id, 'addtomealbuilder');                        
+                          addItemstoSession(id,'ca_en');
+                     }
+                     else
+                         return false; 
+               }else
+                 return false; 
+        }
+        
+        
+  /* function to add items to meal builder */     
+    
+     function addtoMyMealBuilder(path,id)
+        { 
+
+                if(isCookiesEnabled()== true) 
+               {                 
+                 
+                     if(checkLimit(id)==true)
+                     {                      
+                        // if( webtrends !="")
+                        // Tracker3('DCS.dcsuri','/food/ProductInformationFlyOut','WT.ti','Product Information Fly Out :: McDonaldsArabia.com','DCSext.item', id, 'addtomealbuilder');                         
+                         addItemstoSession(id,'ca_en');   
+                     }
+                     else
+                         return false; 
+               }else
+                 return false; 
+        }
+        
+         /* function to add item to meal builder */
+        
+        function addItemtoMyMealBuilder(itemId,compList)
+        {
+
+                if(isCookiesEnabled()== true)
+               {
+                 
+                     if(checkLimit(itemId)==true)                         
+                     {                      
+                      //  Tracker1('DCS.dcsuri','/food/addItemtoMyMealBuilder','WT.ti','Add to My Meal Builder :: McDonalds.com','DCSext.item',itemId);
+                        addItemtoSession(itemId,compList,'ca_en');  
+                     }
+                     else
+                         return false;  
+                    
+               }
+               else
+                   return false; 
+        }  
+        
+        function addReverseItemtoMyMealBuilder(itemId,compList,revList,optionalList,masterItemId)
+        {
+               if(isCookiesEnabled()== true)
+               {
+                 
+                     if(checkLimit(itemId)==true)                         
+                     {
+                     //    Tracker1('DCS.dcsuri','/food/addItemtoMyMealBuilder','WT.ti','Add to My Meal Builder :: McDonalds.com','DCSext.item',itemId);                       
+                         addReverseItemtoSession(itemId,compList,revList,optionalList,masterItemId,'ca_en');
+                     }
+                     else
+                         return false;  
+                    
+               }
+               else
+                   return false; 
+        }  
+        
+        
+      function checkLimit(id) 
+      {
+           //alert("===========checkLimit()======calling========");
+           var limit= 20;
+           var existLength=getExistMealbuilderLength('ca_en');
+           var pids=id.split("|");
+           var total_length=pids.length+existLength;
+           //alert("total_length======>"+total_length);
+            
+           if(total_length>limit){
+            
+               // alert('Your Meal Builder is currently full. Please remove items before adding more. ') ; 
+               // Tracker('DCS.dcsuri','/food/MyMealBuilder/full','WT.ti','My Meal Builder Full :: McDonalds.com');             
+                return false;            
+            
+           }
+           else
+           return true;         
+      
+      }
+        
+         
+</script> 
+
+
+
+<title>English | McDonalds.ca</title>
+
+     
+
+  
+
+ 
+   
+
+    <div id="document_wrapper">
+        <a name="top"></a>
+        
+ 
+      
+<div id="top_wrapper"> 
+    <div id="top_content">
+        <div id="logo">
+            <div class="logo mlogo parbase">
+
+
+ 
+   
+
+    <a href="/ca/en.html">
+
+                <img src="/etc/designs/ca/en/_jcr_content/genericpage/genericpagecontent/sitelevelconfiguration/logoimage.img.png" width="113" height="98" alt="i'm lovin' it.">
+
+        </a>   
+  
+
+
+</div>
+
+        </div>
+        <div id="main_navigation">
+            <div class="mcdonaldsleftnav parbase">
+ 
+    
+ 
+   
+    
+ 
+   
+   
+    
+     
+        <!-- Start of Left Navigation div -->
+        <div id="leftnavigation">
+    
+    <ul>
+                    <li id="foodnav_li" class="first">
+                        <a href="/ca/en/menu.html" id="foodnav_link" class="nav_item firstLink" style="background-image: url('/content/ca/en/menu/jcr:content/navimage.img.png/1376284738982.png');"><img src="http://www.mcdonalds.ca/content/ca/en/menu/jcr:content/navimage.img.png/1376284738982.png"></a>
+                    
+                    <div class="active_nav_widget" id="foodnav_layer">
+                      <div id="foodnav_inner_layer">
+            
+                            <div class="float_left first_column">
+                            <table border-"0"="" cellpadding="0" cellspacing="0" class="column_table">
+                                <thead>
+                                    <tr>
+                                        <th>Menu</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                            
+                                        <tr>
+                                          <td>
+                                            <a href="/ca/en/menu/full_menu/value_picks.html">Value Picks®</a>
+                                          </td>
+                                        </tr>
+                                
+                                        <tr>
+                                          <td>
+                                            <a href="/ca/en/menu/full_menu/sandwiches.html">Burgers, Sandwiches, &amp; Wraps</a>
+                                          </td>
+                                        </tr>
+                                
+                                        <tr>
+                                          <td>
+                                            <a href="/ca/en/menu/full_menu/chicken.html">Chicken</a>
+                                          </td>
+                                        </tr>
+                                
+                                        <tr>
+                                          <td>
+                                            <a href="/ca/en/menu/full_menu/breakfast.html">Breakfast</a>
+                                          </td>
+                                        </tr>
+                                
+                                        <tr>
+                                          <td>
+                                            <a href="/ca/en/menu/full_menu/salads.html">Salads</a>
+                                          </td>
+                                        </tr>
+                                
+                                        <tr>
+                                          <td>
+                                            <a href="/ca/en/menu/full_menu/snacks.html">Snacks &amp; Sides</a>
+                                          </td>
+                                        </tr>
+                                
+                                        <tr>
+                                          <td>
+                                            <a href="/ca/en/menu/full_menu/beverages.html">Beverages</a>
+                                          </td>
+                                        </tr>
+                                
+                                        <tr>
+                                          <td>
+                                            <a href="/ca/en/menu/full_menu/desserts_shakes.html">Desserts &amp; Shakes</a>
+                                          </td>
+                                        </tr>
+                                
+                                        <tr>
+                                          <td>
+                                            <a href="/ca/en/menu/full_menu/mccafe.html">McCafé®</a>
+                                          </td>
+                                        </tr>
+                                
+                                </tbody>
+                            </table>
+                            </div>
+                            
+                            <div class="float_left with_padding middle_column">
+                            <table border-"0"="" cellpadding="0" cellspacing="0" class="column_table">
+                                <thead>
+                                    <tr>
+                                        <th>Meal Bundles</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                            
+                                        <tr>
+                                          <td>
+                                            <a href="/ca/en/menu/meal_bundles/extra_value_meals.html">Extra Value Meals</a>
+                                          </td>
+                                        </tr>
+                                
+                                        <tr>
+                                          <td>
+                                            <a href="/ca/en/menu/meal_bundles/happy_meal.html">Happy Meal</a>
+                                          </td>
+                                        </tr>
+                                
+                                </tbody>
+                            </table>
+                            </div>
+                            
+                    </div>
+                </div>
+            
+            </li>
+            
+                    <li id="simplenav_li">
+                        <a href="/ca/en/food.html" id="simplenav_link" class="nav_item" style="background-image: url('/content/ca/en/food/jcr:content/navimage.img.png/1336914422602.png');"><img src="http://www.mcdonalds.ca/content/ca/en/food/jcr:content/navimage.img.png/1336914422602.png"></a>
+                    
+                    <div class="active_nav_widget" id="simplenav_layer">
+                      <div id="simplenav_inner_layer">
+            
+                            <div class="float_left first_column">
+                              <table class="column_table" cellspacing="0" cellpadding="0" border="0">
+                        
+                    
+                                <tbody><tr><td><a href="/ca/en/food/our-food--your-questions.html">Our Food. Your Questions</a></td></tr>
+                    
+                                <tr><td><a href="/ca/en/food/nutrition_centre.html">Nutrition Centre</a></td></tr>
+                    
+                                <tr><td><a href="/ca/en/food/your_questions_answered.html">FAQs</a></td></tr>
+                    
+                                <tr><td><a href="/ca/en/food/all-access_moms.html">All-Access Moms</a></td></tr>
+                    
+                                <tr><td><a href="/ca/en/food/making_informed_choices.html">Making Informed Choices</a></td></tr>
+                    
+                                <tr><td><a href="/ca/en/food/meet_our_suppliers.html">Meet Our Suppliers</a></td></tr>
+                    
+                          </tbody></table>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+            </li>
+            
+                    <li id="noflyout_li">
+                        <a href="/ca/en/mccafe.html" id="noflyout_link" class="nav_item" style="background-image: url('/content/ca/en/mccafe/jcr:content/navimage.img.png/1413828874606.png');"><img src="http://www.mcdonalds.ca/content/ca/en/mccafe/jcr:content/navimage.img.png/1413828874606.png"></a>
+                    
+            </li>
+            
+                    <li id="promonav_li">
+                        <a href="/ca/en/promotions.html" id="promonav_link" class="nav_item" style="background-image: url('/content/ca/en/promotions/jcr:content/navimage.img.png/1414507632739.png');"><img src="http://www.mcdonalds.ca/content/ca/en/promotions/jcr:content/navimage.img.png/1414507632739.png"></a>
+                    
+                    <div class="active_nav_widget" id="promonav_layer">
+                      <div id="promonav_inner_layer">
+            
+                            <div class="float_left">
+                        
+                                        <a href="/ca/en/promotions/monopoly.html">
+                                        <img src="/content/ca/en/promotions/monopoly/_jcr_content/promolevel2image.img.jpg/1414509974949.jpg" title="">
+                                        </a>
+                                    
+                            </div>
+                        
+                            <div class="float_left">
+                        
+                                        <a href="/ca/en/promotions/mightyangus.html">
+                                        <img src="/content/ca/en/promotions/mightyangus/_jcr_content/promolevel2image.img.jpg/1414507448245.jpg" title="">
+                                        </a>
+                                    
+                            </div>
+                        
+                    </div>
+                </div>
+            
+            </li>
+            
+                    <li id="noflyout_li">
+                        <a href="/ca/en/happy_meal.html" id="noflyout_link" class="nav_item" style="background-image: url('/content/ca/en/happy_meal/jcr:content/navimage.img.png/1336914424449.png');"><img src="http://www.mcdonalds.ca/content/ca/en/happy_meal/jcr:content/navimage.img.png/1336914424449.png"></a>
+                    
+            </li>
+            
+                    <li id="simplenav_li">
+                        <a href="/ca/en/our_story.html" id="simplenav_link" class="nav_item" style="background-image: url('/content/ca/en/our_story/jcr:content/navimage.img.png/1336914394659.png');"><img src="http://www.mcdonalds.ca/content/ca/en/our_story/jcr:content/navimage.img.png/1336914394659.png"></a>
+                    
+                    <div class="active_nav_widget" id="simplenav_layer">
+                      <div id="simplenav_inner_layer">
+            
+                            <div class="float_left first_column">
+                              <table class="column_table" cellspacing="0" cellpadding="0" border="0">
+                        
+                    
+                                <tbody><tr><td><a href="/ca/en/our_story/our_history.html">Our History</a></td></tr>
+                    
+                                <tr><td><a href="/ca/en/our_story/values_in_action.html">Values In Action</a></td></tr>
+                    
+                                <tr><td><a href="/ca/en/our_story/corporate_info.html">Corporate Info</a></td></tr>
+                    
+                                <tr><td><a href="/ca/en/our_story/mcdonalds_ads.html">McDonald's Ads</a></td></tr>
+                    
+                                <tr><td><a href="/ca/en/our_story/mcdonalds_worldwide.html">McDonald's Worldwide</a></td></tr>
+                    
+                          </tbody></table>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+            </li>
+            
+                    <li id="simplenav_li">
+                        <a href="/ca/en/communities.html" id="simplenav_link" class="nav_item" style="background-image: url('/content/ca/en/communities/jcr:content/navimage.img.png/1336914435534.png');"><img src="http://www.mcdonalds.ca/content/ca/en/communities/jcr:content/navimage.img.png/1336914435534.png"></a>
+                    
+                    <div class="active_nav_widget" id="simplenav_layer">
+                      <div id="simplenav_inner_layer">
+            
+                            <div class="float_left first_column">
+                              <table class="column_table" cellspacing="0" cellpadding="0" border="0">
+                        
+                    
+                                <tbody><tr><td><a href="/ca/en/communities/rmhc.html">Ronald McDonald House Charities® Canada</a></td></tr>
+                    
+                                <tr><td><a href="/ca/en/communities/environment.html">Environment</a></td></tr>
+                    
+                                <tr><td><a href="/ca/en/communities/sports_sponsorships.html">Sports &amp; Sponsorships</a></td></tr>
+                    
+                                <tr><td><a href="/ca/en/communities/our_communities.html">Local Community</a></td></tr>
+                    
+                                <tr><td><a href="/ca/en/communities/golden_moments.html">Golden Moments</a></td></tr>
+                    
+                                <tr><td><a href="/ca/en/communities/atomc.html">atomc</a></td></tr>
+                    
+                          </tbody></table>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+            </li>
+            
+                    <li id="noflyout_li">
+                        <a href="/ca/en/franchising.html" id="noflyout_link" class="nav_item" style="background-image: url('/content/ca/en/franchising/jcr:content/navimage.img.png/1352411674022.png');"><img src="http://www.mcdonalds.ca/content/ca/en/franchising/jcr:content/navimage.img.png/1352411674022.png"></a>
+                    
+            </li>
+            
+                    <li id="careernav_li">
+                        <a href="/ca/en/careers.html" id="careernav_link" class="nav_item" style="background-image: url('/content/ca/en/careers/jcr:content/navimage.img.png/1396309928310.png');"><img src="http://www.mcdonalds.ca/content/ca/en/careers/jcr:content/navimage.img.png/1396309928310.png"></a>
+                    
+                    <div class="active_nav_widget" id="careernav_layer">
+                      <div id="careernav_inner_layer">
+            
+                            <div class="float_left first_column">
+                            <table border-"0"="" cellpadding="0" cellspacing="0" class="column_table">
+                                <thead>
+                                    <tr>
+                                        <th>Restaurant</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                            
+                                        <tr>
+                                          <td>
+                                            <a href="/ca/en/careers/rest_opp/people.html">People</a>
+                                          </td>
+                                        </tr>
+                                
+                                        <tr>
+                                          <td>
+                                            <a href="/ca/en/careers/rest_opp/working_here.html">Working Here</a>
+                                          </td>
+                                        </tr>
+                                
+                                        <tr>
+                                          <td>
+                                            <a href="/ca/en/careers/rest_opp/training_education_and_benefits.html">Training, Education and Benefits</a>
+                                          </td>
+                                        </tr>
+                                
+                                </tbody>
+                            </table>
+                            </div>
+                            
+                            <div class="float_left with_padding middle_column">
+                            <table border-"0"="" cellpadding="0" cellspacing="0" class="column_table">
+                                <thead>
+                                    <tr>
+                                        <th>Corporate</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                            
+                                        <tr>
+                                          <td>
+                                            <a href="/ca/en/careers/corp_opp/corporate_opportunities.html">Corporate Opportunities</a>
+                                          </td>
+                                        </tr>
+                                
+                                </tbody>
+                            </table>
+                            </div>
+                            
+                    </div>
+                </div>
+            
+            </li>
+            
+                    <li id="simplenav_li">
+                        <a href="/ca/en/contact_us.html" id="simplenav_link" class="nav_item" style="background-image: url('/content/ca/en/contact_us/jcr:content/navimage.img.png/1376285113952.png');"><img src="http://www.mcdonalds.ca/content/ca/en/contact_us/jcr:content/navimage.img.png/1376285113952.png"></a>
+                    
+                    <div class="active_nav_widget" id="simplenav_layer">
+                      <div id="simplenav_inner_layer">
+            
+                            <div class="float_left first_column">
+                              <table class="column_table" cellspacing="0" cellpadding="0" border="0">
+                        
+                    
+                                <tbody><tr><td><a href="/ca/en/contact_us/talk_to_us.html">Talk to Us</a></td></tr>
+                    
+                                <tr><td><a href="/ca/en/contact_us/faq.html">Frequently Asked Questions</a></td></tr>
+                    
+                                <tr><td><a href="/ca/en/contact_us/customer_satisfaction_survey.html">Customer Satisfaction Survey</a></td></tr>
+                    
+                          </tbody></table>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+            </li>
+            
+                <li id="noflyout_last_li">
+                    <a href="/ca/en/mcard.html" id="noflyout_last_link" class="nav_item" style="background-image: url('/content/ca/en/mcard/jcr:content/navimage.img.png/1336914417698.png');"><img src="http://www.mcdonalds.ca/content/ca/en/mcard/jcr:content/navimage.img.png/1336914417698.png"></a>
+                
+            </li>
+               
+        </ul>
+         
+    
+    </div>
+    <div class="clear"></div>
+    
+<script>
+String.prototype.trim = function () {
+                return this.replace(/^\s*/, "").replace(/\s*$/, "");
+        }  
+        
+function submitSearch(searchPath,searchReqMsg,searchText,country)
+{
+    var searchVal = document.search_frm.queryText.value.trim();
+    
+    if(searchVal=="" || searchVal==searchText)
+    {
+        alert(searchReqMsg);
+        $("#leftnav_search_text").focus();
+        //return false;
+    }
+    else
+    {     
+       // var formActionn = searchPath+"?queryText="+escape(searchVal)+"&collection="+country;
+       var formActionn = searchPath+"?queryText="+escape(_utf8_encode(searchVal))+"&collection="+country;
+       window.open(formActionn,"_self");  
+        //document.search_frm.queryText.value = escape(searchVal);
+        //document.search_frm.submit();   
+    }
+}
+
+
+function submitLocator(formAction,locAlertText,locText,country,language)
+{
+    var primaryCity = document.locator_frm.primaryCity.value.trim();  
+    
+    if(primaryCity=="" || primaryCity==locText)
+    {
+        alert(locAlertText);
+        $("#leftnav_restaurant_text").focus();
+    }
+    else
+    {
+       var postalCode = "";
+       
+       //alert('country==='+country);
+       
+       if('usa'==country && !isNaN(primaryCity))
+       {
+           postalCode = primaryCity;
+       }
+       
+       if('sweden'==country)
+       {       
+         postalCode = primaryCity;       
+       }
+       
+      
+       //alert('postalCode ==='+postalCode);  
+       
+       
+       var formActionn = formAction+"?country="+country+"&method=search&primaryCity="+escape(primaryCity)+"&postalCode="+escape(postalCode)+"&language="+language;
+       window.open(formActionn,"_self");  
+               
+    }
+      
+} 
+function _utf8_encode(string) {
+            string = string.replace(/\r\n/g,"\n");
+            var utftext = "";
+ 
+            for (var n = 0; n < string.length; n++) {
+ 
+                  var c = string.charCodeAt(n);
+ 
+                  if (c < 128) {
+                        utftext += String.fromCharCode(c);
+                  }
+                  else if((c > 127) && (c < 2048)) {
+                        utftext += String.fromCharCode((c >> 6) | 192);
+                        utftext += String.fromCharCode((c & 63) | 128);
+                  }
+                  else {
+                        utftext += String.fromCharCode((c >> 12) | 224);
+                        utftext += String.fromCharCode(((c >> 6) & 63) | 128);
+                        utftext += String.fromCharCode((c & 63) | 128);
+                  }
+ 
+            }
+ 
+            return utftext;
+      } 
+
+
+
+</script> 
+<script>
+/* $(document).ready(function(){ */
+ $('a[href$="/mds.html"]').attr("target", "_blank");
+
+    $('a[href$="/en/mds.html"]').click(function(){ 
+    
+        _gaq.push(['_trackPageview', '/ca/en/mds.html']); 
+    
+    });
+    $('a[href$="/ar/mds.html"]').click(function(){ 
+    
+        _gaq.push(['_trackPageview', '/ca/ar/mds.html']);  
+    
+    });
+    
+    $(".nav_item").each(function(){
+        var $getImg = $(this).css("background-image");
+        $getImg = $getImg.replace('url("','').replace('")','');
+        $getImg = $getImg.replace('url(','').replace(')','');
+        var $height = "";
+        $(this).append("<img src=''/>");
+        $(this).children("img").load(function(){
+        $height = $(this).height()/2
+            $(this).parent().css('height',$height) ;
+            $(this).remove();
+        }).error(function () {
+        }).attr('src', $getImg);
+        
+        if($(this).children("img").attr("src")=="none"){
+            $(this).children("img").remove();
+        }        
+        
+          $(this).hover(function(){ 
+                            var $pos = $(this).height();
+                            $pos = "0 -"+$pos+"px";                                     
+                            $("#leftnavigation ul li a").css("background-position","0 0");
+                            $(this).css("background-position",$pos); 
+                        }, function(){
+                            $(this).css("background-position","0 0");
+                        });
+                        
+                        $(".active_nav_widget").hover(function(){
+                           var $prev = $(this).parent().children("a");
+                           var $pos = $prev.height();
+                           $pos = "0 -"+$pos+"px";
+                           $prev.css("background-position",$pos);                       
+                       }, function(){
+                           $("#leftnavigation ul li a").css("background-position","0 0"); 
+                       });                     
+                  
+                      
+    });
+    
+/* }); */
+</script>
+</div>
+
+        </div> 
+        
+            <div id="breadcrumb">
+                <div class="mcdonaldsbreadcrumb breadcrumb">
+
+ 
+   
+
+ 
+    
+   
+         
+ 
+        <div class="breadCrumb"> 
+                    
+                <a href="#" class="last">English</a>
+                       
+        </div>      
+              
+ 
+  
+  
+         </div>
+
+            </div>
+        
+        <div id="notification">
+       
+         
+            <div id="search">
+               <div class="parbase search"> 
+ 
+
+ 
+   
+   <form name="searchfrm" action="javascript:submitSearch();">
+     Search&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="search" rel=""> 
+   </form> 
+     <script language="javaScript"> 
+     function submitSearch() {
+         var collection ="canada" ;
+         var searchVal = document.searchfrm.search.value;
+         if (searchVal.trim()==""){ 
+             alert('Search');
+         }
+         else{
+             var formActionn = "/content/ca/en/search/search_results.html?queryText=" + searchVal.trim() + "&collection="+collection;
+             window.open(formActionn,"_self");  
+         }
+     }
+     </script></div>
+
+           </div>
+        
+        
+            <div id="language">
+                <div class="siteToggler">
+ 
+   
+
+<script>
+
+/*function siteToggler(lang,link)
+{    
+    setCookie( 'language', lang, 365, '/', '', '' );
+    window.location = link;
+}*/
+
+function siteToggler(lang,link,redirectSearchResultToSearch)
+{   
+    if((redirectSearchResultToSearch.indexOf('true')!=-1)&&(link.indexOf('/search_results.html')!=-1)){
+        link=link.replace('/search_results.html','.html');
+    } 
+    setCookie( 'mcd_language', lang, 365, '/', '', '' );
+    window.location = link;
+}
+
+
+</script>  
+
+
+    <!--<a href="javascript: siteToggler('fr', '/ca/fr.html')">Français </a> -->
+    
+     <a href="javascript: siteToggler('fr', '/ca/fr.html','false')">Français </a> 
+</div> 
+</div>
+
+        
+        
+            <div id="applynw"> 
+               <a href="https://careers.mcdonalds.ca/mcd-careers/applicant/location">Apply Now</a>
+            </div>  
+        
+         
+        
+            <div id="share">
+                <div class="share socialsharing">
+ 
+   
+
+
+
+ 
+<script>
+   var webtrends = ''; 
+   
+    function twitter()      
+    { if(webtrends){
+          //  Tracker1('uri','/share/twitter','title','Share_Twitter','share',''+encodeURIComponent(location.href)+''); 
+        }
+          window.open('http://www.addtoany.com/add_to/twitter?linkurl='+encodeURIComponent(location.href)+'&linkname='+encodeURIComponent(document.title),'twitter'); 
+    }
+    
+    function facebook()
+    { if(webtrends){
+           // Tracker1('uri','/share/facebook','title','Share_Facebook','share',''+encodeURIComponent(location.href)+'');  
+            }
+        window.open('http://www.facebook.com/share.php?u='+encodeURIComponent(location.href)+'&t='+encodeURIComponent(document.title),'facebook');        
+    }
+    
+    function delicious()
+    {  if(webtrends){
+           // Tracker1('uri','/share/delicious','title','Share_Delicious','share',''+encodeURIComponent(location.href)+'');    
+            }
+           window.open('http://delicious.com/save?v=5&noui&jump=close&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title), 'delicious');
+    }
+    
+    function digg()
+    {  if(webtrends){
+           // Tracker1('uri','/share/digg','title','Share_Digg','share',''+encodeURIComponent(location.href)+'');         
+            }
+        window.open('http://digg.com/submit?url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title),'digg');
+    }
+    
+    function googlebuzz()
+    {  if(webtrends){
+          //  Tracker1('uri','/share/googlebuzz','title','Share_Google_Buzz','share',''+encodeURIComponent(location.href)+'');  
+            }
+        window.open('http://www.google.com/buzz/post?url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title),'googlebuzz');
+    }
+    
+    function linkedin()
+    {  if(webtrends){
+          //  Tracker1('uri','/share/linkedin','title','Share_LinkedIn','share',''+encodeURIComponent(location.href)+''); 
+            }
+        window.open('http://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title)+'&source=mcdonalds','linkedin');
+    }
+    
+    function blogger()
+    { if(webtrends){
+           // Tracker1('uri','/share/blogger','title','Share_Blogger','share',''+encodeURIComponent(location.href)+''); 
+            }
+        window.open('http://www.blogger.com/blog_this.pyra?t&u='+encodeURIComponent(location.href)+'&n='+encodeURIComponent(document.title),'blogger');
+    }
+    
+    function emailform()
+    {  if(webtrends){
+           // Tracker1('uri','/share/emailform','title','Share_Email','share',''+encodeURIComponent(location.href)+''); 
+            }            
+    }
+    
+    function rssnews()
+    {  if(webtrends){
+          //  Tracker1('uri','/share/rssnews','title','Share_RSSNews','share',''+encodeURIComponent(location.href)+''); 
+            }
+    }
+    
+    function googleplus()
+    {  if(webtrends){
+          //  Tracker1('uri','/share/googleplus','title','Share_Google_Plus','share',''+encodeURIComponent(location.href)+'');  
+            }
+        window.open('https://plus.google.com/share?url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title),'googleplus');
+    }
+
+</script>  
+                
+                
+        <a href="javascript:void(0);">Share</a>
+           </div>
+
+<div id="share_spacer"></div> 
+    
+ 
+  
+<div id="share_flyout" style="display: none; top: 30px; left: 20.484375px;">
+    
+                <a href="javascript:facebook();" class="external" id="share_facebook" title="Facebook"><img src="/content/dam/Canada/en/socialsharing/share_facebook.png" width="16" height="16" alt="Facebook"></a>      
+            
+                <a href="javascript:twitter();" class="external" id="share_twitter" title="Twitter"><img src="/content/dam/Canada/en/socialsharing/share_twitter.png" width="16" height="16" alt="Twitter"></a>
+            
+                <a href="javascript:googleplus();" class="external" id="share_googleplus" title="Google Plus"><img src="/content/dam/Canada/en/socialsharing/share_gplus.png" width="16" height="16" alt="Google Plus"></a>
+            
+</div> 
+<div style="clear:both"></div>
+
+   </div>
+
+        
+        
+        
+            <div id="locator"> 
+               <a href="/ca/en/restaurant_locator.html">Restaurant Locator</a>
+           </div>  
+              
+        </div>
+        
+    </div>
+</div>  
+     
+        
+
+ 
+   
+    <div id="page_wrapper">
+        <div id="page_content">
+    
+    
+        <div id="page_narrow_hero" style="padding-top: 81px; #padding-top: 75px; padding-left: 0px;padding-bottom: 0px; max-width:886px;overflow:hidden; margin-bottom:-2px; #margin-bottom:0px; _margin-bottom:0px;">
+            <div class="parsys herosectionpar"><div class="uploadHtml section">
+
+
+ 
+   
+      <div id="import_html">
+            <style>
+.featuredcontent{
+margin-top: -85px;
+}
+.main_content_inner_ko{
+display:none;
+}
+#page_footer{
+position: relative;
+z-index: 10;
+}
+#page_content{
+position: relative;
+z-index: 5;
+}
+</style>
+<!-- ALL YOUR HTML CODE WILL BE PLACED IN HERE -->
+                                <link rel="stylesheet" type="text/css" media="all" href="/content/dam/Canada/en/fq-homepage-2013/css/main.css">
+                                <link rel="stylesheet" type="text/css" media="all" href="/content/dam/Canada/en/fq-homepage-2013/css/animate.css">
+
+                                <script src="/content/dam/Canada/en/fq-homepage-2013/js/jquery.min.js"></script>
+                                <script type="text/javascript" src="/content/dam/Canada/en/fq-homepage-2013/js/jquery.parallax.js"></script>
+                                <script type="text/javascript" src="/content/dam/Canada/en/fq-homepage-2013/js/jquery.event.frame.js"></script>
+                                <script src="/content/dam/Canada/en/fq-homepage-2013/js/modernizr.js"></script>
+                                <script src="/content/dam/Canada/en/fq-homepage-2013/js/main.js"></script>
+
+                                <div class="fq-homepage-wrapper">
+                                  <div class="fq-homepage-overlay"><img src="/content/dam/Canada/en/fq-homepage-2013/images/fq-homepage-overlay.png" alt=""></div>
+
+                                  <div class="fq-header">
+                                      <img src="/content/dam/Canada/en/fq-homepage-2013/images/fq-homepage-header.png" alt="">
+                                    <div class="fq-cta">
+                                      <a href="http://yourquestions.mcdonalds.ca/"><img src="/content/dam/Canada/en/fq-homepage-2013/images/fq-homepage-cta.png" alt=""></a>
+                                    </div>
+                                  </div>
+
+                                  <div id="parallax" class="parallax-viewport">
+                                      <div class="parallax-layer parallax6 floating2" style="top: 19.12410615029042%; margin-top: -168.2921341225557px; left: 37.63087244716845%; margin-left: -372.54563722696764px;">
+                                        <img src="/content/dam/Canada/en/fq-homepage-2013/images/fq-homepage-bg-questions-1.png" alt="">
+                                      </div>
+                                      <div class="parallax-layer parallax8 floating" style="top: 50.020812709452024%; margin-top: -440.1831518431778px; left: 30.74666228584391%; margin-left: -304.39195662985475px;">
+                                        <img src="/content/dam/Canada/en/fq-homepage-2013/images/fq-homepage-bg-questions-2.png" alt="">
+                                      </div>
+                                      <div class="parallax-layer parallax1 floating" style="top: 49.86571142968824%; margin-top: -428.84511829531885px; left: 30.82420993299475%; margin-left: -302.07725734334855px;">
+                                          <img src="/content/dam/Canada/en/fq-homepage-2013/images/textbox-1.png" alt="">
+                                        <p>Is there any alien in the chicken nuggets?”</p>
+                                      </div>
+                                      <div class="parallax-layer parallax2 floating2" style="top: 49.81849810453186%; margin-top: -428.439083698974px; left: 30.858602398302626%; margin-left: -302.4143035033657px;">
+                                          <img src="/content/dam/Canada/en/fq-homepage-2013/images/textbox-2.png" alt="">
+                                        <p>is the chicken real or pink sludge”</p>
+                                      </div>
+                                      <div class="parallax-layer parallax3 floating" style="top: 19.063431520839348%; margin-top: -163.94551107921842px; left: 30.82420993299475%; margin-left: -302.07725734334855px;">
+                                        <img src="/content/dam/Canada/en/fq-homepage-2013/images/textbox-3.png" alt="">
+                                        <p>how do you make your chicken nuggets?”</p>
+                                      </div>
+                                      <div class="parallax-layer parallax5 floating2" style="top: 49.81849810453186%; margin-top: -428.439083698974px; left: 37.67402762901142%; margin-left: -369.20547076431194px;">
+                                          <img src="/content/dam/Canada/en/fq-homepage-2013/images/textbox-5.png" alt="">
+                                        <p>what is really in chicken mcnuggets?”</p>
+                                      </div>
+                                      <div class="parallax-layer parallax4 floating" style="top: 19.063431520839348%; margin-top: -163.94551107921842px; left: 37.63963516370355%; margin-left: -368.86842460429483px;">
+                                          <img src="/content/dam/Canada/en/fq-homepage-2013/images/textbox-4.png" alt="">
+                                          <p>How are your chickens treated and slaughtered?”</p>
+                                      </div>
+                                      <div class="parallax-layer parallax7 floating" style="top: 19.063431520839348%; margin-top: -163.94551107921842px; left: 37.63963516370355%; margin-left: -368.86842460429483px;">
+                                        <img src="/content/dam/Canada/en/fq-homepage-2013/images/textbox-6.png" alt="">
+                                        <p>do you feed your chicken growth hormones?!”</p>
+                                      </div>
+                                  </div>
+
+                                  <div class="parallaxlinks">
+                                    <div class="parallax-link link1 transparent">
+                                      <a href="http://yourquestions.mcdonalds.ca/questions/2771"></a>
+                                    </div>
+                                    <div class="parallax-link link2 transparent">
+                                      <a href="http://yourquestions.mcdonalds.ca/questions/5306"></a>
+                                    </div>
+                                    <div class="parallax-link link3 transparent">
+                                      <a href="http://yourquestions.mcdonalds.ca/questions/15370"></a>
+                                    </div>
+                                    <div class="parallax-link link4 transparent">
+                                      <a href="http://yourquestions.mcdonalds.ca/questions/10043"></a>
+                                    </div>
+                                    <div class="parallax-link link5 transparent">
+                                      <a href="http://yourquestions.mcdonalds.ca/questions/2993"></a>
+                                    </div>
+                                    <div class="parallax-link link7 transparent">
+                                      <a href="http://yourquestions.mcdonalds.ca/questions/17011"></a>
+                                    </div>
+                                  </div>
+                                </div>
+      </div>
+</div>
+</div>
+
+        </div>
+        
+        
+        <div id="content_section" style="  padding-bottom: 0px;">
+        
+                
+ 
+   
+    <div id="main_content_segment" class="clear">
+        <div class="main_content_inner_ko" style="padding-top: 150px;">
+            <div class="parsys genericpagecontent"></div>
+
+        </div>
+    
+            <div>
+                <div class="featuredcontent parsys iparsys"><div class="iparys_inherited"><div class="featuredcontent parsys iparsys"></div>
+</div><div class="section"><div class="featurecallout parbase">
+
+
+ 
+                                
+
+        <div class="callouts">
+        <div class="callout_body_segement">
+            
+                <a href="/ca/en/promotions/rewards.html">
+                
+                <img src="/content/ca/en/_jcr_content/featuredcontent/featurecallout/featureimage1.img.jpg/1414789573111.jpg" title="">
+                    
+                            <div class="msg"><div class="carrot">Start Collecting</div></div>
+                            
+                </a>
+                <div class="callout_shadow"></div>
+            </div><div class="callout_body_segement">
+            
+                <a href="http://yourquestions.mcdonalds.ca/">
+                
+                <img src="/content/ca/en/_jcr_content/featuredcontent/featurecallout/featureimage2.img.jpg/1414789573111.jpg" title="">
+                    
+                </a>
+                <div class="callout_shadow"></div>
+            </div><div class="callout_body_segement">
+            
+                <a href="/ca/en/promotions/app.html">
+                
+                <img src="/content/ca/en/_jcr_content/featuredcontent/featurecallout/featureimage3.img.jpg/1414789573111.jpg" title="">
+                    
+                            <div class="msg"><div class="carrot">Download the mobile app</div></div>
+                            
+                </a>
+                <div class="callout_shadow"></div>
+            </div>
+        </div>
+          
+    
+    <div class="clear"></div> 
+                                                  </div>
+</div><div class="section"><div class="new"></div>
+</div>
+</div>
+
+            </div>
+              
+    
+    </div>
+    
+            
+            </div>
+        </div>
+    
+        <div id="page_footer">
+            <div class="parsys iparsys footeripar"><div class="iparys_inherited"><div class="parsys iparsys footeripar"><div class="section"><div class="footer">
+ 
+   
+
+ 
+
+ 
+   
+<style>
+    #page_footer, #page_footer a 
+    {
+        color: #FFFFFF;
+    }
+</style>
+
+<script>
+    
+    function twitterMCD() 
+    { 
+      //  Tracker('uri','/twitter/McDonalds','title','Go to Twitter.com/McDonalds');  
+        window.open('http://www.twitter.com/McDonalds'); 
+    }
+      function YouTubeMCD() 
+    {// alert("inside function");
+       // Tracker('uri','/twitter/McDonalds','title','Go to Twitter.com/McDonalds');  
+        window.open('http://www.YouTube.com/McDonalds'); 
+    }
+      function FlickerMCD() 
+    { 
+       // Tracker('uri','/twitter/McDonalds','title','Go to Twitter.com/McDonalds');  
+        window.open('http://www.Flicker.com/McDonalds'); 
+    }
+    function facebookMCD()
+    {
+        //Tracker('uri','/facebook/McDonalds','title','Go to Facebook.com/McDonalds');
+        window.open('http://www.facebook.com/McDonalds');
+    }    
+</script>
+
+<div id="page_footer_rule" style="border-color: #FFFFFF;"></div>
+
+<table border="0" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+    
+        <td align="left" valign="middle" class="bigger_and_bolder">
+ 
+                <div style="float:left;">
+            <a href="http://twitter.com/#!/mcd_canada" onclick="javascript:;" title="">
+                    <img align="absmiddle" src="/content/dam/Canada/en/global/twitter.png" alt=""><span style="margin-left:3px;">Follow</span>
+              </a> 
+           </div>     
+                      <div style="float:left; margin-left:8px;">
+            <a class="external" href="http://www.facebook.com/McDonaldsCanada" onclick="javascript:;" title="">
+                    <img align="absmiddle" src="/content/dam/Canada/en/global/facebook.png" alt=""><span style="margin-left:3px;">Like</span>
+              </a> 
+           </div>     
+
+           
+        
+                </td>
+            
+        <td align="right" valign="right" class="not_bigger_but_bolder">
+
+      <a href="/ca/en/contest_rules.html">Contest Rules</a>
+      
+           <span>|</span> 
+
+      <a href="/ca/en/our_story/corporate_info.html">Corporate Info</a>
+      
+           <span>|</span> 
+
+      <a href="/ca/en/our_story/corporate_info/press_room.html">Press Room</a>
+      
+           <span>|</span> 
+
+      <a href="/ca/en/help.html">Help</a>
+      
+           <span>|</span> 
+
+      <a href="/ca/en/privacy.html">Privacy</a>
+      
+           <span>|</span> 
+
+      <a href="/ca/en/terms_conditions.html">Terms &amp; Conditions</a>
+        
+  
+     <span>|</span>                 
+     <span style="color:#;font-size:px;"> ©2010-2014&nbsp;&nbsp;McDonald's</span>
+       
+       </td>
+    </tr>
+</tbody></table>
+        </div>
+</div></div>
+</div><div class="section"><div class="new"></div>
+</div>
+</div>
+
+        </div>
+    </div>
+
+<!--
+<script type="text/javascript"> 
+    $(function(){
+        var height = $('#page_narrow_hero').height();
+        //alert("hero height::"+height);
+        if(height<600)
+        {
+            var contentHeight = (600-height).toString() + "px";
+            //alert("content height::"+contentHeight);
+            $('#content_section').css("min-height",contentHeight);
+        }
+    });
+</script>
+-->
+
+    </div>
+    
+    <script type="text/javascript">
+
+    if ($.browser.mozilla) {
+        $('.callout_body_segement').each(function () {
+            if ($(this).children('a').length > 1) {
+                $(this).children('a:last').hide();
+                $(this).children('.msg').hide();
+            }
+        });
+    }
+
+    $(document).ready(function(){
+        $('.featurecallout .callout_body_segement').callouts();
+    });
+    </script>  
+    
+    
+             
+    <!-- START OF Google Analytics TAG -->    
+    <noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBZ2PB"
+    height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+    
+    <script type="text/javascript">
+      dataLayer =[];  
+      
+      //Added for canada Product specific Ga tracking
+        var externalId,productTitle;
+        externalId= $("meta[name=ga.externalId]").attr("content");
+        productTitle= $("meta[name=ga.productTitle]").attr("content");
+
+        if(typeof externalId != "undefined" && typeof productTitle != "undefined" ) {
+            if(externalId != null && productTitle != null) {
+                dataLayer.push({'externalId': externalId, 'title' : productTitle});
+            }
+        }
+
+      
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PBZ2PB');
+        
+            </script>
+    <!-- END OF Google Analytics TAG -->     
+              
+
+
+
+<script type="text/javascript">
+
+        var foodnav = new Image();
+
+        foodnav.src = "/images/navigation/food_flyout_bg.png";
+
+        var promonav = new Image();
+
+        promonav.src = "/images/navigation/promotions_flyout_bg.png";
+
+        var singlenav = new Image();
+
+        singlenav.src = "/images/navigation/nav_single_column_bg.png";
+
+        var inputnav = new Image();
+
+        inputnav.src = "/images/navigation/input_flyout_bg.png";
+
+</script>     
+
+   </body></html>

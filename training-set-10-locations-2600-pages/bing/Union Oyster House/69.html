@@ -1,0 +1,704 @@
+<html lang="en" class=""><head><script type="text/javascript" src="//api-public.addthis.com/url/shares.json?url=http%3A%2F%2Fwww.ratebeer.com%2Fp%2Funion-oyster-house-boston%2F17089%2F&amp;callback=_ate.cbs.sc_httpwwwratebeercompunionoysterhouseboston170890"></script><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.5f0XKKY4cHU.O/m=auth/exm=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCPjWK2K7EJ2pBvjMdYDk7aR1ZSh1Q/cb=gapi.loaded_1" async=""></script><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.5f0XKKY4cHU.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCPjWK2K7EJ2pBvjMdYDk7aR1ZSh1Q/cb=gapi.loaded_0" async=""></script><script type="text/javascript" src="//ct1.addthis.com/static/r07/plugins/counter020.js"></script><script type="text/javascript" src="//apis.google.com/js/plusone.js" gapi_processed="true"></script>
+
+<script async="" src="//www.google-analytics.com/analytics.js"></script><script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/places/js/fancypack.js"></script>
+<script type="text/javascript" src="/places/js/fancypack2.js"></script>
+<script type="text/javascript" src="/javascript/animatedcollapse.js"></script>
+<script type="text/javascript" src="/javascript/ajax.js"></script>
+<link rel="stylesheet" href="/places/css/fancypack.css" type="text/css" media="screen">
+<style type="text/css">
+
+.ainput label.focused {
+	background-color: #CEE3F6;
+}
+
+.ainput {
+    margin:4px;
+    background-color:#EFEFEF;
+    border-radius:4px;
+    border:1px solid #D0D0D0;
+    overflow:auto;
+    float:left;
+}
+
+.ainput label {
+    float:left;
+    width:2.0em;
+    text-align:center;
+    padding:3px 0px;
+    display:block;
+}
+
+.ainput  input {
+    position:absolute;
+    left: -60px;
+}
+
+.availTable {
+	padding: 7px;
+	border-bottom: 1px dotted #ccc;
+ }
+ 
+#cover {
+display:none;
+position:absolute;
+left:0px;
+top:0px;
+width: 100%;
+height: 100%;
+background:#fff;
+filter:alpha(Opacity=75);
+opacity:0.5;
+-moz-opacity:0.75;
+-khtml-opacity:0.75
+}
+
+#beerAvailable {
+display:none;
+left:200px;
+top:100px;
+width: 600px;
+height: 600px;
+position:absolute;
+z-index:10;
+background:white;
+padding:2px;
+font:10pt tahoma;
+overflow-y: auto;
+overflow-x: hidden;
+border: 3px solid #003366;
+}
+#closeBeerAvailable{
+display: none;
+left: 700px;
+top: 70px;
+width: 100px; 
+height: 20px;
+z-index:100;
+position: absolute;
+padding: 10px;
+text-align: center; 
+background: #EBF1F6; 
+color: #003366; 
+font-weight: bold; 
+font-size: 16px;
+border: 3px solid #003366;
+}
+
+
+#twitter_update_list {
+/* the main container */
+margin: 7px 0px;
+padding: 0px;
+text-indent:0px;
+}
+ 
+#twitter_update_list li {
+/* wraps a single list */
+border-bottom: 1px solid #e0e0e0; 
+list-style: none;
+padding: 7px 0px;
+margin: 7px 0px;
+text-indent:0px;
+}
+ 
+#twitter_update_list li span {
+/* wraps the tweet */
+}
+ 
+#twitter_update_list li a {
+/* wraps the link to the tweet */
+/* by default it have 85% font-size therefore you might want to change it like below */
+font-size:12px;
+}
+
+</style>
+<script type="text/javascript">
+
+
+
+
+var bustcachevar=1 //bust potential caching of external pages after initial request? (1=yes, 0=no)
+var loadedobjects=""
+var rootdomain="http://www.ratebeer.com/places/"
+var bustcacheparameter=""
+
+function ajaxpage(url, containerid){
+var page_request = false
+if (window.XMLHttpRequest) // if Mozilla, Safari etc
+page_request = new XMLHttpRequest()
+else if (window.ActiveXObject){ // if IE
+try {
+page_request = new ActiveXObject("Msxml2.XMLHTTP")
+} 
+catch (e){
+try{
+page_request = new ActiveXObject("Microsoft.XMLHTTP")
+}
+catch (e){}
+}
+}
+else
+return false
+page_request.onreadystatechange=function(){
+loadpage(page_request, containerid)
+}
+if (bustcachevar) //if bust caching of external page
+bustcacheparameter=(url.indexOf("?")!=-1)? "&"+new Date().getTime() : "?"+new Date().getTime()
+page_request.open('GET', url+bustcacheparameter, true)
+page_request.send(null)
+}
+
+function loadpage(page_request, containerid){
+if (page_request.readyState == 4 && (page_request.status==200 || window.location.href.indexOf("http")==-1))
+document.getElementById(containerid).innerHTML=page_request.responseText
+}
+
+function loadobjs(){
+if (!document.getElementById)
+return
+for (i=0; i<arguments.length; i++){
+var file=arguments[i]
+var fileref=""
+if (loadedobjects.indexOf(file)==-1){ //Check to see if this object has not already been added to page before proceeding
+if (file.indexOf(".js")!=-1){ //If object is a js file
+fileref=document.createElement('script')
+fileref.setAttribute("type","text/javascript");
+fileref.setAttribute("src", file);
+}
+else if (file.indexOf(".css")!=-1){ //If object is a css file
+fileref=document.createElement("link")
+fileref.setAttribute("rel", "stylesheet");
+fileref.setAttribute("type", "text/css");
+fileref.setAttribute("href", file);
+}
+}
+if (fileref!=""){
+document.getElementsByTagName("head").item(0).appendChild(fileref)
+loadedobjects+=file+" " //Remember this object as being already added to page
+}
+}
+}
+
+
+
+
+
+animatedcollapse.addDiv('kelly', 'fade=1')
+
+animatedcollapse.init()
+
+</script>
+
+
+<style>
+    .Help {
+            position: absolute; posTop: 0; posLeft: 0;
+            border-width:1; border-style: dashed;
+            background-color: #FFCC00; color: #000000;
+            width:240; font-size:9pt;
+            margin:10px 10px 10px 10px;
+            padding:10px 10px 10px 10px;
+          }
+	.hid { visibility: hidden; display: none;}
+	
+
+</style>
+<link rel="stylesheet" type="text/css" href="//ct1.addthis.com/static/r07/widget/css/widget007.old.css" media="all"><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/osd.js"></script><style type="text/css">.fancybox-margin{margin-right:15px;}</style><link rel="stylesheet" type="text/css" href="//ct1.addthis.com/static/r07/plugins/counter015.css" media="all"></head><body alink="#CC3300" link="#003388" vlink="#330044" text="#333333" marginheight="14" marginwidth="0" topmargin="0" leftmargin="0"><div id="FOArea" class="Help" style="display: none">
+ </div>
+ <script language="JavaScript">
+
+function mouseDown(e) {
+ var clickType=1;
+ var tgt="";
+ if (parseInt(navigator.appVersion)>3) {
+  if (navigator.appName=="Netscape") {
+   clickType=e.which;
+   tgt=""+e.target;
+   if (tgt.length!=0 && tgt.charAt(tgt.length-1)=="#") 
+    overImage=1;
+  }
+  else {
+   clickType=event.button;
+   if (""+event.srcElement.className=="disabledMenu")
+    overImage=1;
+  }
+  if (clickType!=1 && overImage) {
+   alert (message)
+   return false;
+  }
+ }
+ return true;
+}
+if (parseInt(navigator.appVersion)>3) {
+ document.onmousedown = mouseDown;
+ if (navigator.appName=="Netscape") 
+  document.captureEvents(Event.MOUSEDOWN);
+}
+
+
+    var HelpX, HelpY, HelpText;
+    var ToShow, ToClear;
+    function DoFlyOver()
+    {
+      if( ToClear != -1 ) window.clearTimeout( ToClear );
+      FOArea.innerText = HelpText;
+      FOArea.style.posLeft = HelpX + 20;
+      FOArea.style.posTop = HelpY + 20;
+      FOArea.style.display = "";
+      ToClear = setTimeout( "ClearFlyOver()", 8000, "JAVASCRIPT" );
+    }
+    function ClearFlyOver()
+    {
+      FOArea.style.display = "none";
+    }
+    function FlyOver( Text )
+    {
+      HelpText = Text;
+      HelpX = window.event.clientX;
+      HelpY = window.event.clientY;
+      ToShow = setTimeout( "DoFlyOver()", 500, "JAVASCRIPT" );
+    }
+
+	function PopUpEdit(PlaceID)
+{
+    RedirPage = "/Places/showplaceavail.asp?placeid=" + PlaceID;
+    window.open(RedirPage, "ShowPlaceAvailability", "addrbar=0,toolbar=0,menubar=0,left=337,top=209,resizable=1,height=600,width=480,scrollbars=1");
+}
+
+function sums(obj){
+	var nambiance = document.getElementById('Ambiance').value;
+	var nservice = document.getElementById('Service').value;
+	var nselection = document.getElementById('Selection').value;
+	var noverall = document.getElementById('Overall').value;
+	var sum = Math.round(100*(1 * nambiance + 1 * nservice + 1 * nselection + 1 * noverall)/50);
+	if (sum == 0) {
+		document.getElementById('totalscore').value = "";
+	} else {
+		document.getElementById('totalscore').value = sum;
+	}
+}
+
+function checkLength(form){
+    if (document.Charles.Comments.value.length > 3900){
+        $('#reviewAlert').html("<br>Your review is too long. It must be 3900 characters or less.");
+		document.Charles.Comments.style.background = '#FF9999';
+        return false;
+    } else {
+		document.Charles.Comments.style.background = '#FFFFFF';
+		$('#RatingLength').html(3900 - document.Charles.Comments.value.length);
+		$('#reviewAlert').html("");
+	}
+    return true;
+}
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<title>Union Oyster House | Boston, Massachusetts</title>
+
+<meta name="description" content="Union Oyster House in Boston, Reviews and opinions of the beer establishment Union Oyster House in Boston, beer in  Massachusetts">
+<meta name="keywords" content="Union Oyster House, Boston, Massachusetts, beer, Restaurant">
+<link rel="stylesheet" href="/css_core.css?v=201407" type="text/css">
+<meta http-equiv="content-language" content="EN">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js">
+</script>
+<script type="text/javascript">
+GS_googleAddAdSenseService("ca-pub-4822594167621467");
+GS_googleEnableAllServices();
+</script><script src="http://partner.googleadservices.com/gampad/google_ads.js"></script>
+<script type="text/javascript">
+GA_googleAddSlot("ca-pub-4822594167621467", "header-leaderboard");
+GA_googleAddSlot("ca-pub-4822594167621467", "beerpage468");
+</script>
+<script type="text/javascript">
+GA_googleFetchAds();
+</script>
+
+
+
+<div id="rbbody">
+<table align="center" width="1000" cellpadding="0" cellspacing="0" border="0" style="height: 80px; z-index:5;">
+        <tbody><tr>
+        <td rowspan="2">
+
+		<a href="/"><img src="/images/logos/rblogo042013.png" alt="RateBeer" border="0" width="180" height="52" style="padding-left: 20px; padding-top: 0px;"></a>
+
+                
+        </td>
+        <td valign="top" align="right" style="padding: 14px 12px 0px 0px;">
+	
+			<div class="no-print">
+                <form action="/findbeer.asp" method="POST" name="search">
+                <span style="color:#fff"><a href="/NewUser.asp"><span style="color: #fff;">Sign Up</span></a> or <a href="/login.asp"><span style="color: #fff;">Login</span></a></span>  
+                <span style="color:#fff">:</span> <a href="/search.php"><span style="color:#fff">Advanced Search</span></a> &nbsp; <input type="text" name="BeerName" value="" size="3" style="padding: 0px 6px;width: 230px; height: 25px; font-size: 12px; background-color:#fff; border: 0px; border-radius: 28px;"><input type="submit" style="margin-left: 3px; height: 25px; width: 26px; border: 0px; position: relative; top: -1px;background-color:#4d90fe; border-radius: 20px;font-size:10px;color:#fff;cursor: pointer;padding-top: 1px;" value="GO">
+				</form>
+			</div>
+        </td></tr>
+
+        <tr><td align="right" valign="bottom"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td align="right">
+                <ul id="nav" class="no-print">
+                <li><a href="/places/mylocal.asp">Local</a></li>
+                    <li><a href="/beer-ratings/">Ratings</a>
+					
+				
+                    </li><li><a href="/users">People</a></li>
+
+
+                
+                    <li><a href="/shop">Shop</a></li>
+					
+					                
+                    <li><a href="/events">Events</a></li>
+					
+					
+                
+                    <li><a id="current" href="/places/browse/">Places</a></li>
+                
+                    <li><a href="/forums/">Forums</a></li>
+
+
+                </ul></td></tr></tbody></table></td></tr></tbody></table>
+
+<div class="fums" style="border-bottom: 1px solid #e0e0e0 !important; border-color: #f0f0f0; background: #f4f4f4; width: 1000px; margin: auto; text-align: center; white-space:nowrap;height: 100px;padding-top:10px;"><!-- header-leaderboard -->
+<script type="text/javascript">
+GA_googleFillSlot("header-leaderboard");
+</script><script src="http://pubads.g.doubleclick.net/gampad/ads?correlator=667424028360704&amp;output=json_html&amp;callback=GA_googleSetAdContentsBySlotForSync&amp;impl=s&amp;client=ca-pub-4822594167621467&amp;slotname=header-leaderboard&amp;page_slots=header-leaderboard&amp;cookie_enabled=1&amp;url=http%3A%2F%2Fwww.ratebeer.com%2Fp%2Funion-oyster-house-boston%2F17089%2F&amp;lmt=1415072537&amp;dt=1415072537604&amp;cc=100&amp;biw=1004&amp;bih=685&amp;adk=4258097728&amp;adx=2&amp;ady=90&amp;ifi=1&amp;oid=3&amp;u_his=50&amp;u_h=768&amp;u_w=1024&amp;u_ah=768&amp;u_aw=1024&amp;u_cd=24&amp;u_nplug=1&amp;u_nmime=1&amp;flash=0&amp;gads=v2&amp;ga_vid=839514389.1415072538&amp;ga_sid=1415072538&amp;ga_hid=1158337959"></script></div>
+<div id="container">
+
+
+    
+<div id="rbbody">
+<!-- Content begins -->
+
+<div id="container">
+
+
+<table width="100%" cellpadding="20" cellspacing="0" border="0" style="border-top: 0px solid #e0e0e0;">
+<tbody><tr>
+<td valign="top">
+    <table cellpadding="0" cellspacing="0" border="0">
+    <tbody><tr>
+    <td>
+
+
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e6a8436520703ea"></script><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;"><iframe id="_atssh250" title="AddThis utility frame" src="//ct1.addthis.com/static/r07/sh178.html#iit=1415072543288&amp;tmr=load%3D1415072537981%26core%3D1415072539752%26main%3D1415072543091%26ifr%3D1415072543411&amp;cb=0&amp;cdn=1&amp;chr=ISO-8859-1&amp;kw=Union%20Oyster%20House%2CBoston%2CMassachusetts%2Cbeer%2CRestaurant&amp;ab=-&amp;dh=www.ratebeer.com&amp;dr=&amp;du=http%3A%2F%2Fwww.ratebeer.com%2Fp%2Funion-oyster-house-boston%2F17089%2F&amp;dt=Union%20Oyster%20House%20%7C%20Boston%2C%20Massachusetts&amp;dbg=0&amp;md=2&amp;cap=tc%3D0%26ab%3D0&amp;inst=1&amp;vcl=0&amp;jsl=1&amp;prod=undefined&amp;lng=en-US&amp;ogt=&amp;pc=men&amp;pub=ra-4e6a8436520703ea&amp;ssl=0&amp;sid=54584b1b097bb1a1&amp;srpl=1&amp;srcs=1&amp;srd=1&amp;srf=1&amp;srx=1&amp;ver=300&amp;xck=0&amp;xtr=0&amp;og=&amp;aa=0&amp;csi=undefined&amp;toLoJson=uvs%3D54584b1be0398540000&amp;rev=9.3&amp;ct=1&amp;xld=1&amp;xd=1" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px; left: 0px; top: 0px;"></iframe></div><script type="text/javascript" src="http://ct1.addthis.com/static/r07/core162.js"></script>
+<div class="addthis_toolbox addthis_default_style " style="text-align: right; padding: 0px 0px; float: right; width: 212px;">
+<a class="addthis_button_facebook addthis_button_preferred_1 at300b" title="Facebook" href="#"><span class="at16nc at300bs at15nc at15t_facebook at16t_facebook"><span class="at_a11y">Share on facebook</span></span></a>
+<a class="addthis_button_twitter addthis_button_preferred_2 at300b" title="Tweet" href="#"><span class="at16nc at300bs at15nc at15t_twitter at16t_twitter"><span class="at_a11y">Share on twitter</span></span></a>
+<a class="addthis_button_email addthis_button_preferred_3 at300b" target="_blank" title="Email" href="#"><span class="at16nc at300bs at15nc at15t_email at16t_email"><span class="at_a11y">Share on email</span></span></a>
+<a class="addthis_button_print addthis_button_preferred_4 at300b" title="Print" href="#"><span class="at16nc at300bs at15nc at15t_print at16t_print"><span class="at_a11y">Share on print</span></span></a>
+<a class="addthis_button_google_plusone at300b"><div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 70px; height: 15px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 70px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 15px;" tabindex="0" vspace="0" width="100%" id="I0_1415072547712" name="I0_1415072547712" src="https://apis.google.com/se/0/_/+1/fastbutton?usegapi=1&amp;size=small&amp;hl=en-US&amp;origin=http%3A%2F%2Fwww.ratebeer.com&amp;url=http%3A%2F%2Fwww.ratebeer.com%2Fp%2Funion-oyster-house-boston%2F17089%2F&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.5f0XKKY4cHU.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Ft%3Dzcms%2Frs%3DAGLTcCPjWK2K7EJ2pBvjMdYDk7aR1ZSh1Q#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I0_1415072547712&amp;parent=http%3A%2F%2Fwww.ratebeer.com&amp;pfname=&amp;rpctoken=38172628" data-gapiattached="true" title="+1"></iframe></div></a>
+<a class="addthis_button_compact at300m" href="#"><span class="at16nc at300bs at15nc at15t_compact at16t_compact"><span class="at_a11y">More Sharing Services</span></span></a>
+<a class="addthis_counter addthis_bubble_style" href="#" style="display: inline-block;"><a class="addthis_button_expanded" target="_blank" title="View more services" href="#">0</a><a class="atc_s addthis_button_compact"><span></span></a></a>
+<div class="atclear"></div></div>
+
+
+<a href="/places/browse/">Places</a>&nbsp;&gt; 
+<a href="/places/countries/213/">United States</a>&nbsp;&gt;&nbsp;<a href="/places/states/21/">Massachusetts</a>&nbsp;&gt;&nbsp;<a href="/places/city/boston/21/213/">Boston</a>
+
+<br>
+<br>
+
+
+	   <table cellpadding="0" cellspacing="0" border="0" width="100%">
+		<tbody><tr>
+		<td valign="top">
+<div class="placename">Union Oyster House</div>
+Good <img src="/images/sm-star.gif"><img src="/images/sm-star.gif"><img src="/images/icons/sm-star-blank.gif"><img src="/images/icons/sm-star-blank.gif"><img src="/images/icons/sm-star-blank.gif"> <span style="font-size:10px;font-style:italic;color:#999;">based on 5 ratings</span><br>Type: Restaurant<br><br>41 Union St<br>Boston, Massachusetts United States 02108  <a href="/maps/print-17089.htm" target="_new"><img src="/images/print.gif" border="0"> [ print map ]</a><br><a href="tel:617 227 2750"><img src="/images/phone.gif" border="0"> <b>617 227 2750</b><br></a><br><a href="http://www.unionoysterhouse.com/index.html" target="_blank">unionoysterhouse.com/index.html</a><span style="color: #999;"></span><br><br>Hours:  Su-th 11a-9.30, f-sa 11a-10p, Bar to midnight<br><br><br>Mayor: <strong><a href="/user/207710/">ttroha</a></strong> (1) <span style="color: #ccc;">|</span> Taps: <b>8</b> <span style="color: #ccc;">|</span> Bottles: <b>6</b> <br><br><br>
+
+
+
+
+</td>
+<td valign="top" style="text-align:right;">
+<a href="http://res.cloudinary.com/ratebeer/image/upload/d_plac_def.png/plac_17089.jpg"><img style="border: 1px solid #999;" width="200" src="http://res.cloudinary.com/ratebeer/image/upload/w_200,c_limit,q_80,d_plac_def.png/plac_17089.jpg" alt="Union Oyster House"></a><br><br><span align="right" style="line-height: 1.5;"><b><big>Create a free account for these features:</big></b><br><a href="/editplace/17089/"><img src="/images/icons/edit_grey.gif" border="0" style="position: relative; top: 3px;"> Edit This Place</a> | <a href="/Events-Add.asp?pid=17089"><img src="/images/icons/action_add_green.gif" border="0" style="position: relative; top: 3px;"> Add Event Here</a><br><br><div id="CheckInMsg" class="medium awesome orange" style="display: none;"></div><div id="CheckInButton"><a href="#" class="medium awesome orange" onclick="ajaxpage('/places/inc_checkin.asp?p=17089','CheckInMsg'); document.getElementById('CheckInButton').style.display = 'none'; document.getElementById('CheckInMsg').style.display= 'block';	return false;"><span style="color: #fff;">Check In</span></a></div> <br><br></span>
+</td>
+</tr>
+</tbody></table>
+
+
+
+
+</td>
+    </tr>
+    <tr>
+    <td valign="top" colspan="2">
+
+    
+
+
+
+    <table width="100%" cellpadding="2" cellspacing="0" border="0" bgcolor="#f0f0f0" style="border-bottom: 1px solid #e0e0e0; padding: 14px;" class="curvy">
+    <tbody><tr>
+    <td valign="top">
+    <strong><font color="#666666">Beer Available At Union Oyster House</font></strong> (arranged by most recent)<br>
+
+	<a title="Friday, May 02, 2014" href="/beer/harpoon-dark/696/">Harpoon Dark</a> <em>77</em>
+
+  
+    </td>
+    </tr>
+    </tbody></table>
+    <table width="100%" cellpadding="2" cellspacing="0" border="0" bgcolor="#e9e9e9" style=" border-bottom: 1px solid #e0e0e0; padding: 6px 6px 6px 14px;" class="curvy">
+    <tbody><tr>
+    <td valign="top" style="color: #ccc;">
+	
+		<a href="/login.asp"><img border="0" alt="add beers to this location" src="/images/icons/add.gif"> Sign in to add beer</a>
+		&nbsp;&nbsp; | &nbsp;&nbsp;
+	<a href="/login.asp"><img src="/images/icons/action_check.gif" border="0"> Sign in to edit availabile beers</a>
+	
+	&nbsp;&nbsp; | &nbsp;&nbsp;
+	 <a href="/shelftag2-wfm.asp?pid=17089"><img border="0" src="/images/print.gif"> Print Shelftags</a>
+	&nbsp;&nbsp; | &nbsp;&nbsp;
+	 <a href="/places/customshelftagprint.asp?placeid=17089"><img border="0" src="/images/print.gif"> Customize Shelftags</a>
+    
+    </td>
+    </tr>
+    </tbody></table>
+     
+
+
+    
+    
+    <p style="margin: 20px;">
+</p><center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-4822594167621467";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text";
+google_ad_channel ="";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "000033";
+google_color_url = "3300FF";
+google_color_text = "000033";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><ins id="aswift_0_expand" style="display:inline-table;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:468px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:468px;background-color:transparent"><iframe width="468" height="60" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+<br>
+<script type="text/javascript"><!--
+google_ad_client = "pub-4822594167621467";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text";
+google_ad_channel ="";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "000033";
+google_color_url = "3300FF";
+google_color_text = "000033";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><ins id="aswift_1_expand" style="display:inline-table;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:468px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:468px;background-color:transparent"><iframe width="468" height="60" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</center>
+
+<br>
+
+       <!-- <span style="color: #cc9900"><b>RateBeer Brew Tour Guide's Comments</b></span><br>
+        <br>
+        <br> -->
+    
+    <b></b><div style="color: #666666;padding-top:6px;width: 100%;font-size: 16px;"><b>
+5 reviews for Union Oyster House
+
+	</b>
+
+	<table width="100%" border="0" cellpadding="0" cellspacing="10" style="border-bottom: 1px solid #e0e0e0;border-top: 1px solid #e0e0e0;"><tbody><tr><td>
+
+<table border="0" cellpadding="0" cellspacing="0" width="240"><tbody><tr><td class="beerfoot" width="60" style="border-right: 1px solid #ccc;text-align:right;color:#777;">&nbsp;Ambiance&nbsp;</td><td><img src="/images/icons/group80.gif" height="14" width="128.8"> <strong>92%</strong></td></tr><tr><td class="beerfoot" width="60" style="border-right: 1px solid #ccc;text-align:right;color:#777;">&nbsp;Service&nbsp;</td><td><img src="/images/icons/group80.gif" height="14" width="81.2"> <strong>58%</strong></td></tr><tr><td class="beerfoot" width="60" style="border-right: 1px solid #ccc;text-align:right;color:#777;">&nbsp;Selection&nbsp;</td><td><img src="/images/icons/group80.gif" height="14" width="57.4"> <strong>41%</strong></td></tr><tr><td class="beerfoot" width="60" style="border-right: 1px solid #ccc;text-align:right;color:#777;">&nbsp;Food&nbsp;</td><td><img src="/images/icons/group80.gif" height="14" width="126"> <strong>90%</strong></td></tr><tr><td class="beerfoot" width="60" style="border-right: 1px solid #ccc;text-align:right;color:#777;">&nbsp;Value&nbsp;</td><td><img src="/images/icons/group80.gif" height="14" width="72.8"> <strong>52%</strong></td></tr><tr><td class="beerfoot" width="60" style="border-right: 1px solid #ccc;text-align:right;color:#777;">&nbsp;Overall&nbsp;</td><td><img src="/images/icons/group80.gif" height="14" width="88.2"> <strong>63%</strong></td></tr><tr><td class="beerfoot" width="60" style="border-right: 1px solid #ccc;text-align:right;color:#777;">&nbsp;Rating&nbsp;</td><td><img src="/images/icons/group80.gif" height="14" width="91"> <strong>65%</strong></td></tr></tbody></table>
+</td>
+
+</tr></tbody></table>
+
+</div>
+<a name="ratings"></a>
+<br><br>
+
+
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="padding-left: 18px; padding-right: 18px; padding-top: 0px; margin: 0px;">
+
+
+<tbody><tr><td width="600"><div style="padding: 20px 0px 0px 0px;"><div style="width: 60px; float: left; padding-right: 10px;"><img style="max-width: 60px; max-height: 60px; height: auto; width: auto;" width="60" src="http://res.cloudinary.com/ratebeer/image/upload/w_80,c_limit,q_80,d_user_def.gif/user_JK.jpg" class="curvy"></div><div style="display:inline; padding: 0px 0px; font-size: 24px; font-weight: bold; color: #036;" title="40">40</div><span style="vertical-align: top; font-weight: bold">&nbsp;<small> AMBIANCE </small><big style="color: #999;">3/5</big>&nbsp;&nbsp;<small> SERVICE </small><big style="color: #999;">5/10</big>&nbsp;&nbsp;<small> SELECTION </small><big style="color: #999;">3/15</big>&nbsp;&nbsp;<small> FOOD </small><big style="color: #999;">N/A</big>&nbsp;&nbsp;<small> VALUE </small><big style="color: #999;">N/A</big>&nbsp;&nbsp;<small> OVERALL </small><big style="color: #999;">9/20</big></span></div><small style="color: #666666; font-size: 12px; font-weight: bold;"><a href="/user/6607/places/">JK &nbsp;(292)</a> St. Louis Park, Minnesota | July 4, 2014| Updated July 17, 2014</small><div style="padding: 10px 10px 20px 0px; border-bottom: 1px solid #e0e0e0;"> Completely missed the Colonial Ale. Waitress was very nice and so  was the bartender. The hostess was rude in my opinion. My clam chowder was ok and the baked beans were disappointing.  One time for the experience is probably enough.  Everything is expensive here. I am rating this as a beer place not as a restaurant.</div></td></tr><tr><td width="600"><div style="padding: 20px 0px 0px 0px;"><div style="width: 60px; float: left; padding-right: 10px;"><img style="max-width: 60px; max-height: 60px; height: auto; width: auto;" width="60" src="http://res.cloudinary.com/ratebeer/image/upload/w_80,c_limit,q_80,d_user_def.gif/user_ttroha.jpg" class="curvy"></div><div style="display:inline; padding: 0px 0px; font-size: 24px; font-weight: bold; color: #036;" title="76">76</div><span style="vertical-align: top; font-weight: bold">&nbsp;<small> AMBIANCE </small><big style="color: #999;">5/5</big>&nbsp;&nbsp;<small> SERVICE </small><big style="color: #999;">7/10</big>&nbsp;&nbsp;<small> SELECTION </small><big style="color: #999;">10/15</big>&nbsp;&nbsp;<small> FOOD </small><big style="color: #999;">10/10</big>&nbsp;&nbsp;<small> VALUE </small><big style="color: #999;">5/10</big>&nbsp;&nbsp;<small> OVERALL </small><big style="color: #999;">16/20</big></span></div><small style="color: #666666; font-size: 12px; font-weight: bold;"><a href="/user/207710/places/">ttroha &nbsp;(39)</a> Americus , Georgia | May 2, 2014</small><div style="padding: 10px 10px 20px 0px; border-bottom: 1px solid #e0e0e0;"> This is supposed to be America’s oldest restaurant. The atmosphere, decorations and food were excellent. I highly recommend the steamed oysters and clam chowder. The beer selection, however, is much to be desired. They have Sam Adams and Harpoon, plus Colonial Ale and Red Brick Ale. It was, however, WAY overpriced. I’m glad I went, and the seafood was delicious, but I’ll try to find cheaper places to eat next time. </div></td></tr><tr><td width="600"><div style="padding: 20px 0px 0px 0px;"><div style="width: 60px; float: left; padding-right: 10px;"><img style="max-width: 60px; max-height: 60px; height: auto; width: auto;" width="60" src="http://res.cloudinary.com/ratebeer/image/upload/w_80,c_limit,q_80,d_user_def.gif/user_rondphoto.jpg" class="curvy"></div><div style="display:inline; padding: 0px 0px; font-size: 24px; font-weight: bold; color: #036;" title="62">62</div><span style="vertical-align: top; font-weight: bold">&nbsp;<small> AMBIANCE </small><big style="color: #999;">5/5</big>&nbsp;&nbsp;<small> SERVICE </small><big style="color: #999;">4/10</big>&nbsp;&nbsp;<small> SELECTION </small><big style="color: #999;">10/15</big>&nbsp;&nbsp;<small> FOOD </small><big style="color: #999;">9/10</big>&nbsp;&nbsp;<small> VALUE </small><big style="color: #999;">5/10</big>&nbsp;&nbsp;<small> OVERALL </small><big style="color: #999;">12/20</big></span></div><small style="color: #666666; font-size: 12px; font-weight: bold;"><a href="/user/65843/places/">rondphoto &nbsp;(116)</a> Lakeside Park, Kentucky | June 27, 2013</small><div style="padding: 10px 10px 20px 0px; border-bottom: 1px solid #e0e0e0;"> History and ambiance rule here, along with a decent selection of good seafood.  Service was average, beer list is typical and modest, bill is surprisingly $$$ (but very good fare).  Worth a stop.</div></td></tr><tr><td width="600"><div style="padding: 20px 0px 0px 0px;"><div style="width: 60px; float: left; padding-right: 10px;"><img style="max-width: 60px; max-height: 60px; height: auto; width: auto;" width="60" src="http://res.cloudinary.com/ratebeer/image/upload/w_80,c_limit,q_80,d_user_def.gif/user_UDBeernut.jpg" class="curvy"></div><div style="display:inline; padding: 0px 0px; font-size: 24px; font-weight: bold; color: #036;" title="60">60</div><span style="vertical-align: top; font-weight: bold">&nbsp;<small> AMBIANCE </small><big style="color: #999;">5/5</big>&nbsp;&nbsp;<small> SERVICE </small><big style="color: #999;">6/10</big>&nbsp;&nbsp;<small> SELECTION </small><big style="color: #999;">5/15</big>&nbsp;&nbsp;<small> FOOD </small><big style="color: #999;">9/10</big>&nbsp;&nbsp;<small> VALUE </small><big style="color: #999;">6/10</big>&nbsp;&nbsp;<small> OVERALL </small><big style="color: #999;">14/20</big></span></div><small style="color: #666666; font-size: 12px; font-weight: bold;"><a href="/user/131100/places/">UDBeernut &nbsp;(138)</a> Moving to Jax, Florida | February 29, 2012| Updated March 4, 2012</small><div style="padding: 10px 10px 20px 0px; border-bottom: 1px solid #e0e0e0;"> Visited the UOH during my trip to the ABCF, I am surprised to find this place on Beeradvocate, but i will review none the less. Located near market/seaport area in Boston, The UOH is supposidly the oldest resturant in America and a favorite of JFK. 
+
+The UOH has a small bar on the main floor with seating areas on 3 levels. Booths where private and gave a good intimate feel, may be a good place to woo a love interest.
+
+Food is mostly seafood. We were served by a crabby waitress (excuss the pun), but she was prompt and not over bearing. Food was served fairly quick and was good, definalty not worth the prices they charged though.
+
+Beer selection was mostly Sam Adams and Harpoon. Nothing you could not find in any other bar in Boston. Beer was served in a frosted glass. :(
+
+Overall, kind of a tourist trap... but not a terrible place to visit if decent seafood is on the to do list while visiting boston.
+
+</div></td></tr><tr><td width="600"><div style="padding: 20px 0px 0px 0px;"><div style="width: 60px; float: left; padding-right: 10px;"><img style="max-width: 60px; max-height: 60px; height: auto; width: auto;" width="60" src="http://res.cloudinary.com/ratebeer/image/upload/w_80,c_limit,q_80,d_user_def.gif/user_drpimento.jpg" class="curvy"></div><div style="display:inline; padding: 0px 0px; font-size: 24px; font-weight: bold; color: #036;" title="54">54</div><span style="vertical-align: top; font-weight: bold">&nbsp;<small> AMBIANCE </small><big style="color: #999;">5/5</big>&nbsp;&nbsp;<small> SERVICE </small><big style="color: #999;">7/10</big>&nbsp;&nbsp;<small> SELECTION </small><big style="color: #999;">3/15</big>&nbsp;&nbsp;<small> FOOD </small><big style="color: #999;">8/10</big>&nbsp;&nbsp;<small> VALUE </small><big style="color: #999;">5/10</big>&nbsp;&nbsp;<small> OVERALL </small><big style="color: #999;">12/20</big></span></div><small style="color: #666666; font-size: 12px; font-weight: bold;"><a href="/user/20237/places/">drpimento &nbsp;(147)</a> La Crosse, Wisconsin | June 21, 2010</small><div style="padding: 10px 10px 20px 0px; border-bottom: 1px solid #e0e0e0;"> America’s oldest resto according to the plaque. Lots of differernt old rooms with different menus in each. They have the major usual beers on draft in Boston plus Boston Beer’s Colonial Ale which is pretty tasty stuff. It’s located on the Freedom Trail which is well marked and easy to follow on foot. They also have their own home cooked baked beans. And they go quite well with the Colonial Ale!</div></td></tr>  
+        </tbody></table>
+	<br>
+    </td></tr>
+    </tbody></table>
+
+</td>
+<td valign="top" style="width: 200px; background: #f9f9f9;">
+
+
+
+
+
+            <div style="background: #ffffcc; border: 1px dotted #ccc;padding: 14px; line-height: 2;" class="curvy">
+
+			<big><b>What's Your Opinion?</b></big><br>
+			<a href="/NewUser.asp?m=2" class="medium orange awesome">Add your review</a>
+			
+			</div>
+
+<br>
+<br>
+
+
+
+<b>Checked In</b><br><div style="line-height: 1.75;"><div style="float: left; padding: 7px 7px 7px 0px;"><a href="/user/6607/"><img style="height: 50px; max-height: 50px; max-width: 50px; width: auto; margin: 7px; float: left;" class="curvy" src="http://res.cloudinary.com/ratebeer/image/upload/w_50,c_limit,q_80,d_user_def.gif/user_JK.jpg" title="JK" border="0"></a></div> <div style="float: left; padding: 7px 7px 7px 0px;"><a href="/user/207710/"><img style="height: 50px; max-height: 50px; max-width: 50px; width: auto; margin: 7px; float: left;" class="curvy" src="http://res.cloudinary.com/ratebeer/image/upload/w_50,c_limit,q_80,d_user_def.gif/user_ttroha.jpg" title="ttroha" border="0"></a></div> </div><br><br><div style="clear: both;"></div><br>
+<div class="blue_header centered">Proximity Map</div>
+<a href="/beermap?p=17089" target="new"><img style="border: 1px solid #d7d7d7;" src="http://maps.google.com/staticmap?center=42.361268,-71.056889&amp;zoom=14&amp;size=230x230&amp;maptype=mobile&amp;markers=42.361268,-71.056889&amp;key=ABQIAAAAbgXGg-fbLPjlK5tB6Dhi1xQsKXpNDLoUP-MJ4gVWg2GnCvDF1xRjuJOPoba_eRDYcLaPuEhpWZAcUw"></a>
+<br>
+<center>
+<a href="/beermap?p=17089" target="new"><b>View Proximity Map</b></a>
+<br>
+<a href="/maps/print-17089.htm" target="new"><b>Print Travel Map</b></a></center>
+<br>
+
+
+<table width="100%" cellpadding="0" cellspacing="0" style="border: 1px solid #e0e0e0;" class="curvy">
+    <tbody><tr>
+    <td valign="top" width="33%" style="padding: 6px">
+
+<img src="/images/checkbox.gif"> WiFi <img src="/images/icons/wifi.gif" width="14" border="0"><br>
+<img src="/images/checkbox2.gif"> Children<br>
+<img src="/images/checkbox.gif"> Patio<br>
+<img src="/images/checkbox.gif"> Proper Glassware<br>
+
+
+
+    </td><td valign="top" width="33%foot" style="padding: 6px">
+<img src="/images/checkbox.gif"> Seasonals<br>
+<img src="/images/checkbox.gif"> Real Ales<br>
+<img src="/images/checkbox.gif"> Singles<br>
+<img src="/images/checkbox.gif"> Growlers<br>
+
+
+    </td>
+    </tr>
+
+	<tr><td colspan="2" class="beerfoot" align="right" style="padding: 6px">
+<a href="/newuser.asp?m=2">Edit Info | Add an Event</a> &nbsp;
+</td></tr>
+	</tbody></table>
+
+
+
+</td>
+</tr>
+</tbody></table>    
+
+
+
+</div>
+</div></div>
+<!-- Content ends -->
+<!-- Footer begins -->
+</div>
+
+<center>
+<link rel="stylesheet" href="/css/fa/css/font-awesome.min.css">
+<style type="text/css">
+#footaa a {color: #fff;}
+</style>
+<div class="no-print" id="footaa" style="width: 1000px; vertical-align: middle; color: #fff;">
+<div style="float: left; width: 200px;  padding: 14px 0px 20px 0px; text-align: left; color: #999;">
+<small>Copyright © 2000-2014,<br>
+RateBeer LLC. All rights<br>
+reserved.</small>
+</div>
+
+<div style="float: right; width: 200px; padding: 14px 0px 0px 0px; text-align: right;align:right;"><a href="/"><img src="/images/logos/rb_white_footer.png" border="0"></a> <a href="https://www.facebook.com/pages/RateBeer/153277718016808" style="color: #fff;"><i style="font-size:32px;" class="fa fa-facebook-square fa-fw"></i></a><a href="http://twitter.com/ratebeer" style="color: #fff;"><i style="font-size:32px;" class="fa fa-twitter fa-fw"></i></a>
+</div>
+
+<table cellpadding="14" cellspacing="0" border="0" id="foota">
+<tbody><tr><td valign="top" style="border-right: 1px solid #457; font-size: 12px; text-align: left;">
+<big><strong style="color: #999;">about us</strong></big><br>
+<a href="/about">About RateBeer</a><br>
+<a href="/faq">FAQ</a><br>
+<a href="/feedback">Contact/Feedback</a><br>
+<a href="/newbeers.asp">New Beers</a><br>
+
+</td><td valign="top" style="border-right: 1px solid #457; font-size: 12px; text-align: left;">
+<big><strong style="color: #999;">add</strong></big><br>
+<a href="/search.php">Advanced Search</a><br>
+<a href="/AddBeer.asp">Add A Beer</a> <br>
+<a href="/AddBrewer.asp">Add A Brewer</a><br> 
+<a href="/Places/AddAPlace.asp">Add A Place</a> <br>
+
+</td><td valign="top" style="border-right: 1px solid #457; font-size: 12px; text-align: left;">
+<big><strong style="color: #999;">membership</strong></big><br>
+<a href="/login.asp">Log In</a><br>
+<a href="/EditUser.asp">Edit Personal Info</a><br>
+<a href="/AboutPremium_Join.asp">Premium Membership</a><br>
+<a href="/Messages.asp">Your Messages</a><br>
+
+</td><td valign="top" style="font-size: 12px; text-align: left;">
+<big><strong style="color: #999;">the best</strong></big><br>
+<a href="/Ratings/beerClub.asp">100 Beer Club</a><br>
+<a href="/beer/top-50/">The Top 50</a><br>
+
+</td>
+</tr>
+</tbody></table>
+
+<br>
+
+<div style="clear:both;"></div>
+</div>
+</center>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1881232-1', 'ratebeer.com');
+  ga('require', 'displayfeatures');  
+  ga('send', 'pageview');
+
+</script>
+
+
+
+<noscript>
+&lt;div style="width: 100%; padding: 20px; background-color: #0FA; font-size: 14px;"&gt;&lt;h4&gt;this page requires javascript&lt;/h4&gt;&lt;br&gt;
+&lt;strong&gt;If you are using a script blocker please enable all of this page, including scripts from google.com. googlesyndication.com and google-analytics.com. These scripts are important to the health and happiness of this site.&lt;br&gt;&lt;br&gt;
+&lt;/strong&gt;
+Thanks!&lt;br&gt;&lt;br&gt;
+
+Cheers&lt;br&gt;&lt;br&gt;
+
+RateBeer&lt;br&gt;&lt;br&gt;&lt;/div&gt;
+</noscript><center>
+<script type="text/javascript">
+GA_googleFillSlot("Footer-leaderboard");
+</script>
+
+</center>
+
+
+
+
+<!-- Footer ends -->
+
+
+<iframe name="oauth2relay832614777" id="oauth2relay832614777" src="https://accounts.google.com/o/oauth2/postmessageRelay?parent=http%3A%2F%2Fwww.ratebeer.com#rpctoken=299864244&amp;forcesecure=1" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><iframe id="google_osd_static_frame_5920665934681" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe></body></html>

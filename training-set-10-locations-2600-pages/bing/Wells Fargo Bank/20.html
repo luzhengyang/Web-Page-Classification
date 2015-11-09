@@ -1,0 +1,1303 @@
+<html lang="en" class=""><head>
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+   <meta name="description" content="Search available Wells Fargo Real Estate Owned or bank-owned properties for sale.  Set specific home search criteria to display results you need. ">
+   <meta name="keywords" content=" REO listings, Real Estate Owned properties, property listings, reo listings ">
+
+   
+    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico">
+    <link href="css/jquery-ui-1.10.3.custom.css" rel="stylesheet" type="text/css">
+  
+    <script src="scripts/jquery-1.9.1.js" type="text/javascript"></script>
+   <script src="scripts/jquery-ui-1.10.3.custom.js" type="text/javascript"></script>
+   
+   	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="scripts/jquery.fancybox.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen">
+
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <title>Wells Fargo REO Property Search</title>
+ 
+     
+      <script language="javascript" type="text/javascript">
+           
+                        function onLoad(){ 
+                            if(top.location!=self.location)
+                            {
+                             top.location=self.location;
+                            } 
+                            
+                            
+                        }
+        
+      
+                     function tas() { if (1 != 0) try { /*do nothing*/ } catch (ex) { } }
+                    /*****Rao** fix for FF's PageRequestManagerServerErrorException error 3/30/2011**/
+
+                        if (!document.all) {
+                            window.onbeforeunload = function() {
+                            try{
+                                    Sys.WebForms.PageRequestManager.getInstance().add_endRequest(endRequest);
+                            } catch (ex) { }
+                            }
+                        
+                    }
+
+                    function endRequest(sender, e) {
+                    try{
+                        err = e.get_error();
+                        if (err) {
+                            if (err.name == "Sys.WebForms.PageRequestManagerServerErrorException") {
+                                e.set_errorHandled(true);
+                            }
+                        }
+                        } catch (ex) { }
+                    }
+
+                    String.prototype.replaceAll = function(strTarget,strSubString) {
+                            var strText = this;
+                            var intIndexOfMatch = strText.indexOf(strTarget);
+
+                            // Keep looping while an instance of the target string
+                            // still exists in the string.
+                            while (intIndexOfMatch != -1) {
+                                // Relace out the current instance.
+                                strText = strText.replace(strTarget, strSubString)
+
+                                // Get the index of any next matching substring.
+                                intIndexOfMatch = strText.indexOf(strTarget);
+                            }
+
+                // Return the updated string with ALL the target strings
+                // replaced out with the new substring.
+                return (strText);
+                }
+        </script>
+       
+        <script type="text/javascript">
+            	
+	    $(document).ready(function() {
+	                
+	                $('.iframe').fancybox({
+	                    beforeShow      : function () {
+	                        $('.fancybox-overlay').css({'background-color' : '#fff'});
+	                     },
+	                    afterShow       : function() {
+	                        $(this.content).attr("tabindex",1).focus()
+	                     },
+                        'width'         :   '940',
+                        'height'        :   '1400',
+                        'autoscale'     :   false,
+                        'transitionIn'  :   'none',
+                        'transitionOut' :   'none',
+                        'type'          :   'iframe',
+                        'title'         :   'Property Detail',
+                        'closeBtn'      :   true
+                        
+                       
+                        
+                       
+                        
+                        });
+	            });
+	           
+            	function showDialog2()
+            	{
+            	    $("#dialog-modal2").dialog(
+            	    {
+                	    width: 210,
+                	    height: 130,
+                	    dialogClass: 'myDialogClass',
+                	    position: { my: 'left', at: 'right', of: hours1}
+                	    
+                	   
+                	
+            	    });
+            	}
+            	
+            	function showDialog3()
+            	{
+            	    $("#dialog-modal3").dialog(
+            	    {
+                	    width: 230,
+                	    height: 130,
+                	    dialogClass: 'myDialogClass',
+                	    position: { my: 'left', at: 'right', of: hours2}
+                	    
+                	   
+                	
+            	    });
+            	}
+            	
+                   
+                            	
+	            </script>
+        
+   <script type="text/javascript" language="JavaScript" src="//libs.coremetrics.com/eluminate.js"></script>
+
+
+        <style type="text/css">
+            .myDialogClass .ui-widget-header 
+	           {
+	           	background-color:#a8a7a7;
+	           	color:#fff;
+	           	font-family:Arial;
+	           	font-size:1em;
+	           	font-weight:bold;
+	           } 
+	           
+	           .myDialogClass 
+	           {
+	           	border:solid 1px silver;
+	           	padding:none;
+	           }
+	           
+            .FieldLabel1
+            {
+            	color:Black;
+            	
+            }
+             .FieldLabel2
+            {
+            	color:#a20000;
+            
+            }
+            
+            .TextBox1
+            {
+            	border:solid 1px #8c8c8c;
+            	font-size:.85em;
+            }
+            
+             .TextBox2
+            {
+            	border:solid 1px #a20000;
+            }
+            
+              .TextBox3
+            {
+            	border:solid 1px #8c8c8c;
+            	font-size:.8em;
+            
+            	
+            }
+            
+            .redtext
+            {
+            	color:#a20000;
+            }
+            
+             .smalltext
+            {
+            	font-size:85%;
+            }
+            .lblright
+            {
+            	font-size:90%;
+            }
+            
+            .ReducedPrice 
+            {
+            	color:#87d66b;
+            }
+        </style>
+        
+<script language="javascript" type="text/javascript" src="http://libs.coremetrics.com/configs/50060000.js"></script><script language="javascript" type="text/javascript" src="http://data.coremetrics.com/cookie-id.js?fn=eluminate322"></script><style type="text/css">.fancybox-margin{margin-right:15px;}</style></head>
+
+<body onload="javascript:onLoad();">
+
+    
+    <form name="form1" method="post" action="WBREOHome.aspx?srchState=NC&amp;srchCity=&amp;srchCounty=&amp;srchZip=&amp;srchPriceLower=0&amp;srchPriceUpper=9999999&amp;srchPropertyType=&amp;srchBeds=0&amp;srchBaths=0&amp;srchStatus=" id="form1">
+<div>
+<input type="hidden" name="SM1_HiddenField" id="SM1_HiddenField" value="">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=lpkjFzSN-5s1oenxs3bvhUhr3I4j9nxp08epoGuV5hcm306TRZYB8YSgQZAIVWhuOIWfIBy0raOR1egCLoUo81ElEbo1&amp;t=635294915132453548" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=tqm9i88kJygyARD9T2Y9oMYivtiS2DBQX5F-H51OUX_nrCQaVEKtYNon6r59jtgeWZjooWL1sH6tnVHybgpXH5th6wNi2aW-uEnU73TZYoL7JH4lHZfhYkUvftUvdwEVBgeoYw2&amp;t=ffffffff886f56f4" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=E_eMTIj2Yg_2331WO-ZAO1T_DhyutDNDOucBhbB7WV_ypeE0rQxCzgdndLRhqVGBXNgyJ7osC5TdcwbzDcvAtTu0Iub0o7BrqDpjaafJFYy0bQ5v0XEcape9uafQTlnNRGAbbA2&amp;t=ffffffff886f56f4" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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">
+</div>
+   <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('SM1', document.getElementById('form1'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tupdForm1','tupdLink1','tupdSort1','tupGrid','tupdLink2','tupdSort2'], ['ddState','ddlSort1','ddlSort2','lnkbP1_b','lnkbP2_b','lnkbP3_b','lnkbP4_b','lnkbP5_b','lnkbP6_b','lnkbP7_b','lnkbP8_b','lnkbP9_b','lnkbNext_b','lnkbP1_a','lnkbP2_a','lnkbP3_a','lnkbP4_a','lnkbP5_a','lnkbP6_a','lnkbP7_a','lnkbP8_a','lnkbP9_a','lnkbNext_a'], ['btnUpdate'], 90);
+//]]>
+</script>
+
+      <!--Skip Header-->
+                <div id="skiplink" style="z-index:-1;">
+                    <a href="#ddlSort1">Skip to page content</a>
+                </div>
+    <div id="mainbody">
+            <div id="header">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody><tr>
+                    <td style="width:62px;padding:none;">
+                           <a href="http://www.wellsfargo.com"> <img src="images/wellslogo.gif" border="0" alt="Wells Fargo Logo" title="Wells Fargo Logo"></a>
+                    </td>
+                    <td style="text-align:right; vertical-align:top; padding:none;">
+                       <table align="right" style="height:33px;padding:0px 4px 0px 0px;" cellspacing="0">
+                         <tbody><tr>
+                            <td style="vertical-align:top;padding:2px 5px 0px 0px;">
+                                 <a href="https://online.wellsfargo.com/signon?LOB=CONS" style="font-weight:bolder;">Sign On</a><span class="greypipe">|</span>
+                                 <a href="https://www.wfhm.com/locations/mpslocator.jsp">Locations</a><span class="greypipe">|</span>
+                                 <a href="https://mortgage.wellsfargo.com/affinity/mortgage-contact.page?suffix=psf1060">Contact Us</a><span class="greypipe">|</span>
+                                 <a href="https://www.wellsfargo.com/products_services/applications_viewall">Apply</a><span class="greypipe">|</span>
+                                 <a href="http://www.wellsfargo.com">wellsfargo.com</a> 
+                            </td>
+                            <td style="height:33px;width:232px;padding:none;">
+                            <div id="SearchBox1">
+                             <input name="txtSearch" type="text" id="txtSearch" title="Enter your search item" style="border:solid 1px #f2f1ec;">
+                             <input type="image" name="imgBtnSearch" id="imgBtnSearch" alt="Search Wells Fargo" src="images/SearchButton.gif" align="absmiddle" style="border-style:None;border-width:0px;padding-right:3px;border-top:-1px;">
+                           </div>
+                            </td>
+                         </tr>
+                       </tbody></table>
+                     </td>
+                </tr>
+               
+              </tbody></table>
+              
+                <img src="images/MenuBar.jpg" style="padding-top:5px;" usemap="#Image-Maps_1" border="0" alt="menu bar">     
+            </div>
+            
+        
+              
+               
+               <!-- START CONTENT COLUMN-->
+                <div id="contentsearch" style="width:98%;padding-left:10px;">
+                
+                
+                     <div id="printheader"> 
+                       <span class="header2">Property Search Results</span>
+                       <div style="display:inline;margin-top:-2px;float:right;padding-bottom:2px;">
+                           <img src="images/printicon.gif" align="top" alt="Print Page"><a href="javascript:window.print();" style="padding-left:2px;text-decoration:underline;font-size:smaller;">Print this page</a>&nbsp;</div>
+                        </div>
+                   
+                    <table style="width:100%;padding-top:5px;">
+                        <tbody><tr>
+                            <td style="font-size:.85em;"><a href="WBREOSubscription.aspx">Register</a> or <a href="WBREOSubscription.aspx">Sign In</a> to get email alerts. </td>
+                            <td style="text-align:right;font-size:.85em;">
+                            <a id="lblSwitchPropertieslistview" href="javascript:__doPostBack('lblSwitchPropertieslistview','')" style="font-weight:bold;">Export result list</a>
+                            </td>
+                        </tr>
+                     
+                    </tbody></table>
+                    
+                    <br>
+                     <table style="width:100%;">
+                        <tbody><tr>
+                            <td style="vertical-align:top;width:240px;font-size:.85em;">
+                             <a href="index.aspx"><strong>REO Home</strong></a>
+                                     <div style="height:5px; width:100%;">&nbsp;</div>
+                         
+                                     <div id="leftsearch_a">
+                                         <strong>Edit Search Criteria</strong>
+                                         <div id="updForm1">
+	
+                                         
+                                         <table style="width:100%;padding-top:10px;">
+                                            <tbody><tr>
+                                                    <td style="text-align:right;height:25px;padding-right:20px;font-size:.85em;">
+                                                    <label for="ddState"><sup><font color="red">*</font></sup>
+                                                        <span id="Field2" class="FieldLabel1">State:</span></label>
+                                                   </td>
+                                                    <td style="font-size:.85em;">
+                                                            <select name="ddState" onchange="javascript:setTimeout('__doPostBack(\'ddState\',\'\')', 0)" id="ddState" class="TextBox1">
+		<option value="">Select One</option>
+		<option value="AK">AK</option>
+		<option value="AL">AL</option>
+		<option value="AR">AR</option>
+		<option value="AZ">AZ</option>
+		<option value="CA">CA</option>
+		<option value="CO">CO</option>
+		<option value="CT">CT</option>
+		<option value="DC">DC</option>
+		<option value="DE">DE</option>
+		<option value="FL">FL</option>
+		<option value="GA">GA</option>
+		<option value="HI">HI</option>
+		<option value="IA">IA</option>
+		<option value="ID">ID</option>
+		<option value="IL">IL</option>
+		<option value="IN">IN</option>
+		<option value="KS">KS</option>
+		<option value="KY">KY</option>
+		<option value="LA">LA</option>
+		<option value="MA">MA</option>
+		<option value="MD">MD</option>
+		<option value="ME">ME</option>
+		<option value="MI">MI</option>
+		<option value="MN">MN</option>
+		<option value="MO">MO</option>
+		<option value="MS">MS</option>
+		<option value="MT">MT</option>
+		<option selected="selected" value="NC">NC</option>
+		<option value="ND">ND</option>
+		<option value="NE">NE</option>
+		<option value="NH">NH</option>
+		<option value="NJ">NJ</option>
+		<option value="NM">NM</option>
+		<option value="NV">NV</option>
+		<option value="NY">NY</option>
+		<option value="OH">OH</option>
+		<option value="OK">OK</option>
+		<option value="OR">OR</option>
+		<option value="PA">PA</option>
+		<option value="RI">RI</option>
+		<option value="SC">SC</option>
+		<option value="SD">SD</option>
+		<option value="TN">TN</option>
+		<option value="TX">TX</option>
+		<option value="UT">UT</option>
+		<option value="VA">VA</option>
+		<option value="VT">VT</option>
+		<option value="WA">WA</option>
+		<option value="WI">WI</option>
+		<option value="WV">WV</option>
+		<option value="WY">WY</option>
+
+	</select><br>
+                                                         
+                                                         
+                                                    
+                                                     </td>
+                                            </tr>
+                                            <tr>
+                                                    <td style="text-align:right;height:25px;padding-right:20px;font-size:.85em;">
+                                                        <label for="ddCity">City:</label>
+                                                   </td>
+                                                    <td style="font-size:.85em;">
+                                                            <select name="ddCity" id="ddCity" class="TextBox1" style="width:140px;">
+		<option value="">No Preference</option>
+		<option value="ARDEN">ARDEN</option>
+		<option value="BLOWING ROCK">BLOWING ROCK</option>
+		<option value="BURLINGTON">BURLINGTON</option>
+		<option value="BURNSVILLE">BURNSVILLE</option>
+		<option value="CAMERON">CAMERON</option>
+		<option value="CHARLOTTE">CHARLOTTE</option>
+		<option value="CONCORD">CONCORD</option>
+		<option value="CONNELLYS SPRINGS">CONNELLYS SPR</option>
+		<option value="DURHAM">DURHAM</option>
+		<option value="EAST FLAT ROCK">EAST FLAT ROC</option>
+		<option value="EDENTON">EDENTON</option>
+		<option value="FAYETTEVILLE">FAYETTEVILLE</option>
+		<option value="FOREST CITY">FOREST CITY</option>
+		<option value="GASTONIA">GASTONIA</option>
+		<option value="GOLDSTON">GOLDSTON</option>
+		<option value="GREENSBORO">GREENSBORO</option>
+		<option value="HENDERSONVILLE">HENDERSONVILL</option>
+		<option value="HERTFORD">HERTFORD</option>
+		<option value="HIGH POINT">HIGH POINT</option>
+		<option value="HOLLY RIDGE">HOLLY RIDGE</option>
+		<option value="HUBERT">HUBERT</option>
+		<option value="KERNSVILLE">KERNSVILLE</option>
+		<option value="KURE BEACH">KURE BEACH</option>
+		<option value="LAURINBURG">LAURINBURG</option>
+		<option value="LENOIR">LENOIR</option>
+		<option value="LINCOLNTON">LINCOLNTON</option>
+		<option value="LITTLETON">LITTLETON</option>
+		<option value="LUMBERTON">LUMBERTON</option>
+		<option value="MAGGIE VALLEY">MAGGIE VALLEY</option>
+		<option value="MATTHEWS">MATTHEWS</option>
+		<option value="NEW BERN">NEW BERN</option>
+		<option value="NEWLAND">NEWLAND</option>
+		<option value="NEWPORT">NEWPORT</option>
+		<option value="PFAFFTOWN">PFAFFTOWN</option>
+		<option value="PINEHURST">PINEHURST</option>
+		<option value="PRINCEVILLE">PRINCEVILLE</option>
+		<option value="RAEFORD">RAEFORD</option>
+		<option value="RALEIGH">RALEIGH</option>
+		<option value="REIDSVILLE">REIDSVILLE</option>
+		<option value="ROCKY MOUNT">ROCKY MOUNT</option>
+		<option value="SALISBURY">SALISBURY</option>
+		<option value="SAXAPAHAW">SAXAPAHAW</option>
+		<option value="SCALY MOUNTAIN">SCALY MOUNTAI</option>
+		<option value="SHELBY">SHELBY</option>
+		<option value="SILER CITY">SILER CITY</option>
+		<option value="SNOW HILL">SNOW HILL</option>
+		<option value="SOUTHPORT">SOUTHPORT</option>
+		<option value="SPRING LAKE">SPRING LAKE</option>
+		<option value="SUMMERFIELD">SUMMERFIELD</option>
+		<option value="SURF CITY">SURF CITY</option>
+		<option value="TRINITY">TRINITY</option>
+		<option value="VANCEBORO">VANCEBORO</option>
+		<option value="WASHINGTON">WASHINGTON</option>
+		<option value="WAYNESVILLE">WAYNESVILLE</option>
+		<option value="WILMINGTON">WILMINGTON</option>
+		<option value="WINSTON SALEM">WINSTON SALEM</option>
+		<option value="WINTERVILLE">WINTERVILLE</option>
+		<option value="YOUNGSVILLE">YOUNGSVILLE</option>
+
+	</select>
+                                                      </td>
+                                            </tr>
+                                            <tr>
+                                                    <td style="text-align:right;height:25px;padding-right:20px;font-size:.85em;">
+                                                        <label for="ddCounty">County:</label>
+                                                   </td>
+                                                    <td style="font-size:.85em;">
+                                                            <select name="ddCounty" id="ddCounty" class="TextBox1" style="width:140px;">
+		<option value="">No Preference</option>
+		<option value="ALAMANCE">ALAMANCE</option>
+		<option value="AVERY">AVERY</option>
+		<option value="BEAUFORT">BEAUFORT</option>
+		<option value="BRUNSWICK">BRUNSWICK</option>
+		<option value="BUNCOMBE">BUNCOMBE</option>
+		<option value="BURKE">BURKE</option>
+		<option value="CABARRUS">CABARRUS</option>
+		<option value="CALDWELL">CALDWELL</option>
+		<option value="CARTERET">CARTERET</option>
+		<option value="CHATHAM">CHATHAM</option>
+		<option value="CHOWAN">CHOWAN</option>
+		<option value="CLEVELAND">CLEVELAND</option>
+		<option value="CRAVEN">CRAVEN</option>
+		<option value="CUMBERLAND">CUMBERLAND</option>
+		<option value="DURHAM">DURHAM</option>
+		<option value="EDGECOMBE">EDGECOMBE</option>
+		<option value="FORSYTH">FORSYTH</option>
+		<option value="FRANKLIN">FRANKLIN</option>
+		<option value="GASTON">GASTON</option>
+		<option value="GREENE">GREENE</option>
+		<option value="GUILFORD">GUILFORD</option>
+		<option value="HALIFAX">HALIFAX</option>
+		<option value="HARNETT">HARNETT</option>
+		<option value="HAYWOOD">HAYWOOD</option>
+		<option value="HENDERSON">HENDERSON</option>
+		<option value="HOKE">HOKE</option>
+		<option value="LINCOLN">LINCOLN</option>
+		<option value="MACON">MACON</option>
+		<option value="MECKLENBURG">MECKLENBURG</option>
+		<option value="MOORE">MOORE</option>
+		<option value="NASH">NASH</option>
+		<option value="NEW HANOVER">NEW HANOVER</option>
+		<option value="ONSLOW">ONSLOW</option>
+		<option value="PERQUIMANS">PERQUIMANS</option>
+		<option value="PITT">PITT</option>
+		<option value="RANDOLPH">RANDOLPH</option>
+		<option value="ROBESON">ROBESON</option>
+		<option value="ROCKINGHAM">ROCKINGHAM</option>
+		<option value="ROWAN">ROWAN</option>
+		<option value="RUTHERFORD">RUTHERFORD</option>
+		<option value="SCOTLAND">SCOTLAND</option>
+		<option value="UNION">UNION</option>
+		<option value="WAKE">WAKE</option>
+		<option value="WATAUGA">WATAUGA</option>
+		<option value="YANCEY">YANCEY</option>
+
+	</select>
+                                                         
+                                                         
+                                                    
+                                                     </td>
+                                            </tr>
+                                            <tr>
+                                                    <td style="text-align:right;height:25px;padding-right:20px;font-size:.85em;">
+                                                      <label for="txtZIP">Zip:</label>
+                                                   </td>
+                                                    <td style="font-size:.85em;">
+                                                            <input name="txtZIP" type="text" maxlength="5" id="txtZIP" class="TextBox1" style="width:50px;">
+                                                         </td>
+                                            </tr>
+                                               <tr>
+                                            <td colspan="2" style="font-size:.85em;">
+                                              <label for="ddPriceMin"> Price Range:</label><br>
+                                                    <select name="ddPriceMin" id="ddPriceMin" class="TextBox3">
+		<option selected="selected" value="0">No Minimum</option>
+		<option value="100000">$100,000</option>
+		<option value="200000">$200,000</option>
+		<option value="300000">$300,000</option>
+		<option value="400000">$400,000</option>
+		<option value="500000">$500,000</option>
+		<option value="600000">$600,000</option>
+		<option value="700000">$700,000</option>
+		<option value="800000">$800,000</option>
+		<option value="900000">$900,000</option>
+		<option value="1000000">$1,000,000</option>
+		<option value="1100000">$1,100,000</option>
+		<option value="1200000">$1,200,000</option>
+		<option value="1300000">$1,300,000</option>
+		<option value="1400000">$1,400,000</option>
+		<option value="1500000">$1,500,000</option>
+		<option value="1600000">$1,600,000</option>
+		<option value="1700000">$1,700,000</option>
+		<option value="1800000">$1,800,000</option>
+		<option value="1900000">$1,900,000</option>
+
+	</select>
+                                                 <label for="ddPriceMax">To</label>
+                                                  <select name="ddPriceMax" id="ddPriceMax" class="TextBox3">
+		<option selected="selected" value="9999999">No Maximum</option>
+		<option value="100000">$100,000</option>
+		<option value="200000">$200,000</option>
+		<option value="300000">$300,000</option>
+		<option value="400000">$400,000</option>
+		<option value="500000">$500,000</option>
+		<option value="600000">$600,000</option>
+		<option value="700000">$700,000</option>
+		<option value="800000">$800,000</option>
+		<option value="900000">$900,000</option>
+		<option value="1000000">$1,000,000</option>
+		<option value="1100000">$1,100,000</option>
+		<option value="1200000">$1,200,000</option>
+		<option value="1300000">$1,300,000</option>
+		<option value="1400000">$1,400,000</option>
+		<option value="1500000">$1,500,000</option>
+		<option value="1600000">$1,600,000</option>
+		<option value="1700000">$1,700,000</option>
+		<option value="1800000">$1,800,000</option>
+		<option value="1900000">$1,900,000</option>
+		<option value="2000000">$2,000,000</option>
+
+	</select>
+                                            </td>
+                                        </tr>
+                                        
+                                          <tr>
+                                                    <td style="text-align:right;height:25px;padding-right:20px;font-size:.85em;">
+                                                        <label for="ddPropertyType">Type:</label>
+                                                   </td>
+                                                    <td style="font-size:.85em;">
+                                                             <select name="ddPropertyType" id="ddPropertyType" class="TextBox1" style="width:140px;">
+		<option value="No Preference">No Preference</option>
+		<option value="Townhouse">Townhouse</option>
+		<option value="Modular">Modular</option>
+		<option value="Land Only">Land Only</option>
+		<option value="Other">Other</option>
+		<option value="Multi-family">Multi-family</option>
+		<option value="Commercial">Commercial</option>
+		<option value="Manufactured">Manufactured</option>
+		<option value="Single Family">Single Family</option>
+		<option value="Condominium">Condominium</option>
+		<option value="Duplex">Duplex</option>
+		<option value="Cooperative">Cooperative</option>
+
+	</select>
+                                                         </td>
+                                            </tr>
+                                            <tr>
+                                                    <td style="text-align:right;height:25px;padding-right:20px;font-size:.85em;">
+                                                        <label for="ddBeds">Beds:</label>
+                                                   </td>
+                                                    <td style="font-size:.85em;">
+                                                              <select name="ddBeds" id="ddBeds" class="TextBox1" style="width:140px;">
+		<option selected="selected" value="0">No Preference</option>
+		<option value="1">1+</option>
+		<option value="2">2+</option>
+		<option value="3">3+</option>
+		<option value="4">4+</option>
+		<option value="5">5+</option>
+
+	</select>
+                                                         </td>
+                                            </tr>
+                                            <tr>
+                                                    <td style="text-align:right;height:25px;padding-right:20px;font-size:.85em;">
+                                                       <label for="ddBaths">Baths:</label>
+                                                   </td>
+                                                    <td style="font-size:.85em;">
+                                                              <select name="ddBaths" id="ddBaths" class="TextBox1" style="width:140px;">
+		<option selected="selected" value="0">No Preference</option>
+		<option value="1">1+</option>
+		<option value="1.5">1.5+</option>
+		<option value="2">2+</option>
+		<option value="2.5">2.5+</option>
+		<option value="3">3+</option>
+		<option value="4">4+</option>
+
+	</select>
+                                                         </td>
+                                            </tr>
+                                             <tr>
+                                                    <td style="text-align:right;height:25px;padding-right:20px;font-size:.85em;">
+                                                        <label for="ddStatus">Status:</label>
+                                                   </td>
+                                                    <td style="font-size:.85em;">
+                                                               <select name="ddStatus" id="ddStatus" class="TextBox1" style="width:140px;">
+		<option selected="selected" value="">All Properties</option>
+		<option value="Available">Available</option>
+		<option value="Offer Pending">Offer Pending</option>
+		<option value="Sale Pending">Sale Pending</option>
+		<option value="Auction">Auction</option>
+
+	</select>
+                                                         </td>
+                                            </tr>
+                                         <tr>
+                                            <td style="height:35px;">&nbsp;</td>
+                                            <td><input type="submit" name="btnUpdate" value="Update" id="btnUpdate" class="bluebutton1" alt="Update" style="width:100px;"></td>
+                                        </tr>
+                                     
+                                         </tbody></table>
+                                         
+</div>
+                                               
+                                         </div>
+                                      
+                                         <p style="height:8px;">
+                                           </p><div id="pla" style="width:94%;">
+                                                      <div style="font:bold 110% arial;position:relative; color:#696b6e;"><img src="images/email_alerts.gif" align="middle" alt="Email Alerts"> Property listing alerts</div>
+                                                        
+                                                        <br>
+                                                        Get free email alerts for your saved searches
+                                                        <br><br>
+                                                        <div style="width:100%;text-align:right;"><strong><a href="WBREOSubscription.aspx">Subscribe Now &gt;</a></strong></div>
+                                                        <br>
+                                                </div>
+                            </td>
+                            <td style="width:40px;">
+                            &nbsp;
+                            </td>
+                            <!--right grid side-->
+                            <td style="vertical-align:top;">
+                                     <input type="hidden" name="hdnsrchState" id="hdnsrchState" value="NC">
+                                    <input type="hidden" name="hdnsrchCity" id="hdnsrchCity">
+                                    <input type="hidden" name="hdnsrchCounty" id="hdnsrchCounty">
+                                    <input type="hidden" name="hdnsrchZip" id="hdnsrchZip">
+                                    <input type="hidden" name="hdnsrchPriceLower" id="hdnsrchPriceLower" value="0">
+                                    <input type="hidden" name="hdnsrchPriceUpper" id="hdnsrchPriceUpper" value="9999999">
+                                    <input type="hidden" name="hdnsrchPropertyType" id="hdnsrchPropertyType">
+                                    <input type="hidden" name="hdnsrchBeds" id="hdnsrchBeds" value="0">
+                                    <input type="hidden" name="hdnsrchBaths" id="hdnsrchBaths" value="0">
+                                    <input type="hidden" name="hdnsrchStatus" id="hdnsrchStatus">
+                            
+                                     <table cellspacing="0" cellpadding="0" style="width:100%;">
+                                            <tbody><tr>
+                                                
+                                                <td valign="bottom" style="padding:0px;vertical-align:bottom;font-size:.85em;">
+                                                <strong>
+                                                <span id="lblTotalNoofProperties" class="lblright">78</span> <span class="lblright">Properties Found</span></strong>
+                                                </td>
+                                                
+                                                <td style="padding:0px;vertical-align:bottom;font-size:.85em;">
+                                               <div id="updLink1">
+	
+                                                  
+                                                    &nbsp;
+                                                    <a id="lnkbP1_a" class="PagerHover" href="javascript:__doPostBack('lnkbP1_a','')" style="color:black;">1&nbsp;</a>
+                                                    <a id="lnkbP2_a" class="PagerHover" href="javascript:__doPostBack('lnkbP2_a','')" style="color:;">2&nbsp;</a>
+                                                    <a id="lnkbP3_a" class="PagerHover" href="javascript:__doPostBack('lnkbP3_a','')" style="color:;">3&nbsp;</a>
+                                                    <a id="lnkbP4_a" class="PagerHover" href="javascript:__doPostBack('lnkbP4_a','')" style="color:;">4&nbsp;</a>
+                                                    <a id="lnkbP5_a" class="PagerHover" href="javascript:__doPostBack('lnkbP5_a','')" style="color:;">5&nbsp;</a>
+                                                    <a id="lnkbP6_a" class="PagerHover" href="javascript:__doPostBack('lnkbP6_a','')" style="color:;">6&nbsp;</a>
+                                                    <a id="lnkbP7_a" class="PagerHover" href="javascript:__doPostBack('lnkbP7_a','')" style="color:;">7&nbsp;</a>
+                                                    <a id="lnkbP8_a" class="PagerHover" href="javascript:__doPostBack('lnkbP8_a','')" style="color:;">8&nbsp;</a>
+                                                    <a id="lnkbP9_a" class="PagerHover" href="javascript:__doPostBack('lnkbP9_a','')" style="color:;">9&nbsp;</a>
+                                                    &nbsp;
+                                                    <a id="lnkbNext_a" class="PagerHover" href="javascript:__doPostBack('lnkbNext_a','')">Next</a>
+                                                    
+                                                    
+                                                    
+</div>
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                   
+                                                    
+                                                   
+                                                    
+                                                    
+                                                   
+                                                  
+                                                </td>
+                                                
+                                                <td align="right" style="padding-right:20px;vertical-align:bottom;font-size:.85em;">
+                                                
+                                                  <div id="updSort1">
+	
+                                                <strong>
+                                                <label for="ddSort1"><span class="lblright">Sort:</span> </label></strong> 
+                                                   <select name="ddlSort1" onchange="javascript:setTimeout('__doPostBack(\'ddlSort1\',\'\')', 0)" id="ddlSort1" class="lblright">
+		<option value="S1">Price (High to Low)</option>
+		<option value="S2">Price (Low to High)</option>
+		<option value="S3">City</option>
+		<option value="S4">Zip</option>
+		<option value="S5">Type</option>
+		<option value="S6">Bedrooms</option>
+		<option value="S7">Bathrooms</option>
+		<option selected="selected" value="S8">Status</option>
+		<option value="S9">Repair Indicator</option>
+
+	</select>
+                                                
+</div>
+                                                </td>
+                                            </tr>
+                                            </tbody></table>
+                                     <div style="height:5px; width:100%;">&nbsp;</div>
+                                            
+                               <div id="rightgrid_a">
+                                   
+                        
+                                     <div id="upGrid">
+	
+                                        
+
+                                      <div>
+		<table cellspacing="0" rules="rows" border="0" id="GridViewList" style="border-color:Silver;border-width:0px;width:100%;border-collapse:collapse;">
+			<tbody><tr>
+				<td>
+                                                       
+                                                        <table cellspacing="0" cellpadding="0" style="width:100%;border-bottom:solid 1px Silver;">
+                                                            <tbody><tr>
+                                                                <td style="padding-top:5px;padding-bottom:5px;font-size:.8em;">
+                                                                <strong>
+                                                                <span id="GridViewList_ctl02_lblTemplate1">Lot 31 Section U (Apn# 2-D082-U031-</span><br>
+                                                                
+                                                                         <span id="GridViewList_ctl02_Label1">Hertford</span>, 
+                                                                        <span id="GridViewList_ctl02_lblTemplate2">NC</span>&nbsp;&nbsp;
+                                                                        <span id="GridViewList_ctl02_lblTemplate3">27944</span>
+                                                                        </strong>
+                                                                </td>
+                                                                <td style="padding-top:5px;font-size:.8em;">
+                                                                        <strong><span id="GridViewList_ctl02_lblTemplate4">$2,900</span> &nbsp;
+                                                                                <span id="GridViewList_ctl02_lbltemplate4_1" class="ReducedPrice"></span>
+                                                                                
+                                                                                </strong>
+                                                                </td>
+                                                                <td align="right" style="padding-top:5px;padding-bottom:5px;font-size:.8em;">
+                                                                            
+                                                                              <span id="GridViewList_ctl02_lblTemplate9_1"></span>
+                                                                             
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                    <td style="width:39%;padding-top:5px;padding-bottom:5px;font-size:.8em;">
+                                                                        <a href="WBREODetails.aspx?INTCID=REO397765&amp;page=Home" class="iframe">
+                                                                        <img border="0" style="width:150px;" title="Opens a simulated dialog" alt="Opens a simulated dialog" src="MultipleImage.ashx?REOID=REO397765&amp;PhotoNumber=1&amp;ImageSize=Detail"></a>
+                                                                      
+                                                                        
+                                                                    </td>
+                                                           
+                                                                        <td style="width:33%;padding-top:5px;vertical-align:top;font-size:.8em;">
+                                                                                   County: <span id="GridViewList_ctl02_lblTemplate10">Perquimans</span><br>
+                                                                                    Bedrooms: <span id="GridViewList_ctl02_lblTemplate5">0</span><br>
+                                                                                    Bathrooms: <span id="GridViewList_ctl02_lblTemplate6">0</span><br>
+                                                                                    Type: <span id="GridViewList_ctl02_lblTemplate7">Land Only</span><br>
+                                                                                    Status: <span id="GridViewList_ctl02_lblTemplate8">Available</span>
+                                                                                
+                                                                                                
+                                                                        </td>
+                                                            
+                                                                    <td valign="top" align="right" style="font-size:.85em;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;border:none;">
+                                                                               
+                                                                                 
+                                                                        
+                                                                        <span id="GridViewList_ctl02_lblTemplate11_1"><a href="WBREODetails.aspx?INTCID=REO397765&amp;page=Home" class="iframe" title="Opens a simulated dialog">View Details</a></span>
+                                                                       
+                                                                                
+                                                                </td>
+                                                                    
+                                                            </tr>
+                                                            
+                                                        </tbody></table>
+                                                     
+                                                     
+                                                    </td>
+			</tr><tr>
+				<td>
+                                                       
+                                                        <table cellspacing="0" cellpadding="0" style="width:100%;border-bottom:solid 1px Silver;">
+                                                            <tbody><tr>
+                                                                <td style="padding-top:5px;padding-bottom:5px;font-size:.8em;">
+                                                                <strong>
+                                                                <span id="GridViewList_ctl03_lblTemplate1">30 Birkdale Dr</span><br>
+                                                                
+                                                                         <span id="GridViewList_ctl03_Label1">Pinehurst</span>, 
+                                                                        <span id="GridViewList_ctl03_lblTemplate2">NC</span>&nbsp;&nbsp;
+                                                                        <span id="GridViewList_ctl03_lblTemplate3">28374</span>
+                                                                        </strong>
+                                                                </td>
+                                                                <td style="padding-top:5px;font-size:.8em;">
+                                                                        <strong><span id="GridViewList_ctl03_lblTemplate4">$19,900</span> &nbsp;
+                                                                                <span id="GridViewList_ctl03_lbltemplate4_1" class="ReducedPrice"></span>
+                                                                                
+                                                                                </strong>
+                                                                </td>
+                                                                <td align="right" style="padding-top:5px;padding-bottom:5px;font-size:.8em;">
+                                                                            
+                                                                              <span id="GridViewList_ctl03_lblTemplate9_1"></span>
+                                                                             
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                    <td style="width:39%;padding-top:5px;padding-bottom:5px;font-size:.8em;">
+                                                                        <a href="WBREODetails.aspx?INTCID=REO425472&amp;page=Home" class="iframe">
+                                                                        <img border="0" style="width:150px;" title="Opens a simulated dialog" alt="Opens a simulated dialog" src="MultipleImage.ashx?REOID=REO425472&amp;PhotoNumber=1&amp;ImageSize=Detail"></a>
+                                                                      
+                                                                        
+                                                                    </td>
+                                                           
+                                                                        <td style="width:33%;padding-top:5px;vertical-align:top;font-size:.8em;">
+                                                                                   County: <span id="GridViewList_ctl03_lblTemplate10">Moore</span><br>
+                                                                                    Bedrooms: <span id="GridViewList_ctl03_lblTemplate5">0</span><br>
+                                                                                    Bathrooms: <span id="GridViewList_ctl03_lblTemplate6">0</span><br>
+                                                                                    Type: <span id="GridViewList_ctl03_lblTemplate7">Land Only</span><br>
+                                                                                    Status: <span id="GridViewList_ctl03_lblTemplate8">Available</span>
+                                                                                
+                                                                                                
+                                                                        </td>
+                                                            
+                                                                    <td valign="top" align="right" style="font-size:.85em;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;border:none;">
+                                                                               
+                                                                                 
+                                                                        
+                                                                        <span id="GridViewList_ctl03_lblTemplate11_1"><a href="WBREODetails.aspx?INTCID=REO425472&amp;page=Home" class="iframe" title="Opens a simulated dialog">View Details</a></span>
+                                                                       
+                                                                                
+                                                                </td>
+                                                                    
+                                                            </tr>
+                                                            
+                                                        </tbody></table>
+                                                     
+                                                     
+                                                    </td>
+			</tr><tr>
+				<td>
+                                                       
+                                                        <table cellspacing="0" cellpadding="0" style="width:100%;border-bottom:solid 1px Silver;">
+                                                            <tbody><tr>
+                                                                <td style="padding-top:5px;padding-bottom:5px;font-size:.8em;">
+                                                                <strong>
+                                                                <span id="GridViewList_ctl04_lblTemplate1">Cypress Village Subdivision Tract S</span><br>
+                                                                
+                                                                         <span id="GridViewList_ctl04_Label1">Newport</span>, 
+                                                                        <span id="GridViewList_ctl04_lblTemplate2">NC</span>&nbsp;&nbsp;
+                                                                        <span id="GridViewList_ctl04_lblTemplate3">28570</span>
+                                                                        </strong>
+                                                                </td>
+                                                                <td style="padding-top:5px;font-size:.8em;">
+                                                                        <strong><span id="GridViewList_ctl04_lblTemplate4">$259,900</span> &nbsp;
+                                                                                <span id="GridViewList_ctl04_lbltemplate4_1" class="ReducedPrice"></span>
+                                                                                
+                                                                                </strong>
+                                                                </td>
+                                                                <td align="right" style="padding-top:5px;padding-bottom:5px;font-size:.8em;">
+                                                                            
+                                                                              <span id="GridViewList_ctl04_lblTemplate9_1"></span>
+                                                                             
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                    <td style="width:39%;padding-top:5px;padding-bottom:5px;font-size:.8em;">
+                                                                        <a href="WBREODetails.aspx?INTCID=REO427041&amp;page=Home" class="iframe">
+                                                                        <img border="0" style="width:150px;" title="Opens a simulated dialog" alt="Opens a simulated dialog" src="MultipleImage.ashx?REOID=REO427041&amp;PhotoNumber=1&amp;ImageSize=Detail"></a>
+                                                                      
+                                                                        
+                                                                    </td>
+                                                           
+                                                                        <td style="width:33%;padding-top:5px;vertical-align:top;font-size:.8em;">
+                                                                                   County: <span id="GridViewList_ctl04_lblTemplate10">Carteret</span><br>
+                                                                                    Bedrooms: <span id="GridViewList_ctl04_lblTemplate5">0</span><br>
+                                                                                    Bathrooms: <span id="GridViewList_ctl04_lblTemplate6">0</span><br>
+                                                                                    Type: <span id="GridViewList_ctl04_lblTemplate7">Land Only</span><br>
+                                                                                    Status: <span id="GridViewList_ctl04_lblTemplate8">Available</span>
+                                                                                
+                                                                                                
+                                                                        </td>
+                                                            
+                                                                    <td valign="top" align="right" style="font-size:.85em;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;border:none;">
+                                                                               
+                                                                                 
+                                                                        
+                                                                        <span id="GridViewList_ctl04_lblTemplate11_1"><a href="WBREODetails.aspx?INTCID=REO427041&amp;page=Home" class="iframe" title="Opens a simulated dialog">View Details</a></span>
+                                                                       
+                                                                                
+                                                                </td>
+                                                                    
+                                                            </tr>
+                                                            
+                                                        </tbody></table>
+                                                     
+                                                     
+                                                    </td>
+			</tr><tr>
+				<td>
+                                                       
+                                                        <table cellspacing="0" cellpadding="0" style="width:100%;border-bottom:solid 1px Silver;">
+                                                            <tbody><tr>
+                                                                <td style="padding-top:5px;padding-bottom:5px;font-size:.8em;">
+                                                                <strong>
+                                                                <span id="GridViewList_ctl05_lblTemplate1">407 Mcdougald Ave</span><br>
+                                                                
+                                                                         <span id="GridViewList_ctl05_Label1">Laurinburg</span>, 
+                                                                        <span id="GridViewList_ctl05_lblTemplate2">NC</span>&nbsp;&nbsp;
+                                                                        <span id="GridViewList_ctl05_lblTemplate3">28352</span>
+                                                                        </strong>
+                                                                </td>
+                                                                <td style="padding-top:5px;font-size:.8em;">
+                                                                        <strong><span id="GridViewList_ctl05_lblTemplate4">$145,000</span> &nbsp;
+                                                                                <span id="GridViewList_ctl05_lbltemplate4_1" class="ReducedPrice"></span>
+                                                                                
+                                                                                </strong>
+                                                                </td>
+                                                                <td align="right" style="padding-top:5px;padding-bottom:5px;font-size:.8em;">
+                                                                            
+                                                                              <span id="GridViewList_ctl05_lblTemplate9_1"></span>
+                                                                             
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                    <td style="width:39%;padding-top:5px;padding-bottom:5px;font-size:.8em;">
+                                                                        <a href="WBREODetails.aspx?INTCID=REO427762&amp;page=Home" class="iframe">
+                                                                        <img border="0" style="width:150px;" title="Opens a simulated dialog" alt="Opens a simulated dialog" src="MultipleImage.ashx?REOID=REO427762&amp;PhotoNumber=1&amp;ImageSize=Detail"></a>
+                                                                      
+                                                                        
+                                                                    </td>
+                                                           
+                                                                        <td style="width:33%;padding-top:5px;vertical-align:top;font-size:.8em;">
+                                                                                   County: <span id="GridViewList_ctl05_lblTemplate10">Scotland</span><br>
+                                                                                    Bedrooms: <span id="GridViewList_ctl05_lblTemplate5">0</span><br>
+                                                                                    Bathrooms: <span id="GridViewList_ctl05_lblTemplate6">0</span><br>
+                                                                                    Type: <span id="GridViewList_ctl05_lblTemplate7">Single Family</span><br>
+                                                                                    Status: <span id="GridViewList_ctl05_lblTemplate8">Available</span>
+                                                                                
+                                                                                                
+                                                                        </td>
+                                                            
+                                                                    <td valign="top" align="right" style="font-size:.85em;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;border:none;">
+                                                                               
+                                                                                 
+                                                                        
+                                                                        <span id="GridViewList_ctl05_lblTemplate11_1"><a href="WBREODetails.aspx?INTCID=REO427762&amp;page=Home" class="iframe" title="Opens a simulated dialog">View Details</a></span>
+                                                                       
+                                                                                
+                                                                </td>
+                                                                    
+                                                            </tr>
+                                                            
+                                                        </tbody></table>
+                                                     
+                                                     
+                                                    </td>
+			</tr><tr>
+				<td>
+                                                       
+                                                        <table cellspacing="0" cellpadding="0" style="width:100%;border-bottom:solid 1px Silver;">
+                                                            <tbody><tr>
+                                                                <td style="padding-top:5px;padding-bottom:5px;font-size:.8em;">
+                                                                <strong>
+                                                                <span id="GridViewList_ctl06_lblTemplate1">2689 Us Highway 19-E</span><br>
+                                                                
+                                                                         <span id="GridViewList_ctl06_Label1">Newland</span>, 
+                                                                        <span id="GridViewList_ctl06_lblTemplate2">NC</span>&nbsp;&nbsp;
+                                                                        <span id="GridViewList_ctl06_lblTemplate3">28657</span>
+                                                                        </strong>
+                                                                </td>
+                                                                <td style="padding-top:5px;font-size:.8em;">
+                                                                        <strong><span id="GridViewList_ctl06_lblTemplate4">$31,000</span> &nbsp;
+                                                                                <span id="GridViewList_ctl06_lbltemplate4_1" class="ReducedPrice"></span>
+                                                                                
+                                                                                </strong>
+                                                                </td>
+                                                                <td align="right" style="padding-top:5px;padding-bottom:5px;font-size:.8em;">
+                                                                            
+                                                                              <span id="GridViewList_ctl06_lblTemplate9_1"></span>
+                                                                             
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                    <td style="width:39%;padding-top:5px;padding-bottom:5px;font-size:.8em;">
+                                                                        <a href="WBREODetails.aspx?INTCID=REO402063&amp;page=Home" class="iframe">
+                                                                        <img border="0" style="width:150px;" title="Opens a simulated dialog" alt="Opens a simulated dialog" src="MultipleImage.ashx?REOID=REO402063&amp;PhotoNumber=1&amp;ImageSize=Detail"></a>
+                                                                      
+                                                                        
+                                                                    </td>
+                                                           
+                                                                        <td style="width:33%;padding-top:5px;vertical-align:top;font-size:.8em;">
+                                                                                   County: <span id="GridViewList_ctl06_lblTemplate10">Avery</span><br>
+                                                                                    Bedrooms: <span id="GridViewList_ctl06_lblTemplate5">1</span><br>
+                                                                                    Bathrooms: <span id="GridViewList_ctl06_lblTemplate6">1</span><br>
+                                                                                    Type: <span id="GridViewList_ctl06_lblTemplate7">Single Family</span><br>
+                                                                                    Status: <span id="GridViewList_ctl06_lblTemplate8">Available</span>
+                                                                                
+                                                                                                
+                                                                        </td>
+                                                            
+                                                                    <td valign="top" align="right" style="font-size:.85em;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;border:none;">
+                                                                               
+                                                                                 
+                                                                        
+                                                                        <span id="GridViewList_ctl06_lblTemplate11_1"><a href="WBREODetails.aspx?INTCID=REO402063&amp;page=Home" class="iframe" title="Opens a simulated dialog">View Details</a></span>
+                                                                       
+                                                                                
+                                                                </td>
+                                                                    
+                                                            </tr>
+                                                            
+                                                        </tbody></table>
+                                                     
+                                                     
+                                                    </td>
+			</tr>
+		</tbody></table>
+	</div>
+                                       
+</div> 
+                             
+                                   </div>
+                                    
+                                    
+                                  <table cellspacing="0" cellpadding="0" style="width:100%;" border="0">
+                                         <tbody><tr>
+                                           
+                                             <td valign="bottom" style="padding:0px;vertical-align:middle;font-size:.85em;">
+                                            <strong>
+                                            <span id="lblTotalNoofProperties2" class="lblright">78</span> <span class="lblright">Properties Found</span></strong>
+                                            </td>
+                                            
+                                            <td style="padding:5px;vertical-align:bottom;font-size:.85em;">
+                                            
+                                              <div id="updLink2">
+	
+                                              
+                                                &nbsp;
+                                                <a id="lnkbP1_b" class="PagerHover" href="javascript:__doPostBack('lnkbP1_b','')" style="color:black;">1&nbsp;</a>
+                                                <a id="lnkbP2_b" class="PagerHover" href="javascript:__doPostBack('lnkbP2_b','')" style="color:;">2&nbsp;</a>
+                                                <a id="lnkbP3_b" class="PagerHover" href="javascript:__doPostBack('lnkbP3_b','')" style="color:;">3&nbsp;</a>
+                                                <a id="lnkbP4_b" tabindex="-1" class="PagerHover" href="javascript:__doPostBack('lnkbP4_b','')" style="color:;">4&nbsp;</a>
+                                                <a id="lnkbP5_b" class="PagerHover" href="javascript:__doPostBack('lnkbP5_b','')" style="color:;">5&nbsp;</a>
+                                                <a id="lnkbP6_b" tabindex="-1" class="PagerHover" href="javascript:__doPostBack('lnkbP6_b','')" style="color:;">6&nbsp;</a>
+                                                <a id="lnkbP7_b" class="PagerHover" href="javascript:__doPostBack('lnkbP7_b','')" style="color:;">7&nbsp;</a>
+                                                <a id="lnkbP8_b" class="PagerHover" href="javascript:__doPostBack('lnkbP8_b','')" style="color:;">8&nbsp;</a>
+                                                <a id="lnkbP9_b" class="PagerHover" href="javascript:__doPostBack('lnkbP9_b','')" style="color:;">9&nbsp;</a>
+                                                &nbsp;
+                                                <a id="lnkbNext_b" class="PagerHover" href="javascript:__doPostBack('lnkbNext_b','')">Next</a>
+                                                
+                                                
+                                                
+</div>
+                                                </td>
+                                                
+                                                <td align="right" style="padding-top:5px;vertical-align:middle;font-size:.85em;">
+                                                 
+                                                   <div id="updSort2">
+	
+                                                <label for="ddlSort2"><strong><span class="lblright">Sort: </span></strong> </label>
+                                                <select name="ddlSort2" onchange="javascript:setTimeout('__doPostBack(\'ddlSort2\',\'\')', 0)" id="ddlSort2" class="lblright">
+		<option value="S1">Price (High to Low)</option>
+		<option value="S2">Price (Low to High)</option>
+		<option value="S3">City</option>
+		<option value="S4">Zip</option>
+		<option value="S5">Type</option>
+		<option value="S6">Bedrooms</option>
+		<option value="S7">Bathrooms</option>
+		<option selected="selected" value="S8">Status</option>
+		<option value="S9">Repair Indicator</option>
+
+	</select>
+                                                
+</div>
+                                                
+                                            
+                                           
+                                           </td>
+                                        </tr>
+                                        </tbody></table>
+                            </td>
+                        </tr>
+                     </tbody></table>
+                  
+                        <div style="height:30px;">&nbsp;</div>
+                              <div style="padding-right:10px;">
+                                     <div class="square1c" style="width:462px;">
+                                                <div style="border:none;display:inline;float:left;">
+                                                        <img src="images/phoneoutline.gif" border="0" alt="Contact" title="Contact">
+                                                    </div>
+                                                 <div style="padding-left:5px;display:inline;float:inherit;">
+                                                    <span style="font-weight:bolder;">For your financing needs:</span>
+                                                    <br><br>
+                                                     <span id="lblCMS902">1-800-541-2023</span>
+                                                     <br><br>
+                                                     <div style="font-weight:bolder;width:100%;">
+                                                    
+                                                      <a href="javascript:viod(null);" onclick="showDialog2();" id="hours1">See Hours &gt;</a>
+                                                                                                     <div id="dialog-modal2" title="Hours" style="display: none;">
+                                                                                                              <table border="0" style="width:180px;" cellspacing="0" cellpadding="0">
+                                                                                                                                   
+                                                                                                                                    <tbody><tr>
+                                                                                                                                        <td style="font-size:.95em;padding:5px;">
+                                                                                                                                                <strong>Home Mortgage:</strong><br>
+                                                                                                                                                <span style="font-weight:lighter;">
+                                                                                                                                                Mon – Fri: 7 am – 9 pm<br>
+                                                                                                                                                Sat: 8 am – 4:30 pm<br>
+                                                                                                                                                Central Time
+                                                                                                                                                </span>
+                                                                                                                                         </td>
+                                                                                                                                    </tr>
+                                                                                                                                   
+                                                                                                                           </tbody></table>
+                                                                                                      </div>
+                                                   
+                                                     </div>
+                                                     
+                                                 </div>
+                                                 <div style="display:inline;float:right;">
+                                                             <a href="https://mortgage.wellsfargo.com/affinity/mortgage-contact.page?suffix=psf1060&amp;dm=DMISUREOP1&amp;src=reo&amp;ref=http://reo.wellsfargo.com/buying.aspx">
+                                                             <img src="images/red_button1.gif" border="0" alt="Request Consultation">
+                                                             </a>
+                                                             <br>
+                                                             <a href="https://www.wellsfargo.com/mortgage/apply/prequalification/?cm_sp=Exit-_-Exit%20to%20Prequal-_-N/A&amp;dm=DMISUREOP1&amp;src=reo&amp;ref=http://reo.wellsfargo.com/buying.aspx">
+                                                                 <img src="images/red_button2.gif" border="0" alt="Get Prequalified">
+                                                                 </a>
+                                                             </div>
+                                          </div>
+                                      
+                                     <div class="square1d" style="width:462px;">
+                                                <div style="display:inline;float:left;height:100%;border:none;">
+                                                        <img src="images/phoneoutline.gif" border="0" alt="Contact" title="Contact">
+                                                </div>
+                                                <div style="width:400px;float:right; border:none;">
+                                                         <span style="font-size:90%;"><strong> <span id="lblCMS1_3">To report any concerns with a listing broker/agent or to report any property condition or other concern needing escalation, including concerns related to a previously submitted offer or information on how to place an offer, please call: </span></strong></span>
+                                                          
+                                                          <div style="height:8px;">&nbsp;</div>
+                                                          
+                                                          <span id="lblCMS901">1-877-617-5274</span>
+                                                           
+                                                           <div style="height:8px;">&nbsp;</div>
+                                                          
+                                                          <a href="javascript:viod(null);" onclick="showDialog3();" id="hours2"><strong>See Hours &gt;</strong></a>
+                                                                      
+                                                                                       <div id="dialog-modal3" title="Hours" style="display: none;">
+                                                                                         <table border="0" style="width:200px;" cellspacing="0" cellpadding="0">
+                                                                                                               
+                                                                                                                <tbody><tr>
+                                                                                                                    <td style="font-size:.95em;padding:5px;">
+                                                                                                                           <strong>Premiere Asset Services:</strong><br>
+                                                                                                                            <span style="font-weight:lighter;">
+                                                                                                                            Mon – Fri: 7 am – 8 pm<br>
+                                                                                                                            Central Time
+                                                                                                                            </span>
+                                                                                                                     </td>
+                                                                                                                </tr>
+                                                                                                               
+                                                                                                       </tbody></table>
+                                                                                       </div>
+                                                 
+                                                
+                                          </div>
+                                        </div>
+                               </div>
+                        
+                        
+                        <br>
+          
+              
+               <div id="disclaimer1" style="padding-top:10px;">
+                    <span id="lblCMS907">Although the information herein is obtained from reliable sources, Wells Fargo assumes no responsibility and makes no warranties, representations or guarantees as to the availability or accuracy of the property information, photographs, or other information depicted or described in the listings available using this web site.  Wells Fargo is not responsible for the products or services offered by the real estate professional identified in any particular listing.  Wells Fargo employees and their immediate family are not eligible to purchase Wells Fargo REO properties.</span> 
+              </div>
+                    
+                <!--END CONTENT COLUMN-->
+              
+              
+                
+              
+           
+               <div style="text-align:center;width:100%;">
+                       <img src="images/EHL.gif" alt="Equal Housing Lender and Equal Housing Opportunity logo" title="Equal Housing Lender and Equal Housing Opportunity logo">
+                </div>
+                <br>
+            </div>
+        
+           
+           <table style="width:100%;">
+                <tbody><tr>
+                    <td style="text-align:center;">
+                    <span style="font-size:85%;">
+                    <a href="https://reo.wellsfargo.com/">REO Properties</a> | 
+                    <a href="https://www.wellsfargo.com/about/">About Wells Fargo</a> | 
+                   <a href="https://www.wellsfargo.com/careers/"> Careers</a> | 
+                    <a href="https://www.wellsfargo.com/privacy-security/">Privacy, Security &amp; Legal</a> | 
+                    <a href="https://www.wellsfargo.com/privacy-security/fraud/report/phish">Report Email Fraud</a> | 
+                    <a href="https://www.wellsfargo.com/sitemap">Sitemap</a> | 
+                    <a href="https://www.wellsfargo.com/">Home</a> 
+                    </span>
+                    <br><br>
+                   <span style="font-size:85%;color:Gray;">
+                     <span id="lblCMS905">Wells Fargo Home Mortgage is a division of Wells Fargo Bank, N.A. dba Premiere Asset Services.<br>© 2014 Wells Fargo Bank, N.A.  All rights reserved.  NMLSR ID 399801 </span> 
+                    </span>
+                    </td>
+                </tr>
+            </tbody></table>  
+  
+    </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("SM1_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();Sys.Application.initialize();
+//]]>
+</script>
+</form>
+    
+    
+   
+    <script type="text/javascript" language="JavaScript">
+       cmSetClientID('50060000|reo', 'true', 'data.coremetrics.com', 'wellsfargo.com');
+
+ 
+       
+        var tempArrayVal = 'R0030||Property Search Results||REO-_-Residential-_--_-REO-_-';
+        var tArray = tempArrayVal.split("||");
+         
+        if (tArray.length <= 1) {
+           
+              if (tempArrayVal == "") {
+                  cmCreatePageviewTag('Property Search Criteria', 'R0030', null, null, 'REO-_-Residential-_--_-REO-_-', null); //default value
+               }
+       }
+        else {
+        
+            cmCreatePageviewTag(tArray[1], tArray[0], null, null, tArray[2], null);
+        }
+</script>
+
+
+        
+    
+
+
+
+
+
+
+<map id="_Image-Maps_9201312121432511" name="Image-Maps_1">
+<area shape="rect" coords="23,2,117,26" href="#" alt="Home Lending" title="Home Lending">
+<area shape="rect" coords="123,2,217,26" href="https://www.wellsfargo.com/credit-cards/" alt="Credit Cards" title="Credit Cards">
+<area shape="rect" coords="224,2,318,26" href="https://www.wellsfargo.com/autoloans/" alt="Auto Finance" title="Auto Finance">
+<area shape="rect" coords="331,2,445,26" href="https://www.wellsfargo.com/personal_credit/" alt="Personal Loans" title="Personal Loans">
+<area shape="rect" coords="446,2,560,26" href="https://www.wellsfargo.com/student/index" alt="Student Loans" title="Student Loans">
+<area shape="rect" coords="565,2,679,26" href="https://www.wellsfargo.com/smarter_credit/" alt="Smarter Credit" title="Smarter Credit">
+</map>
+
+
+</body></html>

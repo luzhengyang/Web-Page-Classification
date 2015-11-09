@@ -1,0 +1,1184 @@
+<html id="ng-app" class="ng-app:membernet no-js ng-scope" ng-app="membernet" xmlns:ng="http://angularjs.org"><!--<![endif]--><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}</style>
+    <meta name="author" content="Epsilon">
+    <meta name="description" content="Wells Fargo Bank Rewards">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title data-ng-bind="$root.viewInfo.title" class="ng-binding">Wells Fargo Bank Rewards</title>
+    <!-- ngIf: $root.viewInfo.currentView != 'Desktop' --><!-- end ngIf: $root.viewInfo.currentView != 'Desktop' -->
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!--[if lt IE 9]>
+          <script src="/js/3rd party/html5.js"></script>
+        <![endif]-->
+    <!--[if lte IE 8]>
+        <script>
+            document.createElement('data-ng-if');
+            document.createElement('ng-if');
+            document.createElement('data-ng-include');
+            document.createElement('ng-include');
+            document.createElement('ng-cloak');
+            document.createElement('ng-pluralize');
+            document.createElement('ng-view');
+            document.createElement('ng:if');
+            document.createElement('ng:cloak');
+            document.createElement('ng:include');
+            document.createElement('ng:pluralize');
+            document.createElement('ng:view');
+            document.createElement('category-banner'); 
+            document.createElement('address-block');
+            document.createElement('affinity-banner');
+            document.createElement('catalog-banner');
+            document.createElement('catalog-search-box');
+            document.createElement('category-tree');
+            document.createElement('html-container');
+            document.createElement('bing-map');
+            document.createElement('dropdown');
+            document.createElement('ui-mask');
+            document.createElement('menus');
+            document.createElement('multiline-select');            
+            document.createElement('matching-fields');
+            document.createElement('profile');
+            document.createElement('progressbar');
+            document.createElement('reward-amount');
+            document.createElement('sonar');
+            document.createElement('spinner');
+            document.createElement('validator');
+            document.createElement('question');
+
+        </script>
+        <![endif]-->
+    <!--[if lt IE 8]>
+          <script src="/js/3rd party/json2.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+         <link rel="stylesheet" href="/stylesheets/all.desktop.epsi.css">
+    <![endif]-->
+    
+    
+    <!--- Third Parties and utilities -->
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="/js/3rd party/date.js" type="text/javascript"></script>
+    <script src="/js/3rd party/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="/js/3rd party/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/js/3rd party/angular.min.js" type="text/javascript"></script>
+    <script src="/js/3rd party/angular-cache.min.js" type="text/javascript"></script>
+    <script src="/js/3rd party/angular-route.min.js" type="text/javascript"></script>
+    <script src="/js/3rd party/angular-sanitize.min.js" type="text/javascript"></script>
+    <script src="/js/3rd party/angular-cookies.min.js" type="text/javascript"></script>
+    <script src="/js/3rd party/angular-resource.min.js" type="text/javascript"></script>
+    <script src="/js/3rd party/angular-touch.min.js" type="text/javascript"></script>
+    <script src="/js/3rd party/angular-animate.min.js" type="text/javascript"></script>
+    <script src="/js/3rd party/bootstrap.js" type="text/javascript"></script>
+    <script src="/js/3rd party/linq.min.js" type="text/javascript"></script>
+    <script src="/js/3rd party/MicrosoftAjax.js" type="text/javascript"></script>
+    <script src="/js/3rd party/spin.min.js" type="text/javascript"></script><style type="text/css"></style>
+    <script src="/js/3rd party/jquery.spin.js" type="text/javascript"></script>
+    <script src="/js/3rd party/webtrends.js" type="text/javascript"></script><script type="text/javascript" src="https://webtrends2.epsilon.com/dcs6nojs4000004fu84gfkyij_8k8z/wtid.js"></script>
+    <script src="/Scripts/jquery.signalR-1.0.0-rc2.js" type="text/javascript"></script>
+    <script src="/js/3rd party/TweenMax.min.js" type="text/javascript"></script>
+    <!-- Inject Minifiator -->
+    <link rel="stylesheet" href="../Epsilon.10.21.0741.epsimin.css">
+    <!-- ngIf: $root.viewInfo.currentView == 'Desktop' --><link data-ng-if="$root.viewInfo.currentView == 'Desktop'" rel="stylesheet" href="../Epsilon.10.21.0741.desktop.epsimin.css" class="ng-scope"><!-- end ngIf: $root.viewInfo.currentView == 'Desktop' -->
+    <!-- ngIf: $root.viewInfo.currentView == 'Mobile' -->
+    <script src="../Epsilon.10.21.0741.epsimin.js" type="text/javascript"></script>
+
+<!-- Injected By Minifiator -->
+</head>
+
+<body ng-show="ProfileChecked" ng-controller="BodyController" class="ng-scope">
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <!-- ngIf: $parent.$root.viewInfo.currentView == 'Desktop' --><div data-ng-if="$parent.$root.viewInfo.currentView == 'Desktop'" class="ng-scope">
+        <!-- ngInclude: '/htm/alert.htm' --><div ng-include="'/htm/alert.htm'" class="ng-scope"><div id="AlertPopup" ng-controller="AlertController" class="lightbox lightbox4 modal hide ng-scope" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+	<div class="holder">
+		<div class="frame">
+			<div class="block">
+				<div class="bar link"><a href="javascript:" ng-click="Close()" class="btn-close link">Close</a></div>
+					<div class="popup">
+						<div class="text-block">
+                            <div ng-show="Title != undefined &amp;&amp; Title != null" style="text-align: center" class="ng-hide">
+							    <h2 class="ng-binding"> </h2>
+						    </div>
+			                <div ng-bind-html="Message" style="max-height: 283px; overflow-y: auto;" class="ng-binding"></div>
+                            <br>
+			                <div class="btns">
+			                    <a href="javascript:" ng-show="Continue != undefined &amp;&amp; Continue != null" class="f-button ng-hide" ng-click="Continue()"><strong>Continue</strong></a>
+			                    <a href="javascript:" ng-show="Okay != undefined &amp;&amp; Okay != null" class="f-button ng-hide" ng-click="Okay()"><strong>Okay</strong></a>
+			                    <a href="javascript:" ng-show="Cancel != undefined &amp;&amp; Cancel != null" class="s-button ng-hide" ng-click="Cancel()"><strong>Cancel</strong></a>
+			                    <a href="javascript:" ng-show="Confirm != undefined &amp;&amp; Confirm != null" class="s-button ng-hide" ng-click="Confirm()"><strong>Confirm </strong></a>
+                                <a href="javascript:" data-ng-show="Print != undefined &amp;&amp; Print != null" class="s-button ng-hide" data-ng-click="Print()"><strong>Print</strong></a>
+			                </div>
+			            </div>
+		            </div>
+				</div>
+			</div>
+		</div>
+	</div></div>
+        <div id="page">
+            <div class="page-holder">
+                    <!-- ngInclude: '/htm/header/header.htm' --><div data-ng-include="'/htm/header/header.htm'" class="ng-scope"><div id="header" ng-controller="HeaderController" class="ng-scope">
+	<h1 class="logo"><a href="/">Wells Fargo Rewards</a></h1>
+    <!--{true: '', false: ''}[Profile]-->
+	<ul class="css3menu1" ng-class="{'css3menu1AuthedMobile' : Profile &amp;&amp; ReturnLinkText == 'Return to Wells Fargo', 'css3menu1Authed' : Profile &amp;&amp; ReturnLinkText != 'Return to Wells Fargo'}">
+        <li>
+            <a ng-hide="Profile" ng-class="{current : CurrentPage == 'Welcome'}" href="/" class="current">Welcome</a>
+            <a ng-show="Profile" ng-class="{current : CurrentPage == 'Welcome'}" href="/#/Welcome" class="current ng-hide">Welcome</a>
+        </li>
+        <li>
+			<a ng-hide="Profile" ng-class="{current : CurrentPage == 'About'}" href="/#/About" class="">About</a>
+        </li>
+        <li>
+            <a href="/#/Catalog" ng-class="{current : CurrentPage == 'Rewards'}">Use Rewards</a>
+            <ul ng-show="Profile" class="ng-hide">
+                <li><a href="/#/Catalog">Browse Catalog</a></li>
+                <li><a href="/#/Catalog/Redeem%20to%20Account">Redeem to Account</a></li>
+                <li><a href="/#/Auctions">Auctions</a></li>
+                <li><a href="/#/Limited">Limited Time Offers</a></li>
+                <li ng-hide="Profile.IsCsrView" class=""><a href="/#/Travel">Travel</a></li>
+                <li ng-hide="Profile.IsCsrView" class=""><a href="javascript:" ng-click="DigitalClick('DigitalMain')">Digital Rewards</a></li>
+            </ul>
+        </li>
+        <li>
+            <!-- ngIf: !Profile.suppressEarnRewards --><a ng-if="!Profile.suppressEarnRewards" href="/#/EarnMoreMall" ng-class="{current : CurrentPage == 'Earn'}" class="ng-scope">Earn Rewards</a><!-- end ngIf: !Profile.suppressEarnRewards -->
+            <!-- ngIf: Profile.suppressEarnRewards -->
+            <ul ng-show="Profile" class="ng-hide">
+                
+                <li><a href="/#/MyOffers" ng-show="Profile.IsEnrolledToRelationshipBonus" class="ng-hide">My Offers</a></li>
+                <li><a href="/#/AccumulatingOffers" ng-hide="Profile.IsEnrolledToRelationshipBonus" class="">My Offers</a></li>
+                <li ng-hide="Profile.IsCsrView || Profile.suppressEarnRewards" class=""><a href="/#/EarnMoreMall">Earn More Mall</a></li>
+                <li ng-hide="Profile.IsCsrView || Profile.suppressEarnRewards" class=""><a ng-click="OneWay('/Home/PurchaseTravel', 'MONT')">Travel</a></li>
+            </ul>
+        </li>
+        <li ng-show="Profile.SelectedRan" class="ng-hide">
+            <a href="/#/RewardsOverview" ng-class="{current : CurrentPage == 'Account'}">My Rewards</a>
+            <ul>
+                <li><a href="/#/RewardsOverview">Overview</a></li>
+                <li><a href="/#/ActivityDetails">Activity</a></li>
+                <li><a href="/#/ProgramSummary">Program Summary</a></li>
+                <li ng-show="Profile.GiftTransferLink" class="ng-hide"><a ng-href="/#/" href="/#/">Transfer/Gift</a></li>
+                <li><a href="/#/ViewPreferences">Manage Alerts</a></li>
+            </ul>
+        </li>
+        <li ng-hide="Profile" class="">
+			<a ng-class="{current : CurrentPage == 'Login'}" target="_self" href="/Home/LoginLink">Login</a>
+		</li>
+        <li ng-show="Profile &amp;&amp; Profile.IsCsrView == false" class="ng-hide">
+			<a target="_self" href="/Home/BackToWF" class="ng-binding">Return to Wells Fargo</a>
+		</li>        
+        <li ng-show="Profile" class="ng-hide">
+            <a href="/Home/Logout" target="_self">Logout</a>
+        </li>
+        <li>
+            <a href="/#/Help" ng-class="{current : CurrentPage == 'Help'}">Help</a>
+            <ul>
+                <li><a href="/#/Contact">Contact Us</a></li>
+                <li><a href="/#/FAQ">FAQs</a></li>
+            </ul>
+        </li>
+         <li>
+            <a ng-click="DisplaySpanishLanguage()" href="javascript:" target="_self">Español</a>
+        </li>
+    </ul>
+	<menus><ul class="user-nav">
+	<li ng-show="Profile" class="cart ng-scope ng-hide" ng-controller="CartMenuController">
+		<a href="/#/Cart" class="ng-binding">Cart ()</a>
+		<div class="drop">
+			<div ng-hide="ItemCount > 0" class="">
+				Your cart is empty.
+			</div>
+			<div class="cart ng-hide" ng-show="ItemCount > 0">
+				<strong class="heading">Shopping Cart Preview</strong>
+				<div class="holder">
+					<table summary="item table">
+						<tbody>
+							<tr>
+								<th>Item</th>
+								<th>Rewards</th>
+							</tr>
+							<!-- ngRepeat: item in Items -->
+						</tbody>
+					</table>
+				</div>
+				<div class="col-holder">
+					<div class="col">
+						<p><span class="ng-binding"></span> Items in Cart</p>
+					</div>
+					<div class="col">
+						<strong>Total Rewards <span class="ng-binding"></span></strong>
+						<a href="/#/Cart" class="f-button"><strong>View Cart</strong></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</li>
+	<li ng-show="Profile" ng-controller="WishListMenuController" class="ng-scope ng-hide">
+		<a href="/#/WishList" class="ng-binding">Wish List ()</a>
+		<div class="drop">
+			<div ng-hide="ItemCount > 0" class="">
+				Your wish list is empty.
+			</div>
+			<div ng-show="ItemCount > 0" class="ng-hide">
+				<strong class="heading">Wish List Preview</strong> 
+				<div ng-class="{'wishholder' : ItemCount > 3} ">
+					<table summary="item table 2">
+						<tbody>
+							<tr>
+								<th>Item</th>
+								<th>Rewards Progress</th>
+							</tr>
+							<!-- ngRepeat: item in Items -->
+						</tbody>
+					</table>
+				</div>
+				<div class="col-holder">
+					<a href="/#/WishList" class="f-button"><strong>View Full Wish List</strong></a>
+				</div>
+			</div>
+		</div>
+	</li>
+</ul>
+<span id="whoami" style="display:none" class="ng-binding">PWEB07</span></menus>
+    <!--<img src="{{KeepAliveUrl}}" alt="" style="visibility:hidden;" />-->
+</div> </div>
+                <div id="viewContainer">
+                    <!-- ngView:  --><div ng-view="" class="ng-scope"><div id="promo" class="headerBorder ng-scope" ng-controller="LandingController">
+	<div class="gallery-box">
+		<div class="holder" ng-init="Page.Tab = 0">
+			<!-- ngRepeat: message in HeroMessages --><div ng-repeat="message in HeroMessages" ng-show="Page.Tab == message.Index" class="ng-scope">
+				<html-container html="message.Value" class="ng-isolate-scope"><a href="#" target="_blank" class="ng-scope"><img border="0" alt="image description" src="https://wfbk-prod-snr.epsilon.com/SonarProd/SonarEngine/img_101104.jpg"></a> 
+<div class="description ng-scope">
+<h2><i>Wells Fargo Rewards</i></h2>
+<p>Enjoy instant, on-the-go entertainment with digital rewards. Get access to the latest music, games, software, e-books, audiobooks and more.</p><a class="c-button" href="https://wfbk-prod-snr.epsilon.com/SonarProd/SonarEngine/T.aspx?l=H_0_107370_115020&amp;t=100014"><strong>Learn more</strong></a> </div><!-- ECHO:BEGIN_IMPRESSION --><img src="https://wfbk-prod-snr.epsilon.com/SonarProd/SonarEngine/imp_H_107370_0.gif" border="0" width="1" height="1" class="ng-scope"><!-- ECHO:END_IMPRESSION --></html-container>				
+			</div><!-- end ngRepeat: message in HeroMessages --><div ng-repeat="message in HeroMessages" ng-show="Page.Tab == message.Index" class="ng-scope ng-hide">
+				<html-container html="message.Value" class="ng-isolate-scope"><a href="https://wfbk-prod-snr.epsilon.com/SonarProd/SonarEngine/T.aspx?l=H_0_104719_100039&amp;t=100014" class="ng-scope"><img border="0" alt="image description" src="https://wfbk-prod-snr.epsilon.com/SonarProd/SonarEngine/img_101067.jpg"></a> 
+<div class="description ng-scope">
+<h2><i>Wells Fargo Rewards</i></h2>
+<p><b>It’s all yours</b></p>
+<p>Whether it’s a trip for the family or a gift for a friend, there are thousands of fun and exciting rewards at your fingertips. Choices include cash redemption options, gift cards, travel, brand-name merchandise, charitable donations and more.</p><a class="c-button" href="https://wfbk-prod-snr.epsilon.com/SonarProd/SonarEngine/T.aspx?l=H_0_104719_100039&amp;t=100014"><strong>Redeem now</strong></a> </div><!-- ECHO:BEGIN_IMPRESSION --><img src="https://wfbk-prod-snr.epsilon.com/SonarProd/SonarEngine/imp_H_104719_0.gif" border="0" width="1" height="1" class="ng-scope"><!-- ECHO:END_IMPRESSION --></html-container>				
+			</div><!-- end ngRepeat: message in HeroMessages --><div ng-repeat="message in HeroMessages" ng-show="Page.Tab == message.Index" class="ng-scope ng-hide">
+				<html-container html="message.Value" class="ng-isolate-scope"><a href="https://wfbk-prod-snr.epsilon.com/SonarProd/SonarEngine/T.aspx?l=H_0_104718_100037&amp;t=100014" class="ng-scope"><img border="0" alt="" src="https://wfbk-prod-snr.epsilon.com/SonarProd/SonarEngine/img_101065.jpg"></a> 
+<div class="description ng-scope">
+<h2><i>Wells Fargo Rewards</i></h2>
+<p><b>Paradise is just a click away</b></p>
+<p><b>Oh the places you'll go...</b></p>
+<p>From a weekend trip to a dream vacation, travel rewards make it easy to plan the perfect getaway.</p><a class="c-button" href="https://wfbk-prod-snr.epsilon.com/SonarProd/SonarEngine/T.aspx?l=H_0_104718_100037&amp;t=100014"><strong>Book now</strong></a> </div><!-- ECHO:BEGIN_IMPRESSION --><img src="https://wfbk-prod-snr.epsilon.com/SonarProd/SonarEngine/imp_H_104718_0.gif" border="0" width="1" height="1" class="ng-scope"><!-- ECHO:END_IMPRESSION --></html-container>				
+			</div><!-- end ngRepeat: message in HeroMessages --><div ng-repeat="message in HeroMessages" ng-show="Page.Tab == message.Index" class="ng-scope ng-hide">
+				<html-container html="message.Value" class="ng-isolate-scope"><a href="https://wfbk-prod-snr.epsilon.com/SonarProd/SonarEngine/T.aspx?l=H_0_104717_100039&amp;t=100014" target="_self" class="ng-scope"><img border="0" alt="" src="https://wfbk-prod-snr.epsilon.com/SonarProd/SonarEngine/img_101064.jpg"></a> 
+<div class="description ng-scope">
+<h2><i>Wells Fargo Rewards</i></h2>
+<p>Earn with everyday purchases, and reward yourself with thousands of amazing offerings. From brand-name merchandise to VIP experiences, the sky’s the limit.</p><a class="c-button" href="https://wfbk-prod-snr.epsilon.com/SonarProd/SonarEngine/T.aspx?l=H_0_104717_100039&amp;t=100014"><strong>Get Started</strong></a></div><!-- ECHO:BEGIN_IMPRESSION --><img src="https://wfbk-prod-snr.epsilon.com/SonarProd/SonarEngine/imp_H_104717_0.gif" border="0" width="1" height="1" class="ng-scope"><!-- ECHO:END_IMPRESSION --></html-container>				
+			</div><!-- end ngRepeat: message in HeroMessages --><!-- end ngRepeat: message in HeroMessages --><!-- end ngRepeat: message in HeroMessages --><!-- end ngRepeat: message in HeroMessages --><!-- end ngRepeat: message in HeroMessages -->
+		</div>
+		<div class="switcher">
+			<ul>
+				<!-- ngRepeat: message in HeroMessages --><li ng-repeat="message in HeroMessages" ng-class="{active: Page.Tab == message.Index}" class="ng-scope active"><a href="javascript:" ng-click="Page.Tab = message.Index" class="ng-binding">0</a></li><!-- end ngRepeat: message in HeroMessages --><li ng-repeat="message in HeroMessages" ng-class="{active: Page.Tab == message.Index}" class="ng-scope"><a href="javascript:" ng-click="Page.Tab = message.Index" class="ng-binding">1</a></li><!-- end ngRepeat: message in HeroMessages --><li ng-repeat="message in HeroMessages" ng-class="{active: Page.Tab == message.Index}" class="ng-scope"><a href="javascript:" ng-click="Page.Tab = message.Index" class="ng-binding">2</a></li><!-- end ngRepeat: message in HeroMessages --><li ng-repeat="message in HeroMessages" ng-class="{active: Page.Tab == message.Index}" class="ng-scope"><a href="javascript:" ng-click="Page.Tab = message.Index" class="ng-binding">3</a></li><!-- end ngRepeat: message in HeroMessages --><!-- end ngRepeat: message in HeroMessages --><!-- end ngRepeat: message in HeroMessages --><!-- end ngRepeat: message in HeroMessages --><!-- end ngRepeat: message in HeroMessages -->
+			</ul>
+		</div>
+	</div>
+	<div class="newscols">
+		<div class="col">
+			<div class="title">
+			    <h3><span class="emmItalic">Earn More Mall</span><sup>®</sup></h3>
+			</div>
+		    <p>Boost your earning potential and find great deals at your favorite local and national stores in our <span class="emmItalic">Earn More Mall</span> site. With over 3,000 popular in-store and online retailers, it’s never been easier to earn a little extra.<br><a class="more" href="#/EarnMoreMall">Shop Now</a></p>
+			<div class="photo">
+				<a href="#/EarnMoreMall"><img alt="image description" src="img/n-img03.jpg"></a>
+			</div>
+            <div class="emmItalicSmall">
+                *Merchants of the Earn More Mall feature control the variability of the offers shown. Merchant bonus offers may be offered on a limited time, promotional basis and are subject to change without notice. Bonus rewards currency will be earned on net purchases (purchases minus returns/ credits) when using your Wells Fargo Credit Card for qualifying in-store purchases at participating retailer locations or a payment card for qualifying purchases when linking from the Earn More Mall Site. 
+            </div>
+		</div>
+		<div class="col">
+			<div class="title">
+				<h3>Rewards Catalog</h3>
+			</div>
+			<p>Put thousands of unique and exciting options at your fingertips with our online rewards catalog. Whether you’re looking for gift cards, travel, brand-name merchandise, cash redemption options, charitable donations or more, getting them is as simple as point, click, redeem.<br><a class="more" href="#/Catalog">Browse Catalog</a></p>
+			<div class="photo">
+				<a href="#/Catalog"><img alt="image description" src="img/n-img05.jpg" width="300" height="230"></a>
+			</div>
+		</div>
+		<div class="col">
+			<div class="title">
+				<h3>Digital Rewards</h3>
+			</div>
+			<p>Find the hottest new entertainment in our digital rewards store. From cool new music to best selling ebooks, entertaining games and more, instant digital downloads make it easy to get the rewards you’re looking for, right now.<br><a href="javascript:" ng-click="DigitalClick()" class="more">Explore Now</a></p>
+			<div class="photo">
+				<a href="javascript:" ng-click="DigitalClick()"><img alt="image description" src="img/Digital_Rewards_Image.jpg" width="300" height="230"></a>
+			</div>
+		</div>
+	</div>
+</div>  </div>
+                </div>
+                <!-- ngInclude: '/htm/_footerPartial.htm' --><div ng-include="'/htm/_footerPartial.htm'" class="ng-scope"><div id="footer" class="ng-scope">
+	<div class="holder">
+		<div ng-class="{'col c7' : Profile ==null , 'col c1' : Profile !=null}" class="col c7">
+			<h3><a ng-hide="Profile" href="/" class="">Welcome</a></h3>
+            <h3><a ng-show="Profile" href="/#/Welcome" class="ng-hide">Welcome</a></h3>
+			<ul ng-show="Profile" class="ng-hide">
+				<li><a href="/#/Cart">Cart</a></li>
+				<li><a href="/#/WishList">Wish List</a></li>
+			</ul>
+		</div>
+		<div ng-hide="Profile" ng-class="{'col c8' : Profile ==null} " class="col c8">
+			<h3><a href="/#/About">About the Program</a></h3>
+		</div>
+		<div ng-class="{'col c9' : Profile ==null ,'col c2' : Profile !=null}" class="col c9">
+			<h3><a href="/#/Catalog">Use Rewards</a></h3>
+			<ul ng-show="Profile" class="ng-hide">
+			    <li><a href="/#/Catalog">Browse Catalog</a></li>
+                <li><a href="/#/Catalog/Redeem%20to%20Account">Redeem to Account</a></li>
+				<li><a href="/#/Auctions">Auctions</a></li>
+				<li><a href="/#/Limited">Limited Time Offers</a></li>
+				<li><a href="/#/Travel">Travel</a></li>
+                <li><a href="javascript:" ng-click="DigitalClick('DigitalMain')">Digital Rewards</a></li>
+			</ul>
+		</div>
+		<div ng-class="{'col c10': Profile == null,'col c3': Profile !=null}" class="col c10">
+		    <h3>
+		        <!-- ngIf: !Profile.suppressEarnRewards --><a ng-if="!Profile.suppressEarnRewards" href="/#/EarnMoreMall" class="ng-scope">Earn Rewards</a><!-- end ngIf: !Profile.suppressEarnRewards -->
+                <!-- ngIf: Profile.suppressEarnRewards -->
+		    </h3>
+		    <ul ng-show="Profile" class="ng-hide">
+		        <li><a href="/#/MyOffers" ng-show="Profile.IsEnrolledToRelationshipBonus" class="ng-hide">My Offers</a></li>
+                <li><a href="/#/AccumulatingOffers" ng-hide="Profile.IsEnrolledToRelationshipBonus" class="">My Offers</a></li>
+		        <!-- ngIf: !Profile.suppressEarnRewards --><li ng-if="!Profile.suppressEarnRewards" class="ng-scope"><a href="/#/EarnMoreMall">Earn More Mall</a></li><!-- end ngIf: !Profile.suppressEarnRewards -->
+		        <!-- ngIf: !Profile.suppressEarnRewards --><li ng-if="!Profile.suppressEarnRewards" class="ng-scope"><a href="javascript:" onclick="OneWayModal('/Home/TravelDeals', 'MONT');">Travel</a></li><!-- end ngIf: !Profile.suppressEarnRewards -->
+		    </ul>
+		</div>
+		<div ng-hide="Profile" ng-class="{'col c11': Profile == null}" class="col c11">
+			<h3><a href="/Home/LoginLink">Login</a></h3>	
+		</div>
+        <div ng-show="Profile" ng-class="{'col c4': Profile != null}" class="ng-hide">
+			<h3><a href="/#/RewardsOverview">My Rewards</a></h3>
+			<ul>
+				<li><a href="/#/RewardsOverview">Overview</a></li>
+				<li><a href="/#/ActivityDetails">Activity</a></li>
+				<li><a href="/#/ProgramSummary">Program Summary</a></li>
+				<li ng-show="Profile.GiftTransferLink" class="ng-hide"><a ng-href="/#/" href="/#/">Transfer/Gift</a></li>
+                <li><a href="/#/ViewPreferences">Manage Alerts</a></li>
+			</ul>
+		</div>
+		<div ng-show="Profile" ng-class="{'col c5': Profile != null}" class="ng-hide">
+			<h3><a href="/#/ViewProfile">Rewards Program Account</a> </h3>
+			<ul>
+				<li><a href="/#/ViewProfile">Profile</a></li>
+			    <li><a href="/#/AutoRedemptions">Auto Redemptions</a></li>
+                <li ng-show="Profile.RansCombinable" ng-hide="!Profile.RansCombinable" class="ng-hide">
+                    <a href="javascript:" ng-click="CombineRan()" class="link">Combine Rewards Accounts</a>
+                </li>
+                <li><a href="javascript:" target="_self" ng-click="BackToWF()" class="ng-binding">Return to Wells Fargo</a></li>
+			</ul>
+		</div>
+		<div ng-class="{'col c12': Profile == null,'col c6' : Profile != null}" class="col c12">
+			<h3><a href="/#/Help">Help</a></h3>
+			<ul>
+				<li><a href="/#/Contact">Contact Us</a></li>
+				<li><a href="/#/FAQ">FAQs</a></li>
+			</ul>
+		</div>
+	</div>
+	
+    <div class="copyright">
+        <p>Copyright © 2013 Wells Fargo Bank, N.A. All Rights Reserved.</p>
+        <!--[if gt IE 8]>-->
+            <ul style="float:Left" ng-show="($parent.$root.viewInfo.deviceType == 'Mobile' || $parent.$root.viewInfo.forceDeviceType == 'Desktop')" class="ng-hide">
+                <li><a href="javascript:" ng-click="SwitchToMobile(true)">View Mobile Site</a></li>
+            </ul>
+        <!--<![endif]-->
+        <ul ng-hide="Profile" class="">
+            <li><a href="/#/PreLoginTns">Terms &amp; Conditions</a></li>
+            <li><a href="https://www.wellsfargo.com/privacy_security/">Privacy Policy</a></li>
+        </ul>
+        <ul ng-show="Profile" class="ng-hide">
+            <li><a href="/#/PreLoginTns">Terms &amp; Conditions</a></li>
+            <li><a href="https://www.wellsfargo.com/privacy_security/">Privacy Policy</a></li>
+        </ul>
+    </div>
+
+    <img alt="" border="0" name="wfbkKeepAlive" width="1" height="1" src="https://idp.wellsfargo.com/sso/keepalive?judasRandom=1415072177494" style="visibility:hidden;">
+    <img alt="" border="0" name="webTrendsAnalytics" width="1" height="1" src="" style="visibility:hidden;">
+</div>
+</div>
+            </div>
+        </div>
+        <!-- ngInclude: 'htm/popups/isBusyPopup.htm' --><div ng-include="'htm/popups/isBusyPopup.htm'" class="ng-scope"><div id="isBusyPopup" ng-controller="IsBusyPopupController" class="loadingRansPopup lightbox lightbox4 modal hide ng-scope" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" aria-hidden="false">
+	<div class="holder">
+		<div class="frame">
+			<div class="block">
+				<div class="bar">
+				</div>
+				<div class="text-block">
+					<div class="ng-binding">
+						
+					</div>
+					<div class="spinner">
+						<spinner isbusy="true" class="ng-isolate-scope"><div class="ui-spinner-container"><div class="spinner" aria-role="progressbar" style="position: relative; width: 0px; z-index: 2000000000; left: 0px; top: 0px;"><div style="position: absolute; top: -2px; opacity: 0.25; -webkit-animation: opacity-100-25-0-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; background-color: rgb(102, 102, 102); box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; -webkit-transform-origin: 0% 50%; -webkit-transform: rotate(0deg) translate(10px, 0px); border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; background-position: initial initial; background-repeat: initial initial;"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; -webkit-animation: opacity-100-25-1-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; background-color: rgb(102, 102, 102); box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; -webkit-transform-origin: 0% 50%; -webkit-transform: rotate(30deg) translate(10px, 0px); border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; background-position: initial initial; background-repeat: initial initial;"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; -webkit-animation: opacity-100-25-2-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; background-color: rgb(102, 102, 102); box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; -webkit-transform-origin: 0% 50%; -webkit-transform: rotate(60deg) translate(10px, 0px); border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; background-position: initial initial; background-repeat: initial initial;"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; -webkit-animation: opacity-100-25-3-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; background-color: rgb(102, 102, 102); box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; -webkit-transform-origin: 0% 50%; -webkit-transform: rotate(90deg) translate(10px, 0px); border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; background-position: initial initial; background-repeat: initial initial;"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; -webkit-animation: opacity-100-25-4-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; background-color: rgb(102, 102, 102); box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; -webkit-transform-origin: 0% 50%; -webkit-transform: rotate(120deg) translate(10px, 0px); border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; background-position: initial initial; background-repeat: initial initial;"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; -webkit-animation: opacity-100-25-5-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; background-color: rgb(102, 102, 102); box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; -webkit-transform-origin: 0% 50%; -webkit-transform: rotate(150deg) translate(10px, 0px); border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; background-position: initial initial; background-repeat: initial initial;"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; -webkit-animation: opacity-100-25-6-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; background-color: rgb(102, 102, 102); box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; -webkit-transform-origin: 0% 50%; -webkit-transform: rotate(180deg) translate(10px, 0px); border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; background-position: initial initial; background-repeat: initial initial;"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; -webkit-animation: opacity-100-25-7-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; background-color: rgb(102, 102, 102); box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; -webkit-transform-origin: 0% 50%; -webkit-transform: rotate(210deg) translate(10px, 0px); border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; background-position: initial initial; background-repeat: initial initial;"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; -webkit-animation: opacity-100-25-8-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; background-color: rgb(102, 102, 102); box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; -webkit-transform-origin: 0% 50%; -webkit-transform: rotate(240deg) translate(10px, 0px); border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; background-position: initial initial; background-repeat: initial initial;"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; -webkit-animation: opacity-100-25-9-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; background-color: rgb(102, 102, 102); box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; -webkit-transform-origin: 0% 50%; -webkit-transform: rotate(270deg) translate(10px, 0px); border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; background-position: initial initial; background-repeat: initial initial;"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; -webkit-animation: opacity-100-25-10-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; background-color: rgb(102, 102, 102); box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; -webkit-transform-origin: 0% 50%; -webkit-transform: rotate(300deg) translate(10px, 0px); border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; background-position: initial initial; background-repeat: initial initial;"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; -webkit-animation: opacity-100-25-11-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; background-color: rgb(102, 102, 102); box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; -webkit-transform-origin: 0% 50%; -webkit-transform: rotate(330deg) translate(10px, 0px); border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; background-position: initial initial; background-repeat: initial initial;"></div></div></div></div></spinner>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+        <!-- ngInclude: 'htm/popups/timeoutPopup.htm' --><div ng-include="'htm/popups/timeoutPopup.htm'" class="ng-scope"><div id="timeoutPopup" ng-controller="TimeoutPopupController" class="lightbox lightbox4 modal hide fade ng-scope" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+	<div class="holder">
+		<div class="frame">
+			<div class="block">
+				<div class="bar">
+					<div href="javascript:" class="a btn-close link" ng-click="Signout()">Sign Out</div>
+				</div>
+                <div class="text-block">
+					<h3>Your session is about to expire!</h3>
+                    <p class="ng-binding">You will be logged out in  seconds.</p>
+                    <p>Do you want to stay signed in?</p>
+				</div>
+			    <form action="#" class="question-form ng-pristine ng-valid">
+			        <fieldset>
+			            <legend>Keep alive</legend>
+			            <div class="btn-holder">
+			                <a href="javascript:" ng-click="KeepAlive()" class="f-button"><strong>Yes, keep me signed in</strong></a>
+			                <a href="javascript:" ng-click="Signout()" class="s-button"><strong>No, sign me out</strong></a>
+			            </div>
+			        </fieldset>
+			    </form>
+			</div>
+		</div>
+	</div>
+</div></div>
+        <!-- ngInclude: 'htm/popups/selectRanPopup.htm' --><div ng-include="'htm/popups/selectRanPopup.htm'" class="ng-scope"><div id="selectRanPopup" ng-controller="SelectRanPopupController" class="selectRanPopup lightbox modal hide fade ng-scope" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" aria-hidden="false">
+	<div class="holder">
+		<div class="frame">
+			<div class="block">
+				<div class="bar">
+					<a href="/" ng-hide="Profile.SelectedRan" class="btn-close link">Close</a>
+                    <a href="javascript:" ng-show="Profile.SelectedRan" ng-click="GoBack()" class="btn-close link ng-hide">Close</a>
+				</div>
+				<div class="text-block">
+					<h2 class="ng-binding"></h2>
+					<div ng-bind-html="Description" class="ng-binding"></div>
+				</div>
+				<form action="#" class="account-form ng-pristine ng-valid">                        
+					<fieldset>
+						<legend>account form</legend>
+						<div ng-class="{'ransScrollable' : ShowScrolls}">
+                        <table class="table-box" summary="account items table">
+                            <thead>
+                                <tr>
+                                    <th>Select</th>
+                                    <th class="text">Rewards ID</th>
+                                    <th class="medium">Points in Account</th>
+                                    <th>Cash in Account</th>
+                                </tr>
+                            </thead>
+                            <tbody ng-init="SelectedRan.AccountNumber = null">
+                                <!-- ngRepeat: ran in Rans -->
+                            </tbody>
+                        </table>
+                        </div>
+						<div class="btn-holder" ng-hide="isBusy">
+							<a href="javascript:" ng-click="Submit(SelectedRan.AccountNumber)" class="f-button"><strong>Select</strong></a>
+							<a href="javascript:" ng-hide="Profile.SelectedRan" ng-click="Close()" class="s-button"><strong>Cancel</strong></a>
+                            <a href="javascript:" ng-show="Profile.SelectedRan" ng-click="GoBack()" class="s-button ng-hide"><strong>Cancel</strong></a>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+</div></div>
+        <!-- ngInclude: 'htm/popups/confirmTransfer.htm' --><div ng-include="'htm/popups/confirmTransfer.htm'" class="ng-scope"><div id="confirmTransferPopup" ng-controller="ConfirmTransferController" class="lightbox lightbox4 modal hide fade ng-scope" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+	<div class="holder">
+		<div class="frame">
+			<div class="block">
+				<div class="bar link"><a href="javascript:" ng-click="Cancel()" class="btn-close link">Close</a></div>
+			    <div class="text-holder">
+			        <h2 class="ng-binding">Confirm </h2>
+			        <h4 ng-show="IsBuisnessTransfer" class="ng-binding ng-hide">You are about to transfer  Rewards to .</h4>
+                    <h4 ng-show="Type != 'Gift' &amp;&amp; !IsBuisnessTransfer" class="ng-binding">You are about to transfer  Rewards<span ng-show="SourceRan.CurrencyType!=DestinationRan.CurrencyType" class="ng-binding ng-hide"> (<span ng-show="DestinationRan.CurrencyType!='CASH'" class=""> points</span>)</span> to .</h4>
+			        <h4 ng-show="Type == 'Gift'" class="ng-binding ng-hide">You are about to gift  Rewards to   (xxxx-xxxx-xxxx-).</h4>
+			        <p>Press submit to proceed.</p>
+			    </div>
+			    <div class="dimmed ng-hide" ng-show="(SourceRan.ExpirationMonths > 0 || DestinationRan.ExpirationMonths > 0) &amp;&amp; !IsBuisnessTransfer">
+			        <p ng-show="SourceRan.ExpirationMonths <= 0 &amp;&amp; DestinationRan.ExpirationMonths > 0" class="ng-binding ng-hide">The rewards that are  being  will become subject to expiration after the . The expiration date will be  months from the date of the . Please refer to the program terms &amp; conditions for additional information on expiration of rewards.</p>
+			        <p ng-show="SourceRan.ExpirationMonths > 0 &amp;&amp; DestinationRan.ExpirationMonths <= 0" class="ng-binding ng-hide">The rewards that are being  will no longer carry an expiration date after the . Please refer to the program terms &amp; conditions for additional information on expiration of rewards.</p>
+                    <p ng-show="SourceRan.ExpirationMonths > 0 &amp;&amp; DestinationRan.ExpirationMonths > 0 &amp;&amp; TypePast != 'gifting'" class="ng-binding ng-hide">The rewards that are being  will continue to be subject to expiration after the  and will  expire on the same date that they were due to expire before the gifting of these rewards. Please refer to the program terms &amp; conditions for additional information on expiration of rewards.</p>
+                    <p ng-show="SourceRan.ExpirationMonths > 0 &amp;&amp; DestinationRan.ExpirationMonths > 0 &amp;&amp; TypePast == 'gifting'" class="ng-hide">The rewards that are being gifted will continue to be subject to expiration after the gift and will expire on the same date that they were due to expire before the gifting of these rewards. Please refer to the program terms &amp; conditions for additional information on expiration of rewards.</p>
+			    </div>
+				<div class="btn-holder btn-holder-alt">
+					<a href="javascript:" class="f-button" ng-click="Submit()"><strong>Submit</strong></a>
+					<a href="javascript:" class="s-button" ng-click="Cancel()"><strong>Cancel</strong></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+ </div>
+        <!-- ngInclude: 'htm/popups/confirmCombinePopup.htm' --><div ng-include="'htm/popups/confirmCombinePopup.htm'" class="ng-scope"><div id="confirmCombinePopup" ng-controller="ConfirmCombineController" class="selectRanPopup lightbox modal hide fade ng-scope" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+	<div class="holder">
+		<div class="frame">
+			<div class="block">
+			    <div class="bar link"><a href="javascript:" ng-click="Cancel()" class="btn-close link">Close</a></div>
+                <div>
+                    <h3>Combine these rewards accounts?</h3>
+                </div>
+                <div>
+                    <p>Please review the selected rewards accounts and verify the account information including your rewards balances.</p>
+                </div>
+                <br>
+                <spinner isbusy="isBusy" class="ng-isolate-scope"><div class="ui-spinner-container"></div></spinner>
+                <div>
+                    <form action="#" class="account-form ng-pristine ng-valid" ng-hide="isBusy">                        
+                        <fieldset>
+                            <legend>account form</legend>
+                            <table summary="account items table">
+                                <thead>
+                                    <tr>
+                                        <th class="text">Rewards ID</th>
+                                        <th class="medium">Points in Account</th>
+                                        <th>Cash in Account</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="alt">
+                                        <td class="text">
+                                            <p class="ng-binding"></p>
+                                            <ul>
+                                                <!-- ngRepeat: mechanism in Model.VictimRanInfo.Ran.EarningMechanisms -->
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <span ng-show="Model.VictimRanInfo.Ran.CurrencyType == 'POINTS'" class="ng-binding ng-hide"></span>
+                                        </td>
+                                        <td>
+                                            <span ng-show="Model.VictimRanInfo.Ran.CurrencyType != 'POINTS'" class="ng-binding"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text">
+                                            <p class="ng-binding"></p>
+                                            <ul>
+                                                <!-- ngRepeat: mechanism in Model.SurvivorRanInfo.Ran.EarningMechanisms -->
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <span ng-show="Model.SurvivorRanInfo.Ran.CurrencyType == 'POINTS'" class="ng-binding ng-hide"></span>
+                                        </td>
+                                        <td>
+                                            <span ng-show="Model.SurvivorRanInfo.Ran.CurrencyType != 'POINTS'" class="ng-binding"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </fieldset>
+                    </form>
+                </div>
+			    <div class="btn-holder btn-holder-alt" ng-hide="isBusy">
+					<a href="javascript:" class="f-button" ng-click="Submit()"><strong>Submit</strong></a>
+					<a href="javascript:" class="s-button" ng-click="Cancel()"><strong>Cancel</strong></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+        <!-- ngInclude: 'htm/popups/combineAutoredeemPopup.htm' --><div ng-include="'htm/popups/combineAutoredeemPopup.htm'" class="ng-scope"><div id="combineAutoredeem" ng-controller="CombineAutoRedeemController" class="lightbox lightbox4 modal hide fade ng-scope" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+	<div class="holder">
+		<div class="frame">
+			<div class="block">
+				<div class="bar">
+					<div class="a btn-close">Close</div>
+				</div>
+			    <div class="text-block">
+			        <div ng-show="VictimAutoRedemption &amp;&amp; SurvivorAutoRedemption" class="ng-hide">
+			            <h2>Keep Auto Redemption?</h2>
+			            <p>Auto Redemption is setup in both accounts. You can only have one Auto Redemption item per account. Please select the item you want to keep. You can also cancel out the combining process by clicking on Cancel.</p>
+			        </div>
+			        <div ng-show="VictimAutoRedemption &amp;&amp; !SurvivorAutoRedemption" class="ng-hide">
+			            <h2>Auto Redemption</h2>
+			            <p class="ng-binding">You have an Auto Redemption item setup in Account# . The selected Auto Redemption item would also combine into Account# . Do you want to continue?</p>
+			        </div>
+			        <div ng-show="!VictimAutoRedemption &amp;&amp; SurvivorAutoRedemption" class="ng-hide">
+			            <h2>Auto Redemption</h2>
+			            <p class="ng-binding">You have an Auto Redemption item setup in Account# . The selected Auto Redemption item will not be effected by this process. Do you want to continue?</p>
+			        </div>
+			    </div>
+			    <div>
+			        <form action="#" class="info-form ng-pristine ng-valid">
+			            <fieldset>
+			                <legend>Combine Auto Redeem Selector</legend>
+			                <div class="radio-list"> 
+			                    <table>
+			                        <tbody><tr ng-show="VictimAutoRedemption &amp;&amp; SurvivorAutoRedemption" class="ng-hide">
+			                            <th>Select</th><th></th><th>Item</th>
+			                        </tr>
+			                        <tr ng-show="VictimAutoRedemption" class="ng-hide">
+			                            <td ng-show="VictimAutoRedemption &amp;&amp; SurvivorAutoRedemption" class="ng-hide"><input ng-model="TargetAutoredeemAccount" id="r1" type="radio" name="autoredeem" value="" class="ng-pristine ng-valid"></td>
+			                            <td>
+			                                <div class="illustration">
+			                                    <!--<img alt="{{VictimAutoRedeemItem.Tooltip}}" ng-src="/rwdimg/medium/{{reward.SmallImageName}}" onerror="this.src='/img/notfoundsmall.png'" width="120" height="101">-->
+			                                </div>
+			                            </td>
+			                            <td>
+			                                <strong class="title">
+			                                    Keep <span ng-hide="VictimAutoRedeemItem.ItemType == 'G'" class="ng-binding"></span><span ng-show="VictimAutoRedeemItem.ItemType == 'G'" class="ng-binding ng-hide"></span>
+			                                </strong>
+			                            </td>
+
+			                        </tr>
+			                        <tr ng-show="SurvivorAutoRedemption" class="ng-hide">
+			                            <td ng-show="VictimAutoRedemption &amp;&amp; SurvivorAutoRedemption" class="ng-hide"><input ng-model="TargetAutoredeemAccount" id="r2" type="radio" name="autoredeem" value="" class="ng-pristine ng-valid"></td>
+			                            <td>
+			                                <div class="illustration">
+			                                    <!--<img alt="{{SurvivorAutoRedeemItem.Tooltip}}" ng-src="/rwdimg/medium/{{reward.SmallImageName}}" onerror="this.src='/img/notfoundsmall.png'" width="120" height="101">-->
+			                                </div>
+			                            </td>
+			                            <td>
+			                                <strong class="title">
+			                                    Keep <span ng-hide="SurvivorAutoRedeemItem.ItemType == 'G'" class="ng-binding"></span><span ng-show="SurvivorAutoRedeemItem.ItemType == 'G'" class="ng-binding ng-hide"></span>
+			                                </strong>
+			                            </td>
+			                        </tr>
+			                    </tbody></table>
+			                </div>
+			                <br><br>
+			            </fieldset>
+			        </form>
+			    </div>
+
+			    <div class="btn-holder btn-holder-alt" ng-hide="isBusy">
+			        <a href="javascript:" ng-click="Submit()" class="f-button"><strong>Continue</strong></a>
+			        <a href="javascript:" ng-click="Close()" class="s-button"><strong>Cancel</strong></a>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div></div>
+        <!-- ngInclude: 'htm/popups/combineSuccessPopup.htm' --><div ng-include="'htm/popups/combineSuccessPopup.htm'" class="ng-scope"><div id="combineSuccessPopup" ng-controller="CombineSuccessController" class="lightbox lightbox4 modal hide fade ng-scope" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+	<div class="holder">
+		<div class="frame">
+			<div class="block">
+				<div class="bar">
+					<div class="bar link"><a ng-click="Close()" href="javascript:" class="btn-close link">Close</a></div>
+				</div>
+			    <div class="text-block">
+			        <div>
+			            <h2>Rewards accounts successfully combined</h2>
+			        </div>
+			        
+			        <div>
+			            <p>Congratulations! You’ve successfully combined your rewards accounts. It’s time to enjoy! 
+			                Visit the catalog, start a wish list, place a bid at a 
+			                <span class="wfrItalic">Wells Fargo Rewards</span> online auction 
+			                or shop at the <span class="emmItalic">Earn More Mall<sup>®</sup></span> site to increase your earnings.</p>
+			        </div>
+			        <div ng-show="isBusy" class="ng-hide">Please wait...<div><spinner isbusy="isBusy" class="ng-isolate-scope"><div class="ui-spinner-container"></div></spinner></div></div>
+			        <div ng-hide="isBusy" class="list-of-rans">
+			            <div>This Rewards Account now contains:</div>
+			            <ul class="list-of-rans">
+			                <!-- ngRepeat: em in Profile.SelectedRan.EarningMechanisms -->
+			            </ul>			            
+			        </div>
+			        <div ng-hide="isBusy" class="dimmed">
+			            <div>
+			                <b class="ng-binding">Rewards Account Number# </b>
+			            </div>
+                        <div>
+                            <b class="ng-binding">Your new available rewards balance is .</b>
+                        </div>
+			        </div>
+			    </div>
+                <div class="btn-holder btn-holder-alt" ng-hide="isBusy">
+					<a href="javascript:" class="f-button" ng-click="Close()"><strong>OK</strong></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+        <!-- ngInclude: 'htm/popups/creditCard.htm' --><div ng-include="'htm/popups/creditCard.htm'" class="ng-scope"><!--<div id="creditCardPopup" ng-controller="CreditCardController" class="loadingRansPopup lightbox lightbox4 modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" aria-hidden="false">-->
+
+<!--<div id="creditCardPopup" ng-controller="CreditCardController" class="lightbox lightbox5 modal hide" style="width:900px;height:806px" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" aria-hidden="false">-->
+
+<div id="creditCardPopup" ng-controller="CreditCardController" class="lightbox lightbox5 modal hide ng-scope" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" aria-hidden="false">
+<div class="holder">
+        
+        <!--style="width: 1200px; max-height : 750px; overflow-y:scroll"-->
+    
+        <!-- <div class="holder">-->
+        <div class="frame" style="padding-left:57px !important">
+            <div class="block">
+                <div class="bar"><ahref="javascript:" ng-click="cancel()" class="btn-close">Close</ahref="javascript:"></div>
+                <div class="text-block">
+                    <h2>Card Information Needed</h2>
+                    <div>Payment card information needed. Please enter the payment card you want to use for this transaction.</div>
+                </div>
+                <form class="info-form ng-pristine ng-invalid ng-invalid-required" id="ccform" name="ccform">
+                    <fieldset>
+                        <legend>info form</legend>
+                        <div class="holder">
+                            <label for="field1">Card to be used for payment</label><span ng-show="showMessage" class="required ng-isolate-scope ng-binding ng-hide" target="cc.creditCard" expression="cc.creditCard.length > 0" validationresults="ValidationResults" validate="ShowValidations" message="Please enter a valid value for credit card number.">Please enter a valid value for credit card number.</span><span ng-show="showMessage" class="required ng-isolate-scope ng-binding ng-hide" target="cc.creditCard" expression="cc.creditCard" pattern="^([0-9]{13,16})*$" validationresults="ValidationResults" validate="ShowValidations" message="Invalid credit card number.">Invalid credit card number.</span> <span ng-show="showCreditNumError" class="required ng-hide">Invalid credit card number.</span>
+                            <div class="creditcard_acceptedcards"><label>We accept</label>
+                              <div id="creditImages">
+                              </div>
+                            </div>
+                            <div class="row">
+                                <input name="creditCard" id="creditCard" ng-model="cc.creditCard" class="field ng-pristine ng-valid" type="text" value="Enter card number" title="Enter card number" popover-placement="right" popover="On the Right!">
+                            </div>
+                            
+                            <label for="securityCode">Security Code</label><span ng-show="showMessage" class="required ng-isolate-scope ng-binding ng-hide" target="cc.securityCode" expression="cc.securityCode" pattern="^[0-9]{3,4}$" validationresults="ValidationResults" validate="ShowValidations" message="Please enter a valid value for security code.">Please enter a valid value for security code.</span> 
+                            <div class="row">
+                                    <input class="field text-small ng-pristine ng-valid" type="text" id="securityCode" value="" ng-model="cc.securityCode">
+                                <div style="float: left;">
+                                   <a href="javascript:" ng-click="togglehint()"><img src="../img/bg-hint.gif"></a><p></p>
+                                </div>
+                                <!-- <div class="hint" ng-click="togglehint()">-->
+                                 <div>
+                                        <p ng-show="showhint" style="overflow: hidden; padding-left: 10px;" class="ng-hide">The Security Code is a 3- or 4-digit number that is separate from the main credit card number. It can be located on the back of the card in the signature box for Visa and MasterCard. 
+                                            For American Express cards the security code is on the front of the card.</p>
+                                    </div>
+                             </div>
+                            <div class="col-holder">
+                                <div class="col">
+                                    <label for="month">Expiration Date</label><span ng-show="creditCardExp_validationError &amp;&amp; ShowValidations" class="required ng-hide">Please select a valid future expiration date.</span>
+                                    <div class="row small-select">
+                                        <select id="month" ng-model="cc.month" required="" class="ng-pristine ng-invalid ng-invalid-required">
+                                            <option value="">Select Month</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <select id="year" ng-model="cc.year" title="Select Year" required="" class="ng-pristine ng-invalid ng-invalid-required">
+                                            <option value="">Select Year</option>
+                                            <!-- ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2014">2014</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2015">2015</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2016">2016</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2017">2017</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2018">2018</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2019">2019</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2020">2020</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2021">2021</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2022">2022</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2023">2023</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2024">2024</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2025">2025</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2026">2026</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2027">2027</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2028">2028</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2029">2029</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2030">2030</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2031">2031</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2032">2032</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2033">2033</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2034">2034</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2035">2035</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2036">2036</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2037">2037</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2038">2038</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2039">2039</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2040">2040</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2041">2041</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2042">2042</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2043">2043</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2044">2044</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2045">2045</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2046">2046</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2047">2047</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2048">2048</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2049">2049</option><!-- end ngRepeat: yr in years --><option ng-repeat="yr in years" class="ng-scope ng-binding" value="2050">2050</option><!-- end ngRepeat: yr in years -->
+                                        </select>
+                                    </div>
+                                    
+                                    <label for="nameOnCard">Name as it appears on card</label><span ng-show="showMessage" class="required ng-isolate-scope ng-binding ng-hide" target="cc.nameOnCard" expression="cc.nameOnCard.length > 0" validationresults="ValidationResults" validate="ShowValidations" message="Please enter a valid value for name.">Please enter a valid value for name.</span> 
+                                    <input class="field ng-pristine ng-valid" type="text" value="" name="nameOnCard" id="nameOnCard" ng-model="cc.nameOnCard">
+                                    
+                                  
+                                    <label for="billingAddress1">Billing Address</label><span ng-show="showMessage" class="required ng-isolate-scope ng-binding ng-hide" target="cc.billingAddress1" expression="cc.billingAddress1.length > 0" validationresults="ValidationResults" validate="ShowValidations" message="Please enter a valid value for billing address.">Please enter a valid value for billing address.</span> 
+                                    <input class="field text ng-pristine ng-valid" id="billingAddress1" type="text" value="Address 1" ng-model="cc.billingAddress1">
+
+
+                                    <input class="field text text-alt ng-pristine ng-valid" id="billingAddress2" type="text" value="Address 2" title="Address 2" ng-model="cc.billingAddress2">
+                                    <label for="city">City/State</label><span ng-show="showMessage" class="required ng-isolate-scope ng-binding ng-hide" target="cc.city" expression="cc.city.length > 0" validationresults="ValidationResults" validate="ShowValidations" message="Please enter a valid value for city.">Please enter a valid value for city.</span><span ng-show="showMessage" class="required ng-isolate-scope ng-binding ng-hide" target="cc.state" expression="cc.state.length > 0" validationresults="ValidationResults" validate="ShowValidations" message="Please enter a valid value for state.">Please enter a valid value for state.</span> 
+                                    <div class="row row-alt">
+                                        <input class="field ng-pristine ng-valid" type="text" value="City" title="City" id="city" ng-model="cc.city">
+                                        
+                                        <select name="State" ng-model="cc.state" id="state" required="" class="ng-pristine ng-invalid ng-invalid-required"> 
+                                            <option value="" selected="selected">State</option> 
+                                            <option value="AL">Alabama</option> 
+                                            <option value="AK">Alaska</option> 
+                                            <option value="AZ">Arizona</option> 
+                                            <option value="AR">Arkansas</option> 
+                                            <option value="CA">California</option> 
+                                            <option value="CO">Colorado</option> 
+                                            <option value="CT">Connecticut</option> 
+                                            <option value="DE">Delaware</option> 
+                                            <option value="DC">District Of Columbia</option> 
+                                            <option value="FL">Florida</option> 
+                                            <option value="GA">Georgia</option> 
+                                            <option value="HI">Hawaii</option> 
+                                            <option value="ID">Idaho</option> 
+                                            <option value="IL">Illinois</option> 
+                                            <option value="IN">Indiana</option> 
+                                            <option value="IA">Iowa</option> 
+                                            <option value="KS">Kansas</option> 
+                                            <option value="KY">Kentucky</option> 
+                                            <option value="LA">Louisiana</option> 
+                                            <option value="ME">Maine</option> 
+                                            <option value="MD">Maryland</option> 
+                                            <option value="MA">Massachusetts</option> 
+                                            <option value="MI">Michigan</option> 
+                                            <option value="MN">Minnesota</option> 
+                                            <option value="MS">Mississippi</option> 
+                                            <option value="MO">Missouri</option> 
+                                            <option value="MT">Montana</option> 
+                                            <option value="NE">Nebraska</option> 
+                                            <option value="NV">Nevada</option> 
+                                            <option value="NH">New Hampshire</option> 
+                                            <option value="NJ">New Jersey</option> 
+                                            <option value="NM">New Mexico</option> 
+                                            <option value="NY">New York</option> 
+                                            <option value="NC">North Carolina</option> 
+                                            <option value="ND">North Dakota</option> 
+                                            <option value="OH">Ohio</option> 
+                                            <option value="OK">Oklahoma</option> 
+                                            <option value="OR">Oregon</option> 
+                                            <option value="PA">Pennsylvania</option> 
+                                            <option value="RI">Rhode Island</option> 
+                                            <option value="SC">South Carolina</option> 
+                                            <option value="SD">South Dakota</option> 
+                                            <option value="TN">Tennessee</option> 
+                                            <option value="TX">Texas</option> 
+                                            <option value="UT">Utah</option> 
+                                            <option value="VT">Vermont</option> 
+                                            <option value="VA">Virginia</option> 
+                                            <option value="WA">Washington</option> 
+                                            <option value="WV">West Virginia</option> 
+                                            <option value="WI">Wisconsin</option> 
+                                            <option value="WY">Wyoming</option>
+                                        </select>
+                                    </div>
+                                    <label for="postalCode">Postal Code</label><span ng-show="showMessage" class="required ng-isolate-scope ng-binding ng-hide" target="cc.postalCode" expression="cc.postalCode" pattern="^\d{5}(-\d{4})?$" validationresults="ValidationResults" validate="ShowValidations" message="Please enter a valid value for postal code.">Please enter a valid value for postal code.</span> 
+                                    <input class="field text text-alt ng-pristine ng-valid" id="postalCode" type="text" value="Postal Code" title="Postal Code" ng-model="cc.postalCode">
+                                                                                    
+                                    </div>
+                                <!-- <div class="col">
+                                         <label for="securityCode">Security Code</label>
+                                         <input class="field text-small" type="text" id="securityCode" value="" ng-model="cc.securityCode"  />
+                                         <div class="hint" ng-click="togglehint()">
+                                             <p ng-show="showhint">The Security Code is a 3- or 4-digit number that is separate from the main credit card number. It can be located on the back of the card in the signature box for Visa and MasterCard. 
+                                                 For American Express cards the security code is on the front of the card.</p>
+                                         </div>
+                                     </div>-->
+                            </div>
+                        </div>
+                        <div class="btn-holder">
+                            <a href="javascript:" class="f-button" ng-click="submit()"><strong>Submit</strong></a>
+                            <a href="javascript:" class="s-button" ng-click="cancel()"><strong>Cancel</strong></a>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div></div>
+        <!-- ngInclude: 'htm/popups/relationshipOfferPopup.htm' --><div ng-include="'htm/popups/relationshipOfferPopup.htm'" class="ng-scope"><div id="relationshipOfferPopup" ng-controller="RelationshipOfferPopupController" class="lightbox lightbox4 modal hide fade ng-scope" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+	<div class="holder">
+		<div class="frame">
+			<div class="block">
+			    <div class="bar">
+			            <div href="javascript:" class="a btn-close link" ng-click="Close()"></div>
+			     </div>
+
+			    <div class="text-block">
+					<div>
+					    <p class="ng-binding"> <strong>Offer : </strong></p>
+					    <p> <span class="ng-binding"><strong>Product : </strong>xxxx-xxxx-xxxx- </span> <span style=" margin-left: 140px" class="ng-binding"> <strong>Rewards will post : </strong> </span></p>
+                        
+					    <div>
+					        <table summary="Table info" class="table-box" ng-hide="isBusy">
+					            <thead>
+            
+					                <tr ng-init="Sort = '-Month'">
+					                    <th class="cell">Month</th>
+					                    <th class="cell">Total Spend</th>
+					                    <th class="cell">Earn Rate</th>
+					                    <th class="cell">Rewards Amount</th>
+					                </tr>
+					            </thead>
+					            <tbody>
+					                <!-- ngRepeat: detail in offer.Details -->
+					                <!-- Display totals -->
+					                <tr style="background: #8f9092">
+					                    <td class="cell"><strong>Total: </strong></td>
+					                    <td class="cell"></td>
+					                    <td class="cell"></td>
+					                    <td class="cell ng-binding"> </td>
+					                </tr>
+					            </tbody>
+					        </table>
+					    </div>
+                        <div style="margin-top: 20px">
+                            <a href="javascript:" class="f-button" ng-click="Close()"><strong>Close</strong></a>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+        <!-- ngInclude: 'htm/popups/accumulatingOfferPopup.htm' --><div ng-include="'htm/popups/accumulatingOfferPopup.htm'" class="ng-scope"><div id="accumulatingOfferPopup" ng-controller="AccumulatingOfferPopupController" class="lightbox lightbox4 modal hide fade ng-scope" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+	<div class="holder">
+		<div class="frame">
+			<div class="block">
+			    <div class="bar">
+			            <div href="javascript:" class="a btn-close link" ng-click="Close()"></div>
+			     </div>
+
+			    <div class="text-block">
+			        <div>
+			            <div class="rightCorner">
+			                <div class="ng-binding"><strong>Product:</strong> xxxx-xxxx-xxxx- </div>
+			                <div><strong>Offer End Date:</strong> <span ng-show="offer.OfferEndDate == null" class="">N/A</span><span ng-hide="offer.OfferEndDate == null" class="ng-binding ng-hide"></span></div> 
+			            </div>
+
+			                <p class="ng-binding"> <strong>Offer : </strong></p>
+					    
+                        
+			            <p ng-show="(offer.SpendThreshold||offer.SpendAnnivThreshold) &amp;&amp; offer.IsMaxLimitReached == false" class="ng-hide">
+			                <span ng-show="offer.ActualSpend == offer.SpendThresholdTarget" class=""><strong>Congratulations! You have met the total spend for this bonus</strong></span>
+                            <!--ActualSpend and SpendThreshold are always dollar amount (currency) and is not tied to the profile currencyType -->
+			                <span ng-hide="offer.ActualSpend == offer.SpendThresholdTarget" class="ng-binding ng-hide">Actual spend of  towards a spend target of </span>
+			            </p> 
+			            
+                        <p ng-show="offer.VisitsThreshold &amp;&amp; offer.IsMaxLimitReached == false" class="ng-hide">
+                            <span ng-show="offer.ActualVisits == offer.VisitsThresholdTarget" class=""><strong> Congratulations! You have met the total number of transactions for this bonus</strong></span>
+                            <span ng-hide="offer.ActualVisits == offer.VisitsThresholdTarget" class="ng-binding ng-hide">Actual transactions of  towards a transaction target of </span>
+                        </p> 
+
+			            <p ng-show="offer.IsMaxLimitReached &amp;&amp; (offer.SpendThreshold||offer.SpendAnnivThreshold)" class="ng-hide">
+			                <strong>Congratulations! You have met the total spend for this bonus</strong>
+			            </p>
+                        
+                         <p ng-show="offer.IsMaxLimitReached &amp;&amp; offer.VisitsThreshold" class="ng-hide">
+                            <strong>Congratulations! You have met the total number of transactions for this bonus</strong>
+			            </p>
+                        
+			            <h1>Offer Description : </h1>
+			            <div class="description ng-binding"></div>
+
+			            <div style="margin-top: 20px">
+			                <a href="javascript:" class="f-button" ng-click="Close()"><strong>Close</strong></a>
+			            </div>
+			        </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+        <!-- ngInclude: 'htm/popups/emailRequired.htm' --><div ng-include="'htm/popups/emailRequired.htm'" class="ng-scope"><div id="emailRequired" ng-controller="EmailRequiredController" class="lightbox lightbox4 modal hide fade ng-scope" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+	<div class="holder">
+		<div class="frame">
+			<div class="block">
+			    <div class="bar">
+			        <a href="javascript:" ng-click="Close()" class="a btn-close">Close</a>
+			    </div>
+			    <div class="text-block" ng-hide="isBusy">
+			        <h2>Email Address Required</h2>
+			        <p>There is no email associated with your account. Please enter and confirm your email address. Press submit to proceed.</p>
+			    </div>
+                <div class="text-block ng-hide" ng-show="isBusy">
+			        <h2>Updating Email Address</h2>
+			        <p>Please wait while we update your email address...</p>
+			    </div>
+			    <spinner isbusy="isBusy" class="ng-isolate-scope"><div class="ui-spinner-container"></div></spinner>
+				<form action="#" class="email-form ng-pristine ng-valid" ng-hide="isBusy">
+						<fieldset>
+							<legend>email form</legend>
+							<label for="email-field">Email:</label>
+							<div class="text">
+								<input ng-model="Email" type="text" id="email-field" value="" class="ng-pristine ng-valid">
+							</div>
+							<label for="email-field2">Confirm Email:</label>
+							<div class="text text-alt">
+								<input ng-model="Confirm" type="text" value="" id="email-field2" class="ng-pristine ng-valid">
+							</div>
+
+                            <!--<div>
+								<validator target="EmailRequired" expression="Email" validationresults="ValidationResults" validate="ShowValidations" message="Please enter a valid email address"></validator>
+							</div>
+                            <div>
+								<validator target="ConfirmRequired" expression="Confirm" validationresults="ValidationResults" validate="ShowValidations" message="Confirmation email required"></validator>
+							</div>-->
+                            <div>
+								<span ng-show="showMessage" class="required ng-isolate-scope ng-binding ng-hide" target="ValidEmail" expression="ValidEmail(Email)" validationresults="ValidationResults" validate="ShowValidations" message="Please enter a valid email address">Please enter a valid email address</span>
+							</div>
+                            <div>
+								<span ng-show="showMessage" class="required ng-isolate-scope ng-binding ng-hide" target="Same" expression="!ValidEmail(Email) || Email == Confirm" validationresults="ValidationResults" validate="ShowValidations" message="The email addresses entered do not match">The email addresses entered do not match</span>
+							</div>
+
+							<a href="javascript:" ng-click="Submit()" class="f-button"><strong>Submit</strong></a>
+							<a href="javascript:" ng-click="Close()" class="s-button"><strong>Cancel</strong></a>
+						</fieldset>
+					</form>
+			</div>
+		</div>
+	</div>
+</div></div>
+        <!-- ngInclude: 'htm/popups/spanishLanguagePopup.htm' --><div ng-include="'htm/popups/spanishLanguagePopup.htm'" class="ng-scope"><div id="spanishLanguagePopup" ng-controller="SpanishLanguageController" class="lightbox lightbox4 modal hide ng-scope" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" aria-hidden="false">
+    <div class="holder">
+        <div class="frame">
+            <div class="block">
+                <div class="bar">
+                    <div href="javascript:" class="a btn-close link" ng-click="Close()">Close</div>
+                </div>
+                <div class="text-block">
+                    Para asistencia en español, llame al Centro de Servicios de Recompensas de Wells Fargo al 1-877-517-1358 y marque 2.
+                </div>
+                <div class="btn-holder">
+                    <a href="javascript:" class="f-button" ng-click="Close()"><strong>Okay</strong></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+        <!-- ngInclude: 'htm/popups/oneWayReLoginPopup.htm' --><div ng-include="'htm/popups/oneWayReLoginPopup.htm'" class="ng-scope"><div id="OneWayReLoginPopup" ng-controller="OneWayReLoginController" class="lightbox lightbox4 modal hide ng-scope" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" aria-hidden="false">
+    <div class="holder">
+        <div class="frame">
+            <div class="block">
+                <div class="bar">
+                    <div href="javascript:" class="a btn-close link" ng-click="Close()">Close</div>
+                </div>
+                <div class="text-block">
+                    When you come back to access your Wells Fargo accounts, we'll ask you to sign on again.
+                </div>                
+                <div class="btn-holder">
+                    <a href="javascript:" class="f-button" ng-click="Okay()"><strong>Okay</strong></a>
+                    <a href="javascript:" class="f-button" ng-click="Close()"><strong>Cancel</strong></a>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+        <!-- ngInclude: 'htm/popups/phoneRequired.htm' --><div ng-include="'htm/popups/phoneRequired.htm'" class="ng-scope"><div id="phoneRequiredPopup" ng-controller="PhoneRequiredController" class="lightbox lightbox4 modal hide fade ng-scope" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+	<div class="holder">
+		<div class="frame">
+			<div class="block">
+			    <div class="bar">
+			        <a href="javascript:" ng-click="Cancel()" class="a btn-close">Close</a>
+			    </div>
+			    <div class="text-block" ng-hide="isBusy">
+			        <h2>Phone Number Required</h2>
+			        <p>All merchandise and gift card redemptions require a phone number to complete the order.  This number will be used to call you if there is an issue with your order.</p>
+                    <p>We currently do not show a phone number associated with your account.  Please enter it in the box below.  To ensure that you do not see this message again, please log in to WellsFargo.com and visit Account Services, My Profile to add a phone number to your account.</p>
+			    </div>
+                <div class="text-block ng-hide" ng-show="isBusy">
+			        <h2>Updating Phone Number</h2>
+			        <p>Please wait while we update your phone number...</p>
+			    </div>
+			    <spinner isbusy="isBusy" class="ng-isolate-scope"><div class="ui-spinner-container"></div></spinner>
+				<form action="#" class="email-form ng-pristine ng-valid" ng-hide="isBusy">
+					<fieldset>
+					    <legend>Phone Form</legend>
+						<label for="phone-field">Phone<span class="required">*</span>:</label>
+						<div class="text">
+							<input ng-model="Phone" type="text" id="phone-field" value="" class="ng-pristine ng-valid">
+						</div>
+					    <div>
+					        <span ng-show="showMessage" class="required ng-isolate-scope ng-binding" target="ValidPhone" expression="ValidPhone(Phone)" validationresults="ValidationResults" validate="ShowValidations" message="Please enter a valid phone number.">Please enter a valid phone number.</span>
+					    </div>
+						<a href="javascript:" ng-click="Submit()" class="f-button"><strong>Submit</strong></a>
+						<a href="javascript:" ng-click="Cancel()" class="s-button"><strong>Cancel</strong></a>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+</div></div>        
+        <!-- ngInclude: 'htm/popups/parametersRequired.htm' --><div ng-include="'htm/popups/parametersRequired.htm'" class="ng-scope"><div id="parametersRequired" ng-controller="ParametersRequiredController" class="lightbox lightbox4 modal hide fade ng-scope" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+    <div class="holder">
+        <div class="frame">
+            <div class="block">
+                <div class="bar">
+                    <a href="javascript:" data-ng-click="Close()" class="a btn-close">Close</a>
+                </div>
+                <div class="text-block no-bottom-padding" data-ng-hide="isBusy">
+                    <h2 class="smaller-font">Email Address and Phone Number are Required</h2>
+                    <p class="no-bottom-margin">There is no email address and phone number associated with your account. Please enter and confirm your email address and phone number. Press submit to proceed.</p>
+                </div>
+                <spinner isbusy="isBusy" class="ng-isolate-scope"><div class="ui-spinner-container"></div></spinner>
+                <form action="#" class="email-phone-form ng-pristine ng-valid" ng-hide="isBusy">
+                    <fieldset>
+                        <legend>email form</legend>
+                        <div>
+                            <label for="email-field">Email:</label>
+                            <div class="text">
+                                <input data-ng-model="Email" type="text" id="email-field" value="" class="ng-pristine ng-valid">
+                            </div>
+                            <label for="email-conf-field">Confirm Email:</label>
+                            <div class="text text-alt">
+                                <input data-ng-model="Confirm" type="text" value="" id="email-conf-field" class="ng-pristine ng-valid">
+                            </div>
+                            <div>
+                                <span ng-show="showMessage" class="required ng-isolate-scope ng-binding ng-hide" target="ValidEmail" expression="ValidEmail(Email)" validationresults="ValidationResults" validate="ShowValidations" message="Please enter a valid email address">Please enter a valid email address</span>
+                            </div>
+                            <div>
+                                <span ng-show="showMessage" class="required ng-isolate-scope ng-binding ng-hide" target="Same" expression="!ValidEmail(Email) || Email == Confirm" validationresults="ValidationResults" validate="ShowValidations" message="The email addresses entered do not match">The email addresses entered do not match</span>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="phone-field">Phone number:</label>
+                            <div class="text">
+                                <input data-ng-model="Phone" type="text" id="phone-field" value="" class="ng-pristine ng-valid">
+                            </div>
+                            <div>
+                                <span ng-show="showMessage" class="required ng-isolate-scope ng-binding ng-hide" target="ValidPhoneNumber" expression="ValidPhoneNumber(Phone)" validationresults="ValidationResults" validate="ShowValidations" message="Please enter a valid phone number">Please enter a valid phone number</span>
+                            </div>
+                        </div>
+                        <a href="javascript:" data-ng-click="Submit()" class="f-button"><strong>Submit</strong></a>
+                        <a href="javascript:" data-ng-click="Close()" class="s-button"><strong>Cancel</strong></a>
+                    </fieldset>
+                </form>
+                <div class="text-block ng-hide" data-ng-show="isBusy">
+                    <h3>Updating Email Address and Phone Number</h3>
+                    <p>Please wait while we update your email address and phone number...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+        <!-- ngInclude: 'htm/popups/refundReasonPopup.htm' --><div ng-include="'htm/popups/refundReasonPopup.htm'" class="ng-scope"><div id="refundReasonPopup" ng-controller="RefundReasonPopupController" class="lightbox lightbox4 modal hide fade ng-scope" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+	<div class="holder">
+		<div class="frame">
+			<div class="block">
+			    <div class="bar">
+			        <a href="javascript:" ng-click="Close()" class="a btn-close">Close</a>
+			    </div>
+			    <div class="text-block" ng-hide="isBusy">
+			        <h2>Refund Reason</h2>
+			        <p>Please select the reason for return:</p>
+			    </div>
+                <div class="text-block ng-hide" ng-show="isBusy">
+                    <h2>Rretrieving refund reason list...</h2>
+			        <p>Please wait while we retrieve the refund reason list...</p>
+			    </div>
+			    <spinner isbusy="isBusy" class="ng-isolate-scope"><div class="ui-spinner-container"></div></spinner>
+				<form action="#" class="email-form ng-pristine ng-valid" ng-hide="isBusy">
+						<fieldset>
+							<legend>Refund Reason</legend>
+							<label for="reason">Reason:</label>
+							<select id="reason" title="Select Option..." ng-change="checkValid()" ng-model="refundReasonId" ng-options="item.RefundReasonId as item.RefundReasonName for item in Items" class="ng-pristine ng-valid"><option value="" class="">Select Option...</option></select>
+						    <div ng-show="ShowValidations &amp;&amp; InvalidReason" class="ng-hide">
+						        <p class="required">Please select a valid refund reason</p>
+						    </div>
+						    <br>
+                            <br>
+							<a href="javascript:" ng-click="Submit()" class="f-button"><strong>Return</strong></a>
+							<a href="javascript:" ng-click="Close()" class="s-button"><strong>Cancel</strong></a>
+						</fieldset>
+					</form>
+			</div>
+		</div>
+	</div>
+</div></div>
+        <!-- ngInclude: 'htm/popups/eGiftCardPopup.htm' --><div ng-include="'htm/popups/eGiftCardPopup.htm'" class="ng-scope"><div id="eGiftCardPopup" ng-controller="EGiftCardPopupController" class="lightbox lightbox5 modal hide fade ng-scope" tabindex="-1" role="dialog" data-keyboard="false" aria-labelledby="myModalLabel" aria-hidden="false">
+		 
+    <div class="holder">
+        <div class="frame">
+            <div class="block">
+                <div class="bar">
+                    <a href="javascript:" ng-click="Close()" class="a btn-close link">Close</a>
+                </div>
+                    <div class="block">
+                        <iframe id="eGiftCardContent" src="" style="width:100%; height:400px; margin-top: 20px">
+                        </iframe>
+                        <div style="margin-top: 20px">
+                            <a href="javascript:" class="f-button" ng-click="Close()"><strong>Close</strong></a>
+                            <a href="javascript:" class="s-button" ng-click="Print()"><strong>Print</strong></a>
+                        </div>
+                    </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+</div>
+    </div><!-- end ngIf: $parent.$root.viewInfo.currentView == 'Desktop' -->
+    
+    <!-- ngIf: $parent.$root.viewInfo.currentView == 'Mobile' -->
+    <!-- ngIf: $parent.$root.viewInfo.currentView == 'Mobile' --><script src="https://ecn.dev.virtualearth.net/mapcontrol/v7.0/7.0.20140904153057.64/js/en-us/veapicore.js" type="text/javascript"></script>
+
+
+</body></html>

@@ -1,0 +1,533 @@
+<html xml:lang="en" lang="en"><head>
+		<meta charset="utf-8">
+		<title>Wells Fargo Conversations | Wells Fargo Wealth Management | Create Wealth, Transfer Wealth, Enjoy Life</title>
+		<meta name="description" content="Wells Fargo Conversations for clients of Wells Fargo Private Bank | How to create wealth, the transfer of wealth, enjoy life: Wells Fargo Conversations is a wealth management magazine featuring insights from Wells Fargo Private Bank on estate planning, tax planning, asset management, retirement planning, family business, succession planning and charitable giving. Plus, luxury travel, exclusive experiences and fine art and collecting in the affluent lifestyle.">
+		<meta name="keywords" content="Create Wealth,Wealth Transfer,Enjoy Life,Retirement Planning,Investment Planning,Real Estate Asset Management,Executive Compensation,Family Business,Family Wealth,Charitable Giving,Travel Ideas,Travel experiences,Real estate financial planning,Charitable donations,Legacy wealth,Wealth management magazine,Wealth management services,Asset management services,Assets management,Asset managers,Investment strategy newsletter">
+		<meta name="author" content="Wells Fargo, Pace Communications">
+
+		<link rel="shortcut icon" href="/favicon.ico">
+        <link rel="alternate" type="application/rss+xml" title="Wells Fargo Conversations - Latest [RSS]" href="https://conversations.wfmagazines.com/rss/magazine/">
+        <link rel="alternate" type="application/rss+xml" title="Wells Fargo Conversations - Create Wealth [RSS]" href="https://conversations.wfmagazines.com/rss/create/">
+        <link rel="alternate" type="application/rss+xml" title="Wells Fargo Conversations - Transfer Wealth [RSS]" href="https://conversations.wfmagazines.com/rss/transfer/">
+        <link rel="alternate" type="application/rss+xml" title="Wells Fargo Conversations - Enjoy Life [RSS]" href="https://conversations.wfmagazines.com/rss/enjoy/">
+
+		<link rel="stylesheet" type="text/css" media="screen, print" href="/lib/css/core.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="/lib/css/addthis.css">
+
+		<!--[if IE]><link rel="stylesheet" type="text/css" href="/lib/css/ie.css" /><![endif]-->
+		<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="/lib/css/ie7_6.css" /><![endif]-->
+		<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="/lib/css/ie6.css" /><![endif]-->
+
+		<script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script type="text/javascript" src="/lib/js/jquery/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="/lib/js/jquery/jquery.cycle.all.min.js"></script>
+		<script type="text/javascript" src="/lib/js/jquery/jquery.pngFix.min.js"></script>
+		<script type="text/javascript" src="/lib/js/common.js"></script>
+
+		<script type="text/javascript">
+			var slidesComplete = false;
+
+			function initSlideshow(idx)
+			{
+				slidesComplete = false;
+				slideNum = idx ? idx : 0;
+
+				$('.sliderPanel').cycle({
+					startingSlide: slideNum,
+					fx:    'scrollVert',
+					speed:  1200,
+					pause: 0,
+					timeout: 5000,
+					after: function(currSlide, nextSlide, opts, forwardFlag){
+							if(opts.lastSlide == $('.sliderPanel .imgArea').length-1 && opts.nextSlide == 1)
+							{toggleSlideshow('pause');}
+
+					},
+					next: '.sliderNav a.down',
+					prev: '.sliderNav a.up',
+					end: function(){ slidesComplete = true; $('#slider-play-pause').removeClass().addClass('play'); }
+				});
+
+				$('.sliderTxt').cycle({
+					startingSlide: slideNum,
+					fx:    'fade',
+					speed:  1200,
+					pause: 0,
+					timeout: 5000,
+					next: '.sliderNav a.down',
+					prev: '.sliderNav a.up'
+				});
+			}
+
+			function toggleSlideshow(state)
+			{
+				if(state == 'pause')
+				{
+					$('.sliderPanel, .sliderTxt').cycle('pause');
+					$('#slider-play-pause').removeClass().addClass('play');
+				}
+				else
+				{
+					$('.sliderPanel, .sliderTxt').cycle('resume');
+					$('#slider-play-pause').removeClass().addClass('pause');
+				}
+			}
+
+
+			$(document).ready(function() {
+
+				//initialize slideshow
+				initSlideshow();
+
+				$('.sliderNav a.up, .sliderNav a.down').click(function(){
+					$('.sliderPanel, .sliderTxt').cycle('pause');
+					$('#slider-play-pause').removeClass().addClass('play');
+				});
+
+
+				$('#slider-play-pause').click(function(){
+					if( $(this).hasClass('play') && !slidesComplete )
+						toggleSlideshow('resume');
+					else if( $(this).hasClass('play') && slidesComplete )
+						toggleSlideshow('init');
+					else
+						toggleSlideshow('pause');
+
+					return false;
+				});
+
+				jQuery('.lg_poll_results').show();
+
+				jQuery('div.poll form').submit(function(e){
+					var obj = jQuery(this);
+
+					if(obj.find('input:checked').length)
+					{
+						_gaq.push(['_trackEvent', 'Polls', 'Voted', obj.parent().attr('title')]);
+						jQuery.ajax({
+							url: '/index.php/polls/ajax_poll/' + obj.parent().attr('title') + '/',
+							global: false,
+							type: "POST",
+							data: obj.serialize(),
+							dataType: "html",
+							success: function(response){
+								obj.parent().html(response + '<div class="morePolls"><a href="/polls/" title="Wells Fargo Conversations Polls">More Polls</a></div>');
+							}
+						});
+					}
+					else
+					{
+						alert('Please select an answer');
+					}
+					return false;
+				});
+			});
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="//ct1.addthis.com/static/r07/widget/css/widget007.old.css" media="all"></head>
+	<body id="home">
+		<div class="wrapper">
+
+		<script type="text/javascript">
+var addthis_pub = "Wells Fargo Conversations Magazine";
+var addthis_options = 'delicious, reddit, facebook, stumbleupon, google, linkedin, investorlinks, twitter';
+var addthis_exclude = 'print, email';
+var addthis_hover_delay = 200;
+var addthis_localize = { share_caption: "", more: "" }; 
+var addthis_config = {
+	"data_track_clickback":true,
+	services_compact:"facebook,twitter,delicious,reddit,stumbleupon,google,linkedin,investorlinks",
+	services_expanded:"aolmail,ask,blogger,delicious,facebook,favorites,gmail,google,googlebuzz,googlereader,igoogle,hotmail,investorlinks,linkedin,myaol,pdfonline,plaxo,stumbleupon,twitter,wordpress,reddit,yahoobkm",
+	services_exclude:"orkut",
+	ui_header_color: "#749600",
+	ui_header_background: "",
+	ui_offset_top: "5",
+	data_ga_property: 'UA-7612569-12',
+	data_track_clickback: true
+
+	};</script>
+<script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4db847d35f6f045c"></script><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;"><iframe id="_atssh635" title="AddThis utility frame" src="//ct1.addthis.com/static/r07/sh178.html#iit=1415072188513&amp;tmr=load%3D1415072187600%26core%3D1415072188386%26main%3D1415072188476%26ifr%3D1415072188536&amp;cb=0&amp;cdn=1&amp;chr=UTF-8&amp;kw=Create%20Wealth%2CWealth%20Transfer%2CEnjoy%20Life%2CRetirement%20Planning%2CInvestment%20Planning%2CReal%20Estate%20Asset%20Management%2CExecutive%20Compensation%2CFamily%20Business%2CFamily%20Wealth%2CCharitable%20Giving%2CTravel%20Ideas&amp;ab=-&amp;dh=conversations.wfmagazines.com&amp;dr=&amp;du=https%3A%2F%2Fconversations.wfmagazines.com%2F&amp;dt=Wells%20Fargo%20Conversations%20%7C%20Wells%20Fargo%20Wealth%20Management%20%7C%20Create%20Wealth%2C%20Transfer%20Wealth%2C%20Enjoy%20Life&amp;dbg=0&amp;md=0&amp;cap=tc%3D0%26ab%3D0&amp;inst=1&amp;vcl=0&amp;jsl=33&amp;prod=undefined&amp;lng=en-US&amp;ogt=&amp;pc=men&amp;pub=ra-4db847d35f6f045c&amp;ssl=1&amp;sid=545849bc0ddaa3e3&amp;srpl=1&amp;srcs=1&amp;srd=1&amp;srf=1&amp;srx=1&amp;ver=300&amp;xck=0&amp;xtr=0&amp;og=&amp;aa=0&amp;csi=undefined&amp;toLoJson=uvs%3D545849bc26eb75f4000&amp;rev=9.3&amp;ct=1&amp;xld=1&amp;xd=1" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px; left: 0px; top: 0px;"></iframe></div><script type="text/javascript" src="https://ct1.addthis.com/static/r07/core162.js"></script>
+<meta name="pi-server" content="TMWFWEB01">
+<div id="header">
+	<a href="/" id="logo"><img src="/lib/images/logo.png" title="Wells Fargo Conversations Online Magazine" alt="Wells Fargo Conversations" height="61" width="348" border="0"></a>
+	<div class="topNav">
+		<ul>
+			<li><a href="/business_owner/" title="Articles from a Business Owner Point of View">Business<br>Owner</a></li>
+			<li><a href="/corporate_executive/" title="Articles from a Corporate Executive Point of View">Corporate<br>Executive</a></li>
+			<li><a href="/new_wealth/" title="Articles from a New Wealth Point of View">New<br>Wealth</a></li>
+			<li><a href="/generational_wealth/" title="Articles from a Generational Wealth Point of View">Generational<br>Wealth</a></li>
+			<li class="end"><a href="/professional_advisor/" title="Articles from a Professional Advisor Point of View">Professional<br>Advisor</a></li>
+		</ul>
+		<div class="headerBtns">
+			<a href="/magazine/toc/" class="archive_btn" alt="Magazine Archive" title="Magazine Table of Contents and Archives">Magazine Archive</a>
+			<a href="/magazine/newsletter/" class="enews_btn" alt="eNewsletter" title="Conversations E-mail Newsletter">eNewsletter</a>
+		</div>
+	</div>
+	<div id="navShadow"></div>
+	<div id="mainNav">
+		<ul>
+			<li class="home"><a href="/" title="Wells Fargo Conversations">Home</a></li>
+			<li class="create"><a href="/create_wealth/" title="Create Wealth">Create Wealth</a></li>
+			<li class="transfer"><a href="/transfer_wealth/" title="Transfer Wealth">Transfer Wealth</a></li>
+			<li class="enjoy"><a href="/enjoy_life/" title="Enjoy Life">Enjoy Life</a></li>
+		</ul>
+		<div id="search">
+			<form name="gs" method="GET" action="/search/">
+				<input type="text" maxlength="256" size="40" name="q" rel="SEARCH" class="searchbox clear-restore-input" value="SEARCH" title="Search Website" alt="Search Website">
+				<input type="hidden" value="0" name="entqr">
+				<input type="hidden" value="xml_no_dtd" name="output">
+				<input type="hidden" value="date:D:L:d1" name="sort">
+				<input type="hidden" value="wellsfargo_conversations" name="client">
+				<input type="hidden" value="1" name="ud">
+				<input type="hidden" value="UTF-8" name="oe">
+				<input type="hidden" value="UTF-8" name="ie">
+				<input type="hidden" value="wellsfargo_conversations" name="proxystylesheet">
+				<input name="btnG" type="image" src="/lib/images/search_btn.jpg" class="searchbox_submit" value="Search" title="Submit Search Query" alt="Submit Search Query">
+			</form>
+		</div>
+	</div>
+</div>
+
+		<div id="mainContent">
+			<div id="leftCol">
+   <div id="homeSlide">
+   	<div id="homeSlideWrapper">
+      <div class="sliderPanel" style="position: relative; overflow: hidden;">
+      	<div class="imgArea" style="position: absolute; top: 0px; left: 0px; display: block; z-index: 4; opacity: 1;"><a rel="nofollow" href="/create_wealth/business_assets/article/boomers_business_opportunity/"><img src="https://don1uexbbetbo.cloudfront.net/content/art/features/Boomer_retirement_lg.jpg" height="360" width="640" border="0" alt="" title="Boomers Could Provide Big Opportunity for Business"></a></div><div class="imgArea" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2;"><a rel="nofollow" href="/transfer_wealth/family_business/article/keeping_a_family_business/"><img src="https://don1uexbbetbo.cloudfront.net/content/art/features/family-business2-lg.jpg" height="360" width="640" border="0" alt="" title="Keeping a Family Business in the Family"></a></div><div class="imgArea" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 1;"><a rel="nofollow" href="/enjoy_life/exclusive_experiences/article/5_breathtaking_hikes/"><img src="https://don1uexbbetbo.cloudfront.net/content/art/slideshow/5_Hikes_Mt_Wasington_lg.jpg" height="360" width="640" border="0" alt="" title="5 Breathtaking Autumn Hikes"></a></div>
+      </div>
+      <div class="sliderTxt">
+     	<div class="txtArea bgBlue" style="position: absolute; top: 0px; left: 0px; display: block; z-index: 4; opacity: 1;">
+		      <h1><a href="/create_wealth/business_assets/article/boomers_business_opportunity/" title="Boomers Could Provide Big Opportunity for Business">Boomers Could Provide Big Opportunity for Business</a></h1>
+		      <p>Even as they retire, this influential generation is changing the way America does business.</p>
+		      <a href="/create_wealth/business_assets/article/boomers_business_opportunity/" class="read" title="Read Boomers Could Provide Big Opportunity for Business">Read article</a>
+	      </div><div class="txtArea bgPurple" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0;">
+		      <h1><a href="/transfer_wealth/family_business/article/keeping_a_family_business/" title="Keeping a Family Business in the Family">Keeping a Family Business in the Family</a></h1>
+		      <p>&nbsp;Planning ahead to prepare for change and conflict is one of the most important ways to help maintain a family business.</p>
+		      <a href="/transfer_wealth/family_business/article/keeping_a_family_business/" class="read" title="Read Keeping a Family Business in the Family">Read article</a>
+	      </div><div class="txtArea bgGreen" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 1; opacity: 0;">
+		      <h1><a href="/enjoy_life/exclusive_experiences/article/5_breathtaking_hikes/" title="5 Breathtaking Autumn Hikes">5 Breathtaking Autumn Hikes</a></h1>
+		      <p>From reaching the highest point in New England to scaling Mount Doom in New Zealand, these five hikes will pique your interest.</p>
+		      <a href="/enjoy_life/exclusive_experiences/article/5_breathtaking_hikes/" class="read" title="Read 5 Breathtaking Autumn Hikes">Read article</a>
+	      </div>
+      </div> <!-- end sliderTxt -->
+
+      <div class="sliderNav">
+      <a href="#" class="up" title="Previous Feature"><img src="/lib/images/up.png" width="66" height="31" style="border:none; display:block" alt="Previous Image"></a>
+      <a id="slider-play-pause" href="#" class="pause" title="Play/Pause"></a>
+      <a href="#" class="down" title="Next Feature"><img src="/lib/images/down.png" width="68" height="31" style="border:none;display:block" alt="Next Image"></a>
+      </div>
+    </div>
+   </div>
+	<div class="homeLeft">
+    	<div class="homeHeader moreConversations"><h2>More Conversations</h2></div>
+		<div class="article">
+        	<a rel="nofollow" href="/create_wealth/investment_planning/article/tax_smart_investing/" class="image"><img src="https://don1uexbbetbo.cloudfront.net/content/art/thumbnails/6_tax_tips_tn.jpg" alt="Illustration of a graph, numbers, calculator" width="180" height="140"></a>
+            <div class="description">
+            	<div class="article_category">Create Wealth</div>
+                <h3 class="article_title"><a href="/create_wealth/investment_planning/article/tax_smart_investing/">6 Tips for Tax-Smart Investing</a></h3>
+                <p>Good planning now could potentially reduce your tax bill this spring.</p>
+                <a href="/create_wealth/investment_planning/article/tax_smart_investing/" class="read" title="Read 6 Tips for Tax-Smart Investing">Read article</a>
+            </div>
+            <br clear="all">
+        </div><div class="article">
+        	<a rel="nofollow" href="/create_wealth/asset_management/article/insurance_options_families/" class="image"><img src="https://don1uexbbetbo.cloudfront.net/content/art/thumbnails/Different_types_of_insurance_tn.jpg" alt="Woman with hands protecting paper doll figures" width="180" height="140"></a>
+            <div class="description">
+            	<div class="article_category">Create Wealth</div>
+                <h3 class="article_title"><a href="/create_wealth/asset_management/article/insurance_options_families/">Insurance Options as You Accumulate Wealth</a></h3>
+                <p>As you gain assets and obligations, you have more to protect.</p>
+                <a href="/create_wealth/asset_management/article/insurance_options_families/" class="read" title="Read Insurance Options as You Accumulate Wealth">Read article</a>
+            </div>
+            <br clear="all">
+        </div><div class="article">
+        	<a rel="nofollow" href="/enjoy_life/luxury_travel/article/unique_vacation_ideas_for_the_newly_retired/" class="image"><img src="https://don1uexbbetbo.cloudfront.net/content/art/thumbnails/wf_oberoi_tn.jpg" alt="The Oberoi Udaivilas in Rajasthan, India" width="180" height="140"></a>
+            <div class="description">
+            	<div class="article_category">Enjoy Life</div>
+                <h3 class="article_title"><a href="/enjoy_life/luxury_travel/article/unique_vacation_ideas_for_the_newly_retired/">Unique Vacation Ideas for the Newly Retired</a></h3>
+                <p>
+	You've retired … now what? Take advantage of your newfound time&nbsp;with these unique vacation ideas.</p>
+                <a href="/enjoy_life/luxury_travel/article/unique_vacation_ideas_for_the_newly_retired/" class="read" title="Read Unique Vacation Ideas for the Newly Retired">Read article</a>
+            </div>
+            <br clear="all">
+        </div>
+    </div>
+    <div class="homeRight ">
+    	<div class="homeHeader homePoll"><h2>Poll</h2></div>
+		
+<div class="poll" title="1.i_feel_that_my_work_life_balance_is">
+	
+<form id="new_poll" method="post" action="https://conversations.wfmagazines.com">
+<div class="hiddenFields">
+<input type="hidden" name="ACT" value="23">
+<input type="hidden" name="FPID" value="623595">
+<input type="hidden" name="site_id" value="1">
+<input type="hidden" name="csrf_token" value="3550a5cad7b0b8c9eb210185643299c731dff41e">
+</div>
+
+<h2 style="font-size:1.2em;">I feel that my work-life balance is</h2>
+		<ul class="lg-polls-answers">
+		
+			<li class="a-1548 pollRadio">
+				<input id="lg-polls-answer-1548" type="radio" name="answer" value="1548" title="Nonexistent: At this point, work is my life.">
+				<label for="lg-polls-answer-1548">
+					<span class="answer">Nonexistent: At this point, work is my life.</span>
+				</label>
+			</li>
+		
+			<li class="a-1549 pollRadio">
+				<input id="lg-polls-answer-1549" type="radio" name="answer" value="1549" title="Pretty good, although I sometimes let my job take over.">
+				<label for="lg-polls-answer-1549">
+					<span class="answer">Pretty good, although I sometimes let my job take over.</span>
+				</label>
+			</li>
+		
+			<li class="a-1550 pollRadio">
+				<input id="lg-polls-answer-1550" type="radio" name="answer" value="1550" title="Excellent: I love my work but know when to unplug.">
+				<label for="lg-polls-answer-1550">
+					<span class="answer">Excellent: I love my work but know when to unplug.</span>
+				</label>
+			</li>
+		
+		</ul>
+		
+		
+		<br clear="all">
+		<label for="vote" class="form_label">Vote</label>
+		<input type="submit" class="poll_vote" value="" id="vote" name="vote">
+		<br clear="all"></form>
+	<div class="morePolls"><a href="/polls/" title="Wells Fargo Conversations Polls">More Polls</a></div>
+</div>
+
+		<div class="homeHeader homeAssessment"><h2>Assessment</h2></div>
+<div class="assessment">
+	<h3 class="article_title"><a href="/create_wealth/business_assets/assessment/selling_your_business_are_you_prepared/">Selling Your Business: Are You Prepared?</a></h3>
+	<p>See where you stand in the process of selling your business, and find out what steps to consider next to help with a successful business sale.</p>
+	<a href="/create_wealth/business_assets/assessment/selling_your_business_are_you_prepared/" class="begin_assessment" title="Begin Assessment">Begin Assessment</a>
+  <a class="moreAssessments" href="/assessment" title="More Assessments">More Assessments</a>
+</div>
+    </div>
+    <br clear="all">
+	<div id="wellsFargoTout">
+	<h2>What can Wells Fargo do for you?</h2>
+	<a href="https://www.wellsfargo.com/theprivatebank/conversations" title="Contact Wells Fargo" onclick="_gaq.push(['_trackPageview', '/action/leadgen/button']);" class="wfToutBtn offsite wf_site">New to Wells Fargo?</a>
+	<p>Your relationship manager will be pleased to talk with you about topics we cover in
+	<em>Wells Fargo Conversations</em>.</p>
+	<p>New to Wells Fargo? <a href="https://www.wellsfargo.com/the-private-bank/conversations" title="Contact Wells Fargo" onclick="_gaq.push(['_trackPageview', '/action/leadgen/link']);" class="offsite wf_site">Request a meeting</a>.</p>
+</div>
+
+
+	<!--<div class="disclaimer"><p><strong>Investments and Insurance Products:</strong><br>
+	NOT INSURED BY FDIC OR ANY FEDERAL GOVERNMENT AGENCY<br>
+	MAY LOSE VALUE<br>
+	NOT A DEPOSIT OF OR GUARANTEED BY THE BANK OR ANY BANK AFFILIATE</p></div>  -->
+    <div class="btmArticleTouts">
+	    <div class="btmArticleTouts_wrapper">
+		    <ul class="first">
+		    <h2 class="article_category">Create Wealth</h2>
+		    	<li><a href="/create_wealth/investment_planning/article/tax_smart_investing/">6 Tips for Tax-Smart Investing</a></li><li><a href="/create_wealth/asset_management/article/insurance_options_families/">Insurance Options as You Accumulate Wealth</a></li><li><a href="/create_wealth/business_assets/article/boomers_business_opportunity/">Boomers Could Provide Big Opportunity for Business</a></li>
+		        <li class="more"><a href="/create_wealth/">More Create Wealth Articles</a></li>
+		    </ul>
+		    <ul>
+		    <h2 class="article_category">Transfer Wealth</h2>
+		     	<li><a href="/transfer_wealth/charitable_giving/article/getting_started_with_voluntourism/">How to Get Started With Voluntourism</a></li><li><a href="/transfer_wealth/charitable_giving/article/kate_reynolds_trust/">Fighting Poverty in North Carolina</a></li><li><a href="/transfer_wealth/charitable_giving/article/volunteer_vacations/">For Volunteer Vacations, Plan Ahead</a></li>
+		        <li class="more"><a href="/transfer_wealth/">More Transfer Wealth Articles</a></li>
+		    </ul>
+		    <ul class="last">
+		    <h2 class="article_category">Enjoy life</h2>
+		    	<li><a href="/enjoy_life/fine_art_collecting/article/muhammad_alis_gloves/">Muhammad Ali’s Knockout Gloves</a></li><li><a href="/enjoy_life/exclusive_experiences/article/wildlife_in_india/">Indian Wildlife: 7 Species You Shouldn’t Miss</a></li><li><a href="/enjoy_life/luxury_travel/article/santorini_skyline/">Santorini: Island Oasis</a></li>
+		        <li class="more"><a href="/enjoy_life/">More Enjoy Life Articles</a></li>
+		    </ul>
+		    <br clear="all">
+		    <br class="ie7clear" clear="all">
+	    </div>
+    </div>
+
+		</div><!-- Left Column Ends -->
+	<!--googleoff: index-->
+<div id="rightCol">
+	<div class="share">
+<!-- ADDTHIS BUTTON BEGIN -->
+<a href="https://www.addthis.com/bookmark.php?v=250&amp;pubid=ra-4db847d35f6f045c" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]');" onfocus="return addthis_open(this, '', '[URL]', '[TITLE]');" onmouseout="addthis_close();" onblur="addthis_close();" onclick="return addthis_sendto();" class="share" title="Share This Page">Share This Page</a>
+<!-- ADDTHIS BUTTON END -->
+&nbsp;&nbsp;
+<a href="mailto:?subject=Article from Wells Fargo Conversations Magazine&amp;body=I thought you would enjoy this article from Wells Fargo Conversations magazine, https://www.wfconversations.com/." class="email" title="Email This Page">E-mail</a> &nbsp;
+
+	<a href="javascript:window.print();" class="print">Print</a>
+</div>
+
+	<div class="rail_section add_color">
+		<div class="enews">
+			<h2>Conversations eNewsletter</h2>
+			<p>Sign up to receive monthly email updates of what's new at <em>Wells Fargo Conversations</em>, including exclusive Web-only content.</p>
+			<form action="https://conversations.wfmagazines.com/magazine/newsletter/" method="get">
+			<div class="form_border">
+            <label for="email" class="form_label">E-mail Address</label>
+            <input type="text" class="enews_signup clear-restore-input" name="email" id="email" rel="email address" value="email address" onfocus="cleartext(this);">
+			</div>
+			<input type="submit" src="/lib/images/spacer.gif" value="Submit" class="enews_submit" alt="Submit" title="Submit Your Email Address to Receive Our Monthly Email Updates">
+			</form>
+			<br clear="all">
+			<span class="small">Your privacy is important. Read our <a href="javascript:privacy()" title="Wells Fargo Privacy Policy">privacy policy</a></span>
+		</div>
+	</div>
+	<div class="rail_section">
+    <div class="popular">
+			<h2>Most Popular Articles</h2>
+			<ul>
+				<li><a href="/enjoy_life/fine_art_collecting/article/classic_car_auction/">Buying a Classic Car at Auction</a></li><li><a href="/transfer_wealth/family_business/article/deferring_estate_taxes_on_a_closely_held_business_with_irc_6166/">Deferring Estate Taxes on a Closely Held Business With IRC 6166</a></li><li><a href="/create_wealth/retirement_planning/article/blended_family_finances/">The Blended Family</a></li><li><a href="/create_wealth/business_assets/article/negotiation_tactics/">Negotiation Tactics to Help Achieve Your Goals</a></li><li><a href="/create_wealth/asset_management/article/proactive_financial_planning/">Financial Planning: Your ‘Aha’ Moments</a></li>
+			</ul>
+			<span class="more">» <a href="/article/most_popular_last_30/">More Popular Articles</a></span>
+		</div>
+
+		<div class="hr_shade"></div>
+		<div class="current_issue">
+			<h2>In the Current Print Issue</h2>
+			
+			<ul>
+   <a href="/magazine/toc/issue_12_fall_winter_2014/" class="cover" title="Issue 12/Fall/Winter 2014" style="float:right; border:1px #cfd2d6 solid; margin-left:15px; margin-bottom:18px; display:block; width:150px;"><img src="https://don1uexbbetbo.cloudfront.net/content/art/features/Cover_small.jpg" width="150" height="184" alt="Taj mahal reflected in the Yamuna River"></a>
+			<li><a href="/enjoy_life/exclusive_experiences/article/wildlife_in_india/">Indian Wildlife: 7 Species You Shouldn’t Miss</a></li>
+			<li><a href="/create_wealth/asset_management/article/proactive_financial_planning/">Financial Planning: Your ‘Aha’ Moments</a></li><li><a href="/create_wealth/retirement_planning/article/blended_family_finances/">The Blended Family</a></li>
+			</ul>
+			<span class="more">» <a href="https://conversations.wfmagazines.com/magazine/toc/issue_12_fall_winter_2014">Magazine Table of Contents</a></span>
+			
+			<div class="hr_shade"></div>
+			
+<a class="promo offsite wf_site" onclick="_gaq.push(['_trackPageview', '/action/advertisement']);" href="https://www.wealthmanagementinsights.com/" target="_blank">
+<img alt="Click here" src="https://don1uexbbetbo.cloudfront.net/content/art/banners/2012_11_wfcbanner.ad.jpg" width="280" border="0">
+</a>
+
+		</div>
+		<br clear="all">
+	</div>
+</div><!-- Right Column Ends -->
+<!--googleon: index-->
+			<br clear="all">
+	</div>
+</div>
+
+		<!--googleoff: all-->
+<div id="footer">
+	<div class="mag_footer">
+		<div class="wrapper mag_wrapper">
+			<a rel="nofollow" href="/" class="logo" title="Home Page">	<img src="/lib/images/foot_logo.gif" alt="Wells Fargo Conversations Magazine"></a>
+			<ul class="footer_topNav">
+				<li class="first"><a rel="nofollow" href="/magazine/about/" title="About Wells Fargo Conversations Magazine">About</a></li>
+				<li><a rel="nofollow" href="https://www.wellsfargo.com/theprivatebank/conversations" onclick="_gaq.push(['_trackPageview', '/action/leadgen/footer']);" style="text-decoration:none;" title="Contact Wells Fargo" class="offsite wf_site">Contact</a></li>
+				<li><a rel="nofollow" href="/magazine/toc/" title="Wells Fargo Conversations Magazine">Magazine Archive</a></li>
+				<li><a rel="nofollow" href="/magazine/newsletter/" title="Conversations Newsletter">eNewsletter</a></li>
+				<li><a rel="nofollow" href="/rss/" title="Conversations RSS Feeds">RSS</a></li>
+			</ul>
+			<br clear="all">
+			<ul class="category">
+				<h2>Create Wealth</h2>
+				<li class="first"><a rel="nofollow" href="/create_wealth/retirement_planning/" title="Retirement Planning Articles">Retirement Planning</a></li>
+				<li><a rel="nofollow" href="/create_wealth/investment_planning/" title="Investment Planning Articles">Investment Planning</a></li>
+				<li><a rel="nofollow" href="/create_wealth/asset_management/" title="Real Estate and Asset Management Articles">Real Estate &amp; Asset Management</a></li>
+				<li><a rel="nofollow" href="/create_wealth/business_assets/" title="Business Assets Articles">Business Assets</a></li>
+			</ul>
+			<ul class="category">
+				<h2>Transfer Wealth</h2>
+				<li class="first"><a rel="nofollow" href="/transfer_wealth/family_business/" title="Family Business Articles">Family Business</a></li>
+				<li><a rel="nofollow" href="/transfer_wealth/family_wealth/" title="Family Wealth Articles">Family Wealth</a></li>
+				<li><a rel="nofollow" href="/transfer_wealth/charitable_giving/" title="Charitable Giving Articles">Charitable Giving</a></li>
+			</ul>
+			<ul class="category">
+				<h2>Enjoy Life</h2>
+				<li class="first"><a rel="nofollow" href="/enjoy_life/luxury_travel/" title="Luxury Travel Articles">Luxury Travel</a></li>
+				<li><a rel="nofollow" href="/enjoy_life/fine_art_collecting/" title="Fine Arts and Collecting Articles">Fine Arts &amp; Collecting</a></li>
+				<li><a rel="nofollow" href="/enjoy_life/exclusive_experiences" title="Exclusive Experiences Articles">Exclusive Experiences</a></li>
+			</ul>
+			<ul class="category pov">
+				<h2>Point of View</h2>
+				<li class="first"><a rel="nofollow" href="/business_owner/" title="Articles from a Business Owner Point of View">Business Owner</a></li>
+				<li class="even"><a rel="nofollow" href="/corporate_executive/" title="Articles from a Corporate Executive Point of View">Corporate Executive</a></li>
+				<li><a rel="nofollow" href="/new_wealth/" title="Articles from a New Wealth Point of View">New Wealth</a></li>
+				<li class="even"><a rel="nofollow" href="/generational_wealth/" title="Articles from a Generational Wealth Point of View">Generational Wealth</a></li>
+				<li><a rel="nofollow" href="/professional_advisor/" title="Articles from a Professional Advisor Point of View">Professional Advisor</a></li>
+			</ul>
+			<br clear="all">
+		</div>
+	</div>
+	<div class="wf_footer">
+		<div class="wrapper wf_wrapper">
+			<ul>
+				<li class="first"><a rel="nofollow" href="https://www.wealthmanagementinsights.com/" title="Wealth Management Insights Center" onclick="_gaq.push(['_trackPageview', '/referral/insights']);" target="_blank" class="offsite wf_site">Wealth Management Insights Center</a></li>
+				<li><a rel="nofollow" href="https://www.wellsfargo.com/theprivatebank" title="Wells Fargo Private Bank" onclick="_gaq.push(['_trackPageview', '/referral/privatebank']);" class="offsite wf_site">Wells Fargo Private Bank</a></li>
+				<li style="border:none;"><a rel="nofollow" href="https://www.wellsfargo.com/" title="WellsFargo.com" onclick="_gaq.push(['_trackPageview', '/referral/wellfargo']);" target="_blank" class="offsite wf_site">wellsfargo.com</a></li>
+			</ul>
+			<ul>
+				<li class="first"><a rel="nofollow" href="https://www.wellsfargo.com/about/" title="About Wells Fargo Bank" onclick="_gaq.push(['_trackPageview', '/referral/wellsfargo/about']);" target="_blank" class="offsite wf_site">About Wells Fargo</a></li>
+				<li><a rel="nofollow" href="https://www.wellsfargo.com/privacy_security/" title="Wells Fargo Privacy and Security" target="_blank" class="offsite wf_site">Privacy, Security &amp; Legal</a></li>
+				<li style="border:none;"><a rel="nofollow" href="https://www.wellsfargo.com/privacy_security/fraud/report/fraud/" title="Report Fraudulent Email Activity" target="_blank" class="offsite wf_site">Report Email Fraud</a></li>
+			</ul>
+			<ul style="width:460px; line-height:19px;" class="footer_disclaimer">
+				<li style="border:none;">
+					Wells Fargo Private Bank and Wells Fargo Wealth Management provide products and services through Wells Fargo Bank, N.A. and its various affiliates and subsidiaries. Wells Fargo Bank, N.A. is a bank affiliate of Wells Fargo &amp; Company.<br>
+          Deposit and loan products are offered by Wells Fargo Bank, N.A. Member FDIC. <br>
+          Wells Fargo Advisors, LLC, Member SIPC, is a registered broker-dealer and separate
+					non-bank affiliate of Wells Fargo &amp; Company.<br>
+					© 2010-2014 Wells Fargo Bank, N.A. All rights
+					reserved. NMLSR ID 399801 Equal Housing Lender.
+				</li>
+			</ul>
+			<br clear="all"><br clear="all">
+			<table cellspacing="0" cellpadding="2" border="0" width="100%">
+				<tbody><tr>
+					<td align="left" valign="top">
+						<p style="font-weight:bold">Investments and Insurance Products:<br>
+							NOT INSURED BY FDIC OR ANY FEDERAL GOVERNMENT AGENCY<br>
+							MAY LOSE VALUE<br>
+							NOT A DEPOSIT OF OR GUARANTEED BY A BANK OR ANY BANK AFFILIATE
+						</p>
+					</td>
+				</tr>
+			</tbody></table>
+			<br clear="all">
+			<table cellspacing="0" cellpadding="2" border="0" width="100%">
+				<tbody><tr><td colspan="2">&nbsp;</td></tr>
+				<tr>
+					<td align="left" valign="top"><img id="offsite_footer" src="/lib/images/icon_offsite.gif" height="9" width="9" border="0" alt="External Links" align="left"></td>
+					<td align="left" valign="top">The icon above appears next to every link that
+						leads to a website that is not operated by Wells Fargo. We do not control
+						the website. Wells Fargo has provided this link for your convenience, but
+						does not endorse and is not responsible for the content, links, privacy
+						policy, or security policy of this website. The information and opinions
+						found on the website have not been verified by Wells Fargo, nor do we make
+						any representations as to its accuracy and completeness.
+					</td>
+				</tr>
+			</tbody></table>
+			<br clear="all">
+		</div>
+	</div>
+</div>
+<!-- DO NOT REMOVE // Google Tracking Code -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-7612569-12']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+	  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+	function _uGC(l,n,s) {
+		if (!l || l=="" || !n || n=="" || !s || s=="") return "-";
+		var i,i2,i3,c="-";
+		i=l.indexOf(n);
+		i3=n.indexOf("=")+1;
+		if (i > -1) {
+			i2=l.indexOf(s,i); if (i2 < 0) {i2=l.length;}
+			c=l.substring((i+i3),i2);
+		}
+		return c;
+	}
+
+	var a = _uGC(document.cookie, '__utma=', ';');
+	var id = a.split(".");
+	_gaq.push(['_setCustomVar', 5, 'VisitorID', id[1], 1]);
+</script>
+<!--googleon: all-->
+
+	
+
+</body></html>

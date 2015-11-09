@@ -1,0 +1,482 @@
+<html id="myBell" lang="en" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms no-csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Bell email</title>
+    
+    <link rel="alternate" lang="fr" href="/wmwrap.jsp?lang=fr">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=1024, device-width=1024">
+    <meta http-equiv="Content-language" content="en">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/bellIcon_196x196_precomposed.png" sizes="196x196">
+
+    <!--iPhone / iPod-->
+    <link rel="apple-touch-icon" href="img/bellIcon_60x60.png" sizes="60x60">
+    <link rel="apple-touch-icon-precomposed" href="img/bellIcon_60x60_precomposed.png" sizes="60x60">
+
+    <!--iPad-->
+    <link rel="apple-touch-icon" href="img/bellIcon_76x76.png" sizes="76x76">
+
+    <!--iPhone / iPod Retina-->
+    <link rel="apple-touch-icon" href="img/bellIcon_120x120.png" sizes="120x120">
+    
+    <!--iPad Retina-->
+    <link rel="apple-touch-icon" href="img/bellIcon_152x152.png" sizes="152x152">
+    <link href="css/bell.myBell.core.css" media="all" type="text/css" rel="stylesheet">
+    <link href="css/bell.connector.css" media="all" type="text/css" rel="stylesheet">
+   
+   <style>
+   
+   @font-face {
+    font-family: "BellSlimMediumRegular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("font/bellslim_medium-webfont.eot?#iefix") format("embedded-opentype"), url("font/bellslim_medium-webfont.woff") format("woff"), url("font/bellslim_medium-webfont.ttf") format("truetype"), url("font/bellslim_medium-webfont.svg#BellSlimMediumRegular") format("svg");
+	}
+	@font-face {
+    font-family: "BellSlimSemiBoldRegular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("font/bellslim_semibold-webfont.eot?#iefix") format("embedded-opentype"), url("font/bellslim_semibold-webfont.woff") format("woff"), url("font/bellslim_semibold-webfont.ttf") format("truetype"), url("font/bellslim_semibold-webfont.svg#BellSlimSemiBoldRegular") format("svg");
+	}
+
+	#list_mobfriendly {
+		background-image: url("img/phone.png");
+		line-height:43px;
+		padding-left:43px;
+		background-position: 8px 50%;
+		background-repeat: no-repeat;
+	}
+	
+	#list_easyinterface {
+		background-image: url("img/tablet.png");
+		line-height:43px;
+		padding-left:43px;
+		background-position: 7px 50%;
+		background-repeat: no-repeat;
+	}
+	
+	#list_enhanchedsecurity {
+		background-image: url("img/lock.png");
+		background-repeat: no-repeat;
+		padding-left: 43px;
+		margin-top:10px;
+	}
+   
+   </style>
+   
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/modernizr.js" type="text/javascript"></script>
+    <script src="js/bell.ui-kit.js" type="text/javascript"></script>
+
+</head>
+<body class="en">
+
+
+	<div id="connector" class="connector connectorThemeA" style="z-index: 99999;">
+    <span id="ruler" style="display: none; font-size: 1.333em;"></span>
+    <!-- class="connector connectorThemeA"> -->
+
+    <div class="connectorWrap">
+        <div class="brand">
+
+            <a class="logo" href="http://www.bell.ca/" title="Bell">
+                <img class="offScreen" src="img/logo-bell-blue-47x28.png" width="47" height="28" alt="Bell"></a>
+        </div>
+        <div class="controlGroup navigationContext">
+            <strong class="offScreen">Primary navigation</strong>
+                <div class="controlGroupWrap">
+                    <a href="http://www.bell.ca/Residential_services" data-uikit-flyout="flyOutConnectorShop" class="first control flyOutConnectorJs">
+                        Shop
+                         <span class="iconConnector iconConnectorArrow"></span><span class="controlExtra1">
+                        </span><span class="controlExtra2"></span></a>
+                    <div id="flyOutConnectorShop" class="flyOutConnector flyOutConnectorLayoutA hide">
+                        <div class="flyOutConnectorWrap">
+                            <div class="flyOutConnectorContent">
+                                <div class="columnGroup">
+                                    <div class="columnConnector">
+                                        <div class="columnContent">
+                                                <a href="http://www.bell.ca/Residential_services" class="buttonConnector buttonConnectorThemeA buttonConnectorFullWidth toTextLeft">Shop for Bell services<span class="iconConnector iconConnectorLink"></span><span class="buttonConnectorExtra1"></span></a>
+                                            <ul class="listViewConnector">
+                                                    <li id="shopMobility" class=""><a href="http://www.bell.ca/Mobility" onclick="&quot;javascript:SelectOption('shopMobility')&quot;">
+                                                        <span class="listViewConnectorContent">Bell Mobility</span> <span class="listViewConnectorFigure">
+                                                        </span><span class="listViewConnectorExtra1"></span><span class="listViewConnectorExtra2">
+                                                        </span><span class="listViewConnectorExtra3"></span><span class="listViewConnectorExtra4">
+                                                        </span></a></li>                                                           
+                                                    <li id="shopTv" class=""><a href="http://www.bell.ca/Bell_TV" onclick="&quot;javascript:SelectOption('shopTv')&quot;">
+                                                        <span class="listViewConnectorContent">Bell TV</span> <span class="listViewConnectorFigure">
+                                                        </span><span class="listViewConnectorExtra1"></span><span class="listViewConnectorExtra2">
+                                                        </span><span class="listViewConnectorExtra3"></span><span class="listViewConnectorExtra4">
+                                                        </span></a></li>                                                           
+                                                    <li id="shopInternet" class=""><a href="http://www.bell.ca/Bell_Internet" onclick="&quot;javascript:SelectOption('shopInternet')&quot;">
+                                                        <span class="listViewConnectorContent">Bell Internet</span> <span class="listViewConnectorFigure">
+                                                        </span><span class="listViewConnectorExtra1"></span><span class="listViewConnectorExtra2">
+                                                        </span><span class="listViewConnectorExtra3"></span><span class="listViewConnectorExtra4">
+                                                        </span></a></li>                                                           
+                                                    <li id="shopHomephone" class=""><a href="http://www.bell.ca/Home_phone" onclick="&quot;javascript:SelectOption('shopHomephone')&quot;">
+                                                        <span class="listViewConnectorContent">Bell Home phone</span> <span class="listViewConnectorFigure">
+                                                        </span><span class="listViewConnectorExtra1"></span><span class="listViewConnectorExtra2">
+                                                        </span><span class="listViewConnectorExtra3"></span><span class="listViewConnectorExtra4">
+                                                        </span></a></li>                                                           
+                                                    <li id="shopBundles" class=""><a href="http://bundles.bell.ca/en" onclick="&quot;javascript:SelectOption('shopBundles')&quot;">
+                                                        <span class="listViewConnectorContent">Bell Bundles</span> <span class="listViewConnectorFigure">
+                                                        </span><span class="listViewConnectorExtra1"></span><span class="listViewConnectorExtra2">
+                                                        </span><span class="listViewConnectorExtra3"></span><span class="listViewConnectorExtra4">
+                                                        </span></a></li>                                                           
+                                            </ul>
+                                            <div class="clearer">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearer">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="flyOutConnectorArrow"></span><span class="flyOutConnectorExtra1"></span>
+                        <span class="flyOutConnectorExtra2"></span><span class="flyOutConnectorExtra3"></span>
+                        <span class="flyOutConnectorExtra4"></span><span class="flyOutConnectorExtra5"></span>
+                        <span class="flyOutConnectorExtra6"></span>
+                    </div>
+                </div>
+                <div class="controlGroupWrap">
+                    <a href="http://support.bell.ca" data-uikit-flyout="flyOutConnectorSupport" class="1 control flyOutConnectorJs">
+                        Support
+                         <span class="iconConnector iconConnectorArrow"></span><span class="controlExtra1">
+                        </span><span class="controlExtra2"></span></a>
+                    <div id="flyOutConnectorSupport" class="flyOutConnector flyOutConnectorLayoutA hide">
+                        <div class="flyOutConnectorWrap">
+                            <div class="flyOutConnectorContent">
+                                <div class="columnGroup">
+                                    <div class="columnConnector">
+                                        <div class="columnContent">
+                                                <a href="http://support.bell.ca" class="buttonConnector buttonConnectorThemeA buttonConnectorFullWidth toTextLeft">Support for Bell services<span class="iconConnector iconConnectorLink"></span><span class="buttonConnectorExtra1"></span></a>
+                                            <ul class="listViewConnector">
+                                                    <li id="supportMobility" class=""><a href="http://support.bell.ca/Mobility" onclick="&quot;javascript:SelectOption('supportMobility')&quot;">
+                                                        <span class="listViewConnectorContent">Bell Mobility support</span> <span class="listViewConnectorFigure">
+                                                        </span><span class="listViewConnectorExtra1"></span><span class="listViewConnectorExtra2">
+                                                        </span><span class="listViewConnectorExtra3"></span><span class="listViewConnectorExtra4">
+                                                        </span></a></li>                                                           
+                                                    <li id="supportTv" class=""><a href="http://support.bell.ca/Fibe_TV" onclick="&quot;javascript:SelectOption('supportTv')&quot;">
+                                                        <span class="listViewConnectorContent">Bell TV support</span> <span class="listViewConnectorFigure">
+                                                        </span><span class="listViewConnectorExtra1"></span><span class="listViewConnectorExtra2">
+                                                        </span><span class="listViewConnectorExtra3"></span><span class="listViewConnectorExtra4">
+                                                        </span></a></li>                                                           
+                                                    <li id="supportInternet" class=""><a href="http://support.bell.ca/Internet" onclick="&quot;javascript:SelectOption('supportInternet')&quot;">
+                                                        <span class="listViewConnectorContent">Bell Internet support</span> <span class="listViewConnectorFigure">
+                                                        </span><span class="listViewConnectorExtra1"></span><span class="listViewConnectorExtra2">
+                                                        </span><span class="listViewConnectorExtra3"></span><span class="listViewConnectorExtra4">
+                                                        </span></a></li>                                                           
+                                                    <li id="supportHomephone" class=""><a href="http://support.bell.ca/Home_Phone" onclick="&quot;javascript:SelectOption('supportHomephone')&quot;">
+                                                        <span class="listViewConnectorContent">Bell Home phone support</span> <span class="listViewConnectorFigure">
+                                                        </span><span class="listViewConnectorExtra1"></span><span class="listViewConnectorExtra2">
+                                                        </span><span class="listViewConnectorExtra3"></span><span class="listViewConnectorExtra4">
+                                                        </span></a></li>                                                           
+                                                    <li id="supportBundles" class=""><a href="http://support.bell.ca/Billing-and-Accounts" onclick="&quot;javascript:SelectOption('supportBundles')&quot;">
+                                                        <span class="listViewConnectorContent">Billing &amp; account support </span> <span class="listViewConnectorFigure">
+                                                        </span><span class="listViewConnectorExtra1"></span><span class="listViewConnectorExtra2">
+                                                        </span><span class="listViewConnectorExtra3"></span><span class="listViewConnectorExtra4">
+                                                        </span></a></li>                                                           
+                                            </ul>
+                                            <div class="clearer">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearer">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="flyOutConnectorArrow"></span><span class="flyOutConnectorExtra1"></span>
+                        <span class="flyOutConnectorExtra2"></span><span class="flyOutConnectorExtra3"></span>
+                        <span class="flyOutConnectorExtra4"></span><span class="flyOutConnectorExtra5"></span>
+                        <span class="flyOutConnectorExtra6"></span>
+                    </div>
+                </div>
+                <div class="controlGroupWrap">
+                    <a href="https://mybell.bell.ca" data-uikit-flyout="flyOutConnectorMyServices" class="2 control flyOutConnectorJs">
+                        MyBell
+                         <span class="iconConnector iconConnectorArrow"></span><span class="controlExtra1">
+                        </span><span class="controlExtra2"></span></a>
+                    <div id="flyOutConnectorMyServices" class="flyOutConnector flyOutConnectorLayoutA hide">
+                        <div class="flyOutConnectorWrap">
+                            <div class="flyOutConnectorContent">
+                                <div class="columnGroup">
+                                    <div class="columnConnector">
+                                        <div class="columnContent">
+                                            <ul class="listViewConnector">
+                                                    <li id="myServices" class=""><a href="https://mybell.bell.ca/MyServices/" onclick="&quot;javascript:SelectOption('myServices')&quot;">
+                                                        <span class="listViewConnectorContent">My Services</span> <span class="listViewConnectorFigure">
+                                                        </span><span class="listViewConnectorExtra1"></span><span class="listViewConnectorExtra2">
+                                                        </span><span class="listViewConnectorExtra3"></span><span class="listViewConnectorExtra4">
+                                                        </span></a></li>                                                           
+                                                    <li id="myBills" class=""><a href="https://mybell.bell.ca/MyBills/" onclick="&quot;javascript:SelectOption('myBills')&quot;">
+                                                        <span class="listViewConnectorContent">My bills</span> <span class="listViewConnectorFigure">
+                                                        </span><span class="listViewConnectorExtra1"></span><span class="listViewConnectorExtra2">
+                                                        </span><span class="listViewConnectorExtra3"></span><span class="listViewConnectorExtra4">
+                                                        </span></a></li>                                                           
+                                                    <li id="myProfile" class=""><a href="https://mybell.bell.ca/MyProfile/" onclick="&quot;javascript:SelectOption('myProfile')&quot;">
+                                                        <span class="listViewConnectorContent">My profile</span> <span class="listViewConnectorFigure">
+                                                        </span><span class="listViewConnectorExtra1"></span><span class="listViewConnectorExtra2">
+                                                        </span><span class="listViewConnectorExtra3"></span><span class="listViewConnectorExtra4">
+                                                        </span></a></li>                                                           
+                                            </ul>
+                                            <div class="clearer">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearer">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="flyOutConnectorArrow"></span><span class="flyOutConnectorExtra1"></span>
+                        <span class="flyOutConnectorExtra2"></span><span class="flyOutConnectorExtra3"></span>
+                        <span class="flyOutConnectorExtra4"></span><span class="flyOutConnectorExtra5"></span>
+                        <span class="flyOutConnectorExtra6"></span>
+                    </div>
+                </div>
+        </div>        
+            <!-- STEP 1: Add CSS class "toolsContextActive" here -->
+            <div id="demoToolsJs" class="controlGroup controlGroupThemeA toolsContext ">
+                <script type="text/javascript">
+                    function setFocusMobile(elementId) {
+                        $(elementId).find("select").first().focus();
+                    } 
+                        </script> 
+            </div>
+                  
+                    
+                  
+            <div class="clearer">
+            </div>	
+    </div>
+</div>
+ 
+    <div class="wrapper shopSection">
+        <div class="wrapHeader">
+            
+            <!-- end of header -->
+        </div>
+        <!--end of wrapHeader-->
+        <div class="wrapMain">
+            <div class="subWrap main">
+                <div class="secNav">
+                    
+        <!-- Specialty with XML -->
+
+                    <div class="clearer">
+                        <!-- -->
+                    </div>
+                </div>
+                
+        <div class="content" id="content">
+             <div class="cWrap pgTitle">
+				 <h1>Bell email</h1>
+
+              </div><!-- end of cWrap -->
+
+           <div class="cWrap">
+           <!-- Title partial starts here .. -->
+
+
+           <!-- Title partial ends here .. -->
+               <!-- Message partial starts here .. -->
+
+               <div style="display: none;" id="alertMsgJS" class="cBox">
+    <div class="warning">
+        <div class="lining">
+            <div class="userMsg umError">
+                <h2 class="hType4">
+                    An error occurred while processing your request.
+                </h2>
+                <ul id="errorList">
+                    <li style="margin: 0px; display: none;" id="msgUserError"><a style="text-decoration: none;" onclick="document.getElementById('USER').focus();return false;" href=""><u>Bell.ca username</u>
+                    </a>- The format is incorrect.</li>
+                    <li style="margin: 0px; display: none;" id="msgPasswordError"><a style="text-decoration: none;" onclick="document.getElementById('PASSWORD').focus();return false;" href=""><u>Password</u>
+                    </a>- This field is required.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="cBoxExtra1">
+        <!-- -->
+    </div>
+    <div class="cBoxExtra2">
+        <!-- -->
+    </div>
+    <div class="cBoxExtra3">
+        <div class="cBoxExtra4">
+            <!-- -->
+        </div>
+    </div>
+    <div class="cBoxExtra5">
+        <div class="cBoxExtra6">
+            <!-- -->
+        </div>
+    </div>
+</div>
+
+
+
+               <!-- Message partial ends here .. -->
+
+               <!-- User Password partial starts here -->
+                <div class="colGroup">
+                 
+                      <div id="loginsection">
+                       <div class="col6">
+                        <div class="cBox" style="min-height:360px!important">
+                            <div class="padder cHeader">
+							    <h2 class="fontFace">Log in</h2>
+							   <div class="clearer"></div>
+						    </div>
+
+                            <div class="padder fakeeqJs">
+
+							<div style="width:100%; height:300px">
+								<iframe frameborder="0" src="owlogin.jsp?lang=en" name="owmailredirector" id="owmailredirector" style="border:0px; overflow:hidden; position: absolute; top:-12px; left: 10px; width: 450px; height: 300px;"></iframe>
+							</div>
+
+
+
+                            </div>
+                        <div class="cBoxExtra1"><!-- --></div><div class="cBoxExtra2"><!-- --></div><div class="cBoxExtra3"><div class="cBoxExtra4"><!-- --></div></div><div class="cBoxExtra5"><div class="cBoxExtra6"><!-- --></div></div></div>
+                    </div>
+                
+               
+               <!-- user password partial ends here --> 
+               
+               <!-- Registration partial starts here  -->
+               
+               <div class="col6 colLast">
+                   <div class="cBox" style="min-height:360px!important">
+
+                       <div class="padder cHeader">
+                           <h2 class="fontFace">&nbsp;</h2>
+						   <div class="clearer"></div>
+                        </div> 
+                           <div class="padder fakeeqJs">
+                               <div class="itemGroup itemGroupThemeA" style="font-size:15px;font-family: BellSlimSemiBoldRegular,Helvetica,Arial,sans-serif;">
+                                   
+                                   <div style="position: absolute; bottom: 0pt; right: 0pt; width: 0pt; border-right: 100px solid #0066A4; border-bottom: 100px solid transparent; border-top: 100px solid transparent;"></div>
+                                   
+                                   
+                                   <div class="sectionContent" style="line-height:20px;margin-left:8px;">
+                                       <h3 class="headingType4" style="margin-bottom:15px;">With the new Bell email service you'll enjoy:</h3>
+                                       <ul style="margin-left:5px;width:350px; ">
+										 <ul style="margin-left:0px;">
+                                 					<li id="list_mobfriendly">A mobile device-friendly experience </li>
+													<li id="list_easyinterface">A new, easy-to-use-interface</li>
+													<li id="list_enhanchedsecurity">Enhanced security and improved reliability with data stored in Canada</li>
+            </ul>
+									  </ul>
+                                       <div class="spacer1"></div>
+                                       <div class="spacer1"></div>
+                                       <div class="spacer1"></div>
+
+										<div style="width:320px;"> <a style="font-weight: bold;text-decoration: underline" href="http://bellemail.bell.ca">Find out more</a> about the changes to your Bell email services.</div>
+
+                               </div>
+                               <div class="clearer"></div>
+                           </div>
+					   </div>
+
+                   <div class="cBoxExtra1"><!-- --></div><div class="cBoxExtra2"><!-- --></div><div class="cBoxExtra3"><div class="cBoxExtra4"><!-- --></div></div><div class="cBoxExtra5"><div class="cBoxExtra6"><!-- --></div></div></div>
+                </div>
+                
+                
+                </div>
+                
+                
+                <div class="col12" id="firstloginsection" style="display:none">
+                        <div class="cBox" style="min-height:375px!important">
+                            <div class="padder cHeader">
+							    <h2 class="fontFace">Welcome to your new Bell email</h2>
+							   <div class="clearer"></div>
+						    </div>
+
+                            <div class="padder fakeeqJs">
+
+							<div style="width:100%; height:290px">
+								<iframe frameborder="0" src="about:blank" name="owmailfirstlogin" id="owmailfirstlogin" style="border:0px; overflow:hidden; position: absolute; top:-12px; left: 10px; width: 100%; height: 350px;"></iframe>
+							</div>
+
+                            </div>
+                        <div class="cBoxExtra1"><!-- --></div><div class="cBoxExtra2"><!-- --></div><div class="cBoxExtra3"><div class="cBoxExtra4"><!-- --></div></div><div class="cBoxExtra5"><div class="cBoxExtra6"><!-- --></div></div></div>
+                    </div>
+                
+            </div>  <!-- end of div id = "pgLogin" -->
+            <div class="clearer"></div>
+               <!-- Registration partial ends here  --> 
+
+         </div>  <!-- end of cWrap -->
+ </div>
+
+
+                <div class="clearer">
+                </div>
+                <div class="mainExtra1">
+                    <!-- -->
+                </div>
+                <div class="mainExtra2">
+                    <!-- -->
+                </div>
+                <div class="mainExtra3">
+                    <!-- -->
+                </div>
+                <div class="mainExtra4">
+                    <!-- -->
+                </div>
+            </div>
+        </div>
+        <div class="wrapFooter">
+
+
+
+<div class="subWrap footer">
+ 
+    <div class="footerNote">
+        <div class="columnGroup">
+            <div class="columnConnector">
+                <div class="columnContent">
+                    
+                    
+                    <a class="indent1" href="http://support.bell.ca/Billing-and-Accounts/Security_and_privacy/How_does_Bell_respect_my_privacy" title="http://support.bell.ca/Billing-and-Accounts/Security_and_privacy/How_does_Bell_respect_my_privacy">Privacy</a>
+                    <a class="indent1" href="http://www.bell.ca/Legal_and_terms#INT=OTH_legal_TXT_Footer" title="Legal &amp; Regulatory">Legal &amp; Regulatory</a>
+                	<a id="changelanguage" class="indent1" onclick="top.location.replace( top.location.pathname+&quot;?lang=fr&quot;+( top.location.href.split(&quot;#&quot;).length==2 ? &quot;#&quot; + top.location.href.split(&quot;#&quot;)[1]: &quot;&quot;  ));return false;" href="#" title="Français">Français</a>
+                </div>
+                    
+                    <div class="spacer"></div>
+                    <span class="copyright">&nbsp;&nbsp;&nbsp;© Bell Canada, 2014. All rights reserved.</span>
+                    
+            </div>
+
+            <div class="clearer">
+            </div>
+        </div>
+    </div>
+</div>
+<!--To inject startup script-->
+
+<!--end of footer-->
+
+            
+ 
+
+        </div>
+        <!--end of footer-->
+    </div>
+    
+
+
+
+
+<img src="https://login.domains.live.com/login/login.ashx?site=BC01" style="display:none;">
+
+
+
+</body></html>

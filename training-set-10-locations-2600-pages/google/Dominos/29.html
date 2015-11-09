@@ -1,0 +1,304 @@
+<html><head>
+        <meta name="viewport" content="width=device-width">
+        <title>Error | Domino's Pizza</title>
+        <script type="text/javascript">
+	        <!--
+             if (top.location != self.location) {
+                 top.location = self.location.href;
+             }
+            //-->
+        </script>
+    </head>
+
+    <body class="content-area"><!-- ClickTale Top part -->
+<script type="text/javascript">
+document.write(unescape("%3Cscript%20src='" +
+(document.location.protocol == 'https:' ?
+'https://cdnssl.clicktale.net/' :
+'http://cdn.clicktale.net/') +
+"www11/phc/bd93006f-b4e9-4b3d-9446-38a59f981ed2.js'%20type='text/javascript'%3E%3C/script%3E"));
+</script><script src="https://cdnssl.clicktale.net/www11/phc/bd93006f-b4e9-4b3d-9446-38a59f981ed2.js" type="text/javascript"></script><script type="text/javascript">// Copyright 2006-2014 ClickTale Ltd., US Patent Pending
+// PID: 110
+// Generated on: 10/30/2014 10:13:14 AM (UTC 10/30/2014 3:13:14 PM)
+
+var WRInitTime=(new Date()).getTime();
+
+// Start of custom user-defined settings code
+window.ClickTaleSettings = {
+    XHRWrapper: {
+        Enable: true,
+        RequestFilter: function (method, url) {
+            if (typeof url === 'string' && /\/Basket\/AddPizza/i.test(url)) {
+                return false;
+            }
+            return true;
+        },
+        ResponseFilter: function (respObj) {
+            var text = respObj.responseText
+            if (text) {
+                var prevResp = text;
+                //using try catch to make sure Dominos stuff doesn't break
+                try {
+                    var textObj = JSON.parse(text);
+                    if (textObj instanceof Array) {
+                        for (var i = 0; i < textObj.length; i++) {
+                            var addressObj = textObj[i]['address'];
+                            if (addressObj) {
+                                for (var u in addressObj) {
+                                    if (typeof addressObj[u] === 'string') {
+                                        textObj[i]['address'][u] = addressObj[u].replace(/./g, '-');
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    respObj.responseText = JSON.stringify(textObj);
+                }
+                catch (err) { respObj.responseText = text }
+            }
+        },
+        MaxResponseSize: 500000,
+        Override: true
+    },
+    CheckAgentSupport: function (f, v) {
+        if (v.t == v.IE) {  //prevent recording IE
+            return false;
+        }
+        else {
+            return f(v);
+        }
+    },
+    Transport: {
+        Legacy: false
+    },
+    Compression: {
+        Method: function () { return "deflate"; }
+    }
+}
+// End of custom user-defined settings code
+
+
+function ClickTaleCDNHTTPSRewrite(u)
+{
+	try
+	{
+		var scripts = document.getElementsByTagName('script');
+		if(scripts.length)
+		{
+			var script = scripts[ scripts.length - 1 ], s='https://clicktalecdn.sslcs.cdngc.net/';
+			if(script.src && script.src.substr(0,s.length)==s )
+				return u.replace('https://cdnssl.clicktale.net/',s);
+		}
+	}
+	catch(e)
+	{
+	}
+	return u;
+} 
+
+			var scriptSource = (document.location.protocol=="https:"?ClickTaleCDNHTTPSRewrite("https://cdnssl.clicktale.net/www/") : "http://cdn.clicktale.net/www/")+"XHRWrapper.js";
+		document.write(unescape("%3Cscript%20src='"+ scriptSource +"'%20type='text/javascript'%3E%3C/script%3E"));
+	</script><script src="https://cdnssl.clicktale.net/www/XHRWrapper.js" type="text/javascript"></script>
+<!-- ClickTale end of Top part -->
+        <div class="page">
+            <div class="page-header">
+                <section class="content-area">
+                    <section class="language">
+                    </section>
+                    <section class="branding">
+                        <a class="logo" href="/">
+                            <img alt="Domino's Pizza" src="/Content/Images/Site/dominos_logo_small.png">
+                        </a>
+                    </section>
+                </section>
+            </div>
+            <div>
+<form action="/default.aspx" method="post"><input name="__RequestVerificationToken" type="hidden" value="joEIklcoYYLDuh002ax6VS5VFwiCrLGzWax8MLeCqJt2i0kxPc1nZBA2Aw-WAj2lTggxfnZChiGb9bxa1b9bHK-CcV-zX5xt6f54VR6RDHdiipopofL1kK38sEtj-RUJUymyzg2">                            <h1>Oops</h1>
+                            <p>There has been a glitch with the system.</p>
+                            <p>Please try again or alternatively call your local store to place an order.</p>
+                            <button type="submit" id="checkout-back-button" class="back">Home</button>
+</form>            </div>
+
+        </div>
+    <!-- ClickTale Bottom part -->
+<script type="text/javascript">
+var tempCTFF="https://www.dominos.co.uk//ClickTaleCache.ashx?t=5a25f33d7b56fb1287bf8f7a44d6194f1eb61ca5";
+document.write(unescape("%3Cscript%20src='" +
+(document.location.protocol == 'https:' ?
+'https://cdnssl.clicktale.net/' :
+'http://cdn.clicktale.net/') +
+"www11/ptc/bd93006f-b4e9-4b3d-9446-38a59f981ed2.js'%20type='text/javascript'%3E%3C/script%3E"));
+</script><script src="https://cdnssl.clicktale.net/www11/ptc/bd93006f-b4e9-4b3d-9446-38a59f981ed2.js" type="text/javascript"></script><script type="text/javascript">// Copyright 2006-2014 ClickTale Ltd., US Patent Pending
+// PID: 110
+// WR destination: www11
+// WR version: 14.17
+// Recording ratio: 0.25
+// Generated on: 10/30/2014 10:13:16 AM (UTC 10/30/2014 3:13:16 PM)
+
+
+function ClickTaleCDNHTTPSRewrite(u)
+{
+	try
+	{
+		var scripts = document.getElementsByTagName('script');
+		if(scripts.length)
+		{
+			var script = scripts[ scripts.length - 1 ], s='https://clicktalecdn.sslcs.cdngc.net/';
+			if(script.src && script.src.substr(0,s.length)==s )
+				return u.replace('https://cdnssl.clicktale.net/',s);
+		}
+	}
+	catch(e)
+	{
+	}
+	return u;
+} 
+
+var ClickTaleIsXHTMLCompliant = false;
+
+	
+document.write(unescape("%3Cscript%20src='"+
+(document.location.protocol=='https:'?
+ClickTaleCDNHTTPSRewrite('https://cdnssl.clicktale.net/www11/pcc/bd93006f-b4e9-4b3d-9446-38a59f981ed2.js?DeploymentConfigName=Release_19102014&Version=1'):
+'http://cdn.clicktale.net/www11/pcc/bd93006f-b4e9-4b3d-9446-38a59f981ed2.js?DeploymentConfigName=Release_19102014&Version=1')+
+"'%20type='text/javascript'%3E%3C/script%3E"));
+	
+var ClickTalePrevOnReady;
+if(typeof ClickTaleOnReady == 'function')
+{
+	ClickTalePrevOnReady=ClickTaleOnReady;
+	ClickTaleOnReady=undefined;
+}
+
+if (typeof window.ClickTaleScriptSource == 'undefined')
+{
+	window.ClickTaleScriptSource=(document.location.protocol=='https:'
+		?ClickTaleCDNHTTPSRewrite('https://cdnssl.clicktale.net/www/')
+		:'http://cdn.clicktale.net/www/');
+}
+
+
+// Start of user-defined pre WR code (PreLoad)b
+
+// End of user-defined pre WR code
+
+
+var ClickTaleOnReady = function()
+{
+	var PID=110, 
+		Ratio=0.25, 
+		PartitionPrefix="www11";
+	
+	if (window.navigator && window.navigator.loadPurpose === "preview") {
+       return; //in preview
+	   };
+		
+	
+	// Start of user-defined header code (PreInitialize)
+	if (typeof ClickTaleSetAllSensitive == 'function') {
+    ClickTaleSetAllSensitive();
+}
+var ct_UA = ClickTaleDetectAgent();	
+//do not record Safari on Windows
+if(navigator.userAgent.toLowerCase().indexOf("windows nt") > -1 && ct_UA.t==ct_UA.Sa)
+{
+	return;
+}
+///Excluding recordings from FF
+if(ct_UA.t==ct_UA.FF && ct_UA.v < 20){
+	return;
+}
+if (document.location.pathname === '/Home/SessionExpire') {
+    return;
+}
+
+if(window.tempCTFF){
+ClickTaleFetchFromWithCookies.set("SSID", "DC_beta");
+ClickTaleFetchFrom = ClickTaleFetchFromWithCookies.constructFetchFromUrl(tempCTFF);
+}
+	// End of user-defined header code (PreInitialize)
+    
+	
+	
+	window.ClickTaleSSL=1;
+	
+	ClickTale(PID, Ratio, PartitionPrefix);
+	
+	if((typeof ClickTalePrevOnReady == 'function') && (ClickTaleOnReady.toString() != ClickTalePrevOnReady.toString()))
+	{
+    	ClickTalePrevOnReady();
+	}
+	
+	
+	// Start of user-defined footer code
+	
+	// End of user-defined footer code
+	
+}; 
+document.write(unescape("%3Cdiv%20id%3D%22ClickTaleDiv%22%20style%3D%22display%3A%20none%3B%22%3E%3C/div%3E"));
+
+document.write(unescape("%3Cscript%20src='"+window.ClickTaleScriptSource+"tc/WRe17.js"+"'%20type='text/javascript'%3E%3C/script%3E"));
+
+
+</script><script src="https://cdnssl.clicktale.net/www11/pcc/bd93006f-b4e9-4b3d-9446-38a59f981ed2.js?DeploymentConfigName=Release_19102014&amp;Version=1" type="text/javascript"></script><div id="ClickTaleDiv" style="display: none;"></div><script src="https://cdnssl.clicktale.net/www/tc/WRe17.js" type="text/javascript"></script>
+<!-- ClickTale end of Bottom part -->
+
+<style>
+    
+    .content-area {
+        margin: 0 auto;
+        width: 1000px;
+        height: 140px;
+    }
+
+    body {
+        color: #333333;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    h2, h3, h4, h5, h6 {
+        font-family: 'TradeGothicLTCondEighteenBold';
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    h1 {
+        color: #DD052B;
+        font-family: 'TradeGothicLTCondEighteenBold';
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    .language {
+        display: inline-block;
+        margin-right: -4px;
+        padding-top: 40px;
+        vertical-align: top;
+        width: 250px;
+    }
+
+    .logo img {
+        border: 0 none;
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+
+    .back {
+        background-color: #249AD3; 
+        border-style: none;
+        color: #FFFFFF;
+        display: inline-block;
+                border-radius: 0 0 0 0;
+        line-height: 1em;
+        padding: 10px;
+        text-transform: uppercase;
+        font-size: 1.5em;
+
+    }
+</style>
+</body></html>

@@ -1,0 +1,223 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<meta http-equiv="PRAGMA" content="NO-CACHE">
+
+<meta http-equiv="Expires" content="Sat, 1 Jan 2000 12:00:00 GMT">
+
+<title>AAA Home</title>
+
+<link rel="stylesheet" href="http://www.aaa.com/AAA/SubDomains/css/s.css">
+
+<!--[if lte IE 6]>
+
+<link href="http://www.aaa.com/AAA/SubDomains/css/s_deprecated.css" rel="stylesheet"/>
+
+<![endif]-->
+
+<!--jQuery--> 
+
+<script type="text/javascript" src="/jsincludes/jquery/jquery.latest.min.js"></script>
+
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+		//set date to current date
+
+		//grab year
+
+		var currentYear = (new Date).getFullYear();
+
+	
+
+		//append to UI
+
+		$('#zipCodeFooterDate').append(currentYear);
+
+	});//end document ready
+
+</script>
+
+</head>
+
+
+<body>
+
+
+	<div id="contentSubCat01">
+
+
+		<!-- CALL TO ACTION BLOCK -->
+
+		<div id="ctaBlockPlaceholder"></div>
+
+
+		<!-- GLOBAL NAV -->
+
+		<div id="globalNav">
+
+		</div>
+
+		<div id="menuPlaceholder">
+
+		</div>
+
+
+		<!-- CONTENT -->
+
+		<div id="mainContent">
+
+
+			<div id="content">
+
+				<div id="homeContentTop"></div>
+
+				<div id="homeContentSplice">
+
+
+					<div id="homeLeftCol">
+
+						<img src="http://www.aaa.com/AAA/SubDomains/images/aaa_logo_lg.gif" width="146" height="89" class="margLt15">
+
+					</div>
+
+
+					<div id="homeRightCol">
+
+						<h1>AAA for Help on and off the Road</h1>
+
+						<p>
+
+						When you think of AAA, you probably think of maps and directions and emergency
+
+						roadside assistance, some of our top services. But did you know that AAA offers
+
+						many services to help with your travel planning. Book air, hotels, and car
+
+						rentals; find cruises and discount travel; get travel directions; search online
+
+						maps; speak to a helpful trip advisor; or get point-to-point driving
+
+						directions-all from AAA. If you need help getting insurance or a car loan, AAA
+
+						has you covered, too.
+
+						</p>
+
+						<div id="rule"></div>
+
+
+						<img src="http://www.aaa.com/AAA/SubDomains/images/Header_Find.gif" width="280" height="23">
+
+
+						<div class="homeRightColForm">
+
+							<div class="callToActionBtnSmall">
+
+							 <form name="zip" action="/scripts/WebObjects.dll/ZipCode.woa/5502/wa/route?wosid=2wtGIjNmbxEhxZiILNQrLM&amp;fixClub=true" method="post" onsubmit="return LogSubmitClick();">
+
+							  <input type="text" name="ZipCodeEntry" id="ZipCodeEntry" value="ZipCode" class="zipField" maxlength="7" onfocus="select()">
+
+							  <input src="http://www.aaa.com/aaa/SubDomains/images/SmlBtn_Go.gif" height="15" type="image" class="callToActionBtnSmall" width="40">
+
+							  </form>
+
+							  <script type="text/javascript">
+
+								//preposition cursor inline, instead of in load event
+
+								try{ document.getElementById("ZipCodeEntry").focus(); } catch(e){}
+
+							</script>
+
+							</div>	
+
+								
+
+								<div class="fltL margLt8"><a href="http://www.aaa.com/PPInternational/International.html">International&nbsp;members</a></div>
+
+						</div>
+
+						
+
+						<div id="homeContentError"><!--**ERRORMESSAGE**--></div>
+
+
+						<p class="small clear">AAA is an association of regional clubs and your local AAA club is best equipped to provide you with the products or services you need.</p>
+
+					</div>
+
+
+				</div>
+
+				<div id="homeContentBot"></div>
+
+			</div>
+
+
+		</div>
+
+
+		<!-- FOOTER -->
+
+		<div id="footer">
+
+			<div id="footerCopy">
+
+				<span class="dkg6">Copyright © <span id="zipCodeFooterDate">2014</span> AAA Rights Reserved.</span>
+
+			</div>
+
+			<div id="footerNav">
+
+				<a href="http://www.aaa.com/aaa/SubDomains/misc/terms-of-use.htm">Terms of Use</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.aaa.com/aaa/SubDomains/misc/privacy-policy.htm">Privacy Policy</a>
+
+				&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.aaa.com/Suggestions.html">Comments</a>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<script src="/configuration/dcs_tag.js"></script>
+
+	<script language="JavaScript" type="text/javascript">
+
+	<!--
+
+	setCategory("ZipCode");
+
+	setSubcategory("IP_ADDRESS_PROXY");
+
+	setPageType("General");
+
+	setURL("/Zipcode.html");
+
+	//setdcsGif("dcs3s89tuiucyzbghwy80jivc_6z8i/dcs.gif");	
+
+	setClub("1000");	
+
+	setCampaign("");	
+
+	logPage();	
+
+	// -->
+
+	</script><script type="text/javascript" src="http://dcs.aaa.com/dcs3s89tuiucyzbghwy80jivc_6z8i/wtid.js"></script>
+
+
+	
+
+
+
+
+
+
+
+
+
+</body></html>

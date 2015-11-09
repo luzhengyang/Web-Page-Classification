@@ -1,0 +1,1584 @@
+<html lang="en"><head>
+<meta charset="UTF-8">
+<script src="http://pt.friendbuy.com/site-2063cc8b-www.flexjobs.com/page:MyFlexJobs/frndby_properties.js?campaign_id=&amp;guid=883f-545b&amp;data=%7B%22site%22%3A%22site-2063cc8b-www.flexjobs.com%22%2C%22page%22%3A%22MyFlexJobs%22%7D&amp;"></script><script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" async="" src="http://djnf6e5yyirys.cloudfront.net/js/frndby.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-1.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"c9b34b75d8","applicationID":"208646","transactionName":"JlZXQxZYWA1RR0tHBQJcShgXX1sWd1oJRwULQGlWA1I=","queueTime":0,"applicationTime":39,"agentToken":null,"agent":"js-agent.newrelic.com/nr-476.min.js"}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQEBU1BACgMIUlVU"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:18,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:18,2:19,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:19,2:18,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:19,2:18,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:19,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,u="addEventListener",f="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[u]?(c[u]("DOMContentLoaded",o,!1),s[u]("load",n,!1)):(c[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],18:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],19:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:18,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script>
+
+<title>1-800-Got-Junk Jobs with Part-Time, Telecommuting, or Flexible Working</title><meta name="description" content="Find flexible jobs with 1-800-Got-Junk, such as telecommuting, freelance, and part-time and flextime jobs.  Get started at FlexJobs.com."><meta name="keywords" content="1-800-Got-Junk jobs, 1-800-Got-Junk telecommute, 1-800-Got-Junk telecommuting, 1-800-Got-Junk part-time, 1-800-Got-Junk freelance, 1-800-Got-Junk job, Jobs with 1-800-Got-Junk, 1-800-Got-Junk employment"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link href="/assets/application-50683ec73f3b7115a9488e2c09ae8958.css" media="all" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" media="all" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,800italic,400,600,700,800" rel="stylesheet" type="text/css">
+
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+<link rel="canonical" href="http://www.flexjobs.com/jobs/telecommuting-jobs-at-1-800-got-junk">
+
+<style>
+h2.employer-info, .table a {color: #F7971D;}
+h3.nav-icons-details, #myfj-description h3.panel-title, h3.nav-icons-briefcase {font-size: 21px; padding-left: 42px; color: #2A6496;}
+h3.nav-icons-briefcase {background-position: 7px center;}
+h3.nav-icons-join {padding: 5px 0 5px 42px; background-position: left center; font-size: 24px;}
+.col-sm-9 #join-flexjobs {background: #3778B6; box-shadow: 4px 4px 0 rgba(0,0,0,0.2); width:45%; margin:0 auto 1em auto; font-size:18px;}
+#join-flexjobs.well {border: none;}
+#join-flexjobs h3.panel-title {padding-left: 0; text-align: center;}
+.col-sm-9 #join-flexjobs p {color: #fff !important; padding-left: 18px;}
+#join-flexjobs p:last-child {padding-left: 0;}
+.col-sm-9 #join-flexjobs p i {color: #F7971D !important;}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {border: none;}
+.table {border: 1px solid #f9f9f9;}
+#sidebar #relatedJobs .list-group-item a {padding-left: 15px;}
+ul#relatedJobs {font-size: .95em; margin-bottom: 0;}
+.company-description .logo-image img {max-width: 300px; height: auto; max-height: 100px;}
+
+.signup1, .signup2, .signup3, .signup4, .signup5, .signup6, .signup7, .signup8, .signup9, .signup10, .signup11 {
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.05)));
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#0d000000',GradientType=0 );
+	border-bottom: 1px solid #ddd;
+	}
+.signup1 {
+	background: 110% bottom url('/images/bg-join-flexjobs-1.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background: 110% bottom url('/images/bg-join-flexjobs-1.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background: 110% bottom url('/images/bg-join-flexjobs-1.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+	}
+.signup2 {
+	background:right bottom url('/images/bg-join-flexjobs-2.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background:right bottom url('/images/bg-join-flexjobs-2.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background:right bottom url('/images/bg-join-flexjobs-2.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+	}
+.signup3 {
+	background:right bottom url('/images/bg-join-flexjobs-3.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background:right bottom url('/images/bg-join-flexjobs-3.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background:right bottom url('/images/bg-join-flexjobs-3.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+	}
+.signup4 {
+	background:right bottom url('/images/bg-join-flexjobs-4.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background:right bottom url('/images/bg-join-flexjobs-4.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background:right bottom url('/images/bg-join-flexjobs-4.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+	}
+.signup5 {
+	background:right bottom url('/images/bg-join-flexjobs-5.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background:right bottom url('/images/bg-join-flexjobs-5.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background:right bottom url('/images/bg-join-flexjobs-5.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+	}
+
+.signup6 {
+	background: 120% bottom url('/images/bg-join-flexjobs-6.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background: 120% bottom url('/images/bg-join-flexjobs-6.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background: 120% bottom url('/images/bg-join-flexjobs-6.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+	}
+
+.signup7 {
+	background: 110% bottom url('/images/bg-join-flexjobs-7.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background: 110% bottom url('/images/bg-join-flexjobs-7.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background: 110% bottom url('/images/bg-join-flexjobs-7.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+	}
+
+.signup8 {
+	background:right bottom url('/images/bg-join-flexjobs-8.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background:right bottom url('/images/bg-join-flexjobs-8.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background:right bottom url('/images/bg-join-flexjobs-8.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+	}
+
+.signup9 {
+	background: 110% bottom url('/images/bg-join-flexjobs-9.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background: 110% bottom url('/images/bg-join-flexjobs-9.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background: 110% bottom url('/images/bg-join-flexjobs-9.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+	}
+
+.signup10 {
+	background: 125% bottom url('/images/bg-join-flexjobs-10.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background: 125% bottom url('/images/bg-join-flexjobs-10.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background: 125% bottom url('/images/bg-join-flexjobs-10.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+	}
+
+.signup11 {
+	background: 120% bottom url('/images/bg-join-flexjobs-11.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background: 120% bottom url('/images/bg-join-flexjobs-11.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+
+	background: 120% bottom url('/images/bg-join-flexjobs-11.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+	background-repeat: no-repeat; background-size: contain; margin-bottom: -15px;
+	}
+
+ .nav-icons-join {
+	background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0aD0iMTAwcHgiIGhlaWdodD0iNjlweCIgdmlld0JveD0iMCAwIDEwMCA2OSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwIDY5IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0iIzIzNDc1RiIgZD0iTTkxLDYyVjVjMC0yLjc2MS0yLjIzOC01LTUtNUgxNGMtMi43NjIsMC01LDIuMjM5LTUsNXY1N0gwdjNjMCwyLjIxLDEuNzkxLDQsNCw0aDkyYzIuMjA5LDAsNC0xLjc5LDQtNHYtMwoJSDkxeiIvPgo8cGF0aCBmaWxsPSIjMzM5OUZGIiBkPSJNMTQsNWg3MnY1MUgxNFY1eiIvPgo8cGF0aCBmaWxsPSIjOUFDQ0VEIiBkPSJNMzMsMjd2MmgzNXYtMkgzM3ogTTMzLDMzaDM1di0ySDMzVjMzeiBNMzMsMzdoMzV2LTJIMzNWMzd6IE0zOCw0Mi4wMDFoMjVWNDBIMzhWNDIuMDAxeiIvPgo8cGF0aCBmaWxsPSIjMUMzOTRDIiBkPSJNOSw2MGg4MnYySDlWNjB6Ii8+CjxwYXRoIGZpbGw9IiNCQ0M0QzgiIGQ9Ik03NC41LDY0Yy0wLjgyOCwwLTEuNSwwLjY3Mi0xLjUsMS41YzAsMC44MjksMC42NzIsMS41LDEuNSwxLjVzMS41LTAuNjcxLDEuNS0xLjUKCUM3Niw2NC42NzIsNzUuMzI4LDY0LDc0LjUsNjR6IE03OS41LDY0Yy0wLjgyOCwwLTEuNSwwLjY3Mi0xLjUsMS41YzAsMC44MjksMC42NzIsMS41LDEuNSwxLjVzMS41LTAuNjcxLDEuNS0xLjUKCUM4MSw2NC42NzIsODAuMzI4LDY0LDc5LjUsNjR6IE04NC41LDY0Yy0wLjgyOCwwLTEuNSwwLjY3Mi0xLjUsMS41YzAsMC44MjksMC42NzIsMS41LDEuNSwxLjVzMS41LTAuNjcxLDEuNS0xLjUKCUM4Niw2NC42NzIsODUuMzI4LDY0LDg0LjUsNjR6Ii8+CjxyZWN0IHg9IjQzIiB5PSIxOSIgZmlsbD0iI0Y3OTcxRCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjQiLz4KPC9zdmc+) no-repeat;
+	background-size: 30px auto;
+	background-position: 3px 2px;
+	}
+
+@media only screen
+and (min-width : 320px)
+and (max-width : 568px) {
+
+h3.nav-icons-join {font-size: 18px;}
+.signup1, .signup2, .signup3, .signup4, .signup5, .signup6, .signup7, .signup8, .signup9, .signup10, .signup11 {background: none;}
+.col-sm-9 #join-flexjobs {width: 100%; font-size: 16px;}
+.col-sm-9 #join-flexjobs p {padding-left: 36px;}
+.col-sm-9 #join-flexjobs p:last-child {padding-left: 0;}
+hr {margin: 8px 0;}
+h3.nav-icons-details, #myfj-description h3.panel-title, h3.nav-icons-briefcase {font-size: 18px;}
+
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+
+.signup1, .signup2, .signup3, .signup4, .signup5, .signup6, .signup7, .signup8, .signup9, .signup10, .signup11 {
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0)));
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=0 );
+	margin-bottom: 0;
+	}
+
+.signup1 {
+	background: 110% bottom url('/images/bg-join-flexjobs-1.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 45% auto; margin-bottom: 0;
+
+	background: 110% bottom url('/images/bg-join-flexjobs-1.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 45% auto; margin-bottom: 0;
+
+	background: 110% bottom url('/images/bg-join-flexjobs-1.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 45% auto; margin-bottom: 0;
+	}
+.signup2 {
+	background:right bottom url('/images/bg-join-flexjobs-2.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 35% auto; margin-bottom: 0;
+
+	background:right bottom url('/images/bg-join-flexjobs-2.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 35% auto; margin-bottom: 0;
+
+	background:right bottom url('/images/bg-join-flexjobs-2.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 35% auto; margin-bottom: 0;
+	}
+.signup3 {
+	background:right bottom url('/images/bg-join-flexjobs-3.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 35% auto; margin-bottom: 0;
+
+	background:right bottom url('/images/bg-join-flexjobs-3.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 35% auto; margin-bottom: 0;
+
+	background:right bottom url('/images/bg-join-flexjobs-3.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 35% auto; margin-bottom: 0;
+	}
+.signup4 {
+	background:right bottom url('/images/bg-join-flexjobs-4.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 35% auto; margin-bottom: 0;
+
+	background:right bottom url('/images/bg-join-flexjobs-4.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 35% auto; margin-bottom: 0;
+
+	background:right bottom url('/images/bg-join-flexjobs-4.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 35% auto; margin-bottom: 0;
+	}
+.signup5 {
+	background:right bottom url('/images/bg-join-flexjobs-5.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 50% auto; margin-bottom: 0;
+
+	background:right bottom url('/images/bg-join-flexjobs-5.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 50% auto; margin-bottom: 0;
+
+	background:right bottom url('/images/bg-join-flexjobs-5.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 50% auto; margin-bottom: 0;
+	}
+.signup6 {
+	background: 100% bottom url('/images/bg-join-flexjobs-6.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 50% auto; margin-bottom: 0;
+
+	background: 100% bottom url('/images/bg-join-flexjobs-6.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 50% auto; margin-bottom: 0;
+
+	background: 100% bottom url('/images/bg-join-flexjobs-6.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 50% auto; margin-bottom: 0;
+	}
+.signup7 {
+	background: 110% bottom url('/images/bg-join-flexjobs-7.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 35% auto; margin-bottom: 0;
+
+	background: 110% bottom url('/images/bg-join-flexjobs-7.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 35% auto; margin-bottom: 0;
+
+	background: 110% bottom url('/images/bg-join-flexjobs-7.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 35% auto; margin-bottom: 0;
+	}
+.signup8 {
+	background:right bottom url('/images/bg-join-flexjobs-8.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 50% auto; margin-bottom: 0;
+
+	background:right bottom url('/images/bg-join-flexjobs-8.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 50% auto; margin-bottom: 0;
+
+	background:right bottom url('/images/bg-join-flexjobs-8.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 50% auto; margin-bottom: 0;
+	}
+.signup9 {
+	background: 110% bottom url('/images/bg-join-flexjobs-9.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 50% auto; margin-bottom: 0;
+
+	background: 110% bottom url('/images/bg-join-flexjobs-9.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 50% auto; margin-bottom: 0;
+
+	background: 110% bottom url('/images/bg-join-flexjobs-9.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 50% auto; margin-bottom: 0;
+	}
+.signup10 {
+	background: 110% bottom url('/images/bg-join-flexjobs-10.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 50% auto; margin-bottom: 0;
+
+	background: 110% bottom url('/images/bg-join-flexjobs-10.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 50% auto; margin-bottom: 0;
+
+	background: 110% bottom url('/images/bg-join-flexjobs-10.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 50% auto; margin-bottom: 0;
+	}
+.signup11 {
+	background: 100% bottom url('/images/bg-join-flexjobs-11.png'),
+	-moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 50% auto; margin-bottom: 0;
+
+	background: 100% bottom url('/images/bg-join-flexjobs-11.png'),
+	-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 50% auto; margin-bottom: 0;
+
+	background: 100% bottom url('/images/bg-join-flexjobs-11.png'),
+	-ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat; background-size: 50% auto; margin-bottom: 0;
+	}
+
+h3.nav-icons-join {font-size: 20px;}
+#join-flexjobs {width: 55%;}
+
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+
+.signup1 {background-position: 120% bottom;}
+.col-sm-9 #join-flexjobs {width: 50%;}
+h3.nav-icons-join {font-size: 21px !important;}
+
+ }
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+
+
+	}
+
+</style>
+
+
+<script async="true" type="text/javascript" src="http://a.adroll.com/j/roundtrip.js"></script><script async="true" type="text/javascript" src="//d.adroll.com/pixel/K2ZXRM5SGFAFNNBUC2Z4XW/GSTYREEP4BAD5CDLIZGJOG?pv=9094419726.170599&amp;cookie=&amp;keyw="></script><div style="width: 1px; height: 1px; display: inline;"><img height="1" width="1" style="border-style:none;" alt="" src="http://d.adroll.com/cm/r/out">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://d.adroll.com/cm/b/out">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://d.adroll.com/cm/w/out">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://d.adroll.com/cm/x/out">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://d.adroll.com/cm/l/out">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1011350631/?label=lC4VCPG2swoQ5_if4gM&amp;guid=ON&amp;script=0&amp;ord=2476812379900366">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://d.adroll.com/cm/g/out?google_nid=adroll2">
+<img src="http://ib.adnxs.com/seg?add=752207&amp;t=2" width="1" height="1">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1011350631/?value=0&amp;label=ajq5CPnbwQoQ5_if4gM&amp;guid=ON&amp;script=0&amp;ord=2476812379900366">
+
+<img src="http://ib.adnxs.com/seg?add=779423&amp;t=2" width="1" height="1">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1011350631/?label=ajq5CPnbwQoQ5_if4gM&amp;guid=ON&amp;script=0&amp;ord=2476812379900366">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://d.adroll.com/cm/g/out?google_nid=adroll2">
+<img src="http://ib.adnxs.com/seg?add=779423&amp;t=2" width="1" height="1">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1011350631/?label=-ZrfCOHYyRIQ5_if4gM&amp;guid=ON&amp;script=0&amp;ord=2476812379900366">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://d.adroll.com/cm/g/out?google_nid=adroll2">
+<img src="http://ib.adnxs.com/seg?add=1969665&amp;t=2" width="1" height="1">
+</div></head>
+<body>
+
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Nav Menu">
+			<span class="sr-only">Nav Menu</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+			   <li><a href="/jobs">Find a Job</a></li>			   				   <li><a href="/About.aspx">How FlexJobs Works</a></li>
+				<li><a href="http://www.flexjobs.com/blog">Job Search Tips &amp; Help</a></li>
+				<li><a href="/company-guide">Research Companies</a></li>
+			</ul>
+          <ul class="nav navbar-nav navbar-right">
+		   <li>
+			  <a href="/telecommute/employers">Employer? »</a>
+		   </li>
+		   <li><a href="https://www.flexjobs.com/login">Login/Signup »</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <div class="container container-body">
+  
+		<div class="row" role="banner">
+  <div class="col-lg-7 col-md-6 col-sm-7">
+  	<a href="/" class="logo-home"><img src="/images/fj-logo-w-tagline.svg" alt="Life is flexible... is your job?  Find telecommuting, part-time, and flexible jobs at FlexJobs" title="Life is flexible... is your job?  Find telecommuting, part-time, and flexible jobs at FlexJobs"></a>
+  </div>
+  <div class="col-lg-5 col-md-6 col-sm-5 credentials">
+  	<p><a href="/PressReviews.aspx" target="_blank" aria-label="View press reviews from CNN, NBC, Wall Street Journal, USA Today, and more...">
+	<span class="hdr-press-link hdr-cnn" aria-label="CNN logo"></span>
+	<span class="hdr-press-link hdr-nbc" aria-label="NBC logo"></span>
+	<span class="hdr-press-link hdr-wsj" aria-label="Wall Street Journal logo"></span>
+	<span class="hdr-press-link hdr-usa" aria-label="USA Today logo"></span></a>
+	<a href="/awards" target="_blank" aria-label="BBB Accredited"><span class="hdr-press-link hdr-bbb" aria-label="BBB logo"></span></a>
+	</p>	
+	
+
+		
+  </div>
+</div>
+
+<style>
+a.logo-home img {width: 100%; height: auto;}
+.credentials {text-align: right;}
+span.hdr-press-link {display: inline-block; width: 5em; height: 5em;  margin-left: .75em; background-size: contain; background-position: center center; background-repeat: no-repeat;}
+span.hdr-press-link:first-child {margin-left: 0;}
+span.hdr-cnn {background-image: url("/images/logos/logo-cnn.svg");}
+span.hdr-nbc {background-image: url("/images/logos/logo-nbc.svg");}
+span.hdr-bbb {background-image: url("/images/logos/logo-bbb.svg");}
+
+span.hdr-wsj {
+	background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiCgkgaWQ9IkxheWVyXzEiIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgoJIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTk2LjMzcHgiCgkgaGVpZ2h0PSIxMDUuNXB4IiB2aWV3Qm94PSIwIDAgMTk2LjMzIDEwNS41IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxOTYuMzMgMTA1LjUiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8ZyBpZD0iZzMiPgoJPHBhdGggaWQ9InBhdGg1IiBmaWxsPSIjMjMxRjIwIiBkPSJNOC40MjksNy4wNDRsLTUuMDgtMC43OTVIMi45NDVWMi4zMzhoMjcuMzg3djMuOTExaC0wLjc2MmMtMy4xNC0wLjM4OC00LjcwMywwLjc5NS00LjcwMywzLjkxMQoJCXYxLjk2MWwxMS43MzcsNjAuMjc4bDcuMDQ3LTM5LjUzNGwtMy45MDktMTkuOTU3Yy0wLjc4OC01LjA4Ni0yLjczNS03LjA0Ny02LjI2NS02LjY2aC0wLjQwNFYyLjMzN2gyNi42MTN2My45MTFoLTAuMzc4CgkJYy00LjMwNS0wLjM4OC02LjI2NiwxLjE4My02LjI2Niw0LjcwNmwxMS43NDUsNjEuMDUxaDAuNzc0bDEwLjU3OC01Ny45MjN2LTIuMzQ5YzAtNC4zMDItMS45NjctNS44NzItNi4yNjYtNS40ODRINjguN1YyLjMzOAoJCWgyMy4wNjh2My45MTFoLTEuMTZsLTUuNDgzLDAuNzk1bC0zLjUxOCw3LjgxNGwtMTguMzkzLDg3LjI3MWgtNS40NzFsLTExLjM1LTU3LjE0bC0xMS43NTEsNTcuMTQyaC01Ljg2OUwxMS4xNjMsMTIuOTEKCQlMOC40MjksNy4wNDRMOC40MjksNy4wNDR6IE0xMzIuNDc4LDEuMTY2VjM1LjZoLTMuNTJ2LTEuMTcyYzAtMTkuNTY0LTUuNDcyLTI5LjM0OC0xNi40MjYtMjkuMzQ4CgkJYy03LjQzOC0wLjM4OC0xMS4zNDcsMy41MjMtMTAuOTcsMTIuMTM0YzAsNC4zMTIsMS4xODEsOC42MTEsMy45MjEsMTIuNTIxbDExLjczNiwxMC41NzFsMTQuNDc5LDE0LjQ4MgoJCWMzLjkxMyw1Ljg2LDUuODY4LDEzLjI5OSw1Ljg2OCwyMS41MTZjMCwxNi40NDEtNy44MjMsMjQuNjU5LTIzLjA5LDI0LjY1OWMtNS44NjksMC0xMS43MzctMS45NjEtMTcuNjA0LTYuMjY5bC0yLjM1OSw1Ljg4NwoJCWgtMi43NDJWNjUuNzQyaDMuMTQxdjEuMTczYzAsMTAuNTYzLDIuMzM3LDE4LjM5Myw2LjY0OSwyMy44N2MzLjUyOCwzLjkwOSw3LjQzNCw1Ljg3MiwxMS43NDMsNS44NzIKCQljOS4wMDgsMCwxMy42OTUtNS4wODQsMTMuNjk1LTE1LjY2MWMwLTkuNzc2LTUuODc1LTE5LjE3Ni0xNy42MDktMjguMTY5Yy0xMi4xMzctOS4wMDItMTguMzktMTguNzg2LTE4LjM5LTMwLjEzNAoJCWMtMC4zOTEtNy4wNTEsMS45NjgtMTIuNTI4LDYuMjUyLTE2LjQzOGMzLjUyOC00LjMwNiw4LjIyOC02LjI1MiwxNC4wOTctNi4yNTJjNS44NzUsMCwxMC45NjksMS45NDYsMTYuMDQ5LDYuMjUybDIuNzM1LTUuMDg3CgkJaDIuMzQxTDEzMi40NzgsMS4xNjZ6IE0xNTkuODc2LDc3LjQ3OWMwLDUuODY0LTIuNzM0LDguOTk4LTguNjA5LDkuMzkzbDIuNzI5LDcuNDM4YzEuOTUzLDIuMzQ0LDQuNjk1LDMuNTE5LDcuODM0LDMuNTE5CgkJbDcuMDQxLTMuMTM0bDEuOTYzLTEwLjk0NVYxMi4xMjJjLTAuMzk4LTMuOTA3LTEuOTYzLTUuODY1LTUuNDczLTUuODY1aC0yLjc0OFYyLjMzOWgzMC4xMjl2My45MThoLTIuNzM0CgkJYy0zLjUxOCwwLTUuNDg0LDEuOTU4LTUuMDgsNS44NjVWODFjLTAuNDA0LDE0LjA5Ni03Ljg0NCwyMS4xMzEtMjIuMzEzLDIxLjUzMmMtNS4wOTQtMC40MDEtOS40MDUtMS45NTQtMTIuMTQyLTUuNDg3CgkJYy00LjI5OC00LjMwOC02LjI1MS05LjM5Ni02LjI1MS0xNi4wNDVsMy4xMzItNy44MjVsNS4wOS0yLjczOGM0LjI4OSwwLjAwMiw3LjAzOSwyLjM1MSw3LjQzLDcuMDQ1Ii8+CjwvZz4KPC9zdmc+) no-repeat; 
+	background-size: contain;
+	background-position: center center;
+	}	
+
+span.hdr-usa {
+	background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiCgkgaWQ9IkxheWVyXzEiIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgoJIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTk2LjMzcHgiCgkgaGVpZ2h0PSIxMDcuNXB4IiB2aWV3Qm94PSIwIDAgMTk2LjMzIDEwNy41IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxOTYuMzMgMTA3LjUiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBpZD0icGF0aDMiIGZpbGw9IiMyMzFGMjAiIGQ9Ik0xMzIuNDU4LDU3LjEwNUwxMjEuODQ5LDg0LjY5YzAuMTgxLTEuNDUzLDAuMjgxLTMuMDA2LDAuMjgxLTQuNjc2CgljMC0yMi4zNzktMjEuNTk4LTIyLjkwOS0yMS41OTgtMjIuOTA5SDc5LjU2OHYxNy4yMzhDNzYuNTIsNjMuNjA1LDY2LjUwMyw1Ni4xMyw1NC42MDcsNTYuMTNjLTguNjQ2LDAtMTYuMjk5LDMuOTU1LTIxLjAwOCwxMC4yMzcKCXYtOS4yNjJIMS42NzR2MTEuMDE2aDkuNjI1djM2LjU4OWgxMi42NzZWNjguMTIzaDguNDE4Yy0yLjM1LDMuNzgxLTMuNzA1LDguMjU5LTMuNzA1LDEzLjE0NmMwLDE0LjMxMywxMS42MDUsMjUuMTM3LDI1LjkxOSwyNS4xMzcKCWMxMS44OTYsMCwyMS45MTItNy40NzcsMjQuOTYxLTE4LjIxNXYxNi41MjFoMjIuNTM2YzAsMCw5LjE4NS0wLjMzMiwxNS4xMTQtNy45OTZsLTMuMDY0LDcuOTk2aDEyLjk5bDMuMDY1LTguMTA2aDE3LjA1NgoJbDMuMDY0LDguMTA2aDEyLjk4OWwtMTguMzEyLTQ3LjYwNUwxMzIuNDQ2LDU3LjFMMTMyLjQ1OCw1Ny4xMDV6Ii8+CjxwYXRoIGlkPSJwYXRoNSIgZmlsbD0iI0ZGRkZGRiIgZD0iTTU0LjYwMyw5My44ODNjLTcuNDU1LDAtMTMuNS01LjY0Ny0xMy41LTEyLjYxNHM2LjA0NS0xMi42MTYsMTMuNS0xMi42MTYKCWM3LjQ1NywwLDEzLjUwMSw1LjY0OCwxMy41MDEsMTIuNjE2QzY4LjEwNCw4OC4yMzUsNjIuMDYsOTMuODgzLDU0LjYwMyw5My44ODN6Ii8+CjxwYXRoIGlkPSJwYXRoNyIgZmlsbD0iI0ZGRkZGRiIgZD0iTTk2Ljc3OCw5NC40MTNjLTIuMzk5LDAtMy42NTItMC40MTctMy42NTItMC40MTdWNjguMDE3YzAuODk2LTAuMDU4LDEuOTQ0LTAuMzEyLDMuODYtMC4zMTIKCWMxLjk4MSwwLDExLjc4OSwwLjQxNiwxMS43ODksMTMuMTQ2YzAsMTIuNzI4LTkuNjAxLDEzLjU2My0xMiwxMy41NjNIOTYuNzc4eiIvPgo8cG9seWdvbiBpZD0icG9seWdvbjkiIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMTMzLjgzOCw4Ny4wNTggMTM4LjcxOCw3NC4yMjcgMTM4Ljc0OCw3NC4yMjcgMTQzLjYyOCw4Ny4wNTggIi8+Cjxwb2x5Z29uIGlkPSJwb2x5Z29uMTEiIGZpbGw9IiMyMzFGMjAiIHBvaW50cz0iMTc5LjU2Nyw1Ny4xMDUgMTcxLjExNyw2OS42ODcgMTYyLjY2Nyw1Ny4xMDUgMTQ3LjQ3OCw1Ny4xMDUgMTY0LjA3Nyw4MS44OTMgCgkxNjQuMDc3LDEwNC43MDkgMTc4LjE1NywxMDQuNzA5IDE3OC4xNTcsODEuODkzIDE5NC43NDcsNTcuMTA1ICIvPgo8cGF0aCBpZD0icGF0aDEzIiBmaWxsPSIjMjMxRjIwIiBkPSJNMTI0Ljc4OCwzMy4wNjdjMCwwLDUuOTQ3LDAuNzgyLDQuODUyLDUuMzIxYy0xLjA5OCw0LjUzOC01LjMxOSwzLjYtNi4yNiwzLjYKCWMtMC45MzksMC00LjM4MywwLTEwLjQ4Ni00Ljg1MmwtNS42MzMsOS44NTljMCwwLDYuNDE2LDYuNzI5LDE4LjQ2Nyw2LjcyOWM1LjQ1OSwwLDkuNjYyLTEuODAzLDEyLjYzMS00LjY0NWwtMS41MiwzLjk0MWgxMy42MTMKCWwzLjA2NC04LjA2aDE2Ljc0MmwzLjA2Niw4LjA2aDEzLjQ1OWwtMTgtNDcuOTMxaC0xMy4zMjhsLTExLjc0NywzMC4xMWMtMC4yMzgtOS4wODItOS4wNjUtMTEuNjA2LTEzLjkxOC0xMi45MwoJYy02Ljg4NS0xLjg3OC02LjQxNC0zLjkxMy02LjQxNC00LjY5NGMwLTAuNzgzLDAuNzgxLTMuNiw0LjY5Mi0zLjZsOC45MiwzLjZsNS4xNjQtOS41NDZjMCwwLTYuMTAzLTQuNjk1LTE1LjQ5MS00LjY5NQoJYy02LjcyOSwwLTE2LjkwMSwyLjY2LTE2LjkwMSwxNi40MzJjMC4wMTEtMC4wMDEtMS4zOTksMTEuNTgsMTUuMDMsMTMuMzAxSDEyNC43ODh6Ii8+Cjxwb2x5Z29uIGlkPSJwb2x5Z29uMTUiIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMTYyLjE5OCwyMi41ODMgMTY2LjYzOCwzNC42MzIgMTU3LjMwOCwzNC42MzIgIi8+CjxwYXRoIGlkPSJwYXRoMTciIGZpbGw9IiNGRkZGRkYiIGQ9Ik04Ny45MzcsNTMuODgxbC0wLjA3OC0wLjAwMWwtMC4wNzksMC4wMDFIODcuOTM3eiIvPgo8cGF0aCBpZD0icGF0aDE5IiBmaWxsPSIjMjMxRjIwIiBkPSJNMTEuMjQ4LDI3LjU5Yy0wLjg2NCwwLTEuNTY1LDAuNzAxLTEuNTY1LDEuNTY1YzAsMC44NjUsMC43MDEsMS41NjUsMS41NjUsMS41NjVoMTAuODE5CgljMC41MTQsMC40LDEuMjA0LDAuNzczLDIuMjA0LDEuMDk1YzAuMzQ1LDAuMTExLDAuNjUyLDAuMjM4LDAuOTI5LDAuMzc1SDExLjU5MmMtMC44NjQsMC0xLjU2NSwwLjcwMS0xLjU2NSwxLjU2NQoJYzAsMC44NjUsMC43MDEsMS41NjUsMS41NjUsMS41NjVoMTUuNzk0YzAuMDQ2LDAuNDc5LDAuMDI4LDAuOTc1LTAuMDIyLDEuNDcxSDEzLjUwMWMtMC44NjQsMC0xLjU2NSwwLjctMS41NjUsMS41NjQKCWMwLDAuODY1LDAuNzAxLDEuNTY0LDEuNTY1LDEuNTY0aDEzLjQ5MWMtMC4wMDUsMC40ODUsMC4wNDIsMC45NzUsMC4xODEsMS40NzFIMTUuODhjLTAuODY0LDAtMS41NjUsMC43MDEtMS41NjUsMS41NjUKCWMwLDAuODY0LDAuNzAxLDEuNTY1LDEuNTY1LDEuNTY1aDEzLjQ3YzAuNDMsMC40NjYsMC44MTksMC45NjMsMS4xNzIsMS40NzFIMjAuMTM3Yy0wLjg2NCwwLTEuNTY0LDAuNzAxLTEuNTY0LDEuNTY1CgljMCwwLjg2NCwwLjcsMS41NjQsMS41NjQsMS41NjRoMTIuMTY2YzAuMjY1LDAuNTUsMC40OSwxLjA1LDAuNjg4LDEuNDcxaC01LjkzNmMtMC44NjQsMC0xLjU2NSwwLjcwMS0xLjU2NSwxLjU2NQoJYzAsMC44NjQsMC43MDEsMS41NjUsMS41NjUsMS41NjVoMTUuMzM0YzAuNDM1LDAsMC44MjctMC4xNzcsMS4xMTEtMC40NjNoMzguMTc2YzEuODMxLDAuMzg5LDMuODgsMC42MTQsNi4xODIsMC42MTkKCWMxOS44LTAuMDQzLDIxLjQzOS0xNi40MzIsMjEuNDM5LTE2LjQzMlY1LjA4OEg5NS44Mzl2MzAuMDE0YzAsMC0wLjA4MSw2Ljk5My03Ljk4LDcuMDRjLTcuOTAzLTAuMDQ3LTcuOTgyLTcuMDQtNy45ODItNy4wNFY1LjA5CglINDMuMzljLTAuMjcxLTAuMjI5LTAuNjE4LTAuNTA0LTEuMDAxLTAuNTA0SDI3LjA1M2MtMC44NjQsMC0xLjU2NSwwLjcwMS0xLjU2NSwxLjU2NWMwLDAuMjg3LDAuMDgzLDAuNTUyLDAuMjE4LDAuNzg0CgljLTAuMzkzLDAuNDg4LTAuNzcxLDAuOTE3LTEuMDE5LDEuMDk0Yy0wLjE5OSwwLjE0Mi0wLjkyMywwLjUzOS0xLjg2OSwxLjE1OGgtMi42ODNjLTAuODY0LDAtMS41NjQsMC43MDEtMS41NjQsMS41NjQKCWMwLDAuNTMxLDAuMjY2LDEsMC42NzEsMS4yODJjLTAuNTM5LDAuNTM5LTEuMDUsMS4xMjUtMS40OTgsMS43NTRoLTEuODY1Yy0wLjg2NCwwLTEuNTY1LDAuNzAxLTEuNTY1LDEuNTY1CgljMCwwLjg2NCwwLjcwMSwxLjU2NSwxLjU2NSwxLjU2NWgwLjQxNmMtMC4xMDQsMC40NjYtMC4xNjMsMC45NDYtMC4xNjMsMS40MzlsMC4wMDksMC4wMzJIMTMuNWMtMC44NjQsMC0xLjU2NSwwLjcwMS0xLjU2NSwxLjU2NQoJYzAsMC44NjQsMC43MDEsMS41NjQsMS41NjUsMS41NjRoMy41NTlsLTAuNTUyLDEuNDcxSDExLjU5Yy0wLjg2NCwwLTEuNTY1LDAuNzAxLTEuNTY1LDEuNTY1YzAsMC44NjQsMC43MDEsMS41NjUsMS41NjUsMS41NjUKCWg2LjgzM2MwLjM4NywwLjU0MSwwLjc4LDEuMDYyLDEuMTI4LDEuNDcxaC04LjMwNEwxMS4yNDgsMjcuNTlMMTEuMjQ4LDI3LjU5eiIvPgo8cGF0aCBpZD0icGF0aDIxIiBmaWxsPSIjRkZGRkZGIiBkPSJNMjguNTc5LDMwLjcyaDMwLjA3NWMwLjQ1NywwLDAuODY3LTAuMjAxLDEuMTUyLTAuNTE2aDYuODQ5djIuNDIxaC03LjA0NgoJYy0wLjI4MS0wLjI2OC0wLjY1OS0wLjQzNS0xLjA3OC0wLjQzNUgzMC4yMTNDMjkuNjUxLDMxLjc1MSwyOS4wOTcsMzEuMjY0LDI4LjU3OSwzMC43MnoiLz4KPHBhdGggaWQ9InBhdGgyMyIgZmlsbD0iI0ZGRkZGRiIgZD0iTTU4LjUyOSwyNi4xMTljMC40NjMsMCwwLjg3NS0wLjIwNiwxLjE2Mi0wLjUyNWg2Ljk2M3YyLjQxOWgtNi45MzcKCWMtMC4yOC0wLjI2MS0wLjY1Mi0wLjQyNC0xLjA2NC0wLjQyNGgtMjQuNDdjMC4wMzQtMC40MjgsMC4xMjYtMC45NTgsMC4zNDItMS40NzFMNTguNTI5LDI2LjExOXoiLz4KPHBhdGggaWQ9InBhdGgyNSIgZmlsbD0iI0ZGRkZGRiIgZD0iTTU1LjI0MywxNC4xODFjLTAuMjc2LTAuMjQyLTAuNjMzLTAuMzkzLTEuMDI4LTAuMzkzSDM4LjIyOAoJYy0wLjEyLTAuMzg0LTAuMjU0LTAuODc4LTAuMzctMS40NzFoMTIuMDFjMC40NzgsMCwwLjktMC4yMTgsMS4xODgtMC41NTZoMTUuNTk5djIuNDJINTUuMjQzeiIvPgo8cGF0aCBpZD0icGF0aDI3IiBmaWxsPSIjRkZGRkZGIiBkPSJNMzQuNiwzNi4xOTdjMCwwLTAuMTA0LTAuMzc3LTAuNDQ4LTAuODc2aDI0LjM3OGMwLjQ1NCwwLDAuODU5LTAuMTk2LDEuMTQ1LTAuNTA0aDYuOTc5djIuNDIKCWgtOC44NzljLTAuMjgxLTAuMjc0LTAuNjY1LTAuNDQ0LTEuMDktMC40NDRIMzkuMDg0QzM3Ljg1NCwzNi40NjcsMzYuMjc3LDM2LjIzOSwzNC42LDM2LjE5N3oiLz4KPHBhdGggaWQ9InBhdGgyOSIgZmlsbD0iI0ZGRkZGRiIgZD0iTTQwLjczNCwzOS45MjJoMTUuOTUxYzAuNDUsMCwwLjg1MS0wLjE5MSwxLjEzNy0wLjQ5NWg5LjE1MQoJYzAuMTY0LDAuNjczLDAuNDA5LDEuNTAyLDAuNzY4LDIuNDIxSDU1LjMxOGMtMC4yODMtMC4yODEtMC42NzMtMC40NTUtMS4xMDMtMC40NTVINDAuMTYzCglDNDAuMzA1LDQwLjk3Niw0MC41MDIsNDAuNDQsNDAuNzM0LDM5LjkyMnoiLz4KPHBhdGggaWQ9InBhdGgzMSIgZmlsbD0iI0ZGRkZGRiIgZD0iTTM5LjU1Miw0NC41MjNoMTQuNjY0YzAuNDQ0LDAsMC44NDMtMC4xODcsMS4xMjctMC40ODNoMTMuNDIKCWMwLjQzNCwwLjc5NCwwLjk1NCwxLjYxMSwxLjU3OSwyLjQySDUwLjk3OWMtMC4yODMtMC4yODctMC42NzctMC40NjUtMS4xMTItMC40NjVIMzguNjMyQzM4Ljg4LDQ1LjUxMywzOS4xODcsNDUuMDIsMzkuNTUyLDQ0LjUyM3oKCSIvPgo8cGF0aCBpZD0icGF0aDMzIiBmaWxsPSIjRkZGRkZGIiBkPSJNNDMuNTEsNTEuMDcxYy0wLjI4NC0wLjI5My0wLjY4MS0wLjQ3Ni0xLjEyMS0wLjQ3NmgtNC44MTUKCWMtMC4wMTctMC40MzktMC4wMDEtMC45MzQsMC4wNjgtMS40NzFoMTIuMjI1YzAuNDM4LDAsMC44MzUtMC4xODIsMS4xMTktMC40NzRoMjEuMzY5YzAuOTUzLDAuODc1LDIuMDYxLDEuNjk4LDMuMzU0LDIuNDIxSDQzLjUxCglMNDMuNTEsNTEuMDcxeiIvPgo8cGF0aCBpZD0icGF0aDM1IiBmaWxsPSIjRkZGRkZGIiBkPSJNNjYuNjU0LDkuNTdINTAuODgyYy0wLjI3My0wLjIzNS0wLjYyNS0wLjM4Mi0xLjAxNS0wLjM4MkgzNS44OTUKCWMtMC4wNzktMC4yNzUtMC4yMDctMC44MTMtMC4yMzktMS40NzJoNi43MzRjMC40ODMsMCwwLjkxLTAuMjIzLDEuMTk3LTAuNTY3aDIzLjA2N1Y5LjU3eiIvPgo8cGF0aCBpZD0icGF0aDM3IiBmaWxsPSIjRkZGRkZGIiBkPSJNMzEuMjc3LDcuNzE2aDEuMDI1YzAuMDM0LDAuNDQ0LDAuMTM0LDAuOTUyLDAuMzU3LDEuNDcyaC0xLjE0MgoJQzMxLjM4MSw4LjcwOCwzMS4yODMsOC4xOTcsMzEuMjc3LDcuNzE2eiIvPgo8cGF0aCBpZD0icGF0aDM5IiBmaWxsPSIjRkZGRkZGIiBkPSJNMzIuNzcxLDEyLjMxNmgyLjczNWMwLjE0NywwLjMzNywwLjMwNiwwLjgxMSwwLjQ2NCwxLjQ3MWgtMi4zNDIKCUMzMy4zNDYsMTMuNDIxLDMzLjA1NywxMi45NCwzMi43NzEsMTIuMzE2TDMyLjc3MSwxMi4zMTZ6Ii8+CjxwYXRoIGlkPSJwYXRoNDEiIGZpbGw9IiNGRkZGRkYiIGQ9Ik00Mi4yMzYsMTYuOTE3aDExLjk3OWMwLjQ3MywwLDAuODkyLTAuMjE0LDEuMTc4LTAuNTQ2aDExLjI2djIuNDJoLTguOTI5CgljLTAuMjc3LTAuMjQ4LTAuNjM4LTAuNDAzLTEuMDQtMC40MDNoLTE1LjQzTDQyLjIzNiwxNi45MTd6Ii8+CjxwYXRoIGlkPSJwYXRoNDMiIGZpbGw9IiNGRkZGRkYiIGQ9Ik0zOS42MjEsMjEuNTE5aDE3LjA2NGMwLjQ2OSwwLDAuODg0LTAuMjEsMS4xNzEtMC41MzZoOC43OTd2Mi40MmgtNy4wNzIKCWMtMC4yNzgtMC4yNTQtMC42NDYtMC40MTQtMS4wNTItMC40MTRIMzguMjY2QzM4Ljc1NCwyMi41NjMsMzkuMjE0LDIyLjA3NSwzOS42MjEsMjEuNTE5eiIvPgo8cGF0aCBpZD0icGF0aDQ1IiBmaWxsPSIjRkZGRkZGIiBkPSJNMjYuMzcsMjYuMTE5aDQuMjYzYzAuMzkzLDAuNDE1LDAuNzI0LDAuOTA5LDAuOTQ1LDEuNDcxaC00LjY4OQoJQzI2LjY1OCwyNy4yMDgsMjYuNDA5LDI2LjY3NiwyNi4zNywyNi4xMTl6Ii8+Cjwvc3ZnPg==) no-repeat; 
+	background-size: contain;
+	background-position: center center;
+	}	
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 320px)
+and (max-width : 568px) {
+	span.hdr-press-link {width: 4.25em; max-width: 47px; height: 4.25em; max-height: 47px;}
+	.credentials {text-align: center; margin-top: 1em;}	
+	.credentials p a {max-width: 80px;}
+	p.text-center img {max-width: 100%; margin:0 auto;}
+} /* end Smartphones (portrait and landscape) ----------- */
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 768px)
+and (max-width : 1025px)
+and (orientation : landscape) {
+
+	
+}
+
+</style>
+ 
+  
+  	<div class="row row-offcanvas row-offcanvas-right">
+    	<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9" role="main">
+		
+          <p class="pull-right visible-sm visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">sidebar »</button>
+          </p>
+		          
+
+        <ul class="breadcrumb hidden-xs">
+            <li><a href="/">Telecommuting Jobs</a></li>
+			<li><a href="/jobs">Browse Jobs</a></li>
+			<li><a href="/telecommute-jobs-by-company.aspx">Jobs by Company</a></li>
+            <li class="active">Telecommuting Jobs at 1-800-Got-Junk</li>
+        </ul>
+
+
+       <h1>1-800-Got-Junk Jobs with Part-Time, Telecommuting, or Flexible Work</h1>
+
+	   <hr>
+
+		<div class="row company-description">
+		  <div class="col-xs-12 col-sm-6 col-md-8">
+			<p>
+
+			1-800-Got-Junk is an international junk removal company that works with homes and businesses to recycle, donate, and dispose of unwanted items large and small. Founded in 1989 and based in Vancouver, British Columbia, 1-800-Got-Junk has grown into over 200 locations in Canada, the United States, and Australia. As an employer, 1-800-Got-Junk has received awards for “Best Workplace” and “Best Company to Work For” according to BC Business Magazine. The values that guide 1-800-Got-Junk include vision, goals, growth, excitement, fun, and work-life balance. In the United States, 1-800-Got-Junk lists jobs in North Carolina, Georgia, Maryland, Florida, Colorado, and many other states. In the past, 1-800-Got-Junk has offered full-time and part-time jobs.<br><i style="color:#999;"> Researched &amp; Written by FlexJobs Staff</i>
+			</p>
+                        </div>
+
+		  <div class="col-xs-12 col-sm-6 col-md-4">
+		  <div class="well well-sm">
+      <h2><i class="fa fa-trophy" style="margin-right:.5em;"></i>Awards &amp; Accolades</h2>
+      <p id="accolades-icons"><img src="/images/icon-accolade-world-blu-top100.png" alt="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu." title="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu."></p>
+
+					<h2><i class="fa fa-building-o" style="margin-right:.5em;"></i>Headquarters</h2>
+					<p>Vancouver, British Columbia Canada</p>
+					<h2><i class="fa fa-globe" style="margin-right:.5em;"></i>Website</h2>
+				<p><a rel="external nofollow" href="http://www.1800gotjunk.com" target="_blank">www.1800gotjunk.com</a></p>
+
+			<p class="glass-door"><img src="/images/btn-glassdoor.png" width="175" height="47" alt="Glassdoor Reviews" id="opener" style="cursor:pointer;" title="Glassdoor Reviews"></p>
+		</div>
+
+		  </div>
+		</div>
+<div id="glass">
+<br>
+<div class="gdWidget" style="width: 300px; height: 400px;"><div style="position: absolute; overflow: hidden; width: 300px; height: 400px; background-color: transparent; text-decoration: none; border: none; display: block;"><iframe scrolling="no" src="http://www.glassdoor.com/api/api.htm?version=1&amp;action=employer-combo&amp;t.s=w-m&amp;t.p=293&amp;format=300x400&amp;employer=1-800-GOT-JUNK&amp;activeTab=R&amp;ftrJobsLink=false&amp;css=http%3A%2F%2Fwww.glassdoor.com%2Fcrs%2Fpartners%2Fflexjobs%2Fflexjobs.css&amp;noDataUrl=http%3A%2F%2Fwww.flexjobs.com%2Fimages%2Fspacer-1.gif&amp;t.a=i&amp;responseType=embed&amp;referrer=http%3A%2F%2Fwww.flexjobs.com%2Fjobs%2Ftelecommuting-jobs-at-1-800-got-junk" name="widgetIFrame" style="visibility: visible; border: none; overflow: hidden; width: 300px; height: 400px;"></iframe></div></div><script src="http://www.glassdoor.com/static/js/api/widget/v1.js" type="text/javascript"></script>
+<br>
+</div>
+
+
+		
+
+<style type="text/css"> 
+*:before, *:after, .nav2 * {
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 	
+}
+.row-zurb:before, .row-zurb:after {
+    content: " ";
+    display: table;	
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+.row-zurb:after {clear: both;}
+.row-zurb {
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+	}
+.row-zurb h3 {
+	color: #F89E20;
+	font-size: 20px;
+	margin: .75em 0;
+}
+.large-8 {
+    position: relative;
+    width: 65%;
+	float: left;
+	padding-right: 0.9375em;	
+}
+.large-8 p, .nav2-column-left p {line-height: 1.5em !important;}
+.large-8 p img {
+	float: left;
+	margin: 0 15px 5px 0;
+}
+.large-4 {
+    position: relative;
+    width: 30%;
+	float: right;
+	padding-left: 0.9375em;
+	padding-top: 20px;
+}
+.large-6 {
+    position: relative;
+    width: 45%;
+	float: left;
+	padding-right: 3%;
+}
+.row-zurb h2 {
+	float: none !important;
+}
+
+.wrap-awards a.bluelink {word-wrap: break-word;}
+
+/* Reset */
+
+nav2 * { box-sizing: border-box }
+nav2 * { -moz-box-sizing: border-box; -webkit-box-sizing: 
+border-box; box-sizing: border-box; }
+
+.nav2,
+.nav2 a,
+.nav2 ul,
+.nav2 li,
+.nav2 div,
+.nav2 form,
+.nav2 input {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+
+.nav2 a { text-decoration: none; }
+
+.nav2 li {list-style: none; }
+
+/* Menu Container */
+.nav2 {
+	display: inline-block;
+	position: relative;
+	cursor: default;
+	z-index: 500;
+	width: 100%;
+	margin: 0;
+}
+
+/* Menu List */
+.nav2 > li {
+	display: block;
+	float: left;
+	width: 50%;
+	margin: 0;
+}
+
+/* Menu Links */
+.nav2 > li > a {
+	position: relative;
+	display: block;
+	z-index: 510;
+	height: 30px;
+	padding: 0 10px;
+	line-height: 30px;
+	font-weight: bold;
+	color: #1874D1;
+	vertical-align: middle;
+	
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+
+	background: #fff;
+	border: 1px dotted #adadad;
+	border-color: #fff #fff #adadad #fff;
+
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	-ms-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+.nav2 > li:hover > a { background: #f5f5f5; border: 1px solid #adadad; border-width: 1px 1px 0 1px; }
+
+.nav2 > li:first-child > a { }
+
+
+/* Menu Dropdown */
+.nav2 > li > div {
+	position: absolute;
+	display: block;
+	top: 29px;
+	left: 0;
+	padding: 20px;
+
+	opacity: 0;
+	visibility: hidden;
+	overflow: hidden;
+
+	background: #ffffff;
+	border: 1px solid #adadad;
+
+	-webkit-transition: all .2s ease .15s;
+	-moz-transition: all .2s ease .15s;
+	-o-transition: all .2s ease .15s;
+	-ms-transition: all .2s ease .15s;
+	transition: all .2s ease .15s;
+	
+	-moz-box-shadow: 0 8px 4px 4px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 8px 4px 4px rgba(0,0,0,0.1);
+	box-shadow: 0 8px 4px 4px rgba(0,0,0,0.1);
+}
+
+.nav2 > li:hover > div {
+	opacity: 1;
+	visibility: visible;
+	overflow: visible;
+}
+
+/* Menu Content Styles */
+.nav2 .nav2-column, .nav2-column-left, .nav2-column-right {
+	float: left;
+	width: 20%;
+}
+.nav2-column-left {width: 60%;padding-right: 2.5% !important;}
+.nav2-column-right {width: 37.5%;}
+
+
+.nav2 .nav2-column li a, .nav2 .nav2-column-left li a, .nav2 .nav2-column-right li a {
+	display: block;
+	line-height: 1em;
+	font-weight: bold;
+	font-size: 13px;
+	color: #888888;
+}
+
+.nav2 .nav2-column li a:hover, .nav2 .nav2-column-left li a:hover, .nav2 .nav2-column-right li a:hover { color: #666666; }
+
+.nav2 div.well {padding: 1em; margin-left: 1em;}
+
+.wrap-awards, .nav2 .wrap-awards {
+	border: 1px solid #f5f5f5;
+}
+.wrap-awards h2 {
+	background: #f5f5f5;
+	color: #666;
+	margin-top: 0 !important;
+	padding: 6px 10px;
+}
+
+.wrap-awards p {padding:0px 15px 15px 15px;}
+.wrap-awards a {color: #1874D1;}
+.glass-door {text-align: center;}
+
+.ui-dialog {
+	padding: 10px;
+	background: #fff;
+	border: 1px solid #666;
+	-moz-box-shadow: 0 0 10px 10px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 0 10px 10px  rgba(0,0,0,0.4);
+	box-shadow: 0 0 10px 10px rgba(0,0,0,0.4);
+}
+
+.ui-icon-closethick {float: right;}
+
+#glass { display: none; z-index: 1010; }
+
+</style>
+
+
+		
+<h3>Current Flexible Jobs at 1-800-Got-Junk</h3>
+Current job data is reserved for active FlexJobs members.  Please login or register now to access this specific information. 
+However, we have included some of their past telecommuting jobs, to provide you an idea of the types of jobs 1-800-Got-Junk has hired for in the past (and which they may be likely to hire for again!).
+
+<h3>Past Flexible Jobs at 1-800-Got-Junk</h3>
+	<a href="#" class="icon-guide-btn"></a>
+	
+
+
+
+<div class="panel panel-info panel-jobs">
+  <div class="panel-heading">
+		<div class="row">
+			<div class="col-sm-6"><h5>Job Listing</h5>
+			
+<div class="popover-examples">  
+	<a href="#" tabindex="100" class="icn-icon-guide" data-toggle="popover" data-trigger="focus" aria-label="Job Icon Guide" title="" data-html="true" data-content="<p><strong>Job is open to:</strong></p><ul>
+		 <li>&nbsp;<img src='/images/icons/icon-everywhere.png' alt='everywhere icon' /> Candidates Everywhere</li>
+		 <li><img src='/images/icons/icon-usa.png' alt='United States icon' /> Candidates in US</li>
+		 <li><img src='/images/icons/australia.png' alt='Australia icon' /> Australia Candidates</li>
+		 <li><img src='/images/icons/canada.png' alt='Canada icon' /> Canada Candidates</li>
+		 <li><img src='/images/icons/india.png' alt='India icon' /> India Candidates</li>
+		 <li><img src='/images/icons/uk.png' alt='UK icon' /> UK Candidates</li>
+      </ul>
+      <p><strong>Job is for local candidate of:</strong></p>
+      <ul>
+		 <li><span class='nav-icons-location' alt='certain city or state icon'></span> a Certain City or State</li>
+		 <li><span class='nav-icons-region' alt='region icon'></span> a Certain Region</li>
+	  </ul>
+      <p><strong>FlexJobs logos:</strong></p>
+      <ul>
+		 <li class='fj-star'>
+			Original job posting is hosted on Flexjobs. Jobs without this logo are originally posted on another site.
+		 </li>
+      </ul>" data-original-title="Job Icon Guide"></a>
+</div>
+			
+			</div>
+			<div class="col-sm-4 hidden-xs"><h5>&nbsp;</h5></div>
+			<div class="col-sm-2 hidden-xs"><h5>Posted</h5></div>
+		</div>
+  </div>
+  <ul id="joblist" class="list-group">
+    <li class="list-group-item">
+		<div class="row">
+   <div class="col-sm-6">
+	<h5>Driver/Navigator</h5>
+      <p class="job-type-info"><span class="text-danger">Full-Time/Part-Time Job</span> Houston, TX <span class="nav-icons-location" title="Candidates need to be able to work in the City or State specified"></span></p>
+   </div>
+
+   <div class="col-sm-4">
+      <h5>&nbsp;</h5>
+           <p id="accolades-icons" class="hidden-xs">        <img src="/images/icon-accolade-world-blu-top100.png" alt="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu." title="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu.">
+   </p></div>
+   <div class="col-sm-2">
+      <p><small>05/29/12</small>
+      &nbsp;</p>
+   </div>
+   </div>
+   <p class="job-description">Full/part-time job openings for Drivers/Navigators to provide excellent customer service, assist with sales and marketing, truck operation and garbage and scrap removal.  Requires excellent physical stamina and interpersonal skills. $7.00-$10.00/hr.</p>
+</li>
+    <li class="list-group-item">
+		<div class="row">
+   <div class="col-sm-6">
+	<h5>Driver/Navigator</h5>
+      <p class="job-type-info"><span class="text-danger">Full-Time/Part-Time Job</span> San Antonio, TX <span class="nav-icons-location" title="Candidates need to be able to work in the City or State specified"></span></p>
+   </div>
+
+   <div class="col-sm-4">
+      <h5>&nbsp;</h5>
+           <p id="accolades-icons" class="hidden-xs">        <img src="/images/icon-accolade-world-blu-top100.png" alt="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu." title="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu.">
+   </p></div>
+   <div class="col-sm-2">
+      <p><small>05/29/12</small>
+      &nbsp;</p>
+   </div>
+   </div>
+   <p class="job-description">Full/part-time job openings for Drivers/Navigators to provide excellent customer service, assist with sales and marketing, truck operation and garbage and scrap removal.  Requires excellent physical stamina and interpersonal skills. $9.00/hr.</p>
+</li>
+    <li class="list-group-item">
+		<div class="row">
+   <div class="col-sm-6">
+	<h5>Driver/Navigator</h5>
+      <p class="job-type-info"><span class="text-danger">Full-Time/Part-Time Job</span> Columbia, SC <span class="nav-icons-location" title="Candidates need to be able to work in the City or State specified"></span></p>
+   </div>
+
+   <div class="col-sm-4">
+      <h5>&nbsp;</h5>
+           <p id="accolades-icons" class="hidden-xs">        <img src="/images/icon-accolade-world-blu-top100.png" alt="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu." title="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu.">
+   </p></div>
+   <div class="col-sm-2">
+      <p><small>05/29/12</small>
+      &nbsp;</p>
+   </div>
+   </div>
+   <p class="job-description">Full/part-time job openings for Drivers/Navigators to provide excellent customer service, assist with sales and marketing, truck operation and garbage and scrap removal.  Requires excellent physical stamina and interpersonal skills. $9.00/hr.</p>
+</li>
+    <li class="list-group-item">
+		<div class="row">
+   <div class="col-sm-6">
+	<h5>Driver/Navigator</h5>
+      <p class="job-type-info"><span class="text-danger">Full-Time/Part-Time Job</span> Raleigh, NC <span class="nav-icons-location" title="Candidates need to be able to work in the City or State specified"></span></p>
+   </div>
+
+   <div class="col-sm-4">
+      <h5>&nbsp;</h5>
+           <p id="accolades-icons" class="hidden-xs">        <img src="/images/icon-accolade-world-blu-top100.png" alt="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu." title="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu.">
+   </p></div>
+   <div class="col-sm-2">
+      <p><small>05/29/12</small>
+      &nbsp;</p>
+   </div>
+   </div>
+   <p class="job-description">Full/part-time job openings for Drivers/Navigators to provide excellent customer service, assist with sales and marketing, truck operation and garbage and scrap removal.  Requires excellent physical stamina and interpersonal skills. $9.00/hr.</p>
+</li>
+    <li class="list-group-item">
+		<div class="row">
+   <div class="col-sm-6">
+	<h5>Driver/Navigator</h5>
+      <p class="job-type-info"><span class="text-danger">Full-Time/Part-Time Job</span> Baltimore, MD <span class="nav-icons-location" title="Candidates need to be able to work in the City or State specified"></span></p>
+   </div>
+
+   <div class="col-sm-4">
+      <h5>&nbsp;</h5>
+           <p id="accolades-icons" class="hidden-xs">        <img src="/images/icon-accolade-world-blu-top100.png" alt="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu." title="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu.">
+   </p></div>
+   <div class="col-sm-2">
+      <p><small>05/29/12</small>
+      &nbsp;</p>
+   </div>
+   </div>
+   <p class="job-description">Full/part-time job openings for Drivers/Navigators to provide excellent customer service, assist with sales and marketing, truck operation and garbage and scrap removal.  Requires excellent physical stamina and interpersonal skills. $9.00-$11.00/hr.</p>
+</li>
+    <li class="list-group-item">
+		<div class="row">
+   <div class="col-sm-6">
+	<h5>Driver/Navigator</h5>
+      <p class="job-type-info"><span class="text-danger">Full-Time/Part-Time Job</span> Boca Raton, FL <span class="nav-icons-location" title="Candidates need to be able to work in the City or State specified"></span></p>
+   </div>
+
+   <div class="col-sm-4">
+      <h5>&nbsp;</h5>
+           <p id="accolades-icons" class="hidden-xs">        <img src="/images/icon-accolade-world-blu-top100.png" alt="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu." title="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu.">
+   </p></div>
+   <div class="col-sm-2">
+      <p><small>05/29/12</small>
+      &nbsp;</p>
+   </div>
+   </div>
+   <p class="job-description">Full/part-time job openings for Drivers/Navigators to provide excellent customer service, assist with sales and marketing, truck operation and garbage and scrap removal.  Requires excellent physical stamina and interpersonal skills. $9.00-$10.00/hr.</p>
+</li>
+    <li class="list-group-item">
+		<div class="row">
+   <div class="col-sm-6">
+	<h5>Driver/Navigator</h5>
+      <p class="job-type-info"><span class="text-danger">Full-Time/Part-Time Job</span> Colorado Springs, CO <span class="nav-icons-location" title="Candidates need to be able to work in the City or State specified"></span></p>
+   </div>
+
+   <div class="col-sm-4">
+      <h5>&nbsp;</h5>
+           <p id="accolades-icons" class="hidden-xs">        <img src="/images/icon-accolade-world-blu-top100.png" alt="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu." title="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu.">
+   </p></div>
+   <div class="col-sm-2">
+      <p><small>05/29/12</small>
+      &nbsp;</p>
+   </div>
+   </div>
+   <p class="job-description">Full/part-time job openings for Drivers/Navigators to provide excellent customer service, assist with sales and marketing, truck operation and garbage and scrap removal.  Requires excellent physical stamina and interpersonal skills. $9.00-$10.00/hr.</p>
+</li>
+    <li class="list-group-item">
+		<div class="row">
+   <div class="col-sm-6">
+	<h5>Driver/Navigator</h5>
+      <p class="job-type-info"><span class="text-danger">Full-Time/Part-Time Job</span> Mason, OH <span class="nav-icons-location" title="Candidates need to be able to work in the City or State specified"></span></p>
+   </div>
+
+   <div class="col-sm-4">
+      <h5>&nbsp;</h5>
+           <p id="accolades-icons" class="hidden-xs">        <img src="/images/icon-accolade-world-blu-top100.png" alt="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu." title="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu.">
+   </p></div>
+   <div class="col-sm-2">
+      <p><small>05/29/12</small>
+      &nbsp;</p>
+   </div>
+   </div>
+   <p class="job-description">Full/part-time job openings for Drivers/Navigators to provide excellent customer service, assist with sales and marketing, truck operation and garbage and scrap removal.  Requires excellent physical stamina and interpersonal skills. $9.50/hr.</p>
+</li>
+    <li class="list-group-item">
+		<div class="row">
+   <div class="col-sm-6">
+	<h5>Driver/Navigator</h5>
+      <p class="job-type-info"><span class="text-danger">Full-Time/Part-Time Job</span> Boulder, CO <span class="nav-icons-location" title="Candidates need to be able to work in the City or State specified"></span></p>
+   </div>
+
+   <div class="col-sm-4">
+      <h5>&nbsp;</h5>
+           <p id="accolades-icons" class="hidden-xs">        <img src="/images/icon-accolade-world-blu-top100.png" alt="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu." title="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu.">
+   </p></div>
+   <div class="col-sm-2">
+      <p><small>05/29/12</small>
+      &nbsp;</p>
+   </div>
+   </div>
+   <p class="job-description">Full/part-time job openings for Drivers/Navigators to provide excellent customer service, assist with sales and marketing, truck operation and garbage and scrap removal.  Requires excellent physical stamina and interpersonal skills. $9.00-$10.00/hr.</p>
+</li>
+    <li class="list-group-item">
+		<div class="row">
+   <div class="col-sm-6">
+	<h5>Driver/Navigator</h5>
+      <p class="job-type-info"><span class="text-danger">Full-Time/Part-Time Job</span> Denver, CO <span class="nav-icons-location" title="Candidates need to be able to work in the City or State specified"></span></p>
+   </div>
+
+   <div class="col-sm-4">
+      <h5>&nbsp;</h5>
+           <p id="accolades-icons" class="hidden-xs">        <img src="/images/icon-accolade-world-blu-top100.png" alt="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu." title="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu.">
+   </p></div>
+   <div class="col-sm-2">
+      <p><small>05/29/12</small>
+      &nbsp;</p>
+   </div>
+   </div>
+   <p class="job-description">Full/part-time job openings for Drivers/Navigators to provide excellent customer service, assist with sales and marketing, truck operation and garbage and scrap removal.  Requires excellent physical stamina and interpersonal skills. $12.00/hr.</p>
+</li>
+    <li class="list-group-item">
+		<div class="row">
+   <div class="col-sm-6">
+	<h5>Driver/Navigator</h5>
+      <p class="job-type-info"><span class="text-danger">Full-Time/Part-Time Job</span> Charlotte, NC <span class="nav-icons-location" title="Candidates need to be able to work in the City or State specified"></span></p>
+   </div>
+
+   <div class="col-sm-4">
+      <h5>&nbsp;</h5>
+           <p id="accolades-icons" class="hidden-xs">        <img src="/images/icon-accolade-world-blu-top100.png" alt="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu." title="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu.">
+   </p></div>
+   <div class="col-sm-2">
+      <p><small>04/16/12</small>
+      &nbsp;</p>
+   </div>
+   </div>
+   <p class="job-description">Full/part-time job openings for Drivers/Navigators to provide excellent customer service, assist with sales and marketing, truck operation and garbage and scrap removal.  Requires excellent physical stamina and interpersonal skills. $8.00-$10.00/hr.</p>
+</li>
+    <li class="list-group-item">
+		<div class="row">
+   <div class="col-sm-6">
+	<h5>Driver/Navigator</h5>
+      <p class="job-type-info"><span class="text-danger">Full-Time/Part-Time Job</span> Miami, FL <span class="nav-icons-location" title="Candidates need to be able to work in the City or State specified"></span></p>
+   </div>
+
+   <div class="col-sm-4">
+      <h5>&nbsp;</h5>
+           <p id="accolades-icons" class="hidden-xs">        <img src="/images/icon-accolade-world-blu-top100.png" alt="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu." title="This company is listed as one of the world's Most Democratic Workplaces by WorldBlu.">
+   </p></div>
+   <div class="col-sm-2">
+      <p><small>09/11/11</small>
+      &nbsp;</p>
+   </div>
+   </div>
+   <p class="job-description">Full/part-time job openings for Drivers/Navigators to provide excellent customer service, assist with sales and marketing, truck operation and garbage and scrap removal.  Requires excellent physical stamina and interpersonal skills. $10.00/hr.</p>
+</li>
+</ul>
+
+</div>
+
+
+
+
+<style>
+.panel-jobs ul.list-group li.list-group-item:nth-of-type(even) {background: #f3f3f3;}
+.panel-jobs  ul.list-group li.list-group-item.featured-job {border-left: 12px solid #BCE8F1;}
+.panel-jobs  ul.list-group li.list-group-item.featured-job2 {border-left: 12px solid #f7971d;}
+.panel-jobs {font-size: .9em;}
+.panel-jobs h5 {font-weight: 700; margin-top: 0; margin-bottom: 3px; display: inline;}
+.featured-job .col-sm-6 h5 a, .featured-job2 .col-sm-6 h5 a {color: #F7971D;}
+.panel-jobs .panel-heading h5 {margin: 0;}
+.panel-jobs a.pull-left {margin-right: 10px;}
+.panel-jobs.two-column h5 {margin-bottom: 3px;}
+.panel-jobs.two-column .col-sm-5 h5:nth-of-type(2) {font-size: 13px; font-weight: 600;}
+.panel-jobs.two-column .col-sm-5 p {font-size: 12px; margin-bottom: 5px;}
+p.job-description {margin-bottom: 0;}
+.panel-jobs .panel-heading {padding-top: 0;}
+.panel-jobs .panel-heading .col-sm-4, .panel-jobs .panel-heading .col-sm-2 {padding-top: 13px;}
+.panel-jobs .panel-heading .col-sm-2, #joblist .list-group-item .col-sm-2 {text-align: right;}
+
+.popover.top>.arrow {left: 40%;}
+.popover-examples {display: inline;}
+.popover {left: 0 !important; box-shadow: 0 0 20px 0px rgba(0,0,0,.4);}
+h3.popover-title {color: #3778b6; font-weight: 700;}
+.popover-examples p strong {font-weight: 700; color: #666;}
+.popover-examples ul {font-size: .85em; padding-left: 1em;}
+.popover-examples ul li {list-style-type: none;}
+.popover-examples ul:last-child {margin-bottom: 0;}
+.popover-examples .fj-star {width: 100%; height: auto; display: block; background-size: 18px auto; padding-left: 24px;}
+p.icon-guide {text-transform: uppercase; font-size: 10px; line-height: 1em; margin: 0;}
+#joblist .col-sm-2 .btn-xs {margin-left: 3px;}
+
+.icn-icon-guide {
+	display: inline-block;
+	position: relative;
+	top: 6px;
+	width: 26px;
+	height: 26px;
+	margin-left: 6px;
+	background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0aD0iMjdweCIgaGVpZ2h0PSIyN3B4IiB2aWV3Qm94PSIwIDAgMjcgMjciIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI3IDI3IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGNpcmNsZSBmaWxsPSIjNTY5MENDIiBjeD0iMTMuNSIgY3k9IjEzLjg1MSIgcj0iMTIiLz4KPGc+Cgk8ZyBvcGFjaXR5PSIwLjQ3Ij4KCQk8cGF0aCBkPSJNMTEuMjYsMTIuOTE5di0yLjYxM2g1LjM0NHY4LjczaDEuNjg4djIuNjEzSDExLjI2di0yLjYxM2gxLjcyM3YtNi4xMTdIMTEuMjZ6IE0xMi44NTQsNy4wNTQKCQkJYzAtMC41NDUsMC4xOTMtMS4wMTMsMC41OC0xLjQwMmMwLjM4Ny0wLjM5LDAuODU0LTAuNTg0LDEuNC0wLjU4NGMwLjU1NSwwLDEuMDIzLDAuMTk1LDEuNDA2LDAuNTg0CgkJCWMwLjM4MywwLjM4OSwwLjU3NCwwLjg1NiwwLjU3NCwxLjQwMnMtMC4xOTMsMS4wMTEtMC41OCwxLjM5NnMtMC44NTQsMC41NzgtMS40LDAuNTc4Yy0wLjUzOSwwLTEuMDA0LTAuMTk1LTEuMzk1LTAuNTg0CgkJCUMxMy4wNDksOC4wNTUsMTIuODU0LDcuNTkxLDEyLjg1NCw3LjA1NHoiLz4KCTwvZz4KCTxnPgoJCTxnPgoJCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTAuMjYsMTEuOTE5VjkuMzA2aDUuMzQ0djguNzNoMS42ODh2Mi42MTNIMTAuMjZ2LTIuNjEzaDEuNzIzdi02LjExN0gxMC4yNnogTTExLjg1NCw2LjA1NAoJCQkJYzAtMC41NDUsMC4xOTMtMS4wMTMsMC41OC0xLjQwMmMwLjM4Ny0wLjM5LDAuODU0LTAuNTg0LDEuNC0wLjU4NGMwLjU1NSwwLDEuMDIzLDAuMTk1LDEuNDA2LDAuNTg0CgkJCQljMC4zODMsMC4zODksMC41NzQsMC44NTYsMC41NzQsMS40MDJzLTAuMTkzLDEuMDExLTAuNTgsMS4zOTZzLTAuODU0LDAuNTc4LTEuNCwwLjU3OGMtMC41MzksMC0xLjAwNC0wLjE5NS0xLjM5NS0wLjU4NAoJCQkJQzEyLjA0OSw3LjA1NSwxMS44NTQsNi41OTEsMTEuODU0LDYuMDU0eiIvPgoJCTwvZz4KCTwvZz4KPC9nPgo8L3N2Zz4=) no-repeat;
+	background-position: 0 0;	
+}
+
+
+@media (max-width: 768px) {
+	
+.col-md-7 h2 {font-size: 1.25em;}
+.col-md-5.text-right {text-align: left;}
+select.form-control {margin-bottom: 10px; height: auto;}	
+.panel-jobs h5, p.job-type-info {font-size: 12px;}
+	
+}
+
+</style>
+
+
+
+
+
+
+<style>
+@media only screen
+and (min-width : 320px)
+and (max-width : 568px) {
+	
+h3.nav-icons-join {font-size: 18px;}	
+.signup1, .signup2, .signup3, .signup4, .signup5, .signup6, .signup7, .signup8, .signup9, .signup10, .signup11 {background: none;}
+#join-flexjobs {width: 100%; font-size: 16px;}
+hr {margin: 8px 0;}
+h3.nav-icons-details, #myfj-description h3.panel-title, h3.nav-icons-briefcase {font-size: 18px;}
+	
+}
+
+</style>
+
+<hr>
+
+<div class="row signup4">
+	<div class="col-sm-9">
+	<h3 class="nav-icons-join">Join FlexJobs for Full Job Details and to Apply!</h3>
+		<p>To apply to the specific job postings, please <strong><a href="/login">login</a></strong> or <strong><a href="/Members/Flexers/Register.aspx">become a FlexJobs member</a></strong>.</p>
+		<p>If you have any questions, please feel free to give us a call toll-free at <br class="hidden-xs">1-866-991-9222.</p>
+
+	<div id="join-flexjobs" class="well well-sm">
+		<p><i class="fa fa-check"></i> Find a job faster!</p>
+		<p><i class="fa fa-check"></i> Professional, safe</p>
+		<p><i class="fa fa-check"></i> Hand-screened leads</p>
+		<p><i class="fa fa-check"></i> No scams, ad, junk</p>
+		<p><i class="fa fa-check"></i> 50+ job categories</p>
+
+		<p class="text-center" style="margin-bottom:1em;"><a href="/Members/Flexers/Register.aspx" class="btn btn-warning btn-lg" style="font-weight:700;">Get Started Now!</a></p>
+
+	  </div>
+
+	</div>
+
+</div>
+
+
+        </div>
+		
+        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 sidebar-offcanvas" id="sidebar" role="navigation">
+		
+
+	<div class="panel-group">
+
+		
+		  <div class="panel panel-default" role="tree">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle btn-block" data-toggle="collapse" data-parent="#accordion" href="#jobsearch" role="treeitem">
+          Search for Jobs <i class="fa fa-chevron-circle-down pull-right"></i>
+        </a>
+      </h4>
+    </div>
+    <div id="jobsearch" class="panel panel-collapse collapse in" style="margin-bottom:0;">
+      <div class="panel-body">
+		  <form action="/search" method="get" id="search-for-jobs" role="search">
+		<div class="input-group">
+		  <label class="sr-only">Search for Jobs</label>
+		  <input type="text" id="search" class="form-control" name="search" value="Search for Jobs..." onclick="if(this.value=='Search for Jobs...') this.value = '';">
+		  <span class="input-group-btn">
+			<button class="btn btn-default" id="btn-search" type="submit" aria-label="search"><i class="fa fa-search"></i></button>
+		  </span>
+		</div>        
+	    
+		  <ul class="list-group" id="panel-more-options" style="margin-bottom:0;" role="group">
+		  	<li role="treeitem" class="dropdown list-group-item" style="background-color:#f2f2f2;">
+			
+			<a class="dropdown-toggle" data-toggle="collapse" data-target="#moreoptions" style="padding:5px 10px;" role="treeitem">
+			  More Search Options <i class="fa fa-chevron-circle-down pull-right"></i>
+			</a>
+						
+	       <div class="collapse" id="moreoptions">
+		   <div class="form-group">
+			<label>
+			  <input type="checkbox" name="exact" id="exact"> search exact phrase
+			</label>
+			</div>		   
+	       <input type="hidden" name="old" value="1">
+	       <div class="form-group">
+		   <label>Job Type</label>
+	       <select name="jobtype" class="form-control input-sm">
+			  <option value=""> All</option>
+			  <option value="1"> Employee</option>
+			  <option value="2"> Freelance</option>
+			  <option value="4"> Volunteer</option>
+			  <option value="9"> Internship</option>
+			  <option value="8"> Temporary</option>
+	       </select>
+		   </div>
+	       <div class="form-group">
+		   <label>Schedule</label>
+	       <select name="schedule" class="form-control input-sm">
+			  <option value=""> All</option>
+			  <option>Full-Time</option>
+			  <option>Part-Time</option>
+			  <option>Flexible Schedule</option>
+			  <option>Alternative Schedule</option>
+			  <option>Occasional</option>
+			  <option>Seasonal</option>
+			  <option>Long-Term</option>
+			  <option>Short-Term</option>
+	       </select>
+		   </div>
+		   <div class="form-group">
+	       <label>Job Category</label>
+	       <select name="category" class="form-control input-sm">
+		  <option value=""> All</option>
+		  <option value="52">Account Management</option><option value="85">&nbsp;&nbsp;&nbsp;&nbsp;Client Services</option><option value="1">Accounting &amp; Finance</option><option value="2">Administrative</option><option value="86">&nbsp;&nbsp;&nbsp;&nbsp;Appointment Setting</option><option value="28">&nbsp;&nbsp;&nbsp;&nbsp;Collections</option><option value="57">&nbsp;&nbsp;&nbsp;&nbsp;Virtual Admin</option><option value="3">Advertising &amp; PR</option><option value="58">&nbsp;&nbsp;&nbsp;&nbsp;Online Advertising</option><option value="5">Art &amp; Creative</option><option value="59">&nbsp;&nbsp;&nbsp;&nbsp;Music</option><option value="37">&nbsp;&nbsp;&nbsp;&nbsp;Photography</option><option value="55">Bilingual</option><option value="61">&nbsp;&nbsp;&nbsp;&nbsp;French</option><option value="60">&nbsp;&nbsp;&nbsp;&nbsp;Spanish</option><option value="8">Business Development</option><option value="4">Call Center</option><option value="10">Communications</option><option value="11">Computer &amp; IT</option><option value="63">&nbsp;&nbsp;&nbsp;&nbsp;Technical Support</option><option value="12">Consulting</option><option value="106">&nbsp;&nbsp;&nbsp;&nbsp;Business Consultant</option><option value="105">&nbsp;&nbsp;&nbsp;&nbsp;Education Consultant</option><option value="104">&nbsp;&nbsp;&nbsp;&nbsp;Healthcare Consultant</option><option value="103">&nbsp;&nbsp;&nbsp;&nbsp;IT Consulting</option><option value="13">Retail</option><option value="14">Customer Service</option><option value="62">&nbsp;&nbsp;&nbsp;&nbsp;Inbound Call</option><option value="15">Data Entry</option><option value="53">Editing</option><option value="64">&nbsp;&nbsp;&nbsp;&nbsp;Proofreading</option><option value="17">Education &amp; Training</option>
+<option value="68">&nbsp;&nbsp;&nbsp;&nbsp;College &amp; University</option>
+<option value="67">&nbsp;&nbsp;&nbsp;&nbsp;K-12</option>
+<option value="66">&nbsp;&nbsp;&nbsp;&nbsp;Teaching</option>
+<option value="65">&nbsp;&nbsp;&nbsp;&nbsp;Tutoring</option>
+<option value="18">Engineering</option><option value="6">Entertainment &amp; Media</option><option value="19">Entrepreneurial</option><option value="69">&nbsp;&nbsp;&nbsp;&nbsp;Startup</option><option value="20">Environmental &amp; Green</option><option value="21">Event Planning</option><option value="87">Fashion &amp; Beauty</option><option value="24">Food &amp; Beverage</option><option value="42">Government &amp; Politics</option><option value="16">Graphic Design</option><option value="27">Holiday &amp; Seasonal</option><option value="35">House &amp; Family</option><option value="29">HR &amp; Recruiting</option><option value="30">Insurance</option><option value="56">International</option><option value="32">Internet &amp; Ecommerce</option><option value="70">&nbsp;&nbsp;&nbsp;&nbsp;SEO &amp; SEM</option><option value="88">&nbsp;&nbsp;&nbsp;&nbsp;Social Media</option><option value="33">Legal</option><option value="49">Marketing</option><option value="71">&nbsp;&nbsp;&nbsp;&nbsp;Online Marketing</option><option value="26">Medical &amp; Health</option><option value="72">&nbsp;&nbsp;&nbsp;&nbsp;Nursing</option><option value="73">&nbsp;&nbsp;&nbsp;&nbsp;Pharmaceutical</option><option value="40">Mortgage &amp; Real Estate</option><option value="51">News &amp; Journalism</option><option value="74">&nbsp;&nbsp;&nbsp;&nbsp;Magazine</option><option value="34">Nonprofit &amp; Philanthropy</option><option value="75">&nbsp;&nbsp;&nbsp;&nbsp;Fundraising</option><option value="39">Project Management</option><option value="41">Research</option><option value="43">Sales</option><option value="76">&nbsp;&nbsp;&nbsp;&nbsp;Business-to-Business (B2B)</option><option value="77">&nbsp;&nbsp;&nbsp;&nbsp;Business-to-Consumer (B2C)</option><option value="78">&nbsp;&nbsp;&nbsp;&nbsp;Medical Sales</option><option value="79">&nbsp;&nbsp;&nbsp;&nbsp;Sales Representative</option><option value="36">Science</option><option value="50">Sports &amp; Fitness</option><option value="44">Telemarketing</option><option value="22">Transcription</option><option value="81">&nbsp;&nbsp;&nbsp;&nbsp;Legal Transcription</option><option value="80">&nbsp;&nbsp;&nbsp;&nbsp;Medical Transcription</option><option value="45">Translation</option><option value="25">Travel &amp; Hospitality</option><option value="38">Web &amp; Software Dev</option><option value="90">&nbsp;&nbsp;&nbsp;&nbsp;Java &amp; Android</option><option value="107">&nbsp;&nbsp;&nbsp;&nbsp;.NET</option><option value="92">&nbsp;&nbsp;&nbsp;&nbsp;PHP</option><option value="108">&nbsp;&nbsp;&nbsp;&nbsp;Ruby On Rails</option><option value="47">Web Design</option><option value="48">Writing</option><option value="82">&nbsp;&nbsp;&nbsp;&nbsp;Blogging</option><option value="83">&nbsp;&nbsp;&nbsp;&nbsp;Copywriting</option><option value="84">&nbsp;&nbsp;&nbsp;&nbsp;Grant Writing</option><option value="94">&nbsp;&nbsp;&nbsp;&nbsp;Online Content</option>
+		  <option value="130">&nbsp;&nbsp;&nbsp;&nbsp;Technical Writing</option>
+	       </select>
+		   </div>
+		   <div class="form-group">
+	       <label>Location</label>
+	       <select name="state" class="form-control input-sm">
+		  <option value=""> All</option>
+		  <option value="US"> All United States</option>
+		  <option value="CANADA"> All Canada</option>
+		  <option value="HOUS"> Home Office in US</option>
+		  <option value="HOA"> Home Office Anywhere</option>
+		  <option value=""> </option>
+		  <option value="AL"> Alabama</option>
+		  <option value="AK"> Alaska</option>
+		  <option value="AZ"> Arizona</option>
+		  <option value="AR"> Arkansas</option>
+		  <option value="CA"> California</option>
+		  <option value="CO"> Colorado</option>
+		  <option value="CT"> Connecticut</option>
+		  <option value="DE"> Delaware</option>
+		  <option value="DC"> District of Columbia</option>
+		  <option value="FL"> Florida</option>
+		  <option value="GA"> Georgia</option>
+		  <option value="GU"> Guam</option>
+		  <option value="HI"> Hawaii</option>
+		  <option value="ID"> Idaho</option>
+		  <option value="IL"> Illinois</option>
+		  <option value="IN"> Indiana</option>
+		  <option value="IA"> Iowa</option>
+		  <option value="KS"> Kansas</option>
+		  <option value="KY"> Kentucky</option>
+		  <option value="LA"> Louisiana</option>
+		  <option value="ME"> Maine</option>
+		  <option value="MD"> Maryland</option>
+		  <option value="MA"> Massachusetts</option>
+		  <option value="MI"> Michigan</option>
+		  <option value="MN"> Minnesota</option>
+		  <option value="MS"> Mississippi</option>
+		  <option value="MO"> Missouri</option>
+		  <option value="MT"> Montana</option>
+		  <option value="NE"> Nebraska</option>
+		  <option value="NV"> Nevada</option>
+		  <option value="NH"> New Hampshire</option>
+		  <option value="NJ"> New Jersey</option>
+		  <option value="NM"> New Mexico</option>
+		  <option value="NY"> New York</option>
+		  <option value="NC"> North Carolina</option>
+		  <option value="ND"> North Dakota</option>
+		  <option value="OH"> Ohio</option>
+		  <option value="OK"> Oklahoma</option>
+		  <option value="OR"> Oregon</option>
+		  <option value="PA"> Pennsylvania</option>
+		  <option value="PR"> Puerto Rico</option>
+		  <option value="RI"> Rhode Island</option>
+		  <option value="SC"> South Carolina</option>
+		  <option value="SD"> South Dakota</option>
+		  <option value="TN"> Tennessee</option>
+		  <option value="TX"> Texas</option>
+		  <option value="UT"> Utah</option>
+		  <option value="VT"> Vermont</option>
+		  <option value="VA"> Virginia</option>
+		  <option value="WA"> Washington</option>
+		  <option value="WV"> West Virginia</option>
+		  <option value="WI"> Wisconsin</option>
+		  <option value="WY"> Wyoming</option>
+	       </select>
+		   </div>
+		   <div class="form-group">
+	       <label>Type of Job Flexibility</label>
+	       <select name="flex" class="form-control input-sm">
+		  <option value=""> All</option>
+		  <option value="tele"> Telecommuting-Friendly</option>
+		  <option value="pt"> Part-Time Schedule</option>
+		  <option value="free"> Freelancing Contract</option>
+		  <option value="fs"> Flexible Schedule</option>
+	       </select>
+	      </div>
+		  
+		  
+			</div>
+			
+			
+			</li>
+		  </ul>
+		  
+		  
+		  </form>
+	  </div>
+      
+    </div>
+  </div>
+
+
+
+
+
+		  <div class="panel panel-default" role="tree">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle btn-block" data-toggle="collapse" data-parent="#accordion" href="#related" role="treeitem">
+          Related Job Search Options <i class="fa fa-chevron-circle-down pull-right"></i>
+        </a>
+      </h4>
+    </div>
+	  <ul id="related" class="list-group collapse in" role="group">
+		<li role="treeitem" class="list-group-item nav-icons nav-icons-advanced-search"><a class="ctrl-panel-item ctrl-panel-job" href="/searchOptions.aspx">Advanced Search Options</a></li>
+		<li role="treeitem" class="list-group-item nav-icons nav-icons-briefcase"><a href="/jobs/new">View All New Jobs</a></li>
+		<li role="treeitem" class="list-group-item nav-icons nav-icons-categories"><a href="/jobs">View All Job Categories</a></li>
+		<li role="treeitem" class="list-group-item nav-icons nav-icons-location"><a href="/searchLocation">Find Jobs By Location</a></li>
+		<li role="treeitem" class="list-group-item nav-icons nav-icons-featured"><a href="/jobs/featured">Jobs with Featured Companies</a></li>
+		<li role="treeitem" class="list-group-item nav-icons nav-icons-surprising"><a href="/jobs/surprising-jobs">100 Surprising Flexible Jobs</a></li>
+		<li role="treeitem" class="list-group-item nav-icons nav-icons-az"><a href="/telecommute-jobs-by-company.aspx">Search Jobs By Company A-Z</a></li>
+		<li role="treeitem" class="list-group-item nav-icons nav-icons-best"><a href="/company-guide">See Best Lists of Companies</a></li>
+		<li role="treeitem" class="list-group-item nav-icons nav-icons-trends"><a href="/trends">See Flexible Job Trends</a></li>
+	  </ul>
+  	  
+  </div>
+
+
+
+
+
+		  <div class="panel panel-default" role="tree">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle btn-block" data-toggle="collapse" data-parent="#accordion" href="#community" role="treeitem">
+	  FlexJobs News &amp; Blog <i class="fa fa-chevron-circle-down pull-right"></i>
+        </a>
+      </h4>
+    </div>
+	  
+      <ul id="community" class="list-group collapse in" role="group">
+		<li class="list-group-item"><a href="/latestnews" class="nav-icons nav-icons-news">What's Happening This Week</a></li>
+		  <li class="dropdown list-group-item">
+			<a class="dropdown-toggle nav-icons nav-icons-blog" data-toggle="collapse" data-target="#blog" role="treeitem">
+			  The FlexJobs Blog <i class="fa fa-chevron-circle-down pull-right"></i>
+			</a>
+			<ul id="blog" class="list-group collapse" role="group">
+			   <li class="list-group-item"><a href="/blog/post/video-how-to-get-started-using-your-flexjobs-account/">Video: How to Get Started in Your FlexJobs Account</a></li>
+			   <li class="list-group-item"><a href="/blog/post/5-changes-to-make-to-your-resume-now/">5 Changes to Make to Your Resume NOW</a></li>
+			   <li class="list-group-item"><a href="/blog/post/tip-how-to-use-job-icons/">Job Search Tip: Using the Job Icons on FlexJobs</a></li>
+			   <li class="list-group-item"><a href="/blog/post/4-tips-for-a-perfect-phone-interview/">4 Tips for a Perfect Phone Interview</a></li>
+			   <li class="list-group-item"><a href="/blog/post/your-flexjobs-resume-profile-why-it-matters/">Your FlexJobs Resume Profile: Why It Matters</a></li>
+			   <li class="list-group-item"><a href="/blog">Go to FlexJobs Blog home</a></li>
+			</ul>
+		  </li>	
+		  
+		  <li class="dropdown list-group-item">
+			<a class="dropdown-toggle nav-icons nav-icons-articles" data-toggle="collapse" data-target="#articles" role="treeitem">
+			  Articles &amp; Interviews <i class="fa fa-chevron-circle-down pull-right"></i>
+			</a>
+			<ul id="articles" class="list-group collapse" role="group">
+			   <li class="list-group-item"><a href="/blog/post/5-questions-for-jeremy-anderson-flexjobs-director-of-client-services/">5 Questions for Jeremy Anderson, FlexJobs Director of Client Services</a></li>
+			   <li class="list-group-item"><a href="/blog/post/10-reasons-at-home-jobs-require-locations/">10 Reasons At-Home Jobs Require Locations</a></li>
+			   <li class="list-group-item"><a href="/blog/post/how-to-follow-up-on-job-applications/">How To Follow Up On Job Applications</a></li>
+			   <li class="list-group-item"><a href="/blog/post/4-strategies-for-successful-career-change/">4 Strategies for Successful Career Change</a></li>
+			   <li class="list-group-item"><a href="/blog/post/5-tips-to-make-your-personal-brand-shine/">5 Tips to Make Your Personal Brand Shine</a></li>
+			</ul>
+		  </li>	
+
+	 <li class="text-center social-icons list-group-item">
+				   <a href="https://plus.google.com/104484232011653728459/posts" rel="external" class="gplus-link" target="_blank"><i class="fa fa-google-plus-square"></i></a>
+				   <a href="http://www.facebook.com/pages/FlexJobs/111439112288" rel="external nofollow" class="facebook-link" target="_blank"><i class="fa fa-facebook-square"></i></a>
+				   <a href="https://twitter.com/flexjobs" rel="external nofollow" class="twitter-link" target="_blank"><i class="fa fa-twitter-square"></i></a>
+				   <a href="http://www.linkedin.com/groups?gid=1498597" rel="external nofollow" class="linkedin-link" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+	 </li>
+		  
+      </ul>
+		
+  </div>
+
+
+
+		<div id="telloffer">
+   <script type="text/javascript">
+      var _frnd = {
+	      site: "site-2063cc8b-www.flexjobs.com",
+		    page: 'MyFlexJobs'
+      };
+      (function(d, l, s) {
+	      var a, b = d.getElementsByTagName(s)[0];
+	      a = d.createElement(s);a.type = 'text/javascript';a.async = true;
+	      a.src = l.protocol + '//djnf6e5yyirys.cloudfront.net/js/frndby.js';
+	      b.parentNode.insertBefore(a, b);
+      })(document, location, 'script');
+   </script>
+   <div id="friendbuy_widget"><a href="javascript:void(0);"><img src="https://djnf6e5yyirys.cloudfront.net/merchant/1071/7084ee8739ed4e86ab494d55effb0537-friendbuy_widget_button_png" border="0" alt=""></a></div>
+</div>
+
+
+
+
+	</div>		 <!-- end panel group accordion div -->
+
+
+			<div id="offerspace" style="padding-top:45px;"></div>
+
+
+        </div>
+    	</div>
+  </div>
+
+
+
+
+<div id="footer">
+	<div class="container">
+
+<div class="row" role="navigation">
+	  <div id="meet-flexjobs" class="col-xs-12 col-sm-4 col-md-3">
+			<h5>Meet FlexJobs</h5>
+		   <ul>
+			  <li><a href="/">Flexible &amp; Remote Jobs</a></li>
+			  <li><a href="/About.aspx">How FlexJobs Works</a></li>
+			  <li><a href="/contact">Contact Us</a></li>
+			  <li><a href="/termsOfUse.aspx">Terms of Use</a></li>
+			  <li><a href="http://privacy-policy.truste.com/verified-policy/www.flexjobs.com" rel="external" target="_blank">Privacy Policy by TRUSTe</a></li>
+		   </ul>
+	  </div>
+	  <div id="find-jobs" class="col-xs-12 col-sm-4 col-md-3">
+			<h5>Find Professional Flexible Jobs</h5>
+		   <ul>
+			  <li><a href="/jobs">All Telecommuting, Part-Time, Flexible Job Categories</a></li>
+			  <li><a href="/jobs/new">New Telecommuting, Part-Time, and Flexible Jobs</a></li>
+			  <li><a href="/searchLocation">Find Jobs by Location</a></li>
+		   </ul>
+	  </div>
+	  <div id="job-search-resources" class="col-xs-12 col-sm-4 col-md-3">
+			  <h5>Job Search Resources</h5>
+		   <ul>
+			  <li><a href="/company-guide">Guide to Flexible Companies</a></li>
+			  <li><a href="/telecommute-jobs-by-company.aspx">Browse Companies by Name</a></li>
+			  <li><a href="/blog">Read the FlexJobs Blog</a></li>
+			  <li><a href="/trends">See Flexible Job Trends</a></li>
+		   </ul>
+	  </div>
+	  <div id="footer-image" class="col-xs-12 col-sm-4 col-md-3 text-right">
+		   <img class="absimg" alt="Job search satisfaction notice:  job success, flexibility, and freedom may occur" src="/images/img-man-laptop-footer-badge.svg" title="Job search satisfaction notice:  job success, flexibility, and freedom may occur">
+	</div>
+</div>
+	<div class="row" id="row-social">
+		<div class="col-xs-12 col-sm-6 social-icons">
+				   <a href="https://plus.google.com/104484232011653728459/posts" rel="external nofollow" class="gplus-link" target="_blank"><i class="fa fa-google-plus-square"></i></a>
+				   <a href="http://www.facebook.com/pages/FlexJobs/111439112288" rel="external nofollow" class="facebook-link" target="_blank"><i class="fa fa-facebook-square"></i></a>
+				   <a href="http://www.linkedin.com/groups?gid=1498597" rel="external nofollow" class="linkedin-link" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+				   <a href="https://twitter.com/flexjobs" rel="external nofollow" class="twitter-link" target="_blank"><i class="fa fa-twitter-square"></i></a>
+				   <a href="http://www.pinterest.com/flexjobs/" rel="external nofollow" class="pinterest-link" target="_blank"><i class="fa fa-pinterest-square"></i></a>
+				   <a href="http://feeds.feedblitz.com/flexjobs" rel="external nofollow" class="rss-link" target="_blank"><i class="fa fa-rss-square"></i></a>
+		</div>
+		<div class="col-xs-12 col-sm-6 text-right" style="padding-top:1em;">
+			<small>© 2007-2014 FlexJobs All Rights Reserved</small>
+		</div>
+	</div>
+
+<div class="row" id="row-trust">
+  <p class="text-center">
+  <a href="http://app.denver.bbb.org/check/90091095" rel="external nofollow" target="_blank"><img alt="Click to verify BBB accreditation and to see a BBB report." src="/images//logos/logo-bbb-horiz.svg" title="Click to verify BBB accreditation and to see a BBB report."></a>
+  <a href="http://www.verisign.com/verisign-trust-seal" rel="external nofollow" target="_blank"><img alt="Verisign logo" src="/images/logos/logo-verisign.svg" title="Verisign logo"></a>
+  <a href="//privacy-policy.truste.com/click-to-verify/www.flexjobs.com" rel="external nofollow" target="_blank"><img alt="Privacy Policy by TRUSTe" src="/images/logos/logo-truste.svg" title="Privacy Policy by TRUSTe"></a>
+  <a href="/awards" rel="external nofollow" target="_blank"><img alt="green business bureau logo" src="/images/logos/logo-green.svg" title="green business bureau logo"></a>
+  <!-- START SCANALERT CODE -->
+  <a href="https://www.mcafeesecure.com/RatingVerify?ref=www.flexjobs.com" rel="external nofollow" target="_blank"><img alt="McAfee Secure sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" src="//images.scanalert.com/meter/www.flexjobs.com/12.gif" oncontextmenu="alert('Copying Prohibited by Law - McAfee Secure is a Trademark of McAfee, Inc.'); return false;" title="McAfee Secure sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams"></a>
+  <!-- END SCANALERT CODE -->
+</p>
+</div>
+</div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="/assets/application-290c8e3f27d4e44f279b8840edb2d919.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".popover-examples a").popover({
+        placement : 'bottom'
+    });
+});
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+( function( $ ) {
+   $( 'a[href="#"]' ).click( function(e) {
+      e.preventDefault();
+   } );
+} )( jQuery );
+/* ]]> */
+</script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+
+
+  <script>
+  $(function() {
+    $( "#dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 250
+      },
+      hide: {
+        effect: "blind",
+        duration: 250
+      }
+    });
+
+    $( "#opener" ).click(function() {
+	$("#opener").hide();
+      $("#glass").show();
+    });
+  });
+  </script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1829325-1']);
+  _gaq.push(['_setSiteSpeedSampleRate', 100]);
+  _gaq.push(['_setDomainName', 'flexjobs.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script type="text/javascript">
+var _sf_async_config={uid:2808,domain:"flexjobs.com"};
+(function(){
+  function loadChartbeat() {
+  if ("https:" == document.location.protocol) return;
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+</script>
+<script type="text/javascript">
+adroll_adv_id = "K2ZXRM5SGFAFNNBUC2Z4XW";
+adroll_pix_id = "GSTYREEP4BAD5CDLIZGJOG";
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+   __adroll_loaded=true;
+   var scr = document.createElement("script");
+   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+   scr.setAttribute('async', 'true');
+   scr.type = "text/javascript";
+   scr.src = host + "/j/roundtrip.js";
+   ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+   if(oldonload){oldonload()}};
+}());
+</script>
+
+
+<script src="http://js-agent.newrelic.com/nr-476.min.js"></script><script language="javascript" type="text/javascript" src="http://static.chartbeat.com/js/chartbeat.js"></script><script type="text/javascript" src="http://beacon-1.newrelic.com/1/c9b34b75d8?a=208646&amp;pl=1415072436918&amp;v=476.c73f3a6&amp;to=JlZXQxZYWA1RR0tHBQJcShgXX1sWd1oJRwULQGlWA1I%3D&amp;ap=39&amp;be=1150&amp;fe=5082&amp;dc=3030&amp;f=%5B%22err%22,%22xhr%22%5D&amp;perf=%7B%22timing%22:%7B%22of%22:1415072436918,%22n%22:0,%22dl%22:1007,%22di%22:4180,%22ds%22:4180,%22de%22:4367,%22dc%22:6232,%22l%22:6232,%22le%22:6487,%22f%22:760,%22dn%22:760,%22dne%22:760,%22c%22:760,%22ce%22:760,%22rq%22:768,%22rp%22:820,%22rpe%22:888%7D,%22navigation%22:%7B%7D%7D&amp;jsonp=NREUM.setToken"></script></body></html>

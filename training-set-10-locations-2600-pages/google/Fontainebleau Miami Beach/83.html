@@ -1,0 +1,66 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>404 Page Not Found</title>
+    <style type="text/css">  html {
+        overflow: auto;
+    }
+
+    html, body, div, iframe {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        border: none;
+    }
+
+    iframe {
+        display: block;
+        width: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        border: 0;
+        position:absolute;
+        top:0; left:0; right:0; bottom:0;
+        width:100%; height:100%;
+    } </style>
+<script type="text/javascript" src="http://media.miamiherald.com/mistats/mi_content_tracker.js"></script></head>
+<body onload="loadpage()">
+
+<iframe name="404 iframe" src="/customer-service/404/"></iframe>
+
+<script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript"> function loadpage() {
+    var baseurl = "";
+    var _404url = baseurl + '/customer-service/404/';
+    var xmlhttp;
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    var stop = false;
+    xmlhttp.onreadystatechange = function () {
+        if (!stop && xmlhttp.readyState == 4) {
+            if (xmlhttp.status == 404) {
+                document.write("<div id='404-content-container'><img src='http://www.mcclatchyinteractive.com/static/creative/escenic/wireframes-4/images/404.jpg' alt='Page cannot be found' class='img-responsive'><div style='width:50%;display: inline-table; vertical-align: top'><h1 style='width:50%'>404: Page Not Found</h1><span>Unfortunately, we are unable to locate the page you have requested. This could be due to content on our site expiring, a broken link, an outdated bookmark, or a mistyped address.</span><ul><li class=''><a href='javascript:history.go(-1);' target=''>&lArr; Go Back</a></li><li class=''><a href='/'>Home</a></li><li class=''><a href='/customer-service/contact-us/'>Contact Us</a></li></ul></div></div>");
+                stop = true;
+            }
+        }
+    };
+    xmlhttp.open("GET", _404url, true);
+    xmlhttp.send();
+}
+
+var mistats = mistats || {};
+mistats.cmsid = 'GUID: | Section: 103';
+mistats.pagelevel = 'Section';
+mistats.pagename = 'Section: 404';
+mistats.version = '1.0|';
+mistats.taxonomy = 'Online|SystemResponse|Error||';
+mistats.channel = '404';</script>
+<div id="mistatstag" style="display:none;">
+    <script type="text/javascript" src="http://media.miamiherald.com/mistats/sites/mia/miamiherald.js"></script>
+    <!-- These are static because they do not change from site to site -->
+    <script type="text/javascript" src="http://media2.newsobserver.com/mistats/products/404_s_code.js"></script>
+    <script type="text/javascript" src="http://media2.newsobserver.com/mistats/products/404.js"></script>
+    <script type="text/javascript" src="http://media2.newsobserver.com/mistats/finalizestats_404.js"></script>
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+</div><div style="display: none;"></div>
+
+</body></html>

@@ -1,0 +1,23 @@
+<html><head>
+	<title>Page not found/Page non trouvée</title>
+	<link href="/shopping/framework/skins/content/content.css" rel="stylesheet" type="text/css">
+<!--[if lte IE 6]>
+    <link rel="stylesheet" media="screen" href="/web/css/ie6.css" type="text/css" />
+<![endif]-->
+<!--[if IE 7]>
+    <link rel="stylesheet" media="screen" href="/web/css/ie7.css" type="text/css" />
+<![endif]-->
+<script src="/web/js/jquery_v1.4.2/jquery-1.4.2.min.js" type="text/javascript"></script>
+</head>
+<body>
+<span id="GPN"><!-- GPN: ON_DMOCN8_4 --></span>
+<script type="text/javascript">
+	/* redirection to bell.ca homepage */
+	window.location="http://www.bell.ca/";
+
+	$(document).ready(function() {
+		$.get('/shopping/resources/jsp/gpn.jsp',function(data) {
+			$('#GPN').html(data);
+		})
+	});
+</script></body></html>

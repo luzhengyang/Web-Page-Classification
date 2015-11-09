@@ -1,0 +1,118 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+		<title>Wells Fargo on the Forbes Global 2000 List</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, maximum-scale=2.0">
+		<meta name="description" content="Wells Fargo #8 on the Forbes Global 2000 List">
+		<meta name="keywords" content="Wells Fargo">
+		<meta name="apple-itunes-app" content="app-id=588647136">
+		<meta property="og:title" content="Wells Fargo on the Forbes Global 2000 List">
+		<meta property="og:site_name" content="Forbes">
+		<meta property="og:type" content="article">
+		<meta property="og:image" content="http://i.forbesimg.com/media/lists/companies/wells-fargo_416x416.jpg">
+		<meta name="sailthru.image.full" content="http://i.forbesimg.com/media/lists/companies/wells-fargo_416x416.jpg">
+		<meta property="og:description" content="Wells Fargo #8 on the Forbes Global 2000 List">
+		<meta property="fb:app_id" content="123694841080850">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@forbes">
+		<link rel="canonical" href="http://www.forbes.com/companies/wells-fargo/">
+		<link rel="shortlink" href="http://onforb.es/NirjxV">
+	<script type="text/javascript" src="http://images.forbes.com/scripts/js_options.js"></script>
+
+		<script type="text/javascript">
+			var forbes = forbes || {};
+			forbes.gtm = {
+		dfp_site : "fdc.forbes",
+		dfp_zone : "companies"
+			}
+		</script>
+	<script type="text/javascript">
+    	(function (){
+
+			window.displayedChannel = 'lists';
+			window.displayedSection = 'global2000';
+
+			// Check if welcome ad is not disabled
+			if(typeof forbes !== "undefined" && typeof forbes.js_options !== "undefined" && !forbes.js_options.welcome_ad_disable ){
+
+				var midnight = new Date(),
+					offset = -5 // if offset is not set, by default time is UTC 6:00am i.e EST 1am & EDT 12am for dailyWelcomeCookie expiration
+				;
+
+				if(midnight.getUTCHours() >= -offset)
+					midnight.setUTCDate(midnight.getUTCDate()+1)
+				;
+
+				midnight.setUTCHours(-offset);
+				midnight.setUTCMinutes(00);
+				midnight.setUTCSeconds(00);
+
+
+				var welcomeCookie = "welcomeAd=sessionCookie",
+					interstitial_cookie = '_forbes_exit_interstitial_timer',
+					tomorrow = new Date(),
+					month = tomorrow.getMonth(),
+					day = tomorrow.getDate(),
+					dailyWelcomeCookie = 'dailyWelcomeCookie=dailyCookie',
+					browser_user_agent = window.navigator.userAgent.toLowerCase(),
+					page_type = 'company',
+					swimlane = '',
+					brand_voice = 'false'
+				;
+
+				if ((document.cookie.indexOf(welcomeCookie)==-1 || document.cookie.indexOf(dailyWelcomeCookie) == -1)
+					&& (window.navigator.userAgent.indexOf("Mozilla")>-1)
+					&& (browser_user_agent.indexOf("googlebot")==-1)
+					&& (browser_user_agent.indexOf("google web preview")==-1)
+					&& (window.location.host.indexOf("forbes.com")!=-1)
+					&& (window.location.search.indexOf("partner=yahoo")==-1)
+					&& (window.location.search.indexOf("partner=msn")==-1)
+					&& (window.location.search.indexOf("partner=aol")==-1)
+					&& (window.location.search.indexOf("partner=omg")==-1)
+					&& (window.location.search.indexOf("partner=huffpo")==-1)
+					&& (window.location.search.indexOf('nowelcome')==-1)
+					&& (swimlane.indexOf("rico")!=0 || page_type != 'article')
+					&& brand_voice==='false'){
+
+					if(document.cookie.indexOf(welcomeCookie) == -1 ){
+						document.cookie = welcomeCookie +'__welcome'+(month+1)+day+'; path=/; domain=.forbes.com';
+					}
+
+					if(document.cookie.indexOf(dailyWelcomeCookie) == -1){
+						document.cookie = dailyWelcomeCookie+'_forDate'+(month+1)+day+'; path=/; domain=.forbes.com; expires=' + midnight.toGMTString();
+					}
+
+					// check if interstitial's cookie hasn't been set already
+					if(document.cookie.indexOf( interstitial_cookie ) == -1){
+
+						// it doesn't exist; let's create the interstitial cookie and set it
+						// with the current timestamp
+
+						var now = new Date(),
+							now_time = now.getTime(),
+							expiration_date = new Date()
+						;
+
+						expiration_date
+							.setDate( expiration_date.getDate() + 365)
+						;
+
+						// set interstitial cookie to the current time
+						document.cookie = interstitial_cookie + '='+ now_time +'; path=/; domain=.forbes.com; expires=' + expiration_date.toUTCString();
+					}
+
+					if (document.cookie.indexOf(welcomeCookie) != -1 || document.cookie.indexOf(dailyWelcomeCookie) != -1){
+
+						// this cookie is used by interstitial_ad.js to determine if the user received a
+						// welcome ad before viewing the current page.
+						document.cookie="last_welcomead_url"+ "=" +escape(document.URL)+";path=/; domain=.forbes.com";
+						document.cookie="referrer"+ "=" +escape(document.referrer)+";path=/; domain=.forbes.com";
+						document.cookie="toURL"+ "=" +escape(document.URL)+";path=/; domain=.forbes.com";
+						document.cookie="refURL"+ "=" +escape(document.referrer)+";path=/; domain=.forbes.com";
+						this.location='http://www.forbes.com/fdc/welcome_mjx.shtml';
+					}
+				}
+
+			}
+		})();
+	</script></head></html>

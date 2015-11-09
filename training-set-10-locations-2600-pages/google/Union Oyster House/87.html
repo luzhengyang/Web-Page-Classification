@@ -1,0 +1,1401 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script src="http://dnn506yrbagrg.cloudfront.net/pages/scripts/0017/7158.js?393075" async="" type="text/javascript"></script><script src="http://dnn506yrbagrg.cloudfront.net/pages/scripts/0012/8622.js?393075" async="" type="text/javascript"></script><script src="http://edge.quantserve.com/quant.js" async="" type="text/javascript"></script><script type="text/javascript" defer="" async="" src="http://rpwt.rphelios.net/wgbhwt/piwik.js"></script><script async="" src="//connect.facebook.net/en_US/fbds.js"></script><script async="" type="text/javascript" src="http://www.googletagservices.com/tag/js/gpt.js"></script><script type="text/javascript">_cf_loadingtexthtml="<img alt=' ' src='/cfscripts/ajax/resources/cf/images/loading.gif'/>";
+_cf_contextpath="";
+_cf_ajaxscriptsrc="/cfscripts/ajax";
+_cf_jsonprefix='//';
+_cf_clientid='79BC83DBB9C92DF39881922212ADFE8D';</script><script type="text/javascript" src="/cfscripts/ajax/messages/cfmessage.js"></script>
+<script type="text/javascript" src="/cfscripts/ajax/package/cfajax.js"></script>
+
+<script type="text/javascript">
+	ColdFusion.Ajax.importTag('CFAJAXPROXY');
+</script>
+
+<script type="text/javascript">
+	var _cf_convio=ColdFusion.AjaxProxy.init('/convio.cfc','convioObject');
+	_cf_convio.prototype.subscribewcaiCF=function(email) { return ColdFusion.AjaxProxy.invoke(this, "subscribewcaiCF", {email:email});};
+	_cf_convio.prototype.changePasswordCF=function(USERNAME,PASSWORD,THEFORM) { return ColdFusion.AjaxProxy.invoke(this, "changePasswordCF", {USERNAME:USERNAME,PASSWORD:PASSWORD,THEFORM:THEFORM});};
+	_cf_convio.prototype.validateaccountCF=function(USERNAME,USER_NAME,PASSWORD,THEFORM) { return ColdFusion.AjaxProxy.invoke(this, "validateaccountCF", {USERNAME:USERNAME,USER_NAME:USER_NAME,PASSWORD:PASSWORD,THEFORM:THEFORM});};
+	_cf_convio.prototype.subscribeCF=function(email) { return ColdFusion.AjaxProxy.invoke(this, "subscribeCF", {email:email});};
+</script>
+
+<script type="text/javascript">
+	var _cf_player=ColdFusion.AjaxProxy.init('/player.cfc','playerObject');
+	_cf_player.prototype.sendEmail=function(status,youremail,yourname,friendemail,comment,programid,featureid,featuretitle,rssid,sname) { return ColdFusion.AjaxProxy.invoke(this, "sendEmail", {status:status,youremail:youremail,yourname:yourname,friendemail:friendemail,comment:comment,programid:programid,featureid:featureid,featuretitle:featuretitle,rssid:rssid,sname:sname});};
+</script>
+
+<script type="text/javascript">
+	var _cf_ratings=ColdFusion.AjaxProxy.init('/ratings.cfc','ratingObject');
+	_cf_ratings.prototype.setRating=function(myrating,programId,featureid) { return ColdFusion.AjaxProxy.invoke(this, "setRating", {myrating:myrating,programId:programId,featureid:featureid});};
+</script>
+<script type="text/javascript" src="/cfscripts/cfform.js"></script>
+<script type="text/javascript" src="/cfscripts/masks.js"></script>
+<script type="text/javascript" src="/cfscripts/cfformhistory.js"></script>
+
+<script type="text/javascript">
+	var _cf_AdlobTracking=ColdFusion.AjaxProxy.init('/includes/AdlobTracking.cfc','addTrac');
+	_cf_AdlobTracking.prototype.saveClick=function(adlobid,pageTemplate,slot) { return ColdFusion.AjaxProxy.invoke(this, "saveClick", {adlobid:adlobid,pageTemplate:pageTemplate,slot:slot});};
+</script>
+
+
+<script src="//cdn.optimizely.com/js/118070054.js"></script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="verify-v1" content="QcmvhfwyHZu8mFi9ZLXFZp48s95n5Ia1MnP+9PrNd80=">
+<meta name="msvalidate.01" content="8E71101821B1BF9D60C03CA1EECD9A19">
+<meta name="y_key" content="a8f53d1f5b684e11">
+<meta name="google-site-verification" content="GyA2zILup_O_7OmPUdhcrn4z7eMtV6jp4whKrgCUegA">
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+<link rel="stylesheet" href="/css2/style.css" type="text/css" media="screen, print" title="default">
+
+
+<link rel="icon" type="image/gif" href="/images/WGBH_favicon.gif">
+
+
+<link rel="stylesheet" type="text/css" href="/css/subModal.css">
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/subModal.js"></script>
+
+<script src="/js2/jquery.min.js"></script>
+<script src="/js/hoverIntent.min.js"></script>
+
+<script>
+	jQuery.noConflict();
+
+	jQuery(document).ready(function() {
+		function megaHoverOver() {
+			jQuery(this).find(".sub").stop().fadeTo(150,1).show();
+		}
+
+		//On Hover Out
+		function megaHoverOut(){
+			jQuery(this).find(".sub").stop().fadeTo(150, 0, function() { //Fade to 0 opactiy
+				jQuery(this).hide();  //after fading, hide it
+			});
+		}
+
+		//Set custom configurations
+		var config = {
+			sensitivity: 1, // number = sensitivity threshold (must be 1 or higher)
+			interval: 100, // number = milliseconds for onMouseOver polling interval
+			over: megaHoverOver, // function = onMouseOver callback (REQUIRED)
+			timeout: 250, // number = milliseconds delay before onMouseOut
+			out: megaHoverOut // function = onMouseOut callback (REQUIRED)
+		};
+
+		jQuery("ul#topnav li .sub").css({'opacity':'0'}); //Fade sub nav to 0 opacity on default
+		jQuery("ul#topnav li").hoverIntent(config); //Trigger Hover intent with custom configurations
+	});
+</script>
+
+
+
+<script src="/js/js.js" type="text/javascript"></script>
+<script src="/js/flash_detect.js" type="text/javascript"></script>
+<script src="/js/mouseover-tracker.js" type="text/javascript"></script>
+
+<script src="/js2/javascript.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+	function tstamp() {
+		var d = new Date();
+		var x = d.getMinutes()+ ' ' + d.getSeconds();
+		return(x);
+	}
+</script>
+
+
+
+
+ <style>
+.white_content3 {
+            display: none;
+            position: absolute;
+            top: 115px;
+            left: 140px;
+            width: 702px;
+            height: 462px;
+            padding: 0px;
+            margin 0;
+            background-color: white;
+            overflow: hidden;
+            z-index:9999;
+        }
+.loginOverlay {
+            display: none;
+            position: absolute;
+            top: 115px;
+            left: 200px;
+            width: 584px;
+            height: 400px;
+            padding: 0px;
+            margin 0;
+            background-color: white;
+            color:#000;
+            overflow: hidden;
+            z-index:9999;
+        }
+        .black_overlay{
+            display: none;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 2000px;
+            background-color: black;
+            -moz-opacity: 0.5;
+            opacity:.50;
+            filter: alpha(opacity=50);
+        }
+        .black_overlay2{
+            background-color: black;
+            -moz-opacity: 0.5;
+            opacity:100;
+            filter: alpha(opacity=50);
+        }
+        .clear_overlay{
+            background-color: none;
+            -moz-opacity: 1;
+            opacity:100;
+            filter: alpha(opacity=0);
+        }
+</style>
+ 
+
+<script>
+    // The Callback handler puts text in the window.cfm callback div.
+    var mycallBack = function(){
+                //alert('Callback');
+    }
+
+    // The error handler pops an alert with the error code and message.
+    var myerrorhandler = function(errorCode,errorMessage){
+                alert("[In My Error Handler]" + "\n\n" + "Error Code: " + errorCode + "\n\n" + "Error Message: " + errorMessage);
+    }
+
+
+var validateaccountvar = false;
+var validateaccount = function(theForm) {
+	var theForm = document.getElementById(theForm);
+	if(validateaccountvar) {
+		alert('Form is being proceesed.  Please wait.');
+		return false;
+	}
+	validateaccountvar = true;
+	var isError = false;
+
+	var e = new convioObject();
+	e.setCallbackHandler(returnvalidateaccount);
+	e.setErrorHandler(validateaccountErrorHandler);
+	e.setForm(theForm);
+	e.setHTTPMethod('POST');
+	e.validateaccountCF();
+
+}
+var validateaccountErrorHandler = function(statusCode, statusMsg)
+{
+	validateaccountvar = false;
+	alert('Status: ' + statusCode + ', ' + statusMsg);
+}
+var returnvalidateaccount = function(results) {
+
+	var theForm = document.getElementById(results.THEFORM);
+	validateaccountvar = false;
+
+	if (results.ERROR == 1)
+	   {	alert(results.MESSAGE);
+
+	  }else
+        {
+            theForm.submit();
+        }
+
+}
+
+
+var changePasswordvar = false;
+var changePassword = function(theForm) {
+	var theForm = document.getElementById(theForm);
+	
+	changePasswordvar = true;
+	var isError = false;
+
+	var e = new convioObject();
+	e.setCallbackHandler(returnchangePassword);
+	e.setErrorHandler(changePasswordErrorHandler);
+	e.setForm(theForm);
+	e.setHTTPMethod('POST');
+	e.changePasswordCF();
+
+}
+var changePasswordErrorHandler = function(statusCode, statusMsg)
+{
+	changePasswordvar = false;
+	alert('Status: ' + statusCode + ', ' + statusMsg);
+}
+
+var returnchangePassword = function(results) {
+
+	var theForm = document.getElementById(results.THEFORM);
+	changePasswordvar = false;
+	if (results.ERROR == 1) alert(results.MESSAGE);
+
+}
+
+var subscribevar = false;
+var subscribe = function(theForm) {
+	var theForm = document.getElementById(theForm);
+	
+	subscribevar = true;
+	var isError = false;
+
+	var e = new convioObject();
+	e.setCallbackHandler(returnsubscribe);
+	e.setErrorHandler(subscribeErrorHandler);
+	e.setForm(theForm);
+	e.setHTTPMethod('POST');
+	e.subscribeCF();
+
+}
+var subscribeErrorHandler = function(statusCode, statusMsg)
+{
+	subscribevar = false;
+	alert('Status: ' + statusCode + ', ' + statusMsg);
+}
+
+var returnsubscribe = function(results) {
+
+	subscribevar = false;
+    if (results.ERROR == 1)
+
+	alert(results.MESSAGE);
+
+
+
+
+}
+
+
+
+var subscribewcaivar = false;
+var subscribewcai = function(theForm) {
+	var theForm = document.getElementById(theForm);
+	
+	subscribewcaivar = true;
+	var isError = false;
+
+	var e = new convioObject();
+	e.setCallbackHandler(returnsubscribewcai);
+	e.setErrorHandler(subscribewcaiErrorHandler);
+	e.setForm(theForm);
+	e.setHTTPMethod('POST');
+	e.subscribewcaiCF();
+
+}
+var subscribewcaiErrorHandler = function(statusCode, statusMsg)
+{
+	subscribewcaivar = false;
+	alert('Status: ' + statusCode + ', ' + statusMsg);
+}
+
+var returnsubscribewcai = function(results) {
+
+	subscribewcaivar = false;
+    if (results.ERROR == 1)
+
+	alert(results.MESSAGE);
+
+
+
+
+}
+
+</script>
+<script type="text/javascript">
+  // this function determines whether the event is the equivalent of the microsoft
+  // mouseleave or mouseenter events.
+  function isMouseLeaveOrEnter(e, handler)
+  {
+  var reltg = e.relatedTarget ? e.relatedTarget : e.type == 'mouseout' ? e.toElement : e.fromElement;
+  while (reltg && reltg != handler) reltg = reltg.parentNode;
+  return (reltg != handler);
+			}
+</script>
+
+<script type="text/javascript">
+function changeBox(divObj1,divObj2,pwObj)
+{
+  document.getElementById(divObj1).style.display='none';
+  document.getElementById(divObj2).style.display='';
+  document.getElementById(pwObj).focus();
+}
+function restoreBox(divObj1,divObj2,pwObj)
+{
+	if(document.getElementById(pwObj).value=='')
+	{
+	  document.getElementById(divObj1).style.display='';
+	  document.getElementById(divObj2).style.display='none';
+	}
+}
+</script>
+
+
+
+
+
+<!--[if IE]>
+<style type="text/css">
+.subcribeText {
+	padding-top: 4px;
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]>
+<script type="text/javascript" src="/js2/supersleight.js"></script>
+<![endif]-->
+<!--[if lte IE 7]>
+<style type="text/css">
+.shadowBox973 {
+	background: url(/images2/bg_shadow_box973.gif) repeat-y 0 0;
+}
+</style>
+<![endif]-->
+<!--[if gte IE 6]>
+<style type="text/css">
+.num_nav ul li a.active {
+	background-color: #589eb9;
+}
+</style>
+<![endif]-->
+<!--[if gte IE 8]>
+<style type="text/css">
+.slider { margin-left: 0; }
+.boxCorner { left: -15px; }
+.boxCornerWide { left: -30px; }
+</style>
+<![endif]-->
+
+<!--[if IE 7]>
+	<style type="text/css">
+		.wrapAround {
+			margin-left: -13px;
+		}
+		.Arrow {
+			top: 90%;
+			left: 12px;
+		}
+	</style>
+<![endif]-->
+
+
+<!-- tooltip -->
+<style type="text/css">
+div#tipDiv {
+    color:#000; font-size:11px; line-height:1.2;
+    background-color:#E1E5F1; border:1px solid #667295;
+    width:210px; padding:4px;
+}
+</style>
+<script src="/js/dw_event.js" type="text/javascript"></script>
+<script src="/js/dw_viewport.js" type="text/javascript"></script>
+<script src="/js/dw_tooltip.js" type="text/javascript"></script>
+<script src="/js/dw_tooltip_aux.js" type="text/javascript"></script>
+<script type="text/javascript">
+// dw_Tooltip.content_vars = {
+ //   L1: 'Some text in the tooltip for link 1',
+  //  L2: 'The tooltip can contain <strong><em>Rich HTML</em></strong>'
+// }
+</script>
+<!-- /tooltip -->
+
+
+
+<script type="text/javascript">
+	var googletag = googletag || {};
+	googletag.cmd = googletag.cmd || [];
+	(function() {
+		var gads = document.createElement('script');
+		gads.async = true;
+		gads.type = 'text/javascript';
+		var useSSL = 'https:' == document.location.protocol;
+		gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+		var node = document.getElementsByTagName('script')[0];
+		node.parentNode.insertBefore(gads, node);
+	})();
+</script>
+
+
+		<script type="text/javascript">
+			googletag.cmd.push(function() {
+				// Main Navigation Ads //
+				googletag.defineSlot('/7934/wgbh_corp_television_88x31', [88, 31], 'div-gpt-ad-1352826262829-54').addService(googletag.pubads());
+				googletag.defineSlot('/7934/wgbh_corp_radio_88x31', [88, 31], 'div-gpt-ad-1352826262829-49').addService(googletag.pubads());
+
+				// General Ads //
+				googletag.defineSlot('/7934/wgbh_corp_general_180x150', [180, 150], 'div-gpt-ad-1352826262829-17').addService(googletag.pubads());
+				googletag.defineSlot('/7934/wgbh_corp_general_300x250', [300, 250], 'div-gpt-ad-1352826262829-18').addService(googletag.pubads());
+
+				googletag.pubads().enableSingleRequest();
+				googletag.enableServices();
+			});
+		</script>
+	
+
+
+
+
+
+<script type="text/javascript">
+	ColdFusion.Ajax.importTag('CFFORM');
+</script>
+
+
+<meta property="og:image" content="http://www.wgbh.org/wgbhLogo.png">
+<script async="" type="text/javascript" src="http://partner.googleadservices.com/gpt/pubads_impl_53.js"></script></head>
+
+
+<body onload="WGBHpageTracker._setVar('');IMApageTracker._setVar('');"><span></span>
+
+
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', "845136008835027"]); })(); window._fbq = window._fbq || []; window._fbq.push(["track", "PixelInitialized", {}]); </script> <noscript>&lt;img height="1" width="1" border="0" alt="" style="display:none"
+src="https://www.facebook.com/tr?id=845136008835027&amp;amp;ev=NoScript"
+/&gt;</noscript>
+
+
+
+
+<!-- begin Google Analytics Tracking code -->
+ <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var WGBHpageTracker = _gat._getTracker("UA-339013-1");
+WGBHpageTracker._setDomainName("none");
+WGBHpageTracker._setAllowLinker(true);
+WGBHpageTracker._initData();
+WGBHpageTracker._trackPageview();
+WGBHpageTracker._trackEvent();
+var IMApageTracker = _gat._getTracker("UA-1741309-53");
+IMApageTracker._setDomainName("none");
+IMApageTracker._setAllowLinker(true);
+IMApageTracker._initData();
+IMApageTracker._trackPageview();
+</script><iframe src="http://tpc.googlesyndication.com/safeframe/1-0-0/html/container.html" style="visibility: hidden; display: none;"></iframe>
+
+
+
+
+<!-- end Google Analytics Tracking code -->
+
+
+<div id="forHome">
+
+<div id="holder">
+	<div id="wrap">
+
+        
+        <div id="fade" class="black_overlay" style="z-index:3000;"></div>
+		<!-- header -->
+		<div id="header">
+			<div class="topHeader" style="position:relative;">
+
+                <input type="hidden" name="theform" id="theform" value="subscribeForm">
+				<p class="headerDate" style="vertical-align:bottom;padding-bottom:2px;padding-top:14px;">Nov 3, 2014 Updated: 10:37 PM</p>
+
+                <!-- non logged -->
+
+
+                    <!-- logged in -->
+				    <div class="accountLinks">
+				    
+                    <span class="welcomeNote">
+					
+					</span>
+
+
+				<span style="vertical-align:bottom"><span class="welcomeNote">Get free updates</span> </span>
+				<form style="display:inline;" name="subscribeForm" id="subscribeForm" onsubmit="subscribe('subscribeForm');return false;" method="post" class="subscribe">
+					<div>
+						<input name="email" id="email" onfocus="if(this.value == 'email')this.value='';" type="text" class="subcribeText" value="email"><input type="submit" class="btn_emailSignup" value="">
+					</div>
+				</form>
+
+
+					
+                    <!-- /logged in -->
+
+				<span style="vertical-align:bottom"><span class="separator">|</span><a href="/about/index.cfm">About WGBH</a></span></div>
+                <style>
+
+
+#logBox {
+    display:none;
+    background-color:#075271;
+	text-align:left;
+	position:absolute;
+	left:135px;
+	top:8px;
+	width:425px;
+	height:28px;
+	font-size : 10px;
+	color : #01a5b5;
+	text-decoration: none;
+}
+
+.form-submit2 {
+	background: url(../images/butGoSignin.gif) no-repeat 0 1px;
+	width: 24px;
+	height: 21px;
+	border: none;
+	margin: -1px 0 0 0;
+	vertical-align: text-top;
+}
+                </style>
+                <div id="logBox">
+        			<form name="loginForm" id="loginForm" onsubmit="validateaccount('loginForm');return false;" method="post" action="https://secure2.convio.net/wgbh/site/CRConsAPI" style="margin-bottom:6px;">
+
+        			 
+        				<input type="hidden" name="api_key" value="SkyWorld_WGBH">
+        				<input type="hidden" name="v" value="1.0">
+        				<input type="hidden" name="theform" id="theform" value="loginForm">
+        				<input type="hidden" name="method" value="login">
+        				<input type="hidden" name="sign_redirects" value="true">
+        				<input type="hidden" name="remember_me" value="1">
+        				        
+        				<input type="hidden" name="success_redirect" value="http://www.wgbh.org/info/404.cfm?cons_id=${loginResponse/cons_id}&amp;404http//www.wgbh.org80/articles/UnionOysterHouseTurns1853871&amp;sa=U&amp;ei=hTRYVNWqL4KjNtLIgvgL&amp;ved=0CK8EEBYwXA&amp;usg=AFQjCNFcdSWiU5pLYVMGTQFsl45futiLNw">
+        				<input type="hidden" name="error_redirect" value="http://www.wgbh.org/support/login.cfm?code=${errorResponse/code}&amp;message=${errorResponse/message}">
+        			  
+
+                        <input value="email" onblur="if(this.value == '')this.value='email';" onfocus="if(this.value == 'email')this.value='';" type="text" required="" message="You must enter your email address to log in." name="user_name" id="user_name" maxlength="60" class="form-text3">
+        				<span id="pwdiv1"><input name="pass_temp" type="text" value="password" class="form-text3" maxlength="20" onfocus="changeBox('pwdiv1','pwdiv2','password')" style="width:120px;"></span><span id="pwdiv2" style="display:none"><input value="" type="password" required="" message="You must enter a password to log in." name="password" id="password" maxlength="20" class="form-text3" onblur="restoreBox('pwdiv1','pwdiv2','password')" style="width:120px;"></span>
+                                <input type="submit" class="form-submit2" value="" onclick="WGBHpageTracker._trackEvent('Header','Clicked','Signin');">
+                                &nbsp;&nbsp;&nbsp;<a href="/support/password.cfm">Forgot password</a>
+                                &nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="document.getElementById('logBox').style.display='none';"><img src="/images/signin_x.gif" alt="Close" style="padding-top:3px;"></a>
+
+        			</form>
+        		</div>
+
+
+
+
+                <!-- /non logged -->
+
+
+			</div>
+
+			<div class="middleHeader">
+				<a href="/index.cfm"><img src="/images2/logo.gif" alt="" class="logo"></a>
+				<a href="/donateButton"><img src="/images/donate-homepage-button.png" alt="Donate" width="140" height="46" hspace="0" vspace="0" border="0" style="padding-top: 8px; float: left; position: relative; left: -7px;"></a>
+				
+				
+
+<style type="text/css">
+	ul#topnav {
+		width: 585px;
+		margin: 0 0 0 0;
+		float: left;
+		padding: 0;
+		list-style: none;
+		position: relative;
+		top: -1px;
+		z-index: 999;
+	}
+
+	ul#topnav li {
+		float: left;
+		margin: 0;
+		padding: 0;
+		position: relative;
+	}
+
+	ul#topnav li a {
+		float: left;
+		text-indent: -9999px;
+		height: 57px;
+	}
+
+	ul#topnav li:hover a, ul#topnav li a:hover { background-position: left bottom; }
+
+	ul#topnav a.Television {
+		background: url(/Images/Navigation/Television.png) no-repeat;
+		width: 125px;
+	}
+	ul#topnav a.Radio {
+		background: url(/Images/Navigation/Radio.png) no-repeat;
+		width: 94px;
+	}
+	ul#topnav a.communityImpact {
+		background: url(/Images/Navigation/communityImpact.png) no-repeat;
+		width: 190px;
+	}
+	ul#topnav a.supportWGBH {
+		background: url(/Images/Navigation/supportWGBH.png) no-repeat;
+		width: 174px;
+	}
+
+	ul#topnav #sub_Television { left: -392px; }
+	ul#topnav #sub_Radio { left: -516px; }
+	ul#topnav #sub_supportWGBH { left: -800px; }
+
+	ul#topnav li .sub {
+		position: absolute; /*--Important--*/
+		top: 57px;
+		width: 960px;
+		z-index: 99999;
+		background-color: #E5E5E5;
+		padding: 10px 0;
+		margin: 0;
+		float: left;
+
+		/*--Bottom right rounded corner--*/
+		-moz-border-radius-bottomright: 10px;
+		-khtml-border-radius-bottomright: 10px;
+		-webkit-border-bottom-right-radius: 10px;
+
+		/*--Bottom left rounded corner--*/
+		-moz-border-radius-bottomleft: 10px;
+		-khtml-border-radius-bottomleft: 10px;
+		-webkit-border-bottom-left-radius: 10px;
+
+		-moz-box-shadow: 0 4px 2px #444;
+		-webkit-box-shadow: 0 4px 2px #444;
+		box-shadow: 0 4px 2px #444;
+		/* For IE 8 */
+		-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='#444444')";
+		/* For IE 5.5 - 7 */
+		filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='#444444');
+
+		display: none; /*--Hidden for those with js turned off--*/
+	}
+
+	/* Sub Navigation Styles */
+	ul#topnav .sub, ul#topnav .sub a {
+		text-indent: 0;
+		height: auto;
+		padding: 0;
+		margin: 0;
+		color: #125687;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 1.2em;
+	}
+
+	ul#topnav .sub a {
+		font-size: 0.85em;
+		text-decoration: none;
+		float: none;
+	}
+	ul#topnav .sub a:hover {
+		color: #0091b5;
+	}
+
+	ul#topnav .sub .Container {
+		margin: 0 10px;
+		padding: 5px 10px;
+		float: left;
+		font-size: 1.1em;
+		background-repeat: no-repeat;
+	}
+
+	ul#topnav .sub .vContainer {
+		margin: 0 10px;
+		padding: 5px 10px;
+		background-repeat: no-repeat;
+	}
+
+	ul#topnav .sub .x920 {
+		width: 920px;
+		background-image: url(/Images/Navigation/header_920.jpg);
+	}
+
+	ul#topnav .sub .x760 {
+		width: 760px;
+		background-image: url(/Images/Navigation/header_760.jpg);
+	}
+
+	ul#topnav .sub .x600 {
+		width: 600px;
+		background-image: url(/Images/Navigation/header_600.jpg);
+	}
+
+	ul#topnav .sub .x420 {
+		width: 420px;
+		background-image: url(/Images/Navigation/header_420.png);
+	}
+
+	ul#topnav .sub .x405 {
+		width: 385px;
+		background-image: url(/Images/Navigation/header_405.png);
+	}
+
+	ul#topnav .sub .x280 {
+		width: 280px;
+		background-image: url(/Images/Navigation/header_280.jpg);
+	}
+
+	ul#topnav .sub .x245 {
+		width: 225px;
+		background-image: url(/Images/Navigation/header_245.png);
+	}
+
+	ul#topnav .sub .x200 {
+		width: 200px;
+		background-image: url(/Images/Navigation/header_200.png);
+	}
+
+	ul#topnav .sub .x120 {
+		width: 120px;
+		background-image: url(/Images/Navigation/header_120.jpg);
+	}
+
+	ul#topnav .sub .x150 {
+		width: 150px;
+		background-image: url(/Images/Navigation/header_150.jpg);
+	}
+</style>
+<!--[if IE]>
+<style type="text/css">
+
+	ul#topnav li .sub {
+		background-image: url(/images2/dropnavBottom.gif);
+        background-repeat:no-repeat;
+        background-position:bottom;
+}
+</style>
+<![endif]-->
+<ul id="topnav">
+	<li>
+		<a href="/Television?MM=1" class="Television">Television</a>
+		<div class="sub" id="sub_Television" style="opacity: 0;">
+			<div class="Container x120">
+				<b>Schedules</b>
+				<div style="margin-top: 6px; line-height: 1.3em;">
+					<a href="/schedule/index.cfm?MM=1">WGBH 2</a>
+					<br><a href="/schedule/index.cfm?MM=1">WGBX 44</a>
+					<br><a href="/schedule/index.cfm?MM=1">WGBH World</a>
+					<br><a href="/schedule/index.cfm?MM=1">WGBH Create</a>
+					<br><a href="/schedule/index.cfm?MM=1">'GBH Kids</a>
+					<br><a href="/watch/tvchannels.cfm?MM=1">Where to Watch</a>
+					<br>
+					<br>
+
+					<div style="text-align: center;">
+						<div style="color: ##000; font-size: 8pt; line-height: 10pt; margin-bottom: 3px;">Support for WGBH is<br>provided by:</div>
+
+<!-- wgbh_corp_television_88x31 -->
+<div id="div-gpt-ad-1352826262829-54" style="width:88px; height:31px;">
+	<script type="text/javascript">
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1352826262829-54'); });
+	</script>
+<div id="google_ads_iframe_/7934/wgbh_corp_television_88x31_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/7934/wgbh_corp_television_88x31_0" name="google_ads_iframe_/7934/wgbh_corp_television_88x31_0" width="88" height="31" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px; vertical-align: bottom;"></iframe></div><iframe id="google_ads_iframe_/7934/wgbh_corp_television_88x31_0__hidden__" name="google_ads_iframe_/7934/wgbh_corp_television_88x31_0__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none;"></iframe></div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="Container x760">
+				<b>Shows</b> &nbsp; <a href="/programs/index.cfm?MM=1"><strong>See all Shows A-Z</strong></a>
+
+				<table width="760" border="0" cellpadding="0" cellspacing="0" style="margin-top: 6px;">
+				<tbody><tr>
+					<td valign="top" style="padding-right: 20px; line-height: 1.3em;">
+					<a href="/programs/American-Experience-97?MM=1">American Experience</a>
+					<br><a href="/programs/American-Masters-56?MM=1">American Masters</a>
+					<br><a href="/programs/Antiques-Roadshow-107?MM=1">Antiques Roadshow</a>
+					<br><a href="/programs/Arthur-59?MM=1">Arthur</a>
+					<br><a href="/basicblack/index.cfm?MM=1">Basic Black</a>
+					<br><a href="/programs/Broadway-or-Bust-2003?MM=1">Broadway or Bust</a>
+					<br><a href="/programs/Call-the-Midwife-2022?MM=1">Call the Midwife</a>
+					</td>
+					<td valign="top" style="line-height: 1.3em;">
+					<a href="/programs/Curious-George-61?MM=1">Curious George</a>
+					<br><a href="http://forum-network.org?MM=1" target="_blank">Forum Network</a>
+					<br><a href="/programs/Frontline-6?MM=1">Frontline</a>
+					<br><a href="/programs/Greater-Boston-11?MM=1">Greater Boston</a>
+					<br><a href="/quizshow/index.cfm?MM=1">High School Quiz Show</a>
+					<br><a href="/programs/History-Detectives-27?MM=1">History Detectives</a>
+					<br><a href="/programs/Independent-Lens-5?MM=1">Independent Lens</a>
+					</td>
+					<td valign="top" style="line-height: 1.3em;">
+					<a href="/programs/Lidias-Italy-85?MM=1">Lidia’s Italy</a>
+					<br><a href="http://www.wgbh.org/programs/Market-Warriors-1940?MM=1">Market Warriors</a>
+					<br><a href="/programs/Martha-Speaks-60?MM=1">Martha Speaks</a>
+					<br><a href="/programs/Masterpiece-216?MM=1">Masterpiece</a>
+					<br><a href="/programs/Nature-26?MM=1">Nature</a>
+					<br><a href="/programs/Neighborhood-Kitchens-1859">Neighborhood Kitchens</a>
+					<br><a href="/programs/NOVA-16?MM=1">Nova</a>
+					</td>
+					<td valign="top" style="line-height: 1.3em;">
+					<a href="/programs/Open-Studio-With-Jared-Bowen-2162?MM=1">Open Studio with Jared Bowen</a>
+					<br><a href="/programs/Rough-Cut-1213?MM=1">Rough Cut</a>
+					<br><a href="/programs/Sesame-Street-64?MM=1">Sesame Street</a>
+					<br><a href="/programs/Simply-Ming-86?MM=1">Simply Ming</a>
+					<br><a href="/programs/This-Old-House-135?MM=1">This Old House</a>
+					<br><a href="/programs/Victory-Garden-80?MM=1">Victory Garden</a>
+					<br>
+					<br><a href="/programs/index.cfm?MM=1" style="font-weight: normal;"><strong>All Shows A-Z</strong></a>
+					</td>
+     	          </tr>
+				</tbody></table>
+			</div>
+			<br clear="all">
+		</div>
+	</li>
+
+	<li>
+		<a class="Radio">Radio</a>
+		<div class="sub" id="sub_Radio" style="opacity: 0;">
+			<div class="Container x245">
+				<a href="/News?MM=1" style="font-size:15px;"><b>89.7 WGBH</b></a>
+				<table width="225" border="0" cellpadding="0" cellspacing="0" style="margin-top: 8px; line-height: 1.3em;">
+				<tbody><tr onclick="window.open('/audioPlayers/wgbh.cfm?MM=1', 'playerPop', 'width=956,height=750,location=no,scrollbars=0,status=0,menubar=0,resizable=0');" style="cursor: pointer;">
+					<td width="24"><img src="/Images/icon_Audio.png" width="16" height="16" hspace="0" vspace="0" border="0" align="absmiddle" style="margin-right: 8px;"></td>
+					<td><a>89.7 WGBH Live Stream</a></td>
+				</tr>
+				<tr>
+					<td width="24" style="padding-bottom: 8px; border-bottom: 1px solid #888;">&nbsp;</td>
+					<td style="padding-bottom: 8px; border-bottom: 1px solid #888;"><a href="/schedule/index.cfm?Tabs=1&amp;MM=1">On Air Schedule</a></td>
+				</tr>
+				<tr onclick="window.open('/audioPlayers/jazzDecades.cfm?MM=1', 'playerPop', 'width=956,height=750,location=no,scrollbars=0,status=0,menubar=0,resizable=0');" style="cursor: pointer;">
+					<td width="24" style="padding-top: 8px;"><img src="/Images/icon_Audio.png" width="16" height="16" hspace="0" vspace="0" border="0" align="absmiddle" style="margin-right: 8px;"></td>
+					<td style="padding-top: 8px;"><a>Jazz Stream</a></td>
+				</tr>
+				<tr onclick="window.open('/audioPlayers/Celtic.cfm?MM=1', 'playerPop', 'width=956,height=750,location=no,scrollbars=0,status=0,menubar=0,resizable=0');" style="cursor: pointer;">
+					<td width="24"><img src="/Images/icon_Audio.png" width="16" height="16" hspace="0" vspace="0" border="0" align="absmiddle" style="margin-right: 8px;"></td>
+					<td><a>Celtic Stream</a></td>
+				</tr>
+				</tbody></table>
+			</div>
+			<div class="Container x405">
+				<a href="/995/index.cfm?MM=1" style="font-size:15px;"><b>WCRB</b></a>
+				<table width="385" border="0" cellpadding="0" cellspacing="0" style="margin-top: 8px; line-height: 1.3em;">
+				<tbody><tr onclick="window.open('/audioPlayers/classicalNewEngland.cfm?MM=1', 'playerPop', 'width=956,height=750,location=no,scrollbars=0,status=0,menubar=0,resizable=0');" style="cursor: pointer;">
+					<td width="24"><img src="/Images/icon_Audio.png" width="16" height="16" hspace="0" vspace="0" border="0" align="absmiddle" style="margin-right: 8px;"></td>
+					<td><a>WCRB Live Stream</a></td>
+				</tr>
+				<tr>
+					<td width="24">&nbsp;</td>
+					<td><a href="/schedule/index.cfm?Tabs=2&amp;MM=1">On Air Schedule</a></td>
+				</tr>
+				<tr>
+					<td width="24" style="padding-bottom: 8px; border-bottom: 1px solid #888;">&nbsp;</td>
+					<td style="padding-bottom: 8px; border-bottom: 1px solid #888;"><a href="/schedule/index.cfm?Tabs=2&amp;MM=1">Playlists</a></td>
+				</tr>
+				<tr onclick="window.location('/995/bsoConcertChannel.cfm?MM=1');" style="cursor: pointer;">
+					<td width="24" style="padding-top: 8px;"><img src="/Images/icon_Audio.png" width="16" height="16" hspace="0" vspace="0" border="0" align="absmiddle" style="margin-right: 8px;"></td>
+					<td style="padding-top: 8px;"><a href="/995/bsoConcertChannel.cfm?MM=1">BSO Concert Channel</a></td>
+				</tr>
+				<tr onclick="window.open('/audioPlayers/Bach.cfm?MM=1', 'playerPop', 'width=956,height=750,location=no,scrollbars=0,status=0,menubar=0,resizable=0');" style="cursor: pointer;">
+					<td width="24"><img src="/Images/icon_Audio.png" width="16" height="16" hspace="0" vspace="0" border="0" align="absmiddle" style="margin-right: 8px;"></td>
+					<td><a>Bach Channel</a></td>
+				</tr>
+				<tr onclick="window.open('/audioPlayers/bostonEarlyMusic.cfm?MM=1', 'playerPop', 'width=956,height=750,location=no,scrollbars=0,status=0,menubar=0,resizable=0');" style="cursor: pointer;">
+					<td width="24"><img src="/Images/icon_Audio.png" width="16" height="16" hspace="0" vspace="0" border="0" align="absmiddle" style="margin-right: 8px;"></td>
+					<td><a>Boston Early Music Channel</a></td>
+				</tr>
+				<tr onclick="window.open('/audioPlayers/kidsClassical.cfm?MM=1', 'playerPop', 'width=956,height=750,location=no,scrollbars=0,status=0,menubar=0,resizable=0');" style="cursor: pointer;">
+					<td width="24"><img src="/Images/icon_Audio.png" width="16" height="16" hspace="0" vspace="0" border="0" align="absmiddle" style="margin-right: 8px;"></td>
+					<td><a>Kids Classical Channel</a></td>
+				</tr>
+             
+				</tbody></table>
+			</div>
+			<div class="Container x245">
+				<a href="http://www.capeAndIslands.org?MM=1" style="font-size:15px;" target="_blank"><b>WCAI Cape &amp; Islands</b></a>
+				<table width="225" border="0" cellpadding="0" cellspacing="0" style="margin-top: 8px; line-height: 1.3em;">
+				<tbody><tr onclick="window.open('/audioPlayers/WCAI.cfm?MM=1', 'playerPop', 'width=956,height=750,location=no,scrollbars=0,status=0,menubar=0,resizable=0');" style="cursor: pointer;">
+					<td width="24"><img src="/Images/icon_Audio.png" width="16" height="16" hspace="0" vspace="0" border="0" align="absmiddle" style="margin-right: 8px;"></td>
+					<td><a>WCAI Live Stream</a></td>
+				</tr>
+				
+				</tbody></table>
+			</div>
+
+			<br clear="all">
+			<br>
+
+			<div class="Container x920">
+				<b>Shows</b>
+				<table width="920" border="0" cellpadding="0" cellspacing="0" style="margin-top: 6px;">
+				<tbody><tr>
+                    <td valign="top" style="line-height: 1.3em;">
+<a href="http://wgbhnews.org/programs/all-things-considered">All Things Considered</a>
+<br><a href="/programs/Americas-Test-Kitchen-Radio-1313?MM=1">America's Test Kitchen Radio</a>
+<br><a href="/programs/The-Bach-Hour-803?MM=1">The Bach Hour</a>
+<br><a href="http://wgbhnews.org/programs/bob-edwards-weekend">Bob Edwards Weekend</a>
+<br><a href="http://www.wgbhnews.org/programs/boston-public-radio" target="_blank">Boston Public Radio</a>
+<br><a href="/995/bso.cfm?MM=1">Boston Symphony Orchestra</a>
+<br><a href="/Celtic?MM=1">A Celtic Sojourn</a>
+</td>
+
+<td valign="top" style="line-height: 1.3em;">
+<a href="/programs/Drive-Time-Live-1770?MM=1">Drive Time Live</a>
+<br><a href="/programs/Humankind-727" target="_blank">Humankind</a>
+<br><a href="http://www.innovationhub.org" target="_blank">Innovation Hub</a>
+<br><a href="/Jazz?MM=1">Jazz</a>
+<br><a href="http://wgbhnews.org/programs/latino-usa">Latino USA</a>
+<br><a href="/995/keiths_classical_corner.cfm?MM=1">Keith's Classical Corner</a>
+<br><a href="http://wgbhnews.org/programs/marketplace">Marketplace</a>
+</td>
+
+<td valign="top" style="line-height: 1.3em;">
+<a href="http://wgbhnews.org/programs/morning-edition">Morning Edition</a>
+<br><a href="http://wgbhnews.org/programs/moth-radio-hour">Moth Radio Hour</a>
+<br><a href="/programs/A-Prairie-Home-Companion-225?MM=1">A Prairie Home Companion</a>
+<br><a href="/programs/The-Takeaway-223?MM=1">The Takeaway</a>
+<br><a href="http://wgbhnews.org/programs/under-radar">Under the Radar with Callie Crossley</a>
+<br><a href="/programs/The-World-300?MM=1">The World</a>
+</td>
+					<td width="110" align="center">
+					<div style="color: ##000; font-size: 8pt; line-height: 10pt; margin-bottom: 3px;">Support for WGBH is<br>provided by:</div>
+
+<!-- wgbh_corp_radio_88x31 -->
+<div id="div-gpt-ad-1352826262829-49" style="width:88px; height:31px;">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1352826262829-49'); });
+</script>
+<div id="google_ads_iframe_/7934/wgbh_corp_radio_88x31_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/7934/wgbh_corp_radio_88x31_0" name="google_ads_iframe_/7934/wgbh_corp_radio_88x31_0" width="88" height="31" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px; vertical-align: bottom;"></iframe></div></div>
+
+					</td>
+				</tr>
+				</tbody></table>
+			</div>
+
+			<br clear="all">
+		</div>
+	</li>
+
+	<li><a href="/impactCommunity?MM=1" class="communityImpact">Community Impact</a></li>
+	<li>
+		<a href="/Support?MM=1" class="supportWGBH">Support WGBH</a>
+		<div class="sub" id="sub_supportWGBH" style="opacity: 0;">
+			<div class="Container x280">
+				<b>Major Giving</b>
+				<div style="margin-top: 6px; line-height: 1.3em;">
+					<a href="/support/ralph_lowell_society.cfm?MM=1">Ralph Lowell Society</a>
+					<br><a href="/support/directedGifts.cfm?MM=1">Directed Gifts</a>
+					<br><a href="/support/plannedGiving.cfm?MM=1">Planned Giving</a>
+				</div>
+			</div>
+
+			<div class="Container x600">
+				<b>Membership</b>
+				<table width="600" border="0" cellpadding="0" cellspacing="0" style="margin-top: 6px;">
+				<tbody><tr>
+					<td valign="top" style="line-height: 1.3em;">
+					<a href="/support/index.cfm?MM=1">Membership Options</a>
+					<br><a href="/support/perksConnect.cfm?MM=1">Benefits and Discounts</a>
+					<br><a href="/support/ongoing_giving.cfm?MM=1">Sustainer Giving</a>
+					</td>
+					<td valign="top" style="line-height: 1.3em;">
+					<a href="/support/membership_renew.cfm?MM=1">Renew Your Membership</a>
+					<br><a href="/support/becomeamember.cfm?MM=1">Become a Member</a>
+					
+					</td>
+				</tr>
+				</tbody></table>
+
+			</div>
+
+			<br clear="all">
+			<br>
+
+			<div class="Container x920">
+				<b>Other Ways to Support WGBH</b>
+				<table width="920" border="0" cellpadding="0" cellspacing="0" style="margin-top: 6px;">
+				<tbody><tr>
+					<td valign="top" style="line-height: 1.3em;">
+					<a href="/matchingGifts?MM=1">Match Your Gift</a>
+					<br><a href="/support/learningtours.cfm">Learning Tours</a>
+					<br><a href="/events">WGBH Events</a>
+					</td>
+					<td valign="top" style="line-height: 1.3em;">
+					<a href="/support/businessmember_benefits.cfm?MM=1">Business Member Partners</a>
+					<br><a href="http://auction.wgbh.org/?MM=1">Auction</a>
+					</td>
+					<td valign="top" style="line-height: 1.3em;">
+					<a href="http://www.wgbh.org/support/VehicleDonation.cfm?MM=1">Vehicle Donation</a>
+					<br><a href="/about/eventSpace.cfm?MM=1">Facility Rental</a>
+					</td>
+					<td valign="top" style="line-height: 1.3em;">
+					<a href="/support/corporateSponsorship.cfm?MM=1">Corporate Sponsorship</a>
+					<br><a href="/support/volunteer.cfm?MM=1">Volunteer at WGBH</a>
+					</td>
+				</tr>
+				</tbody></table>
+			</div>
+
+			<br clear="all">
+		</div>
+	</li>
+</ul> 
+			</div>
+
+
+
+	<div class="bottomHeader">
+		<div class="bottomHeaderNav">
+			<a href="http://www.wgbhNews.org" target="_blank">News</a>
+			<a href="/foodwine/index.cfm">Food &amp; Wine</a>
+			<a href="/hometravel/index.cfm">Home &amp; Travel</a>
+			<a href="/995/index.cfm">Classical Music</a>
+			<a href="/ArtsDrama">Arts</a>
+			<a href="/kids/index.cfm">Kids</a>
+			<a href="/science/index.cfm">Science</a>
+			<a href="/history/index.cfm" class="last">History</a>
+		</div>
+		<form action="/info/search.cfm">
+		<div class="search" style="height:30px;">
+			<input type="text" name="search" class="searchtext" value="Search" onfocus="this.value=''">
+		</div>
+		</form>
+	</div>
+</div>
+		<!-- /header -->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	// Create an instance of the proxy.
+	var recordClick = function(adlobID,slot){
+		var track = new addTrac();
+		track.setErrorHandler(myErrorHandler);
+		track.saveClick(adlobID,'/info/404.cfm',slot);
+	}
+
+	// Error handler for the asynchronous functions.
+	var myErrorHandler = function(statusCode, statusMsg) {
+		alert('Status: ' + statusCode + ', ' + statusMsg);
+	}
+</script>
+
+
+<div class="pageHead">
+            <h1 class="pageTitle">Oops!</h1>
+    </div>
+
+    <div id="content" class="twoColumnsRight">
+    	<div class="topBar">
+        	<img src="/images2/corner_top_bar.gif" class="boxCorner" alt="">
+            <div class="left">
+                &nbsp;
+            </div>
+            <div class="right">
+                &nbsp;
+            </div>
+        </div>
+        <div class="colMain">
+
+        	<div class="contentBlock articleBlock" style="min-height:300px;">
+
+
+
+
+
+
+
+                <!--<img src="/images/header404.jpg" alt="Ooops. Page not found" />  -->
+
+                    <p><strong class="big">We're sorry, the page you have requested seems to be unavailable.</strong> </p>
+                    <p>We've recently lauched WGBH.org (welcome btw!), and some of your favorite pages may not be where you expect them to be. Rest assured webmaster Curious George and his team of code monkeys are on the job adding new content and creating re-directs to ensure your WGBH.org experience is always a pleasant one.</p>
+                    <h4 class="subhead">For now, we invite you to explore the new site. Try some of the links below or use the search box to get started.</h4>
+                      <ul>
+                          <li><a href="/television/index.cfm">Click Watch for television programming, schedules, vod-casts, web-only video, and more</a>.</li>
+                          <li><a href="/radio/index.cfm">Click Listen for radio programming, schedules, podcasts, streaming audio and more</a>.</li>
+                          <li><a href="/support/index.cfm">Click Support to find out how you can help advance media that matters</a>.</li>
+                          <li><a href="/impactcommunity/index.cfm">Click Impact &amp; Community to learn more about our role at home in Boston and around the world</a>.</li>
+                          <li>Or explore your favorite genres like <a href="/science/index.cfm">Science</a>, <a href="/history/index.cfm">History</a>, <a href="/news/index.cfm">News and Public Affairs</a>, <a href="/artsdrama/index.cfm">Arts and Drama</a>, <a href="/kids/index.cfm">Kids</a>, and <a href="/homeabroad/index.cfm">Home and Abroad</a>.</li>
+                      </ul>
+                    <br>  <br> <br> <br> <br> <br> <br> <br>
+
+
+
+
+
+
+            </div>
+         </div>
+
+        <!-- col right -->
+        <div class="colRight">
+            <div class="rightBlock">
+                 &nbsp;
+            </div>
+        </div>
+        <!-- /col right -->
+        <div class="clearAll"></div>
+    </div>
+
+
+<!-- /content -->
+
+
+<!-- /content --> <!-- for lightbox -->
+<style>
+	.splashLeft {
+		background-color:#3d4f53;
+		padding:44px 20px 20px 20px;
+		color:#fff;
+	}
+	.splashLeft h2 {
+		color:#fff;
+	}
+</style>
+
+
+
+
+		<div id="light2" class="white_content3">
+            
+		</div>
+        <!-- /for lightbox -->
+
+
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<div class="footerIn">
+			<div style="float: right; width: 180px; font-size: 0.8em; color: #888; text-align: center;">
+				Support for WGBH is provided by:
+				
+		<div id="div-gpt-ad-1352826262829--1" style="width:180px; height:150px; margin: 0 auto;">
+			<script type="text/javascript">
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1352826262829--1'); });
+			</script>
+		</div>
+	
+			</div>
+
+			<div class="footerLinks">
+				<div class="fLinksBlock">
+					<h4>Help</h4>
+					<ul>
+						<li><a href="/about/contact.cfm">Contact Us</a></li>
+						<li><a href="/about/careers.cfm">Careers</a></li>
+						<li><a href="/info/privacy.cfm">Privacy Policy</a></li>
+						<li><a href="/info/kidspolicy.cfm">Kids Policy</a></li>
+						<li><a href="/info/commentpolicy.cfm">Comments Policy</a></li>
+						<li><a href="https://stations.fcc.gov/station-profile/wgbh-tv" target="_blank">WGBH FCC Public File</a></li>
+						<li><a href="https://stations.fcc.gov/station-profile/wgbx-tv" target="_blank">WGBX FCC Public File</a></li>
+					</ul>
+				</div>
+				<div class="fLinksBlock">
+					<h4>Support WGBH</h4>
+					<ul>
+						<li><a href="/support/index.cfm">Become a Member</a></li>
+						<li><a href="/donateOnline">Donate</a></li>
+						
+						<li><a href="/support/corporateSponsorship.cfm">Corporate Sponsorship</a></li>
+						<li><a href="/support/volunteer.cfm">Volunteering</a></li>
+						<li><a href="/support/moreWays.cfm">More Ways to Support</a></li>
+					</ul>
+				</div>
+				<div class="fLinksBlock">
+					<h4>Most Popular</h4>
+					<ul>
+						<li><a href="/schedule/index.cfm">TV Schedules</a></li>
+						<li><a href="/programs/index.cfm">TV Programs A-Z</a></li>
+						<li><a href="/about/index.cfm">About Us</a></li>
+						<li><a href="/listen/index.cfm">Radio Streams</a></li>
+						<li><a href="/995/index.cfm">99.5 WCRB</a></li>
+						<li><a href="/news/wgbhnews.cfm">News</a></li>
+
+					</ul>
+				</div>
+				<div class="fLinksBlock fLinksBlockLast">
+					<h4>Shop</h4>
+					<ul>
+						<li><a href="http://wgbh.myshopify.com">Shop WGBH</a></li>
+						<li><a href="http://www.gopjn.com/t/2-28090-50994-51107?url=http%3A%2F%2Fwww.shoppbs.org%2Ffamily%2Findex.jsp%3FcategoryId%3D3373011%26ab%3DspClearance">Clearance</a></li>
+						<li><a href="http://www.pntrs.com/t/2-28090-50994-51107?url=http%3A%2F%2Fwww.shoppbs.org%2Ffamily%2Findex.jsp%3FcategoryId%3D4078515%26cp%3D2729312">PBS Kids</a></li>
+						<li><a href="http://www.pntra.com/t/2-28090-50994-51107?url=http%3A%2F%2Fwww.shoppbs.org%2Ffamily%2Findex.jsp%3FcategoryId%3D3373011%26ab%3DspClearance">Deal of The Week</a></li>
+						<li><a href="http://www.pntra.com/t/2-28090-50994-51107?url=http%3A%2F%2Fwww.shoppbs.org%2Ffamily%2Findex.jsp%3FcategoryId%3D1409719%26clickid%3Dmain_bestsellers_txt">Best Sellers</a></li>
+						<li class="purchaseNote">Your purchases help support<br>WGBH. Thank you!</li>
+					</ul>
+
+
+
+				</div>
+
+				<div class="copyRightHolder" style="position: relative; top: -5px;padding-top:20px;">
+					<p class="left">
+						<a href="http://www.pbs.org/"><img src="/images2/logo_pbs.gif" alt="PBS" target="_blank" align="absbottom" hspace="0" vspace="0" border="0"></a>
+						<a href="http://www.npr.org/" alt="NPR" target="_blank"><img src="/images2/logo_npr.gif" alt="NPR" align="absbottom"></a>
+						<img src="/images2/PRI.png" alt="Public Radio International" width="39" height="32" align="absbottom" hspace="0" vspace="0" border="0">
+					</p>
+					<div class="right">©2014  WGBH<span class="separator">|</span><a href="/info/media_credits.cfm">Media credits</a><span class="separator">|</span><a href="/info/terms.cfm">Terms of use</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /footer -->
+</div>
+
+</div> 
+
+
+
+
+<!-- Start Quantcast tag -->
+<script type="text/javascript">
+_qoptions={
+qacct:"p-d9rZqRcDHtMDo"
+};
+</script>
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<noscript>
+&lt;img src="http://pixel.quantserve.com/pixel/p-d9rZqRcDHtMDo.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/&gt;
+</noscript>
+<!-- End Quantcast tag -->
+
+
+
+<script type="text/javascript" language="JavaScript" src="/elqNow/elqCfg.js"></script>
+<script type="text/javascript" language="JavaScript" src="/elqNow/elqImg.js"></script><layer hidden="true"><img src="http://now.eloqua.com/visitor/v200/svrGP.aspx?pps=3&amp;siteid=2785&amp;ref2=elqNone&amp;tzo=0&amp;ms=244" border="0" width="1" height="1"></layer>
+
+<script type="text/javascript">
+	setTimeout(function(){var a=document.createElement("script");
+	var b=document.getElementsByTagName('script')[0];
+	a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0012/8622.js?"+Math.floor(new Date().getTime()/3600000);
+	a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+<script type="text/javascript">
+var _paq = _paq || [];
+(function(){ var u=(("https:" == document.location.protocol) ? "https://rpwt.rphelios.net/wgbhwt/" : "http://rpwt.rphelios.net/wgbhwt/");
+var urlParams = {};
+var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+urlParams[key] = value;
+});
+var cId = urlParams["cid"];
+var exId = urlParams["exid"];
+var rpiClientID = urlParams["clid"];
+
+_paq.push(['setSiteId', 1]);
+_paq.push(['setTrackerUrl', u+'piwik.php']);
+//_paq.push(['setDocumentTitle', 'Test Landing Page']);
+if (cId != undefined) {
+_paq.push(['setCustomVariable', 2, "RPContactID", cId, scope = "visit"]);
+}
+if (exId != undefined) {
+_paq.push(['setCustomVariable', 1, "ChannelExecutionID", exId, scope = "visit"]);
+}
+if (rpiClientID != undefined) {
+_paq.push(['setCustomVariable', 3, "RPClientID", rpiClientID, scope = "visit"]);
+}
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript'; g.defer=true; g.async=true; g.src=u+'piwik.js';
+s.parentNode.insertBefore(g,s); })();
+
+var visitor_id;
+_paq.push([function () {
+visitor_id = this.getVisitorId();
+if (visitor_id != undefined) {
+var hiddenElems = document.getElementsByName('rpiTrkPiwikVisitorID');
+for (var i = 0; i < hiddenElems.length; i++) {
+hiddenElems[i].value = visitor_id;
+}
+}
+} ]);
+</script>
+
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0017/7158.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+
+
+
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+  var elem = document.createElement('script');
+  elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+  elem.async = true;
+  elem.type = "text/javascript";
+  var scpt = document.getElementsByTagName('script')[0];
+  scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+function p2l(pathname,query,hash){
+  pathname = pathname.replace(/\//gi,"__")
+  if(pathname === "__") {
+    pathname = "homepage";
+  }
+  pathname = pathname.replace(/\./gi,"_");
+  query = query.replace(/\?/gi,'-');
+  params = query.split('&');
+  args = []
+  for(arg = 0; arg < params.length; arg++){
+    args.push(params[arg].split('=')[0]);
+  }
+  pathname += args.join('-');
+  pathname += hash.replace(/#/gi,"-");
+  return pathname;
+};
+
+_qevents.push({
+  qacct:"p-jENtKzreN1buT",
+  labels: "_fp.event." + p2l(document.location.pathname,
+  document.location.search, document.location.hash)
+});
+</script>
+
+<noscript>
+  &lt;div style="display:none;"&gt;
+    &lt;img src="//pixel.quantserve.com/pixel/p-jENtKzreN1buT.gif" border="0" height="1" width="1" alt="Quantcast"/&gt;
+  &lt;/div&gt;
+</noscript>
+<!-- End Quantcast tag -->
+
+
+
+
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', '845136008835027']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript>&lt;img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=845136008835027&amp;amp;ev=NoScript" /&gt;</noscript>
+
+
+
+<div id="popupMask"></div><div id="popupContainer"><div id="popupInner"><div id="popupTitleBar"><div id="popupTitle"></div><div id="popupControls"><img src="/images2/btn_close2.gif" onclick="hidePopWin(false);" id="popCloseBox"></div></div><iframe src="/loading.html" style="width:100%;height:100%;background-color:transparent;" scrolling="auto" frameborder="0" allowtransparency="true" id="popupFrame" name="popupFrame" width="100%" height="100%"></iframe></div></div><div id="tipDiv" class="" style="position: absolute; visibility: hidden; z-index: 10000; left: 0px; top: 0px;"></div></body></html>

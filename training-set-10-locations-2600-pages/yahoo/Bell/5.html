@@ -1,0 +1,186 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head profile="http://gmpg.org/xfn/11"><link rel="stylesheet" type="text/css" href="http://www.tacobellapplication.org/wp-content/cache/minify/000000/M9BPLC7OT85MLEnVLy6pzEkFAA.css" media="all">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Taco Bell Application - Apply Online For Your Local Area</title>
+<meta name="description" content="Guide for the online Taco Bell Application process. Apply online for your local area Taco Bell location today. Fill out your Taco Bell job application online.">
+<meta name="robots" content="noodp,noydir">
+<link rel="Shortcut Icon" href="http://www.tacobellapplication.org/wp-content/themes/associate/images/favicon.ico" type="image/x-icon">
+
+<link rel="alternate" type="application/rss+xml" title="Taco Bell Application » Feed" href="http://www.tacobellapplication.org/feed/">
+<link rel="alternate" type="application/rss+xml" title="Taco Bell Application » Comments Feed" href="http://www.tacobellapplication.org/comments/feed/">
+				
+	<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript">//<![CDATA[
+	// Google Analytics for WordPress by Yoast v4.2.3 | http://yoast.com/wordpress/google-analytics/
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount','UA-33296773-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	//]]></script>
+<link rel="canonical" href="http://www.tacobellapplication.org/">
+<script type="text/javascript" src="http://www.tacobellapplication.org/wp-content/cache/minify/000000/M9bPKixNLarUMYYydHMz04sSS1L1cjPzdEz0S8p1ixOTs0E8AA.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.tacobellapplication.org/xmlrpc.php?rsd">
+<script type="text/javascript">
+			function quick_contact_send() { //Send Message Ajax Call
+				//Deactivate submit button 
+				var submit_button = document.getElementById('quick_contact_submit');
+				submit_button.disabled = true;
+				//Get Input Fields (Clear them if they are the autofill message)
+				var name = document.getElementById('quick_contact_name').value;
+				if(name == "Please enter your name...")
+					name = "";
+				var email = document.getElementById('quick_contact_email').value;
+				if(email == "So that we can reply to you...")
+					email = "";
+				var phone = document.getElementById('quick_contact_phone').value;
+				if(phone == "So that we can reply to you...")
+					phone = "";
+				var message = document.getElementById('quick_contact_message').value;
+				if(message == "Questions? Comments? Enter them here (no HTML please)...")
+					message = "";
+				var captcha = document.getElementById('quick_contact_captcha_text').value;
+				if(captcha == "Type text at left...")
+					captcha = "";
+				//Ensure that there is at least a name and an email or phone
+				var error_default = "Please fill out the following before submitting:\n";
+				var error = error_default;
+				if(name == "" || name == null)
+					error += "  - Please enter your name.\n";
+				if((email == "" || email == null) && (phone == "" || phone == null)) 
+					if(error != "") error += "  - Please enter either a phone number or email for us to contact you.\n";
+				if(captcha == "" || captcha == null)
+					error += "  - Please enter the text from the image.\n";
+				if(error != error_default) {
+					submit_button.disabled = false;
+					alert(error);
+					return;
+				}
+				//If the message is empty ask the user to conferm that they ment to hit the submit button
+				if(message == "" && !confirm("Are you sure you want to send without entering a message?")) {
+					submit_button.disabled = false;
+					return;
+				}
+				//Display processing message
+				submit_message = document.getElementById('quick_contact_submit_message');
+				submit_message.className = "quick_contact_message";
+				submit_message.innerHTML = "Submitting Message, Please Wait...";
+				//Build SACK Call
+				var mysack = new sack("http://www.tacobellapplication.org/wp-content/plugins/quick-contact/quick-contact.php");
+				mysack.execute = 1;
+				mysack.method = 'POST';
+				mysack.setVar("quick_contact_name",name);
+				mysack.setVar("quick_contact_email",email);
+				mysack.setVar("quick_contact_phone",phone);
+				mysack.setVar("quick_contact_message",message);
+				mysack.setVar("quick_contact_captcha",captcha);
+				mysack.setVar("quick_contact_action","send_message");
+				mysack.onError = function() { alert('An ajax error occured while sending your message. Please reload the page and try again.') };
+				mysack.runAJAX();//excecute
+				return;
+			}
+			
+			function quick_contact_reset_form() { //Reset Form Javascript Call
+				document.getElementById('quick_contact_form').innerHTML = '<table width=\'100%\'  border=\'0\' cellspacing=\'0\' cellpadding=\'0\'><tr><th>Name:</th><td><input type=\'text\' id=\'quick_contact_name\' class=\'quick_contact_faded\' value=\'Please enter your name...\' maxlength=\'100\' onFocus=\'if(this.value == "Please enter your name..."){ this.value = ""; this.className = "quick_contact_focused"; }\'/></td></tr><tr><th>Email:</th><td><input type=\'text\' id=\'quick_contact_email\' class=\'quick_contact_faded\' value=\'So that we can reply to you...\' maxlength=\'150\' onFocus=\'if(this.value == "So that we can reply to you..."){ this.value = ""; this.className = "quick_contact_focused"; };\'/></td></tr><tr><th>Phone:</th><td><input type=\'text\' id=\'quick_contact_phone\' class=\'quick_contact_faded\' value=\'So that we can reply to you...\' maxlength=\'100\' onFocus=\'if(this.value == "So that we can reply to you..."){ this.value = ""; this.className = "quick_contact_focused"; };\'/></td></tr><tr><th>Message:</th><td><textarea id=\'quick_contact_message\' class=\'quick_contact_faded\' onFocus=\'if(this.value == "Questions? Comments? Enter them here (no HTML please)..."){ this.value = ""; this.className = "quick_contact_focused"; };\'>Questions? Comments? Enter them here (no HTML please)...</textarea></td></tr><tr><th><img id=\'quick_contact_captcha\' src=\'?quick_contact_action=get_captcha\' align=\'right\'/></th><td><input type=\'text\' id=\'quick_contact_captcha_text\' class=\'quick_contact_faded\' style=\'width:110px;\' value=\'Type text at left...\' maxlength=\'20\' onFocus=\'if(this.value == "Type text at left..."){ this.value = ""; this.className = "quick_contact_focused"; };\'/> <small><a href=\'javascript:quick_contact_reset_captcha();\'>I can\'t read the text, please reset it.</a></small></td></tr><tr><th>&nbsp;</th><td style=\'padding-top:2px;\'><input type=\'submit\' id=\'quick_contact_submit\' value=\'Send\' onClick=\'quick_contact_send(); return false;\' style=\'width:50px;\'><input type=\'button\' id=\'quick_contact_cancel\' value=\'Cancel\' style=\'width:60px;\' onClick=\'quick_contact_reset_form();\'> <span style=\'font-size:0.7em;\'>Powered by <a href=\'http://quickcontact.squarecompass.com/\'>Quick Contact</a></span><br/><div id=\'quick_contact_submit_message\'>&nbsp;</div></td></tr><tr><th>&nbsp;</th><td></td></tr></table>';
+			}
+			
+			var quick_contact_reset_captcha_count = 0;
+			function quick_contact_reset_captcha() { //Reset Form Javascript Call
+				quick_contact_reset_captcha_count++;
+				document.getElementById('quick_contact_captcha').src = 'http://www.tacobellapplication.org/wp-content/plugins/quick-contact/quick-contact.php?quick_contact_action=get_captcha&count='+quick_contact_reset_captcha_count;
+			}
+		</script>
+	<link rel="pingback" href="http://www.tacobellapplication.org/xmlrpc.php">
+</head>
+<body class="home page page-id-6 page-template-default header-full-width content-sidebar associate-gray associate-gray">
+<div id="wrap">
+<div id="header"><div class="wrap"><div id="title-area"><p id="title"><a href="http://www.tacobellapplication.org/" title="Taco Bell Application">Taco Bell Application</a></p><p id="description">Your Guide For The Taco Bell Application Process</p></div><!-- end #title-area --></div><!-- end .wrap --></div><!--end #header--><div id="nav"><div class="wrap"><ul id="menu-home" class="menu menu-primary superfish sf-js-enabled"><li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-31"><a href="http://www.tacobellapplication.org">Home</a></li>
+</ul></div><!-- end .wrap --></div><div id="inner"><div class="wrap">	<div id="content-sidebar-wrap">
+				<div id="content" class="hfeed">
+				<div class="post-6 page type-page status-publish hentry">
+
+				<h1 class="entry-title">Taco Bell Job Application – Apply online</h1>
+		
+				<div class="entry-content">
+			<h2></h2>
+<h2>Taco Bell application online- apply now</h2>
+<p>&nbsp;</p>
+<p style="text-align: center;"><span style="font-size: large;"><a href="http://www.jdoqocy.com/click-6194817-10783002" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.jdoqocy.com']);" target="_blank">Apply For Your Local Area Online</a><img src="http://www.ftjcfx.com/image-6194817-10783002" alt="" width="1" height="1" border="0"></span></p>
+<p>Taco Bell is without a doubt the most popular Mexican fast food restaurant around. With catchy advertising and a commitment to great food at a great price, Taco Bell makes getting Mexican food easy. Taco Bell restaurants are located in standalone retail stores, inside of malls, convenience stores, and even college food courts. No matter what you are in the mood for, Taco Bell has something for everyone. If you want to work for a company with strong morals and a commitment to high quality customer service, then get started on a <strong>Taco Bell application</strong>&nbsp;today! Taco Bell is grounded in success and has moved from their niche market to international markets. With over 50 years of experience Taco Bell has learned what it takes to be a competitor in the industry, and as an employer.</p>
+<p>To get started in your Taco Bell career, start with completing your Taco Bell job application. There are a number of key tools that you may find helpful to optimize the success of your endeavor. Taco Bell restaurants are individually owned and operated, so each location and manager may choose how they handle hiring procedures.</p>
+<p>Check out these tips and tricks to help you take your first steps far beginning with your Taco Bell application!</p>
+<p style="text-align: center;"><span style="font-size: large;"><a href="http://www.jdoqocy.com/click-6194817-10783002" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.jdoqocy.com']);" target="_blank">Find Available Jobs For Your Local Area</a><img src="http://www.ftjcfx.com/image-6194817-10783002" alt="" width="1" height="1" border="0"></span></p>
+<p><strong>The Application:</strong></p>
+<p>Taco Bell has a well organized career system in place via their website tacobell.com and affiliated links. Through this website you will find the <strong>Taco Bell application online</strong>&nbsp;and also a wide variety of other information such as job descriptions, available positions, company information and more! Because taco Bell locations are franchised, your job application will best be begun by searching for the location you wish to work. After entering the information for your search area you will notice a new window with the available opportunities and information on that location. Selecting the position you are interested in will take you to a page with the general description and the link to apply. You may also refer someone else to the position. Once you have select the locations you wish to apply to, you will be asked to create a login profile. This will help you when and if you need to login to your saved application to update information, your resume, etc.</p>
+<p>The <strong>Taco Bell job&nbsp;application</strong> takes between 30-40 minutes to complete so be ready to devote that time to the task. You will be asked to verify that you are over 13 years old and that you agree to the terms and conditions of Taco Bell’s parent company Yum Brands. Taco Bell is more than just a great burrito and salsa; they have an assortment of job opportunities to match their bright, festive company. People of all ages, races, and walks of life work at Taco Bell and diversity is a positive attribute to Taco Bell restaurants.&nbsp; A Taco Bell application is your best first step to reaching the opportunity of a lifetime.</p>
+<p><strong>Age Requirements: </strong></p>
+<p>Labor laws vary by state in the United States, and may be different depending upon your location. Federal law mandates that teenagers under 14 may not be employed; however those between 14 and 17 may be employed with restrictions. You may be able to work with Taco Bell at the age of 16, however it is always best to check with your preferred location when you submit your <strong>Taco Bell application onlin</strong>e&nbsp;to be sure that you will qualify.</p>
+<p><strong>Application Review and Interview:&nbsp; </strong></p>
+<p>The online <strong>Taco Bell application</strong> is created in a very simple, step by step manner. You do not have to worry with complicated procedures and protocol as you navigate the websites and information links. Taco Bell application and follow up procedures may follow a similar guideline to those below:<strong></strong></p>
+<ul>
+<li>For restaurant location applications, your application will most likely be reviewed by the assistant or store manager. The store manager or operator may work independently or collaboratively to review your application. Additionally, decisions regarding employment may also be a collaborative effort. Because Taco Bell restaurants are franchised, you may find that the person interviewing you and handling your application is local to only that restaurant location. Should you have questions, it is best to field them toward that location and not toward a generic customer service hotline.</li>
+<li>Corporate positions may follow a different procedure using human resource or Yum Brand recruitment procedures. You may still submit an online application for these positions; however the protocol may be slightly different. During the interviewing process there may be more than one interview and interviewer, depending on the position, location, and job situation.</li>
+<li>To work at Taco Bell, you may be asked to consent to a background and drug test. Make sure that you are prepared to consent to this, and that you can schedule the drug test in a timely manner to avoid delays in beginning employment.</li>
+</ul>
+<p style="text-align: center;"><span style="font-size: large;"><a href="http://www.jdoqocy.com/click-6194817-10783002" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.jdoqocy.com']);" target="_blank">Apply For Your Local Area Online</a><img src="http://www.ftjcfx.com/image-6194817-10783002" alt="" width="1" height="1" border="0"></span></p>
+<p><strong>Available Job Opportunities:</strong></p>
+<p>Taco Bell is a diverse company offering a wide assortment of locations and positions including hourly, salary, part time and full time. There is always room for you to expand your horizons at Taco Bell, so be ready for a great start and a great future! Job opportunities may include the following:</p>
+<ul>
+<li>Team Member</li>
+<li>Shift Lead</li>
+<li>Assistant Manager</li>
+<li>Restaurant General Manager</li>
+<li>Franchise Owner</li>
+</ul>
+<p>Restaurant level positions generally require some high school education or equivalent, as well as the ability to stand, lift, and perform repetitive motions. All Taco Bell positions require a strict commitment to a professional and clean appearance. Additionally, a strong understanding of cleanliness standards and health codes must be observed. If you think you are ready to start in a great new field, the submit a <strong>Taco Bell job application</strong> now!</p>
+<p><strong>Demographics:</strong></p>
+<p>Taco Bell has over 5,800 restaurants all across the United States and internationally. Taco Bell is also located in Canada, Spain, Puerto Rico, Cyprus, Hawaii, India and the Philippines. Taco Bell locations are operated as franchises, so that same classic Mexican feeling is present at every location.</p>
+<p><strong>Store Hours: </strong></p>
+<p>Depending on your geographic location, your Taco Bell restaurant hours will vary. Most Taco Bell locations are open from 10:00-10:30 a.m. until 12:00-1:00 a.m. Monday through Thursday. Many locations are open as late as 4:00 a.m. on Friday and Saturdays. For detailed hours, contact your local restaurant to be sure.</p>
+<p><a href="http://www.dpbolvw.net/click-6194817-10929274" target="_blank"><br>
+<img class="aligncenter" src="http://www.lduhtrp.net/image-6194817-10929274" alt="Snagajob Student Jobs  " width="728" height="90" border="0"></a></p>
+		</div><!-- end .entry-content -->
+		
+	</div><!-- end .postclass -->
+			</div><!-- end #content -->
+		<div id="sidebar" class="sidebar widget-area">
+<div id="text-2" class="widget widget_text"><div class="widget-wrap">			<div class="textwidget"><a href="http://www.tacobellapplication.org/wp-content/uploads/2012/07/tacobelllogo-e1342195720895.jpg"><img class="aligncenter size-full wp-image-37" title="Taco Bell Application" src="http://www.tacobellapplication.org/wp-content/uploads/2012/07/tacobelllogo-e1342195720895.jpg" alt="Taco Bell Application" width="220" height="277"></a></div>
+		</div></div>
+<div id="nav_menu-2" class="widget widget_nav_menu"><div class="widget-wrap"><h4 class="widgettitle">Recent Articles</h4>
+<div class="menu-recent-articles-container"><ul id="menu-recent-articles" class="menu"><li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-27"><a href="http://www.tacobellapplication.org">Taco Bell Application</a></li>
+<li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="http://www.tacobellapplication.org/taco-bell-job/">Taco Bell Positions Available</a></li>
+<li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="http://www.tacobellapplication.org/taco-bell-careers/">Taco Bell Management Careers</a></li>
+<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="http://www.tacobellapplication.org/interview-tips-for-taco-bell/">Interview Tips For Taco Bell</a></li>
+</ul></div></div></div>
+<div id="nav_menu-3" class="widget widget_nav_menu"><div class="widget-wrap"><h4 class="widgettitle">Site Info</h4>
+<div class="menu-site-info-container"><ul id="menu-site-info" class="menu"><li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="http://www.tacobellapplication.org/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="http://www.tacobellapplication.org/contact-us/">Contact Us</a></li>
+</ul></div></div></div>
+<div id="nav_menu-4" class="widget widget_nav_menu"><div class="widget-wrap"><h4 class="widgettitle">Other Sites</h4>
+<div class="menu-other-sites-container"><ul id="menu-other-sites" class="menu"><li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-38"><a href="http://www.chickfilaapplication.com/" onclick="javascript:_gaq.push(['_trackEvent','outbound-menu','http://www.chickfilaapplication.com']);">Chick-Fil-A Application</a></li>
+<li id="menu-item-39" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39"><a href="http://www.dunkindonutsapplication.org" onclick="javascript:_gaq.push(['_trackEvent','outbound-menu','http://www.dunkindonutsapplication.org']);">Dunkin’ Donuts Application</a></li>
+<li id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a href="http://www.kfcapplication.org" onclick="javascript:_gaq.push(['_trackEvent','outbound-menu','http://www.kfcapplication.org']);">KFC Application</a></li>
+</ul></div></div></div>
+<div id="text-3" class="widget widget_text"><div class="widget-wrap">			<div class="textwidget"><a href="http://www.jdoqocy.com/click-6194817-10435409" target="_blank">
+<img class="aligncenter" src="http://www.tqlkg.com/image-6194817-10435409" alt="Find a job that fits your schedule at SnagAJob" width="120" height="600" border="0"></a></div>
+		</div></div>
+</div>
+	</div><!-- end #content-sidebar-wrap -->
+	</div><!-- end .wrap --></div><!-- end #inner --><div id="footer" class="footer"><div class="wrap"><div class="gototop"><p><a href="#wrap" rel="nofollow">Return to top of page</a></p></div><div class="creds"><p>Copyright © 2014 · <a href="http://www.studiopress.com/themes/associate" title="Associate Theme">Associate Theme</a> on <a href="http://www.studiopress.com/" title="Genesis Framework">Genesis Framework</a> · <a href="http://wordpress.org/" title="WordPress">WordPress</a> · <a href="http://www.tacobellapplication.org/wp-login.php">Log in</a></p></div></div><!-- end .wrap --></div><!-- end #footer -->
+</div><!-- end #wrap -->
+<script type="text/javascript" src="http://www.tacobellapplication.org/wp-content/cache/minify/000000/M9FPzs_NTc0r0S1KLcip1MvNzNMx0E9PzUstzizWz8lM0s8q1gfKl-oXlxakFqVlFmcQktdLLEovBgA.js"></script>
+
+
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Minified using disk
+Page Caching using disk: enhanced
+Database Caching using disk
+Object Caching 916/1028 objects using disk
+Content Delivery Network via N/A
+Application Monitoring using New Relic
+
+ Served from: www.tacobellapplication.org @ 2014-07-24 20:05:43 by W3 Total Cache --></body></html>

@@ -1,0 +1,843 @@
+<html lang="en" dir="ltr" xmlns:og="http://ogp.me/ns#" class="js js "><head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><link rel="stylesheet" href="/sites/all/themes/greenbiz/libraries/grunticon/icons.data.svg.css"><script type="text/javascript" async="" src="//munchkin.marketo.net/147/munchkin.js"></script><script type="text/javascript" async="" src="http://www.greenbiz.com/sites/default/files/googleanalytics/dc.js?nefev5"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UAEDV1VUGwACVVNUDwg="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:18,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:18,2:19,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:19,2:18,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:19,2:18,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:19,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,u="addEventListener",f="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[u]?(c[u]("DOMContentLoaded",o,!1),s[u]("load",n,!1)):(c[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],18:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],19:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:18,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script>
+<meta name="dcterms.publisher" content="GreenBiz Group Inc.">
+<meta name="dcterms.type" content="Text">
+<meta name="dcterms.format" content="text/html">
+<link rel="publisher" href="http://www.greenbizgroup.com/">
+<link rel="shortlink" href="http://www.greenbiz.com/node/55674">
+<meta name="copyright" content="© 2014 GreenBiz Group">
+<link rel="canonical" href="http://www.greenbiz.com/blog/2014/01/07/inside-mcdonalds-quest-sustainable-beef">
+<meta name="dcterms.rights" content="© 2014 GreenBiz Group">
+<meta property="fb:admins" content="GreenBiz">
+<meta name="twitter:site:id" content="15942016">
+<meta name="twitter:url" content="http://www.greenbiz.com/blog/2014/01/07/inside-mcdonalds-quest-sustainable-beef">
+<link rel="shortcut icon" href="http://www.greenbiz.com/sites/all/themes/greenbiz/favicon.ico" type="image/vnd.microsoft.icon">
+<meta name="twitter:site" content="@greenbiz">
+<meta name="twitter:card" content="summary">
+<meta property="og:site_name" content="GreenBiz">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://www.greenbiz.com/blog/2014/01/07/inside-mcdonalds-quest-sustainable-beef">
+<meta name="generator" content="Drupal 7 (http://drupal.org)">
+<meta name="twitter:description" content="The fast-food giant is committing to purchase sustainable beef. Is it biting off more than it can chew?">
+<meta name="dcterms.creator" content="Joel Makower">
+<meta name="dcterms.subject" content="Food &amp; Agriculture, Supply Chain">
+<meta name="dcterms.description" content="The fast-food giant is committing to purchase sustainable beef. Is it biting off more than it can chew?">
+<meta name="dcterms.title" content="Exclusive: Inside McDonald's quest for sustainable beef">
+<link rel="author" href="http://www.greenbiz.com/users/joel-makower">
+<meta name="description" content="The fast-food giant is committing to purchase sustainable beef. Is it biting off more than it can chew?">
+<meta name="news_keywords" content="Food &amp; Agriculture, Supply Chain">
+<link rel="image_src" href="http://www.greenbiz.com/sites/default/files/styles/panopoly_image_full/public/images/articles/featured/beef3.jpg?itok=pMZ0K6T7">
+<meta name="dcterms.contributor" content="http://www.greenbiz.com/users/joel-makower">
+<meta name="dcterms.date" content="2014-01-07T02:45-08:00">
+<meta property="og:image" content="http://www.greenbiz.com/sites/default/files/styles/panopoly_image_full/public/images/articles/featured/beef3.jpg?itok=pMZ0K6T7">
+<meta name="twitter:creator" content="@makower">
+<meta name="twitter:title" content="Exclusive: Inside McDonald's quest for sustainable beef">
+<meta property="og:description" content="The fast-food giant is committing to purchase sustainable beef. Is it biting off more than it can chew?">
+<meta property="og:title" content="Exclusive: Inside McDonald's quest for sustainable beef">
+<meta name="dcterms.identifier" content="http://www.greenbiz.com/blog/2014/01/07/inside-mcdonalds-quest-sustainable-beef">
+<meta name="dcterms.language" content="und">
+<meta name="twitter:image" content="http://www.greenbiz.com/sites/default/files/styles/panopoly_image_full/public/images/articles/featured/beef3.jpg?itok=pMZ0K6T7">
+    <!-- %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"} -->
+    <meta content="width=device-width" name="viewport">
+
+    <meta http-equiv="cleartype" content="on">
+  <title>Exclusive: Inside McDonald's quest for sustainable beef | GreenBiz</title>
+  <link type="text/css" rel="stylesheet" href="http://www.greenbiz.com/sites/default/files/css/css_pbm0lsQQJ7A7WCCIMgxLho6mI_kBNgznNUWmTWcnfoE.css" media="all">
+<link type="text/css" rel="stylesheet" href="http://www.greenbiz.com/sites/default/files/css/css_dGYDLbc-S6u7-47scH4T23mAMlhJc2u-kQAy1pGqLjw.css" media="all">
+<link type="text/css" rel="stylesheet" href="http://www.greenbiz.com/sites/default/files/css/css_XbLA-724mYX9zkB9Buv1RbVYjqOq2XgEKu28lTa3e5Y.css" media="all">
+<link type="text/css" rel="stylesheet" href="http://www.greenbiz.com/sites/default/files/css/css_v3nhD8g0TbccYRfP7Yi6x28CUJn3GYXAE26WM5JxGvU.css" media="all">
+<link type="text/css" rel="stylesheet" href="http://www.greenbiz.com/sites/default/files/css/css_aH7fqkIBbPrRFKmkEb4knMDC5HSAgjerPkHF8mRchWM.css" media="screen">
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="http://www.greenbiz.com/profiles/panopoly/modules/panopoly/panopoly_core/css/panopoly-fonts-ie-open-sans.css?nefev5" media="all" />
+<![endif]-->
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="http://www.greenbiz.com/profiles/panopoly/modules/panopoly/panopoly_core/css/panopoly-fonts-ie-open-sans-bold.css?nefev5" media="all" />
+<![endif]-->
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="http://www.greenbiz.com/profiles/panopoly/modules/panopoly/panopoly_core/css/panopoly-fonts-ie-open-sans-italic.css?nefev5" media="all" />
+<![endif]-->
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="http://www.greenbiz.com/profiles/panopoly/modules/panopoly/panopoly_core/css/panopoly-fonts-ie-open-sans-bold-italic.css?nefev5" media="all" />
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="http://www.greenbiz.com/sites/default/files/css/css_wigS70piKQxAQ-PhuV0Kv5yYuTDEoD4yq0VyEj5L7HY.css" media="all">
+  <script>
+  /* grunticon Stylesheet Loader | https://github.com/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */
+  window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!!t.document.createElementNS&&!!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect&&!!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1"),A=function(A){var o=t.document.createElement("link"),r=t.document.getElementsByTagName("script")[0];o.rel="stylesheet",o.href=e[A&&n?0:A?1:2],r.parentNode.insertBefore(o,r)},o=new t.Image;o.onerror=function(){A(!1)},o.onload=function(){A(1===o.width&&1===o.height)},o.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};
+  grunticon( [ "/sites/all/themes/greenbiz/libraries/grunticon/icons.data.svg.css", "/sites/all/themes/greenbiz/libraries/grunticon/icons.data.png.css", "/sites/all/themes/greenbiz/libraries/grunticon/icons.fallback.css" ] );</script>
+  <noscript>&lt;link href="/sites/all/themes/greenbiz/libraries/grunticon/icons.fallback.css" rel="stylesheet"&gt;</noscript>
+  <!-- Scripts have to be in the head -->
+  <script type="text/javascript" src="http://www.greenbiz.com/sites/default/files/js/js__5ZDbAHXizN0D-Wk2VKxwjQ7OlV6SPlfRVRjhUhxfaA.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+googletag.slots = googletag.slots || {};
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.googletagservices.com/tag/js/gpt.js"></script><iframe src="http://tpc.googlesyndication.com/safeframe/1-0-0/html/container.html" style="visibility: hidden; display: none;"></iframe>
+<script type="text/javascript" src="http://www.greenbiz.com/sites/default/files/js/js_Cyc-lC6ixML6RkS4RmBegmTl-vUp8PtXmSZmSGOtAFQ.js"></script>
+<script type="text/javascript" src="http://www.greenbiz.com/sites/default/files/js/js_8q5huogoh_CrCiAmr2NZHzNmUh4b5pKHcYTyvxyEfDM.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.slots["gbz_ros_billboard"] = googletag.defineSlot("4797590/GBZ_ROS_billboard", [970, 250], "dfp-ad-gbz_ros_billboard")
+  .addService(googletag.pubads());
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.slots["gb_ros_medsq1_300x250"] = googletag.defineSlot("4797590/GB_ROS_MedSq1_300x250", [300, 250], "dfp-ad-gb_ros_medsq1_300x250")
+  .addService(googletag.pubads());
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.slots["gb_ros_medsq2_300x250"] = googletag.defineSlot("4797590/GB_ROS_MedSq2_300x250", [300, 250], "dfp-ad-gb_ros_medsq2_300x250")
+  .addService(googletag.pubads());
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.greenbiz.com/sites/default/files/js/js_TA69ZEY3fOU_gNiVDuARP_E9o7CnWE0CGv_Q-BWAvn0.js"></script>
+<script type="text/javascript" src="http://www.greenbiz.com/sites/default/files/js/js_5TVfSnZKX2NlJM21rqW9IaDQZ976yRyKqvjtvTJUiMI.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.cmd.push(function() {
+  googletag.pubads().enableAsyncRendering();
+  googletag.pubads().enableSingleRequest();
+  googletag.pubads().collapseEmptyDivs();
+});
+googletag.enableServices();
+//--><!]]>
+</script><script async="" type="text/javascript" src="http://partner.googleadservices.com/gpt/pubads_impl_53.js"></script>
+<script type="text/javascript" src="http://www.greenbiz.com/sites/default/files/js/js_vsM2Tmfh5rc__8gcIHwjkMsOSXUDnXbVFBg9Pui6-K8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-517528-6"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = "http://www.greenbiz.com/sites/default/files/googleanalytics/dc.js?nefev5";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.greenbiz.com/sites/default/files/js/js_e-yaUJh8ICZdj5k9NkWX1iGZhCbUtelTK_STymXrL1M.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"greenbiz","theme_token":"WzDmHXrtMLkDhqvLf1m2riyJkgYOHHn62_OmDSI4ct0","css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.tabs.css":1,"misc\/ui\/jquery.ui.accordion.css":1,"profiles\/panopoly\/modules\/contrib\/date\/date_api\/date.css":1,"profiles\/panopoly\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_core\/css\/panopoly-fonts.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_core\/css\/panopoly-dropbutton.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_magic\/css\/panopoly-magic.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_theme\/css\/panopoly-featured.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_theme\/css\/panopoly-accordian.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_widgets\/panopoly-widgets.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_wysiwyg\/panopoly-wysiwyg.css":1,"sites\/all\/modules\/contrib\/picture\/picture_wysiwyg.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"profiles\/panopoly\/modules\/contrib\/caption_filter\/caption-filter.css":1,"profiles\/panopoly\/modules\/contrib\/ctools\/css\/ctools.css":1,"profiles\/panopoly\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/themes\/greenbiz\/layouts\/page\/two-col-content-first\/two-col-content-first.css":1,"profiles\/panopoly\/modules\/contrib\/field_group\/field_group.css":1,"sites\/all\/modules\/contrib\/ds\/layouts\/ds_2col\/ds_2col.css":1,"sites\/all\/themes\/greenbiz\/css\/specifics\/admin.css":1,"sites\/default\/files\/css\/follow.css":1,"sites\/all\/themes\/kalatheme\/css\/tweaks.css":1,"sites\/all\/themes\/kalatheme\/css\/panopoly.css":1,"sites\/all\/themes\/greenbiz\/css\/main.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_core\/css\/panopoly-fonts-ie-open-sans.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_core\/css\/panopoly-fonts-ie-open-sans-bold.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_core\/css\/panopoly-fonts-ie-open-sans-italic.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_core\/css\/panopoly-fonts-ie-open-sans-bold-italic.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_images\/panopoly-images.css":1},"js":{"sites\/all\/modules\/contrib\/picture\/picturefill\/matchmedia.js":1,"sites\/all\/modules\/contrib\/picture\/picture.js":1,"sites\/all\/modules\/contrib\/picture\/picturefill\/picturefill.js":1,"0":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_widgets\/panopoly-widgets.js":1,"profiles\/panopoly\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery.once.js":1,"1":1,"http:\/\/www.googletagservices.com\/tag\/js\/gpt.js":1,"misc\/drupal.js":1,"profiles\/panopoly\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"profiles\/panopoly\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.widget.min.js":1,"profiles\/panopoly\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.tabs.min.js":1,"profiles\/panopoly\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.accordion.min.js":1,"profiles\/panopoly\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"profiles\/panopoly\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"2":1,"3":1,"4":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/marketo_ma\/js\/marketo_ma.js":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_admin\/panopoly-admin.js":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_magic\/panopoly-magic.js":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_theme\/js\/panopoly-accordion.js":1,"sites\/all\/modules\/custom\/toggle_summary\/toggle-summary.min.js":1,"profiles\/panopoly\/modules\/contrib\/caption_filter\/js\/caption-filter.js":1,"5":1,"sites\/all\/modules\/contrib\/views_load_more\/views_load_more.js":1,"sites\/all\/modules\/contrib\/views\/js\/base.js":1,"misc\/progress.js":1,"sites\/all\/modules\/contrib\/views\/js\/ajax_view.js":1,"sites\/all\/modules\/features\/gbz_ads\/js\/gbz_ads.js":1,"profiles\/panopoly\/modules\/contrib\/field_group\/field_group.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"6":1,"sites\/all\/themes\/kalatheme\/js\/kalatheme.min.js":1,"sites\/all\/themes\/greenbiz\/js\/dist\/greenbiz-polyfills.pkg.min.js":1,"sites\/all\/themes\/greenbiz\/js\/dist\/greenbiz.pkg.min.js":1}},"CToolsModal":{"modalSize":{"type":"scale","width":".9","height":".9","addWidth":0,"addHeight":0,"contentRight":25,"contentBottom":75},"modalOptions":{"opacity":".55","background-color":"#FFF"},"animationSpeed":"fast","modalTheme":"CToolsModalDialog","throbberTheme":"CToolsModalThrobber"},"field_group":{"div":"gbz_content_list"},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:d0dc505a23bb2cb951e6bc0a0a9b18f9":{"view_name":"gbz_articles","view_display_id":"related_articles_pane","view_args":"55674","view_path":"node\/55674","view_base_path":null,"view_dom_id":"d0dc505a23bb2cb951e6bc0a0a9b18f9","pager_element":0}}},"livefyre":{"account_num":"352857"},"gbz_ads":["dfp-ad-gbz_ros_billboard-wrapper"],"spotlight_settings":{"rotation_time":4000},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"},"marketo_ma":{"track":true,"key":"211-NJY-165","library":"\/\/munchkin.marketo.net\/munchkin.js"},"kalatheme":{"fontawesome":true}});
+//--><!]]>
+</script>
+  <!-- End Scripts -->
+<link rel="stylesheet" type="text/css" href="http://zor.fyre.co/wjs/v3.0.1415061060/css/livefyre_main.css" media="all"><script type="text/javascript" src="http://zor.fyre.co/wjs/v3.0.1415061060/javascripts/livefyre_base.js" async="" defer=""></script><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><script type="text/javascript" src="http://zor.fyre.co/wjs/v3.0.1415061060/javascripts/livefyre_mod_main.js" async="" defer=""></script><script type="text/javascript" src="http://zor.fyre.co/wjs/v3.0.1415061060/javascripts/livefyre_mod_editor_main.js" async="" defer=""></script></head>
+
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-55674 node-type-greenbiz-article region-content">
+    <div id="page-wrapper"><div id="page">
+
+
+   <!-- Page Header -->
+  <header class="navbar navbar-default gbz-header-main">
+    <div class="header-main-container clearfix">
+
+
+      <h1 id="logo" class="brand navbar-brand">
+        <a href="/" title="Home" rel="home">
+          <span class="icon-gbz-logo" aria-hidden="true"></span>
+          <span class="sr-only element-invisible">Home</span>
+        </a>
+      </h1>
+
+      <nav id="nav-container" role="navigation">
+                    <h2 class="element-invisible">Main menu</h2><ul id="main-menu-links" class="nav navbar-nav links primary-links"><li class="4116 first"><a href="/insights" class="first leaf">Insights</a></li>
+<li class="4117"><a href="/events" class="leaf">Events</a></li>
+<li class="2115 last"><a href="/video" class="last leaf">Videos</a></li>
+</ul>        
+                    <h2 class="element-invisible">Secondary menu</h2><ul id="secondary-menu-links" class="nav navbar-nav secondary-links collapse navbar-collapse"><li class="4306 first"><a href="/collections/sustainability" title="" class="first leaf">Sustainability</a></li>
+
+
+
+
+
+
+
+<li class="overflow-container drawer"><a class="actuator visible" href="#"><span>More +</span></a><div class="overflow-items"><ul><li class="1737"><a href="/collections/energy-climate" title="" class="leaf">Energy</a></li><li class="4307"><a href="/collections/buildings-facilities" title="" class="leaf">Buildings</a></li><li class="4308"><a href="/topics/cities" title="" class="leaf">Cities</a></li><li class="4309"><a href="/collections/water" title="" class="leaf">Water</a></li><li class="4310"><a href="/collections/transportation" title="" class="leaf">Transportation</a></li><li class="4311"><a href="/collections/supply-chain" title="" class="leaf">Supply Chain</a></li><li class="4312 last"><a href="/collections/design" title="" class="last leaf">Design</a></li></ul></div></li></ul>              </nav>
+
+      <nav id="gbz-header-icons" class="gbz-header-icons">
+        <div class="social drawer">
+          <a class="actuator">
+            <span aria-hidden="true"></span>
+            <span class="sr-only">Greenbiz on Social Media</span>
+          </a>
+          <div class="follow-links clearfix site"><div class="follow-link-wrapper follow-link-wrapper-twitter"><a href="http://new.greenbiz.com/twitter" class="" title="Follow GreenBiz on Twitter"><span class="fa fa-twitter" aria-hidden="true"></span><span class="sr-only">Twitter</span></a>
+</div><div class="follow-link-wrapper follow-link-wrapper-facebook"><a href="https://www.facebook.com/GreenBiz" class="" title="Follow GreenBiz on Facebook"><span class="fa fa-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a>
+</div><div class="follow-link-wrapper follow-link-wrapper-googleplus"><a href="https://plus.google.com/" class="" title="Follow GreenBiz on Google+"><span class="fa fa-google-plus" aria-hidden="true"></span><span class="sr-only">Google+</span></a>
+</div><div class="follow-link-wrapper follow-link-wrapper-linkedin"><a href="http://www.linkedin.com/groups?gid=664267" class="" title="Follow GreenBiz on LinkedIn"><span class="fa fa-linkedin" aria-hidden="true"></span><span class="sr-only">LinkedIn</span></a>
+</div><div class="follow-link-wrapper follow-link-wrapper-this-site"><a href="/rss.xml" class="" title="Follow GreenBiz on This site (RSS)"><span class="fa fa-rss" aria-hidden="true"></span><span class="sr-only">This site (RSS)</span></a>
+</div></div>        </div>
+        <a href="/search" class="actuator" id="search-actuator-sm">
+          <span aria-hidden="true"></span>
+          <span class="sr-only">Search</span>
+        </a>
+        <div id="gbz-search-drawer" class="search drawer" data-submitonclose="true">
+          <div id="gbz-search-container">
+            <form action="/search" method="get" id="greenbiz-search-form" accept-charset="UTF-8"><fieldset><div class="form-item form-type-textfield form-item-query">
+ <input class="form-control form-text" type="text" id="edit-query" name="query" value="" size="20" maxlength="128" placeholder="Enter search terms…">
+</div>
+<input name="" type="submit" id="edit-submit" value="Search" class="form-submit btn btn-primary" placeholder="Enter search terms…"></fieldset></form>          </div>
+          <a href="/search" class="actuator">
+            <span aria-hidden="true"></span>
+            <span class="sr-only">Search</span>
+          </a>
+        </div>
+      </nav>
+
+      <button id="hamburger-menu" class="navbar-toggle" type="button" data-toggle="collapse" data-target="#secondary-menu-links">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    </div>
+  </header>
+
+  
+  <!-- Page Main -->
+  <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
+    <div id="content" class="column">
+      <a id="main-content"></a>
+
+      
+      
+        <div class="region region-content">
+    
+
+<section class="content-main layout-two-col-content-first panel-display container">
+
+    <header class="header-content-main header-two-col-content-first">
+    <div class="panel-panel">
+      <div class="panel-panel-inner">
+        <div class="panel-pane pane-block pane-dfp-gbz-ros-billboard  hidden-xs hidden-sm">
+  
+      
+  
+  <div class="pane-content">
+    <div id="dfp-ad-gbz_ros_billboard-wrapper" class="dfp-tag-wrapper">
+<div id="dfp-ad-gbz_ros_billboard" class="dfp-tag-wrapper">
+  <div class="slug"><a href="#" class="closeButton ad-open" ad-id="dfp-ad-gbz_ros_billboard-wrapper">x</a></div>  <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-gbz_ros_billboard");
+    });
+  </script>
+<div id="google_ads_iframe_4797590/GBZ_ROS_billboard_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_4797590/GBZ_ROS_billboard_0" name="google_ads_iframe_4797590/GBZ_ROS_billboard_0" width="970" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px; vertical-align: bottom;"></iframe></div><iframe id="google_ads_iframe_4797590/GBZ_ROS_billboard_0__hidden__" name="google_ads_iframe_4797590/GBZ_ROS_billboard_0__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none;"></iframe></div>
+</div>  </div>
+
+  
+  </div>
+      </div>
+    </div>
+  </header>
+  
+  <div class="columns-content-main columns-two-col-content-first clearfix">
+
+    <section class="gbz-content-main">
+      <div class="panel-panel ">
+        <div class="panel-panel-inner">
+          <div class="panel-pane pane-node-title">
+  
+      
+  
+  <div class="pane-content">
+    <h1 class="page-title article-title">Exclusive: Inside McDonald's quest for sustainable beef</h1>
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-entity-view pane-node">
+  
+      
+  
+  <div class="pane-content">
+    <div div="" id="55674" class="ds-2col row node node-greenbiz-article node-promoted node-full view-mode-full content clearfix">
+
+  
+  <div class=" col-xs-12 col-sm-10 col-sm-push-2 col-md-9 col-md-push-3 col-lg-10 col-lg-push-2 gbz-content">
+    <h2 class="primary-topic"><a href="/blogs/featured/two-steps-forward">Two Steps Forward</a></h2><div class="field field-name-title"><h1 class="page-title article-title">Exclusive: Inside McDonald's quest for sustainable beef</h1></div><div class="author"><a href="/users/joel-makower" title="View user profile." class="username">Joel Makower</a></div><time>Tuesday, January 7, 2014 - 2:45am</time><div class="main-img"><div class="ds-1col file file-image file-image-jpeg view-mode-gbz_image_article_featured  clearfix">
+
+  
+  <figure class=" gbz-caption-group">
+    <div class="gbz-caption-wrapper">
+      <span data-picture="">
+<span data-src="http://www.greenbiz.com/sites/default/files/styles/gbz_article_primary_breakpoints_kalapicture_screen-md_1x/public/images/articles/featured/beef3.jpg?itok=4pOAzb1x" data-width="550" data-height="334"></span>
+<span data-media="(max-width: 479px)" data-src="http://www.greenbiz.com/sites/default/files/styles/gbz_article_primary_breakpoints_kalapicture_screen-xxs_1x/public/images/articles/featured/beef3.jpg?itok=qAR54S13" data-width="434" data-height="263"></span>
+<span data-media="(max-width: 479px) and (min-device-pixel-ratio: 2), (max-width: 479px) and (-o-min-device-pixel-ratio: 2), (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 479px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/gbz_article_primary_breakpoints_kalapicture_screen-xxs_2x/public/images/articles/featured/beef3.jpg?itok=RtQnO60I" data-width="868" data-height="526"></span>
+<span data-media="(min-width: 480px)and (max-width: 767px)" data-src="http://www.greenbiz.com/sites/default/files/styles/gbz_article_primary_breakpoints_kalapicture_screen-xs_2x/public/images/articles/featured/beef3.jpg?itok=-cDjzMt3" data-width="1444" data-height="878"></span>
+<span data-media="(min-width: 480px)and (max-width: 767px) and (min-device-pixel-ratio: 2), (min-width: 480px)and (max-width: 767px) and (-o-min-device-pixel-ratio: 2), (min-width: 480px)and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 480px)and (max-width: 767px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/gbz_article_primary_breakpoints_kalapicture_screen-xs_2x/public/images/articles/featured/beef3.jpg?itok=-cDjzMt3" data-width="1444" data-height="878"></span>
+<span data-media="(min-wdith: 768px) and (max-width: 991px)" data-src="http://www.greenbiz.com/sites/default/files/styles/gbz_article_primary_breakpoints_kalapicture_screen-sm_1x/public/images/articles/featured/beef3.jpg?itok=LE6WFfYx" data-width="830" data-height="505"></span>
+<span data-media="(min-wdith: 768px) and (max-width: 991px) and (min-device-pixel-ratio: 2), (min-wdith: 768px) and (max-width: 991px) and (-o-min-device-pixel-ratio: 2), (min-wdith: 768px) and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 2), (min-wdith: 768px) and (max-width: 991px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/gbz_article_primary_breakpoints_kalapicture_screen-sm_2x/public/images/articles/featured/beef3.jpg?itok=9MQKcQBm" data-width="1660" data-height="1010"></span>
+<span data-media="(min-width: 992px) and (max-width: 1199px)" data-src="http://www.greenbiz.com/sites/default/files/styles/gbz_article_primary_breakpoints_kalapicture_screen-md_1x/public/images/articles/featured/beef3.jpg?itok=4pOAzb1x" data-width="550" data-height="334"></span>
+<span data-media="(min-width: 992px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), (min-width: 992px) and (max-width: 1199px) and (-o-min-device-pixel-ratio: 2), (min-width: 992px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 992px) and (max-width: 1199px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/gbz_article_primary_breakpoints_kalapicture_screen-md_2x/public/images/articles/featured/beef3.jpg?itok=ViZc4_DJ" data-width="1100" data-height="668"></span>
+<span data-media="(min-width: 1200px)" data-src="http://www.greenbiz.com/sites/default/files/styles/gbz_article_primary_breakpoints_kalapicture_screen-lg_1x/public/images/articles/featured/beef3.jpg?itok=RpUQywvC" data-width="735" data-height="447"></span>
+<span data-media="(min-width: 1200px) and (min-device-pixel-ratio: 2), (min-width: 1200px) and (-o-min-device-pixel-ratio: 2), (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/gbz_article_primary_breakpoints_kalapicture_screen-lg_2x/public/images/articles/featured/beef3.jpg?itok=vjntOO-g"></span>
+<noscript>&lt;img class="gbz-article-primary-breakpoints-kalapicture-screen-md-1x" src="http://www.greenbiz.com/sites/default/files/styles/gbz_article_primary_breakpoints_kalapicture_screen-md_1x/public/images/articles/featured/beef3.jpg?itok=4pOAzb1x" width="550" height="334" alt="" /&gt;</noscript>
+<img alt="thumbnail [550x334]" title="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjMzNCIgdmlld0JveD0iMCAwIDU1MCAzMzQiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzPjwvZGVmcz48cmVjdCB3aWR0aD0iNTUwIiBoZWlnaHQ9IjMzNCIgZmlsbD0iIzMxMmYzMCI+PC9yZWN0PjxnPjx0ZXh0IHg9IjE3OCIgeT0iMTY3IiBzdHlsZT0iZmlsbDojRUVFO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjM0cHg7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+dGh1bWJuYWlsPC90ZXh0PjwvZz48L3N2Zz4=" width="550" height="334" data-src="holder.js/550x334/auto/text:thumbnail/#312f30:#EEE" data-holder-rendered="true"></span>            
+          </div>
+
+
+    
+  </figure>
+
+</div>
+
+</div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p><em>Part 1 of a three-part series running this week. Part 2: <a href="http://www.greenbiz.com/blog/2014/01/08/how-big-mac-becomes-sustainable">&nbsp;</a></em><em><a href="http://www.greenbiz.com/blog/2014/01/08/how-big-mac-becomes-sustainable?mkt_tok=3RkMMJWWfF9wsRolvq%2FBZKXonjHpfsX94vpwCP7q28E5%2FU14W%2BiSaxO43ZVcCZwxbeKXDys0TsIwkUF2MNnYLdYV">How a Big Mac becomes sustainable</a>. Part 3: <a href="http://www.greenbiz.com/blog/2014/01/09/can-beef-industry-collaborate-its-way-sustainability">Can the beef industry collaborate its way to sustainability?</a></em></p>
+<p>Today, McDonald’s<a href="http://www.aboutmcdonalds.com/content/mcd/sustainability/signature_programs/beef-sustainability.html"> announces</a> that it will begin purchasing verified sustainable beef in 2016, the first step on a quest to purchase sustainable beef for all of its burgers worldwide.</p>
+<p>Behind McDonald’s lofty ambitions is a complex story that has been unfolding over the past several years. It involves engaging the global beef industry, from ranchers and feedlots to restaurants and supermarkets, as well as environmental groups, academics and the McDonald’s senior executive team.</p>
+<p>I watched the story unfold for much of 2013 and recently interviewed nearly a dozen McDonald’s executives, one of the company’s largest beef suppliers and its principal NGO partner on this initiative, along with other industry experts. The story is remarkable not just because of its scope and scale, but also as a case study on what it takes to nudge a large and entrenched industry toward sustainability in today’s global marketplace.</p>
+<p>(Sustainable beef will be the topic of a plenary panel at our upcoming <a href="http://www.greenbiz.com/events/greenbiz-forum/2014/02/arizona">GreenBiz Forum</a>, featuring several people in this article.)</p>
+<p>“Our vision is to buy verifiable, sustainable beef in the future for all of our beef,” said Bob Langert, McDonald’s vice president, global sustainability. “We have achieved internal alignment and energy around that aspirational goal, which is a big task,” he told me during a November visit to the company’s headquarters in Oak Brook, Ill.</p>
+<p>Langert says McDonald’s isn’t yet ready to commit to a specific quantity it would purchase in 2016, or when it might achieve its “aspirational goal” of buying 100 percent of its beef from “verified sustainable sources.” (The company only will say, “We will focus on increasing the annual amount each year.”) Realistically, it could take a decade or more to achieve the 100-percent goal.</p>
+<p>Beef isn’t the only sustainability issue the company is looking at. For years, the company has been addressing the environmental and social impacts of its supply chain, one ingredient at a time. The company's <a href="http://www.aboutmcdonalds.com/mcd/sustainability/signature_programs/sustainable_land_management_commitment.html">Sustainable Land Management Commitment</a>, unveiled in 2011, requires suppliers to gradually source food and materials from sustainably managed land, although there are no specific timelines, and it is initially focusing on beef, poultry, fish, coffee, palm oil and packaging. Notably missing for now are pork, potatoes and other produce.</p>
+<p>The land management initiative led the company to commit to <a href="http://news.mcdonalds.com/press-releases/mcdonald-s-joins-roundtable-on-sustainable-palm-oi-nyse-mcd-0811499">source-only palm oil certified</a> by the <a href="http://www.rspo.org">Roundtable on Sustainable Palm Oil</a> by 2015. All of its fish worldwide <a href="http://www.aboutmcdonalds.com/mcd/sustainability/library/policies_programs/sustainable_supply_chain/sustainable_fisheries.html">come from fisheries certified by the Marine Stewardship Council</a>. McDonald’s requires its suppliers to source 100 percent Rainforest Alliance <a href="http://www.aboutmcdonalds.com/mcd/sustainability/signature_programs/coffee_story.html">certified coffee</a> for its espresso in the United States, for all of its coffee in Australia and New Zealand and all of it in Europe except for decaf. In 2012, about 25 percent of McDonald’s coffee bean purchases worldwide were certified by Rainforest Alliance, UTZ Certified and Fair Trade USA.</p>
+<p>That McDonald’s is putting a stake in the ground on beef years before it anticipates achieving its aspirational goal is notable. It also reflects the elevation of sustainability as a business issue within the world’s largest hamburger chain.</p>
+<p>“We’ve upped our game related to how we’re approaching corporate social responsibility and sustainability at McDonald’s,” said Langert. The beef goal, he says, “fits into a big picture where senior leadership says we need to do more, take a bigger stake, be a bigger leader and connect with consumers more. Beef is one of the lead things coming out of that effort. We have internal alignment, support, budget, supplier support and the tactical plan to achieve that aspiration to start buying sustainable beef in 2016.”</p>
+<p>He adds: “It’s a small part risk management and a large part about growing our business by making a positive business for society.”</p>
+<p><strong>A big appetite for change</strong></p>
+<p>Langert’s boss, J.C. Gonzalez-Mendez, senior vice president of global CSR, sustainability and philanthropy, described to me the larger vision: “We aspire to source all of our food and packaging from sustainable sources, verified sources for sustainability on the way they treat animals, on the way they treat people, as well as the planet.”</p>
+<p>Beef, of course, is at the heart of the McDonald’s brand. The company boasts five billion-dollar beef-related brands — Big Mac, Quarter Pounder, Quarter Pounder with cheese, Double Cheeseburger and Cheeseburger. Each generates more than $1 billion in annual sales. Suffice to say, McDonald’s beef choices are not small potatoes.</p>
+<p>Beef also represents about 28 percent of the company’s carbon footprint — nearly as much as the operation of its 34,500 restaurants worldwide. Beyond the greenhouse gas emissions associated with raising cows and producing beef, other major environmental impacts include deforestation and land degradation for cattle grazing or feed; the contamination of water, air and other natural resources; and the energy and natural resources embedded in fertilizers, pesticides and herbicides for grain to feed cattle.</p>
+<p>The company has been addressing some public concerns about beef for years. In the late 1980s, for example, it committed not to source beef from the Amazon biome. In 1997, McDonald’s began working with Dr. Temple Grandin, a well-known expert on animal behavior, to develop <a href="http://www.aboutmcdonalds.com/mcd/sustainability/library/policies_programs/sustainable_supply_chain/animal_welfare.html">animal welfare standards</a> for cows, chickens and hogs — as well as a supplier-audit program. Those standards have been adopted by competitors and the broader retail food industry.</p>
+<p>The importance of beef as a sustainability issue for McDonald’s was driven home about a year and a half ago, when the company’s leadership team met with sustainability leaders from Unilever, Coca-Cola, Wal-Mart and other companies, along with leaders of activist groups such as WWF and Greenpeace.</p>
+<p>As Gonzalez-Mendez recalled, McDonald’s CEO Donald Thompson asked the group, “If you were CEO of the company, what would you concentrate on?” In near unison, everybody responded, “Beef.” “We picked beef not because it’s easy, but because it’s important to our consumers, because it’s important to the our stakeholders,” said Gonzalez-Mendez.</p>
+<p>Beef is also a growth platform for McDonald’s — one of four categories the company has targeted to increase revenue, along with poultry, breakfasts and beverages. To that end, the company recognizes that its future appetite for beef, as it is currently produced, is unsustainable in every sense of the word. For business reasons alone, it needed to lead the change.</p>
+<p><strong>How now?</strong></p>
+<p>McDonald’s sustainable beef journey began nearly five years ago, when it engaged a team from WWF. The company has a <a href="http://www.aboutmcdonalds.com/mcd/sustainability/signature_programs/ngo_collaborations.html">long history of engaging nonprofits</a> as partners and consultants, beginning in 1989, when Langert partnered with a ragtag bunch from Environmental Defense Fund to find solutions to solid waste, at the time a major reputational issue for McDonald’s. The company opened its doors to the EDF staffers, giving them access to confidential information and tours of its operations. Three EDF staff worked behind the counter at McDonald’s restaurants in New York City and outside Washington, D.C. The group produced a long list of waste-reduction opportunities that during the 1990s saved the company about 300 million pounds of packaging, with no additional investment. Over the years, Langert has engaged with a range of other activist groups, even taking a nine-day raft trip down the Amazon River with Greenpeace in 2007 to learn about Amazon deforestation resulting from growing soybeans, a key commodity for McDonald’s.</p>
+<p>In early 2009, McDonald’s asked WWF to do a study of what its priorities should be to reduce supply-chain risk. “We gave them information about everything we buy, how much and where it comes from,” said Langert. “We gave them open access to all our experts.” WWF produced a report identifying the top priorities where McDonald’s could make the biggest difference.</p>
+<p>WWF’s presentation, in March 2010, identified the environmental, social, economic and socio-political implications of four key commodities: beef; chicken; coffee; and oils, such as soy, palm and canola. WWF developed a Supply Risk Assessment, indicating the hotspots and likelihood of threats to the company. The effort validated what everyone already intuitively knew: Beef was at the top of the list.</p>
+<p>“Beef production has an enormous impact on the ecology of our planet,” Suzanne Apple, vice president for business and industry at WWF, told me. “But people are going to eat beef, particularly as the population grows to 9 billion, developing countries become more developed and incomes rise. Our approach is that if we can create a plan for sustainable beef production, we are at least giving people a choice and reducing the impacts of how beef is produced. Will it be the be-all, end-all of solving all the environmental challenges? No. But without any criteria or sustainable beef principles, we’re cutting down the Amazon to raise beef. How do we manage that?”</p>
+<p>The WWF study served up some surprises to McDonald’s management. One of the biggest was that cattle feed — in particular, grain fed to cows in North America — represented close to half of beef’s environmental impacts. McDonald’s execs hadn’t spent much time thinking about what was being fed to the cattle that ended up as ground beef in its burgers — it was an upstream issue out of their concern and influence. Suddenly, it was a central part of the equation.</p>
+<p><strong>All cattle is local</strong></p>
+<p>But it wasn’t that simple. A Big Mac or Quarter Pounder is at the tail end of one of the world’s more complex supply chains. McDonald’s doesn’t buy beef directly from ranchers or slaughterhouses. It buys finished, frozen patties from about 20 food processing companies globally. In the U.S. these include Keystone Foods, a division of the Brazilian food service giant Marfrig group, and Oklahoma City-based Lopez Foods, which has been producing patties for McDonald’s since 1968. Cows and beef may change hands four or five times between farm and finished patties.</p>
+<p>When you trace the hamburger supply chain upstream, you find yourself at one of the roughly 400,000 cattle farms that provide meat that eventually ends up in a McDonald’s burger, many of them small operations with 50 or fewer head of cattle. They are the beginning of a value chain that includes ranches, dairy farms, cattle stockers, feedlots, beef packers and processors. Along the way, cows are raised, fattened and slaughtered, and the resulting beef is trimmed, ground, mixed with other beef, formed into patties, inspected, packaged, frozen, shipped to distribution centers and, eventually, to one of McDonald’s worldwide restaurants.</p>
+<p>The ground beef used by McDonald’s is made from the trim around steaks and roasts, and allows use of the entire cow carcass. In order to get the right ratio of lean to fat (for example, an 80/20 blend), processors combine trim from a number of animals.</p>
+<p>It’s more complex still. Some countries, particularly in Europe — where Bovine spongiform encephalopathy, better known as “mad cow disease,” roiled beef markets a decade ago — allow only beef produced within their national borders. There are also significant differences in how cows are raised among the major beef-producing regions, such as North America, Brazil, Europe and Australia-New Zealand. Most cows in the United States are grain fed for part of their lives, for example, while cows in Brazil, Europe and Australia-New Zealand live only on grass, hay and crop silage. Even within the U.S., there are differences in how cows are raised between, say, Montana and Georgia, based on regional climate, soil, grasses and more.</p>
+<p>So, McDonald’s couldn’t just order up a change in cattle diet, or anything else. The road to sustainable beef would require transforming not just a supply chain, but an industry.</p>
+<p>“Sustainability is one of those issues that’s defined by the geography in which you’re located, based upon which element you’re focused on,” explained Cameron Bruett, Chief Sustainability Officer at JBS USA, a division of Brazil-based JBS S.A., the world’s largest beef producer. “In Australia, there’s a lot of land-rights issues. There’s environmental issues around the Great Barrier Reef and things of that nature. In Brazil, it’s all about Amazon deforestation, the use of slave child labor and encroachment on indigenous territories. In the United States, it’s slightly less defined.”</p>
+<p>Compounding all this is the fact that McDonald’s, despite its size, typically represents only between 1.5 and 2 percent of total beef consumption in countries where it operates. For example, roughly two-thirds of the U.S. beef supply goes into foodservice — restaurants and cafeterias of all descriptions — while the other third is sold in supermarkets.&nbsp;Transforming an industry likely will take more than just one giant burger chain.</p>
+<p>McDonald’s does bring one key advantage to the table: its relationships with key suppliers. The company uses a small group of strategic suppliers that make up a significant part of its business — about 20 companies comprise two-thirds of its annual spend.</p>
+<p>“Many of our suppliers have been with us for 30 or 40 years,” says Francesca DeBiase, vice president of strategic sourcing and sustainability, Worldwide Supply Chain Management. “We’re very transparent and open with our suppliers. Most of them do business with a handshake. Up until Sarbanes-Oxley, we didn’t really have any contracts with them, so it’s been a very open and trusting relationship, and our belief is that brings a competitive advantage to the system.”</p>
+<p>One result of those long-term relationships, says DeBiase, is that suppliers are willing to make investments on McDonald’s behalf, implementing innovations and efficiencies that suppliers typically don't do in the purely transactional relationships often seen in commodity markets, as well as in the beef supply chain of many of McDonald’s competitors. Those relationships could help McDonald’s steer the marketplace in the direction of sustainability.</p>
+<p><strong>So, what’s “sustainable beef”?</strong></p>
+<p>One obvious hurdle to McDonald’s aspiration is the definition of “sustainable beef”: There is none — at least, not yet.</p>
+<p>McDonald’s is pretty clear that it didn’t want to create a standard. “Sustainable beef is not going to be defined by McDonald’s,” said Langert. “The key here is to get sustainable beef defined by a wide stakeholder group and coalition. We needed a bigger critical mass.”</p>
+<p>Toward that goal, in November 2010 McDonald’s came together with Wal-Mart, JBS, Cargill, WWF and others to convene the Global Conference on Sustainable Beef. The four-day event in Denver brought together 350 players from around the world — packers and processors, restaurants and retailers, associations and activists.</p>
+<p>Out of that event came the formation in 2012 of the <a href="http://grsbeef.org">Global Roundtable on Sustainable Beef</a>, or GRSB, a collaboration of many players at that 2010 meeting, including McDonald’s, whose senior director of global purchasing and supply chain management, Gary Johnson, serves on the executive board. JBS USA’s Cameron Bruett serves as the president of GRSB.</p>
+<p>The roundtable spent much of 2012 getting organized. “2013 is really our first year of hard organized work with the structure and people identified to help lead the organization,” said Bruett.</p>
+<p>“One of the first priorities we identified was defining this nebulous monster of a term, sustainability,” he explained. “What does it mean? And, particularly, what does it mean for beef? Our idea was to scope out five to 10 critical areas that we think no matter where you are in the world producing beef, and no matter what part of the supply chain you’re involved in, you should be addressing. And if you are addressing those areas in whatever manner is suitable for your region, you are on the path to continuous improvement. You are on the path to sustainability.”</p>
+<p>The group developed six draft principles that the membership is considering, along with multiple criteria within each principle. The principles cover people (human rights, safe and healthy work environment), community (culture, heritage, employment, land rights, health), animal health and welfare, food safety and quality, natural resources (ecosystem health) and efficiency and innovation (reducing waste, optimizing production, economic vitality).</p>
+<p>GRSB members were sent the draft "Principles and Criteria for Sustainable Beef" in mid-December, and a wider group of stakeholders will receive them Feb. 1, after which the council will integrate “any necessary changes” and vote on whether to release them publicly. Assuming so, there will be a general release March 1, the beginning of a 60-day public comment period. The plan is that the final approval of the document will take place through a member vote at the Second Global Conference on Sustainable Beef, in São Paulo in August.</p>
+<p>According to GRSB, there won’t be a single global standard, but rather many regional ones, housed in such organizations as <a href="http://www.pecuariasustentavel.org.br/gtps/index.php?idioma=2">Grupo de Trabalho da Pecuária Sustentável</a>, Brazil’s sustainable beef roundtable, and similar groups being formed in Canada, Australia and other beef-producing regions. It is likely that these groups will develop their own certification, verification and labeling schemes.</p>
+<p>(More about the GRSB in <a href="http://www.greenbiz.com/blog/2014/01/09/can-beef-industry-collaborate-its-way-sustainability">Part 3</a> of this series.)</p>
+<p><strong>Will the public even care?</strong></p>
+<p>How all this plays out in the McDonald’s global restaurant empire remains to be seen. And the road from here to sustainable Big Macs is rife with unknowns. Among them: Will the company and the GRSB be able to enlist a critical mass of the global beef industry to engender a tipping point in production techniques? Will Burger King, Wendy’s, Arby’s and other beef-centric fast-food chains join in? (And what about higher-end restaurants?) Will regional variations of the standard meet the tough scrutiny of activists and local stakeholders? Will all of this happen within acceptable costs so as not to drive up the cost of beef or burgers unacceptably? How will sustainable beef be perceived in the face of other pressing sustainability and reputational issues facing the fast-food industry, such as obesity and fair wages for employees?</p>
+<p>And, not insignificantly: Will the meat-eating public even care?</p>
+<p>To that last question, Langert thinks they will. “From the research we do, consumers really care about where their food comes from,” he told me. McDonald’s has done private consumer research with the firm GlobeScan. “What comes through very strong is high expectations for companies like McDonald’s across the board in CSR and sustainability."</p>
+<p>At the top of the list, he says, are nutrition and obesity. Just below that is food sourcing, such as animal welfare and the use of antibiotics — likely more focused on health and ethics than on planetary concerns. Where the environment is mentioned, the top issue is waste management and recycling. “We think they’re going to vote with their feet more and more on this issue,” said Langert.</p>
+<p>“Our customers and stakeholders have asked us to do this,” said Gonzalez-Mendez. “Sixty-nine million people visit us every single day. They like their food and they want to know more about where it comes from and how animals are being treated.”</p>
+<p>Consumer acceptance isn’t necessarily a factor for McDonald’s, long resigned to the fact that it will never receive full credit for industry-leading sustainability initiatives around such things as fisheries or animal welfare. And Langert and his colleagues are well aware that critics will scoff that beef can never be considered “sustainable,” no matter how strict the standards, given the resource intensity of raising cattle compared with that of other protein sources — not to mention the public health impacts of eating fast food.</p>
+<p>As anthropologist Richard H. Robbins put it in his 1999 book "Global Problems and the Culture of Capitalism," Americans’ taste for beef “goes well beyond our supposed individual food preferences. It is a consequence of a culture in which food as a commodity takes a form defined by economic, political and social relationships.” Robbins is hardly alone among critics of Americans’ diets and the multinational companies that feed them.</p>
+<p>“There’s always going to be criticism for big brands,” said Langert. “I think that’s part of the territory. At the end of the day, this is not about reacting to critics of some sort. We’ve had a fair share of those over a couple decades. This is totally the opposite. This is totally generated out of us devising a strategy, wanting to grow our business and seeing the opportunity to be a leader in this area and drive some business benefit as well. So our whole vision of sustainability at McDonald’s is combining our shared value for society and the benefit to our business. That’s the strategic pathway that our senior leadership has viewed this now. It’s a new lens for us, by the way. We’ve never really looked at CSR and sustainability as a growth platform.”</p>
+<p>Langert seems genuinely energized by the vision of sustainable beef (although, truth be told, Langert has seemed genuinely energized by nearly everything he’s undertaken over the more than 20 years I’ve known him).</p>
+<p>So is his boss. “We believe that we’re not alone, that the industry is with us, that academia is with us, that our customers are asking for us to do this,” says Gonzalez-Mendez. “We’re coming in with our eyes open, and we’re excited about the prospects of being able to make an impact on society in this fashion.”</p>
+<p>Having one’s eyes open no doubt will be a key to success. Among the realizations is that McDonald’s, for all its commitment and market clout, can’t do this alone. Other big beef buyers will have to follow suit.</p>
+<p>“It was important to have McDonald’s there, but also Wal-Mart,” said Apple of the 2010 Denver conference. “Wal-Mart is a huge seller of beef and beef products. If you look beyond McDonald’s, it’s got to be about all the players in the beef industry. It can’t be about one individual company.”</p>
+<p>Still, she said, “When you have a company like McDonald’s that is willing to step into this arena — which is like stepping into the unknown — it’s real leadership.”</p>
+<p><em><a href="http://www.greenbiz.com/blog/2014/01/08/how-big-mac-becomes-sustainable?mkt_tok=3RkMMJWWfF9wsRolvq%2FBZKXonjHpfsX94vpwCP7q28E5%2FU14W%2BiSaxO43ZVcCZwxbeKXDys0TsIwkUF2MNnYLdYV">Next, Part 2: How a Big Mac becomes sustainable</a>.&nbsp;</em><em>Part 3:&nbsp;<a href="http://www.greenbiz.com/blog/2014/01/09/can-beef-industry-collaborate-its-way-sustainability">Can the beef industry collaborate its way to sustainability?</a></em></p>
+<p><em>Photocollage of cow and Golden Arches by GreenBiz Group.</em></p>
+</div></div></div><div class="field field-name-field-greenbiz-topics-ref field-type-entityreference field-label-inline clearfix"><div class="field-label">Topics:&nbsp;</div><div class="field-items"><div class="field-item even"><ul class="nav nav-pills tags" role="navigation"><li class="link-0 first"><a href="/topics/food-agriculture">Food &amp; Agriculture</a></li>
+<li class="link-1 last"><a href="/topics/supply-chain">Supply Chain</a></li>
+</ul></div></div></div>  </div>
+
+  <div class=" col-xs-12 col-sm-2  col-sm-pull-10 col-md-3 col-md-pull-9 col-lg-2 col-lg-pull-10  gbz-content-aside">
+    <div class="row">
+      <section class="article-tools col-xs-12 field field-name-gbz-service-links field-type-ds field-label-hidden"><div class="service-links"><h5 class="service-links-title">share this article</h5><div class="item-list"><ul class="nav service-links"><li class="first"><a href="http://twitter.com/share?url=http%3A//grn.bz/1aCRo5l&amp;text=Exclusive%3A%20Inside%20McDonald%27s%20quest%20for%20sustainable%20beef&amp;via=GreenBiz&amp;hashtags=GrnBz" title="Share this on Twitter" class="service-links-twitter" rel="nofollow" target="_blank"><span class="fa fa-twitter" aria-hidden="true"></span>
+<span class="sr-only">Twitter</span></a></li>
+<li><a href="http://www.facebook.com/sharer.php?u=http%3A//grn.bz/1aCRo5l&amp;t=Exclusive%3A%20Inside%20McDonald%27s%20quest%20for%20sustainable%20beef" title="Share on Facebook" class="service-links-facebook" rel="nofollow" target="_blank"><span class="fa fa-facebook" aria-hidden="true"></span>
+<span class="sr-only">Facebook</span></a></li>
+<li class="last"><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A//grn.bz/1aCRo5l&amp;title=Exclusive%3A%20Inside%20McDonald%27s%20quest%20for%20sustainable%20beef&amp;summary=Part%201%20of%20a%20three-part%20series%20running%20this%20week.%20Part%202%3A%20%26nbsp%3BHow%20a%20Big%20Mac%20becomes%20sustainable.%20Part%203%3A%20Can%20the%20beef%20industry%20collaborate%20its%20way%20to%20sustainability%3F&amp;source=GreenBiz" title="Publish this post to LinkedIn" class="service-links-linkedin" rel="nofollow" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span>
+<span class="sr-only">LinkedIn</span></a></li>
+</ul></div></div></section><div class="even field field-name-gbz-content-author field-type-ds field-label-hidden col-xs-12"><div class="view view-gbz-users view-id-gbz_users view-display-id-content_author_pane view-dom-id-f166128af4e6273c54b528785394f58c">
+        
+  
+  
+      <div class="view-content">
+        <div class="author vcard clearfix">
+      
+          <a href="/users/joel-makower"><span data-picture="">
+<span data-src="http://www.greenbiz.com/sites/default/files/styles/article_contributor_avatar/public/images/users/avatars/joel-newtwitterpix.jpg?itok=j29wFxyQ" data-width="130" data-height="156"></span>
+<span data-media="(min-width: 750px)" data-src="http://www.greenbiz.com/sites/default/files/styles/article_contributor_avatar/public/images/users/avatars/joel-newtwitterpix.jpg?itok=j29wFxyQ" data-width="130" data-height="156"></span>
+<span data-media="(min-width: 750px) and (min-device-pixel-ratio: 2), (min-width: 750px) and (-o-min-device-pixel-ratio: 2), (min-width: 750px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 750px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/article_contributor_avatar_2x/public/images/users/avatars/joel-newtwitterpix.jpg?itok=8ESOrX3A" data-width="260" data-height="312"></span>
+<span data-media="(max-width: 749px)" data-src="http://www.greenbiz.com/sites/default/files/styles/article_contributor_avatar_sm/public/images/users/avatars/joel-newtwitterpix.jpg?itok=_6wBEgm_" data-width="50" data-height="60"></span>
+<span data-media="(max-width: 749px) and (min-device-pixel-ratio: 2), (max-width: 749px) and (-o-min-device-pixel-ratio: 2), (max-width: 749px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 749px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/article_contributor_avatar_sm_2x/public/images/users/avatars/joel-newtwitterpix.jpg?itok=a_PbSBjy" data-width="100" data-height="120"></span>
+<noscript>&lt;img class="article-contributor-avatar" src="http://www.greenbiz.com/sites/default/files/styles/article_contributor_avatar/public/images/users/avatars/joel-newtwitterpix.jpg?itok=j29wFxyQ" width="130" height="156" alt="" /&gt;</noscript>
+<img alt="thumbnail [130x156]" title="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTMwIiBoZWlnaHQ9IjE1NiIgdmlld0JveD0iMCAwIDEzMCAxNTYiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzPjwvZGVmcz48cmVjdCB3aWR0aD0iMTMwIiBoZWlnaHQ9IjE1NiIgZmlsbD0iIzMxMmYzMCI+PC9yZWN0PjxnPjx0ZXh0IHg9IjI5LjUiIHk9Ijc4IiBzdHlsZT0iZmlsbDojRUVFO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEycHg7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+dGh1bWJuYWlsPC90ZXh0PjwvZz48L3N2Zz4=" width="130" height="156" data-src="holder.js/130x156/auto/text:thumbnail/#312f30:#EEE" data-holder-rendered="true"></span></a>    
+          <h4 class="author-name"><a href="/users/joel-makower" title="View user profile." class="username">Joel Makower</a></h4>    
+          <h5 class="author-title">Chairman &amp; Executive Editor</h5>    </div>
+    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <div class="view view-gbz-users view-id-gbz_users view-display-id-content_contrib_1_pane view-dom-id-27ee5142587067b3ab7d00649cde1875">
+        
+  
+  
+  
+  
+  
+  
+  
+  
+</div><div class="view view-gbz-users view-id-gbz_users view-display-id-rest_content_contributors_pane view-dom-id-dfe24e1287ff9c9a0871331d6b511889">
+        
+  
+  
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  
+  
+</div></div>    </div>
+
+  </div>
+
+</div>
+
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-views-panes pane-gbz-articles-related-articles-pane">
+  
+        <h2 class="pane-title">Related Content</h2>
+    
+  
+  <div class="pane-content">
+    <div class="view view-gbz-articles view-id-gbz_articles view-display-id-related_articles_pane view-dom-id-d0dc505a23bb2cb951e6bc0a0a9b18f9 jquery-once-1-processed">
+        
+  
+  
+      <div class="view-content">
+        <div>
+    <div id="55695" class="content-list-item node node-greenbiz-article node-promoted view-mode-gbz_content_list content clearfix">
+
+  
+  <div class="media ">
+    <div class="media-object field-name -field-featured-image"><a href="/blog/2014/01/08/how-big-mac-becomes-sustainable"><img class="gbz-list-wide" src="http://www.greenbiz.com/sites/default/files/styles/gbz_list_wide/public/images/articles/featured/bigmac.jpg?itok=PnBs6mk-" width="115" height="70" alt="How a Big Mac becomes sustainable featured image"></a></div>  </div>
+
+  <div class="content-list-body ">
+    <div class="field field-name-title"><h4 class="content-list-heading"><a href="/blog/2014/01/08/how-big-mac-becomes-sustainable">How a Big Mac becomes sustainable</a></h4></div><span class="attribution"><span class="label-inline">By</span><a href="/users/joel-makower" title="View user profile." class="username">Joel Makower</a></span>  </div>
+
+</div>
+
+  </div>
+  <div>
+    <div id="55701" class="content-list-item node node-greenbiz-article node-promoted view-mode-gbz_content_list content clearfix">
+
+  
+  <div class="media ">
+    <div class="media-object field-name -field-featured-image"><a href="/blog/2014/01/09/can-beef-industry-collaborate-its-way-sustainability"><img class="gbz-list-wide" src="http://www.greenbiz.com/sites/default/files/styles/gbz_list_wide/public/images/articles/featured/cow3.jpg?itok=E5Xn_M2k" width="115" height="70" alt="Can the beef industry collaborate its way to sustainability? featured image"></a></div>  </div>
+
+  <div class="content-list-body ">
+    <div class="field field-name-title"><h4 class="content-list-heading"><a href="/blog/2014/01/09/can-beef-industry-collaborate-its-way-sustainability">Can the beef industry collaborate its way to sustainability?</a></h4></div><span class="attribution"><span class="label-inline">By</span><a href="/users/joel-makower" title="View user profile." class="username">Joel Makower</a></span>  </div>
+
+</div>
+
+  </div>
+  <div>
+    <div id="100757" class="content-list-item node node-greenbiz-article view-mode-gbz_content_list content clearfix">
+
+  
+  <div class="media ">
+    <div class="media-object field-name -field-featured-image"><a href="/article/principles-place-mcdonalds-looks-source-sustainable-beef-canada"><img class="gbz-list-wide" src="http://www.greenbiz.com/sites/default/files/styles/gbz_list_wide/public/images/articles/featured/mcdonalds-grsb1.jpg?itok=JghjzMrC&amp;c=fc3934ba05723f12fe96a6815414a723" width="115" height="70" alt="Principles in place, McDonald’s looks to Canada for sustainable beef featured image"></a></div>  </div>
+
+  <div class="content-list-body ">
+    <div class="field field-name-title"><h4 class="content-list-heading"><a href="/article/principles-place-mcdonalds-looks-source-sustainable-beef-canada">Principles in place, McDonald’s looks to Canada for sustainable beef</a></h4></div><span class="attribution"><span class="label-inline">By</span><a href="/users/joel-makower" title="View user profile." class="username">Joel Makower</a></span>  </div>
+
+</div>
+
+  </div>
+  <div>
+    <div id="55795" class="content-list-item node node-greenbiz-article view-mode-gbz_content_list content clearfix">
+
+  
+  <div class="media ">
+    <div class="media-object field-name -field-featured-image"><a href="/blog/2014/01/13/mcdonalds-sustainable-beef-reactions"><img class="gbz-list-wide" src="http://www.greenbiz.com/sites/default/files/styles/gbz_list_wide/public/images/articles/featured/talking-cow-tarasov-sstock.jpg?itok=9i2edY1I" width="115" height="70" alt="McDonald&amp;#039;s sustainable beef plans: Reactions featured image"></a></div>  </div>
+
+  <div class="content-list-body ">
+    <div class="field field-name-title"><h4 class="content-list-heading"><a href="/blog/2014/01/13/mcdonalds-sustainable-beef-reactions">McDonald's sustainable beef plans: Reactions</a></h4></div><span class="attribution"><span class="label-inline">By</span><a href="/users/elsa-wenzel" title="View user profile." class="username">Elsa Wenzel</a></span>  </div>
+
+</div>
+
+  </div>
+  <div>
+    <div id="41744" class="content-list-item node node-greenbiz-article node-promoted view-mode-gbz_content_list content clearfix">
+
+  
+  <div class="media ">
+    <div class="media-object field-name -field-featured-image"><a href="/blog/2011/02/13/bob-langerts-long-strange-trip-green-golden-arches"><img class="gbz-list-wide" src="http://www.greenbiz.com/sites/default/files/styles/gbz_list_wide/public/images/articles/featured/110213-mcds-w.jpg?itok=L4ypag3j" width="115" height="70" alt="Bob Langert&amp;#039;s Long, Strange Trip to Green the Golden Arches featured image"></a></div>  </div>
+
+  <div class="content-list-body ">
+    <div class="field field-name-title"><h4 class="content-list-heading"><a href="/blog/2011/02/13/bob-langerts-long-strange-trip-green-golden-arches">Bob Langert's Long, Strange Trip to Green the Golden Arches</a></h4></div><span class="attribution"><span class="label-inline">By</span><a href="/users/marc-gunther" title="View user profile." class="username">Marc Gunther</a></span>  </div>
+
+</div>
+
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-livefyre-livefyre-comments">
+  
+      
+  
+  <div class="pane-content">
+    <div id="livefyre-comments"><div class="fyre fyre-width-medium"><div class="fyre-widget "><iframe src="http://www.livefyre.com/v3/tracking/http%3A%2F%2Fwww.greenbiz.com%2Fblog%2F2014%2F01%2F07%2Finside-mcdonalds-quest-sustainable-beef%26sa%3DU%26ei%3DhjRYVIf9BoyeNvalgugJ%26ved%3D0CO8EEBYwaA%26usg%3DAFQjCNFqyCIy34ixmg-QsdrhjNn8QMemHg" frameborder="0" style="position: absolute; height: 1px; width: 1px; z-index: 99999; background-color: transparent;"></iframe><div class="fyre-featured-content-wrapper" style="display: none"></div><div class="fyre-stream-stats"><div class="fyre-comment-count"><span>0 comments</span></div><div class="fyre-help"><div class="fyre-box-wrapper"><a href="http://livefyre.com" target="_blank"><img class="fyre-logo-drop" src="http://zor.fyre.co/wjs/v3.0.1415061060/images/down_arrow.png"><img class="fyre-logo-help" src="http://zor.fyre.co/wjs/v3.0.1415061060/images/lf-logo.png" alt="Livefyre"></a><ul class="fyre-box-list"><li><a href="http://livefyre.com" target="_blank" title="Get Livefyre">Get Livefyre</a></li><li><a href="http://support.livefyre.com" target="_blank" title="FAQ">FAQ</a></li></ul></div></div></div><div class="fyre-auth"><div class="fyre-login-bar"><a rel="nofollow" class="fyre-user-loggedout">Sign in or Post as Guest</a></div><div class="fyre-live-container"><div class="fyre-livecount"><em class="fyre-stream-livecount">1 person listening</em></div><div class="fyre-listener-avatars"></div></div></div><div class="fyre-editor"><div class="fyre-editor-container fyre-editor-container-focus"><div class="fyre-editor-editable editable fyre-editor-field" id="fyre-editor-3" g_editable="true" role="textbox" contenteditable="true"><p>&nbsp;</p></div><span class="fyre-editor-spinner" style="display: none;"></span><div class="fyre-editor-preview"></div><div class="fyre-editor-media-drawer" style="display: none;"></div><div class="fyre-editor-toolbar"><div class="fyre-mention-menu fyre-mention-menu-vertical" role="menu" aria-haspopup="true" style="-webkit-user-select: none; display: none;"><div class="fyre-mention-menu-filter" style="-webkit-user-select: none;"><div style="-webkit-user-select: none;"></div><input type="text" tabindex="-1" style="-webkit-user-select: none;"></div><div class="fyre-mention-menu-content" style="-webkit-user-select: none;"><div class="goog-control goog-control-disabled" aria-disabled="true" id=":e" style="-webkit-user-select: none;"></div><div class="goog-control goog-control-disabled" aria-disabled="true" id=":f" style="-webkit-user-select: none;"></div><div class="goog-control goog-control-disabled" aria-disabled="true" id=":g" style="-webkit-user-select: none;"></div><div class="fyre-mention-item fyre-mention-item-twitter" aria-hidden="true" id=":h" style="-webkit-user-select: none; display: none;"><img src="http://avatars.fyre.co/a/anon/50.jpg" class="fyre-mention-item-avatar"><h4 class="fyre-mention-item-display-name"></h4><span class="fyre-mention-item-twitter"></span></div><div class="fyre-mention-item fyre-mention-item-livefyre" aria-hidden="true" id=":i" style="-webkit-user-select: none; display: none;"><img src="http://avatars.fyre.co/a/anon/50.jpg" class="fyre-mention-item-avatar"><h4 class="fyre-mention-item-display-name"></h4><span class="fyre-mention-item-livefyre"></span></div></div></div><div class="goog-toolbar goog-toolbar-horizontal" role="toolbar" style="-webkit-user-select: none;"><div class="goog-toolbar-separator goog-inline-block" role="separator" id=":b" style="-webkit-user-select: none;">&nbsp;</div><div class="goog-inline-block fyre-button-left fyre-format-button" role="button" id=":d" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-left-outer-box"><div class="goog-inline-block fyre-button-left-inner-box"></div></div></div><div class="goog-inline-block fyre-button-left fyre-mention-button" role="button" id=":k" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-left-outer-box"><div class="goog-inline-block fyre-button-left-inner-box"></div></div></div><div class="goog-inline-block fyre-button-left fyre-embed-button" role="button" id=":n" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-left-outer-box"><div class="goog-inline-block fyre-button-left-inner-box"></div></div></div><div class="goog-inline-block fyre-button-left fyre-raw-button" role="button" id=":p" style="-webkit-user-select: none; display: none;"><div class="goog-inline-block fyre-button-left-outer-box"><div class="goog-inline-block fyre-button-left-inner-box"></div></div></div><div class="goog-inline-block fyre-button-left fyre-follow-button" role="button" id=":r" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-left-outer-box"><div class="goog-inline-block fyre-button-left-inner-box">+ Follow</div></div></div><div class="goog-inline-block fyre-button-right fyre-share-button" role="button" id=":t" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-right-outer-box"><div class="goog-inline-block fyre-button-right-inner-box">Share<label class="fyre-share-counter fyre-share-empty"></label></div></div></div><div class="goog-inline-block fyre-button-right fyre-post-button fyre-post-button-new" role="button" id=":v" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-right-outer-box"><div class="goog-inline-block fyre-button-right-inner-box">Post comment as...</div></div></div></div></div></div><div class="fyre-comment-preview" style="display: none;"><h5>Custom HTML Preview<span class="fyre-icon-remove"></span></h5><div class="fyre-roundedpanel-content fyre-comment-preview-content"><article class="fyre-comment-article"><div class="fyre-comment"><div class="fyre-comment-raw-html"></div></div></article></div></div></div><div class="fyre-input-box-collapsed"></div><div class="fyre-stream-header"><div class="fyre-content-loading" style="display: none;">Loading</div><div class="fyre-stream-sort"><div class="fyre-stream-sort-options"><a class="fyre-stream-sort-newest fyre-stream-sort-selected">Newest</a><span class="fyre-stream-sort-bar"> | </span><a class="fyre-stream-sort-oldest">Oldest</a><span class="fyre-stream-sort-bar"> | </span><a class="fyre-stream-sort-top-comments">Top Comments</a></div><a class="fyre-stream-sort-back"></a></div></div><div class="fyre-comment-stream"><div class="fyre-stream-content"></div><div class="fyre-stream-content-not-found"></div><div class="fyre-stream-more" style="display: none;"><div class="fyre-stream-more-container"><div class="fyre-text">Show More Comments</div><div class="fyre-spinner"><div class="fyre-ball"><!--[if IE]><img src="http://zor.fyre.co/wjs/v3.0.1415061060/images/fyre-spinner-ball.gif" alt="" /><![endif]--><!--[if !IE]><!--><img src="http://zor.fyre.co/wjs/v3.0.1415061060/images/fyre-spinner-ball.png" alt=""><!--<![endif]--></div></div></div></div></div><div class="fyre-top-content-stream"></div><div class="fyre-thread-breakout-stream"></div><div class="fyre-stream-menu-container"></div></div></div></div><script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>  </div>
+
+  
+  </div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="sidebars" id="sidebars">
+      <div class="panel-panel">
+        <div class="panel-panel-inner">
+          <div class="panel-pane pane-block pane-dfp-gb-ros-medsq1-300x250">
+  
+      
+  
+  <div class="pane-content">
+    <div id="dfp-ad-gb_ros_medsq1_300x250-wrapper" class="dfp-tag-wrapper">
+<div id="dfp-ad-gb_ros_medsq1_300x250" class="dfp-tag-wrapper">
+    <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-gb_ros_medsq1_300x250");
+    });
+  </script><div id="google_ads_iframe_4797590/GB_ROS_MedSq1_300x250_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_4797590/GB_ROS_MedSq1_300x250_0" name="google_ads_iframe_4797590/GB_ROS_MedSq1_300x250_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px; vertical-align: bottom;"></iframe></div>
+</div>
+</div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-fieldable-panels-pane pane-uuid-4a62d275-0ec8-4905-8b37-a1f4773d9372 pane-bundle-gbz-editor-choice-article pane-view-mode-full pane-gbz-editor-choice child-count-3 child-modulo-3">
+  
+        <h2 class="pane-title">Editor's Choice</h2>
+    
+  
+  <div class="pane-content">
+    <section class="ds-1col fieldable-panels-pane view-mode-full  clearfix">
+
+  
+  <div class="content-list field-name-field-gbz-article-content-ref field field-name-field-gbz-article-content-ref field-type-entityreference field-label-hidden"><div id="100689" class="content-list-item node node-greenbiz-article view-mode-gbz_content_list content clearfix">
+
+  
+  <div class="media ">
+    <div class="media-object field-name -field-featured-image"><a href="/article/when-it-comes-food-packaging-what-we-dont-know-could-hurt-us"><img class="gbz-list-wide" src="http://www.greenbiz.com/sites/default/files/styles/gbz_list_wide/public/images/articles/featured/berries-ponsler-sstock.jpg?itok=gV3OdOJh&amp;c=e321c6a993edde4ff0e2c2d0e567eeab" width="115" height="70" alt="When it comes to food packaging, what we don&amp;#039;t know could hurt us featured image" title="What does the plastic packaging do to these luscious berries?"></a></div>  </div>
+
+  <div class="content-list-body ">
+    <div class="field field-name-title"><h4 class="content-list-heading"><a href="/article/when-it-comes-food-packaging-what-we-dont-know-could-hurt-us">When it comes to food packaging, what we don't know could hurt us</a></h4></div><span class="attribution"><span class="label-inline">By</span><a href="/users/elizabeth-grossman" title="View user profile." class="username">Elizabeth Grossman</a></span>  </div>
+
+</div>
+
+<div id="58784" class="content-list-item node node-greenbiz-article node-promoted view-mode-gbz_content_list content clearfix">
+
+  
+  <div class="media ">
+    <div class="media-object field-name -field-featured-image"><a href="/blog/2014/10/22/inside-paul-hawkens-audacious-plan-drawdown-climate-change"><img class="gbz-list-wide" src="http://www.greenbiz.com/sites/default/files/styles/gbz_list_wide/public/images/articles/featured/drawdown-top.jpg?itok=p306zZj1" width="115" height="70" alt="Inside Paul Hawken’s audacious plan to &amp;#039;drawdown&amp;#039; climate change featured image"></a></div>  </div>
+
+  <div class="content-list-body ">
+    <div class="field field-name-title"><h4 class="content-list-heading"><a href="/blog/2014/10/22/inside-paul-hawkens-audacious-plan-drawdown-climate-change">Inside Paul Hawken’s audacious plan to 'drawdown' climate change</a></h4></div><span class="attribution"><span class="label-inline">By</span><a href="/users/joel-makower" title="View user profile." class="username">Joel Makower</a></span>  </div>
+
+</div>
+
+<div id="58700" class="content-list-item node node-greenbiz-article node-promoted view-mode-gbz_content_list content clearfix">
+
+  
+  <div class="media ">
+    <div class="media-object field-name -field-featured-image"><a href="/blog/2014/10/13/why-procter-gamble-resetting-its-sustainability-goals"><img class="gbz-list-wide" src="http://www.greenbiz.com/sites/default/files/styles/gbz_list_wide/public/images/articles/featured/pgnew-1.jpg?itok=7KlXQtP4&amp;c=b09ce398ec728f094e65705dedbd430e" width="115" height="70" alt="Why Procter &amp;amp; Gamble is resetting its sustainability goals featured image"></a></div>  </div>
+
+  <div class="content-list-body ">
+    <div class="field field-name-title"><h4 class="content-list-heading"><a href="/blog/2014/10/13/why-procter-gamble-resetting-its-sustainability-goals">Why Procter &amp; Gamble is resetting its sustainability goals</a></h4></div><span class="attribution"><span class="label-inline">By</span><a href="/users/joel-makower" title="View user profile." class="username">Joel Makower</a></span>  </div>
+
+</div>
+
+</div></section>
+
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div>
+
+<article class="panel-pane pane-fieldable-panels-pane pane-uuid-ee0e1ab5-412c-4551-bc05-65c516f22eb5 pane-bundle-gbz-cta gbz-cta gbz-cta-caption-left pane-view-mode-full">
+  <figure class="pane-content">
+        <a href="http://www.greenbiz.com/events/greenbiz-forum/phoenix/2015" class="gbz-cta-link">
+          <span data-picture="">
+<span data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12/public/toprow-gbf15_fe_cta_934x684_2.png?itok=6AIvgBn6" data-width="934" data-height="684"></span>
+<span data-media="(max-width: 479px)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-xxs_1x/public/toprow-gbf15_fe_cta_934x684_2.png?itok=_hWyb8Aa" data-width="449" data-height="329"></span>
+<span data-media="(max-width: 479px) and (min-device-pixel-ratio: 2), (max-width: 479px) and (-o-min-device-pixel-ratio: 2), (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 479px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-xxs_2x/public/toprow-gbf15_fe_cta_934x684_2.png?itok=X9MGfE4A" data-width="898" data-height="658"></span>
+<span data-media="(min-width: 480px)and (max-width: 767px)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-xs_1x/public/toprow-gbf15_fe_cta_934x684_2.png?itok=o21jVppr" data-width="737" data-height="540"></span>
+<span data-media="(min-width: 480px)and (max-width: 767px) and (min-device-pixel-ratio: 2), (min-width: 480px)and (max-width: 767px) and (-o-min-device-pixel-ratio: 2), (min-width: 480px)and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 480px)and (max-width: 767px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-xs_2x/public/toprow-gbf15_fe_cta_934x684_2.png?itok=raikTIBB" data-width="934" data-height="684"></span>
+<span data-media="(min-wdith: 768px) and (max-width: 991px)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-sm_1x/public/toprow-gbf15_fe_cta_934x684_2.png?itok=ii1Zcztr" data-width="720" data-height="527"></span>
+<span data-media="(min-wdith: 768px) and (max-width: 991px) and (min-device-pixel-ratio: 2), (min-wdith: 768px) and (max-width: 991px) and (-o-min-device-pixel-ratio: 2), (min-wdith: 768px) and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 2), (min-wdith: 768px) and (max-width: 991px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-sm_2x/public/toprow-gbf15_fe_cta_934x684_2.png?itok=dBL_YXEw" data-width="934" data-height="684"></span>
+<span data-media="(min-width: 992px) and (max-width: 1199px)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-md_1x/public/toprow-gbf15_fe_cta_934x684_2.png?itok=y5dY3nLU" data-width="934" data-height="684"></span>
+<span data-media="(min-width: 992px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), (min-width: 992px) and (max-width: 1199px) and (-o-min-device-pixel-ratio: 2), (min-width: 992px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 992px) and (max-width: 1199px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-md_2x/public/toprow-gbf15_fe_cta_934x684_2.png?itok=QXcPYipl" data-width="934" data-height="684"></span>
+<span data-media="(min-width: 1200px)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-lg_1x/public/toprow-gbf15_fe_cta_934x684_2.png?itok=896Ly44r" data-width="934" data-height="684"></span>
+<span data-media="(min-width: 1200px) and (min-device-pixel-ratio: 2), (min-width: 1200px) and (-o-min-device-pixel-ratio: 2), (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-lg_2x/public/toprow-gbf15_fe_cta_934x684_2.png?itok=Sgct7CnP" data-width="934" data-height="684"></span>
+<noscript>&lt;img class="kalapicture-12" src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12/public/toprow-gbf15_fe_cta_934x684_2.png?itok=6AIvgBn6" width="934" height="684" /&gt;</noscript>
+<img alt="thumbnail [934x684]" title="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iOTM0IiBoZWlnaHQ9IjY4NCIgdmlld0JveD0iMCAwIDkzNCA2ODQiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzPjwvZGVmcz48cmVjdCB3aWR0aD0iOTM0IiBoZWlnaHQ9IjY4NCIgZmlsbD0iIzMxMmYzMCI+PC9yZWN0PjxnPjx0ZXh0IHg9IjMwMSIgeT0iMzQyIiBzdHlsZT0iZmlsbDojRUVFO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjU4cHg7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+dGh1bWJuYWlsPC90ZXh0PjwvZz48L3N2Zz4=" width="934" height="684" data-src="holder.js/934x684/auto/text:thumbnail/#312f30:#EEE" data-holder-rendered="true"></span>        </a>
+        <figcaption class="gbz-cta-caption">
+      <h3 class="gbz-cta-title" style="font-size: 18px;"></h3><div class="gbz-cta-description" style="font-size: 20px;"><p><a href="/node/57854">Fall Rate Thru Nov 30 - Save 25%</a></p></div>    </figcaption>
+  </figure>
+</article>
+
+<div class="panel-separator"></div><div class="panel-pane pane-fieldable-panels-pane pane-uuid-f1dbd121-9703-48b9-8db1-60cc1b6603a7 pane-bundle-gbz-editor-choice-video pane-view-mode-full pane-gbz-editor-choice child-count-2 child-modulo-2">
+  
+        <h2 class="pane-title">Featured Videos</h2>
+    
+  
+  <div class="pane-content">
+    <div class="field field-name-field-gbz-video-content-ref"><article id="55598" onclick="location.href='/video/2013/12/20/paul-hawken-collaborative-economy-verge-studio-c'" class="tout node node-gbz-video node-promoted view-mode-gbz_tout  clearfix">
+
+  
+  <div class="tout-media">
+    <div class="field field-name-field-gbz-video-ref"><div class="ds-1col file file-video file-video-vidyard view-mode-gbz_tout  clearfix">
+
+  
+  <div class="field field-name-field-gbz-video-thumbnail field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/video/2013/12/20/paul-hawken-collaborative-economy-verge-studio-c"><img class="gbz-video-tout" src="http://www.greenbiz.com/sites/default/files/styles/gbz_video_tout/public/images/video-thumbnails/hawken-cropped.jpg?itok=BnNl0K7r" width="640" height="360"></a></div></div></div></div>
+
+</div>  </div>
+
+  <div class="tout-caption ">
+    <div class="field field-name-title"><h4>Paul Hawken: Sharing economy is 'bigger than the Internet'</h4></div>  </div>
+
+</article>
+
+<article id="51210" onclick="location.href='/video/2013/03/01/patagonia-responsible-company'" class="tout node node-gbz-video node-promoted view-mode-gbz_tout  clearfix">
+
+  
+  <div class="tout-media">
+    <div class="field field-name-field-gbz-video-ref"><div class="ds-1col file file-video file-video-vidyard view-mode-gbz_tout  clearfix">
+
+  
+  <div class="field field-name-field-gbz-video-thumbnail field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/video/2013/03/01/patagonia-responsible-company"><img class="gbz-video-tout" src="http://www.greenbiz.com/sites/default/files/styles/gbz_video_tout/public/images/video-thumbnails/covers960x720patagonia.jpg?itok=Bd7zkZcr" width="640" height="360"></a></div></div></div></div>
+
+</div>  </div>
+
+  <div class="tout-caption ">
+    <div class="field field-name-title"><h4>Yvon Chouinard: The company as activist</h4></div>  </div>
+
+</article>
+
+</div><div class="field field-name-field-gbz-more-link"><a href="http://www.greenbiz.com//video" class="btn btn-primary">More from Video</a></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-dfp-gb-ros-medsq2-300x250">
+  
+      
+  
+  <div class="pane-content">
+    <div id="dfp-ad-gb_ros_medsq2_300x250-wrapper" class="dfp-tag-wrapper">
+<div id="dfp-ad-gb_ros_medsq2_300x250" class="dfp-tag-wrapper">
+    <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-gb_ros_medsq2_300x250");
+    });
+  </script><div id="google_ads_iframe_4797590/GB_ROS_MedSq2_300x250_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_4797590/GB_ROS_MedSq2_300x250_0" name="google_ads_iframe_4797590/GB_ROS_MedSq2_300x250_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px; vertical-align: bottom;"></iframe></div>
+</div>
+</div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-fieldable-panels-pane pane-uuid-655f85d4-4902-4631-83cc-bacb463ec160 pane-bundle-gbz-editor-choice-whitepaper pane-view-mode-full pane-gbz-editor-choice child-count-2 child-modulo-2">
+  
+        <h2 class="pane-title">Featured Whitepapers</h2>
+    
+  
+  <div class="pane-content">
+    <div class="ds-1col fieldable-panels-pane view-mode-full  clearfix">
+
+  
+  <div class="content-list field-name-field-gbz-report-content-ref field field-name-field-gbz-report-whitepaper-ref field-type-entityreference field-label-hidden"><div id="100606" class="content-list-item node node-gbz-report view-mode-gbz_content_list  clearfix">
+
+  
+  <div class="media ">
+    <div class="field-name-field-gbz-report-cvr-img media-object"><a href="/whitepaper/unlocking-roi-understanding-complete-return-smart-building-investments"><img class="gbz-avatar-xs" src="http://www.greenbiz.com/sites/default/files/styles/gbz_avatar_xs/public/unlocking_roi_cover.png?itok=xBBF2p4R" width="65" height="65"></a></div>  </div>
+
+  <div class="content-list-body ">
+    <div class="field field-name-title"><h4 class="content-list-heading"><a href="/whitepaper/unlocking-roi-understanding-complete-return-smart-building-investments">Unlocking ROI+: Understanding the Complete Return on Smart Building Investments </a></h4></div>  </div>
+
+</div>
+
+<div id="100600" class="content-list-item node node-gbz-report view-mode-gbz_content_list  clearfix">
+
+  
+  <div class="media ">
+    <div class="field-name-field-gbz-report-cvr-img media-object"><a href="/whitepaper/guide-energy-carbon-and-sustainability-software"><img class="gbz-avatar-xs" src="http://www.greenbiz.com/sites/default/files/styles/gbz_avatar_xs/public/guide_to_energy_carbon_and_sustainability_software_-_groom_energy-1.jpg?itok=1Yxyracp" width="65" height="65"></a></div>  </div>
+
+  <div class="content-list-body ">
+    <div class="field field-name-title"><h4 class="content-list-heading"><a href="/whitepaper/guide-energy-carbon-and-sustainability-software">Guide to Energy, Carbon and Sustainability Software</a></h4></div>  </div>
+
+</div>
+
+</div></div>
+
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div>
+
+<article class="panel-pane pane-fieldable-panels-pane pane-uuid-6442d312-2e3f-4465-9fb7-568bdd6e5852 pane-bundle-gbz-cta gbz-cta gbz-cta-caption-left pane-view-mode-full">
+  <figure class="pane-content">
+        <a href="http://events.greenbiz.com/events/verge/san-francisco/2014/virtual-event" class="gbz-cta-link">
+          <span data-picture="">
+<span data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12/public/vsf14_virtual-banner_934x684.png?itok=E6NVM0ig" data-width="934" data-height="684"></span>
+<span data-media="(max-width: 479px)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-xxs_1x/public/vsf14_virtual-banner_934x684.png?itok=wyT_WqxJ" data-width="449" data-height="329"></span>
+<span data-media="(max-width: 479px) and (min-device-pixel-ratio: 2), (max-width: 479px) and (-o-min-device-pixel-ratio: 2), (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 479px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-xxs_2x/public/vsf14_virtual-banner_934x684.png?itok=UqnwOJdD" data-width="898" data-height="658"></span>
+<span data-media="(min-width: 480px)and (max-width: 767px)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-xs_1x/public/vsf14_virtual-banner_934x684.png?itok=p7qv7723" data-width="737" data-height="540"></span>
+<span data-media="(min-width: 480px)and (max-width: 767px) and (min-device-pixel-ratio: 2), (min-width: 480px)and (max-width: 767px) and (-o-min-device-pixel-ratio: 2), (min-width: 480px)and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 480px)and (max-width: 767px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-xs_2x/public/vsf14_virtual-banner_934x684.png?itok=5gItjhMK" data-width="934" data-height="684"></span>
+<span data-media="(min-wdith: 768px) and (max-width: 991px)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-sm_1x/public/vsf14_virtual-banner_934x684.png?itok=9W4lG8V_" data-width="720" data-height="527"></span>
+<span data-media="(min-wdith: 768px) and (max-width: 991px) and (min-device-pixel-ratio: 2), (min-wdith: 768px) and (max-width: 991px) and (-o-min-device-pixel-ratio: 2), (min-wdith: 768px) and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 2), (min-wdith: 768px) and (max-width: 991px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-sm_2x/public/vsf14_virtual-banner_934x684.png?itok=Kh3smdHd" data-width="934" data-height="684"></span>
+<span data-media="(min-width: 992px) and (max-width: 1199px)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-md_1x/public/vsf14_virtual-banner_934x684.png?itok=VFks-Fjz" data-width="934" data-height="684"></span>
+<span data-media="(min-width: 992px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), (min-width: 992px) and (max-width: 1199px) and (-o-min-device-pixel-ratio: 2), (min-width: 992px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 992px) and (max-width: 1199px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-md_2x/public/vsf14_virtual-banner_934x684.png?itok=CMT4ITY1" data-width="934" data-height="684"></span>
+<span data-media="(min-width: 1200px)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-lg_1x/public/vsf14_virtual-banner_934x684.png?itok=1EfPAeVa" data-width="934" data-height="684"></span>
+<span data-media="(min-width: 1200px) and (min-device-pixel-ratio: 2), (min-width: 1200px) and (-o-min-device-pixel-ratio: 2), (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-lg_2x/public/vsf14_virtual-banner_934x684.png?itok=DY6meRm0" data-width="934" data-height="684"></span>
+<noscript>&lt;img class="kalapicture-12" src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12/public/vsf14_virtual-banner_934x684.png?itok=E6NVM0ig" width="934" height="684" /&gt;</noscript>
+<img alt="thumbnail [934x684]" title="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iOTM0IiBoZWlnaHQ9IjY4NCIgdmlld0JveD0iMCAwIDkzNCA2ODQiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzPjwvZGVmcz48cmVjdCB3aWR0aD0iOTM0IiBoZWlnaHQ9IjY4NCIgZmlsbD0iIzMxMmYzMCI+PC9yZWN0PjxnPjx0ZXh0IHg9IjMwMSIgeT0iMzQyIiBzdHlsZT0iZmlsbDojRUVFO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjU4cHg7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+dGh1bWJuYWlsPC90ZXh0PjwvZz48L3N2Zz4=" width="934" height="684" data-src="holder.js/934x684/auto/text:thumbnail/#312f30:#EEE" data-holder-rendered="true"></span>        </a>
+        <figcaption class="gbz-cta-caption">
+      <h3 class="gbz-cta-title" style="font-size: 18px;"></h3><div class="gbz-cta-description" style="font-size: 20px;"><a href="http://events.greenbiz.com/events/verge/san-francisco/2014/virtual-event">Watch Archive</a></div>    </figcaption>
+  </figure>
+</article>
+
+<div class="panel-separator"></div>
+
+<article class="panel-pane pane-fieldable-panels-pane pane-uuid-4ab95630-c847-4f57-9d2d-b9e407d857fa pane-bundle-gbz-cta gbz-cta gbz-cta-caption-left pane-view-mode-full">
+  <figure class="pane-content">
+        <a href="http://www.greenbiz.com/research/report/2014/01/19/state-green-business-report-2014" class="gbz-cta-link">
+          <span data-picture="" data-alt="The State of Green Business 2014 report cover image">
+<span data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12/public/sogb14_cover.jpg?itok=hvmySWO4" data-width="550" data-height="413"></span>
+<span data-media="(max-width: 479px)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-xxs_1x/public/sogb14_cover.jpg?itok=xo9CxEj0" data-width="449" data-height="337"></span>
+<span data-media="(max-width: 479px) and (min-device-pixel-ratio: 2), (max-width: 479px) and (-o-min-device-pixel-ratio: 2), (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 479px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-xxs_2x/public/sogb14_cover.jpg?itok=8z3TcEY9" data-width="550" data-height="413"></span>
+<span data-media="(min-width: 480px)and (max-width: 767px)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-xs_1x/public/sogb14_cover.jpg?itok=KGiWWkM7" data-width="550" data-height="413"></span>
+<span data-media="(min-width: 480px)and (max-width: 767px) and (min-device-pixel-ratio: 2), (min-width: 480px)and (max-width: 767px) and (-o-min-device-pixel-ratio: 2), (min-width: 480px)and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 480px)and (max-width: 767px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-xs_2x/public/sogb14_cover.jpg?itok=MmfLhoaD" data-width="550" data-height="413"></span>
+<span data-media="(min-wdith: 768px) and (max-width: 991px)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-sm_1x/public/sogb14_cover.jpg?itok=sUwykDbp" data-width="550" data-height="413"></span>
+<span data-media="(min-wdith: 768px) and (max-width: 991px) and (min-device-pixel-ratio: 2), (min-wdith: 768px) and (max-width: 991px) and (-o-min-device-pixel-ratio: 2), (min-wdith: 768px) and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 2), (min-wdith: 768px) and (max-width: 991px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-sm_2x/public/sogb14_cover.jpg?itok=Nvxs-4qV" data-width="550" data-height="413"></span>
+<span data-media="(min-width: 992px) and (max-width: 1199px)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-md_1x/public/sogb14_cover.jpg?itok=-0xCn74I" data-width="550" data-height="413"></span>
+<span data-media="(min-width: 992px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), (min-width: 992px) and (max-width: 1199px) and (-o-min-device-pixel-ratio: 2), (min-width: 992px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 992px) and (max-width: 1199px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-md_2x/public/sogb14_cover.jpg?itok=q_WFAg25" data-width="550" data-height="413"></span>
+<span data-media="(min-width: 1200px)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-lg_1x/public/sogb14_cover.jpg?itok=tTBfyC8s" data-width="550" data-height="413"></span>
+<span data-media="(min-width: 1200px) and (min-device-pixel-ratio: 2), (min-width: 1200px) and (-o-min-device-pixel-ratio: 2), (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 2dppx)" data-src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12_breakpoints_kalapicture_screen-lg_2x/public/sogb14_cover.jpg?itok=twdNNGZl" data-width="550" data-height="413"></span>
+<noscript>&lt;img class="kalapicture-12" src="http://www.greenbiz.com/sites/default/files/styles/kalapicture_12/public/sogb14_cover.jpg?itok=hvmySWO4" width="550" height="413" alt="The State of Green Business 2014 report cover image" /&gt;</noscript>
+<img alt="thumbnail [550x413]" title="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjQxMyIgdmlld0JveD0iMCAwIDU1MCA0MTMiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzPjwvZGVmcz48cmVjdCB3aWR0aD0iNTUwIiBoZWlnaHQ9IjQxMyIgZmlsbD0iIzMxMmYzMCI+PC9yZWN0PjxnPjx0ZXh0IHg9IjE3OCIgeT0iMjA2LjUiIHN0eWxlPSJmaWxsOiNFRUU7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MzRweDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj50aHVtYm5haWw8L3RleHQ+PC9nPjwvc3ZnPg==" width="550" height="413" data-src="holder.js/550x413/auto/text:thumbnail/#312f30:#EEE" data-holder-rendered="true"></span>        </a>
+        <figcaption class="gbz-cta-caption">
+      <h3 class="gbz-cta-title" style="font-size: 18px;"></h3><div class="gbz-cta-description" style="font-size: 20px;"><p><a href="node/55928">Get your copy</a></p>
+</div>    </figcaption>
+  </figure>
+</article>
+
+<div class="panel-separator"></div>
+
+<article class="panel-pane pane-fieldable-panels-pane pane-uuid-80b19b4a-6183-4851-aa81-cf69098295ca pane-bundle-gbz-cta gbz-cta gbz-cta-card-brand pane-view-mode-full">
+  <figure class="pane-content">
+                  <figcaption class="gbz-cta-caption">
+      <h3 class="gbz-cta-title" style="font-size: 18px;"></h3><div class="gbz-cta-description" style="font-size: 20px;"> <p><a href="http://info.greenbiz.com/newsletter-signup.html"><i class="fa fa-envelope"> Try our daily newsletters!</i></a></p></div>    </figcaption>
+  </figure>
+</article>
+
+        </div>
+      </div>
+    </aside>
+
+  </div><!-- /.columns-content-main -->
+
+  
+</section>
+  </div>
+
+    </div> <!-- /.section, /#content -->
+
+  </div></div> <!-- /#main, /#main-wrapper -->
+
+  <!-- Page Footer -->
+  <footer class="section gbz-footer-main" id="footerlower" role="contentinfo">
+    <div class="footer-links-primary">
+      <div class="container">
+        <div class="row">
+                    <nav class="col-sm-3 col-xs-6" role="navigation">
+            <h2 class="element-invisible">Footer menu 1</h2><ul class="nav nav-pills nav-stacked"><li class="2474 first"><a href="/about-us" class="first leaf">About Us</a></li>
+<li class="2458"><a href="/our-team" class="leaf">Our Team</a></li>
+<li class="4345 last"><a href="/media-kit" title="Request a media kit" class="last leaf">Media Kit</a></li>
+</ul>          </nav>
+                              <nav class="col-sm-3 col-xs-6" role="navigation">
+            <h2 class="element-invisible">Footer menu 2</h2><ul class="nav nav-pills nav-stacked"><li class="2462 first last"><a href="/executive-network" title="Executive Network" class="first last leaf">Executive Network</a></li>
+</ul>          </nav>
+                              <nav class="col-sm-3 col-xs-6" role="navigation">
+            <h2 class="element-invisible">Footer menu 3</h2><ul class="nav nav-pills nav-stacked"><li class="2470 first"><a href="/reports" class="first leaf">Reports</a></li>
+<li class="2469 last"><a href="/white-papers" class="last leaf">White Papers</a></li>
+</ul>          </nav>
+                              <nav class="col-sm-3 col-xs-6" role="navigation">
+            <h2 class="element-invisible">Footer menu 4</h2><ul class="nav nav-pills nav-stacked"><li class="2466 first"><a href="/microsite/green-career-resources" title="" class="first leaf">Career Resources</a></li>
+<li class="2461"><a href="http://professional-services.greenbiz.com" title="" class="leaf">Consultant Svcs</a></li>
+<li class="2465 last"><a href="http://jobs.greenbiz.com" title="GreenBiz Job Board" class="last leaf">Job Board</a></li>
+</ul>          </nav>
+                  </div>
+      </div>
+    </div>
+    <div class="footer-links-secondary">
+      <div class="container clearfix">
+
+        <div class="secondary-links col-md-7">
+                      <h2 class="element-invisible">Secondary Footer menu</h2><ul class="footer-links list-unstyled list-inline"><li class="2464 first last"><a href="/privacy-policy" class="first last leaf">Privacy Policy</a></li>
+</ul>                  </div>
+        <div class="col-xs-12 col-md-5">
+          <div class="footer-message">
+            © 2014 GreenBiz Group - GreenBiz.com® is a registered trademark of <a href="http://www.greenbizgroup.com/" target="_blank">GreenBiz Group Inc</a>.          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</div></div> <!-- /#page, /#page-wrapper -->
+  <script type="text/javascript" src="http://www.greenbiz.com/sites/default/files/js/js_smVAkkO5MkJ1NC3MrvT9mj0EpJTqmgheNCfRKPv9KJU.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function () {
+              var articleId = fyre.conv.load.makeArticleId(null);
+              fyre.conv.load({}, [{
+              el: 'livefyre-comments',
+              network: 'livefyre.com',
+              siteId: Drupal.settings.livefyre.account_num,
+              articleId: articleId,
+              signed: false,
+              collectionMeta: {
+                  articleId: articleId,
+                  url: fyre.conv.load.makeCollectionUrl(),
+                }
+              }], function() {});
+            }());
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.greenbiz.com/sites/default/files/js/js_f_KNgj5I3mR87sD9zoY75z4AW7KHymJ0Qmhd0JsDiPY.js"></script>
+  <!-- Move the scripts to the bottom for faster loading-->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-2.newrelic.com","licenseKey":"f80342037d","applicationID":"3212689","transactionName":"MwFaYxRYV0ZSAEJaVwpLeVQSUFZbHBNXVF07CVlZB15cR2wNWVddOxJRUhFmSVRUBg==","queueTime":0,"applicationTime":1611,"ttGuid":"","agentToken":"","atts":"H0ZZFVxCREg=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-476.min.js"}</script>
+
+<script src="//static.chartbeat.com/js/chartbeat.js" id="gbzChartbeat"></script><svg xmlns="http://www.w3.org/2000/svg" width="550" height="413" viewBox="0 0 550 413" preserveAspectRatio="none" style="visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs></defs><text x="0" y="34" style="font-weight:bold;font-size:34px;font-family:Arial, Helvetica, Open Sans, sans-serif;dominant-baseline:middle">thumbnail</text></svg><script src="http://js-agent.newrelic.com/nr-476.min.js"></script><script type="text/javascript" src="http://beacon-2.newrelic.com/1/f80342037d?a=3212689&amp;pl=1415072475893&amp;v=476.c73f3a6&amp;to=MwFaYxRYV0ZSAEJaVwpLeVQSUFZbHBNXVF07CVlZB15cR2wNWVddOxJRUhFmSVRUBg%3D%3D&amp;ap=1611&amp;be=4322&amp;fe=27697&amp;dc=12492&amp;f=%5B%22err%22,%22xhr%22%5D&amp;perf=%7B%22timing%22:%7B%22of%22:1415072475893,%22n%22:0,%22dl%22:4134,%22di%22:16813,%22ds%22:16813,%22de%22:19073,%22dc%22:32017,%22l%22:32019,%22le%22:32204,%22f%22:1330,%22dn%22:1330,%22dne%22:1330,%22c%22:1330,%22ce%22:1330,%22rq%22:1677,%22rp%22:3480,%22rpe%22:4069%7D,%22navigation%22:%7B%7D%7D&amp;at=H0ZZFVxCREg%3D&amp;jsonp=NREUM.setToken"></script></body></html>

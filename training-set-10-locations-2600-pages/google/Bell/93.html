@@ -1,0 +1,641 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="en-us" http-equiv="Content-Language">
+
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Bell Residents</title>
+<meta name="KEYWORDS" content="Bell Residents, apartments for rent. Bell Partners Inc., Apartments in United States, Pet-friendly apartments, pet-friendly apartment home, one bedroom apartments, two bedroom apartments, three bedroom apartments, four bedroom apartments,  1 bedroom apartments, 2 bedroom apartments, 3 bedroom apartments, 4 bedroom apartments, furnished apartments, Southeast apartments, luxury apartment, Bell Apts">
+<meta name="DESCRIPTION" content="Welcome Bell residents! Choose your community below to pay rent online, submit a service request, renew online or contact a customer care specialist.">
+<meta name="AUTHOR" content="Ellipse Communications">
+<meta name="COPYRIGHT" content="2014">
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<script type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="scripts/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.backstretch.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.chained.js"></script>
+<script type="text/javascript" src="files/clearbox.js"></script><link rel="stylesheet" type="text/css" href="files/clearbox/config/default/cb_style.css"><script type="text/javascript" src="files/clearbox/config/default/cb_config.js"></script><script type="text/javascript" src="files/clearbox/language/en/cb_language.js"></script><script type="text/javascript" src="files/clearbox/core/cb_core.js"></script>
+<script type="text/javascript">
+	$(document).ready(function($){
+		$.backstretch("/images/Bg_Main.jpg", {speed: 0});
+
+		$("#PropName").chained("#PropState");
+
+		$('#Continue').click(function() {
+			if ($("#PropName").val() != "") {
+				$('#IntContent2').show();
+				$.ajax({url: 'details.asp', data: 'AID='+$('#PropName').val(), cache: false, success: function(html){$('#IntContent').html(html);}});
+				$.ajax({url: 'details2.asp', data: 'AID='+$('#PropName').val(), cache: false, success: function(html){$('#IntContent2').html(html);}});
+			}
+		});
+
+
+		$('#ContactCheck').click(function() {
+			if ($("#PropName").val() != "") {
+				CB_Open('href=contact.asp?AID=' + $("#PropName").val() + ',,type=iframe,,width=500,,height=550');
+			}
+		});
+
+		$('#BGNPledge').click(function() {
+			CB_Open('href=pledge.asp?AID=' + $("#PropName").val() + ',,type=iframe,,width=645,,height=475');
+		});
+
+		$('#Insurance').click(function() {
+			if ($("#PropName").val() != "") {
+				CB_Open('href=renters-insurance.asp?AID=' + $("#PropName").val() + ',,type=iframe,,width=645,,height=550');
+			}
+		});
+	});
+</script>
+</head>
+
+<body style="position: static;">
+
+<div id="PageWrapper">
+	<div id="TopWrapper">
+		<div id="TopNav"><a href="http://www.bellapartmentliving.com" target="_blank">Apartment Search</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://www.bellvendors.com/" target="_blank">Vendors</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://www.bellpartnersinc.com/careers/bell-careers/" target="_blank">Careers</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://www.bellpartnersinc.com" target="_blank">Bell Partners Inc</a></div>
+		<div id="MainWrapper">
+			<div id="LogoWrapper"><img alt="" src="Images/Logo.png"></div>
+			<div id="IntWrapper">
+				<div id="TextWrapper">
+					<div id="HomeText">Welcome Bell Neighbors!</div>
+					<div class="FakeHR"></div>
+					<form id="ResForm">
+						<table id="ResTable" style="" cellpadding="5" cellspacing="0">
+							<tbody><tr>
+								<td>
+								<select name="PropState" id="PropState" class="mySelectBox">
+									<option value="">Select State</option>
+
+										<option value="AL">Alabama</option>
+
+										<option value="AR">Arkansas</option>
+
+										<option value="DE">Delaware</option>
+
+										<option value="FL">Florida</option>
+
+										<option value="GA">Georgia</option>
+
+										<option value="MA">Massachusetts</option>
+
+										<option value="MD">Maryland</option>
+
+										<option value="MO">Missouri</option>
+
+										<option value="NC">North Carolina</option>
+
+										<option value="OH">Ohio</option>
+
+										<option value="SC">South Carolina</option>
+
+										<option value="TN">Tennessee</option>
+
+										<option value="TX">Texas</option>
+
+										<option value="VA">Virginia</option>
+
+								</select>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								<select name="PropName" id="PropName" class="mySelectBox" disabled="disabled">
+									<option value="">Select Property</option>
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+										
+
+								</select>
+								</td>
+							</tr>
+						</tbody></table>
+					</form>
+					<div class="FakeHR"></div>
+					<div id="IntContent">
+						<img id="Continue" onmouseover="MM_swapImage('Continue','','images/Btn_Continue-over.png',1)" onmouseout="MM_swapImgRestore()" src="images/Btn_Continue.png" alt="Continue">
+					</div>
+
+
+
+				</div>
+			</div>
+			<div id="IntContent2"><a id="BGNPledge" href="#">Good Neighbor<sup>SM</sup> Pledge</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://documents.ellipseinc.com/doccenter/generic/234/Good-Neighbor-Guide-PDF.PDF" target="_blank">Good Neighbor<sup>SM</sup> Guide</a></div>
+		</div>
+	</div>
+
+	<div id="FooterWrapper1">
+		<div class="SiteWidth SiteCenter">
+			<img alt="" src="Images/Logo_Bell.png" class="noBorder">
+		</div>
+	</div>
+	<div id="FooterWrapper2">
+		<div class="SiteWidth SiteCenter clearfix">
+			<div class="FloatLeft">© 2014 Bell Apartment Living, a division of Bell Partners Inc.  All rights reserved</div>
+			<div class="FloatRight">Creative Design by <a href="http://www.ellipseinc.com" target="_blank">Ellipseinc.com</a> <img alt="" src="Images/ellipse.png" class="PicMiddle"></div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 100%; width: 100%; z-index: -999999; position: fixed;"><img src="/images/Bg_Main.jpg" style="position: absolute; display: none; margin: 0px; padding: 0px; border: none; width: auto; height: auto; max-height: none; max-width: none; z-index: -999999;"></div><div id="CB_Debug"></div><div id="CB_HiddenTextT" style="font-family: helvetica, arial, sans-serif; font-weight: normal; font-size: 13px;"></div><div id="CB_HiddenTextC" style="font-family: helvetica, arial, sans-serif; font-weight: normal; font-size: 11px; text-align: justify;"></div><div id="CB_HiddenTextG" style="font-family: helvetica, arial, sans-serif; font-weight: normal; color: rgb(170, 170, 170); font-size: 11px;"></div><div id="CB_All"><div id="CB_ContentHide" style="background-color: rgb(0, 0, 0); opacity: 0; visibility: hidden; height: 685px;"></div><div id="CB_OutNavContainer"><div id="CB_OutNavG">&nbsp;</div><div id="CB_OutNavBG"></div><div id="CB_OutNavB"><a onmouseover="_C94(_C110);" onmouseout="_C85();" id="CB_ONRL" name="rl"><img class="CB_OutNav" src="files/clearbox/config/default/pic/rot_l_outer.gif" alt="rotate image left by 90 degrees" title="rotate image left by 90 degrees"></a><a onmouseover="_C94(_C92);" onmouseout="_C85();" id="CB_ONPRV"><img class="CB_OutNav" src="files/clearbox/config/default/pic/prev_outer.gif" alt="previous" title="previous"></a><a name="CB_ONSSP" id="CB_ONSSP" style="position: absolute; visibility: hidden;"><img alt="stop slideshow" title="stop slideshow" src="files/clearbox/config/default/pic/pause_outer.gif"></a><a name="CB_ONSSS" id="CB_ONSSS"><img alt="start slideshow" title="start slideshow" src="files/clearbox/config/default/pic/start_outer.gif"></a><a onmouseover="_C94(_C91);" onmouseout="_C85();" id="CB_ONNXT"><img class="CB_OutNav" src="files/clearbox/config/default/pic/next_outer.gif" alt="next" title="next"></a><a onmouseover="_C94(_C111);" onmouseout="_C85();" id="CB_ONRR" name="rr"><img class="CB_OutNav" src="files/clearbox/config/default/pic/rot_r_outer.gif" alt="rotate image right by 90 degrees" title="rotate image right by 90 degrees"></a></div></div><div id="CB_OSD" style="opacity: 0.75;"></div><div id="CB_SlideShowBar" style="background-color: rgb(255, 255, 255); opacity: 0.5;"></div><img id="CB_LoadingImage" alt="loading" src="files/clearbox/config/default/pic/loading.gif"><table cellspacing="0" cellpadding="0" id="CB_Window" style="width: 1px; margin-left: -16px; margin-top: -16px;"><tbody><tr id="CB_Header" style="height: 12px;"><td id="CB_TopLeft"><div class="CB_RoundPixBugFix" style="width: 12px; height: 12px;"></div></td><td id="CB_Top"></td><td id="CB_TopRight"><div class="CB_RoundPixBugFix" style="width: 12px; height: 12px;"></div></td></tr><tr id="CB_Body"><td id="CB_Left" style="width: 12px;"></td><td id="CB_Content" valign="top" align="left" style="background-color: rgb(255, 255, 255);"><div id="CB_Padding" style="padding: 4px; background-color: rgb(255, 255, 255);"><div id="CB_ImgContainer"><img id="CB_CloseWindow" alt="close clearbox" title="close clearbox" src="files/clearbox/config/default/pic/close.png"><div id="CB_NotImgContent"></div><div id="CB_ShowTh"></div><div id="CB_Thumbs"><div id="CB_Thumbs2"></div></div><img id="CB_Image" alt="" src="files/clearbox/config/default/pic/blank.gif" style="border: 0px solid rgb(221, 221, 221); visibility: hidden; opacity: 0;"><div id="CB_PrevNext"><img id="CB_NavPrev" alt="" src="files/clearbox/config/default/pic/prev.png"><img id="CB_NavNext" alt="" src="files/clearbox/config/default/pic/next.png"><div id="CB_ImgHide" style="background-color: rgb(0, 0, 0); opacity: 0.35;"></div><img id="CB_SlideShowP" alt="stop slideshow" title="stop slideshow" src="files/clearbox/config/default/pic/pause.png"><img id="CB_SlideShowS" alt="start slideshow" title="start slideshow" src="files/clearbox/config/default/pic/start.png"><a id="CB_Prev" style="background-image: url(http://www.bellresidents.com/files/clearbox/config/default/pic/blank.gif);"></a><a id="CB_Next" style="background-image: url(http://www.bellresidents.com/files/clearbox/config/default/pic/blank.gif);"></a></div></div><div id="CB_Text" style="height: 0px; display: block; visibility: hidden; opacity: 0;"><div id="CB_TT" style="font-family: helvetica, arial, sans-serif; font-weight: normal; color: rgb(119, 119, 119); font-size: 13px;"></div><div id="CB_TC" style="font-family: helvetica, arial, sans-serif; font-weight: normal; color: rgb(153, 153, 153); font-size: 11px; text-align: justify;"></div><div id="CB_TG" style="font-family: helvetica, arial, sans-serif; font-weight: normal; color: rgb(170, 170, 170); font-size: 11px;"></div></div></div></td><td id="CB_Right" style="width: 12px;"></td></tr><tr id="CB_Footer" style="height: 12px;"><td id="CB_BtmLeft"><div class="CB_RoundPixBugFix" style="width: 12px; height: 12px;"></div></td><td id="CB_Btm"></td><td id="CB_BtmRight"><div class="CB_RoundPixBugFix" style="width: 12px; height: 12px;"></div></td></tr></tbody></table></div></body></html>

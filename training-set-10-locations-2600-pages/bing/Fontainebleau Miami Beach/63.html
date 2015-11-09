@@ -1,0 +1,923 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <title>Fontainebleau Miami Beach</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta http-equiv="X-UA-Compatible" content="IE=8">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Language" content="en">
+  
+  
+<script type="text/javascript" src="http://beacon.krxd.net/optout_check?callback=Krux.ns.paa.kxjsonp_optOutCheck"></script><script async="" src="//cdn.krxd.net/ctjs/controltag.js.f99670595ccd46c65a517672ea749179"></script><script type="text/javascript" async="" src="http://cdn.krxd.net/controltag?confid=JLPSM6U1"></script><script src="http://edge.quantserve.com/quant.js" async="" type="text/javascript"></script><script type="text/javascript" async="" src="http://stats.g.doubleclick.net/dc.js"></script><script type="text/javascript" async="" src="//www.googleadservices.com/pagead/conversion_async.js"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-W6GV88"></script><script type="text/javascript">
+//<![CDATA[
+var number_format_dec = '.';
+var number_format_th = '';
+var number_format_point = '2';
+var store_language = 'en';
+var xcart_web_dir = "";
+var images_dir = "/skin/common_files/images";
+var alt_images_dir = "/skin/fontainebleau/images";var lbl_no_items_have_been_selected = 'No items have been selected';
+var current_area = 'C';
+var currency_format = "$x";
+var lbl_product_minquantity_error = "Sorry, the minimum order quantity for this product is {{min}}.";
+var lbl_product_maxquantity_error = "Sorry, the maximum order quantity for this product is {{max}}.";
+var lbl_product_quantity_type_error = "You can specify a number from {{min}} to {{max}}.";
+var is_limit = true;
+var lbl_required_field_is_empty = "The required field \'~~field~~\' is empty!";
+var lbl_field_required = "FIELD IS REQUIRED";
+var lbl_field_format_is_invalid = "The format of the \'~~field~~\' field is invalid.";
+var txt_required_fields_not_completed = "The following required fields have not been completed: {{fields}} Do you wish to submit the form with these fields empty?";
+var lbl_blockui_default_message = "PLEASE WAIT...";
+var lbl_error = 'Error';
+var lbl_warning = 'WARNING';
+var lbl_ok = 'OK';
+var lbl_yes = 'Yes';
+var lbl_no = 'No';
+var txt_minicart_total_note = 'Order subtotal does not cover discounts and extra costs like shipping charges, etc. The final cost of the order will be calculated at the checkout page.';
+var txt_ajax_error_note = 'An error occurred while processing a request. Please <a href=\"javascript:void(0);\" onclick=\"javascript:window.location.reload();\">refresh the page.<a><br /><br />If the problem still persists after refreshing the page please <a href=\"javascript:void(0);\" onclick=\"javascript:self.location=\'help.php?section=contactus&amp;mode=update\'\">contact us<\/a> on the matter.';
+var txt_email_invalid = "Email address is invalid! Please correct";
+var email_validation_regexp = new RegExp("^[a-z0-9!#$%&\'*+\\/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&\'*+\\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z](?:[a-z0-9-]*[a-z0-9])$", "gi");
+var is_admin_editor = false;
+
+//]]>
+</script>
+
+<script type="text/javascript" src="/skin/common_files/js/common.js"></script>
+  <script type="text/javascript" src="/skin/common_files/js/browser_identificator.js"></script>
+
+
+
+
+  
+
+<script type="text/javascript" src="/skin/common_files/lib/jquery-min.js"></script>
+<script type="text/javascript" src="/skin/common_files/lib/jquery.bgiframe.min.js"></script>
+
+
+<script type="text/javascript" src="/skin/common_files/lib/jqueryui/jquery-ui.custom.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/skin/fontainebleau/lib/jqueryui/jquery.ui.theme.css">
+<script type="text/javascript" src="/skin/common_files/js/ajax.js"></script>
+<script type="text/javascript" src="/skin/common_files/lib/cluetip/jquery.cluetip.js"></script>
+<script type="text/javascript" src="/skin/common_files/js/popup_open.js"></script>
+<script type="text/javascript" src="/skin/fontainebleau/lib/jquery.blockUI.js"></script>
+<script type="text/javascript" src="/skin/fontainebleau/lib/jquery.blockUI.defaults.js"></script>
+
+<script type="text/javascript" src="/skin/common_files/lib/jquery.cookie.js"></script>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+
+function initDropOutButton() {
+
+  if ($(this).hasClass('activated-widget'))
+    return;
+
+  $(this).addClass('activated-widget');
+
+  var dropOutBoxObj = $(this).parent().find('.dropout-box');
+
+  // Process the onclick event on a dropout button 
+  $(this).click(
+    function(e) {
+      e.stopPropagation();
+      $('.dropout-box').removeClass('current');
+      dropOutBoxObj
+        .toggle()
+        .addClass('current');
+      $('.dropout-box').not('.current').hide();
+      if (dropOutBoxObj.offset().top + dropOutBoxObj.height() - $('#center-main').offset().top - $('#center-main').height() > 0) {
+        dropOutBoxObj.css('bottom', '-2px');
+      }
+    }
+  );
+ 
+  // Click on a dropout layer keeps the dropout content opened
+  $(this).parent().click(
+    function(e) { 
+      e.stopPropagation(); 
+    }
+  );
+
+  // shift the dropout layer from the right hand side 
+  // if it's out of the main area
+  var borderDistance = ($("#center-main").offset().left + $("#center-main").outerWidth()) - ($(this).offset().left + dropOutBoxObj.outerWidth());
+  if (!isNaN(borderDistance) && borderDistance < 0) {
+    dropOutBoxObj.css('left', borderDistance+'px');
+  }
+
+  // Fix for IE6
+  if ($.browser.msie && $.browser.version < 7) {
+    dropOutBoxObj.bgiframe();
+  }
+}
+
+$(document).ready( function() {
+  $('body').click(
+    function() {
+      $('.dropout-box')
+        .filter(function() { return $(this).css('display') != 'none'; } )
+        .hide();
+    }
+  );
+  $('div.dropout-container div.drop-out-button').each(initDropOutButton);
+}
+);
+
+
+
+// Fix with positioning (z-indexes)
+var i = 100;
+$(document).ready(function(){
+$(".products div.item").each(function() {
+  $(this).css({'background-color' : $(this).css('background-color'), 'z-index' : i--});
+});
+change_width_iefix();
+});
+
+
+
+
+// Position:absolute elements will not move when window is resized 
+// if a sibling contains float elements and a clear:both element
+// https://bugzilla.mozilla.org/show_bug.cgi?id=442542
+// FireFox 3.0+
+if (navigator.userAgent.toLowerCase().search(/firefox\/(3\.\d+)/i) != -1 && typeof(window.$) != 'undefined') {
+$.event.add( window, 'resize', function() {
+  var h = document.getElementById('header');
+  if (!h || $(h).css('position') != 'absolute')
+    return;
+
+  document.getElementById('header').style.position = 'static';
+  setTimeout(
+    function() {
+      document.getElementById('header').style.position = 'absolute';
+    },
+  20);
+});
+}
+
+
+var md = 10*1000;
+
+
+$(document).ready( function() {
+
+$('form').not('.skip-auto-validation').each(function() {
+  applyCheckOnSubmit(this);
+});
+
+$('a.toggle-link').live(
+  'click',
+  function(e) {
+    $('#' + $(this).attr('id').replace('link', 'box')).toggle();
+  }
+);
+
+$("#dialog-message").fadeIn('slow').delay(md).fadeOut('slow');
+
+});
+
+
+
+
+//]]>
+</script>
+
+<script type="text/javascript" src="/skin/common_files/modules/Product_Options/func.js"></script>
+
+
+    
+<link rel="stylesheet" type="text/css" href="http://manage.fontainebleau.com/assets/css/reset.css">
+<link rel="stylesheet" type="text/css" href="/skin/fontainebleau/css/main.css">
+
+    
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/skin/common_files/lib/cluetip/jquery.cluetip.css">
+
+
+<style type="text/css">
+<!--
+
+                    @import url("/skin/common_files/modules/Upselling_Products/main.css"); 
+
+                                @import url("/skin/common_files/modules/News_Management/main.css"); 
+
+                                @import url("/skin/common_files/modules/Special_Offers/main.css"); 
+
+                                @import url("/skin/common_files/modules/Advanced_Order_Management/main.css"); 
+
+                                @import url("/skin/common_files/modules/Product_Options/main.css"); 
+
+                                @import url("/skin/common_files/modules/Detailed_Product_Images/main.css"); 
+
+                                @import url("/skin/common_files/modules/RMA/main.css"); 
+
+                                @import url("/skin/fontainebleau/modules/One_Page_Checkout/main.css"); 
+
+                        
+-->
+</style>
+
+  <link rel="stylesheet" type="text/css" href="/skin/fontainebleau/css/altskin.css">
+      
+  
+  <link rel="canonical" href="http://shop.fontainebleau.com/home.php">
+
+
+<link rel="stylesheet" type="text/css" href="/skin/common_files/lib/colorbox/colorbox.css">
+<script type="text/javascript" src="/skin/common_files/lib/colorbox/jquery.colorbox-min.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="http://manage.fontainebleau.com/assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="http://manage.fontainebleau.com/assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="http://manage.fontainebleau.com/assets/fonts/fonts.css">
+
+  <link rel="stylesheet" type="text/css" href="/skin/fontainebleau/css/store.css">
+  
+  <script src="/skin/fontainebleau/js/functions.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/skin/fontainebleau/js/t_selectstyle-0.7.js" type="text/javascript" charset="utf-8"></script>
+
+    
+<script type="text/javascript" src="/adaptive.php?send_browser=YYN|Chrome|34.0.1847.116|Linux x86_64|Y|1024|768|C"></script><script type="text/javascript" async="" src="https://beacon.sojern.com/pixel/p/3911"></script></head>
+<body><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" style="padding-bottom: 42px; padding-right: 42px; display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear:left"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden;" class=""></div><div id="cboxLoadingOverlay" class=""></div><div id="cboxLoadingGraphic" class=""></div><div id="cboxTitle" class=""></div><div id="cboxCurrent" class=""></div><div id="cboxNext" class=""></div><div id="cboxPrevious" class=""></div><div id="cboxSlideshow" class=""></div><div id="cboxClose" class=""></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear:left"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position:absolute; width:9999px; visibility:hidden; display:none"></div></div>
+<div id="page-container">
+  <div id="page-container2">
+    <div id="content-container">
+          <div class="summary">
+
+																<h1></h1>
+										
+
+					
+					<div class="description">
+						
+										</div>
+					
+				</div>
+	<div class="seperator">&nbsp;</div>
+      <div id="content-container2">
+
+                  <div id="fb-root"></div>
+                
+
+        <div id="center">
+	<div id="center-main">
+		
+				
+		
+		<div class="cart_items ">
+										<div class="cart_nav">
+					<h5>BROWSE BY</h5>
+					
+										
+						<div class="room">
+<div class="image">
+<a href="home.php?cat=262"><img width="209" height="158" src="http://shop.fontainebleau.com/images/T/Food2.jpg" alt="FOOD"></a> </div>
+<div class="text">
+<h2><a href="home.php?cat=262">FOOD</a></h2>
+<div class="paragraph">Sweet or salty? Healthy or indulgent? Choose from a variety of creative displays to treat any particular palette.</div>
+<p><a href="home.php?cat=262" class="arrow">Learn More</a></p>
+</div>
+</div> 
+
+<div class="room">
+<div class="image">
+<a href="home.php?cat=263"><img width="209" height="158" src="http://shop.fontainebleau.com/images/T/Beverages2.jpg" alt="BEVERAGE"></a> </div>
+<div class="text">
+<h2><a href="home.php?cat=263">BEVERAGE</a></h2>
+<div class="paragraph">Refresh and revive with a selection of beverage displays including an interactive "Build Your Own Mojito" to simply a bottle of champagne.</div>
+<p><a href="home.php?cat=263" class="arrow">Learn More</a></p>
+</div>
+</div>
+
+<!--
+<div class="room">
+<div class="image">
+<a href="home.php?cat=264"><img width="209" height="158" src="http://shop.fontainebleau.com/images/T/Retail2.jpg" alt="RETAIL"></a> </div>
+<div class="text">
+<h2><a href="home.php?cat=264">RETAIL</a></h2>
+<div class="paragraph">Fresh flowers are the perfectly traditional way to celebrate and let someone know they are special. </div>
+<p><a href="home.php?cat=264" class="arrow">Learn More</a></p>
+</div>
+</div>
+--> 						
+					
+
+
+				</div>
+									<!-- central space -->
+
+			
+																		
+				
+									  
+				
+				
+				
+				
+  
+
+
+    
+
+
+ 
+
+
+
+ 
+
+
+	<p></p>
+
+
+					</div>
+		<!-- /central space -->
+									<div id="left-bar">
+					
+
+
+
+
+  <script type="text/javascript">
+//<![CDATA[
+var lbl_error = 'Error';
+var txt_minicart_total_note = 'Order subtotal does not cover discounts and extra costs like shipping charges, etc. The final cost of the order will be calculated at the checkout page.';
+
+//]]>
+</script>
+<script type="text/javascript" src="/skin/fontainebleau/js/ajax.minicart.js"></script>
+
+
+
+    <div class="menu-dialog menu-minicart empty">
+  <div class="title-bar ">
+    <div class="icon ajax-minicart-icon"></div><h2><span class="minicart">
+<span class="minicart-items-value cart_empty">CART IS EMPTY </span>
+</span></h2>
+  </div>
+  <div class="content">
+  
+    
+
+<ul>
+  
+  
+  
+</ul>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+				</div>
+					
+			</div><!-- /center -->
+</div><!-- /center-main -->
+      </div>
+    </div>
+
+    <div class="clearing">&nbsp;</div>
+
+    <div id="header">
+      <div class="line0">
+
+	<div class="top_nav"><!--Google Tag Manager--><noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-W6GV88" height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript><!--End Google Tag Manager--><div id="weatherinfo"> </div><div id="header_wrap"><div id="header">
+<div id="header_strip"> </div>
+<div id="header_inner">
+<div id="fixed_overlay" style="display: none">
+<div id="fixed_logo"> </div>
+<div id="reveal"> </div>
+</div>
+<div id="fixed_overlay_under" style="display: none"> </div>
+<div id="header_logo"><a href="/"><h1>Fontainebleau Miami Beach</h1></a></div>
+<div id="header_top">
+<div id="header_top_search"><form name="sitesearch" action="/web/site/search"><input type="text" id="header_top_search_field" name="s" default="SEARCH" class="text"></form></div>
+<div id="header_lang_switch">
+<div class="title">Language</div><!-- mp_trans_remove_start --><ul class="links">
+<li><a class="current" href="http://www.fontainebleau.com" onclick="MP_switchLanguage('en');return false;">EN</a></li>
+<li><a href="http://spanish.fontainebleau.com" onclick="MP_switchLanguage('es');return false;">ES</a></li>
+<li><a class="clearfix" href="http://portuguese.fontainebleau.com" onclick="MP_switchLanguage('pt');return false;">PT</a></li>
+</ul><!-- mp_trans_remove_end --><!-- mp_trans_add="ES"<ul class="links">
+<li><a href="http://www.fontainebleau.com" onclick="MP_switchLanguage('en');return false;">EN</a></li>
+<li><a class="current" href="http://spanish.fontainebleau.com" onclick="MP_switchLanguage('es');return false;">ES</a></li>
+<li><a class="clearfix" href="http://portuguese.fontainebleau.com" onclick="MP_switchLanguage('pt');return false;">PT</a></li>
+</ul>--><!-- mp_trans_add="PT"<ul class="links">
+<li><a href="http://www.fontainebleau.com" onclick="MP_switchLanguage('en');return false;">EN</a></li>
+<li><a href="http://spanish.fontainebleau.com" onclick="MP_switchLanguage('es');return false;">ES</a></li>
+<li><a class="clearfix current" href="http://portuguese.fontainebleau.com" onclick="MP_switchLanguage('pt');return false;">PT</a></li>
+</ul>--></div>
+<div id="header_top_weather">
+<div id="weather_icon"> </div>
+<div id="temp_wrapper">
+<div id="weather_f"> </div>
+<div id="weather_c"> </div>
+</div>
+</div>
+</div>
+<div id="header_reservations" style="display: none;">
+<div id="res" default_main="">
+<div class="main_menu">
+<ul class="menu">
+<li><a href="#" class="accom">Accommodations</a></li>
+<li><a href="#" class="lapis">Lapis Spa &amp; Salon</a></li>
+<li><a href="#" class="dining">Dining</a></li>
+<li><a href="#" class="cabana">Cabana</a></li>
+</ul>
+<div class="phone">Or call<br><span class="fbr_number">800-548-8886</span> / 305-535-3283</div>
+</div>
+<div class="header" style="display:none"><select class="select_style" name="nav" id="nav"><option class="accom" value="accom">Accommodations</option>
+<option class="lapis" value="lapis">Lapis Spa &amp; Salon</option>
+<option value="dining" class="dining">
+							Dining
+						</option>
+<option class="cabana" value="cabana">Cabana</option></select></div>
+<form action="https://gc.synxis.com/" method="post" name="accom_form" style="display:none">
+<input type="hidden" name="Hotel" value="12476"><input type="hidden" name="Chain" value="5321"><input type="hidden" name="start" value="availresults"><div class="main">
+<div class="title">Select your dates:</div>
+<div class="res_calendar"><div id="accom_cal"> </div></div>
+<div class="selection_wrapper">
+<div class="selection">
+<div class="selection_label">Arrival:</div>
+<div class="selection_text" id="start_date">&nbsp;</div>
+<input type="hidden" id="f_start_date" name="arrive">
+</div>
+<div class="selection">
+<div class="selection_label">Departure:</div>
+<div class="selection_text" id="end_date">&nbsp;</div>
+<input type="hidden" id="f_end_date" name="depart">
+</div>
+<div class="selection">
+<div class="selection_label">Nights:</div>
+<div class="selection_text" id="num_nights">&nbsp;</div>
+</div>
+</div>
+<div class="select_wrapper"><select name="adult" class="select_style"><option value="">Number of adults</option>
+<option value="1">One adult</option>
+<option value="2">Two adults</option>
+<option value="3">Three adults</option>
+<option value="4">Four adults</option>
+<option value="5">Five adults</option></select></div>
+<div class="select_wrapper"><select name="child" class="select_style"><option value="0">Number of kids</option>
+<option value="0">No kids</option>
+<option value="1">One</option>
+<option value="2">Two</option>
+<option value="3">Three</option>
+<option value="4">Four</option></select></div>
+<input type="text" default="Promo Code" name="promo"><a href="https://gc.synxis.com/?Hotel=12476&amp;Chain=5321&amp;template=GCO&amp;shell=OT&amp;start=0" target="_blank" class="link">Edit existing reservation</a>
+</div>
+<div class="footer">
+<div class="res_error" style="display:none"> </div>
+<div class="res_sending" style="display:none">Sending request...</div>
+<a href="#" class="submit_button">find a room</a>
+</div>
+</form>
+<form target="_blank" action="/SERVICE/spaReservations" method="get" name="lapis_form" style="display:none">
+<input type="hidden" name="source" value="reservations_widget"><div class="spa_reserve">
+<div class="button"><a href="https://fo33140.aws.book4time.com/onlinebooking/" class="spa_button" target="_blank" style="background-image: url(/assets/img/button_spa_bg.png)">RESERVE ONLINE</a></div>
+<p>or complete form below to inquire about treatments:</p>
+</div>
+<div class="main">
+<input type="text" default="First Name" name="first_name" class="required"><input type="text" default="Last Name" name="last_name" class="required"><input type="text" default="Email" name="email" class="required"><input type="text" default="Phone" name="phone" class="required"><textarea name="text">How would you like to enjoy your time at Lapis?</textarea><input type="text" default="What is 1 + 1? (enter number)" name="captchure" class="required">
+</div>
+<div class="footer">
+<div class="res_error" style="display:none"> </div>
+<div class="res_sending" style="display:none">Sending request...</div>
+<a href="#" class="submit_button">find a room</a>
+</div>
+</form>
+<form target="_blank" action="http://www.opentable.com/opentables.aspx" method="get" name="dining_form" style="display:none">
+<input type="hidden" name="t" value="rest"><input type="hidden" name="m" value="17"><div class="main">
+<div class="select_wrapper"><select name="r" class="select_style required"><option value="">Restaurant</option>
+<option value="33820">
+									Stripsteak
+								</option>
+<option value="33808">
+									Hakkasan
+								</option>
+<option value="114739">
+									Michael Mina 74
+								</option>
+<option value="33814">
+									Scarpetta
+								</option>
+<option value="33811">
+									Blade
+								</option>
+<option value="33817">
+									La Cote
+								</option>
+<option value="33823">
+									Vida
+								</option></select></div>
+<div class="res_calendar">
+<div id="dining_cal"> </div>
+<input type="hidden" name="date" id="f_date_dining"><input type="hidden" name="d">
+</div>
+<div class="time_wrapper">
+<div class="time_label">Time</div>
+<select class="time select_style" name="f_time_h"><option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6" selected="">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option></select><select class="time select_style" name="f_time_m"><option value="00" selected="">00</option>
+<option value="15">15</option>
+<option value="30">30</option>
+<option value="45">45</option></select><select class="time select_style" name="f_time_a"><option value="AM">AM</option>
+<option value="PM" selected="">PM</option></select>
+</div>
+<div class="select_wrapper"><select name="p" class="required select_style"><option value="">Party size</option>
+<option value="1">Party of one</option>
+<option value="2">Party of two</option>
+<option value="3">Party of three</option>
+<option value="4">Party of four</option>
+<option value="5">Party of five</option></select></div>
+</div>
+<div class="footer">
+<div class="res_error" style="display:none"> </div>
+<div class="res_sending" style="display:none">Sending request...</div>
+<a href="#" class="submit_button">find a room</a>
+</div>
+</form>
+<form target="_blank" action="/SERVICE/cabanaReservations" method="get" name="cabana_form" style="display:none">
+<input type="hidden" name="source" value="reservations_widget"><div class="main">
+<input type="text" default="First Name" name="first_name" class="required"><input type="text" default="Last Name" name="last_name" class="required"><div class="res_calendar">
+<div id="cabana_cal"> </div>
+<input type="hidden" name="date" id="f_date_cabana">
+</div>
+<input type="text" default="Email" name="email" class="required"><input type="text" default="Phone" name="phone" class="required"><div class="select_wrapper"><select class="select_style lower_case required" name="unit"><option value="">Choose</option>
+<option value="island">Island ($1000)</option>
+<option value="super premium">Super Premium ($750)</option>
+<option value="premium">Premium ($550)</option>
+<option value="family">Family ($250)</option>
+<option value="luxury">Luxury ($450)</option>
+<option value="day bed">Day Bed ($150)</option>
+<option value="opium beds">Opium Beds ($100)</option></select></div>
+<textarea name="text">comments</textarea><input type="text" default="What is 1 + 1? (enter number)" name="captchure" class="required">
+</div>
+<div class="footer">
+<div class="res_error" style="display:none"> </div>
+<div class="res_sending" style="display:none">Sending request...</div>
+<a href="#" class="submit_button">find a room</a>
+</div>
+</form>
+</div> </div>
+<div id="header_hide">
+<div id="header_menu">
+<ul id="header_menu_list">
+<li class="main">
+<a class="main_item" href="http://www.fontainebleau.com/web/accommodations" data-bkgr="/FILE/8615.jpg">Accommodations</a><div class="sub">
+<ul>
+<li class="sub_group sub_group_first">Accommodations</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/accommodations/accommodations_at_a_glance" target="_self">At A Glance</a></li>
+<li class="sub_group">Rooms &amp; Suites</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/accommodations/rooms__suites/guestrooms" target="_self">Guestrooms</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/accommodations/rooms__suites/junior_suites" target="_self">Junior Suites</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/accommodations/rooms__suites/one_bedroom_suites" target="_self">One/Two Bedroom Suites</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/accommodations/rooms__suites/specialty_suites" target="_self">Specialty Suites</a></li>
+<li class="sub_group">Stay Offers</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/promotions" target="_self">Packages and Promotions</a></li>
+</ul>
+<ul class="second_col">
+<li class="sub_group sub_group_first">Amenities</li>
+<li class="sub_item"><a href="http://shop.fontainebleau.com" target="_self">In-Room Delights</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/accommodations/concierge_services" target="_self">Concierge Services</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/accommodations/fb_pets" target="_self">FB Pets</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/accommodations/guest_faqs" target="_self">Guest FAQs</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/all_promotions/property_map" target="_self">Property Map</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/accommodations/bleau_agent" target="_self">Bleau Agent</a></li>
+<li class="sub_group">Gallery</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/photos/accommodations" target="_self">Guestroom Gallery</a></li>
+</ul>
+<div class="callout_text">
+<div class="title">Fall for Bleau</div>
+<div class="subtitle">Daydream about your fall fling, reserve now and receive the 3rd night on us.</div>
+<a class="arrow" href="http://www.fontainebleau.com/web/promotions/fall_for_bleau" target="_self">Learn More</a>
+</div>
+</div>
+</li>
+<li class="main">
+<a class="main_item" href="http://www.fontainebleau.com/web/dining" data-bkgr="/FILE/8120.jpg">Dining </a><div class="sub">
+<ul>
+<li class="sub_group sub_group_first">DINING</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/dining/dining_at_a_glance" target="_self">At A Glance</a></li>
+<li class="sub_group">Signature Dining</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/dining/hakkasan" target="_self">Hakkasan</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/dining/michael_mina_74" target="_self">Michael Mina 74</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/dining/scarpetta" target="_self">Scarpetta</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/dining/stripsteak" target="_self">STRIPSTEAK</a></li>
+<li class="sub_group">Casual Dining &amp; Snacks</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/dining/la_cote" target="_self">La Cote</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/dining/vida" target="_self">Vida</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/dining/blade_sushi" target="_self">Blade</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/dining/fresh" target="_self">Fresh</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/dining/chez_bon_bon" target="_self">Chez Bon Bon</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/dining/dine-in" target="_self">Dine-in</a></li>
+</ul>
+<ul class="second_col">
+<li class="sub_group sub_group_first">Specials &amp; Promotions</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/fontainebleau_holidays" target="_self">holiday dining</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/specials/copain_wines__gotham_steak_wine_dinner" target="_self">CELLAR 1954 WINE AND DINNER</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/all_promotions/biographies" target="_self">BIOGRAPHIES</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/specials/dining_events__offers" target="_self">Events and Offers</a></li>
+<li class="sub_group">Group Dining</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/dining/group_dining" target="_self">Capacities and Menus</a></li>
+<li class="sub_group">Gallery</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/photos/dining" target="_self">Dining Gallery</a></li>
+</ul>
+<div class="callout_text">
+<div class="title">DIM SUM</div>
+<div class="subtitle">Hakkasan is now open for Dim Sum lunch every Saturday and Sunday<br></div>
+<a class="arrow" href="http://www.fontainebleau.com/web/dining/hakkasan/menus?filter=1974" target="_self">Learn More</a>
+</div>
+</div>
+</li>
+<li class="main">
+<a class="main_item" href="http://www.fontainebleau.com/web/nightlife" data-bkgr="/FILE/8109.jpg">Nightlife</a><div class="sub">
+<ul>
+<li class="sub_group sub_group_first">Nightlife</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/nightlife" target="_self">At a Glance</a></li>
+<li class="sub_group">Nightclubs</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/nightlife/liv">Liv</a></li>
+<li class="sub_group">Bars</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/nightlife/bleau_bar">Bleau Bar</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/nightlife/glow_bar">Glow Bar</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/nightlife/la_cote">La Cote</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/all_promotions/live_entertainment">LIVE ENTERTAINMENT</a></li>
+</ul>
+<ul class="second_col">
+<li class="sub_group sub_group_first">Lounges</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/dining/hakkasan">Hakkasan</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/dining/michael_mina_74">Michael Mina 74</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/dining/scarpetta">Scarpetta</a></li>
+<li class="sub_group">Gallery</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/photos/bars__nightlife" target="_self">Bars and Nightlife Gallery</a></li>
+</ul>
+<div class="callout_text">
+<div class="title">LIV</div>
+<div class="subtitle">Fontainebleau Miami Beach is the hub <br>of trendsetting, high-energy nightlife</div>
+<a class="arrow" href="http://www.fontainebleau.com/web/nightlife/liv" target="_self">Learn More</a>
+</div>
+</div>
+</li>
+<li class="main">
+<a class="main_item" href="http://www.fontainebleau.com/web/spa" data-bkgr="/FILE/7855.jpg">Spa</a><div class="sub">
+<ul>
+<li class="sub_group sub_group_first">Spa </li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/spa/spa_at_a_glance" target="_self">At A Glance</a></li>
+<li class="sub_group">Services</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/spa/lapis_spa/menu" target="_self">Spa Menu</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/spa/lapis_spa/salon" target="_self">Salon</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/spa/lapis_spa/gym" target="_self">Gym</a></li>
+<li class="sub_group">About Lapis</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/spa/lapis_spa/celebrations" target="_self">Celebrations</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/spa/lapis_spa/water_journeys" target="_self">Water Journeys</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/spa/lapis_spa/scoop" target="_self">Spa Scoop</a></li>
+</ul>
+<ul class="second_col">
+<li class="sub_group sub_group_first">Specials &amp; Promotions</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/specials/a_day_at_fontainebleau" target="_self">A Day At Fontainebleau</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/spa/lapis_spa/specials" target="_self">Monthly Specials</a></li>
+<li class="sub_item"><a href="https://fontainebleau.cashstar.com" target="_self">Gift Cards</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/specials/lapis_events__offer" target="_self">Events and Offers</a></li>
+<li class="sub_group">Gallery</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/photos/lapis_spa" target="_self">Lapis Spa Gallery</a></li>
+</ul>
+<div class="callout_text">
+<div class="title">Lapis Spa Wellness</div>
+<div class="subtitle">Lapis, the Spa at Fontainebleau Miami Beach invites celebrated experts in the health and wellness fields to take part in one-of-a-kind workshops and classes for both guests and Miami residents as part of the spa's Third Annual Lapis Spa Wellness Series.</div>
+<a class="arrow" href="http://www.fontainebleau.com/web/spa/lapis_spa/lapis_wellness_series" target="_self">Learn More</a>
+</div>
+</div>
+</li>
+<li class="main">
+<a class="main_item" href="http://www.fontainebleau.com/web/shops" data-bkgr="/FILE/7899.jpg">Shops</a><div class="sub">
+<ul>
+<li class="sub_group sub_group_first">Shops</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/shops/shops_at_a_glance" target="_self">At A Glance</a></li>
+<li class="sub_group">Shops at Fontainebleau</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/shops/idaandharry">IDA and HARRY</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/shops/bleau_signature">Bleau Signature</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/shops/aquamarine">Aquamarine</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/shops/morris_and_co">Morris &amp; Co</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/shops/timeless_at_fontainebleau">Timeless</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/shops/lapis_retail">Lapis Retail</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/shops/personal_shopping">Personal Shopping</a></li>
+<li class="sub_group">Shop Online</li>
+<li class="sub_item"><a href="http://fontainebleaushop.com" target="_blank">Fontainebleaushop.com</a></li>
+<li class="sub_item"><a href="https://fontainebleau.cashstar.com" target="_blank">Gift Cards</a></li>
+</ul>
+<div class="callout_text">
+<div class="title">TIMELESS</div>
+<div class="subtitle">Timeless celebrates the hotel’s iconic past, present and future, featuring exceptional timepieces and fine jewelry for women and men<br></div>
+<a class="arrow" href="http://www.fontainebleau.com/web/shops/timeless_at_fontainebleau" target="_self">LEARN MORE</a>
+</div>
+</div>
+</li>
+<li class="main">
+<a class="main_item" href="http://www.fontainebleau.com/web/recreation" data-bkgr="/FILE/8071.jpg">Activities</a><div class="sub">
+<ul>
+<li class="sub_group sub_group_first">Activities</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/recreation/activities_at_a_glance" target="_self">At A Glance</a></li>
+<li class="sub_group">Fontainebleau Activities</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/recreation/fontainebleau_activities/pools_cabanas_beach" target="_self">Pools, Cabanas, Beach</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/recreation/fontainebleau_activities/fb_kids_adventures" target="_self">FB KIDS</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/recreation/fontainebleau_activities/marina" target="_self">Marina</a></li>
+<li class="sub_group">Miami Activities</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/recreation/miami_activities/recreation" target="_self">RECREATION</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/recreation/miami_activities/eco_adventures" target="_self">ECO ADVENTURES</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/recreation/miami_activities/turnberry_golf" target="_self">TURNBERRY GOLF</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/recreation/miami_activities/turnberry_tennis" target="_self">TURNBERRY TENNIS</a></li>
+</ul>
+<ul class="second_col">
+<li class="sub_group sub_group_first">Miami Attractions</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/recreation/miami_attractions/entertainment" target="_self">ENTERTAINMENT</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/recreation/miami_attractions/museums" target="_self">MUSEUMS</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/recreation/miami_attractions/recreation" target="_self">PARKS </a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/recreation/miami_attractions/shopping" target="_self">SHOPPING</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/recreation/miami_attractions/area_shopping" target="_self">AREA SHOPPING</a></li>
+<li class="sub_group">Gallery</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/photos/recreation" target="_self">Activities Gallery</a></li>
+</ul>
+<div class="callout_text">
+<div class="title">Cabana</div>
+<div class="subtitle">Fontainebleau’s poolscape boasts “walls of water” intermingled with a free-form pool</div>
+<a class="arrow" href="http://www.fontainebleau.com/web/recreation/fontainebleau_activities/pools_cabanas_beach" target="_self">Learn more</a>
+</div>
+</div>
+</li>
+<li class="main">
+<a class="main_item" href="http://www.fontainebleau.com/web/meetings" data-bkgr="/FILE/7903.jpg">Meetings</a><div class="sub">
+<ul>
+<li class="sub_group sub_group_first">Groups</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/groups/meetings_at_a_glance" target="_self">At a Glance</a></li>
+<li class="sub_group">Meetings &amp; Events</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/groups/meetings__events/meetings" target="_self">Meetings</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/groups/meetings__events/event_services" target="_self">Event Services</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/groups/meetings__events/catering_and_menus" target="_self">Banquet Menu</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/groups/meetings__events/group_dining" target="_self">Group Dining</a></li>
+<li class="sub_group">Partners &amp; Vendors</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/groups/partners__vendors/destination_management_partners" target="_self">Destination Management Partners</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/groups/partners__vendors/preferred_vendors" target="_self">Preferred Vendors</a></li>
+</ul>
+<ul class="second_col">
+<li class="sub_group sub_group_first">Sales Kit</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/groups/meetings__events/proposal" target="_self">proposal</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/groups/meetings__events/sales_brochure" target="_self">sales brochure</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/all_promotions/capacity_charts_and_floor_plan" target="_self">capacity charts and floor plan</a></li>
+<li class="sub_item"><a href="http://data.meetingmatrix.com/SpaceLinksNET/Default.aspx?MMCode=HIMIAFR" target="_self">Room diagrams</a></li>
+<li class="sub_group">Gallery</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/photos/meetings_and_events" target="_self">Meeting and Events Gallery</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/360/sparkle_ballroom.html" target="_self">360 tour</a></li>
+</ul>
+<div class="callout_text">
+<div class="title">MEET WITH US</div>
+<div class="subtitle">Fontainebleau Miami Beach has more than 20,000 square feet of pre-function space and flexible outdoor event space</div>
+<a class="arrow" href="http://www.fontainebleau.com/web/groups/meetings__events" target="_self">See More</a>
+</div>
+</div>
+</li>
+<li class="main">
+<a class="main_item" href="http://www.fontainebleau.com/web/groups/weddings" data-bkgr="/FILE/8138.jpg">Weddings</a><div class="sub">
+<ul>
+<li class="sub_group sub_group_first">Weddings</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/groups/weddings/wedding_at_a_glance" target="_self">At a Glance</a></li>
+<li class="sub_group">Wedding Menu</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/all_promotions/wedding_menu" target="_self">View Menu</a></li>
+<li class="sub_group">Specials &amp; Promotions</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/FILE/6622.pdf" target="_self">Summer Ever After</a></li>
+</ul>
+<ul class="second_col">
+<li class="sub_group sub_group_first">Weddings Ceremony</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/groups/weddings/something_bleau" target="_self">Something Bleau</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/all_promotions/something_bleau" target="_self">Something Bleau Brochure</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/groups/weddings/ceremony__reception_settings" target="_self">Ceremony | Reception Settings</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/groups/weddings/wedding_packages" target="_self">Wedding Packages</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/groups/weddings/a_complete_destination" target="_self">A Complete Destination</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/groups/partners__vendors/preferred_vendors" target="_self">Preferred Vendors</a></li>
+<li class="sub_group">Gallery</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/photos/weddings" target="_self">Weddings Gallery</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/groups/weddings/wedding_video" target="_self">Something Bleau Video</a></li>
+</ul>
+<div class="callout_text">
+<div class="title">A Complete Destination</div>
+<div class="subtitle">Fontainebleau offers elegant ballrooms with enduring architectural imprints and an intoxicating mix of old and new 21st century glamour</div>
+<a class="arrow" href="http://www.fontainebleau.com/web/groups/weddings/a_complete_destination" target="_self">Learn More</a>
+</div>
+</div>
+</li>
+<li class="main">
+<a class="main_item" href="http://www.fontainebleau.com/web/bleaulive" data-bkgr="/FILE/8119.jpg">BleauLive</a><div class="sub">
+<ul>
+<li class="sub_group sub_group_first">BLEAULIVE</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/promotions/upcoming_events" target="_self">AT A GLANCE</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/promotions/tns" target="_self">Tegan and Sara</a></li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/promotions/dmmm" target="_self">Deana Martin and Michael Martocci</a></li>
+<li class="sub_group">Media</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/press/credential_request" target="_self">Credential Request</a></li>
+<li class="sub_group">Gallery</li>
+<li class="sub_item"><a href="http://www.fontainebleau.com/web/photos/bleaulive_recap?videos" target="_self">BleauLive Recap Gallery</a></li>
+</ul>
+<div class="callout_text">
+<div class="title">WHO'S COMING NEXT</div>
+<div class="subtitle">Fontainebleau's BleauLive continues the tradition of entertaining guests with performances by Lady Gaga, Maroon 5, Katy Perry, Tiesto, Pitbull and other celebrity artists</div>
+<a class="arrow" href="http://www.fontainebleau.com/web/promotions/tns" target="_self">Learn More</a>
+</div>
+</div>
+</li>
+</ul>
+<a class="reservations" href="#" onclick="FBR.toggleReservations(); return false;">MAKE A RESERVATION:</a>
+</div>
+<div id="menu_block" class="adjustelems"> </div>
+</div>
+</div>
+</div></div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <!-- M: 4.11MB / T: 0.0457 --></div>
+	<div class="mast_head">
+		<img src="http://shop.fontainebleau.com/images/T/In-Room-Delights-Header.jpg" width="958" height="252" alt="image">
+	</div>
+	 
+ 
+ 
+</div>
+
+<noscript>
+  &lt;div class="noscript-warning"&gt;
+    &lt;div class="content"&gt;This site requires JavaScript to function properly.&lt;br /&gt;Please enable JavaScript in your web browser.&lt;/div&gt;
+  &lt;/div&gt;
+</noscript>    </div>
+
+    <div id="footer">
+
+      
+      
+<div id="footer_inner">
+
+<div id="footer_menu" class="shop_footer"><ul>
+<li class="contact"><a href="http://www.fontainebleau.com/web/site/contact">Contact Us</a></li>
+<li><a href="/pages.php?alias=conditions" target="_blank" id="terms_toggle">Terms &amp; Conditions</a></li>
+<li><a href="http://www.fontainebleau.com/web/subscribe?e=Email+Address&amp;x=4&amp;y=8" target="">Keep in Touch</a></li>
+<li><a href="http://www.fontainebleau.com/web/about_bleau" target="">About Us</a></li>
+<li><a href="http://www.fontainebleau.com/web/site/careers" target="">Careers</a></li>
+<li><a href="http://www.fontainebleau.com/web/development" target="">Development</a></li>
+</ul></div>
+<div id="footer_follow">
+<h4>FOLLOW US:</h4>
+<a class="follow_facebook" href="http://www.facebook.com/pages/Fontainebleau-Miami-Beach/78458342904?v=wall" target="_blank">Facebook</a><a class="follow_twitter" href="http://twitter.com/Fontainebleau" target="_blank">Twitter</a><a class="follow_youtube" href="http://www.youtube.com/fontainebleaumb" target="_blank">You Tube</a><a class="follow_foursquare" href="https://foursquare.com/v/fontainebleau-resort/4a743ee4f964a520c5dd1fe3" target="_blank">foursquare</a><a class="follow_pintrest" href="http://pinterest.com/fontainebleau/" target="_blank">pinterest</a><a class="follow_tripadvisor" href="http://www.tripadvisor.com/Hotel_Review-g34439-d85177-Reviews-Fontainebleau_Miami_Beach-Miami_Beach_Florida.html" target="_blank">Trip Advisor</a>
+</div>
+</div>
+
+<div id="terms_overlay" class="overlay_elems">
+
+</div>
+	<div id="terms_overlay_message" class="overlay_elems">
+		<div class="title">FONTAINEBLEAU MIAMI BEACH :: Terms &amp; Conditions</div> 
+		<div class="close_overlay"></div>
+		<div class="text"></div>
+	</div>
+    </div>
+
+    
+    
+  </div>
+</div>
+
+
+
+                                                                                                                                                                                                                                                                <div style="display: none; visibility: hidden;"><script async="null" src="http://i.simpli.fi/dpx.js?cid=15871&amp;amp;action=100&amp;amp;segment=fontainebleau&amp;amp;m=1&amp;amp;sifi_tuid=905" data-sifi-parsed="true"></script></div><div style="display: none; visibility: hidden;">
+
+<script type="text/javascript">var _qevents=_qevents||[];(function(){var a=document.createElement("script");a.src=("https:"==document.location.protocol?"https://secure":"http://edge")+".quantserve.com/quant.js";a.async=!0;a.type="text/javascript";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();_qevents.push({qacct:"p-0MuHWr_c5Qvty",labels:"_fp.event.Homepage"});</script>
+
+
+
+</div><script type="text/javascript" id="" src="http://tag.yieldoptimizer.com/ps/ps?t=s&amp;p=1922&amp;pg=cmpldg&amp;rtg=y"></script><script type="text/javascript" id="" src="http://tag.yieldoptimizer.com/ps/ps?t=s&amp;p=1922&amp;pg=hp&amp;rtg=y"></script><div style="display: none; visibility: hidden;">
+
+<script class="kxct" data-id="JLPSM6U1" data-timing="async" data-version="1.9" type="text/javascript">window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);(function(){var b=document.createElement("script");b.type="text/javascript";b.async=!0;var a,c=(a=location.href.match(/\bkxsrc=([^&]+)/))&&decodeURIComponent(a[1]);b.src=/^https?:\/\/([a-z0-9_\-\.]+\.)?krxd\.net(:\d{1,5})?\//i.test(c)?c:"disable"===c?"":("https:"===location.protocol?"https:":"http:")+"//cdn.krxd.net/controltag?confid\x3dJLPSM6U1";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)})();</script>
+</div><div style="display: none; visibility: hidden;">
+<script>(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="https://beacon.sojern.com/pixel/p/3911";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)})();</script>
+</div><div style="display: none; visibility: hidden;">
+<script src="http://ib.adnxs.com/seg?add=1597446&amp;amp;t=1" type="text/javascript"></script>
+</div><script src="http://i.simpli.fi/p?cid=15871&amp;cb=dpx_1329289._hp"></script><img alt="" height="1" width="1" style="display: none;" src="https://r.turn.com/r/beacon?b2=0BurVuOp4bwflJyq4qlJGvFiG05YPI5kq6KPkSGLQAf6kmChfUz0oAcvRTT9hWlR339lHvy-IfiGZV2wNTV0ig"></body></html>

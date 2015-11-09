@@ -1,0 +1,1116 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="Real-time local buzz for Wishbone Restaurant in Chicago: find out what locals in Chicago are saying right now about Wishbone Restaurant...">
+<meta name="keywords" content="Wishbone Restaurant, Chicago, Reviews, tweets, Restaurants">
+<link rel="icon" type="favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link type="text/css" rel="stylesheet" media="screen" href="/style/citytweets.css">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="screen" href="/style/citytweetsie6.css"/>
+<![endif]-->
+
+<!--ie6
+src="/images/citytweets_sprite.png" should be replaced by src="x.gif"
+-->
+
+
+
+
+<title>Wishbone Restaurant - Chicago Restaurants</title>
+
+<script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js">
+</script>
+<script type="text/javascript">
+  GS_googleAddAdSenseService("ca-pub-7424218284122496");
+  GS_googleEnableAllServices();
+</script><script src="http://partner.googleadservices.com/gampad/google_ads.js"></script>
+<script language="JavaScript">
+  GA_googleAddAttr("city","chicago")
+   GA_googleAddAttr("bottomcat", "bottom-restaurants")
+   GA_googleAddAttr("bottomsubc", "american-restaurants")
+  GA_googleAddAttr("contentsrc", "wcities")
+</script>
+<script type="text/javascript">
+  GA_googleAddSlot("ca-pub-7424218284122496", "rtguides_undermap_mediumrectangle300x250");
+  GA_googleAddSlot("ca-pub-7424218284122496", "rtguides_underheader_leaderboard728x90");
+  GA_googleAddSlot("ca-pub-7424218284122496", "rtguides_rightsideselfpromo_rectangle300x180");
+</script>
+<script type="text/javascript">
+  GA_googleFetchAds();
+</script>
+
+
+
+<script type="text/javascript">
+midSizeCity = 0
+smallSizeCity = 0
+midSmallSizeCity = 0
+
+
+
+temp = new Image(); temp.src = 'http://'+document.location.host+'/images/citytweets_sprite.png';
+
+places = [{"latitude": 41.882871000000002, "iconcode": "", "placeid": 115023141, "longitude": -87.652319000000006}, {"latitude": 41.941696999999998, "iconcode": "", "placeid": 115023142, "longitude": -87.670385899999999}];
+tl_lat = 41.9475796;
+tl_lng = -87.67219259;
+br_lat = 41.8769884;
+br_lng = -87.65051231;
+// latitude top corner, longitude top corner, latitude bottom corder, longitude bottom corner
+var mapBounds  = tl_lat + ',' + tl_lng + ',' + br_lat + ',' + br_lng
+var default_icon = {
+	smalliconpath:'t000-normal.png',
+	bigiconpath:'a010-over.png',
+	bigiconwidth:38, bigiconheight:38,
+	bigiconanchorx:10, bigiconanchory:90
+};
+var isBottomPage = true, iphone=false, is_homePage = false;
+
+/* NICK [NEGIN] */
+place_url = 'wishbone_restaurant';
+url_lookup = 'bottom-restaurants';
+last_tweet_id = '1958387';
+current_count = '13';
+var clicked_id = '0'; // selected_place_id //id of the element that has to be highlighted in green on the page
+/* NICK [END] */
+var clicked_index = '0';
+
+var owner_screenname = ''; // ssi screen name of the place owner
+var defaultplaceId = '11502314'; // ssi of the default place
+
+var photosArray = ['/cityguidesdata/photos/chicago/11502314_4.jpg','/cityguidesdata/photos/chicago/11502314_3.jpg','/cityguidesdata/photos/chicago/11502314_2.jpg','/cityguidesdata/photos/chicago/11502314_1.jpg'];
+var photographersArray = [ 'Paul Kroll','Vince Pangallo','ambimb','Ratherfancy'];
+var flickrLinks = [ 'http://www.flickr.com/photos/abasketofpups/3676124870/','http://www.flickr.com/photos/vinniedawg/2719214045/','http://www.flickr.com/photos/ambimb/72060483/','http://www.flickr.com/photos/tdinka/1522297163/'];
+var copyrights =['4','0','0','0'];
+
+var isBottomPage = true;
+var menuMODefaut = 'restaurants';
+var page_title = "Wishbone Restaurant";
+var abu_tweet_category = 'restaurants';
+var abu_tweet_url = 'http://sch.mp/'+'0bJR';
+var ctag_url = 'american-restaurants';
+var guide_base_url = 'chicago.schmap.com';
+//<!--echo encoding="none" var="primary_ctag_text" -->
+
+var currentCity_hide = "HIDE CITIES";
+
+var failed_neigh = '';
+var failed_cat = '';
+var failed_currentCat = '';
+
+	var loggedin_username = '';
+
+
+var abu_buzz_level = 80;
+
+	
+	var overlay = 0;
+
+ // TODO cancelled project
+var overlay = 0; // TODO
+
+<!--set var="highLightPhoto" value="true" -->
+
+var homePage= {
+	hack : function() {return;},
+	switchTab : function() {return;},
+	scroll : function() {return;},
+	scrollMOver : function() {return;},
+	scrollMOut : function() {return;},
+	rotateMOOff : function() {return;},
+	rotateMOOn : function() {return;},
+	MO : function() {return;}
+};
+var menuMO = {
+	show : function() {return;},
+	showDefault : function() {return;},
+	cancelReset : function() {return;}
+}
+/* CITY TWEETS */
+function $(src){
+    if(typeof(src) == 'string'){
+        src = document.getElementById(src);
+	}
+    return src;
+}
+function addScript(url,callback){
+	var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.language = "javascript";
+    s.src = url;
+	document.body.appendChild(s);
+	//if(callback){callback(s);}
+	return s;
+}
+// handle broken twitter image links
+// has to be put at the top. Called before the js file is loaded.
+var brokenImages = function() { // object that stores all broken images on the page
+	var images = new Array();
+	function add(img, name){
+		if (!$('SchmapKit.Maps__GStatic.Map.0.container')) {
+			var tmp = function tmp () {brokenImages.add(img, name);};
+			setTimeout(tmp, 200);
+			return;
+		}
+		else {
+			img.src = "/images/spacer.png";
+			img.className = "defaultTwitterPic_noBG ";
+			images.push([name, img]);
+			var url = "http://twitter.com/users/show/"+name+".json?callback=setTwitterImg";
+			addScript(url);
+			setTimeout(brokenImages.fail.bind(null, name, img), 5000);
+		}
+	}
+	function resolve(name, url){
+		//log('resolve: '+name+" "+url);
+		for (i=0; i<images.length; i++) {
+			if (images[i][0] && images[i][0].toLowerCase()==name.toLowerCase()) {
+				images[i][1].src = url;
+				images[i][1].className = '';
+				images[i][1].onerror = function(){setTwitterImgError(this);};
+				images[i][1].onload = function(){checkImage(this, name, true)};
+				//images[i][0] = null;
+	}}}
+	function fail(name, img) {
+		//log('fail : '+name);
+		for (i=0; i<images.length; i++) {
+			if (images[i][0] && images[i][0].toLowerCase()==name.toLowerCase()) {
+				if (images[i][1].src.match("/images/spacer.png")) {
+					images[i][1].className = "defaultTwitterPic";
+					images[i][0] = 'setToDefault';
+					return;
+		}}}}
+	return {add:add, resolve:resolve, fail:fail};
+}();
+function setTwitterImg(r){
+	brokenImages.resolve(r.screen_name, replaceMini(r.profile_image_url));
+}
+function replaceMini(url){
+	url1 = url.split('_normal');
+	if (url1[1])
+		return url1[0]+"_mini"+url1[1];
+	url2 = url.split('_bigger');
+	if (url2[1])
+		return url2[0]+"_mini"+url2[1];
+	else
+		return url;
+}
+function setTwitterImgError(img) {
+	img.src = "/images/spacer.png";
+	img.className = "defaultTwitterPic";
+	log('broken image not handled');
+	return;
+}
+function checkImage(img, name, secondTry) {
+	image = new Image(); image.src = img.src;
+	image.onload = function(){
+		if (!(this.width > 1 || this.height > 1)) {
+			if (secondTry) {
+				log('broken image not handled');
+				img.src = "/images/spacer.png";
+				img.className = "defaultTwitterPic";
+			}
+			else
+				brokenImages.add(img, name);
+		}
+	};
+	img.onload = "";
+	img.onerror = "";
+}
+// This function is used to put entries into the blue menu
+function populateBlueMenu() {
+	li = document.createElement('li'); li.id = "tNparent";
+	if (!document.location.href.match('/search')) {
+		a = document.createElement('a'); a.id = "toggleNeigh_temp";
+		a.innerHTML = "Select neighborhood <span class='last-child'><img src='/images/x.gif' /></span>"; li.appendChild(a);
+	}
+	$('filter_preload').innerHTML = '';
+	$('filter_preload').appendChild(li);
+
+	if (menuMODefaut == 'whatOn') {count = categories.whatOn.menuCount; categories_ = categories.whatOn.categories_;
+		rows = categories.whatOn.numberRows;}
+	else if (menuMODefaut == 'restaurants') {count = categories.restaurants.menuCount; categories_ = categories.restaurants.categories_;
+		rows = categories.restaurants.numberRows;}
+	else if (menuMODefaut == 'barsClubs') {count = categories.barsClubs.menuCount; categories_ = categories.barsClubs.categories_;
+		rows = categories.barsClubs.numberRows;}
+	else if (menuMODefaut == 'shopServices') {count = categories.shopServices.menuCount; categories_ = categories.shopServices.categories_;
+		rows = categories.shopServices.numberRows;}
+	else if (menuMODefaut == 'artEnt') {count = categories.artEnt.menuCount; categories_ = categories.artEnt.categories_;
+		rows = categories.artEnt.numberRows;}
+	else if (menuMODefaut == 'healthBeauty') {count = categories.healthBeauty.menuCount; categories_ = categories.healthBeauty.categories_;
+		rows = categories.healthBeauty.numberRows;}
+	else if (menuMODefaut == 'toDoSee') {count = categories.toDoSee.menuCount; categories_ = categories.toDoSee.categories_;
+		rows = categories.toDoSee.numberRows;}
+	else if (menuMODefaut == 'more') {count = categories.more.menuCount; categories_ = categories.more.categories_;
+		rows = categories.more.numberRows;}
+	else /*if (menuMODefaut == 'nodefault')*/ {count = 0; return;}
+
+	buf = [];
+	for (i=0; i<count; i++) {buf[i] = "";}
+	for (i=0; i<categories_.length; i++) {
+		if (categories_[i] && categories_[i][2]) {
+			li = document.createElement('li');
+			if (categories_[i][2]==1 || (menuMODefaut=="more" && categories_[i][2]==2)) li.className="first-li";
+			a = document.createElement('a'); a.innerHTML = categories_[i][0];
+			a.href = 'http://'+document.location.host+'/'+categories_[i][1]+document.location.search;
+			span = document.createElement('span'); span.innerHTML = "&nbsp;|&nbsp;"; span.className = "spacer";
+			li.appendChild(a);
+			// only put the spacer after the last element if there is a 'show all' link
+			if (categories_[i][2] != count || rows > 0)
+				li.appendChild(span);
+			buf[categories_[i][2]-1] = li;
+		}
+	}
+	for (i=0; i<buf.length; i++) {
+		if(buf[i])
+			$('filter_preload').appendChild(buf[i]);
+	}
+
+	//if ($('filter_preload')) $('filter_preload').parentNode.removeChild($('filter_preload'));
+	li = document.createElement('li');
+	if (rows > 0) {
+		a = document.createElement('a');  a.innerHTML = 'Show all';
+		span = document.createElement('span'); span.innerHTML = '<img src="/images/x.gif" />'; span.className = "last-child";
+		a.appendChild(span); li.appendChild(a); $('filter_preload').appendChild(li);
+	}
+	if (menuMODefaut == 'nodefault') {li.innerHTML = '&nbsp;'; $('filter_preload').appendChild(li);}
+}
+
+	
+
+
+
+
+
+var categories = {
+deals : {menuTitle : 'Featured Deal',menuCount : 2,numberRows : 0,categories_ : [['See All Deals','deals',1],["Deal of the Day: 95% Off Cisco CCNA &amp; CCNP Certification","deals/career-academy-us-chicago",2]]},
+whatOn : {menuTitle : 'What\'s on in Chicago - select by event category',menuCount : 6,numberRows : 5,categories_ : [['All Events','whats-on',1],['Live Music & Shows','gigs-and-shows',2],['Concerts','concerts',3],['Parties & Nightlife','parties-and-nightlife',4],['Happy Hours','happy-hours',5],['Wining & Dining','wining-and-dining',0],['Festivals & Fairs','festivals-and-fairs',0],['Charity & Fundraisers','charity-and-fundraisers',0],['Film Screenings','film-screenings',0],['Book Readings','books-readings',0],['Art & Exhibitions','art-and-exhibitions',0],['Meetings & Gatherings','meetings-and-gatherings',0],['Sports & Competitions','sports-and-competitions',0],['Conferences & Expos','conferences-and-expos',0],['Classes & Workshops','classes-and-workshops',0],['Job Fairs & Auditions','job-fairs-and-auditions',0],['Sales & Promotions','sales-and-promotions',6],['Openings & Receptions','openings-and-receptions',0]]},
+restaurants : {menuTitle : 'Chicago Restaurants - select by category',menuCount : 9,numberRows : 10,categories_ : [['All Restaurants','restaurants',1],['Afghan','afghan-restaurants',0],['African','african-restaurants',0],['Alfresco','alfresco-restaurants',0],['American','american-restaurants',0],['Argentine','argentine-restaurants',0],['Australian','australian-restaurants',0],['Barbeque','barbeque-restaurants',0],['Basque','basque-restaurants',0],['Belgian','belgian-restaurants',0],['Brazilian','brazilian-restaurants',0],['Breakfast & Brunch','breakfast-and-brunch-restaurants',0],['British','british-restaurants',0],['Buffets','buffet-restaurants',0],['Burgers','burgers',0],['Burmese','burmese-restaurants',0],['Cafes','cafes',2],['California','california-restaurants',0],['Cambodian','cambodian-restaurants',0],['Caribbean','caribbean-restaurants',0],['Chilean','chilean-restaurants',0],['Chinese','chinese-restaurants',6],['Colombian','colombian-restaurants',0],['Contemporary','contemporary-restaurants',0],['Continental ','continental-restaurants',0],['Creperies','creperies',0],['Cuban','cuban-restaurants',0],['Delis & Diners','delis-and-diners',0],['Eastern European','eastern-european-restaurants',0],['Eclectic','eclectic-restaurants',0],['Egyptian','egyptian-restaurants',0],['Ethiopian','ethiopian-restaurants',0],['Filipino','filipino-restaurants',0],['Fondue','fondue-restaurants',0],['French','french-restaurants',7],['Fusion','fusion-restaurants',0],['German','german-restaurants',0],['Greek','greek-restaurants',0],['Indian','indian-restaurants',0],['Indonesian','indonesian-restaurants',0],['Irish','irish-restaurants',0],['Italian','italian-restaurants',8],['Japanese','japanese-restaurants',0],['Korean','korean-restaurants',0],['Latin American','latin-american-restaurants',0],['Malaysian','malaysian-restaurants',0],['Mediterranean','mediterranean-restaurants',0],['Mexican','mexican-restaurants',9],['Middle Eastern','middle-eastern-restaurants',0],['Moroccan','moroccan-restaurants',0],['Pakistani','pakistani-restaurants',0],['Persian','persian-restaurants',0],['Peruvian','peruvian-restaurants',0],['Pizza','pizza',0],['Polish','polish-restaurants',0],['Portuguese','portuguese-restaurants',0],['Russian','russian-restaurants',0],['Sandwiches','sandwiches',5],['Scandinavian','scandinavian-restaurants',0],['Seafood','seafood-restaurants',3],['South African','south-african-restaurants',0],['Southwestern','southwestern-restaurants',0],['Spanish','spanish-restaurants',0],['Steakhouses','steakhouses',4],['Sushi','sushi-restaurants',0],['Swiss','swiss-restaurants',0],['Thai','thai-restaurants',0],['Tibetan','tibetan-restaurants',0],['Turkish','turkish-restaurants',0],['Vegetarian','vegetarian-restaurants',0],['Vietnamese','vietnamese-restaurants',0]]},
+barsClubs : {menuCount : 9,numberRows : 0,categories_ : [['All Bars & Clubs','bars-and-clubs',1],['Bars','bars',2],['Pubs','pubs',3],['Clubs','clubs',4],['Lounges','lounges',5],['Live Music','live-music',6],['Wine Bars','wine-bars',7],['Cocktail Bars','cocktail-bars',8],['Sports Bars','sports-bars',9]]},
+artEnt : {menuCount : 6,numberRows : 0,categories_ : [['All Art & Entertainment','art-and-entertainment',1],['Theaters','theaters',2],['Cinemas','cinemas',3],['Art Galleries','art-galleries',4],['Museums','museums',5],['Casinos & Arcades','casinos-and-arcades',6]]},
+healthBeauty : {menuCount : 6,numberRows : 0,categories_ : [['All Health & Beauty','health-and-beauty',1],['Hair & Beauty Salons','hair-and-beauty-salons',2],['Spas & Massage','spas-and-massage',3],['Gyms & Health Clubs','gyms-and-health-clubs',4],['Yoga & Dance','yoga-and-dance',5],['Other','other-health-and-beauty',6]]},
+shopServices : {menuTitle : 'Chicago Shopping - select by category',menuCount : 6,numberRows : 5,categories_ : [['All Shopping','shopping',1],['Antiques & Collectibles','antiques-and-collectibles',0],['Arts & Crafts','art-and-craft-stores',4],['Automotive','automotive-dealerships',0],['Beauty & Cosmetics','beauty-and-cosmetics',0],['Bookshops','bookshops',0],['Clothing & Fashion','clothing-and-fashion',3],['Computers & Electronics','computers-and-electronics',0],['Drugstores','drugstores',0],['Food & Drink','food-and-drink',5],['Home & Garden','home-and-garden',6],['Malls & Markets','malls-and-markets',2],['Office Supplies','office-supplies',0],['Sporting Goods','sporting-goods',0],['Toy Stores','toy-stores',0],['Wedding & Bridal','wedding-and-bridal',0],['Wholesale','wholesale',0],['Other Shopping','other-shopping',0]]},
+toDoSee : {menuCount : 6,numberRows : 0,categories_ : [['All To do & see','to-do-and-see',1],['Sights & Attractions','sights-and-attractions',2],['Parks & Gardens','parks-and-gardens',3],['Stadiums','stadiums',4],['Sports & Recreation','sports-and-recreation',5],['Churches & Religion','churches-and-religion',6]]},
+more : {menuTitle : 'Chicago Services & More - select by category',menuCount : 5,numberRows : 5,categories_ : [['Automotive','automotive-services',0],['Event Planning & Services','event-planning-and-services',0],['Financial Services','financial-services',0],['Groups & Organizations','groups-and-organizations',0],['Home Services & Utilities','home-services-and-utilities',0],['Hospitals & Clinics','hospitals-and-clinics',4],['Hotels & Lodging','hotels-and-lodging',2],['IT Services','it-services',0],['Manufacturers','manufacturers',0],['Professional Services','professional-services',5],['Public Services & Government','public-services-and-government',0],['Publishers','publishers',0],['Real Estate','real-estate',6],['Schools & Education','schools-and-education',3],['Other Services','other-services',0]]}};
+var neighborhoods = {menuTitle : ' - Filter by neighborhood',numberRows : 7, searchDefault : 'Anywhere in Chicago', searchExample : 'e.g. Spy Bar, Pizza, Party', neigh :[['albanypark','Albany Park'],['armoursquare','Armour Square'],['austin','Austin'],['avondale','Avondale'],['belmontcragin','Belmont Cragin'],['bridgeport','Bridgeport'],['edgewater','Edgewater'],['humboldtpark','Humboldt Park'],['hydepark','Hyde Park'],['irvingpark','Irving Park'],['lakeview','Lake View'],['lincolnpark','Lincoln Park'],['lincolnsquare','Lincoln Square'],['logansquare','Logan Square'],['loop','Loop'],['lowerwestside','Lower West Side'],['nearnorthside','Near North Side'],['nearsouthside','Near South Side'],['nearwestside','Near West Side'],['northcenter','North Center'],['norwoodpark','Norwood Park'],['pottagepark','Pottage Park'],['rogerspark','Rogers Park'],['uptown','Uptown'],['westridge','West Ridge'],['westtown','West Town']]};
+var overlay_accounts = [86391738,30907848,18822966];
+</script>
+<meta name="google-site-verification" content="UMvf9YIac6LKzORboftamNDr3cOl59HxJV4RjMGw2Ok">
+<meta name="msvalidate.01" content="507677ECFEC32587F49A9E373CCD5C87">
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style></head>
+<body>
+<div style="display:none" id="hp_neigh_source"> 
+<p>Top Buzz Chicago Neighborhoods</p>
+<ul>
+<li><span>&nbsp;</span><a href="http://chicago.schmap.com/?n=nearnorthside">Near North Side</a></li>
+<li><span>&nbsp;</span><a href="http://chicago.schmap.com/?n=loop">Loop</a></li>
+<li><span>&nbsp;</span><a href="http://chicago.schmap.com/?n=lakeview">Lake View</a></li>
+<li><span>&nbsp;</span><a href="http://chicago.schmap.com/?n=westtown">West Town</a></li>
+<li><span>&nbsp;</span><a href="http://chicago.schmap.com/?n=nearwestside">Near West Side</a></li>
+<li><span>&nbsp;</span><a href="http://chicago.schmap.com/?n=lincolnpark">Lincoln Park</a></li>
+</ul>
+<ul class="notFirst">
+<li><span>&nbsp;</span><a href="http://chicago.schmap.com/?n=logansquare">Logan Square</a></li>
+<li><span>&nbsp;</span><a href="http://chicago.schmap.com/?n=nearsouthside">Near South Side</a></li>
+<li><span>&nbsp;</span><a href="http://chicago.schmap.com/?n=northcenter">North Center</a></li>
+<li><span>&nbsp;</span><a href="http://chicago.schmap.com/?n=uptown">Uptown</a></li>
+<li><span>&nbsp;</span><a href="http://chicago.schmap.com/?n=edgewater">Edgewater</a></li>
+<li><span>&nbsp;</span><a href="http://chicago.schmap.com/?n=lincolnsquare">Lincoln Square</a></li>
+</ul>
+</div>  
+<div id="outestDiv" class="wrapper">
+<div id="header">
+<div id="masthead">
+<ul class="hack00">
+<li class="hack0">Chicago buzz on Twitter:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a target="_blank" href="http://twitter.com/Chicago_now">Events</a>&nbsp;
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="http://platform1.twitter.com/widgets/follow_button.html?screen_name=Chicago_now&amp;show_screen_name=false&amp;button=grey&amp;lang=en&amp;show_count=false&amp;text_color=%23333333&amp;link_color=%23F0F1E9&amp;id=twitter_tweet_button_2" class="twitter-follow-button" title=""></iframe>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</li>
+<li class="hack1">
+<a target="_blank" href="http://twitter.com/Chicago_Picks">Wining &amp; Dining</a>&nbsp;
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="http://platform1.twitter.com/widgets/follow_button.html?screen_name=Chicago_Picks&amp;show_screen_name=false&amp;button=grey&amp;lang=en&amp;show_count=false&amp;text_color=%23333333&amp;link_color=%23F0F1E9&amp;id=twitter_tweet_button_2" class="twitter-follow-button" title=""></iframe>
+</li>
+<li class="hack2">
+<span class="dmClick" onclick="overlay.loadOverlay2();">
+<span class="twitter_link2 dm"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get Event &amp; Deal DMs <img src="/images/spacer.png"></span>
+</li>
+
+
+			
+				<li id="signin"><a href="#" onclick="abu.login();"><span class="twitter_link2">
+				</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign in with Twitter</a></li>
+			
+			</ul>
+		</div>
+		<div id="logo-advert" class="hp_logo-advert">
+			<a href="http://www.schmap.com">
+			<div id="logo" class="hp_logo">
+				<div id="tagline"></div>
+			</div>
+			</a>
+			<div id="header_search">
+				<span class="hs_label1"><b>SEARCH</b> e.g. Spy Bar, Pizza, Party</span><span class="hs_label2"><b>NEAR</b> (city or town)</span><br>
+				<input type="text" id="address" name="address" autocomplete="on" class="hs_input1" onfocus="neigh.checkSearchInputFocus();" onblur="neigh.checkSearchInputBlur();">
+				<!--<select id="hs_city" onmouseover="homePage.hack('show');" onmouseout="homePage.hack('hide');"></select>-->
+				<input type="text" id="hs_city">
+				<ul id="autocomplete_suggestions"></ul>
+				<div id="alert_as"></div>
+				<div id="search_button" class="hs_searchButton"></div>
+			</div>
+			<!--        
+	title Up to 54% Off Personalized Letter from Santa
+	then (none)
+	now (none)
+	url http://www.anrdoezrs.net/click-4406015-10804307?url=http%3A%2F%2Fwww.groupon.com%2Fdeals%2Fsantas-letters-chicago
+	delta (none)
+	sold 40
+	tipped 1
+	endTime 2014-11-07 13:59:59
+	value $24.99
+	discount $12.50
+	discountPercent 50
+-->
+
+<div id="groupon_header" style="cursor: pointer;">
+		<div class="gh_1">Up to 54% Off Personalized Letter from Santa</div>
+	</div>
+<ol id="groupon_header_content" style="display:none">
+	<li>
+		<div class="gh_1">Up to 54% Off Personalized Letter from Santa</div>
+	</li>
+	
+	<li>
+		<div class="gh_2">
+			<img src="/images/sandglass.gif" class="gh_sandglass">
+			<span class="gh_2_1">Time Left To Buy</span><br>
+			<span class="gh_2_2" id="groupon_endTime">3 days 10:17:31</span>	
+			<a href="http://www.anrdoezrs.net/click-4406015-10804307?url=http%3A%2F%2Fwww.groupon.com%2Fdeals%2Fsantas-letters-chicago" target="_blank"><img src="/images/spacer.png" class="gh_view"></a>
+		</div>
+	</li>
+	
+	
+	<li>
+		<div class="gh_3">
+			<span class="gh_3_1">40 bought</span><br>
+			<img src="/images/spacer.png" class="gh_check"><span class="gh_3_2">The deal is on!</span>	
+			<a href="http://www.anrdoezrs.net/click-4406015-10804307?url=http%3A%2F%2Fwww.groupon.com%2Fdeals%2Fsantas-letters-chicago" target="_blank"><img src="/images/spacer.png" class="gh_view"></a>
+		</div>
+	</li>
+	
+	
+	<li>
+		<ul class="gh_4">
+			<li class="gh_4_1">Value<br><span>$24.99</span></li>
+			<li class="gh_4_2">Discount<br><span>50%</span></li>
+			<li class="gh_4_3">You Save<br><span>$12.50</span></li>
+		</ul>
+	</li>
+	
+</ol>
+
+		</div>
+
+		<ul id="navigation">
+			<li id="city"><a onclick="cities.show();return false;"><span>CHICAGO</span><span id="menuArrow"></span></a></li>
+			
+				
+				<li id="deals" onmouseover="menuMO.show('deals');" onmouseout="menuMO.showDefault();" class=""><a href="http://chicago.schmap.com/deals" "="">Deals</a></li>
+				
+				<li id="whatOn" onmouseover="menuMO.show('whatOn');" onmouseout="menuMO.showDefault();"><a href="http://chicago.schmap.com/whats-on" "="">What's on</a></li>
+				<li id="restaurants" onmouseover="menuMO.show('restaurants');" onmouseout="menuMO.showDefault();" class="selected"><a href="http://chicago.schmap.com/restaurants" style="background-image: url(http://chicago.schmap.com/images/bg_repeat_x.png); background-attachment: scroll; background-color: rgb(255, 255, 255); color: rgb(188, 55, 42); background-position: 0px -118px; background-repeat: repeat no-repeat;">Restaurants</a></li>
+				<li id="barsClubs" onmouseover="menuMO.show('barsClubs');" onmouseout="menuMO.showDefault();"><a href="http://chicago.schmap.com/bars-and-clubs">Bars &amp; Clubs</a></li>
+				<li id="artEnt" onmouseover="menuMO.show('artEnt');" onmouseout="menuMO.showDefault();"><a href="http://chicago.schmap.com/art-and-entertainment">Art &amp; Entertainment</a></li>
+				<li id="healthBeauty" onmouseover="menuMO.show('healthBeauty');" onmouseout="menuMO.showDefault();"><a href="http://chicago.schmap.com/health-and-beauty">Health &amp; Beauty</a></li>
+				<li id="shopServices" onmouseover="menuMO.show('shopServices');" onmouseout="menuMO.showDefault();"><a href="http://chicago.schmap.com/shopping">Shopping</a></li>
+				
+					<li id="toDoSee" onmouseover="menuMO.show('toDoSee');" onmouseout="menuMO.showDefault();"><a href="http://chicago.schmap.com/to-do-and-see">To do &amp; See</a></li>
+					
+				
+			
+		</ul>
+
+		<ul id="tabHidder"></ul>
+
+		<ul id="changeCity" style="display:none;height:0px">
+			<li class="cg_li">
+				<span class="cg_title">Local Buzz in:<select id="cg_select_country"></select><select id="cg_select_state" style="display:none;"></select></span>
+				<div><ul id="cg_localBuzzIn"></ul></div>
+			</li>
+			<li class="cg_li li2">
+				<span class="cg_title">Top Buzz Cities Worldwide</span>
+				<div><ul id="cg_bigCities"></ul></div>
+			</li>
+		</ul>
+		
+			
+
+			<ul id="zeroResults" onclick="zeroResults.disable();"><li id="zeroResults_li">&nbsp;</li></ul>
+
+			<ul id="filter_restaurants" class="filterCategory" style="display: block;"><li id="tNparent"><a id="toggleNeigh">Select neighborhood <span class="last-child"><img src="/images/x.gif"></span></a></li><li class="first-li"><a href="http://chicago.schmap.com/restaurants?t=0bJRz">All Restaurants</a><span class="spacer">&nbsp;|&nbsp;</span></li><li><a href="http://chicago.schmap.com/cafes?t=0bJRz">Cafes</a><span class="spacer">&nbsp;|&nbsp;</span></li><li><a href="http://chicago.schmap.com/seafood-restaurants?t=0bJRz">Seafood</a><span class="spacer">&nbsp;|&nbsp;</span></li><li><a href="http://chicago.schmap.com/steakhouses?t=0bJRz">Steakhouses</a><span class="spacer">&nbsp;|&nbsp;</span></li><li><a href="http://chicago.schmap.com/sandwiches?t=0bJRz">Sandwiches</a><span class="spacer">&nbsp;|&nbsp;</span></li><li><a href="http://chicago.schmap.com/chinese-restaurants?t=0bJRz">Chinese</a><span class="spacer">&nbsp;|&nbsp;</span></li><li><a href="http://chicago.schmap.com/french-restaurants?t=0bJRz">French</a><span class="spacer">&nbsp;|&nbsp;</span></li><li><a href="http://chicago.schmap.com/italian-restaurants?t=0bJRz">Italian</a><span class="spacer">&nbsp;|&nbsp;</span></li><li><a href="http://chicago.schmap.com/mexican-restaurants?t=0bJRz">Mexican</a><span class="spacer">&nbsp;|&nbsp;</span></li><li><a>Show all<span class="last-child"><img src="/images/x.gif"></span></a></li></ul><ul id="filterNeigh" style="display:none;height:0px" onmouseover="menuMO.cancelReset();"><ul><li><div class="neigh-title">Chicago - Filter by neighborhood</div></li><li><ol style="display:block" id="neigh_ol"><ul><li><a href="http://chicago.schmap.com/restaurants?n=albanypark">Albany Park<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=armoursquare">Armour Square<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=austin">Austin<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=avondale">Avondale<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=belmontcragin">Belmont Cragin<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=bridgeport">Bridgeport<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=edgewater">Edgewater<br></a></li></ul><ul><li><a href="http://chicago.schmap.com/restaurants?n=humboldtpark">Humboldt Park<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=hydepark">Hyde Park<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=irvingpark">Irving Park<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=lakeview">Lake View<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=lincolnpark">Lincoln Park<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=lincolnsquare">Lincoln Square<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=logansquare">Logan Square<br></a></li></ul><ul><li><a href="http://chicago.schmap.com/restaurants?n=loop">Loop<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=lowerwestside">Lower West Side<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=nearnorthside">Near North Side<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=nearsouthside">Near South Side<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=nearwestside">Near West Side<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=northcenter">North Center<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=norwoodpark">Norwood Park<br></a></li></ul><ul><li><a href="http://chicago.schmap.com/restaurants?n=pottagepark">Pottage Park<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=rogerspark">Rogers Park<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=uptown">Uptown<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=westridge">West Ridge<br></a></li><li><a href="http://chicago.schmap.com/restaurants?n=westtown">West Town<br></a></li></ul></ol></li></ul></ul>
+
+			
+			<script style="text/javascript">
+				populateBlueMenu();
+			</script>
+			
+		
+
+		
+		<div class="ad_underheader_leaderboard"><script type="text/javascript">
+  GA_googleFillSlot("rtguides_underheader_leaderboard728x90");
+</script><script src="http://pubads.g.doubleclick.net/gampad/ads?correlator=832973911883776&amp;output=json_html&amp;callback=GA_googleSetAdContentsBySlotForSync&amp;impl=s&amp;client=ca-pub-7424218284122496&amp;slotname=rtguides_underheader_leaderboard728x90&amp;page_slots=rtguides_underheader_leaderboard728x90&amp;cust_params=city%3Dchicago%26bottomcat%3Dbottom-restaurants%26bottomsubc%3Damerican-restaurants%26contentsrc%3Dwcities&amp;cookie_enabled=1&amp;url=http%3A%2F%2Fchicago.schmap.com%2Frestaurants%2Fwishbone_restaurant%3Ft%3D0bJRz&amp;lmt=1415072537&amp;dt=1415072537942&amp;cc=76&amp;biw=989&amp;bih=685&amp;adk=3396388076&amp;adx=131&amp;ady=198&amp;ifi=1&amp;oid=3&amp;u_his=50&amp;u_h=768&amp;u_w=1024&amp;u_ah=768&amp;u_aw=1024&amp;u_cd=24&amp;u_nplug=1&amp;u_nmime=1&amp;flash=0&amp;gads=v2&amp;ga_vid=491868314.1415072538&amp;ga_sid=1415072538&amp;ga_hid=1575333237"></script>
+</div>
+		
+
+		<!--ssi all information in this div-->
+		<div id="nav-container" class="clearfix">
+			<p>Wishbone Restaurant</p>
+			<div class="countryie6_bottom"></div>
+			<span class="ct_bottom9"><img style="clip:rect(27,340,51,306);left:-336px;top:-34px;" src="/images/x.gif" width="503" height="556"></span>
+			<ul class="filterb"><li class="country"><a href="http://chicago.schmap.com/american-restaurants" onclick="alert(TagsLink); return(false);">American</a></li></ul>
+			<ul class="status"><li><a href="http://chicago.schmap.com/" onclick="alert(HomeLink); return(false);" "="">Chicago</a></li> &gt; <li><a href="http://chicago.schmap.com/restaurants">Restaurants</a></li> &gt; <li>Wishbone Restaurant</li>
+			<li id="twitter_facebook_buttons">
+				<a href="http://twitter.com/share" class="twitter-share-button" data-text="Wishbone Restaurant: " data-url="http://chicago.schmap.com/restaurants/wishbone_restaurant" data-count="none" data-via="CHICAGO_PICKS" data-related="CHICAGO_NOW"></a>
+				<div class="fb-share-button fb_iframe_widget" data-href="http://chicago.schmap.com/restaurants/wishbone_restaurant" data-type="icon" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;href=http%3A%2F%2Fchicago.schmap.com%2Frestaurants%2Fwishbone_restaurant&amp;locale=en_US&amp;sdk=joey&amp;type=icon"><span style="vertical-align: bottom; width: 14px; height: 18px;"><iframe name="f3aa9adc48" width="1000px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:share_button Facebook Social Plugin" src="http://www.facebook.com/plugins/share_button.php?app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FehazDpFPEnK.js%3Fversion%3D41%23cb%3Df559f45f%26domain%3Dchicago.schmap.com%26origin%3Dhttp%253A%252F%252Fchicago.schmap.com%252Ff261b7415%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fchicago.schmap.com%2Frestaurants%2Fwishbone_restaurant&amp;locale=en_US&amp;sdk=joey&amp;type=icon" class="" style="border: none; visibility: visible; width: 14px; height: 18px;"></iframe></span></div>
+			</li></ul>
+		</div><!--/ssi-->
+	</div>
+	<div id="container" class="clearfix">
+		<div id="main">
+			
+			<div id="toptweets">
+				<h2>
+					<span class="title">Owner announcements, events &amp; top tweets for Wishbone Restaurant</span>
+					
+					<ul><li class="numofall"><span id="currentCount">1</span> of <span id="maxCount">3</span></li>
+					<li><div id="prev" class="prev"></div></li>
+					<li><div id="next" class="next"></div></li><li>&nbsp;</li>
+					</ul>
+					
+				</h2>
+				<div class="toptweet">
+					<ol id="toptweet" class="bottom">	<!--ssi all the tweets of the showcase-->
+						  <li class="tweets">
+  <table>
+    <tbody><tr>
+      <td colspan="4">
+        <div class="twtr-texttime">
+          <div class="text ct_bottom8">Super fun parents decided to have their son's bar mitzvah at Wishbone.</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="ct1">
+        <a href="http://twitter.com/naomiprale" target="_blank"><img onload="checkImage(this, 'naomiprale');" onerror="brokenImages.add(this, 'naomiprale');" src="/images/spacer.png" height="24" width="24" class="defaultTwitterPic_noBG "></a>
+      </td>
+      <td class="ct2">
+          <a class="ct_bottom1" href="http://twitter.com/naomiprale" target="_blank">naomiprale</a>
+      </td>
+      <td class="ct3">9 days ago</td>
+      <td class="ct4">
+        <span class="ct_bottom6">Editor's Pick</span>
+      </td>
+    </tr>
+  </tbody></table>
+</li>
+<li class="tweets">
+  <table>
+    <tbody><tr>
+      <td colspan="4">
+        <div class="twtr-texttime">
+          <div class="text ct_bottom8">Brunchin' with my <a target="_blank" href="http://search.twitter.com/search?q=%23AINIOM">#AINIOM</a> ladies. <a target="_blank" href="http://search.twitter.com/search?q=%23shrimpandgrits">#shrimpandgrits</a> @ Wishbone Restaurant <a target="_blank" href="http://t.co/vJcfly1zKQ">http://t.co/vJcfly1zKQ</a></div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="ct1">
+        <a href="http://twitter.com/trueblessyn" target="_blank"><img onload="checkImage(this, 'trueblessyn');" onerror="brokenImages.add(this, 'trueblessyn');" src="/images/spacer.png" height="24" width="24" class="defaultTwitterPic_noBG "></a>
+      </td>
+      <td class="ct2">
+          <a class="ct_bottom1" href="http://twitter.com/trueblessyn" target="_blank">trueblessyn</a>
+      </td>
+      <td class="ct3">8 days ago</td>
+      <td class="ct4">
+        <span class="ct_bottom6">Editor's Pick</span>
+      </td>
+    </tr>
+  </tbody></table>
+</li>
+<li class="tweets">
+  <table>
+    <tbody><tr>
+      <td colspan="4">
+        <div class="twtr-texttime">
+          <div class="text ct_bottom8">Post race Bloody Mary. @ Wishbone Restaurant <a target="_blank" href="http://t.co/Mssqq7NNbI">http://t.co/Mssqq7NNbI</a></div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="ct1">
+        <a href="http://twitter.com/KeybrdBiologist" target="_blank"><img onload="checkImage(this, 'KeybrdBiologist');" onerror="brokenImages.add(this, 'KeybrdBiologist');" src="/images/spacer.png" height="24" width="24" class="defaultTwitterPic_noBG "></a>
+      </td>
+      <td class="ct2">
+          <a class="ct_bottom1" href="http://twitter.com/KeybrdBiologist" target="_blank">KeybrdBiologist</a>
+      </td>
+      <td class="ct3">9 days ago</td>
+      <td class="ct4">
+        <span class="ct_bottom6">Editor's Pick</span>
+      </td>
+    </tr>
+  </tbody></table>
+</li>
+
+				</ol></div>
+			</div>
+			
+			
+			
+			<div id="addBuzzUnit" class="bottom" style="margin-top:-9px;margin-bottom:31px;">
+			
+				<div id="abu_innerBox">
+				<textarea id="abu_tweetText" spellcheck="false"></textarea>
+				<div class="prev" id="abu_prev"></div><div class="next" id="abu_next"></div><span id="abu_label1">
+				
+					Choose buzz or write/edit your own above...</span>
+					<span id="abu_label2" onclick="abu.starClick(0);" onmouseover="abu.starMOver(0);" onmouseout="abu.starMOut();">Add rating:&nbsp;&nbsp;&nbsp;</span>
+					<ul id="abu_stars">
+						<li onclick="abu.starClick(1);" onmouseover="abu.starMOver(1);" onmouseout="abu.starMOut();" class=""></li>
+						<li onclick="abu.starClick(2);" onmouseover="abu.starMOver(2);" onmouseout="abu.starMOut();" class=""></li>
+						<li onclick="abu.starClick(3);" onmouseover="abu.starMOver(3);" onmouseout="abu.starMOut();" class=""></li>
+						<li onclick="abu.starClick(4);" onmouseover="abu.starMOver(4);" onmouseout="abu.starMOut();" class=""></li>
+						<li onclick="abu.starClick(5);" onmouseover="abu.starMOver(5);" onmouseout="abu.starMOut();" class=""></li>
+					</ul>
+				
+				<div id="abu_size" style="display: none;">140</div>
+				</div>
+				<div id="abu_tweetButton" class="tconnect" style="display: inline-block;"></div>
+				
+					<span id="abu_label3">Tweet to Add Buzz for Wishbone Restaurant!</span>
+				
+			</div>
+			<div id="section" class="bottom">
+				
+				<ul id="timelineTabs">
+					<li class="localBuzzFor">Latest buzz for Wishbone Restaurant</li>
+					
+				</ul>
+				<ol id="timeline" class="timeline">
+					<!--ssi all the tweets in the tweet list-->
+					<li class="tweets">
+  <table cellspacing="0">
+    <tbody><tr>
+      <td colspan="4">
+        <div class="text ct_bottom0">Brunchin' with my <a target="_blank" href="http://search.twitter.com/search?q=%23AINIOM">#AINIOM</a> ladies. <a target="_blank" href="http://search.twitter.com/search?q=%23shrimpandgrits">#shrimpandgrits</a> @ Wishbone Restaurant <a target="_blank" href="http://t.co/vJcfly1zKQ">http://t.co/vJcfly1zKQ</a></div>
+      </td>
+    </tr>
+    <tr>
+      <td class="ct1">
+        <a href="http://twitter.com/trueblessyn" target="_blank"><img onload="checkImage(this, 'trueblessyn');" onerror="brokenImages.add(this, 'trueblessyn');" src="/images/spacer.png" height="24" width="24" class="defaultTwitterPic_noBG "></a>
+      </td>
+      <td class="ct2">
+          <a class="ct_bottom1" href="http://twitter.com/trueblessyn" target="_blank">trueblessyn</a>
+      </td>
+      <td class="ct3">8 days ago</td>
+      <td class="ct4">
+      </td>
+    </tr>
+  </tbody></table>
+</li>
+<li class="tweets">
+  <table cellspacing="0">
+    <tbody><tr>
+      <td colspan="4">
+        <div class="text ct_bottom0">Super fun parents decided to have their son's bar mitzvah at Wishbone.</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="ct1">
+        <a href="http://twitter.com/naomiprale" target="_blank"><img onload="checkImage(this, 'naomiprale');" onerror="brokenImages.add(this, 'naomiprale');" src="/images/spacer.png" height="24" width="24" class="defaultTwitterPic_noBG "></a>
+      </td>
+      <td class="ct2">
+          <a class="ct_bottom1" href="http://twitter.com/naomiprale" target="_blank">naomiprale</a>
+      </td>
+      <td class="ct3">9 days ago</td>
+      <td class="ct4">
+      </td>
+    </tr>
+  </tbody></table>
+</li>
+<li class="tweets">
+  <table cellspacing="0">
+    <tbody><tr>
+      <td colspan="4">
+        <div class="text ct_bottom0">Post race Bloody Mary. @ Wishbone Restaurant <a target="_blank" href="http://t.co/Mssqq7NNbI">http://t.co/Mssqq7NNbI</a></div>
+      </td>
+    </tr>
+    <tr>
+      <td class="ct1">
+        <a href="http://twitter.com/KeybrdBiologist" target="_blank"><img onload="checkImage(this, 'KeybrdBiologist');" onerror="brokenImages.add(this, 'KeybrdBiologist');" src="/images/spacer.png" height="24" width="24" class="defaultTwitterPic_noBG "></a>
+      </td>
+      <td class="ct2">
+          <a class="ct_bottom1" href="http://twitter.com/KeybrdBiologist" target="_blank">KeybrdBiologist</a>
+      </td>
+      <td class="ct3">9 days ago</td>
+      <td class="ct4">
+      </td>
+    </tr>
+  </tbody></table>
+</li>
+<li class="tweets">
+  <table cellspacing="0">
+    <tbody><tr>
+      <td colspan="4">
+        <div class="text ct_bottom0">Brunch at Wishbone </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="ct1">
+        <a href="http://twitter.com/WalkLike_AModel" target="_blank"><img onload="checkImage(this, 'WalkLike_AModel');" onerror="brokenImages.add(this, 'WalkLike_AModel');" src="/images/spacer.png" height="24" width="24" class="defaultTwitterPic_noBG "></a>
+      </td>
+      <td class="ct2">
+          <a class="ct_bottom1" href="http://twitter.com/WalkLike_AModel" target="_blank">WalkLike_AModel</a>
+      </td>
+      <td class="ct3">3 months ago</td>
+      <td class="ct4">
+      </td>
+    </tr>
+  </tbody></table>
+</li>
+<li class="tweets">
+  <table cellspacing="0">
+    <tbody><tr>
+      <td colspan="4">
+        <div class="text ct_bottom0">Mission accomplished.  Now lunch at a great ride home! — eating lunch at Wishbone Restaurant <a target="_blank" href="http://t.co/fn0PnVeTv1">http://t.co/fn0PnVeTv1</a></div>
+      </td>
+    </tr>
+    <tr>
+      <td class="ct1">
+        <a href="http://twitter.com/djelprieto" target="_blank"><img onload="checkImage(this, 'djelprieto');" onerror="brokenImages.add(this, 'djelprieto');" src="/images/spacer.png" height="24" width="24" class="defaultTwitterPic_noBG "></a>
+      </td>
+      <td class="ct2">
+          <a class="ct_bottom1" href="http://twitter.com/djelprieto" target="_blank">djelprieto</a>
+      </td>
+      <td class="ct3">4 months ago</td>
+      <td class="ct4">
+      </td>
+    </tr>
+  </tbody></table>
+</li>
+<li class="tweets">
+  <table cellspacing="0">
+    <tbody><tr>
+      <td colspan="4">
+        <div class="text ct_bottom0">Je193-Meet my party @ Wishbone Restaurant...next door to Oprah's studio. Everyone's outside; nice day. Sherry STILL makes me a lil nervous!</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="ct1">
+        <a href="http://twitter.com/LanceAustin14" target="_blank"><img onload="checkImage(this, 'LanceAustin14');" onerror="brokenImages.add(this, 'LanceAustin14');" src="/images/spacer.png" height="24" width="24" class="defaultTwitterPic_noBG "></a>
+      </td>
+      <td class="ct2">
+          <a class="ct_bottom1" href="http://twitter.com/LanceAustin14" target="_blank">LanceAustin14</a>
+      </td>
+      <td class="ct3">4 months ago</td>
+      <td class="ct4">
+      </td>
+    </tr>
+  </tbody></table>
+</li>
+<li class="tweets">
+  <table cellspacing="0">
+    <tbody><tr>
+      <td colspan="4">
+        <div class="text ct_bottom0">Wishbone Restaurant looking for experienced servers: EXPERIENCED servers needed for Wishbone Restaurant ... <a target="_blank" href="http://t.co/v2hA56QSlK">http://t.co/v2hA56QSlK</a> <a target="_blank" href="http://search.twitter.com/search?q=%23jobs">#jobs</a></div>
+      </td>
+    </tr>
+    <tr>
+      <td class="ct1">
+        <a href="http://twitter.com/ShiftgigChicago" target="_blank"><img onload="checkImage(this, 'ShiftgigChicago');" onerror="brokenImages.add(this, 'ShiftgigChicago');" src="/images/spacer.png" height="24" width="24" class="defaultTwitterPic_noBG "></a>
+      </td>
+      <td class="ct2">
+          <a class="ct_bottom1" href="http://twitter.com/ShiftgigChicago" target="_blank">ShiftgigChicago</a>
+      </td>
+      <td class="ct3">6 months ago</td>
+      <td class="ct4">
+      </td>
+    </tr>
+  </tbody></table>
+</li>
+<li class="tweets">
+  <table cellspacing="0">
+    <tbody><tr>
+      <td colspan="4">
+        <div class="text ct_bottom0">Breakfast time!!!!! — at Wishbone Restaurant <a target="_blank" href="http://t.co/EdUNEZjuPe">http://t.co/EdUNEZjuPe</a></div>
+      </td>
+    </tr>
+    <tr>
+      <td class="ct1">
+        <a href="http://twitter.com/JohnGarridoIII" target="_blank"><img onload="checkImage(this, 'JohnGarridoIII');" onerror="brokenImages.add(this, 'JohnGarridoIII');" src="/images/spacer.png" height="24" width="24" class="defaultTwitterPic_noBG "></a>
+      </td>
+      <td class="ct2">
+          <a class="ct_bottom1" href="http://twitter.com/JohnGarridoIII" target="_blank">JohnGarridoIII</a>
+      </td>
+      <td class="ct3">6 months ago</td>
+      <td class="ct4">
+      </td>
+    </tr>
+  </tbody></table>
+</li>
+<li class="tweets">
+  <table cellspacing="0">
+    <tbody><tr>
+      <td colspan="4">
+        <div class="text ct_bottom0">Dinner at Wishbone, then home to find the Blackhawks up 1-0, which is a great dessert.</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="ct1">
+        <a href="http://twitter.com/BriTheWebGuy" target="_blank"><img onload="checkImage(this, 'BriTheWebGuy');" onerror="brokenImages.add(this, 'BriTheWebGuy');" src="/images/spacer.png" height="24" width="24" class="defaultTwitterPic_noBG "></a>
+      </td>
+      <td class="ct2">
+          <a class="ct_bottom1" href="http://twitter.com/BriTheWebGuy" target="_blank">BriTheWebGuy</a>
+      </td>
+      <td class="ct3">6 months ago</td>
+      <td class="ct4">
+      </td>
+    </tr>
+  </tbody></table>
+</li>
+<li class="tweets">
+  <table cellspacing="0">
+    <tbody><tr>
+      <td colspan="4">
+        <div class="text ct_bottom0">Look at what's going on at Wishbone Restaurant! <a target="_blank" href="http://t.co/THWAkWS5qF">http://t.co/THWAkWS5qF</a></div>
+      </td>
+    </tr>
+    <tr>
+      <td class="ct1">
+        <a href="http://twitter.com/Unicoiartstudio" target="_blank"><img onload="checkImage(this, 'Unicoiartstudio');" onerror="brokenImages.add(this, 'Unicoiartstudio');" src="/images/spacer.png" height="24" width="24" class="defaultTwitterPic_noBG "></a>
+      </td>
+      <td class="ct2">
+          <a class="ct_bottom1" href="http://twitter.com/Unicoiartstudio" target="_blank">Unicoiartstudio</a>
+      </td>
+      <td class="ct3">7 months ago</td>
+      <td class="ct4">
+      </td>
+    </tr>
+  </tbody></table>
+</li>
+<li class="tweets">
+  <table cellspacing="0">
+    <tbody><tr>
+      <td colspan="4">
+        <div class="text ct_bottom0">Best breakfast in Chicago. (@ Wishbone Restaurant - @<a target="_blank" href="http://twitter.com/wishbonewash">wishbonewash</a>) <a target="_blank" href="http://t.co/kP89hRTikc">http://t.co/kP89hRTikc</a></div>
+      </td>
+    </tr>
+    <tr>
+      <td class="ct1">
+        <a href="http://twitter.com/SchlicksupE" target="_blank"><img onload="checkImage(this, 'SchlicksupE');" onerror="brokenImages.add(this, 'SchlicksupE');" src="/images/spacer.png" height="24" width="24" class="defaultTwitterPic_noBG "></a>
+      </td>
+      <td class="ct2">
+          <a class="ct_bottom1" href="http://twitter.com/SchlicksupE" target="_blank">SchlicksupE</a>
+      </td>
+      <td class="ct3">7 months ago</td>
+      <td class="ct4">
+      </td>
+    </tr>
+  </tbody></table>
+</li>
+<li class="tweets">
+  <table cellspacing="0">
+    <tbody><tr>
+      <td colspan="4">
+        <div class="text ct_bottom0">What's the saying? Improvisation is the uncle of necessity? @ Wishbone Restaurant <a target="_blank" href="http://t.co/Aqdcflwgiv">http://t.co/Aqdcflwgiv</a></div>
+      </td>
+    </tr>
+    <tr>
+      <td class="ct1">
+        <a href="http://twitter.com/Robotstephe" target="_blank"><img onload="checkImage(this, 'Robotstephe');" onerror="brokenImages.add(this, 'Robotstephe');" src="/images/spacer.png" height="24" width="24" class="defaultTwitterPic_noBG "></a>
+      </td>
+      <td class="ct2">
+          <a class="ct_bottom1" href="http://twitter.com/Robotstephe" target="_blank">Robotstephe</a>
+      </td>
+      <td class="ct3">7 months ago</td>
+      <td class="ct4">
+      </td>
+    </tr>
+  </tbody></table>
+</li>
+<li class="tweets">
+  <table cellspacing="0">
+    <tbody><tr>
+      <td colspan="4">
+        <div class="text ct_bottom0">Lunch with my Babe... (@ Wishbone Restaurant - @<a target="_blank" href="http://twitter.com/wishbonewash">wishbonewash</a>) <a target="_blank" href="http://t.co/uqAgVvvJnu">http://t.co/uqAgVvvJnu</a></div>
+      </td>
+    </tr>
+    <tr>
+      <td class="ct1">
+        <a href="http://twitter.com/PhilipRLeodoro" target="_blank"><img onload="checkImage(this, 'PhilipRLeodoro');" onerror="brokenImages.add(this, 'PhilipRLeodoro');" src="/images/spacer.png" height="24" width="24" class="defaultTwitterPic_noBG "></a>
+      </td>
+      <td class="ct2">
+          <a class="ct_bottom1" href="http://twitter.com/PhilipRLeodoro" target="_blank">PhilipRLeodoro</a>
+      </td>
+      <td class="ct3">7 months ago</td>
+      <td class="ct4">
+      </td>
+    </tr>
+  </tbody></table>
+</li>
+
+				</ol>
+				<ol id="timeline_ownerTweets" style="display:none;">
+					<div id="ownerTweets_spinner"><img src="/images/twitter_ajax.gif"></div>
+				</ol>
+				<!--ssi : are more tweets available?-->
+				<div id="pagination" onclick="getMoreBusiness();" style="visibility:visible"><span class="more">more</span></div>
+				<!--/ssi-->
+			</div>
+	</div>
+	<!--ssi the description of the branches of that restaurant-->
+	<div id="descriptions" class="hiddenDiv">
+		<dl class="place_115023141">
+  <dt>
+    <a class="ct_bottom7" href="">Wishbone Restaurant</a>
+  </dt>
+  <dd>1001 West Washington Boulevard</dd>
+  <dd>Chicago</dd>
+  <dd><br></dd>
+  <dd class="mail_face_twit">
+    <span class="mft_links">
+      <a style="float:left;" href="http://#http://www.wishbonechicago.com" target="_blank">Website</a>
+      <a href="mailto:washington@bonewish.com" target="_blank"><span class="mail_link"></span></a>
+    </span>
+    <span class="heats">
+      <span style="float:left; ">Buzz level:</span><span class="buzzlevel"><span class="ct_bottom5"><img style="clip:rect(27,340,51,306);left:-336px;top:-34px;" src="/images/x.gif" width="503" height="556"></span></span>
+    </span>
+  </dd>
+</dl>
+<dl class="place_115023142">
+  <dt>
+    <a class="ct_bottom7" href="">Wishbone Restaurant</a>
+  </dt>
+  <dd>3300 N. Lincoln</dd>
+  <dd>Chicago, IL</dd>
+  <dd><br></dd>
+  <dd class="mail_face_twit">
+    <span class="mft_links">
+      <a style="float:left;" href="http://#http://www.wishbonechicago.com" target="_blank">Website</a>
+      <a href="mailto:washington@bonewish.com" target="_blank"><span class="mail_link"></span></a>
+    </span>
+    <span class="heats">
+      <span style="float:left; ">Buzz level:</span><span class="buzzlevel"><span class="ct_bottom5"><img style="clip:rect(27,340,51,306);left:-336px;top:-34px;" src="/images/x.gif" width="503" height="556"></span></span>
+    </span>
+  </dd>
+</dl>
+
+	</div>
+	<div id="side">
+	
+			<div id="mapContacts">
+				<ul id="bizActions">
+					<li class="mapTitle">Wishbone Restaurant Map &amp; Contacts</li>
+					<!--<li><a href="#" onclick="alert(Directions);">Directions</a></li>
+					<li class="dot">&bull;</li>
+					<li><a href="#" onclick="alert(Print);">Print</a></li>
+					<li class="dot">&bull;</li>
+					<li><a href="#" onclick="alert(Enlarge);">Enlarge</a></li>-->
+				</ul>
+				<div id="mapouter">
+					<div class="mi_map" id="map"></div>
+					<div id="staticmap"><div id="SchmapKit.Maps__GStatic.Map.0.container" style="position: absolute; height: 100%; width:100%; top: 0px; bottom: 0px; right: 0px; left: 0px;overflow: hidden; margin: 0px; padding: 0px; background: white;"><div id="SchmapKit.Maps__GStatic.Map.0.markers" style="z-index: 2; height: 100%; margin: 0px; padding: 0px;position: relative;font-size: 10px; font-weight:bold"><div style="position: absolute; z-index: 23; display: none; left: 144px; top: 166px;"><img width="10" height="10" src="/images/t000-normal.png"></div><div style="position: absolute; z-index: 24; display: block; left: 145.2px; top: 136.8px;"><img width="38" height="38" src="/images/a010-over.png"></div><div style="position: absolute; z-index: 23; display: block; left: 118px; top: 51px;"><img width="10" height="10" src="/images/t000-normal.png"></div><div style="position: absolute; z-index: 23; display: none; left: 119.2px; top: 21.799999999999997px;"><img width="38" height="38" src="/images/a010-over.png"></div></div><img id="SchmapKit.Maps__GStatic.Map.0.img" style="z-index: 1; position: absolute; top: 0px; left: 0px; visibility: hidden;" class="staticmapimg" src="http://maps.google.com/staticmap?center=41.912284,-87.66135245&amp;zoom=11&amp;size=272x226&amp;key=ABQIAAAAZH6MtmmlpyGAy_ktkxyYlxSjlsrIs7iRW_qDtQ6MGYnMAE6EVhR-9Xzfw-BwMQVuzYilUwaRMIVpsg"></div></div>
+					<!--<div id="zoominout"><img height="21" width="18" src="/image/zoomin.png" id="zoomin"><img height="21" width="18" src="/image/zoomout.png" id="zoomout"></div>-->
+					<div id="zoominout"><div id="zoomin"></div><div id="zoomout"></div></div>
+					<!--<div id="mapswitch"><img height="18" width="55" src="/image/mapselected.png" id="mapview"><img height="18" width="55" src="/image/satellite.png" id="satelliteview"></div>-->
+					<div id="mapswitch"><div id="satelliteview" class="satelliteviewNotSelected"></div><div id="mapview" class="mapviewSelected"></div></div>
+				</div>
+				<dl id="placeDetail">
+  <dt>
+    <a class="ct_bottom7" href="">Wishbone Restaurant</a>
+  </dt>
+  <dd>1001 West Washington Boulevard</dd>
+  <dd>Chicago</dd>
+  <dd><br></dd>
+  <dd class="mail_face_twit">
+    <span class="mft_links">
+      <a style="float:left;" href="http://#http://www.wishbonechicago.com" target="_blank">Website</a>
+      <a href="mailto:washington@bonewish.com" target="_blank"><span class="mail_link"></span></a>
+    </span>
+    <span class="heats">
+      <span style="float:left; ">Buzz level:</span><span class="buzzlevel"><span class="ct_bottom5"><img style="clip:rect(27,340,51,306);left:-336px;top:-34px;" src="/images/x.gif" width="503" height="556"></span></span>
+    </span>
+  </dd>
+</dl>
+
+			</div>
+	
+			<!--ssi do not display this if there is no photo and no review-->
+			
+			<div id="reviewphotos">
+				<h2>
+					<span class="title">
+						<!--ssi the title :Photos & Review|Photos|Photo|Photo & Review|Review|<NOTHING>-->
+						
+							
+								Photos
+							
+						
+						
+						 &amp;
+						
+						 Review
+					</span>
+					<!--ssi do not display this if no or only one photo is available-->
+					
+					<ul><li class="numofall"><span id="currentCountPhotos">1</span> of <span id="maxCountPhotos">4</span></li>
+					<li><div id="prevPhoto" class="prev"></div></li>
+					<li><div id="nextPhoto" class="next"></div></li><li>&nbsp;</li>
+					</ul>
+					
+				</h2>
+				<!--ssi do not display this if no or only one photo is available-->
+				
+				<div class="photos">
+					<div class="photo_spinner" id="photo_spinner" style="visibility: visible;"><img src="/images/twitter_ajax.gif"></div>
+					<div><a href="" id="guidePhoto"></a></div>
+					<div id="photographer" class="photographer"></div>
+				</div>
+				
+				<!--ssi do not display this if there is not description-->
+				
+					<!--ssi add the class 'reviewBorder' only if there is at least one photo-->
+					<ul class="review reviewBorder">
+						<li>Noisy, lively and fun, this big sister to the original restaurant on Grand Avenue is an attractive diner with floor to ceiling windows, lots of seating, a bustling bar and counter service. Corn muffins arrive at your table as soon as you sit down. The wide-ranging menu, with its decidedly southern emphasis, features crab cakes, Hoppin' John, blackened chicken, ham on-the-bone and a number of daily specials.  The dessert menu is anchored by Key Lime Pie, reputedly the best in the city.  Forego the small wine selection in favor of beer. Breakfast and Sunday brunch are also available.</li>
+						<li class="wctiybright"><br>Review © 2010, <a href="http://corporate.Wcities.com/contactus.html" target="_blank">Wcities</a></li>
+					</ul>
+				
+			</div>
+			
+			<!--ssi do not display this if there is no photo and no review-->
+	
+			<div id="nationalAd"><script type="text/javascript">
+  GA_googleFillSlot("rtguides_undermap_mediumrectangle300x250");
+</script><script src="http://pubads.g.doubleclick.net/gampad/ads?correlator=832973911883776&amp;output=json_html&amp;callback=GA_googleSetAdContentsBySlotForSync&amp;impl=s&amp;client=ca-pub-7424218284122496&amp;slotname=rtguides_undermap_mediumrectangle300x250&amp;page_slots=rtguides_underheader_leaderboard728x90%2Crtguides_undermap_mediumrectangle300x250&amp;cust_params=city%3Dchicago%26bottomcat%3Dbottom-restaurants%26bottomsubc%3Damerican-restaurants%26contentsrc%3Dwcities&amp;cookie_enabled=1&amp;url=http%3A%2F%2Fchicago.schmap.com%2Frestaurants%2Fwishbone_restaurant%3Ft%3D0bJRz&amp;lmt=1415072539&amp;dt=1415072539142&amp;cc=40&amp;biw=989&amp;bih=685&amp;adk=467842052&amp;adx=636&amp;ady=1187&amp;ifi=2&amp;oid=3&amp;u_his=50&amp;u_h=768&amp;u_w=1024&amp;u_ah=768&amp;u_aw=1024&amp;u_cd=24&amp;u_nplug=1&amp;u_nmime=1&amp;flash=0&amp;gads=v2&amp;ga_vid=491868314.1415072538&amp;ga_sid=1415072538&amp;ga_hid=1575333237"></script>
+</div>
+			
+			    <div id="nationalAd"><script type="text/javascript">
+  GA_googleFillSlot("rtguides_rightsideselfpromo_rectangle300x180");
+</script><script src="http://pubads.g.doubleclick.net/gampad/ads?correlator=832973911883776&amp;output=json_html&amp;callback=GA_googleSetAdContentsBySlotForSync&amp;impl=s&amp;client=ca-pub-7424218284122496&amp;slotname=rtguides_rightsideselfpromo_rectangle300x180&amp;page_slots=rtguides_underheader_leaderboard728x90%2Crtguides_undermap_mediumrectangle300x250%2Crtguides_rightsideselfpromo_rectangle300x180&amp;cust_params=city%3Dchicago%26bottomcat%3Dbottom-restaurants%26bottomsubc%3Damerican-restaurants%26contentsrc%3Dwcities&amp;cookie_enabled=1&amp;url=http%3A%2F%2Fchicago.schmap.com%2Frestaurants%2Fwishbone_restaurant%3Ft%3D0bJRz&amp;lmt=1415072540&amp;dt=1415072540223&amp;cc=40&amp;biw=989&amp;bih=685&amp;adk=3816927619&amp;adx=636&amp;ady=1215&amp;ifi=3&amp;oid=3&amp;u_his=50&amp;u_h=768&amp;u_w=1024&amp;u_ah=768&amp;u_aw=1024&amp;u_cd=24&amp;u_nplug=1&amp;u_nmime=1&amp;flash=0&amp;gads=v2&amp;ga_vid=491868314.1415072538&amp;ga_sid=1415072538&amp;ga_hid=1575333237"></script>
+</div>
+			
+			
+			
+			
+			
+	</div>
+	</div>
+</div>
+
+<div class="footer" id="footer">
+	<ul>
+		<li id="footer_first">© 2013 Schmap, Inc. </li>
+		<li><a href="http://www.schmap.com/About">About us</a></li>
+		<li><a href="http://www.schmap.com/Contact">Contact</a></li>
+		<li><a href="http://www.schmap.com/Privacy">Privacy</a></li>
+		<li><a href="http://www.schmap.com/Termsofuse">Terms</a></li>
+		<li id="footer_last">Talk to us on Twitter: <a href="http://twitter.com/schmap" target="_blank">@schmap</a>&nbsp;&nbsp;
+		<iframe scrolling="no" frameborder="0" allowtransparency="true" src="http://platform1.twitter.com/widgets/follow_button.html?_=1307072450788&amp;align=&amp;button=grey&amp;id=twitter_tweet_button_2&amp;lang=en&amp;link_color=&amp;screen_name=schmap&amp;show_count=false&amp;show_screen_name=&amp;text_color=" class="twitter-follow-button" style="height: 20px; width: 62px; position: relative; top: 5px;" title=""></iframe></li>
+	</ul>
+<iframe scrolling="no" src="http://sch.mp/add_visit" style="height: 0px; width: 0px; display: none;"></iframe></div>
+
+
+<div id="overlay_new" style="display:none"></div>
+<div id="overlay_1" class="overlay" style="display:none">
+	<img src="/images/spacer.png" class="close" onclick="overlay.closeOverlay1();">
+	<img src="/images/spacer.png" class="checkmark">
+	<p id="p1"></p>
+	<!--<b style="line-height:200%">Your tweet has been sent!</b><br/>Thank your for adding buzz for xxx-->
+	<!--<b style="line-height:200%">Your are now signed in with Twitter!</b><br/>As a signed in user you can bla bla-->
+	<p id="p2">Recommended Schmap accounts to follow...</p>
+	<img id="overlay_spinner" src="/images/twitter_ajax_iphone.gif">
+	<ul id="accounts_list"></ul>
+	<p id="p3"></p>
+</div>
+<div id="overlay_2" class="overlay" style="display:none">
+	<img src="/images/spacer.png" class="close" onclick="overlay.closeOverlay2();">
+	<h1>Chicago Event &amp; Deal DMs!</h1>
+	<p style="text-align:left;">Be the first to hear about great local events and deals via our Twitter DM service. Set your preferences here, and
+	change them anytime!</p>
+	<ul class="dm_cat_titles">
+		<li>Chicago Events</li>
+		<li style="margin-left:90px;#margin-left:95px;">Chicago Deals</li>
+	</ul>
+	<ul>
+		<li id="dm_cat_list1"></li>
+		<li id="dm_cat_list2"></li>
+	</ul>
+	<p id="p3" style="display:block;">		
+		Please send me a maximum <select id="dm_count">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+								</select>
+		DMs/day <span></span><br><br>
+		<a id="unsubscribe">unsubscribe</a>
+		
+		<span>Sign in with Twitter to save your choices and get your DMs: </span><img onclick="abu.login('T-GD-DM-SUBS');" class="login" src="/images/spacer.png">
+		
+	</p>
+</div>
+<div id="overlay_3" class="overlay" style="display:none">
+	<img onclick="overlay.closeOverlay3();" class="close" src="/images/spacer.png">
+	<div class="overlay3_top"><div id="overlay3_done"></div></div>
+	<h1>You're all set to receive @schmap Event &amp; Deal DMs</h1>
+	<p>You'll receive @schmap Event &amp; Deal DMs in the categories you've selected. You can change your selected categories by clicking on the 'Event &amp; Deal DMs' link at the top of any page on our site.</p>
+	<h2>Please help us spread the word!</h2>
+	<div id="overlay3_size">140</div>
+	<div id="overlay3_innerbox">
+		<div class="overlay3_text">
+			<textarea spellcheck="false" id="overlay3_textarea" rows="3"></textarea>
+		</div>
+		<div class="overlay3_PN">	
+			<div id="overlay3_prev" class="overlay3_prev"></div>
+			<div id="overlay3_next" class="overlay3_next"></div>
+		</div>	
+	</div>
+	<div id="overlay3_tweetButton" style="display: inline-block;"></div>
+	<div id="overlay3_doneButton" style="display: none"></div>
+	<span id="overlay3_lable">Choose or edit a message above, then click here to tweet:</span>
+</div>
+
+
+<script type="text/javascript" src="/ctrs/cities.js"></script>
+<script type="text/javascript">
+var groupon_url = "http://www.anrdoezrs.net/click-4406015-10804307?url=http%3A%2F%2Fwww.groupon.com%2Fdeals%2Fsantas-letters-chicago";
+var searchQuery = "";
+var searchPage_init = "false";
+var google_api_key = 'ABQIAAAAZH6MtmmlpyGAy_ktkxyYlxSjlsrIs7iRW_qDtQ6MGYnMAE6EVhR-9Xzfw-BwMQVuzYilUwaRMIVpsg';
+var gkey = google_api_key;
+var currentCity = 'Chicago';
+var cities_city_url = 'chicago';
+var cities_subdomain = 'chicago';
+var cities_state = 'IL';
+var cities_city_with_state = 'CHICAGO';
+var topBanner = false;
+
+	var topBanner = true;
+
+var footerBanner = false;
+
+addScript('/ctrs/guides.js');
+</script><script type="text/javascript" src="/ctrs/guides.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+<script type="text/javascript" src="/ctrs/slideshow.js"></script>
+
+
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="http://static.ak.facebook.com/connect/xd_arbiter/ehazDpFPEnK.js?version=41#channel=f261b7415&amp;origin=http%3A%2F%2Fchicago.schmap.com" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://s-static.ak.facebook.com/connect/xd_arbiter/ehazDpFPEnK.js?version=41#channel=f261b7415&amp;origin=http%3A%2F%2Fchicago.schmap.com" style="border: none;"></iframe></div></div></div><script type="text/javascript" src="http://twitter.com/users/show/PhilipRLeodoro.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/Robotstephe.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/BriTheWebGuy.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/trueblessyn.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/naomiprale.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/KeybrdBiologist.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/djelprieto.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/naomiprale.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/ShiftgigChicago.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/LanceAustin14.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/SchlicksupE.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/Unicoiartstudio.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/JohnGarridoIII.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/KeybrdBiologist.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/trueblessyn.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/WalkLike_AModel.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/PhilipRLeodoro.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/Robotstephe.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/BriTheWebGuy.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/trueblessyn.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/naomiprale.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/KeybrdBiologist.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/djelprieto.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/naomiprale.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/ShiftgigChicago.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/LanceAustin14.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/SchlicksupE.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/Unicoiartstudio.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/JohnGarridoIII.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/KeybrdBiologist.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/trueblessyn.json?callback=setTwitterImg"></script><script type="text/javascript" src="http://twitter.com/users/show/WalkLike_AModel.json?callback=setTwitterImg"></script></body></html>

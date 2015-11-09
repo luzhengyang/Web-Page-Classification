@@ -1,0 +1,2117 @@
+<html><head>
+        <title>Bell</title>
+        
+<script type="text/javascript" src="http://www.google.com/cse/cse.js?cx=016030293108809521899:pzdl0x8n7cm"></script><script id="facebook-jssdk" src="//connect.facebook.net/en_GB/all.js#xfbml=1"></script><script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" src="/en/jsi18n/"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?key=&amp;sensor=false"></script>
+<script src="http://www.google.com/jsapi?key="></script>
+<script src="/static/en/js/vendor/jquery.nivo.slider.pack.js"></script>
+<script src="/static/en/js/vendor/jquery.fancybox-1.3.4.pack.js"></script>
+<script src="/static/en/js/vendor/jquery.cookie.js"></script>
+<script src="/static/en/js/vendor/markerclusterer_compiled.js" type="text/javascript"></script>
+<script src="/static/en/js/vendor/raven-0.7.1.min.js" type="text/javascript"></script>
+
+<script src="/static/en/js/base.js"></script>
+<script src="/static/en/js/home.js"></script>
+<script src="/static/en/js/map.js"></script>
+<script src="/static/en/js/page.js"></script>
+<script src="/static/en/js/product.js"></script>
+<script src="/static/en/js/reorder.js"></script>
+
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Cantata+One">
+<link rel="stylesheet" type="text/css" href="/static/en/css/vendor/nivo-slider.css">
+<link rel="stylesheet" type="text/css" href="/static/en/css/vendor/nivo-slider-themes/default/default.css">
+<link rel="stylesheet" type="text/css" href="/static/en/css/vendor/fancybox/jquery.fancybox-1.3.4.css">
+
+<link rel="stylesheet/less" type="text/css" href="/static/en/css/main.less">
+<link rel="stylesheet/less" type="text/css" href="/static/en/css/home.less">
+<link rel="stylesheet/less" type="text/css" href="/static/en/css/map.less">
+<link rel="stylesheet/less" type="text/css" href="/static/en/css/page.less">
+<link rel="stylesheet/less" type="text/css" href="/static/en/css/reorder.less">
+<script src="/static/en/js/vendor/less-1.3.0.min.js"></script><style type="text/css" media="screen" id="less:static-en-css-main">/* Important sizes */
+/* Colors */
+/* Background colors */
+/* Text colors */
+/* Fonts */
+/* Borders */
+/* Mixins */
+.no-margin-or-padding {
+  margin: 0;
+  padding: 0;
+}
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.disable-anchor-outline a:active,
+.disable-anchor-outline a:link,
+.disable-anchor-outline a:visited,
+.disable-anchor-outline a:hover {
+  outline: 0;
+}
+body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+a {
+  text-decoration: none;
+}
+img {
+  border-width: 0;
+}
+#color-menu {
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 25%;
+  padding: 11px;
+  margin: 0;
+  background-color: #ffffff;
+}
+@media (min-width: 1058px) {
+  #color-menu {
+    display: block;
+  }
+}
+#color-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#color-menu ul li {
+  display: block;
+  height: 11px;
+  width: 12px;
+  overflow: hidden;
+  margin-bottom: 6px;
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/color-dot.png');
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+#color-menu ul li.last {
+  margin-bottom: 0;
+}
+#color-menu ul li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.cookie-notification {
+  display: none;
+  width: 100%;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: #D61F94;
+  color: white;
+  z-index: 1000000;
+  font-size: 13px;
+}
+.cookie-notification div {
+  padding: 10px;
+  position: relative;
+  overflow: auto;
+}
+.cookie-notification div a {
+  color: white;
+}
+.cookie-notification div a:hover {
+  text-decoration: underline;
+}
+.cookie-notification div .message {
+  float: left;
+  margin-right: 30px;
+}
+.cookie-notification div .close-button {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  padding: 0;
+  font-size: 24px;
+}
+#main-wrapper {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #e8e1e5 url('http://www.bell.com.pl/static/en/css/../img/bell/background.png') repeat-x left top;
+}
+#main-wrapper > * {
+  width: 990px;
+  margin: 0 auto;
+  padding: 0;
+}
+#main-wrapper #header {
+  height: 30px;
+}
+#main-wrapper #header a {
+  display: inline-block;
+  height: 30px;
+}
+#main-wrapper #header div {
+  height: 30px;
+  margin: 0;
+  padding: 0;
+}
+#main-wrapper #header div.languages {
+  float: right;
+}
+#main-wrapper #header div.languages > a {
+  display: block;
+  width: 45px;
+  float: left;
+}
+#main-wrapper #header div.languages > a#lang-pl {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/lang/pl-inactive.png');
+}
+#main-wrapper #header div.languages > a#lang-pl:hover,
+#main-wrapper #header div.languages > a#lang-pl.active {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/lang/pl-active.png');
+}
+#main-wrapper #header div.languages > a#lang-en {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/lang/en-inactive.png');
+}
+#main-wrapper #header div.languages > a#lang-en:hover,
+#main-wrapper #header div.languages > a#lang-en.active {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/lang/en-active.png');
+}
+#main-wrapper #header div.languages > a#lang-ru {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/lang/ru-inactive.png');
+}
+#main-wrapper #header div.languages > a#lang-ru:hover,
+#main-wrapper #header div.languages > a#lang-ru.active {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/lang/ru-active.png');
+}
+#main-wrapper #header div.languages > a#lang-fr {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/lang/fr-inactive.png');
+}
+#main-wrapper #header div.languages > a#lang-fr:hover,
+#main-wrapper #header div.languages > a#lang-fr.active {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/lang/fr-active.png');
+}
+#main-wrapper #header div.languages > a#lang-es {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/lang/es-inactive.png');
+}
+#main-wrapper #header div.languages > a#lang-es:hover,
+#main-wrapper #header div.languages > a#lang-es.active {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/lang/es-active.png');
+}
+#main-wrapper #header div.languages div {
+  position: relative;
+  float: left;
+  width: 130px;
+  height: 16px;
+  padding: 7px 10px;
+  color: #ee44b1;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#main-wrapper #header div.languages div ul {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  top: 30px;
+  width: 150px;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/lang/list-flags.png');
+  background-position: top left;
+  background-repeat: no-repeat;
+  list-style-type: none;
+}
+#main-wrapper #header div.languages div ul:hover {
+  display: block;
+}
+#main-wrapper #header div.languages div ul li {
+  position: relative;
+  display: block;
+  text-align: left;
+  height: 30px;
+  margin-left: 45px;
+  width: 105px;
+}
+#main-wrapper #header div.languages div ul li:hover {
+  background-color: #f5f5f4;
+}
+#main-wrapper #header div.languages div ul li a {
+  position: relative;
+  left: -45px;
+  padding-top: 7px;
+  padding-left: 60px;
+  height: 23px;
+  width: 90px;
+  display: block;
+}
+#main-wrapper #header div.languages div ul li a,
+#main-wrapper #header div.languages div ul li a:visited {
+  color: #ee44b1;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#main-wrapper #header div.languages div img {
+  vertical-align: middle;
+  margin: 0 0 2px 2px;
+}
+#main-wrapper #header div.languages div:hover {
+  background-color: #f5f5f4;
+}
+#main-wrapper #header div.languages div:hover ul {
+  display: block;
+}
+#main-wrapper #header div.search {
+  float: right;
+  background-color: #f5f5f4;
+}
+#main-wrapper #header div.search .gsc-search-box {
+  height: 100%;
+  width: 184px;
+  margin: 0;
+  padding: 0;
+}
+#main-wrapper #header div.search .gsc-search-box .gsc-input {
+  height: 100%;
+  width: 139px;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+}
+#main-wrapper #header div.search .gsc-search-box .gsc-input input {
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+  color: #ac9098;
+  font-size: 11px;
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/google_custom_search_watermark.png') !important;
+  background-position: center left !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+  border-width: 0 !important;
+}
+#main-wrapper #header div.search .gsc-search-box .gsc-input input:focus,
+#main-wrapper #header div.search .gsc-search-box .gsc-input input.remove-background-watermark {
+  background-image: none !important;
+}
+#main-wrapper #header div.search .gsc-search-box td.gsc-search-button {
+  height: 100%;
+  width: 35px;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+#main-wrapper #header div.search .gsc-search-box td.gsc-search-button input {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 35px;
+  min-width: 35px;
+  background-color: transparent;
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/search_icon.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  border-width: 0;
+}
+#main-wrapper #header div.search .gsc-search-box .gsc-clear-button {
+  display: none;
+}
+#main-wrapper #header div.search.en .gsc-search-box {
+  width: 184px;
+}
+#main-wrapper #header div.search.en .gsc-search-box .gsc-input {
+  width: 139px;
+}
+#main-wrapper #header div.search.en .gsc-search-box .gsc-input input {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/google_custom_search_watermark_en.png') !important;
+}
+#main-wrapper #header div.search.en .gsc-search-box .gsc-input input:focus,
+#main-wrapper #header div.search.en .gsc-search-box .gsc-input input.remove-background-watermark {
+  background-image: none !important;
+}
+#main-wrapper #header div.search.ru .gsc-search-box {
+  width: 220px;
+}
+#main-wrapper #header div.search.ru .gsc-search-box .gsc-input {
+  width: 175px;
+}
+#main-wrapper #header div.search.ru .gsc-search-box .gsc-input input {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/google_custom_search_watermark_ru.png') !important;
+}
+#main-wrapper #header div.search.ru .gsc-search-box .gsc-input input:focus,
+#main-wrapper #header div.search.ru .gsc-search-box .gsc-input input.remove-background-watermark {
+  background-image: none !important;
+}
+#main-wrapper #header div.search.fr .gsc-search-box {
+  width: 209px;
+}
+#main-wrapper #header div.search.fr .gsc-search-box .gsc-input {
+  width: 164px;
+}
+#main-wrapper #header div.search.fr .gsc-search-box .gsc-input input {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/google_custom_search_watermark_fr.png') !important;
+}
+#main-wrapper #header div.search.fr .gsc-search-box .gsc-input input:focus,
+#main-wrapper #header div.search.fr .gsc-search-box .gsc-input input.remove-background-watermark {
+  background-image: none !important;
+}
+#main-wrapper #header div.search.es .gsc-search-box {
+  width: 209px;
+}
+#main-wrapper #header div.search.es .gsc-search-box .gsc-input {
+  width: 164px;
+}
+#main-wrapper #header div.search.es .gsc-search-box .gsc-input input {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/google_custom_search_watermark_es.png') !important;
+}
+#main-wrapper #header div.search.es .gsc-search-box .gsc-input input:focus,
+#main-wrapper #header div.search.es .gsc-search-box .gsc-input input.remove-background-watermark {
+  background-image: none !important;
+}
+#main-wrapper #header div.search.it .gsc-search-box {
+  width: 184px;
+}
+#main-wrapper #header div.search.it .gsc-search-box .gsc-input {
+  width: 139px;
+}
+#main-wrapper #header div.search.it .gsc-search-box .gsc-input input {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/google_custom_search_watermark_it.png') !important;
+}
+#main-wrapper #header div.search.it .gsc-search-box .gsc-input input:focus,
+#main-wrapper #header div.search.it .gsc-search-box .gsc-input input.remove-background-watermark {
+  background-image: none !important;
+}
+#main-wrapper #header div.search.ar .gsc-search-box {
+  width: 184px;
+}
+#main-wrapper #header div.search.ar .gsc-search-box .gsc-input {
+  width: 139px;
+}
+#main-wrapper #header div.search.ar .gsc-search-box .gsc-input input {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/google_custom_search_watermark_ar.png') !important;
+}
+#main-wrapper #header div.search.ar .gsc-search-box .gsc-input input:focus,
+#main-wrapper #header div.search.ar .gsc-search-box .gsc-input input.remove-background-watermark {
+  background-image: none !important;
+}
+#main-wrapper #header div.inner-links {
+  float: left;
+  overflow: hidden;
+}
+#main-wrapper #header div.inner-links a {
+  color: #6e6e6e;
+  padding: 7px 10px;
+  font-size: 11px;
+}
+#main-wrapper #header div.inner-links a:focus {
+  outline: none;
+}
+#main-wrapper #header div.inner-links a:hover {
+  background-color: #f5f5f4;
+}
+#main-wrapper #header div.outer-links {
+  float: right;
+}
+#main-wrapper #header div.outer-links div {
+  float: left;
+  overflow: hidden;
+}
+#main-wrapper #header div.outer-links div.shop-link {
+  width: 164px;
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/shop_link_bg.png');
+  background-color: #d61f94;
+}
+#main-wrapper #header div.outer-links div.shop-link span {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/pink_right_arrow.png');
+}
+#main-wrapper #header div.outer-links div.private-label-link {
+  width: 166px;
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/private_label_link_bg.png');
+  background-color: #484848;
+}
+#main-wrapper #header div.outer-links div.private-label-link span {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/gray_right_arrow.png');
+}
+#main-wrapper #header div.outer-links div a {
+  padding: 8px 0 0 15px;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: white;
+}
+#main-wrapper #header div.outer-links div a:focus {
+  outline: none;
+}
+#main-wrapper #header div.outer-links div a span {
+  background-position: center right;
+  background-repeat: no-repeat;
+  padding-right: 10px;
+}
+#main-wrapper #main-menu {
+  position: relative;
+  margin-top: 2px;
+  height: 158px;
+  background: transparent url('http://www.bell.com.pl/static/en/css/../img/bell/main_menu_background.png') no-repeat left top;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#main-wrapper #main-menu .fb-like {
+  position: absolute;
+  top: 21px;
+  left: 154px;
+}
+#main-wrapper #main-menu #main-logo-link {
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 120px;
+  top: 16px;
+  left: 21px;
+}
+#main-wrapper #main-menu > ul {
+  margin-top: 61px;
+  float: right;
+  list-style: none;
+}
+#main-wrapper #main-menu > ul > li {
+  float: left;
+  height: 31px;
+}
+#main-wrapper #main-menu > ul > li a,
+#main-wrapper #main-menu > ul > li span {
+  display: block;
+  height: 23px;
+  padding: 8px 19px 0 19px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+}
+#main-wrapper #main-menu > ul > li ul {
+  display: none;
+}
+#main-wrapper #main-menu > ul > li.products-menu-entry,
+#main-wrapper #main-menu > ul > li:hover {
+  position: relative;
+}
+#main-wrapper #main-menu > ul > li.products-menu-entry:hover ul,
+#main-wrapper #main-menu > ul > li:hover:hover ul {
+  display: block;
+}
+#main-wrapper #main-menu > ul > li.products-menu-entry > ul,
+#main-wrapper #main-menu > ul > li:hover > ul {
+  position: absolute;
+  z-index: 1000;
+  background-color: #d9369f;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding: 12px 22px;
+  min-width: 200px;
+}
+#main-wrapper #main-menu > ul > li.products-menu-entry > ul *,
+#main-wrapper #main-menu > ul > li:hover > ul * {
+  position: static;
+}
+#main-wrapper #main-menu > ul > li.products-menu-entry > ul a,
+#main-wrapper #main-menu > ul > li:hover > ul a {
+  height: auto;
+  display: block;
+  font-size: 11px;
+  padding-bottom: 11px;
+}
+#main-wrapper #main-menu > ul > li.products-menu-entry > ul > li.active > a,
+#main-wrapper #main-menu > ul > li:hover > ul > li.active > a,
+#main-wrapper #main-menu > ul > li.products-menu-entry > ul > li > a:hover,
+#main-wrapper #main-menu > ul > li:hover > ul > li > a:hover {
+  color: #a40f6e;
+}
+#main-wrapper #main-menu > ul > li.products-menu-entry ul,
+#main-wrapper #main-menu > ul > li:hover ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#main-wrapper #main-menu > ul > li.products-menu-entry > ul {
+  left: -150px;
+  width: 600px;
+}
+#main-wrapper #main-menu > ul > li.products-menu-entry > ul > li {
+  float: left;
+  padding-bottom: 11px;
+}
+#main-wrapper #main-menu > ul > li.products-menu-entry > ul > li > a {
+  padding-bottom: 5px;
+  color: #f6a2d8;
+  font-size: 11px;
+}
+#main-wrapper #main-menu > ul > li.products-menu-entry > ul > li li a {
+  padding-bottom: 0;
+  font-size: 11px;
+}
+#main-wrapper #main-menu > ul > li.products-menu-entry > ul > li ul li.active > a,
+#main-wrapper #main-menu > ul > li.products-menu-entry > ul > li ul li > a:hover {
+  color: #8c0d5e;
+}
+#main-wrapper #main-menu > ul > li.active,
+#main-wrapper #main-menu > ul > li:hover {
+  background-color: #d9369f;
+}
+#main-wrapper #content {
+  position: relative;
+}
+#main-wrapper #content #page-location {
+  position: absolute;
+  right: 10px;
+  top: -60px;
+  text-align: right;
+}
+#main-wrapper #content #page-location > * {
+  margin: 0;
+  padding: 0;
+}
+#main-wrapper #content #page-location a,
+#main-wrapper #content #page-location a:visited,
+#main-wrapper #content #page-location a:active {
+  color: #6e6e6e;
+}
+#main-wrapper #content #page-location a:hover,
+#main-wrapper #content #page-location a:visited:hover,
+#main-wrapper #content #page-location a:active:hover {
+  text-decoration: underline;
+}
+#main-wrapper #content #page-location h1 {
+  color: #817469;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+}
+#main-wrapper #content #page-location p {
+  color: #d61f94;
+  font-size: 11px;
+}
+#main-wrapper #content #content-rule {
+  width: 100%;
+  height: 1px;
+  margin-top: 16px;
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/page_hr.png');
+}
+#main-wrapper #content .footer-toggle-button {
+  float: right;
+  clear: both;
+  padding: 35px 10px 15px 0;
+  color: #d92d9b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: right;
+  cursor: pointer;
+}
+#main-wrapper #content .footer-toggle-button img {
+  margin-left: 6px;
+  vertical-align: middle;
+}
+#main-wrapper #content .footer-toggle-button .close {
+  display: none;
+}
+#main-wrapper #footer {
+  display: none;
+  float: left;
+  clear: both;
+  padding: 10px 0 20px 0;
+  width: 100%;
+}
+#main-wrapper #footer > ul {
+  width: 990px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+#main-wrapper #footer > ul > li {
+  float: left;
+  width: 10%;
+  padding-right: 15px;
+}
+#main-wrapper #footer > ul.entries-number-1 > li {
+  width: 974.5px;
+  /* -1px to avoid float addition errors */
+
+}
+#main-wrapper #footer > ul.entries-number-2 > li {
+  width: 479.5px;
+  /* -1px to avoid float addition errors */
+
+}
+#main-wrapper #footer > ul.entries-number-3 > li {
+  width: 314.5px;
+  /* -1px to avoid float addition errors */
+
+}
+#main-wrapper #footer > ul.entries-number-4 > li {
+  width: 232px;
+  /* -1px to avoid float addition errors */
+
+}
+#main-wrapper #footer > ul.entries-number-5 > li {
+  width: 182.5px;
+  /* -1px to avoid float addition errors */
+
+}
+#main-wrapper #footer > ul.entries-number-6 > li {
+  width: 149.5px;
+  /* -1px to avoid float addition errors */
+
+}
+#main-wrapper #footer > ul.entries-number-7 > li {
+  width: 125.92857142857142px;
+  /* -1px to avoid float addition errors */
+
+}
+#main-wrapper #footer > ul.entries-number-8 > li {
+  width: 108.25px;
+  /* -1px to avoid float addition errors */
+
+}
+#main-wrapper #footer > ul ul {
+  font-weight: normal;
+}
+#main-wrapper #footer a,
+#main-wrapper #footer a:visited,
+#main-wrapper #footer a:active,
+#main-wrapper #footer li {
+  color: #6c6c6c;
+  font-size: 12px;
+}
+#main-wrapper #footer a:hover {
+  color: #393939;
+}
+#main-wrapper #footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+#subfooter {
+  float: left;
+  width: 100%;
+  background-color: #ffffff;
+}
+#subfooter > div {
+  width: 990px;
+  margin: 0 auto;
+  color: #b8b8b8;
+  font-family: Arial;
+  font-size: 10px;
+}
+#subfooter > div a,
+#subfooter > div a:visited,
+#subfooter > div a:active {
+  color: #b8b8b8;
+}
+#subfooter > div a:hover {
+  color: #6c6c6c;
+}
+#subfooter #ue-information {
+  position: relative;
+  padding: 20px 0 0 0;
+}
+#subfooter #ue-information h3 {
+  text-transform: uppercase;
+  margin: 20px 0 0 0;
+}
+#subfooter #ue-information p {
+  margin: 4px 0 0 0;
+}
+#subfooter #ue-information img {
+  position: absolute;
+  right: 0;
+  top: 38px;
+}
+#subfooter #ue-information img.second {
+  top: 84px;
+}
+#subfooter #ue-information div {
+  width: 642px;
+}
+#subfooter #copyright-notice {
+  margin-top: 30px;
+  color: #b8b8b8;
+}
+#subfooter #copyright-notice img {
+  vertical-align: middle;
+}
+</style><style type="text/css" media="screen" id="less:static-en-css-home">/* Important sizes */
+/* Colors */
+/* Background colors */
+/* Text colors */
+/* Fonts */
+/* Borders */
+/* Mixins */
+.no-margin-or-padding {
+  margin: 0;
+  padding: 0;
+}
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.disable-anchor-outline a:active,
+.disable-anchor-outline a:link,
+.disable-anchor-outline a:visited,
+.disable-anchor-outline a:hover {
+  outline: 0;
+}
+#content.home {
+  position: relative;
+}
+#content.home .slider-wrapper {
+  position: relative;
+}
+#content.home .slider-wrapper #slider {
+  margin-bottom: 0;
+}
+#content.home .slider-wrapper .nivo-controlNav {
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  height: 38px;
+  width: 155px;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+#content.home .slider-wrapper .nivo-controlNav .nivo-control {
+  margin: 10px 0 6px 0;
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/bullets.png');
+}
+#content.home .descriptive-link {
+  display: none;
+  position: relative;
+}
+#content.home .descriptive-link p.descriptive-link-motivator {
+  position: absolute;
+  bottom: 15px;
+  margin-bottom: 0;
+  font-size: 10.4px;
+}
+#content.home .descriptive-link p.descriptive-link-motivator img {
+  float: none;
+  margin: 0 0 2px 3px;
+  vertical-align: middle;
+}
+#content.home .descriptive-link-1,
+#content.home .descriptive-link-2,
+#content.home .descriptive-link-3,
+#content.home .descriptive-link-4 {
+  background-repeat: no-repeat;
+  background-position: top right;
+  display: block;
+  width: 330px;
+  height: 142px;
+  overflow: hidden;
+}
+#content.home .descriptive-link-1 a,
+#content.home .descriptive-link-2 a,
+#content.home .descriptive-link-3 a,
+#content.home .descriptive-link-4 a {
+  display: block;
+  height: 106px;
+  padding: 18px;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+#content.home .descriptive-link-1 a > *,
+#content.home .descriptive-link-2 a > *,
+#content.home .descriptive-link-3 a > *,
+#content.home .descriptive-link-4 a > * {
+  width: 119px;
+}
+#content.home .descriptive-link-1 a.empty,
+#content.home .descriptive-link-2 a.empty,
+#content.home .descriptive-link-3 a.empty,
+#content.home .descriptive-link-4 a.empty {
+  background-image: none;
+}
+#content.home .descriptive-link-1 a p,
+#content.home .descriptive-link-2 a p,
+#content.home .descriptive-link-3 a p,
+#content.home .descriptive-link-4 a p {
+  margin: 8px 0;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 14px;
+  font-size: 13px;
+}
+#content.home .descriptive-link-1 a p:first-child,
+#content.home .descriptive-link-2 a p:first-child,
+#content.home .descriptive-link-3 a p:first-child,
+#content.home .descriptive-link-4 a p:first-child {
+  margin-top: 0;
+}
+#content.home .descriptive-link-1 img,
+#content.home .descriptive-link-2 img,
+#content.home .descriptive-link-3 img,
+#content.home .descriptive-link-4 img {
+  float: right;
+}
+#content.home .descriptive-link-1,
+#content.home .descriptive-link-3 {
+  background-color: #ee44b1;
+}
+#content.home .descriptive-link-1 a,
+#content.home .descriptive-link-3 a {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/descriptive_link_bg1.png');
+}
+#content.home .descriptive-link-2,
+#content.home .descriptive-link-4 {
+  background-color: #d51e93;
+}
+#content.home .descriptive-link-2 a,
+#content.home .descriptive-link-4 a {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/descriptive_link_bg2.png');
+}
+#content.home .descriptive-link-1,
+#content.home .descriptive-link-2,
+#content.home .descriptive-link-3 {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+#content.home .descriptive-link-4 {
+  z-index: 10;
+  position: absolute;
+  top: 283px;
+  left: 660px;
+}
+</style><style type="text/css" media="screen" id="less:static-en-css-map">#map_canvas {
+  height: 500px;
+  width: 700px;
+}
+</style><style type="text/css" media="screen" id="less:static-en-css-page">/* Important sizes */
+/* Colors */
+/* Background colors */
+/* Text colors */
+/* Fonts */
+/* Borders */
+/* Mixins */
+.no-margin-or-padding {
+  margin: 0;
+  padding: 0;
+}
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.disable-anchor-outline a:active,
+.disable-anchor-outline a:link,
+.disable-anchor-outline a:visited,
+.disable-anchor-outline a:hover {
+  outline: 0;
+}
+#page {
+  margin-top: 21px;
+}
+#page h2,
+#page h3 {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+#page h2 {
+  color: #817469;
+}
+#page h3 {
+  color: #d61f94;
+}
+#page p,
+#page div {
+  color: #6e6e6e;
+  font-size: 12px;
+}
+#page p {
+  margin: 0;
+  line-height: 150%;
+}
+#page p  + p {
+  margin-top: 10px;
+}
+#page.map > div {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+#page.map #map-search,
+#page.map .network-list h2,
+#page.map .network-list div {
+  border-bottom: 1px dotted black;
+}
+#page.map #map_canvas {
+  width: 650px;
+  height: 394px;
+  margin-right: 18px;
+}
+#page.map #map-search {
+  padding-bottom: 13px;
+}
+#page.map #map-search h2 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 19px;
+}
+#page.map #map-search form {
+  background-color: #ffffff;
+}
+#page.map #map-search form input {
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+  height: 33px;
+  border-width: 0;
+  background-color: #ffffff;
+}
+#page.map #map-search form .search {
+  padding: 0 0 0 13px;
+  width: 273px;
+  color: #ac9098;
+  font-size: 11px;
+}
+#page.map #map-search form .submit {
+  width: 33px;
+  float: right;
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/search_icon.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#page.map #shop-networks {
+  width: 322px;
+}
+#page.map #shop-networks .network-list h2 {
+  margin: 0;
+  padding: 0;
+  padding: 25px 0 10px 0;
+}
+#page.map #shop-networks .network-list div {
+  float: left;
+  padding: 5px 0;
+}
+#page.map #shop-networks .network-list div a,
+#page.map #shop-networks .network-list div a:visited,
+#page.map #shop-networks .network-list div a:active {
+  width: 322px;
+  display: block;
+}
+#page.map #shop-networks .network-list div a h3,
+#page.map #shop-networks .network-list div a:visited h3,
+#page.map #shop-networks .network-list div a:active h3 {
+  float: left;
+  width: 222px;
+  margin-top: 12px;
+  font-size: 15px;
+}
+#page.map #shop-networks .network-list div a img,
+#page.map #shop-networks .network-list div a:visited img,
+#page.map #shop-networks .network-list div a:active img {
+  float: right;
+}
+#page.gallery-template table tr td {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  padding-right: 17px;
+  padding-bottom: 17px;
+}
+#page.gallery-template table tr td.last {
+  margin-right: 0;
+}
+#page.gallery-template table tr td img {
+  margin-bottom: 10px;
+}
+#page.gallery-template table tr td h2 {
+  color: #d61f94;
+}
+#page.gallery-template table tr td p {
+  margin: 0;
+  padding: 0;
+  color: #6e6e6e;
+  font-size: 10px;
+}
+#page.make-up-page > div {
+  float: left;
+  width: 100%;
+}
+#page.make-up-page .first {
+  padding-bottom: 38px;
+  border-bottom: 1px dotted #000000;
+}
+#page.make-up-page .first img {
+  vertical-align: top;
+  float: right;
+  max-width: 495px;
+  margin-left: 30px;
+}
+#page.make-up-page .second h2 {
+  margin: 30px 0 10px 0;
+}
+#page.make-up-page .second h3 {
+  margin-bottom: 0;
+}
+#page.make-up-page .second p {
+  font-size: 10px;
+}
+#page.make-up-page .second .first-three-steps {
+  float: left;
+}
+#page.make-up-page .second .second-three-steps {
+  float: right;
+}
+#page.make-up-page .second #make-up-main-image {
+  float: left;
+  margin: 0 30px;
+  width: 516px;
+  overflow: hidden;
+}
+#page.make-up-page .second #make-up-main-image img {
+  max-width: 100%;
+}
+#page.make-up-page .second .first-three-steps,
+#page.make-up-page .second .second-three-steps {
+  width: 207px;
+}
+#page.make-up-page .second .first-three-steps a,
+#page.make-up-page .second .second-three-steps a {
+  display: block;
+}
+#page.make-up-page .second .first-three-steps a .motivator,
+#page.make-up-page .second .second-three-steps a .motivator {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #d61f94;
+  font-size: 10px;
+}
+#page.make-up-page .second .first-three-steps a .motivator img,
+#page.make-up-page .second .second-three-steps a .motivator img {
+  margin: 0 0 1px 2px;
+}
+#page.make-up-page .second .first-three-steps h3,
+#page.make-up-page .second .second-three-steps h3 {
+  font-size: 13px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+#page.make-up-page .second .first-three-steps h3 .counter,
+#page.make-up-page .second .second-three-steps h3 .counter {
+  color: #6e6e6e;
+}
+#page.make-up-page .second .first-three-steps img,
+#page.make-up-page .second .second-three-steps img {
+  max-width: 207px;
+  overflow: hidden;
+}
+#page.make-up-page .second .first-three-steps.step-1,
+#page.make-up-page .second .second-three-steps.step-1,
+#page.make-up-page .second .first-three-steps.step-2,
+#page.make-up-page .second .second-three-steps.step-2,
+#page.make-up-page .second .first-three-steps.step-3,
+#page.make-up-page .second .second-three-steps.step-3,
+#page.make-up-page .second .first-three-steps.step-4,
+#page.make-up-page .second .second-three-steps.step-4,
+#page.make-up-page .second .first-three-steps.step-5,
+#page.make-up-page .second .second-three-steps.step-5,
+#page.make-up-page .second .first-three-steps.step-6,
+#page.make-up-page .second .second-three-steps.step-6 {
+  display: block;
+}
+#page.image-pairs-page .image-pair {
+  float: left;
+  width: 329.3333333333333px;
+  overflow: hidden;
+  margin-left: 1px;
+}
+#page.image-pairs-page .image-pair:first-child {
+  margin-left: 0;
+}
+#page.image-pairs-page .image-pair img {
+  display: none;
+}
+#page.images-and-content #content {
+  float: left;
+  width: 460px;
+}
+#page.images-and-content #content.no-images {
+  width: 990px;
+}
+#page.images-and-content #content h2 {
+  margin-bottom: 20px;
+}
+#page.images-and-content #content p {
+  text-align: justify;
+}
+#page.images-and-content #images {
+  float: right;
+  width: 500px;
+  overflow: hidden;
+  margin-left: 30px;
+}
+#page.images-and-content #images a {
+  display: block;
+}
+#page.images-and-content #images img {
+  max-width: 500px;
+}
+#page.news-list #news {
+  float: left;
+  width: 650px;
+}
+#page.news-list #news .entry {
+  padding-bottom: 23px;
+  margin-bottom: 20px;
+  border-bottom: 1px dotted #000000;
+  overflow: auto;
+}
+#page.news-list #news .entry div.title-information,
+#page.news-list #news .entry div.excerpt {
+  float: left;
+  width: 387px;
+}
+#page.news-list #news .entry div.title-information a.category-icon {
+  display: block;
+  float: left;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+  margin: 0 13px 13px 0;
+}
+#page.news-list #news .entry div.title-information h2 {
+  margin-bottom: 0;
+}
+#page.news-list #news .entry p {
+  margin: 0;
+}
+#page.news-list #news .entry p.publication-date {
+  margin-top: 5px;
+  margin-left: 49px;
+  margin-bottom: 10px;
+}
+#page.news-list #news .entry img.news-thumbnail {
+  float: right;
+  width: 248px;
+  margin-left: 15px;
+}
+#page.news-list #news .entry .motivator a {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #d61f94;
+}
+#page.news-list #news .entry .motivator a img {
+  margin: 0 0 1px 2px;
+}
+#page.news-list #categories {
+  float: right;
+  width: 310px;
+  margin-right: 12px;
+}
+#page.news-list #categories > div,
+#page.news-list #categories h2 {
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #000000;
+}
+#page.news-list #categories > div {
+  padding-top: 10px;
+  overflow: auto;
+}
+#page.news-list #categories > div.active,
+#page.news-list #categories > div:hover {
+  background-color: white;
+}
+#page.news-list #categories h3 {
+  width: 261px;
+  margin-top: 10px;
+}
+#page.news-list #categories div.category-icon {
+  float: right;
+  width: 36px;
+  height: 36px;
+  margin-left: 13px;
+  overflow: hidden;
+}
+#page.news-list p.publication-date,
+#page.news-details p.publication-date {
+  font-family: sans-serif;
+  margin-top: 5px;
+  margin-left: 49px;
+  margin-bottom: 10px;
+}
+#page.news-details .title-bar {
+  width: 100%;
+  clear: both;
+  margin-bottom: 20px;
+}
+#page.news-details .title-bar .category-icon {
+  float: left;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+  margin: 0 13px 13px 0;
+}
+#page.news-details #text-column {
+  float: left;
+  width: 470px;
+  margin-right: 50px;
+}
+#page.news-details #text-column > div {
+  border-bottom: 1px dotted #000000;
+}
+#page.news-details #text-column .text-with-attachments {
+  padding-bottom: 20px;
+}
+#page.news-details #text-column .text-with-attachments p:first-child {
+  margin-top: 0;
+}
+#page.news-details #text-column .facebook-like {
+  padding: 8px 0;
+}
+#page.news-details #text-column .facebook-comments {
+  border-bottom-width: 0;
+}
+#page.news-details #news-images-column {
+  float: left;
+  width: 470px;
+}
+#page.news-details #news-images-column img {
+  width: 470px;
+}
+#page.product-list .row {
+  width: 100%;
+  overflow: auto;
+  border-bottom: 1px dotted #000000;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+#page.product-list .row a:active,
+#page.product-list .row a:link,
+#page.product-list .row a:visited,
+#page.product-list .row a:hover {
+  outline: 0;
+}
+#page.product-list .row div {
+  float: left;
+  width: 480px;
+}
+#page.product-list .row div:first-child {
+  margin-right: 30px;
+}
+#page.product-list .row div img.product-main-image {
+  float: left;
+  vertical-align: text-top;
+  width: 250px;
+  padding-right: 15px;
+  margin-right: 9px;
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/product-list-separator.png');
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+#page.product-list .row div h2 {
+  margin-top: 16px;
+}
+#page.product-list .row div p.motivator {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #d61f94;
+}
+#page.product-list .row div p.motivator img {
+  margin: 0 0 1px 2px;
+}
+#page.product-category-list .row {
+  width: 100%;
+  border-bottom: 1px dotted #000000;
+  overflow: auto;
+  padding: 20px 0;
+}
+#page.product-category-list .row:first-child {
+  padding-top: 0;
+}
+#page.product-category-list .row > div {
+  float: left;
+  width: 482.5px;
+}
+#page.product-category-list .row > div:first-child {
+  margin-right: 25px;
+}
+#page.product-category-list .row > div .catalog-image {
+  float: left;
+  width: 263px;
+  height: 178px;
+  margin-right: 9px;
+  overflow: hidden;
+}
+#page.product-category-list .row > div .description {
+  float: left;
+  width: 210.5px;
+}
+#page.product-category-list .row > div .description h2 {
+  margin-top: 17px;
+  margin-bottom: 3px;
+}
+#page.product-category-list .row > div .description ul {
+  margin-top: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+#page.product-category-list .row > div .description ul li {
+  line-height: 1.3em;
+}
+#page.contact .description {
+  overflow: auto;
+}
+#page.contact .description h2 {
+  margin-bottom: 20px;
+}
+#page.contact .description > div {
+  float: left;
+}
+#page.contact .description .text {
+  width: 460px;
+}
+#page.contact .description .image {
+  width: 500px;
+  margin-left: 30px;
+  overflow: hidden;
+}
+#page.contact .addresses,
+#page.contact .address-list {
+  overflow: auto;
+}
+#page.contact .addresses .row,
+#page.contact .address-list .row {
+  float: left;
+}
+#page.contact .addresses .row  + .row > *,
+#page.contact .address-list .row  + .row > * {
+  margin-top: 30px;
+}
+#page.contact .addresses address,
+#page.contact .address-list address {
+  float: left;
+  width: 330px;
+  margin-top: 15px;
+  font-style: normal;
+}
+#page.contact .addresses address h3,
+#page.contact .address-list address h3 {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+#page.contact .addresses address span,
+#page.contact .address-list address span {
+  color: #d51e93;
+}
+#page.contact > div + div {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dotted #000000;
+}
+#page.product-details {
+  overflow: auto;
+}
+#page.product-details > div {
+  float: left;
+}
+#page.product-details .description {
+  width: 460px;
+}
+#page.product-details .description > div + div {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dotted #000000;
+}
+#page.product-details .description h1 {
+  color: #d51e93;
+  font-weight: normal;
+  margin: 0;
+}
+#page.product-details .description p:first-child {
+  margin-top: 0px;
+}
+#page.product-details .description .content {
+  border-top: 0;
+}
+#page.product-details .description .main-link {
+  padding-bottom: 0;
+}
+#page.product-details .images {
+  width: 500px;
+  margin-left: 30px;
+  overflow: auto;
+}
+#page.product-details .images > div {
+  float: left;
+}
+#page.product-details .images img {
+  vertical-align: top;
+}
+#page.product-details .images .big-image {
+  width: 384px;
+}
+#page.product-details .images .big-image img {
+  float: right;
+  margin: 0 auto;
+}
+#page.product-details .images .big-image img  + img {
+  margin-top: 1px;
+}
+#page.product-details .images .miniatures {
+  width: 115px;
+  margin-left: 1px;
+  min-height: 580px;
+}
+#page.product-details .images .miniatures a {
+  display: block;
+  float: left;
+  background-color: white;
+}
+#page.product-details .images .miniatures a:focus {
+  outline: none;
+}
+#page.product-details .images .miniatures a  + a {
+  margin-top: 1px;
+}
+#page.sitemap {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#page.sitemap li {
+  color: #6e6e6e;
+  list-style-type: none;
+}
+#page.sitemap > ul {
+  padding-left: 0;
+  margin: 0;
+  padding: 0;
+}
+#page.sitemap > ul > li {
+  display: inline-table;
+  width: 326px;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  border-collapse: collapse;
+  font-weight: bold;
+}
+#page.sitemap > ul > li a,
+#page.sitemap > ul > li a:visited,
+#page.sitemap > ul > li a:link,
+#page.sitemap > ul > li a:hover {
+  color: #6e6e6e;
+}
+#page.sitemap > ul > li a:hover {
+  color: #3b3b3b;
+}
+#page.sitemap > ul > li:first-child {
+  margin-top: 0;
+}
+#page.sitemap > ul > li:first-child + li,
+#page.sitemap > ul > li:first-child + li + li {
+  margin-top: 0;
+}
+#page.sitemap > ul > li > ul {
+  padding-left: 0;
+}
+#page.sitemap > ul > li > ul li {
+  font-weight: normal;
+}
+#page.sitemap > ul > li > ul li a,
+#page.sitemap > ul > li > ul li a:visited,
+#page.sitemap > ul > li > ul li a:link,
+#page.sitemap > ul > li > ul li a:hover {
+  color: #ee44b1;
+}
+#page.sitemap > ul > li > ul li a:hover {
+  color: #bb117e;
+}
+#page.sitemap > ul > li > ul li > ul li a,
+#page.sitemap > ul > li > ul li > ul li a:visited,
+#page.sitemap > ul > li > ul li > ul li a:link,
+#page.sitemap > ul > li > ul li > ul li a:hover {
+  color: #ee44b1;
+}
+#page.sitemap > ul > li > ul li > ul li a:hover {
+  color: #bb117e;
+}
+#page.sitemap > ul ul {
+  padding-left: 20px;
+}
+#page .attachment-list {
+  padding-top: 10px;
+}
+#page .attachment-list .attachment {
+  width: 100%;
+  clear: both;
+  overflow: auto;
+  padding-top: 10px;
+}
+#page .attachment-list .attachment img {
+  float: left;
+  vertical-align: top;
+}
+#page .attachment-list .attachment a p {
+  float: left;
+  margin: 0;
+  padding: 0;
+  padding-left: 5px;
+  color: #d61f94;
+}
+#page .attachment-list .attachment a p:hover {
+  text-decoration: underline;
+}
+#page .main-link {
+  padding: 8px 0;
+}
+#page .main-link a {
+  color: #d61f94;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: larger;
+}
+#page .main-link a img {
+  margin: 0 0 3px 6px;
+}
+#page .pagination {
+  float: none;
+  clear: both;
+  padding-top: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 11px;
+  text-align: center;
+}
+#page .pagination,
+#page .pagination a {
+  color: #817469;
+}
+#page .pagination .numbers {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 5px;
+}
+#page .pagination .numbers .page-current {
+  color: #d61f94;
+}
+#page .pagination .previous,
+#page .pagination .next,
+#page .pagination .placeholder {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  margin: 0 8px;
+}
+#page .pagination .previous {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/pagination/previous.png');
+}
+#page .pagination .next {
+  background-image: url('http://www.bell.com.pl/static/en/css/../img/bell/pagination/next.png');
+}
+#content.home #page {
+  margin-top: 0;
+}
+#content.product-list #page-location img {
+  margin-bottom: 2px;
+}
+</style><style type="text/css" media="screen" id="less:static-en-css-reorder">.reorder h1 {
+  font-size: 1.3em;
+}
+.reorder ul.first-level,
+.reorder ul.second-level {
+  font-size: 12px;
+  position: relative;
+  list-style-type: none;
+  margin: 0;
+  padding: 4px;
+}
+.reorder ul.first-level li,
+.reorder ul.second-level li {
+  margin: 4px;
+  float: left;
+  padding: 4px;
+  text-align: center;
+}
+.reorder ul.first-level > li {
+  background: #eee;
+  width: 130px;
+}
+.reorder ul.second-level li {
+  width: 114px;
+  padding: 0;
+}
+.reorder div.node-name {
+  padding: 4px;
+  background: #fff;
+}
+.reorder div.link-menu {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  margin-left: -4px;
+  width: inherit;
+  background: white;
+  border: 4px solid #dddddd;
+}
+.reorder .ui-sortable-placeholder {
+  border: 1px dotted black;
+  visibility: visible !important;
+}
+.reorder .ui-sortable-placeholder * {
+  visibility: hidden;
+}
+</style>
+
+<link rel="icon" type="image/png" href="/static/en/img/bell/favicon.png">
+
+        
+
+    <style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style><script src="http://www.google.com/jsapi?autoload=%7B%22modules%22%3A%5B%7B%22name%22%3A%22search%22%2C%22version%22%3A%221.0%22%2C%22callback%22%3A%22__gcse.scb%22%2C%22style%22%3A%22http%3A%2F%2Fwww.google.com%2Fcse%2Fstyle%2Flook%2Fminimalist.css%22%2C%22language%22%3A%22pl%22%7D%2C%7B%22name%22%3A%22ads%22%2C%22version%22%3A%223%22%2C%22packages%22%3A%5B%22search%22%5D%2C%22callback%22%3A%22__gcse.sacb%22%7D%5D%7D" type="text/javascript"></script><link type="text/css" href="http://www.google.com/uds/api/search/1.0/28ae2b20598e87432c64a154583c2fc6/default+pl.css" rel="stylesheet"><link type="text/css" href="http://www.google.com/cse/style/look/minimalist.css" rel="stylesheet"><script type="text/javascript" src="http://www.google.com/uds/api/search/1.0/28ae2b20598e87432c64a154583c2fc6/default+pl.I.js"></script><script type="text/javascript" src="http://www.google.com/uds/api/ads/3.0/e2e3540a27972bdd5973be15b6f8defb/search.I.js"></script></head>
+    <body>
+        <!-- Google Analytics -->
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-34150113-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="http://static.ak.facebook.com/connect/xd_arbiter/ehazDpFPEnK.js?version=41#channel=f3d216e1b4&amp;origin=http%3A%2F%2Fwww.bell.com.pl" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://s-static.ak.facebook.com/connect/xd_arbiter/ehazDpFPEnK.js?version=41#channel=f3d216e1b4&amp;origin=http%3A%2F%2Fwww.bell.com.pl" style="border: none;"></iframe></div></div></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        
+        <div id="main-wrapper">
+            <div id="header">
+                <div class="inner-links">
+                    <a href="/en/">Home</a><a href="/en/sitemap/">Sitemap</a>
+                </div>
+                <div class="outer-links">
+                    
+                    <div class="private-label-link">
+                        <a href="http://private-label.bell.com.pl/"><span>Private Label</span></a>
+                    </div>
+                </div>
+                <div class="search
+                
+                    en
+                
+                ">
+                    <gcse:searchbox-only></gcse:searchbox-only>
+                </div>
+                <div class="languages">
+                    <a id="lang-pl" href="http://www.bell.com.pl/">
+                    </a>
+                    <a id="lang-en" href="http://www.bell.com.pl/en/" class="active">
+                    </a>
+                    <a id="lang-ru" href="http://www.bell.com.pl/ru/">
+                    </a>
+                    <a id="lang-fr" href="http://www.bell.com.pl/fr/">
+                    </a>
+                    <a id="lang-es" href="http://www.bell.com.pl/es/">
+                    </a>
+                </div>
+            </div>
+            <div id="main-menu">
+                
+                    <div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/bell.cosmetics.en" data-send="false" data-layout="button_count" data-width="112" data-show-faces="false" fb-xfbml-state="parsed" fb-iframe-plugin-query="app_id=&amp;href=https%3A%2F%2Fwww.facebook.com%2Fbell.cosmetics.en&amp;layout=button_count&amp;locale=en_GB&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=112"><span style="vertical-align: top; width: 0px; height: 0px; overflow: hidden;"><iframe name="f26d215454" width="112px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="http://www.facebook.com/plugins/like.php?app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FehazDpFPEnK.js%3Fversion%3D41%23cb%3Df1486d575c%26domain%3Dwww.bell.com.pl%26origin%3Dhttp%253A%252F%252Fwww.bell.com.pl%252Ff3d216e1b4%26relation%3Dparent.parent&amp;href=https%3A%2F%2Fwww.facebook.com%2Fbell.cosmetics.en&amp;layout=button_count&amp;locale=en_GB&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=112" style="border: none; visibility: hidden;"></iframe></span></div>
+                
+                <a href="/en/" id="main-logo-link"></a>
+                
+<ul>
+    <li class="">
+        <a href="/en/news/">News</a>
+        <ul>
+            
+                <li class="">
+                    <a href="/en/news/category/newest/">NEWS</a>
+                </li>
+            
+        </ul>
+    </li>
+    <li class="products-menu-entry ">
+        <a href="/en/products/">Products</a>
+        <ul>
+            
+                <li class="">
+                    <a href="/en/products/category/lips/">Lips</a>
+                    <ul>
+                        
+                            <li class="">
+                                <a href="/en/products/subcategory/lipsticks/">Lipsticks</a>
+                            </li>
+                        
+                            <li class="">
+                                <a href="/en/products/subcategory/lip-glosses/">Lip glosses</a>
+                            </li>
+                        
+                            <li class="">
+                                <a href="/en/products/subcategory/lip-liners/">Lip liners</a>
+                            </li>
+                        
+                    </ul>
+                </li>
+            
+                <li class="">
+                    <a href="/en/products/category/eyes/">Eyes</a>
+                    <ul>
+                        
+                            <li class="">
+                                <a href="/en/products/subcategory/eye-shadows/">Eyeshadows</a>
+                            </li>
+                        
+                            <li class="">
+                                <a href="/en/products/subcategory/mascaras/">Mascaras</a>
+                            </li>
+                        
+                            <li class="">
+                                <a href="/en/products/subcategory/eyeliners/">Eye liners</a>
+                            </li>
+                        
+                            <li class="">
+                                <a href="/en/products/subcategory/eye-pencils/">Eye pencils</a>
+                            </li>
+                        
+                    </ul>
+                </li>
+            
+                <li class="">
+                    <a href="/en/products/category/skin/">Face</a>
+                    <ul>
+                        
+                            <li class="">
+                                <a href="/en/products/subcategory/foundations/">Foundations</a>
+                            </li>
+                        
+                            <li class="">
+                                <a href="/en/products/subcategory/concealers/">CONCEALERS</a>
+                            </li>
+                        
+                            <li class="">
+                                <a href="/en/products/subcategory/mousses/">Mousses</a>
+                            </li>
+                        
+                            <li class="">
+                                <a href="/en/products/subcategory/pressed-powders/">PRESSED POWDERS</a>
+                            </li>
+                        
+                            <li class="">
+                                <a href="/en/products/subcategory/blushes/">Blushes</a>
+                            </li>
+                        
+                    </ul>
+                </li>
+            
+                <li class="">
+                    <a href="/en/products/category/nails/">Nails</a>
+                    <ul>
+                        
+                            <li class="">
+                                <a href="/en/products/subcategory/nail-polish/">Nail polish</a>
+                            </li>
+                        
+                            <li class="">
+                                <a href="/en/products/subcategory/nail-conditioners/">Nail conditioners</a>
+                            </li>
+                        
+                            <li class="">
+                                <a href="/en/products/subcategory/polish-removers/">Nail Polish removers</a>
+                            </li>
+                        
+                    </ul>
+                </li>
+            
+        </ul>
+    </li>
+    
+        
+            <li class="">
+                <a href="/en/9/autumn-makeup/">Makeup</a>
+                <ul>
+                    
+                        <li class="">
+                            <a href="/en/9/autumn-makeup/">Autumn makeup</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+    
+        
+            <li class="">
+                <a href="/en/1/about-company/">ABOUT US </a>
+                <ul>
+                    
+                        <li class="">
+                            <a href="/en/1/about-company/">Company</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="/en/5/bell-display-stand/">Bell Display Stands</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="/en/3/ue-projects/">UE Projects</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="/en/4/for-mazovia/">For Mazovia</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="/en/6/certificates/">Certificates</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="/en/7/distribution/">Distribution</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+    
+        
+            <li class="">
+                <a href="/en/2/contact/">Contact</a>
+                <ul>
+                    
+                        <li class="">
+                            <a href="/en/2/contact/">Contact</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+    
+        
+    
+</ul>
+
+            </div>
+            <div id="content" class="home">
+                
+                <div id="page" class="">
+                    
+
+    <div class="slider-wrapper theme-default">
+        <div id="slider" class="nivoSlider">
+            
+            <a href="http://www.bell.com.pl/en/products/skin/foundations/hypoallergenic-make-and-make-base/" class="nivo-imageLink" style="display: block;">
+                <img src="/media/en/home/image/banerHypo_EN.jpg" data-thumb="/media/en/home/image/banerHypo_EN.jpg" alt="Hypoallergenic Make-up and Make-Up Base" style="display: none;">
+            </a>
+            
+            <a href="http://www.bell.com.pl/en/products/nails/nail-polish/glam-mat-nail-enamel/" class="nivo-imageLink" style="display: none;">
+                <img src="/media/en/home/image/banerGlamMat_EN.jpg" data-thumb="/media/en/home/image/banerGlamMat_EN.jpg" alt="GLAM MAT Nail Enamel " style="display: none;">
+            </a>
+            
+            <a href="http://www.bell.com.pl/en/products/eyes/eye-shadows/trio-eyeshadow/" class="nivo-imageLink" style="display: none;">
+                <img src="/media/en/home/image/banerTrio_EN.jpg" data-thumb="/media/en/home/image/banerTrio_EN.jpg" alt="TRIO Eyeshadow" style="display: none;">
+            </a>
+            
+        <img class="nivo-main-image" src="/media/en/home/image/banerHypo_EN.jpg" style="display: inline;"><div class="nivo-caption"></div><div class="nivo-directionNav"><a class="nivo-prevNav">Previous</a><a class="nivo-nextNav">Next</a></div></div><div class="nivo-controlNav"><a class="nivo-control active" rel="0">1</a><a class="nivo-control" rel="1">2</a><a class="nivo-control" rel="2">3</a></div>
+    </div>
+
+
+    <div>
+        
+        <div class="descriptive-link descriptive-link-1" style="background-image: url('/media/en/home/descriptive/hypo_EN.jpg');">
+            
+                <a href="http://www.bell.com.pl/en/products/eyes/mascaras/hypo-allergenic-makeup-cosmetics/" class="empty"></a>
+            
+        </div>
+        
+        <div class="descriptive-link descriptive-link-2" style="background-image: url('/media/en/home/descriptive/malyBanerNude_EN.jpg');">
+            
+                <a href="http://www.bell.com.pl/en/products/skin/foundations/nude-make-/" class="empty"></a>
+            
+        </div>
+        
+        <div class="descriptive-link descriptive-link-3" style="background-image: url('/media/en/home/descriptive/malyBanerRoyal_EN.jpg');">
+            
+                <a href="http://www.bell.com.pl/en/products/lips/lipsticks/royal-mat-lipstick/" class="empty"></a>
+            
+        </div>
+        
+    </div>
+
+
+                </div>
+                <div class="footer-toggle-button">
+                    Footer<span class="open"><img src="/static/en/img/bell/pink_down_arrow.png"></span><span class="close"><img src="/static/en/img/bell/pink_up_arrow.png"></span></div>
+            </div>
+            <div id="footer">
+                
+<ul class="entries-number-5">
+    <li>
+        <a href="/en/news/">News</a>
+        <ul>
+            
+                <li>
+                    <a href="/en/news/category/newest/">NEWS</a>
+                </li>
+            
+        </ul>
+    </li>
+    <li>
+        <a href="/en/products/">Products</a>
+        <ul>
+            
+                <li>
+                    <a href="/en/products/category/lips/">Lips</a>
+                </li>
+            
+                <li>
+                    <a href="/en/products/category/eyes/">Eyes</a>
+                </li>
+            
+                <li>
+                    <a href="/en/products/category/skin/">Face</a>
+                </li>
+            
+                <li>
+                    <a href="/en/products/category/nails/">Nails</a>
+                </li>
+            
+        </ul>
+    </li>
+    
+        <li>
+            <a href="/en/9/autumn-makeup/">Makeup</a>
+            <ul>
+                
+                    <li>
+                        <a href="/en/9/autumn-makeup/">Autumn makeup</a>
+                    </li>
+                
+            </ul>
+        </li>
+    
+        <li>
+            <a href="/en/1/about-company/">ABOUT US </a>
+            <ul>
+                
+                    <li>
+                        <a href="/en/1/about-company/">Company</a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/5/bell-display-stand/">Bell Display Stands</a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/3/ue-projects/">UE Projects</a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/4/for-mazovia/">For Mazovia</a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/6/certificates/">Certificates</a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/7/distribution/">Distribution</a>
+                    </li>
+                
+            </ul>
+        </li>
+    
+        <li>
+            <a href="/en/2/contact/">Contact</a>
+            <ul>
+                
+                    <li>
+                        <a href="/en/2/contact/">Contact</a>
+                    </li>
+                
+            </ul>
+        </li>
+    
+        <li>
+            <a href="/en/8/bell-display-stands/">Site</a>
+            <ul>
+                
+                    <li>
+                        <a href="/en/8/bell-display-stands/">Bell Display Stands</a>
+                    </li>
+                
+            </ul>
+        </li>
+    
+</ul>
+
+            </div>
+        </div>
+        <div id="subfooter">
+            
+            
+                <div id="ue-information">
+                    <h3>
+                        <a href="/en/3/ue-projects/">Grants
+                            for innovation</a>
+                    </h3>
+                    <p>
+                        <a href="/en/3/ue-projects/">Project
+                            co-financed by the European Regional Development
+                            Fund under the Operational Programme Innovative
+                            Economy</a>
+                    </p>
+                    <h3>
+                        <a href="/en/4/for-mazovia/">For
+                            development of Mazovia</a>
+                    </h3>
+                    <p>
+                        <a href="/en/4/for-mazovia/">Project
+                            co-financed by the European Regional Development
+                            Fund under the Operational Programme Innovative
+                            Economy</a>
+                    </p>
+                    <a href="/en/3/ue-projects/">
+                        <img src="/static/en/img/bell/eu_information_en_innovative_economy.png">
+                    </a>
+                    <a href="/en/4/for-mazovia/">
+                        <img src="/static/en/img/bell/eu_information_en_regional_programme.png" class="second">
+                    </a>
+                </div>
+            
+            <div id="copyright-notice">
+                All rights reserved © 2012 Bell Sp. z o.o. Created by <a href="http://pozytywnie.pl">Pozytywnie.pl</a>
+            </div>
+        </div>
+    
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay" style="width: 100%; height: 100%;"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

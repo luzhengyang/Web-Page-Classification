@@ -1,0 +1,774 @@
+<html xmlns:fb="http://ogp.me/ns/fb#" lang="en"><head><script src="http://edge.quantserve.com/quant.js" async="" type="text/javascript"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Ug8FUldADAsAVVVb"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:18,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:18,2:19,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:19,2:18,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:19,2:18,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:19,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,u="addEventListener",f="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[u]?(c[u]("DOMContentLoaded",o,!1),s[u]("load",n,!1)):(c[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],18:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],19:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:18,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script>
+    <title>Wells Fargo Jobs</title>
+
+    <meta name="msvalidate.01" content="B9E4E5CC00BB58B097061E7DBFC6FA6B">
+
+    
+<link rel="stylesheet" type="text/css" href="/style/style.css?version=5026-140">
+<!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" href="//d2e48ltfsb5exy.cloudfront.net/content_ms/files/styleIE.css">
+<![endif]-->
+<style type="text/css">
+/* Main CSS */
+body {
+    background-color: #eaeff8 !important;
+    color: #666666;
+}
+
+
+</style>
+
+
+    
+    <script type="text/javascript" src="//d2e48ltfsb5exy.cloudfront.net/framework/v2/js/code/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="//d2e48ltfsb5exy.cloudfront.net/framework/v2/js/code/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="//d2e48ltfsb5exy.cloudfront.net/content_ms/files/def.ui.microsite.141-20.js"></script>
+    <script type="text/javascript" src="//d2e48ltfsb5exy.cloudfront.net/content_ms/files/underscore-1.3.1.min.js"></script>
+    <script type="text/javascript" src="//d2e48ltfsb5exy.cloudfront.net/content_ms/files/jquery.placeholder.js"></script>
+    
+    
+    <style>
+
+    </style>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <script type="text/javascript">
+      var pager_num_items = 9;
+    </script>
+
+    <script type="text/javascript" src="//d2e48ltfsb5exy.cloudfront.net/content_ms/files/pager.148-10.js"></script>
+
+    <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+// variable to track if this is a standard or error (404/500) page
+var error_page = false;
+// pageview is handled in the wide footer to allow for page and error page
+// differentation
+
+ga('create', 'UA-16316580-1', 'auto');
+ga('set', 'dimension1', '158-3');    
+
+ga('set', 'dimension2', 'Default (10)');
+
+
+
+ga('create', 'UA-29613651-26', 'auto', {'name': 'g1070'});
+ga('g1070.set', 'dimension1', '158-3', 2);    
+
+ga('g1070.set', 'dimension2', 'Default (10)');
+  
+;
+
+function goalClick(goalURL, the_url){
+        
+        ga('g1070.set', 'dimension1', '158-3');    
+        
+        ga('g1070.set', 'dimension2', 'Default (10)');
+          
+        ga('g1070.send', 'pageview', goalURL)
+        
+
+        ga('set', 'dimension1', '158-3', 2);    
+
+        
+        ga('set', 'dimension2', 'Default (10)');
+        
+
+        ga('send', 'pageview', goalURL)
+    var nw = window.open(the_url, '_blank')
+    nw.focus()
+}
+</script>
+<!-- End Google Analytics -->
+
+
+    <script src="//d2e48ltfsb5exy.cloudfront.net/content_ms/files/search-ac.149-04.js" type="text/javascript"></script>
+
+    <meta name="viewport" content="width=device-width">
+
+    
+<meta name="title" content="Wells Fargo Jobs">
+
+
+
+    
+        
+            <meta name="description" content=" Wether you're just beginning your career or taking it to the next level, Wells fargo has the right job for you Wells Fargo Jobs">
+        
+    
+
+    
+
+
+    <script src="//d2e48ltfsb5exy.cloudfront.net/content_ms/files/military_family_loc.json"></script>
+
+    
+
+
+    
+
+    
+
+    
+
+    
+    
+    
+        <link href="https://plus.google.com/100406566063094579991" rel="publisher">
+    
+
+
+    
+
+    
+
+     <link rel="icon" type="image/vnd.microsoft.icon" href="http://seo.nlx.org/careersatwellsfargo.jobs/img/favicon.ico">
+<style type="text/css">
+
+#direct_wideHeader {
+	background-color:white;
+	width:980px;
+	margin:0 auto;
+	border-width: 0 2px 0px 2px;
+	border-style: solid;
+	border-color: #CED4DD;
+}
+#wf-logoContainer {
+	width:960px;
+	margin:0px auto;
+	padding-top:6px;
+	padding-bottom:6px;
+	border-bottom: 1px solid #B3B1B1;
+}
+#direct_container {
+	background-color:white;
+	border-width: 0 2px 0px 2px;
+	border-style: solid;
+	border-color: #CED4DD;
+	width:960px;
+	padding-left:10px;
+	padding-right:10px;
+}
+#direct_wideFooter {
+	background-color:white;
+	width:960px;
+height: 130px;
+padding-right: 20px;
+	margin:0 auto;
+	border-width: 0 2px 2px 2px;
+	border-style: solid;
+	border-color: #CED4DD;
+}
+
+#direct_blurbDiv h3 {
+	padding: 0 0 0;
+}
+#direct_container .searchHeader, #direct_container .searchFooter {
+	background-color: #F2F1EC;
+}
+#direct_shareDiv.direct_shareSolo, #direct_disambiguationDiv, #direct_applyDiv, #direct_shareDiv, .direct_offsiteContainer {
+	background-color: #F2F1EC;
+}
+
+/* Begin Blurb Styling */
+
+#direct_container .direct_searchContainer {
+	margin-top: 14px;
+}
+
+#direct_blurbDiv {
+	width: 960px;
+	margin:0 auto;
+}
+
+#direct_blurbContents {
+	padding:14px 0;
+
+}
+
+#direct_blurbDiv > h3 {
+	color: #860150;
+	font-size: 1.2em;
+	font-weight: bold;
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 20px;
+	padding-left: 0;
+	display:none;  /*This hides the title of the blurb*/
+}
+
+#direct_blurbDiv h3 {
+	padding: 0;
+}
+
+#direct_blurb-right h3 {  
+	color: white;
+	font-size: 1.3em;
+	font-weight: bold;
+	padding-top: 20px;
+	padding-right: 0;
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+/*The above is for h3 in #direct_blurb-right only and can be deleted if a blurb title is used*/
+
+#direct_blurb-left {
+	width: 304px;   
+	padding-right: 6px;
+	float: left;
+}
+
+#direct_blurb-right {
+	background-color:#739600;
+	width: 650px;  
+	color: white;
+	font-size: 1.3em;
+	font-weight: normal;
+	height:186px;
+	float: left;
+}
+#blurbText {
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 14px;
+}
+
+#direct_blurb-clear {
+	clear: both;
+}
+
+#esgr {
+	margin-top: -58px;
+	margin-right: 44px;
+	float:right;
+}
+
+.direct_offsiteContainer {
+	width: 237px;
+}
+
+#direct_dotjobsMetaBoxSearch #standardSearch {
+	display: block;
+	margin: 295px 20px 105px 20px;
+	border: 2px solid #369;
+	z-index: 99;
+	position: relative;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.copyrightControl{
+	display:none;
+}
+
+/* ////////////////////////DISPLAY LOGO ON MOBILE \\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+@media screen and (max-width: 800px) {
+	#direct_dotjobsMetaBoxSearch #standardSearch {
+		margin: 0 0 0 0;
+	}
+}
+#mobile-image img {
+	display: none;
+}
+@media screen and (max-width: 800px) {
+	#direct_header {
+		margin: 0 0px !important;
+	}
+	#direct_header h1#direct_mobileH1 {
+		text-align: center !important;
+		padding: 5px 10px !important;
+		background: #F2F2F2;
+		border-bottom: 1px solid #E0E0E0;
+		font-size: 16px;
+		font-weight: bold;
+		color: #336699;
+		/*           display: none !important;  /* uncomment to hide header text */        */
+	}
+	#mobile-image img {
+		display: block;
+		max-width: 50%;
+		margin: 0 auto;
+		padding-top: 5px;
+
+	}
+	#direct_container .direct_searchContainer {
+		background-color: #f2f2f2;
+		margin-top: 10px;
+	}
+	#direct_container .btn.primary {
+		margin-top: -10px !important;
+		margin-bottom: 10px;
+	}
+}
+
+/* ////////////////////////DISPLAY LOGO ON MOBILE \\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+#nav {
+	margin-top: 20px;
+	float: left;
+}
+#nav a {
+	display: inline-block;
+	padding: 0 20px;
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+}
+#nav a:first-child {
+	padding-left: 0;
+}
+#nav a:hover {
+	color: #0099cb;
+}
+#social {
+	text-align: right;
+	margin-top: 10px;
+}
+#social a {
+	display: inline-block;
+	width: 28px;
+	height: 30px;
+	margin: 0 5px;
+	background: url('http://seo.nlx.org/careersatwellsfargo.jobs/img/social-icons.jpg') no-repeat 0 0;
+}
+#social a#twitter {
+	background-position: -34px 0;
+}
+#social a#youtube {
+	background-position: -68px 0;
+}
+#social a#flickr {
+	background-position: -102px 0;
+}
+#social a:hover {
+	opacity: .8;
+}
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+#logo2 {
+	width: 30%;
+	float: left;
+}
+#copyright {
+	color: #333;
+	float: right;
+	padding-top: 80px;
+}
+</style>  
+
+    
+
+    <link rel="stylesheet" href="/style/def.ui.microsite.mobile.css" type="text/css">
+
+    <style>
+        #addThis {
+            float: none;
+        }
+    </style>
+
+    <!-- Quantcast Tag, part 1 --> 
+<script type="text/javascript">
+  var _qevents = _qevents || [];
+  (function() {
+   var elem = document.createElement('script');
+   elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge")
+               + ".quantserve.com/quant.js";
+   elem.async = true;
+   elem.type = "text/javascript";
+   var scpt = document.getElementsByTagName('script')[0];
+   scpt.parentNode.insertBefore(elem, scpt);  
+  })();
+</script>
+
+
+<link rel="alternate" type="application/rss+xml" title="Wells Fargo Hiring Events" href="http://www.trumba.com/calendars/WFHiringEvents.rss"></head>
+
+<body>
+
+<a name="top"></a>
+
+<div id="direct_wideHeader">
+    
+
+ 
+    
+	<div id="wf-logoContainer" class="clearfix">
+		<div id="wf-logo"><a href="/"><img src="http://seo.nlx.org/careersatwellsfargo.jobs/img/logo_62sq.gif"></a></div>
+		<div id="nav">
+			<a href="https://www.wellsfargo.com/careers/life/benefits">Our Benefits</a> | <a href="https://www.wellsfargo.com/careers/life/values">Our Values</a> | <a href="https://www.wellsfargo.com/careers/life/">Life at Wells Fargo</a>
+		</div>
+		<div id="social">
+			<a id="facebook" href="http://www.facebook.com/wellsfargo"></a><a id="twitter" href="http://twitter.com/wellsfargojobs"></a><a id="youtube" href="http://www.youtube.com/wellsfargo"></a><!--<a id="flickr" href=""></a>-->
+		</div>
+	</div> 
+ 
+
+
+</div>
+
+
+<div id="direct_container">
+    <div id="direct_innerContainer">
+    
+        <div id="direct_header">
+        <h1 id="direct_mobileH1">
+            
+                
+                    Wells Fargo Jobs
+                    
+            
+        </h1><!--direct_mobileH1-->
+             <div id="mobile-image"><img src="http://seo.nlx.org/careersatwellsfargo.jobs/img/logo_62sq.gif"></div> 
+
+        </div><!--direct_header-->
+        
+        
+
+        
+         
+
+
+<link href="http://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet" type="text/css">  
+<style type="text/css">
+
+/* STRUCTURAL STYLES */
+.hp-container {
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 1.5%;
+	padding-bottom: 1.5%;
+}
+.hp-container img {
+	width: 100%;
+}
+.hp-row {
+	display: inline-block;
+	display: block;
+	clear: both;
+	margin: 4% 0 0;
+}
+.hp-row:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+* html #direct_wideFooter { height: 1%; }
+
+.hp-grid-full {
+	float: left;
+	width: 100%;
+	margin: 0 0 0 0;
+}
+.hp-grid-half {
+	float: left;
+	width: 49%;
+	margin: 0 2% 0 0;
+}
+.hp-grid-oneThird {
+	float: left;
+	width: 36%;
+	margin: 0 .5% 0% 0;
+}
+.hp-grid-twoThird {
+	float: left;
+	width: 62%;
+
+	margin: 0 2% 0 0;
+}
+.hp-row .last {
+	margin-right: 0;
+}
+
+/* STRUCTURAL STYLES */
+.hp-container a {
+	color: #0099cb;
+}
+.hp-grid-oneThird p {
+	font-family: 'Bree Serif', serif;
+	font-size: 17px;
+	color: #cc4b00;
+	padding-bottom: 10px;
+}
+.hp-container h4 {
+	display: block;
+	font-family: 'Bree Serif', serif;
+	font-weight: normal;
+	float: none;
+	font-size: 150%;
+	width: 100%;
+	text-align: left;
+	padding-bottom: 10px;
+	color: #cc4b00;
+}
+
+.box {
+	padding: 2%;
+	height: 480px;
+	overflow: auto;
+	border: 2px solid #0099cb;
+}
+#events-calendar {
+	width: 52%;
+}
+.hp-row.video-row {
+	background: #44464A;
+	padding: 2%;
+}
+.hp-grid-oneThird iframe:nth-child(3) {
+	width: 100%;
+	height: 200px;
+	padding-top: 50px;
+	padding-bottom: 1px;
+}
+iframe.video {
+	width: 100%;
+	height: 200px;
+}
+.hp-row.video-row  p {
+	color: #f2f2f2;
+}
+p {
+	font-size: 120%;
+	font-weight: bold;
+	line-height: 1.4;
+	margin-bottom: 10px;
+	color: #333;
+}
+#blurb {
+	padding-top: 10px;
+}
+
+/* ///////SEARCH///////////*/
+#direct_container #hp-standardSearch .hp-searchTab {
+	width: 84%;
+	float: left;
+}
+#direct_container #hp-standardSearch .hp-searchTab input {
+	width: 91%;
+	padding: 5px;
+	margin-top: 3px;
+	height: auto;
+	font-size: 1.2em;
+	line-height: 1;
+	background: #fff;
+	border: 1px solid #000;
+	box-shadow: inset 0 0 4px #666666;
+}
+#direct_container #hp-standardSearch .hp-searchTab label {
+	display: block;
+	font-weight: normal;
+	float: none;
+	font-size: 150%;
+	width: 100%;
+	text-align: left;
+	padding-bottom: 4px;
+	color: #000;
+}
+.hp-helptext {
+	margin-top: 6px;
+	margin-bottom: 12px;
+	color: #7C7C7C;
+}
+#direct_container .hp-searchTab input {
+	width: 100%;
+}
+#direct_container .hp-searchContainer .btn.primary {
+	cursor: pointer;
+	display: inline-block;
+	background: #666666 url('http://seo.nlx.org/img/button-gradient.png') -3px 0px no-repeat;
+	border: 1px solid #666666;
+	width: 40px;
+	height: 30px;
+	margin-top: 100px;3
+	padding: 0;
+}
+/* ///////SEARCH///////////*/
+
+
+@media screen and (max-width: 800px){
+	.hp-container {
+		width: 96%;
+		padding: 0 2%;
+	} 
+	.hp-grid-twoThird,
+	.hp-grid-oneThird
+	{
+		width: 96%;
+		margin: 2% 0 0 0;
+	}
+	#direct_container #hp-standardSearch .hp-searchTab {
+		width: 100%;
+	}
+	#direct_container #hp-standardSearch .hp-searchTab input {
+		width: 98%;
+	}
+	#direct_container .hp-searchContainer .btn.primary {
+		float: right;
+		margin-right: 2px;
+	}
+	#events-calendar {
+		width: 96%;
+	}
+	#blurb.hp-grid-half {
+		width: 100%;
+	}
+	.hp-grid-oneThird iframe:nth-child(3)  {
+		height:300px;
+	}
+	iframe.video {
+		height:300px;
+	}
+}
+
+</style>
+
+
+<div class="hp-container">
+	<div class="hp-row">
+		<div class="hp-grid-twoThird">
+			<img src="http://seo.nlx.org/careersatwellsfargo.jobs/img/billboard5.jpg">
+		</div>
+
+		<div class="hp-grid-oneThird last">
+			<p>Whether you're just beginning your career or taking it to the next level, Wells Fargo has the right job for you. </p>
+			<div class="hp-searchContainer clearfix">
+				<form id="hp-standardSearch" action="/search" class="clearfix">
+					<div class="hp-searchHeader clearfix">
+						<div class="hp-searchTab">
+							<label for="location">Where</label>
+							<input type="text" name="location" id="location" class="micrositeLocationField ui-autocomplete-input" value="" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+							<span class="hp-helptext" id="where">city, state, country</span>
+
+						</div>
+						<div class="hp-searchTab">
+							<label for="q">What</label>
+							<input type="text" name="q" id="q" class="micrositeTitleField ui-autocomplete-input" value="" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+							<span class="hp-helptext" id="what">job title, keywords</span>
+						</div>
+						
+						<input type="submit" class="btn primary" value="">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="blurb" class="hp-grid-full">
+		<p>You’ve got the passion. You’ve got the skills. Now you just need the right opportunity. At Wells Fargo, you’ll have the chance to join a team of smart, and talented people who share the same values. Our diverse lines of business offer a world of opportunity to expand your capabilities and advance your career. We invest in our people and provide an environment to learn and grow. Get your career off to the right start. Visit our career site at wellsfargo.com/careers and let’s have a conversation about your future today.
+		</p>
+		<p>To learn more about career opportunities with our company, please visit our Careers site at <a href="http://wellsfargo.com/careers">wellsfargo.com/careers</a> 
+		</p>
+	</div>
+	<div class="hp-row">
+		<div id="events-calendar" class="hp-grid-twoThird box">
+			<h4>Find a hiring event near you</h4>
+			<script type="text/javascript" src="http://www.trumba.com/scripts/spuds.js"></script>
+			<script type="text/javascript">
+			$Trumba.addSpud({
+				webName: "WFHiringEvents",
+				spudType : "main" });
+			</script><div id="trumba.spud.0"><iframe src="javascript:'<html><head></head><body style=background-color:transparent></body></html>'" id="trumba.spud.0.iframe" name="trumba.spud.0.iframe" style="background-color:transparent;" frameborder="no" width="100%" scrolling="no" marginheight="0" marginwidth="0" height="320" allowtransparency="true" title="List"></iframe></div>
+			<noscript>Your browser must support JavaScript to view this content. 
+				Please enable JavaScript in your browser settings then try again. 
+				&lt;a href='http://www.trumba.com'&gt;Events calendar powered by Trumba&lt;/a&gt;
+			</noscript>
+
+			</div>
+				
+				<div class="hp-grid-oneThird" style="border: 2px solid #0099cb; padding: 2%;">
+                     <h4>Learn more about our culture</h4>
+					<iframe class="video" src="http://www.youtube.com/embed/39qtam05NKU?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1" frameborder="0" allowfullscreen=""></iframe>
+
+					<iframe class="video" src="http://www.youtube.com/embed/gp_glp4-B9o?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1" frameborder="0" allowfullscreen=""></iframe>
+				
+			</div>
+		</div>
+		<div class="hp-row">
+			<div id="EEO" class="hp-grid-full">
+				<p>Relevant military experience is considered for veterans and transitioning service men and women. <br>
+					Wells Fargo is an Affirmative Action and Equal Opportunity Employer, Minority/Female/Disabled/Veteran.
+				</p>
+			</div>	
+		</div>
+
+
+	</div>         
+        
+        
+
+        
+
+        <div id="direct_footer" role="contentinfo">
+            
+            
+
+            
+        </div><!--direct_footer-->
+    
+
+</div><!--direct_innercontainer-->
+</div><!--direct_container-->
+
+
+
+<div id="direct_wideFooter">
+    
+ 
+    
+		<div id="logo2">
+			<img src="http://seo.nlx.org/careersatwellsfargo.jobs/img/wellsfargologo2.gif">
+		</div>
+		<div id="copyright">
+			© 2014 Wells Fargo Bank, N.A. All rights reserved.
+		</div>
+ 
+
+<script>
+if (error_page){
+    ga('send', 'event', 'Error', error_page, 'page: ' + document.location.pathname + document.location.search + ' ref: ' + document.referrer)
+}else{
+    ga('send', 'pageview')
+             
+    ga('g1070.send', 'pageview')
+    
+}
+</script>
+
+</div>   
+
+
+<script src="//d2e48ltfsb5exy.cloudfront.net/content_ms/files/def.ui.microsite.analytics.151-15.js" type="text/javascript"></script>
+<img style="display: none;" border="0" height="1" width="1" alt="My.jobs" src="http://my.jobs/pixel.gif?jvs=88&amp;pc=home&amp;d=careersatwellsfargo.jobs&amp;st=company">
+
+
+<!-- Quantcast Tag, part 2 -->
+<script type="text/javascript">
+    _qevents.push( { qacct:"p-f4sayuhJjqv_Q", labels:"Direct SEO, Dot Jobs"} );
+</script>
+<noscript>
+&lt;div style="display: none;"&gt;
+    &lt;img src="http://pixel.quantserve.com/pixel/p-f4sayuhJjqv_Q.gif?labels=Direct%20SEO%2C%20Dot%20Jobs" height="1" width="1" alt="Quantcast"/&gt;
+&lt;/div&gt;
+</noscript>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-6.newrelic.com","queueTime":0,"licenseKey":"49b0eca3f4","agent":"js-agent.newrelic.com/nr-476.min.js","transactionName":"blVTZxMHXUcABUMLW1cfd0YPBUddDggYEVFWHkdaBBFADgkJWgdrSVFWVg==","userAttributes":"QhJEQQ1ECRYCB0UHUUtDUEcWA19YEgBWEFNWHltcAxURSQ==","applicationID":"480149","errorBeacon":"bam.nr-data.net","applicationTime":303}</script>
+
+<ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul><script src="http://js-agent.newrelic.com/nr-476.min.js"></script><script type="text/javascript" src="http://beacon-6.newrelic.com/1/49b0eca3f4?a=480149&amp;pl=1415072809379&amp;v=476.c73f3a6&amp;to=blVTZxMHXUcABUMLW1cfd0YPBUddDggYEVFWHkdaBBFADgkJWgdrSVFWVg%3D%3D&amp;ap=303&amp;be=1902&amp;fe=16982&amp;dc=3840&amp;f=%5B%22err%22,%22xhr%22%5D&amp;perf=%7B%22timing%22:%7B%22of%22:1415072809379,%22n%22:0,%22dl%22:1541,%22di%22:5742,%22ds%22:5742,%22de%22:6643,%22dc%22:18884,%22l%22:18884,%22le%22:18933,%22f%22:577,%22dn%22:577,%22dne%22:577,%22c%22:577,%22ce%22:577,%22rq%22:663,%22rp%22:976,%22rpe%22:1229%7D,%22navigation%22:%7B%7D%7D&amp;ua=QhJEQQ1ECRYCB0UHUUtDUEcWA19YEgBWEFNWHltcAxURSQ%3D%3D&amp;jsonp=NREUM.setToken"></script></body></html>

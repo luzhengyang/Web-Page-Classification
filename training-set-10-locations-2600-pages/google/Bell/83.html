@@ -1,0 +1,104 @@
+<html><head><script type="TEXT/JAVASCRIPT" language="JAVASCRIPT" src="/redirect.js"></script>
+<script type="text/javascript" language="JAVASCRIPT">
+
+var url = location.href;
+url = url.toLowerCase();
+
+if (window != top) { window.location = '/404r.html?source='+url } ;
+
+</script>
+<script type="TEXT/JAVASCRIPT" language="JAVASCRIPT" src="/scripts/shortcut.js?rand=1"></script>
+<script>
+var directories = ["/about", "/about/annualreport", "/about/annualreport/flash", "/about/annualreport/images", "/about/education", "/about/education/auction","/about/education/invest", "/about/education/investworld", "/about/education/investworld/quiz", "/about/education/outreach", "/about/report", "/about/timeline", "/attachment", "/audios","/events","/floor/hotmedia","/floor/hotmedia/map","/floor/hotmedia/map/classes","/floor/hotmedia/map/classes/img","/floor/hotmedia/map/classes/img/RESOURCE.FRK","/floor/hotmedia/panoramas","/getstarted","/glossary","/help/sitemap","/help/sitemap/classes","/help/sitemap","/classes/img","/icons","/images","/images/about","/images/about/annualreport","/images/about/board","/images/about/education","/images/about/education/auction","/images/about/education/invest","/images/about/education/investworld","/images/about/education/world","/images/about/timeline","/images/bulletin","/images/docs","/images/events","/images/floor","/images/floor/auction","/images/floor/Technology","/images/getstarted","/images/help","/images/home","/images/homenew","/home","/images/international","/images/jobs","/images/listed","/images/listed/flags","/images/marketinfo","/images/marketservices","/images/members","/images/portfolio","/images/press","/images/regulation","/images/regulation/trainingplans","/images/screenshots","/images/search","/images/stocktracker","/images/store","/international/inews","/java","/java/js","/jobs/js","/marketinfo/stats","/pdfs/3dtf","/pdfs/factbook","/portfolio","/regulation/rulechanges","/search","/speech","/start","/stockticker","/stockticker/casses","/stockticker/classes/img","/stocktracker","/videos","/viewpoint","/zips","/cgi-bin"];
+</script>
+
+<script language="javascript">
+
+var helpWindow;
+var _hostName = top.location.hostname;
+function help(helpURL) {
+	if (_hostName.indexOf("secfilings.")!=-1)
+		helpURL = "http://www.nyse.com" + helpURL;
+	var helpWindowAttributes = "width=430,height=430,scrollbars=yes,directories=no,status=no,location=no,menubar=no,personalbar=no,resizable=yes,titlebar=no,toolbar=no";
+	if (helpWindow && !helpWindow.closed) {
+		helpWindow.document.location.href = helpURL;
+	} else {
+		helpWindow = window.open(helpURL, "help", helpWindowAttributes);
+	}
+	helpWindow.focus();
+}
+
+var url = location.href;
+url = url.toLowerCase();
+//alert(url);
+//finally .html has to replace with .com/, and 6 has to replace with 5
+
+shortcutpos = url.indexOf(".com/");
+shortcut = url.substring(shortcutpos+5);
+
+if (shortcut.charAt(shortcut.length-1) == "/")
+	shortcut = shortcut.substring(0, shortcut.length-1);
+shortcut = shortcut.toLowerCase();
+if (shortcut=="buy-side")
+        shortcut = "buyside";
+if (shortcut=="search")
+        shortcut="searchr";
+if (shortcut=="faqs")
+	help("/content/faqs/FaqIndex.html");
+
+isDirectory = false;
+var shortcutDirectory = "/" + shortcut;
+for (ind = 0; ind<directories.length; ind++)
+{
+	if (directories[ind] == shortcutDirectory)
+	{
+		isDirectory = true;
+	}
+}
+
+
+if (!isDirectory)
+{
+	if(shortcut.indexOf("-") != -1)
+	{
+		top.location.href="/404r.html?source="+url;
+	}
+	if (shortcut.indexOf("/")==-1 && url.indexOf(".htm")==-1)
+	{
+		var arrayObject = eval("window." + shortcut);
+		var targetURL = "";
+		//alert(typeof(arrayObject));
+
+		if (typeof(eval("window." + shortcut)) != 'undefined'  )
+		{
+			if (typeof(arrayObject[0])=="string")
+			{
+				if (arrayObject[0] != '')
+				{
+					targetURL = arrayObject[0] + "?displayPage=" + arrayObject[1];
+				}
+				else
+				{
+					targetURL = arrayObject[1];
+				}
+        window.location.href = targetURL;
+			}
+		}
+		else
+		{
+
+		top.location.href="/404r.html?source="+url;
+		}
+	}
+	else
+	{
+		top.location.href="/404r.html?source="+url;
+ 	}
+ }
+else
+{
+	top.location.href="/404r.html?source="+url;
+}
+</script>
+</head><body>
+</body></html>
